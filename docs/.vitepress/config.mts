@@ -50,6 +50,7 @@ const frApi = [
 ]
 
 export default defineConfig({
+  base: '/industrial-cg-platform-docs/',
   title: 'Industrial CG Platform',
   description: 'Documentation for the Blender VFX rendering branch',
 
