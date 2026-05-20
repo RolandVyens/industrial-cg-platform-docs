@@ -4,6 +4,7 @@ layout: false
 
 <script>
 if (typeof window !== 'undefined') {
-  window.location.href = '/en/'
+  const base = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
+  window.location.replace(base + 'en/');
 }
 </script>
