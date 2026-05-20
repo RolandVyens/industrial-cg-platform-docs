@@ -7,6 +7,9 @@ hero:
   name: Industrial CG Platform
   text: Blender VFX 渲染分支
   tagline: 专为 VFX 打造。源于 Blender。为镜头而生。基于 Blender 的高级 VFX 工作流生产平台。
+  image:
+    src: /logo.png
+    alt: Industrial CG Platform Logo
   actions:
     - theme: brand
       text: 快速开始

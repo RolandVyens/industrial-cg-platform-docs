@@ -1,5 +1,7 @@
 # 快速开始
 
+![Industrial CG Platform Splash](/splash.png)
+
 ## 什么是 Industrial CG Platform？
 
 **Industrial CG Platform** 是一个源自 Blender 的生产级发行版，专注于那些通常决定一个镜头能否在真实 VFX 流程中存活下来的 CG 环节。

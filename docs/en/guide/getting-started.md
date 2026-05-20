@@ -1,5 +1,7 @@
 # Getting Started
 
+![Industrial CG Platform Splash](/splash.png)
+
 ## What Is Industrial CG Platform?
 
 **Industrial CG Platform** is a Blender-derived production distribution focused on the parts of CG that usually decide whether a shot can survive a real VFX pipeline.

@@ -55,7 +55,7 @@ export default defineConfig({
   description: 'Documentation for the Blender VFX rendering branch',
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['meta', { name: 'theme-color', content: '#3c8dbc' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Industrial CG Platform Documentation' }],

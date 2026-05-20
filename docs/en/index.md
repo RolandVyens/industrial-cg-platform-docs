@@ -7,6 +7,9 @@ hero:
   name: Industrial CG Platform
   text: Blender VFX Rendering Branch
   tagline: Built for VFX. Built from Blender. Built for shots. A Blender-based production platform for advanced VFX workflows.
+  image:
+    src: /logo.png
+    alt: Industrial CG Platform Logo
   actions:
     - theme: brand
       text: Getting Started
