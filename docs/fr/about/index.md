@@ -42,6 +42,8 @@ Industrial CG Platform est créé et dirigé par Roland Vyens, avec des travaux 
 
 Ces outils font partie du processus de travail derrière le projet, mais l'orientation de la plateforme, les choix de fonctionnalités, les décisions de publication et la maintenance du fork restent la propriété du projet.
 
+Le projet remercie également le projet MoonRay, dont les idées d'implémentation publique ont contribué à inspirer certaines des approches de rendu explorées dans cette branche.
+
 ## Licence
 
 Industrial CG Platform suit le modèle de licence GPL de Blender pour l'application principale, et intègre également une extension d'exécution bQt avec des composants tiers supplémentaires.
