@@ -1,19 +1,270 @@
-# 发布
+---
+layout: doc
+title: 版本发布
+---
 
-## 当前发布
+# 版本发布
 
-- **[5.2.0 (2026-05-19)](/zh/releases/5.2.0-2026-05-19)** — 包含 Industrial CG Platform 品牌标识、所有已发布功能以及 ViewLayer 管理器集成的最新发布。
+<script setup>
+import { ref, onMounted } from 'vue'
 
-## 历史发布
+const releases = ref([])
+const loading = ref(true)
+const error = ref(null)
 
-| 版本 | 日期 | 亮点 |
-| --- | --- | --- |
-| blender-vfx-5.2-2026-05-11 | 2026-05-11 | 修复灯光组光源碰撞平衡，同步运行时 Cycles 插件 |
-| blender-vfx-5.2-2026-04-29 | 2026-04-29 | 修复环境灯光组分量，修复禁用通道别名 |
-| blender-vfx-5.2-2026-04-22 | 2026-04-22 | 修复 GPU 合成器崩溃 |
-| blender-vfx-5.2-2026-04-20 | 2026-04-20 | 修复灯光组拆分通道回读 |
-| blender-vfx-5.2-2026-03-26 | 2026-03-26 | 包含 Deep EXR、灯光组分量通道、阴影颜色的初始发布 |
+const fallbackReleases = [
+  {
+    tag_name: 'industrial-cg-platform-5.2.0-2026-05-27',
+    name: 'industrial-cg-platform-5.2.0-2026-05-27',
+    published_at: '2026-05-27T16:00:51Z',
+    prerelease: false,
+    body: '### 版本亮点\n- 同步 Cycles 渲染核心至上游 Blender 5.2 版本\n- 在文档和源码头文件中添加了关于 MoonRay 项目的致谢\n- 提升了 Deep EXR 深度合成数据输出的整体稳定性。',
+    assets: [
+      {
+        name: 'blender-5.2.0-industrial-cg-platform-windows-x64.zip',
+        size: 256880000,
+        download_count: 85,
+        browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-27'
+      }
+    ]
+  },
+  {
+    tag_name: 'industrial-cg-platform-5.2.0-2026-05-20',
+    name: 'Industrial CG Platform 5.2.0-2026-05-20',
+    published_at: '2026-05-20T04:52:46Z',
+    prerelease: false,
+    body: '### 版本亮点\n- 在 System Extension 下集成了 Qt 运行时打包\n- Cycles 原生 Deep EXR 深度输出与阴影颜色着色控制支持\n- 基于 Qt 的专用 ViewLayer 管理器工作面板',
+    assets: [
+      {
+        name: 'blender-5.2.0-industrial-cg-platform-windows-x64.zip',
+        size: 254200000,
+        download_count: 142,
+        browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/Industrial-CG-Platform-5.2.0-2026-05-20'
+      }
+    ]
+  }
+]
 
-## 下载
+onMounted(async () => {
+  try {
+    const res = await fetch('https://api.github.com/repos/RolandVyens/industrial-cg-platform/releases')
+    if (!res.ok) throw new Error('Failed to fetch from GitHub API')
+    const data = await res.json()
+    if (Array.isArray(data) && data.length > 0) {
+      releases.value = data
+    } else {
+      releases.value = fallbackReleases
+    }
+  } catch (err) {
+    console.error('Error fetching releases, using fallback:', err)
+    error.value = err.message
+    releases.value = fallbackReleases
+  } finally {
+    loading.value = false
+  }
+})
 
-所有发布版本均以 Windows x64 ZIP 包的形式在 [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) 页面提供。
+function formatDate(dateStr) {
+  const date = new Date(dateStr)
+  return date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })
+}
+
+function formatBytes(bytes) {
+  if (!bytes) return 'N/A'
+  if (bytes === 0) return '0 Bytes'
+  const k = 1024
+  const sizes = ['Bytes', 'KB', 'MB', 'GB']
+  const i = Math.floor(Math.log(bytes) / Math.log(k))
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+}
+
+function parseMarkdown(text) {
+  if (!text) return ''
+  let html = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  html = html.replace(/`(.*?)`/g, '<code style="background: var(--vp-c-bg-mute); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; border: 1px solid var(--vp-c-divider);">$1</code>')
+  html = html.replace(/^### (.*?)$/gm, '<h4 style="margin-top: 1.2rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--vp-c-text-1); font-size: 1.05rem;">$1</h4>')
+  html = html.replace(/^## (.*?)$/gm, '<h3 style="margin-top: 1.5rem; margin-bottom: 0.6rem; font-weight: 600; color: var(--vp-c-text-1); font-size: 1.15rem;">$1</h3>')
+  html = html.replace(/^[-\*] (.*?)$/gm, '<li style="margin-left: 1.2rem; margin-bottom: 0.3rem; list-style-type: disc; line-height: 1.5;">$1</li>')
+  html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color: var(--vp-c-brand); font-weight: 500; text-decoration: underline;">$1</a>')
+  
+  html = html.split('\n\n').map(p => {
+    if (p.trim().startsWith('<li') || p.trim().startsWith('<h')) return p
+    return `<p style="margin-bottom: 0.6rem; line-height: 1.6; color: var(--vp-c-text-2);">${p.replace(/\n/g, '<br>')}</p>`
+  }).join('\n')
+  
+  return html
+}
+</script>
+
+<div class="releases-container">
+  <!-- 正在加载动画 -->
+  <div v-if="loading">
+    <p style="color: var(--vp-c-text-2); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      <svg class="spinner" viewBox="0 0 50 50" style="width: 20px; height: 20px; animation: spin 1s linear infinite;"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5" style="stroke-linecap: round; animation: dash 1.5s ease-in-out infinite;"></circle></svg>
+      正在从 GitHub 官方仓库实时加载最新版本列表...
+    </p>
+    <div class="skeleton-card"></div>
+    <div class="skeleton-card"></div>
+  </div>
+
+  <!-- 渲染加载完毕的版本列表 -->
+  <div v-else>
+    <p style="color: var(--vp-c-text-3); font-size: 0.9rem; margin-bottom: 1.5rem;">
+      ⚡ 正在展示来自官方主仓库的实时版本列表。
+      <span v-if="error" style="color: var(--vp-c-warning-text)"> （提示：API 速率受限，正在展示本地缓存列表）</span>
+    </p>
+
+    <div v-for="(release, index) in releases" :key="release.tag_name" class="release-card">
+      <div class="release-header">
+        <div>
+          <span class="release-title">{{ release.name || release.tag_name }}</span>
+          <div class="release-date">发布于 {{ formatDate(release.published_at) }}</div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <span v-if="index === 0 && !release.prerelease" class="badge badge-latest">最新版本</span>
+          <span v-if="release.prerelease" class="badge badge-prerelease">预发布版</span>
+          <span v-else-if="index !== 0" class="badge badge-regular">稳定版</span>
+          <a :href="release.html_url" target="_blank" class="badge badge-regular" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
+            🔗 仓库 Releases
+          </a>
+        </div>
+      </div>
+
+      <div class="release-body" v-html="parseMarkdown(release.body)" style="margin-top: 1rem; font-size: 0.95rem;"></div>
+
+      <!-- 资源包下载区 -->
+      <div v-if="release.assets && release.assets.length > 0" class="assets-box">
+        <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.6rem; color: var(--vp-c-text-1);">
+          📦 运行程序下载包 (Windows x64 ZIP)
+        </div>
+        <div v-for="asset in release.assets" :key="asset.id" class="asset-item">
+          <a :href="asset.browser_download_url" target="_blank" class="asset-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 0.3rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            {{ asset.name }}
+          </a>
+          <span class="asset-meta">
+            {{ formatBytes(asset.size) }} <span v-if="asset.download_count !== undefined">| 已被下载 {{ asset.download_count }} 次</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style scoped>
+.releases-container {
+  margin-top: 1.5rem;
+}
+.release-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.release-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  border-color: var(--vp-c-brand);
+}
+.release-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.release-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+.release-date {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.2rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 12px;
+}
+.badge-latest {
+  background: rgba(16, 185, 129, 0.1);
+  color: rgb(16, 185, 129);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+.badge-prerelease {
+  background: rgba(245, 158, 11, 0.1);
+  color: rgb(245, 158, 11);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.badge-regular {
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
+  border: 1px solid var(--vp-c-divider);
+  transition: color 0.2s, background 0.2s;
+}
+a.badge-regular:hover {
+  background: var(--vp-c-brand);
+  color: #fff;
+  border-color: var(--vp-c-brand);
+}
+.assets-box {
+  margin-top: 1.2rem;
+  border-top: 1px dashed var(--vp-c-divider);
+  padding-top: 1rem;
+}
+.asset-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--vp-c-bg-mute);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--vp-c-divider);
+}
+.asset-link {
+  color: var(--vp-c-brand);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.asset-link:hover {
+  text-decoration: underline;
+}
+.asset-meta {
+  color: var(--vp-c-text-3);
+  font-size: 0.8rem;
+}
+.skeleton-card {
+  height: 180px;
+  background: linear-gradient(90deg, var(--vp-c-bg-soft) 25%, var(--vp-c-bg-mute) 50%, var(--vp-c-bg-soft) 75%);
+  background-size: 200% 100%;
+  animation: loading-animation 1.5s infinite;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--vp-c-divider);
+}
+@keyframes loading-animation {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+</style>
