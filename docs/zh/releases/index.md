@@ -41,7 +41,7 @@ import { data as releases } from '../../releases.data.js'
             {{ asset.name }}
           </a>
           <span class="asset-meta">
-            {{ asset.sizeFormattedZH }} <span v-if="asset.download_count !== undefined">| 已被下载 {{ asset.download_count }} 次</span>
+            {{ asset.sizeFormattedZH }}
           </span>
         </div>
       </div>

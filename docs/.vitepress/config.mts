@@ -112,7 +112,6 @@ export default defineConfig({
               text: 'Releases',
               items: [
                 { text: 'Release Index', link: '/en/releases/' },
-                { text: '5.2.0 (2026-05-19)', link: '/en/releases/5.2.0-2026-05-19' },
               ],
             },
           ],
@@ -169,7 +168,6 @@ export default defineConfig({
               text: '发布',
               items: [
                 { text: '发布索引', link: '/zh/releases/' },
-                { text: '5.2.0 (2026-05-19)', link: '/zh/releases/5.2.0-2026-05-19' },
               ],
             },
           ],
@@ -232,7 +230,6 @@ export default defineConfig({
               text: 'Versions',
               items: [
                 { text: 'Index des versions', link: '/fr/releases/' },
-                { text: '5.2.0 (2026-05-19)', link: '/fr/releases/5.2.0-2026-05-19' },
               ],
             },
           ],

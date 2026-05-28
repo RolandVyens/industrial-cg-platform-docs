@@ -41,7 +41,7 @@ import { data as releases } from '../../releases.data.js'
             {{ asset.name }}
           </a>
           <span class="asset-meta">
-            {{ asset.sizeFormattedEN }} <span v-if="asset.download_count !== undefined">| {{ asset.download_count }} downloads</span>
+            {{ asset.sizeFormattedEN }}
           </span>
         </div>
       </div>
