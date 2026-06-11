@@ -7,7 +7,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
 <div class="tools-grid">
   <!-- AOV Connector -->
   <div class="tool-card">
-    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-AOV-Connector" alt="Industrial AOV Connector" class="tool-preview" />
+    <img src="https://github.com/RolandVyens/Industrial-AOV-Connector/assets/30930721/95a2f623-6158-438b-aaa7-34e6ac099c47" alt="Industrial AOV Connector" class="tool-preview" />
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">Industrial AOV Connector</h3>
@@ -22,7 +22,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
 
   <!-- Light AOV Splitter -->
   <div class="tool-card">
-    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-Light-AOV-Splitter" alt="Industrial Light AOV Splitter" class="tool-preview" />
+    <img src="https://github.com/user-attachments/assets/7900602f-d222-400d-87c9-00e2506aea4a" alt="Industrial Light AOV Splitter" class="tool-preview" />
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">Industrial Light AOV Splitter</h3>
@@ -37,7 +37,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
 
   <!-- AIO-OCIO -->
   <div class="tool-card">
-    <img src="https://opengraph.githubassets.com/1/RolandVyens/AIO-OCIO" alt="AIO-OCIO" class="tool-preview" />
+    <img src="https://github.com/user-attachments/assets/461f6a96-af0b-4680-b531-b988667c4e19" alt="AIO-OCIO" class="tool-preview" />
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">AIO-OCIO</h3>
