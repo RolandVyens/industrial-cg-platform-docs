@@ -52,7 +52,7 @@ const frApi = [
 export default defineConfig({
   base: '/industrial-cg-platform-docs/',
   title: 'Industrial 3D',
-  description: 'Ecosystem of production-ready CG & VFX pipeline tools',
+  description: 'Ecosystem of free & open-source CG & VFX pipeline tools',
 
   head: [
     ['link', { rel: 'icon', href: '/industrial-cg-platform-docs/logo.png' }],
@@ -62,7 +62,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#7c4dff' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Industrial 3D Ecosystem' }],
-    ['meta', { property: 'og:description', content: 'Production-ready CG & VFX pipeline tools by Roland Vyens' }],
+    ['meta', { property: 'og:description', content: 'Free and open-source CG & VFX pipeline tools by Roland Vyens' }],
   ],
 
   locales: {
@@ -73,7 +73,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'Products',
+            text: 'Ecosystem',
             items: [
               {
                 text: 'Core Platform',
@@ -212,7 +212,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: '产品生态',
+            text: '开源生态',
             items: [
               {
                 text: '核心平台',
@@ -357,7 +357,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'Produits',
+            text: 'Écosystème',
             items: [
               {
                 text: 'Plateforme Principale',
