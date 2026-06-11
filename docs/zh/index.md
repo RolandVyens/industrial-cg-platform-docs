@@ -32,9 +32,9 @@ features:
     details: 灯光组 AOV 拆分工具。自动将合并通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
     link: /zh/light-splitter/
   - icon: 🎨
-    title: PixelManager Super-OCIO
+    title: AIO-OCIO
     details: 跨软件统一色彩管理方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
-    link: /zh/super-ocio/
+    link: /zh/aio-ocio/
 ---
 
 <br id="tools-ecosystem">

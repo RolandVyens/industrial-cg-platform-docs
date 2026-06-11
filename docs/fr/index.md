@@ -32,9 +32,9 @@ features:
     details: Séparateur automatique de groupes de lumières pour diviser et matérialiser les passes de lumières individuelles en compositing.
     link: /fr/light-splitter/
   - icon: 🎨
-    title: PixelManager Super-OCIO
+    title: AIO-OCIO
     details: Configuration OpenColorIO unifiée et optimisée pour les pipelines multi-logiciels (Maya, Nuke, Houdini, Blender).
-    link: /fr/super-ocio/
+    link: /fr/aio-ocio/
 ---
 
 <br id="tools-ecosystem">

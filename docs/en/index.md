@@ -32,9 +32,9 @@ features:
     details: Automatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing control.
     link: /en/light-splitter/
   - icon: 🎨
-    title: PixelManager Super-OCIO
+    title: AIO-OCIO
     details: Unified cross-application OpenColorIO pipeline configuration (Maya, Nuke, Houdini, Blender).
-    link: /en/super-ocio/
+    link: /en/aio-ocio/
 ---
 
 <br id="tools-ecosystem">

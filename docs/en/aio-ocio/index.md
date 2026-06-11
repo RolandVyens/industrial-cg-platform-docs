@@ -1,6 +1,6 @@
-# PixelManager Super-OCIO
+# AIO-OCIO
 
-**PixelManager Super-OCIO** (formerly known as AIO-OCIO) is a unified, multi-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG pipelines. 
+**AIO-OCIO** (also known as PixelManager Super-OCIO) is a unified, multi-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG pipelines.
 
 By unifying color transformations across major Digital Content Creation (DCC) tools, it ensures that your renders, texture projections, and compositing elements look 100% identical whether you are in Blender, Autodesk Maya, SideFX Houdini, or Foundry Nuke.
 
@@ -26,13 +26,13 @@ By unifying color transformations across major Digital Content Creation (DCC) to
 2.  Navigate to your Blender installation's color management directory (e.g., `5.2/colormanagement/`).
 3.  Replace the default `config.ocio` and data folders, or set your environment variable:
     ```bash
-    OCIO=/path/to/PixelManager-Super-OCIO/config.ocio
+    OCIO=/path/to/AIO-OCIO/config.ocio
     ```
 
 ### Maya Integration
 1.  Open Maya, go to `Windows` > `Settings/Preferences` > `Preferences`.
 2.  Under `Color Management`, enable color management and choose **Use OCIO Configuration**.
-3.  Point the path to `config.ocio` from the PixelManager Super-OCIO folder.
+3.  Point the path to `config.ocio` from the AIO-OCIO folder.
 
 ### Nuke Integration
 1.  Open Nuke, open Project Settings (`S` shortcut).
@@ -43,5 +43,5 @@ By unifying color transformations across major Digital Content Creation (DCC) to
 
 ## Repositories & Links
 
-*   **GitHub Repository:** [RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)
-*   **Alternative/Legacy AIO-OCIO Repository:** [RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **GitHub Repository:** [RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **Alternative Super-OCIO Repository:** [RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)

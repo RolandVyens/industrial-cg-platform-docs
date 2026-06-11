@@ -1,6 +1,6 @@
-# PixelManager Super-OCIO
+# AIO-OCIO
 
-**PixelManager Super-OCIO** (anciennement AIO-OCIO) est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG multi-logiciels modernes.
+**AIO-OCIO** (également connu sous le nom de PixelManager Super-OCIO) est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG multi-logiciels modernes.
 
 En unifiant les transformations de couleurs sur les principaux outils de création de contenu numérique (DCC), il garantit que vos rendus, projections de textures et éléments de compositing soient 100 % identiques, que vous soyez dans Blender, Autodesk Maya, SideFX Houdini ou Foundry Nuke.
 
@@ -26,13 +26,13 @@ En unifiant les transformations de couleurs sur les principaux outils de créati
 2.  Allez dans le répertoire de gestion des couleurs de votre installation Blender (par exemple, `5.2/colormanagement/`).
 3.  Remplacez le fichier `config.ocio` par défaut et ses dossiers associés, ou définissez votre variable d'environnement :
     ```bash
-    OCIO=/path/to/PixelManager-Super-OCIO/config.ocio
+    OCIO=/path/to/AIO-OCIO/config.ocio
     ```
 
 ### Intégration dans Maya
 1.  Ouvrez Maya, allez dans `Windows` > `Settings/Preferences` > `Preferences`.
 2.  Sous `Color Management`, activez la gestion des couleurs et choisissez **Use OCIO Configuration**.
-3.  Pointez le chemin vers le fichier `config.ocio` du dossier PixelManager Super-OCIO.
+3.  Pointez le chemin vers le fichier `config.ocio` du dossier AIO-OCIO.
 
 ### Intégration dans Nuke
 1.  Ouvrez Nuke, ouvrez les paramètres du projet (raccourci `S`).
@@ -43,5 +43,5 @@ En unifiant les transformations de couleurs sur les principaux outils de créati
 
 ## Liens du dépôt
 
-*   **Dépôt GitHub :** [RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)
-*   **Dépôt historique AIO-OCIO :** [RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **Dépôt GitHub :** [RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **Dépôt alternatif Super-OCIO :** [RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)

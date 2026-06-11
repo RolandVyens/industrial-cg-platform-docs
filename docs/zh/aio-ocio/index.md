@@ -1,6 +1,6 @@
-# PixelManager Super-OCIO
+# AIO-OCIO
 
-**PixelManager Super-OCIO**（前身为 AIO-OCIO）是一个统一的、多合一的 OpenColorIO (OCIO) 色彩管理配置配置文件，专为现代跨软件 VFX 和 CG 制作管线优化。
+**AIO-OCIO**（又称 PixelManager Super-OCIO）是一个统一的、多合一的 OpenColorIO (OCIO) 色彩管理配置文件，专为现代跨软件 VFX 和 CG 制作管线优化。
 
 通过统一主流数字内容创作 (DCC) 工具的色彩空间转换，它能够确保您的渲染图、贴图投影和合成元素在 Blender、Autodesk Maya、SideFX Houdini 或 Foundry Nuke 中看起来 100% 保持一致。
 
@@ -24,9 +24,9 @@
 ### 在 Blender 中配置
 1.  从开源仓库下载最新的色彩配置文件。
 2.  前往您的 Blender 安装目录下的色彩管理文件夹（例如 `5.2/colormanagement/`）。
-3.  替换默认的 `config.ocio` 文件及数据文件夹，或者直接设置系统环境变量：
+3.  替换默认 the `config.ocio` 文件及数据文件夹，或者直接设置系统环境变量：
     ```bash
-    OCIO=/path/to/PixelManager-Super-OCIO/config.ocio
+    OCIO=/path/to/AIO-OCIO/config.ocio
     ```
 
 ### 在 Maya 中配置
@@ -43,5 +43,5 @@
 
 ## 开源仓库与链接
 
-*   **GitHub 仓库**：[RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)
-*   **旧版 AIO-OCIO 仓库**：[RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **GitHub 仓库**：[RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
+*   **备用 Super-OCIO 仓库**：[RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)
