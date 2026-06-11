@@ -100,7 +100,7 @@ export default defineConfig({
               }
             ]
           },
-          { text: 'Sponsor', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: 'Donate', link: '/en/donate' },
           { text: 'About', link: '/en/cg-platform/about/' }
         ],
         sidebar: {
@@ -199,7 +199,7 @@ export default defineConfig({
               }
             ]
           },
-          { text: '赞助项目', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: '赞助', link: '/zh/donate' },
           { text: '关于', link: '/zh/cg-platform/about/' }
         ],
         sidebar: {
@@ -304,7 +304,7 @@ export default defineConfig({
               }
             ]
           },
-          { text: 'Soutenir', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: 'Faire un don', link: '/fr/donate' },
           { text: 'À Propos', link: '/fr/cg-platform/about/' }
         ],
         sidebar: {
