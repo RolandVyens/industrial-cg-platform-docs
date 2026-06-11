@@ -16,7 +16,7 @@ hero:
       link: /zh/cg-platform/
     - theme: alt
       text: 浏览管线工具
-      link: #tools-ecosystem
+      link: /zh/pipeline-tools
 
 features:
   - icon: 🎬

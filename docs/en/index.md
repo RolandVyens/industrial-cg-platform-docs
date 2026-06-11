@@ -16,7 +16,7 @@ hero:
       link: /en/cg-platform/
     - theme: alt
       text: Pipeline Tools
-      link: #tools-ecosystem
+      link: /en/pipeline-tools
 
 features:
   - icon: 🎬
