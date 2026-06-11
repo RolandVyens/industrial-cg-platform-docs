@@ -1,0 +1,116 @@
+:root {
+  /* Fonts */
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'Fira Code', 'Courier New', Courier, monospace;
+
+  /* Brand Colors (Vibrant Violet / Cyber Cyan gradient vibe) */
+  --vp-c-brand-1: #7c4dff;
+  --vp-c-brand-2: #651fff;
+  --vp-c-brand-3: #d500f9;
+  --vp-c-brand-soft: rgba(124, 77, 255, 0.14);
+
+  /* Alert Callout Backgrounds */
+  --vp-custom-block-info-bg: rgba(124, 77, 255, 0.05);
+  --vp-custom-block-info-border: rgba(124, 77, 255, 0.3);
+  --vp-custom-block-tip-bg: rgba(0, 229, 255, 0.05);
+  --vp-custom-block-tip-border: rgba(0, 229, 255, 0.3);
+
+  /* Layout / UI variables */
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.7);
+  --vp-sidebar-bg-color: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  /* Brand colors in dark mode */
+  --vp-c-brand-1: #9d4edd;
+  --vp-c-brand-2: #7b2cbf;
+  --vp-c-brand-3: #c77dff;
+  --vp-c-brand-soft: rgba(157, 78, 221, 0.14);
+
+  /* Background variables */
+  --vp-c-bg: #0b0c10;
+  --vp-c-bg-soft: #12131c;
+  --vp-c-bg-mute: #1b1c26;
+  --vp-c-bg-alt: #0e0f17;
+  
+  --vp-nav-bg-color: rgba(11, 12, 16, 0.7);
+  --vp-sidebar-bg-color: rgba(11, 12, 16, 0.65);
+}
+
+/* Base headers styling */
+h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism nav & sidebar */
+.VPNavBar, .VPSidebar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-bg-mute);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* Glow gradient behind hero image */
+.VP-HomeHero .image-bg {
+  background: radial-gradient(circle, rgba(124, 77, 255, 0.25) 0%, rgba(0, 229, 255, 0.05) 50%, transparent 100%) !important;
+  filter: blur(40px);
+  opacity: 0.85;
+}
+
+/* Card glassmorphism & lift animation */
+.VPFeature {
+  background: rgba(18, 19, 28, 0.45) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease !important;
+}
+
+.dark .VPFeature {
+  background: rgba(18, 19, 28, 0.45) !important;
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(124, 77, 255, 0.15);
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+/* Logo animation */
+.VPNavBarTitle img {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.VPNavBarTitle:hover img {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Button premium gradient styles */
+.VPButton.brand {
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(124, 77, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+.VPButton.brand:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.45);
+}

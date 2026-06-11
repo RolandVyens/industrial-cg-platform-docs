@@ -56,7 +56,10 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/industrial-cg-platform-docs/logo.png' }],
-    ['meta', { name: 'theme-color', content: '#3c8dbc' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
+    ['meta', { name: 'theme-color', content: '#7c4dff' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Industrial 3D Ecosystem' }],
     ['meta', { property: 'og:description', content: 'Production-ready CG & VFX pipeline tools by Roland Vyens' }],
@@ -166,9 +169,18 @@ export default defineConfig({
           ],
           '/en/light-splitter/': [
             {
-              text: 'Light AOV Splitter',
+              text: 'Industrial Light AOV Splitter',
               items: [
                 { text: 'Overview', link: '/en/light-splitter/' }
+              ]
+            },
+            {
+              text: 'User Manual',
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Read Order', link: '/en/light-splitter/manual/' },
+                { text: 'Usage & Guidelines', link: '/en/light-splitter/manual/usage' },
+                { text: 'Nuke Auto-Shuffle Setup', link: '/en/light-splitter/manual/nuke-setup' }
               ]
             }
           ],
@@ -177,6 +189,15 @@ export default defineConfig({
               text: 'AIO-OCIO',
               items: [
                 { text: 'Overview', link: '/en/aio-ocio/' }
+              ]
+            },
+            {
+              text: 'User Manual',
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Compatibility', link: '/en/aio-ocio/manual/' },
+                { text: 'General Software Setup', link: '/en/aio-ocio/manual/general-softwares' },
+                { text: 'Blender Color Management', link: '/en/aio-ocio/manual/blender-setup' }
               ]
             }
           ]
@@ -287,9 +308,18 @@ export default defineConfig({
           ],
           '/zh/light-splitter/': [
             {
-              text: 'Light AOV Splitter',
+              text: 'Industrial Light AOV Splitter',
               items: [
                 { text: '概述', link: '/zh/light-splitter/' }
+              ]
+            },
+            {
+              text: '用户手册',
+              collapsed: false,
+              items: [
+                { text: '引言与推荐阅读顺序', link: '/zh/light-splitter/manual/' },
+                { text: '使用说明与规范', link: '/zh/light-splitter/manual/usage' },
+                { text: 'Nuke 自动通道重组配置', link: '/zh/light-splitter/manual/nuke-setup' }
               ]
             }
           ],
@@ -298,6 +328,15 @@ export default defineConfig({
               text: 'AIO-OCIO',
               items: [
                 { text: '概述', link: '/zh/aio-ocio/' }
+              ]
+            },
+            {
+              text: '用户手册',
+              collapsed: false,
+              items: [
+                { text: '引言与兼容性标准', link: '/zh/aio-ocio/manual/' },
+                { text: '通用软件色彩管理配置', link: '/zh/aio-ocio/manual/general-softwares' },
+                { text: 'Blender 色彩管理配置手册', link: '/zh/aio-ocio/manual/blender-setup' }
               ]
             }
           ]
@@ -414,9 +453,18 @@ export default defineConfig({
           ],
           '/fr/light-splitter/': [
             {
-              text: 'Light AOV Splitter',
+              text: 'Industrial Light AOV Splitter',
               items: [
                 { text: 'Aperçu', link: '/fr/light-splitter/' }
+              ]
+            },
+            {
+              text: "Manuel d'utilisation",
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Ordre de lecture', link: '/fr/light-splitter/manual/' },
+                { text: 'Utilisation & Directives', link: '/fr/light-splitter/manual/usage' },
+                { text: 'Configuration Auto-Shuffle', link: '/fr/light-splitter/manual/nuke-setup' }
               ]
             }
           ],
@@ -425,6 +473,15 @@ export default defineConfig({
               text: 'AIO-OCIO',
               items: [
                 { text: 'Aperçu', link: '/fr/aio-ocio/' }
+              ]
+            },
+            {
+              text: "Manuel d'utilisation",
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Compatibilité', link: '/fr/aio-ocio/manual/' },
+                { text: 'Configuration Générale', link: '/fr/aio-ocio/manual/general-softwares' },
+                { text: 'Gestion des Couleurs Blender', link: '/fr/aio-ocio/manual/blender-setup' }
               ]
             }
           ]

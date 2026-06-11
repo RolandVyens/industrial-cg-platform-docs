@@ -77,7 +77,12 @@ export default {
   async load() {
     try {
       console.log('Fetching releases at build time...')
-      const res = await fetch('https://api.github.com/repos/RolandVyens/industrial-cg-platform/releases')
+      const headers = {}
+      if (process.env.GITHUB_TOKEN) {
+        console.log('Found GITHUB_TOKEN in environment, using authenticated requests to raise rate limit.')
+        headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`
+      }
+      const res = await fetch('https://api.github.com/repos/RolandVyens/industrial-cg-platform/releases', { headers })
       if (!res.ok) throw new Error(`Failed to fetch releases: ${res.statusText}`)
       const data = await res.json()
       if (Array.isArray(data) && data.length > 0) {
