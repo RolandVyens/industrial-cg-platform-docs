@@ -24,11 +24,11 @@ features:
     details: 基于 Blender 5.2 源码定制的正片级 VFX 渲染分支。提供 Cycles 原生 Deep EXR 深度图写入、阴影着色控制以及 PyQt 渲染层管理器。
     link: /zh/cg-platform/
   - icon: 🔌
-    title: Blender AOV 智能连接器 (AOV Connector)
+    title: Industrial AOV Connector
     details: Blender 合成器自动化插件。一键自动创建渲染通道输出树，智能接入降噪节点，并导出为对接 Nuke 的标准多通道结构。
     link: /zh/aov-connector/
   - icon: 💡
-    title: Blender 灯光通道拆分器 (Light Splitter)
+    title: Industrial Light AOV Splitter
     details: 灯光组 AOV 拆分工具。自动将合并通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
     link: /zh/light-splitter/
   - icon: 🎨

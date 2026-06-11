@@ -24,11 +24,11 @@ features:
     details: Branche de rendu personnalisée de Blender Cycles (Deep EXR natif, couleur d'ombre et gestionnaire de ViewLayer en PyQt).
     link: /fr/cg-platform/
   - icon: 🔌
-    title: Connecteur AOV pour Blender (AOV Connector)
+    title: Industrial AOV Connector
     details: Module d'automatisation du compositeur de Blender pour configurer les arbres d'AOV et s'aligner sur les normes Nuke.
     link: /fr/aov-connector/
   - icon: 💡
-    title: Séparateur d'AOV de Lumière pour Blender (Light Splitter)
+    title: Industrial Light AOV Splitter
     details: Séparateur automatique de groupes de lumières pour diviser et matérialiser les passes de lumières individuelles en compositing.
     link: /fr/light-splitter/
   - icon: 🎨

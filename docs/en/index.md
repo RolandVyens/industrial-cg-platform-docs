@@ -24,11 +24,11 @@ features:
     details: Deep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.
     link: /en/cg-platform/
   - icon: 🔌
-    title: Blender AOV Connector
+    title: Industrial AOV Connector
     details: Blender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.
     link: /en/aov-connector/
   - icon: 💡
-    title: Blender Light AOV Splitter
+    title: Industrial Light AOV Splitter
     details: Automatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing control.
     link: /en/light-splitter/
   - icon: 🎨
