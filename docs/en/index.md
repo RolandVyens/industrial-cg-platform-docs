@@ -53,7 +53,6 @@ features:
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Sponsorship & Support</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial 3D tools are developed as open-source, production-focused R&D projects.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
-    <a class="VPButton medium brand" href="https://www.patreon.com/cw/RolandVyens" target="_blank">Support on Patreon</a>
-    <a class="VPButton medium alt" href="https://www.ifdian.net/a/mogubobi2" target="_blank">Support on Afdian</a>
+    <a class="VPButton medium brand" href="/industrial-cg-platform-docs/en/donate">Support the Project</a>
   </div>
 </div>

@@ -43,11 +43,11 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
         <h3 class="tool-title">AIO-OCIO</h3>
         <span class="tool-badge">Config Couleur</span>
       </div>
+      <p class="tool-desc">
+        Configuration OpenColorIO unifiée garantissant une conversion de couleurs AgX/Filmic cohérente et identique sur Maya, Nuke, Houdini et Blender.
+      </p>
+      <a href="/industrial-cg-platform-docs/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
     </div>
-    <p class="tool-desc">
-      Configuration OpenColorIO unifiée garantissant une conversion de couleurs AgX/Filmic cohérente et identique sur Maya, Nuke, Houdini et Blender.
-    </p>
-    <a href="/industrial-cg-platform-docs/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
   </div>
 </div>
 

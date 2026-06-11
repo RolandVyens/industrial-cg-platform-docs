@@ -18,6 +18,12 @@
   /* Layout / UI variables */
   --vp-nav-bg-color: rgba(255, 255, 255, 0.7);
   --vp-sidebar-bg-color: rgba(255, 255, 255, 0.6);
+
+  /* Custom Light Mode UI variables */
+  --custom-feature-bg: rgba(246, 246, 249, 0.7);
+  --custom-feature-border: rgba(0, 0, 0, 0.05);
+  --custom-feature-shadow: rgba(0, 0, 0, 0.05);
+  --custom-hero-bg: radial-gradient(circle, rgba(124, 77, 255, 0.15) 0%, rgba(0, 229, 255, 0.02) 60%, transparent 100%);
 }
 
 .dark {
@@ -35,6 +41,12 @@
   
   --vp-nav-bg-color: rgba(11, 12, 16, 0.7);
   --vp-sidebar-bg-color: rgba(11, 12, 16, 0.65);
+
+  /* Custom Dark Mode UI variables */
+  --custom-feature-bg: rgba(18, 19, 28, 0.45);
+  --custom-feature-border: rgba(255, 255, 255, 0.05);
+  --custom-feature-shadow: rgba(0, 0, 0, 0.15);
+  --custom-hero-bg: radial-gradient(circle, rgba(124, 77, 255, 0.25) 0%, rgba(0, 229, 255, 0.05) 50%, transparent 100%);
 }
 
 /* Base headers styling */
@@ -68,25 +80,21 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
 
 /* Glow gradient behind hero image */
 .VP-HomeHero .image-bg {
-  background: radial-gradient(circle, rgba(124, 77, 255, 0.25) 0%, rgba(0, 229, 255, 0.05) 50%, transparent 100%) !important;
+  background: var(--custom-hero-bg) !important;
   filter: blur(40px);
   opacity: 0.85;
 }
 
 /* Card glassmorphism & lift animation */
 .VPFeature {
-  background: rgba(18, 19, 28, 0.45) !important;
+  background: var(--custom-feature-bg) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--custom-feature-border) !important;
+  box-shadow: 0 4px 30px var(--custom-feature-shadow);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
               box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
               border-color 0.4s ease !important;
-}
-
-.dark .VPFeature {
-  background: rgba(18, 19, 28, 0.45) !important;
 }
 
 .VPFeature:hover {

@@ -43,11 +43,11 @@ The Industrial 3D suite includes specialized open-source tools and color configu
         <h3 class="tool-title">AIO-OCIO</h3>
         <span class="tool-badge">Color Config</span>
       </div>
+      <p class="tool-desc">
+        A unified OpenColorIO configuration ensuring pixel-perfect AgX/Filmic viewport consistency across Maya, Nuke, Houdini, and Blender.
+      </p>
+      <a href="/industrial-cg-platform-docs/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
     </div>
-    <p class="tool-desc">
-      A unified OpenColorIO configuration ensuring pixel-perfect AgX/Filmic viewport consistency across Maya, Nuke, Houdini, and Blender.
-    </p>
-    <a href="/industrial-cg-platform-docs/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
   </div>
 </div>
 

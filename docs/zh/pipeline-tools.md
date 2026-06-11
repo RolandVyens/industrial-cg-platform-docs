@@ -43,11 +43,11 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
         <h3 class="tool-title">AIO-OCIO</h3>
         <span class="tool-badge">色彩配置</span>
       </div>
+      <p class="tool-desc">
+        跨 DCC 统一的 OpenColorIO 色彩方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
+      </p>
+      <a href="/industrial-cg-platform-docs/zh/aio-ocio/" class="tool-button">阅读色彩配置指南</a>
     </div>
-    <p class="tool-desc">
-      跨 DCC 统一的 OpenColorIO 色彩方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
-    </p>
-    <a href="/industrial-cg-platform-docs/zh/aio-ocio/" class="tool-button">阅读色彩配置指南</a>
   </div>
 </div>
 
