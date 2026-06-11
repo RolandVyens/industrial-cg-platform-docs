@@ -90,25 +90,21 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Documentation',
+            text: 'Platform Manual',
             items: [
-              {
-                text: 'Blender CG Platform',
-                items: [
-                  { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
-                  { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
-                  { text: 'API Reference', link: '/en/cg-platform/api/' },
-                  { text: 'Release Notes', link: '/en/cg-platform/releases/' }
-                ]
-              },
-              {
-                text: 'Addons & Colors',
-                items: [
-                  { text: 'AOV Connector', link: '/en/aov-connector/' },
-                  { text: 'Light AOV Splitter', link: '/en/light-splitter/' },
-                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
-                ]
-              }
+              { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
+              { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
+              { text: 'API Reference', link: '/en/cg-platform/api/' },
+              { text: 'Release Notes', link: '/en/cg-platform/releases/' }
+            ]
+          },
+          {
+            text: 'Addon Docs',
+            items: [
+              { text: 'Addon Directory', link: '/en/pipeline-tools' },
+              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
             ]
           },
           { text: 'Donate', link: '/en/donate' },
@@ -147,9 +143,20 @@ export default defineConfig({
           ],
           '/en/aov-connector/': [
             {
-              text: 'AOV Connector',
+              text: 'Industrial AOV Connector',
               items: [
                 { text: 'Overview', link: '/en/aov-connector/' }
+              ]
+            },
+            {
+              text: 'User Manual',
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Read Order', link: '/en/aov-connector/manual/' },
+                { text: 'Basic Mode', link: '/en/aov-connector/manual/basic-mode' },
+                { text: 'Preferences', link: '/en/aov-connector/manual/preference' },
+                { text: 'Advanced Mode', link: '/en/aov-connector/manual/advanced-mode' },
+                { text: 'Fake Deep', link: '/en/aov-connector/manual/fakedeep' }
               ]
             }
           ],
@@ -200,25 +207,21 @@ export default defineConfig({
             ]
           },
           {
-            text: '技术文档',
+            text: '平台文档',
             items: [
-              {
-                text: 'Blender CG Platform 分支',
-                items: [
-                  { text: '用户指南', link: '/zh/cg-platform/guide/getting-started' },
-                  { text: '功能介绍', link: '/zh/cg-platform/features/deep-exr' },
-                  { text: 'API 参考手册', link: '/zh/cg-platform/api/' },
-                  { text: '版本发布记录', link: '/zh/cg-platform/releases/' }
-                ]
-              },
-              {
-                text: '管线工具与色彩',
-                items: [
-                  { text: 'AOV Connector 插件', link: '/zh/aov-connector/' },
-                  { text: 'Light AOV Splitter 插件', link: '/zh/light-splitter/' },
-                  { text: 'AIO-OCIO 色彩配置', link: '/zh/aio-ocio/' }
-                ]
-              }
+              { text: '用户指南', link: '/zh/cg-platform/guide/getting-started' },
+              { text: '功能介绍', link: '/zh/cg-platform/features/deep-exr' },
+              { text: 'API 参考手册', link: '/zh/cg-platform/api/' },
+              { text: '版本发布记录', link: '/zh/cg-platform/releases/' }
+            ]
+          },
+          {
+            text: '插件文档',
+            items: [
+              { text: '插件导览', link: '/zh/pipeline-tools' },
+              { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
             ]
           },
           { text: '赞助', link: '/zh/donate' },
@@ -257,9 +260,20 @@ export default defineConfig({
           ],
           '/zh/aov-connector/': [
             {
-              text: 'AOV Connector',
+              text: 'Industrial AOV Connector',
               items: [
                 { text: '概述', link: '/zh/aov-connector/' }
+              ]
+            },
+            {
+              text: '用户手册',
+              collapsed: false,
+              items: [
+                { text: '引言与推荐阅读顺序', link: '/zh/aov-connector/manual/' },
+                { text: '基础模式', link: '/zh/aov-connector/manual/basic-mode' },
+                { text: '偏好设置', link: '/zh/aov-connector/manual/preference' },
+                { text: '高级模式', link: '/zh/aov-connector/manual/advanced-mode' },
+                { text: 'Fake Deep', link: '/zh/aov-connector/manual/fakedeep' }
               ]
             }
           ],
@@ -316,25 +330,21 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Documentation',
+            text: 'Manuel de Plateforme',
             items: [
-              {
-                text: 'Blender CG Platform',
-                items: [
-                  { text: 'Guide Utilisateur', link: '/fr/cg-platform/guide/getting-started' },
-                  { text: 'Référence des Fonctions', link: '/fr/cg-platform/features/deep-exr' },
-                  { text: 'Référence API', link: '/fr/cg-platform/api/' },
-                  { text: 'Notes de Version', link: '/fr/cg-platform/releases/' }
-                ]
-              },
-              {
-                text: 'Modules & Couleur',
-                items: [
-                  { text: 'AOV Connector', link: '/fr/aov-connector/' },
-                  { text: 'Light AOV Splitter', link: '/fr/light-splitter/' },
-                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
-                ]
-              }
+              { text: 'Guide Utilisateur', link: '/fr/cg-platform/guide/getting-started' },
+              { text: 'Référence des Fonctions', link: '/fr/cg-platform/features/deep-exr' },
+              { text: 'Référence API', link: '/fr/cg-platform/api/' },
+              { text: 'Notes de Version', link: '/fr/cg-platform/releases/' }
+            ]
+          },
+          {
+            text: 'Docs des Modules',
+            items: [
+              { text: 'Guide des plugins', link: '/fr/pipeline-tools' },
+              { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
             ]
           },
           { text: 'Faire un don', link: '/fr/donate' },
@@ -373,9 +383,20 @@ export default defineConfig({
           ],
           '/fr/aov-connector/': [
             {
-              text: 'AOV Connector',
+              text: 'Industrial AOV Connector',
               items: [
                 { text: 'Aperçu', link: '/fr/aov-connector/' }
+              ]
+            },
+            {
+              text: "Manuel d'utilisation",
+              collapsed: false,
+              items: [
+                { text: 'Introduction & Ordre de lecture', link: '/fr/aov-connector/manual/' },
+                { text: 'Mode basique', link: '/fr/aov-connector/manual/basic-mode' },
+                { text: 'Préférences', link: '/fr/aov-connector/manual/preference' },
+                { text: 'Mode avancé', link: '/fr/aov-connector/manual/advanced-mode' },
+                { text: 'Fake Deep', link: '/fr/aov-connector/manual/fakedeep' }
               ]
             }
           ],
