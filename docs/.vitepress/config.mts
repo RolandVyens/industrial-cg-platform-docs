@@ -72,7 +72,6 @@ export default defineConfig({
           {
             text: 'Products',
             items: [
-              { text: 'Addon Directory', link: '/en/pipeline-tools' },
               {
                 text: 'Core Platform',
                 items: [
@@ -82,6 +81,7 @@ export default defineConfig({
               {
                 text: 'Pipeline Plugins & Colors',
                 items: [
+                  { text: 'Addon Directory', link: '/en/pipeline-tools' },
                   { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
                   { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
@@ -182,7 +182,6 @@ export default defineConfig({
           {
             text: '产品生态',
             items: [
-              { text: '插件导览', link: '/zh/pipeline-tools' },
               {
                 text: '核心平台',
                 items: [
@@ -192,6 +191,7 @@ export default defineConfig({
               {
                 text: '流程插件与色彩',
                 items: [
+                  { text: '插件导览', link: '/zh/pipeline-tools' },
                   { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
                   { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
@@ -298,7 +298,6 @@ export default defineConfig({
           {
             text: 'Produits',
             items: [
-              { text: 'Guide des plugins', link: '/fr/pipeline-tools' },
               {
                 text: 'Plateforme Principale',
                 items: [
@@ -308,6 +307,7 @@ export default defineConfig({
               {
                 text: 'Modules & Pipelines',
                 items: [
+                  { text: 'Guide des plugins', link: '/fr/pipeline-tools' },
                   { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
                   { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
