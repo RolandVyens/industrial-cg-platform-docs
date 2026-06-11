@@ -70,63 +70,69 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'CG Platform (Blender)',
+            text: 'Products',
             items: [
-              { text: 'Guide', link: '/en/cg-platform/guide/getting-started' },
-              { text: 'Features', items: enFeatures },
-              { text: 'API Reference', items: enApi },
-              { text: 'Releases', link: '/en/cg-platform/releases/' },
-              { text: 'About', link: '/en/cg-platform/about/' },
+              { text: 'Industrial CG Platform', link: '/en/cg-platform/' },
+              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
             ]
           },
           {
-            text: 'Pipeline Tools',
+            text: 'Documentation',
             items: [
-              { text: 'AOV Connector', link: '/en/aov-connector/' },
-              { text: 'Light AOV Splitter', link: '/en/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+              {
+                text: 'Blender CG Platform',
+                items: [
+                  { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
+                  { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
+                  { text: 'API Reference', link: '/en/cg-platform/api/' },
+                  { text: 'Release Notes', link: '/en/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: 'Addons & Colors',
+                items: [
+                  { text: 'AOV Connector', link: '/en/aov-connector/' },
+                  { text: 'Light AOV Splitter', link: '/en/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+                ]
+              }
             ]
-          }
+          },
+          { text: 'Sponsor', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: 'About', link: '/en/cg-platform/about/' }
         ],
         sidebar: {
-          '/en/cg-platform/about/': [
+          '/en/cg-platform/': [
             {
-              text: 'About',
+              text: 'Getting Started',
+              collapsed: false,
               items: [
                 { text: 'About the Project', link: '/en/cg-platform/about/' },
-              ],
-            },
-          ],
-          '/en/cg-platform/guide/': [
-            {
-              text: 'Guide',
-              items: [
                 { text: 'Getting Started', link: '/en/cg-platform/guide/getting-started' },
                 { text: 'Installation', link: '/en/cg-platform/guide/installation' },
                 { text: 'Building from Source', link: '/en/cg-platform/guide/building-from-source' },
-                { text: 'FAQ', link: '/en/cg-platform/guide/faq' },
-              ],
+                { text: 'FAQ & Troubleshooting', link: '/en/cg-platform/guide/faq' }
+              ]
             },
-          ],
-          '/en/cg-platform/features/': [
             {
-              text: 'Features',
-              items: enFeatures,
+              text: 'Features Reference',
+              collapsed: false,
+              items: enFeatures
             },
-          ],
-          '/en/cg-platform/api/': [
             {
               text: 'API Reference',
-              items: enApi,
+              collapsed: true,
+              items: enApi
             },
-          ],
-          '/en/cg-platform/releases/': [
             {
               text: 'Releases',
+              collapsed: true,
               items: [
-                { text: 'Release Index', link: '/en/cg-platform/releases/' },
-              ],
-            },
+                { text: 'Release Index', link: '/en/cg-platform/releases/' }
+              ]
+            }
           ],
           '/en/aov-connector/': [
             {
@@ -163,63 +169,69 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'CG Platform (Blender 分支)',
+            text: '产品生态',
             items: [
-              { text: '指南', link: '/zh/cg-platform/guide/getting-started' },
-              { text: '功能', items: zhFeatures },
-              { text: 'API 参考', items: zhApi },
-              { text: '发布', link: '/zh/cg-platform/releases/' },
-              { text: '关于', link: '/zh/cg-platform/about/' },
+              { text: 'Industrial CG Platform', link: '/zh/cg-platform/' },
+              { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
             ]
           },
           {
-            text: '流程管线工具',
+            text: '技术文档',
             items: [
-              { text: 'AOV Connector', link: '/zh/aov-connector/' },
-              { text: 'Light AOV Splitter', link: '/zh/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+              {
+                text: 'Blender CG Platform 分支',
+                items: [
+                  { text: '用户指南', link: '/zh/cg-platform/guide/getting-started' },
+                  { text: '功能介绍', link: '/zh/cg-platform/features/deep-exr' },
+                  { text: 'API 参考手册', link: '/zh/cg-platform/api/' },
+                  { text: '版本发布记录', link: '/zh/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: '管线工具与色彩',
+                items: [
+                  { text: 'AOV Connector 插件', link: '/zh/aov-connector/' },
+                  { text: 'Light AOV Splitter 插件', link: '/zh/light-splitter/' },
+                  { text: 'AIO-OCIO 色彩配置', link: '/zh/aio-ocio/' }
+                ]
+              }
             ]
-          }
+          },
+          { text: '赞助项目', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: '关于', link: '/zh/cg-platform/about/' }
         ],
         sidebar: {
-          '/zh/cg-platform/about/': [
+          '/zh/cg-platform/': [
             {
-              text: '关于',
+              text: '快速入门',
+              collapsed: false,
               items: [
                 { text: '关于项目', link: '/zh/cg-platform/about/' },
-              ],
-            },
-          ],
-          '/zh/cg-platform/guide/': [
-            {
-              text: '指南',
-              items: [
                 { text: '快速开始', link: '/zh/cg-platform/guide/getting-started' },
-                { text: '安装', link: '/zh/cg-platform/guide/installation' },
+                { text: '安装指南', link: '/zh/cg-platform/guide/installation' },
                 { text: '从源码构建', link: '/zh/cg-platform/guide/building-from-source' },
-                { text: '常见问题', link: '/zh/cg-platform/guide/faq' },
-              ],
+                { text: '常见问题与解答', link: '/zh/cg-platform/guide/faq' }
+              ]
             },
-          ],
-          '/zh/cg-platform/features/': [
             {
-              text: '功能',
-              items: zhFeatures,
+              text: '核心功能参考',
+              collapsed: false,
+              items: zhFeatures
             },
-          ],
-          '/zh/cg-platform/api/': [
             {
-              text: 'API 参考',
-              items: zhApi,
+              text: 'API 参考手册',
+              collapsed: true,
+              items: zhApi
             },
-          ],
-          '/zh/cg-platform/releases/': [
             {
-              text: '发布',
+              text: '版本发布记录',
+              collapsed: true,
               items: [
-                { text: '发布索引', link: '/zh/cg-platform/releases/' },
-              ],
-            },
+                { text: '发布索引', link: '/zh/cg-platform/releases/' }
+              ]
+            }
           ],
           '/zh/aov-connector/': [
             {
@@ -262,63 +274,69 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'CG Platform (Blender)',
+            text: 'Produits',
             items: [
-              { text: 'Guide', link: '/fr/cg-platform/guide/getting-started' },
-              { text: 'Fonctionnalités', items: frFeatures },
-              { text: 'Référence API', items: frApi },
-              { text: 'Versions', link: '/fr/cg-platform/releases/' },
-              { text: 'À propos', link: '/fr/cg-platform/about/' },
+              { text: 'Industrial CG Platform', link: '/fr/cg-platform/' },
+              { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
             ]
           },
           {
-            text: 'Outils de Pipeline',
+            text: 'Documentation',
             items: [
-              { text: 'AOV Connector', link: '/fr/aov-connector/' },
-              { text: 'Light AOV Splitter', link: '/fr/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+              {
+                text: 'Blender CG Platform',
+                items: [
+                  { text: 'Guide Utilisateur', link: '/fr/cg-platform/guide/getting-started' },
+                  { text: 'Référence des Fonctions', link: '/fr/cg-platform/features/deep-exr' },
+                  { text: 'Référence API', link: '/fr/cg-platform/api/' },
+                  { text: 'Notes de Version', link: '/fr/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: 'Modules & Couleur',
+                items: [
+                  { text: 'AOV Connector', link: '/fr/aov-connector/' },
+                  { text: 'Light AOV Splitter', link: '/fr/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+                ]
+              }
             ]
-          }
+          },
+          { text: 'Soutenir', link: 'https://www.patreon.com/cw/RolandVyens' },
+          { text: 'À Propos', link: '/fr/cg-platform/about/' }
         ],
         sidebar: {
-          '/fr/cg-platform/about/': [
+          '/fr/cg-platform/': [
             {
-              text: 'À propos',
+              text: 'Prise en Main',
+              collapsed: false,
               items: [
                 { text: 'À propos du projet', link: '/fr/cg-platform/about/' },
-              ],
-            },
-          ],
-          '/fr/cg-platform/guide/': [
-            {
-              text: 'Guide',
-              items: [
                 { text: 'Premiers pas', link: '/fr/cg-platform/guide/getting-started' },
                 { text: 'Installation', link: '/fr/cg-platform/guide/installation' },
                 { text: 'Compilation depuis les sources', link: '/fr/cg-platform/guide/building-from-source' },
-                { text: 'FAQ', link: '/fr/cg-platform/guide/faq' },
-              ],
+                { text: 'FAQ & Dépannage', link: '/fr/cg-platform/guide/faq' }
+              ]
             },
-          ],
-          '/fr/cg-platform/features/': [
             {
-              text: 'Fonctionnalités',
-              items: frFeatures,
+              text: 'Référence des Fonctions',
+              collapsed: false,
+              items: frFeatures
             },
-          ],
-          '/fr/cg-platform/api/': [
             {
               text: 'Référence API',
-              items: frApi,
+              collapsed: true,
+              items: frApi
             },
-          ],
-          '/fr/cg-platform/releases/': [
             {
-              text: 'Versions',
+              text: 'Notes de Version',
+              collapsed: true,
               items: [
-                { text: 'Index des versions', link: '/fr/cg-platform/releases/' },
-              ],
-            },
+                { text: 'Index des versions', link: '/fr/cg-platform/releases/' }
+              ]
+            }
           ],
           '/fr/aov-connector/': [
             {
