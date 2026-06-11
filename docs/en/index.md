@@ -12,7 +12,7 @@ hero:
     alt: Industrial 3D Logo
   actions:
     - theme: brand
-      text: Get Blender VFX Fork
+      text: Get Industrial CG Platform
       link: /en/cg-platform/
     - theme: alt
       text: Pipeline Tools
@@ -20,7 +20,7 @@ hero:
 
 features:
   - icon: 🎬
-    title: Blender VFX Fork (Industrial CG Platform)
+    title: Industrial CG Platform
     details: Deep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.
     link: /en/cg-platform/
   - icon: 🔌

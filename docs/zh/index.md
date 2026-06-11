@@ -12,7 +12,7 @@ hero:
     alt: Industrial 3D Logo
   actions:
     - theme: brand
-      text: 获取 Blender 特效定制分支
+      text: 获取 Industrial CG Platform
       link: /zh/cg-platform/
     - theme: alt
       text: 浏览管线工具
@@ -20,7 +20,7 @@ hero:
 
 features:
   - icon: 🎬
-    title: Blender 特效分支 (Industrial CG Platform)
+    title: Industrial CG Platform
     details: 基于 Blender 5.2 源码定制的正片级 VFX 渲染分支。提供 Cycles 原生 Deep EXR 深度图写入、阴影着色控制以及 PyQt 渲染层管理器。
     link: /zh/cg-platform/
   - icon: 🔌

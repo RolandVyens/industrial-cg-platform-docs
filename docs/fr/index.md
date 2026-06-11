@@ -12,7 +12,7 @@ hero:
     alt: Industrial 3D Logo
   actions:
     - theme: brand
-      text: Obtenir le Fork Blender VFX
+      text: Obtenir Industrial CG Platform
       link: /fr/cg-platform/
     - theme: alt
       text: Outils de pipeline
@@ -20,7 +20,7 @@ hero:
 
 features:
   - icon: 🎬
-    title: Fork Blender VFX (Industrial CG Platform)
+    title: Industrial CG Platform
     details: Branche de rendu personnalisée de Blender Cycles (Deep EXR natif, couleur d'ombre et gestionnaire de ViewLayer en PyQt).
     link: /fr/cg-platform/
   - icon: 🔌
