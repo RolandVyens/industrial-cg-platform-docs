@@ -55,7 +55,7 @@ export default defineConfig({
   description: 'Ecosystem of production-ready CG & VFX pipeline tools',
 
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/industrial-cg-platform-docs/logo.png' }],
     ['meta', { name: 'theme-color', content: '#3c8dbc' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Industrial 3D Ecosystem' }],
