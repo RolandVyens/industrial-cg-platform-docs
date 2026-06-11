@@ -72,11 +72,21 @@ export default defineConfig({
           {
             text: 'Products',
             items: [
-              { text: 'All Tools Overview', link: '/en/pipeline-tools' },
-              { text: 'Industrial CG Platform', link: '/en/cg-platform/' },
-              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+              { text: 'Addon Directory', link: '/en/pipeline-tools' },
+              {
+                text: 'Core Platform',
+                items: [
+                  { text: 'Industrial CG Platform', link: '/en/cg-platform/' }
+                ]
+              },
+              {
+                text: 'Pipeline Plugins & Colors',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+                ]
+              }
             ]
           },
           {
@@ -172,11 +182,21 @@ export default defineConfig({
           {
             text: '产品生态',
             items: [
-              { text: '所有工具概述', link: '/zh/pipeline-tools' },
-              { text: 'Industrial CG Platform', link: '/zh/cg-platform/' },
-              { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+              { text: '插件导览', link: '/zh/pipeline-tools' },
+              {
+                text: '核心平台',
+                items: [
+                  { text: 'Industrial CG Platform', link: '/zh/cg-platform/' }
+                ]
+              },
+              {
+                text: '流程插件与色彩',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+                ]
+              }
             ]
           },
           {
@@ -278,11 +298,21 @@ export default defineConfig({
           {
             text: 'Produits',
             items: [
-              { text: 'Tous les outils', link: '/fr/pipeline-tools' },
-              { text: 'Industrial CG Platform', link: '/fr/cg-platform/' },
-              { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+              { text: 'Guide des plugins', link: '/fr/pipeline-tools' },
+              {
+                text: 'Plateforme Principale',
+                items: [
+                  { text: 'Industrial CG Platform', link: '/fr/cg-platform/' }
+                ]
+              },
+              {
+                text: 'Modules & Pipelines',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+                ]
+              }
             ]
           },
           {
