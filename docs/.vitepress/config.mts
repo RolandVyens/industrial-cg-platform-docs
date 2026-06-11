@@ -90,21 +90,25 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Platform Manual',
+            text: 'Documentation',
             items: [
-              { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
-              { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
-              { text: 'API Reference', link: '/en/cg-platform/api/' },
-              { text: 'Release Notes', link: '/en/cg-platform/releases/' }
-            ]
-          },
-          {
-            text: 'Addon Docs',
-            items: [
-              { text: 'Addon Directory', link: '/en/pipeline-tools' },
-              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+              {
+                text: 'Platform Manual',
+                items: [
+                  { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
+                  { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
+                  { text: 'API Reference', link: '/en/cg-platform/api/' },
+                  { text: 'Release Notes', link: '/en/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: 'Addon Manuals',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+                ]
+              }
             ]
           },
           { text: 'Donate', link: '/en/donate' },
@@ -207,21 +211,25 @@ export default defineConfig({
             ]
           },
           {
-            text: '平台文档',
+            text: '技术文档',
             items: [
-              { text: '用户指南', link: '/zh/cg-platform/guide/getting-started' },
-              { text: '功能介绍', link: '/zh/cg-platform/features/deep-exr' },
-              { text: 'API 参考手册', link: '/zh/cg-platform/api/' },
-              { text: '版本发布记录', link: '/zh/cg-platform/releases/' }
-            ]
-          },
-          {
-            text: '插件文档',
-            items: [
-              { text: '插件导览', link: '/zh/pipeline-tools' },
-              { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+              {
+                text: '平台文档',
+                items: [
+                  { text: '用户指南', link: '/zh/cg-platform/guide/getting-started' },
+                  { text: '功能介绍', link: '/zh/cg-platform/features/deep-exr' },
+                  { text: 'API 参考手册', link: '/zh/cg-platform/api/' },
+                  { text: '版本发布记录', link: '/zh/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: '插件文档',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/zh/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/zh/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+                ]
+              }
             ]
           },
           { text: '赞助', link: '/zh/donate' },
@@ -330,21 +338,25 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Manuel de Plateforme',
+            text: 'Documentation',
             items: [
-              { text: 'Guide Utilisateur', link: '/fr/cg-platform/guide/getting-started' },
-              { text: 'Référence des Fonctions', link: '/fr/cg-platform/features/deep-exr' },
-              { text: 'Référence API', link: '/fr/cg-platform/api/' },
-              { text: 'Notes de Version', link: '/fr/cg-platform/releases/' }
-            ]
-          },
-          {
-            text: 'Docs des Modules',
-            items: [
-              { text: 'Guide des plugins', link: '/fr/pipeline-tools' },
-              { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
-              { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+              {
+                text: 'Manuel de Plateforme',
+                items: [
+                  { text: 'Guide Utilisateur', link: '/fr/cg-platform/guide/getting-started' },
+                  { text: 'Référence des Fonctions', link: '/fr/cg-platform/features/deep-exr' },
+                  { text: 'Référence API', link: '/fr/cg-platform/api/' },
+                  { text: 'Notes de Version', link: '/fr/cg-platform/releases/' }
+                ]
+              },
+              {
+                text: 'Docs des Modules',
+                items: [
+                  { text: 'Industrial AOV Connector', link: '/fr/aov-connector/' },
+                  { text: 'Industrial Light AOV Splitter', link: '/fr/light-splitter/' },
+                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+                ]
+              }
             ]
           },
           { text: 'Faire un don', link: '/fr/donate' },
