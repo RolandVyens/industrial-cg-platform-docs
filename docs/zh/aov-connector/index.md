@@ -25,10 +25,18 @@
 
 ---
 
+## 面板位置
+
+启用插件后，您可以在 Blender 的下方位置找到该插件的控制面板：
+> 📌 **属性面板 (Properties) → 视图层 (View Layer)** 选项卡
+
+---
+
 ## 安装与快速上手
 
 ### 前提条件
-*   Blender 4.2 LTS 或更高版本，或者使用定制的 **Industrial CG Platform** 渲染分支。
+*   Blender 4.2 LTS 或更高版本。
+*   **生态搭配推荐：** 强烈建议搭配定制的 [Industrial CG Platform](/zh/cg-platform/) 渲染分支使用，以获得最佳的灯光材质 AOV 以及 Cycles 原生 Deep EXR 深度图输出支持。
 
 ### 通过官方扩展平台安装（推荐）
 1.  打开 Blender，前往 `编辑 (Edit)` > `偏好设置 (Preferences)` > `获取扩展 (Get Extensions)`。
@@ -42,7 +50,8 @@
 
 ---
 
-## 开源仓库与链接
+## 开源协议与链接
 
+*   **开源协议：** GNU General Public License v3.0 (GPL-3.0)
 *   **GitHub 仓库**：[RolandVyens/Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector)
 *   **问题反馈**：[GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-AOV-Connector/issues)

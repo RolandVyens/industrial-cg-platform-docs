@@ -7,41 +7,41 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
 <div class="tools-grid">
   <!-- AOV Connector -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">🔌</span>
-      <div>
-        <h3 class="tool-title">Connecteur AOV pour Blender</h3>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-AOV-Connector" alt="Industrial AOV Connector" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Industrial AOV Connector</h3>
         <span class="tool-badge">Module Blender</span>
       </div>
+      <p class="tool-desc">
+        Configure automatiquement les arbres de nœuds de composition, connecte le débruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
+      </p>
+      <a href="/fr/aov-connector/" class="tool-button">Lire le Guide du Module</a>
     </div>
-    <p class="tool-desc">
-      Configure automatiquement les arbres de nœuds de composition, connecte le débruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
-    </p>
-    <a href="/fr/aov-connector/" class="tool-button">Lire le Guide du Module</a>
   </div>
 
   <!-- Light AOV Splitter -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">💡</span>
-      <div>
-        <h3 class="tool-title">Séparateur d'AOV de Lumière</h3>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-Light-AOV-Splitter" alt="Industrial Light AOV Splitter" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Industrial Light AOV Splitter</h3>
         <span class="tool-badge">Module Blender</span>
       </div>
+      <p class="tool-desc">
+        Divise et matérialise automatiquement les passes de groupes de lumières pour offrir un contrôle total et indépendant du compositing.
+      </p>
+      <a href="/fr/light-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
     </div>
-    <p class="tool-desc">
-      Divise et matérialise automatiquement les passes de groupes de lumières pour offrir un contrôle total et indépendant du compositing.
-    </p>
-    <a href="/fr/light-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
   </div>
 
   <!-- AIO-OCIO -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">🎨</span>
-      <div>
-        <h3 class="tool-title">Gestion de Couleur AIO-OCIO</h3>
-        <span class="tool-badge">Configuration Couleur</span>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/AIO-OCIO" alt="AIO-OCIO" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">AIO-OCIO</h3>
+        <span class="tool-badge">Config Couleur</span>
       </div>
     </div>
     <p class="tool-desc">
@@ -66,7 +66,7 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.01);
 }
@@ -75,30 +75,41 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
   box-shadow: 0 12px 24px rgba(0,0,0,0.06);
   border-color: var(--vp-c-brand);
 }
+.tool-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--vp-c-divider);
+  aspect-ratio: 1200/600;
+  object-fit: cover;
+}
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .tool-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.tool-icon {
-  font-size: 2.2rem;
-}
 .tool-title {
   margin: 0 !important;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
 }
 .tool-badge {
-  display: inline-block;
   font-size: 0.75rem;
   font-weight: 500;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   padding: 0.1rem 0.5rem;
   border-radius: 4px;
-  margin-top: 0.2rem;
+  white-space: nowrap;
 }
 .tool-desc {
   font-size: 0.9rem;

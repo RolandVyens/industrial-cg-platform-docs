@@ -25,10 +25,18 @@ En automatisant la construction d'arbres de nœuds de compositing complexes et d
 
 ---
 
+## Emplacement dans l'interface
+
+Une fois activé, le panneau du module est accessible dans le :
+> 📌 **Panneau Propriétés → onglet Couche de vue (View Layer)**
+
+---
+
 ## Installation et prise en main
 
 ### Prérequis
-*   Blender 4.2 LTS ou version supérieure, ou la branche **Industrial CG Platform**.
+*   Blender 4.2 LTS ou version supérieure.
+*   **Recommandation d'écosystème :** Idéalement associé à la branche personnalisée [Industrial CG Platform](/fr/cg-platform/) pour un rendu optimal des AOVs de matériaux lumineux et un support natif du format Deep EXR.
 
 ### Via les extensions Blender (Recommandé)
 1.  Ouvrez Blender et allez dans `Edit` > `Preferences` > `Get Extensions`.
@@ -42,7 +50,8 @@ En automatisant la construction d'arbres de nœuds de compositing complexes et d
 
 ---
 
-## Liens du dépôt
+## Licence & Liens du dépôt
 
+*   **Licence :** GNU General Public License v3.0 (GPL-3.0)
 *   **Dépôt GitHub :** [RolandVyens/Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector)
 *   **Signaler un problème :** [GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-AOV-Connector/issues)

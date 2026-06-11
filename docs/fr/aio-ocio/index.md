@@ -1,6 +1,6 @@
 # AIO-OCIO
 
-**AIO-OCIO** (également connu sous le nom de PixelManager Super-OCIO) est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG multi-logiciels modernes.
+**AIO-OCIO** est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG multi-logiciels modernes.
 
 En unifiant les transformations de couleurs sur les principaux outils de création de contenu numérique (DCC), il garantit que vos rendus, projections de textures et éléments de compositing soient 100 % identiques, que vous soyez dans Blender, Autodesk Maya, SideFX Houdini ou Foundry Nuke.
 
@@ -13,13 +13,17 @@ En unifiant les transformations de couleurs sur les principaux outils de créati
 *   **Compatibilité AgX Punchy :** Portez les configurations populaires "AgX Punchy" et "AgX Look" de Blender directement vers d'autres DCC comme Maya et Houdini.
 
 ### 🎬 Espaces colorimétriques de production
-*   Basé sur la célèbre configuration OCIO "PixelManager" de Genco Uney.
-*   Prise en charge complète des profils modernes à large gamme et linéaires (ACEScg, ACES2065-1, Rec.2020, sRGB Linear).
-*   Profils de caméra standards intégrés (Arri LogC3/LogC4, RED Log3G10, Sony S-Log3) pour une intégration fluide des plaques de tournage réelles.
+*   **Fondation Reconnue :** Basé sur la célèbre configuration OCIO *PixelManager* de Genco Uney, avec des optimisations supplémentaires pour les studios.
+*   **Affichages Pris en Charge :** Prise en charge complète du mappage des fenêtres d'affichage pour les écrans standards de l'industrie, notamment **sRGB**, **Display P3** et **Rec.1886**.
+*   **Support ACES & Large Gamut :** Prise en charge complète des profils modernes à large gamme et linéaires (ACEScg, ACES2065-1, Rec.2020, sRGB Linear).
+*   **Espaces Caméra Log :** Profils de caméra standards intégrés (Arri LogC3/LogC4, RED Log3G10, Sony S-Log3) pour une intégration fluide des plaques de tournage réelles.
 
 ---
 
 ## Installation et intégration
+
+### Prérequis
+*   Votre logiciel / DCC doit prendre en charge **OCIO 2.0** ou supérieur pour exploiter cette configuration.
 
 ### Intégration dans Blender
 1.  Téléchargez les derniers fichiers depuis le dépôt.
@@ -44,4 +48,3 @@ En unifiant les transformations de couleurs sur les principaux outils de créati
 ## Liens du dépôt
 
 *   **Dépôt GitHub :** [RolandVyens/AIO-OCIO](https://github.com/RolandVyens/AIO-OCIO)
-*   **Dépôt alternatif Super-OCIO :** [RolandVyens/PixelManager-Super-OCIO](https://github.com/RolandVyens/PixelManager-Super-OCIO)

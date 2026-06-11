@@ -7,40 +7,40 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
 <div class="tools-grid">
   <!-- AOV Connector -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">🔌</span>
-      <div>
-        <h3 class="tool-title">Blender AOV 智能连接器</h3>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-AOV-Connector" alt="Industrial AOV Connector" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Industrial AOV Connector</h3>
         <span class="tool-badge">Blender 插件</span>
       </div>
+      <p class="tool-desc">
+        一键自动创建渲染通道输出树，智能接入降噪节点，并自动导出为完美对接 Nuke 的标准多通道 EXR 结构。
+      </p>
+      <a href="/zh/aov-connector/" class="tool-button">阅读插件指南</a>
     </div>
-    <p class="tool-desc">
-      一键自动创建渲染通道输出树，智能接入降噪节点，并自动导出为完美对接 Nuke 的标准多通道 EXR 结构。
-    </p>
-    <a href="/zh/aov-connector/" class="tool-button">阅读插件指南</a>
   </div>
 
   <!-- Light AOV Splitter -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">💡</span>
-      <div>
-        <h3 class="tool-title">Blender 灯光通道拆分器</h3>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/Industrial-Light-AOV-Splitter" alt="Industrial Light AOV Splitter" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Industrial Light AOV Splitter</h3>
         <span class="tool-badge">Blender 插件</span>
       </div>
+      <p class="tool-desc">
+        自动将渲染的灯光组（Light Groups）通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
+      </p>
+      <a href="/zh/light-splitter/" class="tool-button">阅读拆分器指南</a>
     </div>
-    <p class="tool-desc">
-      自动将渲染的灯光组（Light Groups）通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
-    </p>
-    <a href="/zh/light-splitter/" class="tool-button">阅读拆分器指南</a>
   </div>
 
   <!-- AIO-OCIO -->
   <div class="tool-card">
-    <div class="tool-header">
-      <span class="tool-icon">🎨</span>
-      <div>
-        <h3 class="tool-title">AIO-OCIO 跨软件色彩管线</h3>
+    <img src="https://opengraph.githubassets.com/1/RolandVyens/AIO-OCIO" alt="AIO-OCIO" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">AIO-OCIO</h3>
         <span class="tool-badge">色彩配置</span>
       </div>
     </div>
@@ -66,7 +66,7 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.01);
 }
@@ -75,30 +75,41 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
   box-shadow: 0 12px 24px rgba(0,0,0,0.06);
   border-color: var(--vp-c-brand);
 }
+.tool-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--vp-c-divider);
+  aspect-ratio: 1200/600;
+  object-fit: cover;
+}
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .tool-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.tool-icon {
-  font-size: 2.2rem;
-}
 .tool-title {
   margin: 0 !important;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
 }
 .tool-badge {
-  display: inline-block;
   font-size: 0.75rem;
   font-weight: 500;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   padding: 0.1rem 0.5rem;
   border-radius: 4px;
-  margin-top: 0.2rem;
+  white-space: nowrap;
 }
 .tool-desc {
   font-size: 0.9rem;

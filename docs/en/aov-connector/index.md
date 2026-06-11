@@ -25,10 +25,18 @@ By automating the construction of complex compositor node trees and file output 
 
 ---
 
+## Usage & UI Location
+
+Once installed, the add-on panel can be found in the:
+> 📌 **Properties Panel → View Layer** tab
+
+---
+
 ## Installation & Getting Started
 
 ### Prerequisites
-*   Blender 4.2 LTS or Blender 5.2 (including the **Industrial CG Platform** branch).
+*   Blender 4.2 LTS or newer.
+*   **Ecosystem Recommendation:** Best paired with the custom [Industrial CG Platform](/en/cg-platform/) Blender branch for optimal light material AOVs and native deep EXR support.
 
 ### Via Blender Extensions (Recommended)
 1.  Open Blender and navigate to `Edit` > `Preferences` > `Get Extensions`.
@@ -42,7 +50,8 @@ By automating the construction of complex compositor node trees and file output 
 
 ---
 
-## Repository & Links
+## License & Repositories
 
+*   **License:** GNU General Public License v3.0 (GPL-3.0)
 *   **GitHub Repository:** [RolandVyens/Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector)
 *   **Report Issues:** [GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-AOV-Connector/issues)
