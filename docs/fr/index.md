@@ -1,50 +1,47 @@
 ---
 layout: home
-title: Industrial CG Platform
-titleTemplate: Branche de rendu VFX pour Blender
+title: Industrial 3D
+titleTemplate: Écosystème de Pipelines CG & VFX
 
 hero:
-  name: Industrial CG Platform
-  text: Branche de rendu VFX pour Blender
-  tagline: Conçu pour les VFX. Construit à partir de Blender. Fait pour les plans. Une plateforme de production basée sur Blender pour des flux de travail VFX avancés.
+  name: Industrial 3D
+  text: Écosystème de Pipelines CG & VFX
+  tagline: Outils de rendu, de gestion des données et de colorimétrie prêts pour la production, conçus pour les exigences des studios.
   image:
     src: /logo.png
-    alt: Industrial CG Platform Logo
+    alt: Industrial 3D Logo
   actions:
     - theme: brand
-      text: Premiers pas
-      link: /fr/guide/getting-started
+      text: Découvrir CG Platform
+      link: /fr/cg-platform/
     - theme: alt
-      text: Fonctionnalités
-      link: /fr/features/deep-exr
-    - theme: alt
-      text: Référence API
-      link: /fr/api/
+      text: Outils de pipeline
+      link: #tools-ecosystem
 
 features:
   - icon: 🎬
-    title: Sortie Deep EXR
-    details: Sortie de compositing profond native pour Cycles — écrit des données de profondeur par échantillon pour des fusions profondes sans perte dans Nuke et d'autres outils de compositing.
-    link: /fr/features/deep-exr
+    title: Industrial CG Platform
+    details: Branche de rendu personnalisée de Blender Cycles (Deep EXR natif, couleur d'ombre et gestionnaire de ViewLayer en PyQt).
+    link: /fr/cg-platform/
+  - icon: 🔌
+    title: Industrial AOV Connector
+    details: Module d'automatisation du compositeur de Blender pour configurer les arbres d'AOV et s'aligner sur les normes Nuke.
+    link: /fr/aov-connector/
   - icon: 💡
-    title: Passes par lobe de lightgroup
-    details: Passes diffus/glossy/transmission/volume par lightgroup avec séparation directe et indirecte pour un contrôle précis du réeclairage.
-    link: /fr/features/lightgroup-lobe-passes
+    title: Light AOV Splitter
+    details: Séparateur automatique de groupes de lumières pour diviser et matérialiser les passes de lumières individuelles en compositing.
+    link: /fr/light-splitter/
   - icon: 🎨
-    title: Couleur d'ombre
-    details: Contrôle artistique de la couleur d'ombre par lumière et par monde — teignez les ombres sans affecter le reste de l'éclairage.
-    link: /fr/features/shadow-color
-  - icon: 🖥️
-    title: Gestionnaire de ViewLayer
-    details: Outil de gestion de ViewLayer basé sur Qt avec système de préréglages, regroupement de passes et opérations de ViewLayer par lots — le tout depuis une fenêtre de gestion dédiée.
-    link: /fr/features/viewlayer-manager
+    title: PixelManager Super-OCIO
+    details: Configuration OpenColorIO unifiée et optimisée pour les pipelines multi-logiciels (Maya, Nuke, Houdini, Blender).
+    link: /fr/super-ocio/
 ---
 
-<br>
+<br id="tools-ecosystem">
 
 <div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--vp-c-divider);">
-  <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Soutenir le Développement</h2>
-  <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial CG Platform est développé en tant que projet R&D open-source axé sur la production.</p>
+  <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Soutenir le développement</h2>
+  <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Les outils Industrial 3D sont développés sous forme de projets R&D open-source axés sur la production.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
     <a class="VPButton medium brand" href="https://www.patreon.com/cw/RolandVyens" target="_blank">Soutenir sur Patreon</a>
     <a class="VPButton medium alt" href="https://www.ifdian.net/a/mogubobi2" target="_blank">Soutenir sur Afdian</a>

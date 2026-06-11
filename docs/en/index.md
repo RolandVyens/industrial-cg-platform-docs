@@ -1,50 +1,47 @@
 ---
 layout: home
-title: Industrial CG Platform
-titleTemplate: Blender VFX Rendering Branch
+title: Industrial 3D
+titleTemplate: CG & VFX Pipeline Ecosystem
 
 hero:
-  name: Industrial CG Platform
-  text: Blender VFX Rendering Branch
-  tagline: Built for VFX. Built from Blender. Built for shots. A Blender-based production platform for advanced VFX workflows.
+  name: Industrial 3D
+  text: CG & VFX Pipeline Ecosystem
+  tagline: Production-ready rendering, data management, and color pipeline tools for professional studio pipelines.
   image:
     src: /logo.png
-    alt: Industrial CG Platform Logo
+    alt: Industrial 3D Logo
   actions:
     - theme: brand
-      text: Getting Started
-      link: /en/guide/getting-started
+      text: Explore Blender Branch
+      link: /en/cg-platform/
     - theme: alt
-      text: Features
-      link: /en/features/deep-exr
-    - theme: alt
-      text: API Reference
-      link: /en/api/
+      text: Pipeline Tools
+      link: #tools-ecosystem
 
 features:
   - icon: 🎬
-    title: Deep EXR Output
-    details: Native deep compositing output for Cycles — write per-sample depth data for lossless deep merges in Nuke and other compositing tools.
-    link: /en/features/deep-exr
+    title: Industrial CG Platform
+    details: Deep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.
+    link: /en/cg-platform/
+  - icon: 🔌
+    title: Industrial AOV Connector
+    details: Blender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.
+    link: /en/aov-connector/
   - icon: 💡
-    title: Lightgroup Lobe Passes
-    details: Per-lightgroup split diffuse/glossy/transmission/volume passes with direct and indirect separation for fine-grained relighting control.
-    link: /en/features/lightgroup-lobe-passes
+    title: Light AOV Splitter
+    details: Automatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing control.
+    link: /en/light-splitter/
   - icon: 🎨
-    title: Shadow Color
-    details: Artistic per-light and per-world shadow color control — tint shadows without affecting the rest of the lighting.
-    link: /en/features/shadow-color
-  - icon: 🖥️
-    title: ViewLayer Manager
-    details: Qt-based ViewLayer management tool with preset system, pass grouping, and batch ViewLayer operations — all from a dedicated manager window.
-    link: /en/features/viewlayer-manager
+    title: PixelManager Super-OCIO
+    details: Unified cross-application OpenColorIO pipeline configuration (Maya, Nuke, Houdini, Blender).
+    link: /en/super-ocio/
 ---
 
-<br>
+<br id="tools-ecosystem">
 
 <div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--vp-c-divider);">
-  <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Support the Development</h2>
-  <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial CG Platform is developed as production-focused open-source R&D.</p>
+  <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Sponsorship & Support</h2>
+  <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial 3D tools are developed as open-source, production-focused R&D projects.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
     <a class="VPButton medium brand" href="https://www.patreon.com/cw/RolandVyens" target="_blank">Support on Patreon</a>
     <a class="VPButton medium alt" href="https://www.ifdian.net/a/mogubobi2" target="_blank">Support on Afdian</a>
