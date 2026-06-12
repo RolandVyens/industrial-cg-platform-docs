@@ -79,19 +79,19 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
 }
 
 /* Homepage Hero Background Image Styling */
-.VP-HomeHero {
-  background-image: linear-gradient(to bottom, rgba(246, 246, 249, 0.82) 0%, var(--vp-c-bg) 100%), url('/home-splash.jpg') !important;
+.VPHomeHero {
+  background-image: linear-gradient(to bottom, rgba(246, 246, 249, 0.82) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
 
-.dark .VP-HomeHero {
-  background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.78) 0%, var(--vp-c-bg) 100%), url('/home-splash.jpg') !important;
+.dark .VPHomeHero {
+  background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.78) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
 }
 
 /* Glow gradient behind hero image */
-.VP-HomeHero .image-bg {
+.VPHomeHero .image-bg {
   background: var(--custom-hero-bg) !important;
   filter: blur(40px);
   opacity: 0.85;
