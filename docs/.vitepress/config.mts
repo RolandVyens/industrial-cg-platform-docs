@@ -53,6 +53,7 @@ export default defineConfig({
   base: '/industrial-cg-platform-docs/',
   title: 'Industrial 3D',
   description: 'Ecosystem of free & open-source CG & VFX pipeline tools',
+  appearance: 'dark',
 
   head: [
     ['link', { rel: 'icon', href: '/industrial-cg-platform-docs/logo.png' }],
