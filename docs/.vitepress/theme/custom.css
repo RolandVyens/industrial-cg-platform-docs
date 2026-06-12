@@ -122,3 +122,15 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(124, 77, 255, 0.45);
 }
+
+/* Footer text contrast optimizations */
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--vp-c-text-2) !important;
+  font-weight: 500;
+}
+.dark .VPFooter .message,
+.dark .VPFooter .copyright {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+

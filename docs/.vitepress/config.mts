@@ -63,6 +63,8 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Industrial 3D Ecosystem' }],
     ['meta', { property: 'og:description', content: 'Free and open-source CG & VFX pipeline tools by Roland Vyens' }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' data: https://github.com https://*.githubusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self';" }],
+    ['script', {}, "if (self !== top) { top.location = self.location; }"],
   ],
 
   locales: {
