@@ -80,14 +80,14 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
 
 /* Homepage Hero Background Image Styling */
 .VPHomeHero {
-  background-image: linear-gradient(to bottom, rgba(246, 246, 249, 0.82) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
+  background-image: linear-gradient(to bottom, rgba(246, 246, 249, 0.55) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
 
 .dark .VPHomeHero {
-  background-image: linear-gradient(to bottom, rgba(15, 17, 26, 0.78) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
+  background-image: linear-gradient(to bottom, rgba(11, 12, 16, 0.45) 0%, var(--vp-c-bg) 100%), url('../../public/home-splash.jpg') !important;
 }
 
 /* Glow gradient behind hero image */
