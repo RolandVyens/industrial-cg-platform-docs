@@ -8,8 +8,8 @@ hero:
   text: 基于 Blender 的影视级 CG & VFX 管线生态
   tagline: 源于 Blender，为电影级制作而生。专为实拍特效与 CG 流程打造的生产级 Blender 渲染、数据管理和色彩管线工具生态。
   image:
-    src: /home-splash.jpg
-    alt: Industrial 3D Splash
+    src: /logo.png
+    alt: Industrial 3D Logo
   actions:
     - theme: brand
       text: 获取 Industrial CG Platform
