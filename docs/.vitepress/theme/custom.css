@@ -114,11 +114,14 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
 /* Button premium gradient styles */
 .VPButton.brand {
   background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%) !important;
+  color: #ffffff !important;
   border: none !important;
   box-shadow: 0 4px 15px rgba(124, 77, 255, 0.3);
   transition: transform 0.2s, box-shadow 0.2s !important;
 }
+
 .VPButton.brand:hover {
+  color: #ffffff !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(124, 77, 255, 0.45);
 }
