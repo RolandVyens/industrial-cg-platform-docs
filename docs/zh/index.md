@@ -35,6 +35,10 @@ features:
     title: AIO-OCIO
     details: 跨软件统一色彩管理方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
     link: /zh/aio-ocio/
+  - icon: 📐
+    title: EXR Overscan 溢画幅
+    details: Cycles 原生 EXR 溢画幅支持 — 在相机框外计算额外的像素边缘，为后期镜头防抖、去畸变和图像变形提供缓冲。
+    link: /zh/cg-platform/features/exr-overscan
 ---
 
 <div style="margin-top: 6rem; padding: 3rem 2rem; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); border-radius: 16px; text-align: center;">

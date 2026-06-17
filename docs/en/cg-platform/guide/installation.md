@@ -37,7 +37,7 @@ Run the following from a command prompt to verify:
 Expected output:
 
 ```
-Blender 5.2.0 Industrial CG Platform
+Blender 5.2.0-2026-06-16 Industrial CG Platform
 ```
 
 ## GPU Setup

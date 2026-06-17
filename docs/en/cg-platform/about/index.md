@@ -48,7 +48,7 @@ The project also gratefully acknowledges the MoonRay project, whose public imple
 
 Industrial CG Platform follows Blender's GPL licensing model for the core application, and it also ships a bundled bQt runtime extension with additional third-party components.
 
-- The Blender-derived application code remains under the GNU General Public License, Version 3, with individual files sometimes using a different but compatible license.
+- The Blender-derived application code remains under the Blender License (GNU GPL v3 or later), with individual files sometimes using a different but compatible license.
 - The bundled Qt runtime extension includes third-party packages such as `bqt`, `QtPy`, `PySide6`, `PySide6_Essentials`, `PySide6_Addons`, `shiboken6`, `packaging`, and `blender-qt-stylesheet`.
 - Those bundled components carry their own upstream licenses, including MPL-2.0, MIT, Apache-2.0, BSD-2-Clause, LGPL-3.0-only, GPL-2.0-only, and GPL-3.0-only.
 

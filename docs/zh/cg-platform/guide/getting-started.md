@@ -25,6 +25,7 @@ Industrial CG Platform 专为以下人群设计：
 | 功能 | 说明 |
 | --- | --- |
 | [Deep EXR 深度输出](/zh/cg-platform/features/deep-exr) | Cycles 原生深度合成输出 |
+| [EXR Overscan 溢画幅](/zh/cg-platform/features/exr-overscan) | 保留 displayWindow 并扩展 dataWindow，供下游 VFX 流程使用 |
 | [灯光组分量通道](/zh/cg-platform/features/lightgroup-lobe-passes) | 逐灯光组的漫反射/光泽/透射/体积分量通道 |
 | [阴影颜色](/zh/cg-platform/features/shadow-color) | 逐灯光和逐世界的艺术级阴影着色 |
 | [ViewLayer 管理器](/zh/cg-platform/features/viewlayer-manager) | 基于 Qt 的 ViewLayer 管理工具，支持预设系统 |
@@ -33,7 +34,7 @@ Industrial CG Platform 专为以下人群设计：
 
 - **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在官方 Blender 5.2 中打开。自定义功能在官方版本中不可用，但数据会被保留。
 - **相同的可执行文件名** — 可执行文件仍然是 `blender.exe`，使用相同的配置目录结构。
-- **分支后缀** — 窗口标题显示 `Blender 5.2.0 Industrial CG Platform` 以区分官方版本。
+- **分支后缀** — 窗口标题显示 `Blender 5.2.0-2026-06-16 Industrial CG Platform` 以区分官方版本。
 - **仅 Windows** — 当前发布版本仅提供 Windows x64 ZIP 包。Linux 支持计划在未来版本中提供。
 
 ## 下一步

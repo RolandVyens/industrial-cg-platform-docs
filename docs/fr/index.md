@@ -35,6 +35,10 @@ features:
     title: AIO-OCIO
     details: Configuration OpenColorIO unifiée et optimisée pour les pipelines multi-logiciels (Maya, Nuke, Houdini, Blender).
     link: /fr/aio-ocio/
+  - icon: 📐
+    title: Overscan EXR
+    details: Prise en charge native de l'overscan EXR dans Cycles — calculez des pixels supplémentaires autour du cadre de caméra pour la distorsion d'optique et la stabilisation.
+    link: /fr/cg-platform/features/exr-overscan
 ---
 
 <div style="margin-top: 6rem; padding: 3rem 2rem; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); border-radius: 16px; text-align: center;">

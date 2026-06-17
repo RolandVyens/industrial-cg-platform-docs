@@ -25,6 +25,7 @@ Industrial CG Platform est destiné aux :
 | Fonctionnalité | Description |
 | --- | --- |
 | [Sortie Deep EXR](/fr/cg-platform/features/deep-exr) | Sortie de compositing profond native pour Cycles |
+| [EXR Overscan](/fr/cg-platform/features/exr-overscan) | Préserve la displayWindow et étend la dataWindow pour le padding VFX en aval |
 | [Passes par lobe de lightgroup](/fr/cg-platform/features/lightgroup-lobe-passes) | Passes divisées par lightgroup (diffus/glossy/transmission/volume) |
 | [Couleur d'ombre](/fr/cg-platform/features/shadow-color) | Teinture artistique des ombres par lumière et par monde |
 | [Gestionnaire de ViewLayer](/fr/cg-platform/features/viewlayer-manager) | Outil de gestion ViewLayer basé sur Qt avec préréglages |
@@ -33,7 +34,7 @@ Industrial CG Platform est destiné aux :
 
 - **Compatibilité totale** — Les fichiers `.blend` créés dans Industrial CG Platform sont compatibles avec Blender 5.2 standard. Les fonctionnalités personnalisées ne seront tout simplement pas disponibles lorsqu'elles sont ouvertes dans Blender standard.
 - **Mêmes noms d'exécutables** — L'exécutable s'appelle toujours `blender.exe` et utilise la même structure de répertoire de configuration.
-- **Suffixe de branche** — Le titre de la fenêtre affiche `Blender 5.2.0 Industrial CG Platform` pour le distinguer de Blender standard.
+- **Suffixe de branche** — Le titre de la fenêtre affiche `Blender 5.2.0-2026-06-16 Industrial CG Platform` pour le distinguer de Blender standard.
 - **Windows uniquement** — Les versions actuelles sont uniquement des packages ZIP Windows x64. Le support Linux est prévu pour l'avenir.
 
 ## Prochaines Étapes

@@ -515,7 +515,7 @@ export default defineConfig({
       text: 'Edit this page on GitHub',
     },
     footer: {
-      message: 'Released under the GPL-2.0-or-later License.',
+      message: 'Released under the Blender License (GNU GPL v3 or later).',
       copyright: 'Copyright © 2026 RolandVyens',
     },
   },

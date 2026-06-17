@@ -37,7 +37,7 @@ Exécutez la commande suivante dans une invite de commande ou PowerShell dans le
 Sortie attendue :
 
 ```
-Blender 5.2.0 Industrial CG Platform
+Blender 5.2.0-2026-06-16 Industrial CG Platform
 ```
 
 ## Configuration GPU
