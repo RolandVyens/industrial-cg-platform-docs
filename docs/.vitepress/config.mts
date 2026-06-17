@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // Shared nav/sidebar helpers mapped to the new /cg-platform/ nested structure
 const enFeatures = [
   { text: 'Deep EXR', link: '/en/cg-platform/features/deep-exr' },
+  { text: 'EXR Overscan', link: '/en/cg-platform/features/exr-overscan' },
   { text: 'Shadow Color', link: '/en/cg-platform/features/shadow-color' },
   { text: 'Lightgroup Lobe Passes', link: '/en/cg-platform/features/lightgroup-lobe-passes' },
   { text: 'ViewLayer Manager', link: '/en/cg-platform/features/viewlayer-manager' },
@@ -10,6 +11,7 @@ const enFeatures = [
 
 const zhFeatures = [
   { text: 'Deep EXR 深度输出', link: '/zh/cg-platform/features/deep-exr' },
+  { text: 'EXR Overscan 溢画幅', link: '/zh/cg-platform/features/exr-overscan' },
   { text: '阴影颜色', link: '/zh/cg-platform/features/shadow-color' },
   { text: '灯光组分量通道', link: '/zh/cg-platform/features/lightgroup-lobe-passes' },
   { text: 'ViewLayer 管理器', link: '/zh/cg-platform/features/viewlayer-manager' },
@@ -17,6 +19,7 @@ const zhFeatures = [
 
 const frFeatures = [
   { text: 'Deep EXR', link: '/fr/cg-platform/features/deep-exr' },
+  { text: 'Overscan EXR', link: '/fr/cg-platform/features/exr-overscan' },
   { text: 'Couleur d\'ombre', link: '/fr/cg-platform/features/shadow-color' },
   { text: 'Passes par lobe de lightgroup', link: '/fr/cg-platform/features/lightgroup-lobe-passes' },
   { text: 'Gestionnaire de ViewLayer', link: '/fr/cg-platform/features/viewlayer-manager' },

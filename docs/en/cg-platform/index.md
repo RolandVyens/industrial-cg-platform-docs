@@ -26,6 +26,10 @@ features:
     title: Deep EXR Output
     details: Native deep compositing output for Cycles — write per-sample depth data for lossless deep merges in Nuke and other compositing tools.
     link: /en/cg-platform/features/deep-exr
+  - icon: 📐
+    title: EXR Overscan
+    details: Native EXR overscan support in Cycles — render extra pixels outside the camera frame to pad lens distortion, camera shake, and transformations.
+    link: /en/cg-platform/features/exr-overscan
   - icon: 💡
     title: Lightgroup Lobe Passes
     details: Per-lightgroup split diffuse/glossy/transmission/volume passes with direct and indirect separation for fine-grained relighting control.

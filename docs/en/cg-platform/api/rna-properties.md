@@ -100,6 +100,43 @@ This flag is applied to `Scene.view_layers` so that the native ViewLayer selecto
 RNA_def_property_flag(prop, PROP_SEARCH_KEEP_ORDER);
 ```
 
+## Cycles Overscan Properties
+
+The following properties configure the EXR Overscan settings under the Cycles engine settings (accessible via `Scene.cycles`).
+
+### `CyclesRenderSettings.overscan_mode`
+
+| Property | Value |
+| --- | --- |
+| **Type** | `Enum` (`'PERCENTAGE'`, `'PIXELS'`) |
+| **Default** | `'PERCENTAGE'` |
+| **Description** | Sizing mode for the overscan region |
+| **UI Location** | Properties > Output > Overscan |
+
+### `CyclesRenderSettings.overscan_size`
+
+| Property | Value |
+| --- | --- |
+| **Type** | `FloatProperty` |
+| **Default** | `0.0` (range: `0.0` to `100.0`) |
+| **Description** | Sizing percentage for overscan on all sides (Percentage mode) |
+| **UI Location** | Properties > Output > Overscan > Size |
+
+### Margin Properties (Pixels Mode)
+
+The following properties specify custom border margins in pixels when `overscan_mode` is set to `'PIXELS'`:
+- `CyclesRenderSettings.overscan_left` (Int, default `0`)
+- `CyclesRenderSettings.overscan_right` (Int, default `0`)
+- `CyclesRenderSettings.overscan_bottom` (Int, default `0`)
+- `CyclesRenderSettings.overscan_top` (Int, default `0`)
+
+```python
+# Python access
+scene = bpy.context.scene
+scene.cycles.overscan_mode = 'PERCENTAGE'
+scene.cycles.overscan_size = 10.0
+```
+
 ## Source Files
 
 | File | Purpose |
@@ -107,3 +144,6 @@ RNA_def_property_flag(prop, PROP_SEARCH_KEEP_ORDER);
 | `source/blender/makesrna/intern/rna_scene.cc` | ViewLayer lobe AOV properties, `PROP_SEARCH_KEEP_ORDER` |
 | `source/blender/makesrna/RNA_types.hh` | `PROP_SEARCH_KEEP_ORDER` flag definition |
 | `source/blender/editors/interface/interface_utils.cc` | Skip alphabetical sort when `PROP_SEARCH_KEEP_ORDER` is set |
+| `intern/cycles/blender/addon/properties.py` | Cycles overscan property declarations |
+| `scripts/startup/bl_ui/properties_output.py` | UI layout for the Overscan output panel |
+

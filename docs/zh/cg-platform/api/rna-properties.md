@@ -100,6 +100,43 @@ world.shadow_color = (0.05, 0.08, 0.15)  # 冷蓝色调的世界阴影
 RNA_def_property_flag(prop, PROP_SEARCH_KEEP_ORDER);
 ```
 
+## Cycles 溢画幅属性
+
+以下属性配置了 Cycles 引擎设置下的 EXR Overscan（溢画幅）设置（可通过 `Scene.cycles` 访问）。
+
+### `CyclesRenderSettings.overscan_mode`
+
+| 属性 | 值 |
+| --- | --- |
+| **类型** | `Enum` (`'PERCENTAGE'`, `'PIXELS'`) |
+| **默认值** | `'PERCENTAGE'` |
+| **描述** | 溢画幅计算方式（百分比扩展或边缘像素扩展） |
+| **UI 位置** | 属性 > 输出 > Overscan |
+
+### `CyclesRenderSettings.overscan_size`
+
+| 属性 | 值 |
+| --- | --- |
+| **类型** | `FloatProperty` |
+| **默认值** | `0.0` (范围: `0.0` 到 `100.0`) |
+| **描述** | 所有边界统一扩展的百分比大小（百分比模式下） |
+| **UI 位置** | 属性 > 输出 > Overscan > Size |
+
+### 边缘扩展属性 (Pixels 模式)
+
+当 `overscan_mode` 设置为 `'PIXELS'` 时，以下属性用于分别指定具体边缘的像素扩展填充值：
+- `CyclesRenderSettings.overscan_left` (整型，默认值 `0`)
+- `CyclesRenderSettings.overscan_right` (整型，默认值 `0`)
+- `CyclesRenderSettings.overscan_bottom` (整型，默认值 `0`)
+- `CyclesRenderSettings.overscan_top` (整型，默认值 `0`)
+
+```python
+# Python 访问示例
+scene = bpy.context.scene
+scene.cycles.overscan_mode = 'PERCENTAGE'
+scene.cycles.overscan_size = 10.0
+```
+
 ## 源文件
 
 | 文件 | 用途 |
@@ -107,3 +144,6 @@ RNA_def_property_flag(prop, PROP_SEARCH_KEEP_ORDER);
 | `source/blender/makesrna/intern/rna_scene.cc` | 注册 ViewLayer 分量 AOV 属性及 `PROP_SEARCH_KEEP_ORDER` 标志 |
 | `source/blender/makesrna/RNA_types.hh` | `PROP_SEARCH_KEEP_ORDER` 标志定义 |
 | `source/blender/editors/interface/interface_utils.cc` | 当设置了 `PROP_SEARCH_KEEP_ORDER` 时跳过字母排序逻辑 |
+| `intern/cycles/blender/addon/properties.py` | 声明 Cycles 溢画幅属性 |
+| `scripts/startup/bl_ui/properties_output.py` | 溢画幅输出面板的 UI 布局 |
+

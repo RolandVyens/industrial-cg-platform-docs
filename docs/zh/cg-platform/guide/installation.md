@@ -57,6 +57,14 @@ Industrial CG Platform 默认使用与官方相同的配置目录（`%APPDATA%\B
 - 在启动快捷方式后附加 `--factory-startup` 参数，以进行全新的干净会话。
 - 或者在运行前，将环境变量 `BLENDER_USER_RESOURCES` 设置为一个自定义的专用文件夹路径。
 
+## OptiX 着色器缓存隔离
+
+为了避免 Industrial CG Platform 与官方原生 Blender 版本之间产生着色器编译冲突或缓存过期，本产品自动将其默认的 Nvidia OptiX 编译缓存路径与 stock Blender 进行了隔离。
+
+- **默认缓存文件路径**：
+  `%USERPROFILE%\AppData\Local\IndustrialCGPlatform\Cache\OptiX\optix7cache.db`
+- **环境变量覆盖**：如果您的系统中显式定义了 `OPTIX_CACHE_PATH` 环境变量，它将覆盖产品的默认隔离路径并具有最高优先级。
+
 ## 另请参阅
 
 - [从源码构建](/zh/cg-platform/guide/building-from-source) — 自行从 GitHub 仓库进行本地编译。

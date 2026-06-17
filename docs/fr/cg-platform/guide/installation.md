@@ -57,6 +57,14 @@ Industrial CG Platform utilise par défaut le même dossier de configuration uti
 - Ajoutez l'argument `--factory-startup` au raccourci de lancement pour démarrer sur une session d'usine propre.
 - Ou définissez la variable d'environnement `BLENDER_USER_RESOURCES` sur un chemin personnalisé dédié avant le lancement.
 
+## Isolation du cache de shaders OptiX
+
+Afin d'éviter tout conflit de compilation ou état de cache obsolète entre Industrial CG Platform et les versions officielles de Blender, ce produit isole automatiquement son répertoire de cache Nvidia OptiX par défaut.
+
+- **Chemin de cache par défaut** :
+  `%USERPROFILE%\AppData\Local\IndustrialCGPlatform\Cache\OptiX\optix7cache.db`
+- **Surcharge de l'environnement** : Si vous définissez la variable d'environnement système `OPTIX_CACHE_PATH`, elle remplacera le chemin par défaut du produit et restera prioritaire.
+
 ## Voir Aussi
 
 - [Compilation depuis les sources](/fr/cg-platform/guide/building-from-source) — Compilez vous-même depuis le dépôt GitHub.

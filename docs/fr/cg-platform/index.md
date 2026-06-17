@@ -26,6 +26,10 @@ features:
     title: Sortie Deep EXR
     details: Sortie de compositing profond native pour Cycles — écrit des données de profondeur par échantillon pour des fusions profondes sans perte dans Nuke et d'autres outils de compositing.
     link: /fr/cg-platform/features/deep-exr
+  - icon: 📐
+    title: Overscan EXR
+    details: Prise en charge native de l'overscan EXR dans Cycles — calculez des pixels supplémentaires autour du cadre de caméra pour la distorsion d'optique et la stabilisation.
+    link: /fr/cg-platform/features/exr-overscan
   - icon: 💡
     title: Passes par lobe de lightgroup
     details: Passes diffus/glossy/transmission/volume par lightgroup avec séparation directe et indirecte pour un contrôle précis du réeclairage.

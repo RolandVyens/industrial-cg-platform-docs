@@ -57,6 +57,14 @@ Industrial CG Platform uses the same Blender config directory (`%APPDATA%\Blende
 - Use the `--factory-startup` flag for a clean session.
 - Or set `BLENDER_USER_RESOURCES` to a custom path before launching.
 
+## OptiX Shader Cache Isolation
+
+To prevent conflicts and stale shader compile states between Industrial CG Platform and official Blender installations, the product isolates its default Nvidia OptiX cache directory from standard Blender.
+
+- **Default Cache Location**:
+  `%USERPROFILE%\AppData\Local\IndustrialCGPlatform\Cache\OptiX\optix7cache.db`
+- **Environment Override**: If you define the system environment variable `OPTIX_CACHE_PATH`, it will override the default product cache location and take precedence.
+
 ## See Also
 
 - [Building from Source](/en/cg-platform/guide/building-from-source) — Compile from the GitHub repository.

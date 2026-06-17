@@ -26,6 +26,10 @@ features:
     title: Deep EXR 深度输出
     details: Cycles 原生深度合成输出 — 写入逐采样深度数据，支持在 Nuke 等合成工具中进行无损深度合并。
     link: /zh/cg-platform/features/deep-exr
+  - icon: 📐
+    title: EXR Overscan 溢画幅
+    details: Cycles 原生 EXR 溢画幅支持 — 在相机框外计算额外的像素边缘，为后期镜头防抖、去畸变和图像变形提供缓冲。
+    link: /zh/cg-platform/features/exr-overscan
   - icon: 💡
     title: 灯光组分量通道
     details: 逐灯光组的漫反射/光泽/透射/体积分量通道，支持直接光和间接光分离，实现精细重打光控制。
