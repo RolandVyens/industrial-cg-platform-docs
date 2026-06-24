@@ -120,6 +120,7 @@ export default defineConfig({
               }
             ]
           },
+          { text: 'Blog', link: '/blog/' },
           { text: 'Donate', link: '/en/donate' },
           { text: 'About', link: '/en/cg-platform/about/' }
         ],
@@ -259,6 +260,7 @@ export default defineConfig({
               }
             ]
           },
+          { text: '博客', link: '/blog/' },
           { text: '赞助', link: '/zh/donate' },
           { text: '关于', link: '/zh/cg-platform/about/' }
         ],
@@ -404,6 +406,7 @@ export default defineConfig({
               }
             ]
           },
+          { text: 'Blog', link: '/blog/' },
           { text: 'Faire un don', link: '/fr/donate' },
           { text: 'À Propos', link: '/fr/cg-platform/about/' }
         ],
