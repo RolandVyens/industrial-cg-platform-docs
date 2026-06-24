@@ -149,3 +149,10 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
+/* Remove border and box-shadow from search shortcut keys */
+.VPSearchButton-Key,
+.DocSearch-Button-Key {
+  border: none !important;
+  box-shadow: none !important;
+}
+
