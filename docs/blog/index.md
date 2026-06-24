@@ -29,8 +29,6 @@ import { data as posts } from '../blog.data.js'
       <header class="post-header">
         <div class="post-meta">
           <time :datetime="post.dateString">📅 {{ post.dateString }}</time>
-          <span class="meta-separator">•</span>
-          <span class="post-author">👤 {{ post.author }}</span>
         </div>
         <h2 class="post-title">
           <a :href="withBase(post.url)">{{ post.title }}</a>
@@ -40,9 +38,6 @@ import { data as posts } from '../blog.data.js'
         <p>{{ post.summary }}</p>
       </section>
       <footer class="post-footer">
-        <div class="post-tags" v-if="post.tags && post.tags.length">
-          <span v-for="tag in post.tags" :key="tag" class="tag-item">#{{ tag }}</span>
-        </div>
         <a :href="withBase(post.url)" class="read-more-link">
           Read Devlog <span class="arrow">→</span>
         </a>
@@ -115,9 +110,7 @@ import { data as posts } from '../blog.data.js'
   margin-bottom: 0.5rem;
 }
 
-.meta-separator {
-  opacity: 0.4;
-}
+
 
 .post-title {
   font-family: 'Outfit', 'Inter', sans-serif;
@@ -150,25 +143,7 @@ import { data as posts } from '../blog.data.js'
 
 .post-footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.post-tags {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.tag-item {
-  font-size: 0.8rem;
-  color: var(--vp-c-text-3);
-  background: var(--vp-c-bg-mute);
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
-  border: 1px solid var(--vp-c-divider);
 }
 
 .read-more-link {
