@@ -10,7 +10,6 @@ import { data as posts } from '../blog.data.js'
 </script>
 
 <div class="blog-header">
-  <h1 class="blog-title">Ecosystem Devlog</h1>
   <p class="blog-subtitle">
     Design logs, technical writeups, and development progress of the Industrial 3D tools ecosystem.
   </p>
@@ -55,18 +54,9 @@ import { data as posts } from '../blog.data.js'
 <style scoped>
 .blog-header {
   max-width: 800px;
-  margin: 3rem auto 0;
+  margin: 3.5rem auto 0;
   padding: 0 1.5rem;
   text-align: left;
-}
-
-.blog-title {
-  font-family: 'Outfit', 'Inter', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.5px;
 }
 
 .blog-subtitle {
@@ -92,7 +82,6 @@ import { data as posts } from '../blog.data.js'
   padding: 4rem 0;
   color: var(--vp-c-text-3);
   font-size: 1rem;
-  border-top: 1px dashed var(--vp-c-divider);
 }
 
 .blog-list {
@@ -206,10 +195,6 @@ import { data as posts } from '../blog.data.js'
 }
 
 @media (max-width: 768px) {
-  .blog-title {
-    font-size: 2.1rem;
-  }
-  
   .post-title {
     font-size: 1.4rem;
   }
