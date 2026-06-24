@@ -521,6 +521,53 @@ export default defineConfig({
       message: 'Released under the Blender License (GNU GPL v3 or later).',
       copyright: 'Copyright © 2026 RolandVyens',
     },
+    nav: [
+      {
+        text: 'Ecosystem',
+        items: [
+          {
+            text: 'Core Platform',
+            items: [
+              { text: 'Industrial CG Platform', link: '/en/cg-platform/' }
+            ]
+          },
+          {
+            text: 'Pipeline Plugins & Colors',
+            items: [
+              { text: 'Addon Directory', link: '/en/pipeline-tools' },
+              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'Documentation',
+        items: [
+          {
+            text: 'Platform Manual',
+            items: [
+              { text: 'User Guide', link: '/en/cg-platform/guide/getting-started' },
+              { text: 'Features Reference', link: '/en/cg-platform/features/deep-exr' },
+              { text: 'API Reference', link: '/en/cg-platform/api/' },
+              { text: 'Release Notes', link: '/en/cg-platform/releases/' }
+            ]
+          },
+          {
+            text: 'Addon Manuals',
+            items: [
+              { text: 'Industrial AOV Connector', link: '/en/aov-connector/' },
+              { text: 'Industrial Light AOV Splitter', link: '/en/light-splitter/' },
+              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+            ]
+          }
+        ]
+      },
+      { text: 'Blog', link: '/blog/' },
+      { text: 'Donate', link: '/en/donate' },
+      { text: 'About', link: '/en/cg-platform/about/' }
+    ]
   },
 
   lastUpdated: true,

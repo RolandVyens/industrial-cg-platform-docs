@@ -5,6 +5,7 @@ titleTemplate: Industrial 3D Development Updates
 ---
 
 <script setup>
+import { withBase } from 'vitepress'
 import { data as posts } from '../blog.data.js'
 </script>
 
@@ -29,7 +30,7 @@ import { data as posts } from '../blog.data.js'
     <a 
       v-for="post in posts" 
       :key="post.url" 
-      :href="post.url"
+      :href="withBase(post.url)"
       class="blog-card"
     >
       <div class="card-cover-wrapper">
