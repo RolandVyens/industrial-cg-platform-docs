@@ -1,55 +1,55 @@
-# 关于项目
+﻿# 鍏充簬椤圭洰
 
-## 为什么需要这个平台？
+## 涓轰粈涔堥渶瑕佽繖涓钩鍙帮紵
 
-Blender 已经是一个非常强大的创作工具，但 VFX 生产通常需要的不只是视口里的漂亮结果。
+Blender 宸茬粡鏄竴涓潪甯稿己澶х殑鍒涗綔宸ュ叿锛屼絾 VFX 鐢熶骇閫氬父闇€瑕佺殑涓嶅彧鏄鍙ｉ噷鐨勬紓浜粨鏋溿€?
 
-一个真正的镜头制作流程需要能够无缝导入合成软件的渲染数据，需要能够在每个镜头中保持可控的灯光调整能力，还需要对艺术家、技术总监（TD）和渲染农场都有意义的输出行为。
+涓€涓湡姝ｇ殑闀滃ご鍒朵綔娴佺▼闇€瑕佽兘澶熸棤缂濆鍏ュ悎鎴愯蒋浠剁殑娓叉煋鏁版嵁锛岄渶瑕佽兘澶熷湪姣忎釜闀滃ご涓繚鎸佸彲鎺х殑鐏厜璋冩暣鑳藉姏锛岃繕闇€瑕佸鑹烘湳瀹躲€佹妧鏈€荤洃锛圱D锛夊拰娓叉煋鍐滃満閮芥湁鎰忎箟鐨勮緭鍑鸿涓恒€?
 
-Industrial CG Platform 的存在就是为了推动 Blender 向这个方向走得更远，同时保持与上游 Blender 足够近的距离，以确保未来的可维护性。
+Industrial CG Platform 鐨勫瓨鍦ㄥ氨鏄负浜嗘帹鍔?Blender 鍚戣繖涓柟鍚戣蛋寰楁洿杩滐紝鍚屾椂淇濇寔涓庝笂娓?Blender 瓒冲杩戠殑璺濈锛屼互纭繚鏈潵鐨勫彲缁存姢鎬с€?
 
-## 开发路线图 (Roadmap)
+## 寮€鍙戣矾绾垮浘 (Roadmap)
 
-计划中的 VFX 和面向生产的开发方向包括：
+璁″垝涓殑 VFX 鍜岄潰鍚戠敓浜х殑寮€鍙戞柟鍚戝寘鎷細
 
-- 仅影响间接光（indirect-light-only）的物体属性，用于更精准的打光控制
-- 集合（Collection）和物体级别的材质覆盖（Material Override）工作流
-- 类似于 `aiFog` 的世界环境雾行为，专注于直接光用例
-- 更深入的基于镜头渲染和合成工作流的文档
+- 浠呭奖鍝嶉棿鎺ュ厜锛坕ndirect-light-only锛夌殑鐗╀綋灞炴€э紝鐢ㄤ簬鏇寸簿鍑嗙殑鎵撳厜鎺у埗
+- 闆嗗悎锛圕ollection锛夊拰鐗╀綋绾у埆鐨勬潗璐ㄨ鐩栵紙Material Override锛夊伐浣滄祦
+- 绫讳技浜?`aiFog` 鐨勪笘鐣岀幆澧冮浘琛屼负锛屼笓娉ㄤ簬鐩存帴鍏夌敤渚?
+- 鏇存繁鍏ョ殑鍩轰簬闀滃ご娓叉煋鍜屽悎鎴愬伐浣滄祦鐨勬枃妗?
 
-## 支持与赞助 (Sponsor)
+## 鏀寔涓庤禐鍔?(Sponsor)
 
-Industrial CG Platform 是作为专注于生产的开源研发项目进行开发的。
+Industrial CG Platform 鏄綔涓轰笓娉ㄤ簬鐢熶骇鐨勫紑婧愮爺鍙戦」鐩繘琛屽紑鍙戠殑銆?
 
-如果这个项目对你的工作室、课程、制作流程或个人创作有所帮助，你的赞助将有助于加快开发进度。赞助对于资助那些很难以“小插件”形式存在的底层功能尤其重要，例如：渲染输出行为、深度数据、Qt 运行时打包、灯光通道设计以及面向流程的文档编写。
+濡傛灉杩欎釜椤圭洰瀵逛綘鐨勫伐浣滃銆佽绋嬨€佸埗浣滄祦绋嬫垨涓汉鍒涗綔鏈夋墍甯姪锛屼綘鐨勮禐鍔╁皢鏈夊姪浜庡姞蹇紑鍙戣繘搴︺€傝禐鍔╁浜庤祫鍔╅偅浜涘緢闅句互鈥滃皬鎻掍欢鈥濆舰寮忓瓨鍦ㄧ殑搴曞眰鍔熻兘灏ゅ叾閲嶈锛屼緥濡傦細娓叉煋杈撳嚭琛屼负銆佹繁搴︽暟鎹€丵t 杩愯鏃舵墦鍖呫€佺伅鍏夐€氶亾璁捐浠ュ強闈㈠悜娴佺▼鐨勬枃妗ｇ紪鍐欍€?
 
-- 在 [Patreon](https://www.patreon.com/cw/RolandVyens) 上支持开发者
-- 在 [爱发电 (Afdian)](https://www.ifdian.net/a/mogubobi2) 上支持开发者
-- 给这个仓库点个 Star，并将其分享给需要更强生产流程的 Blender 和 VFX 艺术家们
+- 鍦?[Patreon](https://www.patreon.com/cw/RolandVyens) 涓婃敮鎸佸紑鍙戣€?
+- 鍦?[鐖卞彂鐢?(Afdian)](https://www.ifdian.net/a/mogubobi2) 涓婃敮鎸佸紑鍙戣€?
+- 缁欒繖涓粨搴撶偣涓?Star锛屽苟灏嗗叾鍒嗕韩缁欓渶瑕佹洿寮虹敓浜ф祦绋嬬殑 Blender 鍜?VFX 鑹烘湳瀹朵滑
 
-## 上游关系
+## 涓婃父鍏崇郴
 
-Industrial CG Platform 衍生自 Blender。
-Blender 仍然是该应用程序、文教生态系统以及大部分开发工作流的上游基础。
+Industrial CG Platform 琛嶇敓鑷?Blender銆?
+Blender 浠嶇劧鏄搴旂敤绋嬪簭銆佹枃鏁欑敓鎬佺郴缁熶互鍙婂ぇ閮ㄥ垎寮€鍙戝伐浣滄祦鐨勪笂娓稿熀纭€銆?
 
 - [blender.org](https://www.blender.org)
-- [Blender 官方手册](https://docs.blender.org/manual/en/latest/index.html)
-- [Blender 开发者门户](https://developer.blender.org/docs/)
+- [Blender 瀹樻柟鎵嬪唽](https://docs.blender.org/manual/en/latest/index.html)
+- [Blender 寮€鍙戣€呴棬鎴穄(https://developer.blender.org/docs/)
 
-## 致谢 (Credits)
+## 鑷磋阿 (Credits)
 
-Industrial CG Platform 由 Roland Vyens 创建和主导开发，其中开发、文档、打包和研究工作借助了 Codex 和 Claude 等 AI 辅助工作流的加速。
+Industrial CG Platform 鐢?Roland Vyens 鍒涘缓鍜屼富瀵煎紑鍙戯紝鍏朵腑寮€鍙戙€佹枃妗ｃ€佹墦鍖呭拰鐮旂┒宸ヤ綔鍊熷姪浜?Codex 鍜?Claude 绛?AI 杈呭姪宸ヤ綔娴佺殑鍔犻€熴€?
 
-这些工具是项目背后工作流程的一部分，但平台的开发方向、功能选择、发布决策以及分支维护仍然完全由项目方主导。
+杩欎簺宸ュ叿鏄」鐩儗鍚庡伐浣滄祦绋嬬殑涓€閮ㄥ垎锛屼絾骞冲彴鐨勫紑鍙戞柟鍚戙€佸姛鑳介€夋嫨銆佸彂甯冨喅绛栦互鍙婂垎鏀淮鎶や粛鐒跺畬鍏ㄧ敱椤圭洰鏂逛富瀵笺€?
 
-项目也感谢 MoonRay 项目；我们在这个分支里探索的一些渲染侧实现方式，参考了他们公开呈现出的部分实现思路。
+椤圭洰涔熸劅璋?MoonRay 椤圭洰锛涙垜浠湪杩欎釜鍒嗘敮閲屾帰绱㈢殑涓€浜涙覆鏌撲晶瀹炵幇鏂瑰紡锛屽弬鑰冧簡浠栦滑鍏紑鍛堢幇鍑虹殑閮ㄥ垎瀹炵幇鎬濊矾銆?
 
-## 许可证 (License)
+## 璁稿彲璇?(License)
 
-Industrial CG Platform 核心应用程序遵循 Blender 的 GPL 许可模式，此外它还搭载了一个包含其他第三方组件的 bQt 运行时扩展。
+Industrial CG Platform 鏍稿績搴旂敤绋嬪簭閬靛惊 Blender 鐨?GPL 璁稿彲妯″紡锛屾澶栧畠杩樻惌杞戒簡涓€涓寘鍚叾浠栫涓夋柟缁勪欢鐨?bQt 杩愯鏃舵墿灞曘€?
 
-- 衍生自 Blender 的应用程序代码仍受 Blender License (GNU GPL v3 or later) 保护，个别文件有时可能使用不同但兼容的许可证。
-- 搭载的 Qt 运行时扩展包含第三方包，例如 `bqt`、`QtPy`、`PySide6`、`PySide6_Essentials`、`PySide6_Addons`、`shiboken6`、`packaging` 和 `blender-qt-stylesheet`。
-- 这些附带组件带有它们自己的上游许可证，包括 MPL-2.0、MIT、Apache-2.0、BSD-2-Clause、仅限 LGPL-3.0、仅限 GPL-2.0 和仅限 GPL-3.0。
+- 琛嶇敓鑷?Blender 鐨勫簲鐢ㄧ▼搴忎唬鐮佷粛鍙?Blender License (GNU GPL v3 or later) 淇濇姢锛屼釜鍒枃浠舵湁鏃跺彲鑳戒娇鐢ㄤ笉鍚屼絾鍏煎鐨勮鍙瘉銆?
+- 鎼浇鐨?Qt 杩愯鏃舵墿灞曞寘鍚涓夋柟鍖咃紝渚嬪 `bqt`銆乣QtPy`銆乣PySide6`銆乣PySide6_Essentials`銆乣PySide6_Addons`銆乣shiboken6`銆乣packaging` 鍜?`blender-qt-stylesheet`銆?
+- 杩欎簺闄勫甫缁勪欢甯︽湁瀹冧滑鑷繁鐨勪笂娓歌鍙瘉锛屽寘鎷?MPL-2.0銆丮IT銆丄pache-2.0銆丅SD-2-Clause銆佷粎闄?LGPL-3.0銆佷粎闄?GPL-2.0 鍜屼粎闄?GPL-3.0銆?
 
-有关 Blender 的核心许可证详细信息，请参阅 [blender.org/about/license](https://www.blender.org/about/license)。
+鏈夊叧 Blender 鐨勬牳蹇冭鍙瘉璇︾粏淇℃伅锛岃鍙傞槄 [blender.org/about/license](https://www.blender.org/about/license)銆?

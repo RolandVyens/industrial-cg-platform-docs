@@ -1,28 +1,27 @@
-# 赞助支持
+﻿# 璧炲姪鏀寔
 
-感谢您对 **Industrial 3D** 的支持！您的赞助将直接驱动生产级 CG 和 VFX 开源工具的研发，帮助我们持续开发新功能并维护生态，确保这些工具对全球艺术家和工作室完全免费开放。
-
+鎰熻阿鎮ㄥ **Industrial 3D** 鐨勬敮鎸侊紒鎮ㄧ殑璧炲姪灏嗙洿鎺ラ┍鍔ㄧ敓浜х骇 CG 鍜?VFX 寮€婧愬伐鍏风殑鐮斿彂锛屽府鍔╂垜浠寔缁紑鍙戞柊鍔熻兘骞剁淮鎶ょ敓鎬侊紝纭繚杩欎簺宸ュ叿瀵瑰叏鐞冭壓鏈鍜屽伐浣滃瀹屽叏鍏嶈垂寮€鏀俱€?
 ---
 
 <div class="donation-grid">
   <!-- Patreon Card -->
   <a href="https://www.patreon.com/cw/RolandVyens" target="_blank" class="donation-card patreon">
     <div class="card-header">
-      <span class="card-icon">🧡</span>
+      <span class="card-icon">馃А</span>
       <h3 class="card-title">Patreon</h3>
     </div>
-    <p class="card-desc">适合海外赞助者。支持美元（USD）按月订阅档位或直接赞助，提供专属的开发动态和奖励。</p>
-    <div class="card-button">在 Patreon 上支持</div>
+    <p class="card-desc">閫傚悎娴峰璧炲姪鑰呫€傛敮鎸佺編鍏冿紙USD锛夋寜鏈堣闃呮。浣嶆垨鐩存帴璧炲姪锛屾彁渚涗笓灞炵殑寮€鍙戝姩鎬佸拰濂栧姳銆?/p>
+    <div class="card-button">鍦?Patreon 涓婃敮鎸?/div>
   </a>
 
   <!-- Afdian Card -->
   <a href="https://www.ifdian.net/a/mogubobi2" target="_blank" class="donation-card afdian">
     <div class="card-header">
-      <span class="card-icon">⚡</span>
-      <h3 class="card-title">爱发电 (Afdian)</h3>
+      <span class="card-icon">鈿?/span>
+      <h3 class="card-title">鐖卞彂鐢?(Afdian)</h3>
     </div>
-    <p class="card-desc">适合国内赞助者。支持人民币（CNY）按月订阅或直接赞助，提供多档赞助会员方案及项目回馈。</p>
-    <div class="card-button">在爱发电上支持</div>
+    <p class="card-desc">閫傚悎鍥藉唴璧炲姪鑰呫€傛敮鎸佷汉姘戝竵锛圕NY锛夋寜鏈堣闃呮垨鐩存帴璧炲姪锛屾彁渚涘妗ｈ禐鍔╀細鍛樻柟妗堝強椤圭洰鍥為銆?/p>
+    <div class="card-button">鍦ㄧ埍鍙戠數涓婃敮鎸?/div>
   </a>
 </div>
 

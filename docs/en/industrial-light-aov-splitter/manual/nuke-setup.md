@@ -1,4 +1,4 @@
-# Nuke Auto-Shuffle Setup
+﻿# Nuke Auto-Shuffle Setup
 
 The **Industrial Light AOV Splitter** includes a companion script to automatically shuffle and combine split lightgroup passes inside Foundry Nuke.
 
@@ -10,7 +10,7 @@ Follow these steps to integrate the auto-shuffle script into your Nuke environme
 
 ### Step 1: Download the Script
 Download the companion python script `nuke_blender_autoaov.py` from the releases section of the repository:
-*   👉 [Download nuke_blender_autoaov.py](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter/releases/download/release0.5.0/nuke_blender_autoaov.py)
+*   馃憠 [Download nuke_blender_autoaov.py](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter/releases/download/release0.5.0/nuke_blender_autoaov.py)
 
 ### Step 2: Move to `.nuke` Directory
 Copy the downloaded `nuke_blender_autoaov.py` file to your home `.nuke` directory:

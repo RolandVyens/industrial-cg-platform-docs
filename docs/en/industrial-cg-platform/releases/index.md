@@ -1,4 +1,4 @@
----
+﻿---
 layout: doc
 title: Releases
 ---
@@ -11,7 +11,7 @@ import { data as releases } from '../../../releases.data.js'
 
 <div class="releases-container">
   <p style="color: var(--vp-c-text-3); font-size: 0.9rem; margin-bottom: 1.5rem;">
-    ⚡ Compiled statically from the main repository. Updated on build.
+    鈿?Compiled statically from the main repository. Updated on build.
   </p>
   <div v-for="(release, index) in releases" :key="release.tag_name" class="release-card">
     <div class="release-card-content">
@@ -25,7 +25,7 @@ import { data as releases } from '../../../releases.data.js'
           <span v-if="release.prerelease" class="badge badge-prerelease">Pre-release</span>
           <span v-else-if="index !== 0" class="badge badge-regular">Stable</span>
           <a v-if="release.html_url" :href="release.html_url" target="_blank" class="badge badge-regular" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
-            🔗 GitHub
+            馃敆 GitHub
           </a>
         </div>
       </div>
@@ -33,7 +33,7 @@ import { data as releases } from '../../../releases.data.js'
       <!-- Assets Downloader -->
       <div v-if="release.assets && release.assets.length" class="assets-box">
         <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.6rem; color: var(--vp-c-text-1);">
-          📦 Downloader Packages (Windows x64 ZIP)
+          馃摝 Downloader Packages (Windows x64 ZIP)
         </div>
         <div v-for="asset in release.assets" :key="asset.id" class="asset-item">
           <a v-if="asset.browser_download_url" :href="asset.browser_download_url" target="_blank" class="asset-link">

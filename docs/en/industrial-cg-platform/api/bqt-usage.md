@@ -1,4 +1,4 @@
-# bQt Integration & Usage Guide
+﻿# bQt Integration & Usage Guide
 
 Industrial CG Platform bundles a complete, production-grade PyQt/PySide6 runtime environment (**bQt**) directly as a system extension. This enables developers to author rich, high-performance Qt-based UI tools inside Blender without forcing artists to install python packages manually.
 
@@ -150,20 +150,20 @@ Before launching the runtime, the `blender_vfx_qt` module enforces the following
 
 ### Correct Directory Layout
 ```
-📂 release/extensions/system/
-    ├── 📂 blender_vfx_qt_runtime/         # Correctly placed under system/
-    │     ├── 📄 blender_manifest.toml
-    │     └── 📄 __init__.py
-    └── 📂 blender_vfx_viewlayer_manager/  # Correctly placed under system/
-          ├── 📄 blender_manifest.toml
-          └── 📄 __init__.py
+馃搨 release/extensions/system/
+    鈹溾攢鈹€ 馃搨 blender_vfx_qt_runtime/         # Correctly placed under system/
+    鈹?    鈹溾攢鈹€ 馃搫 blender_manifest.toml
+    鈹?    鈹斺攢鈹€ 馃搫 __init__.py
+    鈹斺攢鈹€ 馃搨 blender_vfx_viewlayer_manager/  # Correctly placed under system/
+          鈹溾攢鈹€ 馃搫 blender_manifest.toml
+          鈹斺攢鈹€ 馃搫 __init__.py
 ```
 
 ### Incorrect Nested Layout (DO NOT USE)
 ```
-📂 release/extensions/system/
-    └── 📂 system/                          # INCORRECT NESTING LAYER
-          └── 📂 blender_vfx_viewlayer_manager/
+馃搨 release/extensions/system/
+    鈹斺攢鈹€ 馃搨 system/                          # INCORRECT NESTING LAYER
+          鈹斺攢鈹€ 馃搨 blender_vfx_viewlayer_manager/
 ```
 
 * **The Cause:** Blender's native extension manager automatically prepends the `system` namespace directory when registering system repositories. If you manually create a duplicate `system/system/` folder structure on disk, the repository registers but scans as empty, causing `bl_ext.system.blender_vfx_viewlayer_manager` imports to fail.
@@ -351,7 +351,7 @@ Expose a thin launch script `manager.py` in your extension that calls `blender_v
 All BQt tools must undergo a multi-tiered verification pipeline before merging to main:
 
 ```
-[Level 1: Compile Checks] ➔ [Level 2: Layout Checks] ➔ [Level 3: Background Smoke Tests] ➔ [Level 4: GUI Smoke Tests]
+[Level 1: Compile Checks] 鉃?[Level 2: Layout Checks] 鉃?[Level 3: Background Smoke Tests] 鉃?[Level 4: GUI Smoke Tests]
 ```
 
 1. **Level 1: Compile Checks:** Verify syntactical correctness via `python -m compileall`.

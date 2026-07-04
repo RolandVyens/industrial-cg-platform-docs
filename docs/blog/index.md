@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Ecosystem Devlog
 titleTemplate: Industrial 3D Development Updates
@@ -28,7 +28,7 @@ import { data as posts } from '../blog.data.js'
     >
       <header class="post-header">
         <div class="post-meta">
-          <time :datetime="post.dateString">📅 {{ post.dateString }}</time>
+          <time :datetime="post.dateString">馃搮 {{ post.dateString }}</time>
         </div>
         <h2 class="post-title">
           <a :href="withBase(post.url)">{{ post.title }}</a>
@@ -39,7 +39,7 @@ import { data as posts } from '../blog.data.js'
       </section>
       <footer class="post-footer">
         <a :href="withBase(post.url)" class="read-more-link">
-          Read Devlog <span class="arrow">→</span>
+          Read Devlog <span class="arrow">鈫?/span>
         </a>
       </footer>
     </article>

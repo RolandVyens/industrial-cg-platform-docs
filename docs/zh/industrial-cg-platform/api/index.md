@@ -1,15 +1,15 @@
-# API 参考
+﻿# API 鍙傝€?
 
-本节记录了 Industrial CG Platform 对 Blender 和 Cycles 添加或修改的 C++ 和 Python API 表面。
+鏈妭璁板綍浜?Industrial CG Platform 瀵?Blender 鍜?Cycles 娣诲姞鎴栦慨鏀圭殑 C++ 鍜?Python API 琛ㄩ潰銆?
 
-## 范围
+## 鑼冨洿
 
-API 参考涵盖五个领域的扩展：
+API 鍙傝€冩兜鐩栦簲涓鍩熺殑鎵╁睍锛?
 
-| 领域 | 描述 | 页面 |
+| 棰嗗煙 | 鎻忚堪 | 椤甸潰 |
 | --- | --- | --- |
-| **Cycles 内核** | 新的内核胶片字段、通道类型、积分器扩展 | [Cycles 内核扩展](/zh/industrial-cg-platform/api/cycles-kernel) |
-| **RNA 属性** | 暴露给 UI 和 Python 的新 ViewLayer、Light 和 World 属性 | [RNA 属性](/zh/industrial-cg-platform/api/rna-properties) |
-| **Python 操作器** | 新的 Blender 操作器和共享的 Qt 运行时 API | [Python 操作器](/zh/industrial-cg-platform/api/python-operators) |
-| **bQt 集成** | 底层集成架构、系统扩展打包规范与高级 Qt-Blender 设计模式 | [bQt 使用指南](/zh/industrial-cg-platform/api/bqt-usage) |
-| **Pass 与 AOV 系统** | 新通道类型注册、命名约定和回读架构 | [Pass 与 AOV 系统](/zh/industrial-cg-platform/api/pass-system) |
+| **Cycles 鍐呮牳** | 鏂扮殑鍐呮牳鑳剁墖瀛楁銆侀€氶亾绫诲瀷銆佺Н鍒嗗櫒鎵╁睍 | [Cycles 鍐呮牳鎵╁睍](/zh/industrial-cg-platform/api/cycles-kernel) |
+| **RNA 灞炴€?* | 鏆撮湶缁?UI 鍜?Python 鐨勬柊 ViewLayer銆丩ight 鍜?World 灞炴€?| [RNA 灞炴€(/zh/industrial-cg-platform/api/rna-properties) |
+| **Python 鎿嶄綔鍣?* | 鏂扮殑 Blender 鎿嶄綔鍣ㄥ拰鍏变韩鐨?Qt 杩愯鏃?API | [Python 鎿嶄綔鍣╙(/zh/industrial-cg-platform/api/python-operators) |
+| **bQt 闆嗘垚** | 搴曞眰闆嗘垚鏋舵瀯銆佺郴缁熸墿灞曟墦鍖呰鑼冧笌楂樼骇 Qt-Blender 璁捐妯″紡 | [bQt 浣跨敤鎸囧崡](/zh/industrial-cg-platform/api/bqt-usage) |
+| **Pass 涓?AOV 绯荤粺** | 鏂伴€氶亾绫诲瀷娉ㄥ唽銆佸懡鍚嶇害瀹氬拰鍥炶鏋舵瀯 | [Pass 涓?AOV 绯荤粺](/zh/industrial-cg-platform/api/pass-system) |

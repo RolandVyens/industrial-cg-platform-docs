@@ -1,4 +1,4 @@
-# FAQ
+﻿# FAQ
 
 ## General
 
@@ -8,7 +8,7 @@ No. Industrial CG Platform is a community-maintained fork of Blender. It is not 
 
 ### Are `.blend` files compatible with stock Blender?
 
-Yes. Files created in Industrial CG Platform can be opened in stock Blender 5.2. Custom features (Deep EXR, lightgroup lobe passes, etc.) will simply not be available — the data is preserved but ignored.
+Yes. Files created in Industrial CG Platform can be opened in stock Blender 5.2. Custom features (Deep EXR, lightgroup lobe passes, etc.) will simply not be available 鈥?the data is preserved but ignored.
 
 ### How often do you merge upstream Blender changes?
 
@@ -16,15 +16,15 @@ The `vfx-rendering-branch` staging branch regularly intakes changes from Blender
 
 ### Can I use my existing Blender add-ons?
 
-Most Blender add-ons that work with Blender 5.2 should work with Industrial CG Platform. However, add-ons that depend on deprecated APIs (`bgl`, specific `bpy_types` internals) may log errors on startup — this matches stock Blender 5.2 behavior.
+Most Blender add-ons that work with Blender 5.2 should work with Industrial CG Platform. However, add-ons that depend on deprecated APIs (`bgl`, specific `bpy_types` internals) may log errors on startup 鈥?this matches stock Blender 5.2 behavior.
 
 ## Rendering
 
 ### Which GPU backends are supported?
 
-- **CUDA** — All NVIDIA GPUs with compute capability 5.0+
-- **OptiX** — NVIDIA RTX GPUs (recommended for best performance)
-- **CPU** — Always available as a fallback
+- **CUDA** 鈥?All NVIDIA GPUs with compute capability 5.0+
+- **OptiX** 鈥?NVIDIA RTX GPUs (recommended for best performance)
+- **CPU** 鈥?Always available as a fallback
 
 ### Do the custom features work on CPU?
 

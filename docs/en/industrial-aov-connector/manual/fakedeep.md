@@ -1,4 +1,4 @@
-# Fake Deep & Deep Compositing
+﻿# Fake Deep & Deep Compositing
 
 This page explains how to achieve deep compositing using the **Fake Deep** output workflow from Blender.
 

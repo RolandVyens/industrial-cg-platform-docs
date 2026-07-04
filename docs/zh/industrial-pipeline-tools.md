@@ -1,7 +1,5 @@
-# 管线插件与流程工具
-
-Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配置工具，旨在自动构建、简化并打通 Blender 到高端影视特效（VFX）制作的合成与渲染管线。
-
+﻿# 绠＄嚎鎻掍欢涓庢祦绋嬪伐鍏?
+Industrial 3D 鐢熸€佹彁渚涗簡涓€绯诲垪姝ｇ墖绾х殑寮€婧愭覆鏌撴彃浠朵笌鑹插僵閰嶇疆宸ュ叿锛屾棬鍦ㄨ嚜鍔ㄦ瀯寤恒€佺畝鍖栧苟鎵撻€?Blender 鍒伴珮绔奖瑙嗙壒鏁堬紙VFX锛夊埗浣滅殑鍚堟垚涓庢覆鏌撶绾裤€?
 ---
 
 <div class="tools-grid">
@@ -11,12 +9,11 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">Industrial AOV Connector</h3>
-        <span class="tool-badge">Blender 插件</span>
+        <span class="tool-badge">Blender 鎻掍欢</span>
       </div>
       <p class="tool-desc">
-        一键自动创建渲染通道输出树，智能接入降噪节点，并自动导出为完美对接 Nuke 的标准多通道 EXR 结构。
-      </p>
-      <a href="/industrial-cg-platform-docs/zh/industrial-aov-connector/" class="tool-button">阅读插件指南</a>
+        涓€閿嚜鍔ㄥ垱寤烘覆鏌撻€氶亾杈撳嚭鏍戯紝鏅鸿兘鎺ュ叆闄嶅櫔鑺傜偣锛屽苟鑷姩瀵煎嚭涓哄畬缇庡鎺?Nuke 鐨勬爣鍑嗗閫氶亾 EXR 缁撴瀯銆?      </p>
+      <a href="/zh/industrial-aov-connector/" class="tool-button">闃呰鎻掍欢鎸囧崡</a>
     </div>
   </div>
 
@@ -26,12 +23,11 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">Industrial Light AOV Splitter</h3>
-        <span class="tool-badge">Blender 插件</span>
+        <span class="tool-badge">Blender 鎻掍欢</span>
       </div>
       <p class="tool-desc">
-        自动将渲染的灯光组（Light Groups）通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
-      </p>
-      <a href="/industrial-cg-platform-docs/zh/industrial-light-aov-splitter/" class="tool-button">阅读拆分器指南</a>
+        鑷姩灏嗘覆鏌撶殑鐏厜缁勶紙Light Groups锛夐€氶亾杩涜鎷嗗垎鍜屾潗璐ㄥ寲锛屼负鍚堟垚甯堟彁渚涘婕弽灏勩€侀珮鍏夊強鐜鍒嗛噺鐨勭嫭绔嬪悗鏈熼噸鎵撳厜鑷敱銆?      </p>
+      <a href="/zh/industrial-light-aov-splitter/" class="tool-button">闃呰鎷嗗垎鍣ㄦ寚鍗?/a>
     </div>
   </div>
 
@@ -41,12 +37,11 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
     <div class="tool-content">
       <div class="tool-header">
         <h3 class="tool-title">AIO-OCIO</h3>
-        <span class="tool-badge">色彩配置</span>
+        <span class="tool-badge">鑹插僵閰嶇疆</span>
       </div>
       <p class="tool-desc">
-        跨 DCC 统一的 OpenColorIO 色彩方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
-      </p>
-      <a href="/industrial-cg-platform-docs/zh/aio-ocio/" class="tool-button">阅读色彩配置指南</a>
+        璺?DCC 缁熶竴鐨?OpenColorIO 鑹插僵鏂规銆傚湪 Maya銆丯uke銆丠oudini 鍜?Blender 涓瀯寤哄畬鍏ㄤ竴鑷寸殑 AgX/Filmic 瀹藉搴﹁壊褰╄浆鎹€?      </p>
+      <a href="/zh/aio-ocio/" class="tool-button">闃呰鑹插僵閰嶇疆鎸囧崡</a>
     </div>
   </div>
 </div>

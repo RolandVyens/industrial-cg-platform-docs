@@ -1,4 +1,4 @@
-# AIO-OCIO
+﻿# AIO-OCIO
 
 **AIO-OCIO** is a unified, all-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG production pipelines.
 
@@ -8,11 +8,11 @@ By unifying color transformations across major Digital Content Creation (DCC) to
 
 ## Key Features
 
-### 🎨 Cross-Application Parity
+### 馃帹 Cross-Application Parity
 *   **Unified View Transforms:** Use the exact same AgX, Filmic, or ACES rendering transforms in Nuke, Maya, Houdini, and Blender.
 *   **AgX Punchy Support:** Port Blender's popular "AgX Punchy" and "AgX Look" configurations directly to other DCCs like Maya and Houdini.
 
-### 🎬 Production Color Spaces
+### 馃幀 Production Color Spaces
 *   **Acclaimed Foundation:** Built on top of Genco Uney's acclaimed *PixelManager OCIO* configuration, with additional studio optimizations.
 *   **Supported Displays:** Full viewport mapping support for industry-standard displays including **sRGB**, **Display P3**, and **Rec.1886**.
 *   **ACES & WCG Support:** Complete support for modern wide-gamut and scene-linear profiles (ACEScg, ACES2065-1, Rec.2020, sRGB Linear).

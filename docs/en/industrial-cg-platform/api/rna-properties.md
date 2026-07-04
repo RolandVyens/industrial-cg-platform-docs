@@ -1,4 +1,4 @@
-# RNA Properties
+﻿# RNA Properties
 
 This page documents the new RNA properties that Industrial CG Platform adds to Blender's data model.
 
@@ -54,7 +54,7 @@ view_layer.use_lightgroup_volume_indirect = True
 | Property | Value |
 | --- | --- |
 | **Type** | `FloatVectorProperty` (RGB) |
-| **Default** | `(0.0, 0.0, 0.0)` — no shadow tint |
+| **Default** | `(0.0, 0.0, 0.0)` 鈥?no shadow tint |
 | **Subtype** | `COLOR` |
 | **Min/Max** | `0.0` / `1.0` per channel |
 | **Description** | Color tint applied to the shadow region of this light |
@@ -72,7 +72,7 @@ light.shadow_color = (0.1, 0.05, 0.2)  # Subtle purple shadow tint
 | Property | Value |
 | --- | --- |
 | **Type** | `FloatVectorProperty` (RGB) |
-| **Default** | `(0.0, 0.0, 0.0)` — no shadow tint |
+| **Default** | `(0.0, 0.0, 0.0)` 鈥?no shadow tint |
 | **Subtype** | `COLOR` |
 | **Min/Max** | `0.0` / `1.0` per channel |
 | **Description** | Color tint applied to the shadow region of the world lighting |

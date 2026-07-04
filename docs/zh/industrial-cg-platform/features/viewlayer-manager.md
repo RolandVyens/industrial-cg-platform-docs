@@ -1,113 +1,113 @@
-# ViewLayer 管理器
+﻿# ViewLayer 绠＄悊鍣?
 
-<Badge type="tip" text="已发布" />
+<Badge type="tip" text="宸插彂甯? />
 
-## 什么是 ViewLayer 管理器？
+## 浠€涔堟槸 ViewLayer 绠＄悊鍣紵
 
-ViewLayer 管理器是一个专用的、基于 Qt 的工具窗口，提供了一个直观且全面的界面，用于管理场景 ViewLayer（视图层）、渲染通道（Render Passes）、Shader AOV（着色器 AOV）、灯光组（Lightgroups）以及 Cycles 灯光通道 AOV 控制——全部集中在 Blender 原生属性编辑器之外的单个精简面板中。
+ViewLayer 绠＄悊鍣ㄦ槸涓€涓笓鐢ㄧ殑銆佸熀浜?Qt 鐨勫伐鍏风獥鍙ｏ紝鎻愪緵浜嗕竴涓洿瑙備笖鍏ㄩ潰鐨勭晫闈紝鐢ㄤ簬绠＄悊鍦烘櫙 ViewLayer锛堣鍥惧眰锛夈€佹覆鏌撻€氶亾锛圧ender Passes锛夈€丼hader AOV锛堢潃鑹插櫒 AOV锛夈€佺伅鍏夌粍锛圠ightgroups锛変互鍙?Cycles 鐏厜閫氶亾 AOV 鎺у埗鈥斺€斿叏閮ㄩ泦涓湪 Blender 鍘熺敓灞炴€х紪杈戝櫒涔嬪鐨勫崟涓簿绠€闈㈡澘涓€?
 
-它基于 [BQt](https://github.com/techartorg/bqt) 构建，并作为 Blender 系统扩展（Blender System Extension）捆绑发布。
+瀹冨熀浜?[BQt](https://github.com/techartorg/bqt) 鏋勫缓锛屽苟浣滀负 Blender 绯荤粺鎵╁睍锛圔lender System Extension锛夋崋缁戝彂甯冦€?
 
-## 为什么使用它？
+## 涓轰粈涔堜娇鐢ㄥ畠锛?
 
-- **集中管理** — 所有与 ViewLayer 相关的设置都集中在一个窗口中，无需在不同的属性面板和菜单页签中来回跳转。
-- **预设系统** — 可以将通道配置保存为命名预设，并一次性应用到多个不同的 ViewLayer 中。
-- **批量操作** — 支持在左侧列表中多选 ViewLayer，并同时对其批量应用预设。
-- **有组织的通道显示** — 通道被清晰地归类为逻辑类别：数据 (Data)、灯光 (Light)、着色器 (Shader) 以及效果与公用工具 (Effects / Utility)。
-- **多语言 UI** — 管理器界面本身支持简体中文、繁体中文和法语的本地化翻译。
+- **闆嗕腑绠＄悊** 鈥?鎵€鏈変笌 ViewLayer 鐩稿叧鐨勮缃兘闆嗕腑鍦ㄤ竴涓獥鍙ｄ腑锛屾棤闇€鍦ㄤ笉鍚岀殑灞炴€ч潰鏉垮拰鑿滃崟椤电涓潵鍥炶烦杞€?
+- **棰勮绯荤粺** 鈥?鍙互灏嗛€氶亾閰嶇疆淇濆瓨涓哄懡鍚嶉璁撅紝骞朵竴娆℃€у簲鐢ㄥ埌澶氫釜涓嶅悓鐨?ViewLayer 涓€?
+- **鎵归噺鎿嶄綔** 鈥?鏀寔鍦ㄥ乏渚у垪琛ㄤ腑澶氶€?ViewLayer锛屽苟鍚屾椂瀵瑰叾鎵归噺搴旂敤棰勮銆?
+- **鏈夌粍缁囩殑閫氶亾鏄剧ず** 鈥?閫氶亾琚竻鏅板湴褰掔被涓洪€昏緫绫诲埆锛氭暟鎹?(Data)銆佺伅鍏?(Light)銆佺潃鑹插櫒 (Shader) 浠ュ強鏁堟灉涓庡叕鐢ㄥ伐鍏?(Effects / Utility)銆?
+- **澶氳瑷€ UI** 鈥?绠＄悊鍣ㄧ晫闈㈡湰韬敮鎸佺畝浣撲腑鏂囥€佺箒浣撲腑鏂囧拰娉曡鐨勬湰鍦板寲缈昏瘧銆?
 
-## 如何启动？
+## 濡備綍鍚姩锛?
 
-1. 观察 Blender 界面右上角标题栏，在原生的 `ViewLayer` 选择器旁边。
-2. 点击 **ViewLayer Manager** 图标按钮。
-3. 管理器将作为独立的顶级 Qt 窗口打开。
+1. 瑙傚療 Blender 鐣岄潰鍙充笂瑙掓爣棰樻爮锛屽湪鍘熺敓鐨?`ViewLayer` 閫夋嫨鍣ㄦ梺杈广€?
+2. 鐐瑰嚮 **ViewLayer Manager** 鍥炬爣鎸夐挳銆?
+3. 绠＄悊鍣ㄥ皢浣滀负鐙珛鐨勯《绾?Qt 绐楀彛鎵撳紑銆?
 
 ::: info
-首次点击时，捆绑的 BQt 运行时扩展会在当前会话中自动启用。您无需手动前往偏好设置启用任何扩展。
+棣栨鐐瑰嚮鏃讹紝鎹嗙粦鐨?BQt 杩愯鏃舵墿灞曚細鍦ㄥ綋鍓嶄細璇濅腑鑷姩鍚敤銆傛偍鏃犻渶鎵嬪姩鍓嶅線鍋忓ソ璁剧疆鍚敤浠讳綍鎵╁睍銆?
 :::
 
-## 管理器窗口布局
+## 绠＄悊鍣ㄧ獥鍙ｅ竷灞€
 
-### 左侧面板 — ViewLayer 列表
+### 宸︿晶闈㈡澘 鈥?ViewLayer 鍒楄〃
 
-- 列出当前场景中的所有 ViewLayer。
-- 逐行提供直观的 **用于渲染 (Use For Rendering)** 状态开关。
-- 提供 **上移 (Up)** / **下移 (Down)** 按钮，可直接重排 ViewLayer 的渲染顺序。
-- 支持多选（Ctrl 或 Shift），以便批量应用通道预设。
-- 支持直接新建、重命名和删除 ViewLayer。
+- 鍒楀嚭褰撳墠鍦烘櫙涓殑鎵€鏈?ViewLayer銆?
+- 閫愯鎻愪緵鐩磋鐨?**鐢ㄤ簬娓叉煋 (Use For Rendering)** 鐘舵€佸紑鍏炽€?
+- 鎻愪緵 **涓婄Щ (Up)** / **涓嬬Щ (Down)** 鎸夐挳锛屽彲鐩存帴閲嶆帓 ViewLayer 鐨勬覆鏌撻『搴忋€?
+- 鏀寔澶氶€夛紙Ctrl 鎴?Shift锛夛紝浠ヤ究鎵归噺搴旂敤閫氶亾棰勮銆?
+- 鏀寔鐩存帴鏂板缓銆侀噸鍛藉悕鍜屽垹闄?ViewLayer銆?
 
-### 右侧面板 — 详细窗格
+### 鍙充晶闈㈡澘 鈥?璇︾粏绐楁牸
 
-编辑当前选中的 ViewLayer 属性，包含以下部分：
+缂栬緫褰撳墠閫変腑鐨?ViewLayer 灞炴€э紝鍖呭惈浠ヤ笅閮ㄥ垎锛?
 
-#### 通道 (Passes)
+#### 閫氶亾 (Passes)
 
-按 Blender 原生逻辑进行分组：
+鎸?Blender 鍘熺敓閫昏緫杩涜鍒嗙粍锛?
 
-| 分组 | 包含内容 |
+| 鍒嗙粍 | 鍖呭惈鍐呭 |
 | --- | --- |
-| **数据 (Data)** | 综合 (Combined), 深度 (Z), 迷雾 (Mist), 法线 (Normal), 位置 (Position), 速度矢量 (Vector), UV, 物体索引 (Object Index), 材质索引 (Material Index) 等 |
-| **灯光 (Light)** | 漫反射 (Diffuse Direct/Indirect/Color), 光泽 (Glossy), 透射 (Transmission), 体积 (Volume), 自发光 (Emission), 环境背景 (Background), 阴影 (Shadow), 环境光遮蔽 (Ambient Occlusion) |
-| **着色器 (Shader)** | 自定义 Shader AOV 列表项 |
-| **效果/实用工具 (Effects / Utility)** | 降噪数据 (Denoising Data), 采样数 (Sample Count) |
+| **鏁版嵁 (Data)** | 缁煎悎 (Combined), 娣卞害 (Z), 杩烽浘 (Mist), 娉曠嚎 (Normal), 浣嶇疆 (Position), 閫熷害鐭㈤噺 (Vector), UV, 鐗╀綋绱㈠紩 (Object Index), 鏉愯川绱㈠紩 (Material Index) 绛?|
+| **鐏厜 (Light)** | 婕弽灏?(Diffuse Direct/Indirect/Color), 鍏夋辰 (Glossy), 閫忓皠 (Transmission), 浣撶Н (Volume), 鑷彂鍏?(Emission), 鐜鑳屾櫙 (Background), 闃村奖 (Shadow), 鐜鍏夐伄钄?(Ambient Occlusion) |
+| **鐫€鑹插櫒 (Shader)** | 鑷畾涔?Shader AOV 鍒楄〃椤?|
+| **鏁堟灉/瀹炵敤宸ュ叿 (Effects / Utility)** | 闄嶅櫔鏁版嵁 (Denoising Data), 閲囨牱鏁?(Sample Count) |
 
 #### Cryptomatte
 
-针对 Cryptomatte 通道设置的专用管理区域（同时适用于 Eevee 和 Cycles 渲染引擎）。
+閽堝 Cryptomatte 閫氶亾璁剧疆鐨勪笓鐢ㄧ鐞嗗尯鍩燂紙鍚屾椂閫傜敤浜?Eevee 鍜?Cycles 娓叉煋寮曟搸锛夈€?
 
-#### 深度 (Deep)
+#### 娣卞害 (Deep)
 
-ViewLayer 级别的 Deep EXR 深度输出开关（由于软件后端要求，此标签特意保持纯英文显示）。
+ViewLayer 绾у埆鐨?Deep EXR 娣卞害杈撳嚭寮€鍏筹紙鐢变簬杞欢鍚庣瑕佹眰锛屾鏍囩鐗规剰淇濇寔绾嫳鏂囨樉绀猴級銆?
 
-#### 着色器 AOV (Shader AOV)
+#### 鐫€鑹插櫒 AOV (Shader AOV)
 
-用于添加和管理自定义着色器 AOV（Shader AOV）实体的单列列表。
+鐢ㄤ簬娣诲姞鍜岀鐞嗚嚜瀹氫箟鐫€鑹插櫒 AOV锛圫hader AOV锛夊疄浣撶殑鍗曞垪鍒楄〃銆?
 
-#### 灯光组 (Light Groups)
+#### 鐏厜缁?(Light Groups)
 
-管理和分配给当前 ViewLayer 的灯光组。
+绠＄悊鍜屽垎閰嶇粰褰撳墠 ViewLayer 鐨勭伅鍏夌粍銆?
 
-#### Cycles 灯光通道 AOV (Cycles Light Pass AOVs)
+#### Cycles 鐏厜閫氶亾 AOV (Cycles Light Pass AOVs)
 
-启用并配置逐灯光组分量通道的输出：
-- Diffuse 漫反射 (Direct 直接 / Indirect 间接)
-- Glossy 光泽 (Direct 直接 / Indirect 间接)
-- Transmission 透射 (Direct 直接 / Indirect 间接)
-- Volume 体积 (Direct 直接 / Indirect 间接)
+鍚敤骞堕厤缃€愮伅鍏夌粍鍒嗛噺閫氶亾鐨勮緭鍑猴細
+- Diffuse 婕弽灏?(Direct 鐩存帴 / Indirect 闂存帴)
+- Glossy 鍏夋辰 (Direct 鐩存帴 / Indirect 闂存帴)
+- Transmission 閫忓皠 (Direct 鐩存帴 / Indirect 闂存帴)
+- Volume 浣撶Н (Direct 鐩存帴 / Indirect 闂存帴)
 
-### 预设工具栏
+### 棰勮宸ュ叿鏍?
 
-- **保存 (Save)** — 将当前 ViewLayer 的通道设置另存为一个命名的预设。
-- **更新 (Update)** — 使用当前设置覆盖和更新现有预设。
-- **应用 (Apply)** — 将选中的预设批量应用到左侧列表中所有选中的 ViewLayer。
-- **删除 (Delete)** — 移除现有预设。
+- **淇濆瓨 (Save)** 鈥?灏嗗綋鍓?ViewLayer 鐨勯€氶亾璁剧疆鍙﹀瓨涓轰竴涓懡鍚嶇殑棰勮銆?
+- **鏇存柊 (Update)** 鈥?浣跨敤褰撳墠璁剧疆瑕嗙洊鍜屾洿鏂扮幇鏈夐璁俱€?
+- **搴旂敤 (Apply)** 鈥?灏嗛€変腑鐨勯璁炬壒閲忓簲鐢ㄥ埌宸︿晶鍒楄〃涓墍鏈夐€変腑鐨?ViewLayer銆?
+- **鍒犻櫎 (Delete)** 鈥?绉婚櫎鐜版湁棰勮銆?
 
-预设以 JSON 文件的形式安全存储在用户的本地 Blender 扩展资源目录中。
+棰勮浠?JSON 鏂囦欢鐨勫舰寮忓畨鍏ㄥ瓨鍌ㄥ湪鐢ㄦ埛鐨勬湰鍦?Blender 鎵╁睍璧勬簮鐩綍涓€?
 
-## 渲染引擎自适应可见性
+## 娓叉煋寮曟搸鑷€傚簲鍙鎬?
 
-管理器会自动识别当前启用的渲染引擎，并智能显示/隐藏相关的配置区域：
+绠＄悊鍣ㄤ細鑷姩璇嗗埆褰撳墠鍚敤鐨勬覆鏌撳紩鎿庯紝骞舵櫤鑳芥樉绀?闅愯棌鐩稿叧鐨勯厤缃尯鍩燂細
 
-| 区域 | CYCLES 引擎 | EEVEE 引擎 |
+| 鍖哄煙 | CYCLES 寮曟搸 | EEVEE 寮曟搸 |
 | --- | --- | --- |
-| Eevee Passes | ❌ | ✅ |
-| Cycles Passes | ✅ | ❌ |
-| 灯光组 (Light Groups) | ✅ | ❌ |
-| Cycles Light Pass AOVs | ✅ | ❌ |
-| 着色器 AOV (Shader AOV) | ✅ | ✅ |
+| Eevee Passes | 鉂?| 鉁?|
+| Cycles Passes | 鉁?| 鉂?|
+| 鐏厜缁?(Light Groups) | 鉁?| 鉂?|
+| Cycles Light Pass AOVs | 鉁?| 鉂?|
+| 鐫€鑹插櫒 AOV (Shader AOV) | 鉁?| 鉁?|
 
-## 实时写回 (Live Write-Back)
+## 瀹炴椂鍐欏洖 (Live Write-Back)
 
-在管理器中所做的一切属性修改都会**立即**被写回 Blender 中 — 正常编辑属性时不需要点击额外的“应用”或“手动刷新”按钮。管理器在显示及重新获得操作系统焦点时，都会自动与 Blender 进行重新同步。
+鍦ㄧ鐞嗗櫒涓墍鍋氱殑涓€鍒囧睘鎬т慨鏀归兘浼?*绔嬪嵆**琚啓鍥?Blender 涓?鈥?姝ｅ父缂栬緫灞炴€ф椂涓嶉渶瑕佺偣鍑婚澶栫殑鈥滃簲鐢ㄢ€濇垨鈥滄墜鍔ㄥ埛鏂扳€濇寜閽€傜鐞嗗櫒鍦ㄦ樉绀哄強閲嶆柊鑾峰緱鎿嶄綔绯荤粺鐒︾偣鏃讹紝閮戒細鑷姩涓?Blender 杩涜閲嶆柊鍚屾銆?
 
-## 已知行为
+## 宸茬煡琛屼负
 
-- 管理器作为独立的顶级 Qt 窗口运行（不嵌入 Blender Native 窗口中）。
-- BQt 运行时在某些情况下可能会输出 `failed to get blender hwnd, creating new window` 日志 — 这属于安全模式路径下的正常行为，并非启动失败，也不会影响任何功能的使用。
-- 当前版本仅支持 Windows 平台，Linux 支持正在开发规划中。
+- 绠＄悊鍣ㄤ綔涓虹嫭绔嬬殑椤剁骇 Qt 绐楀彛杩愯锛堜笉宓屽叆 Blender Native 绐楀彛涓級銆?
+- BQt 杩愯鏃跺湪鏌愪簺鎯呭喌涓嬪彲鑳戒細杈撳嚭 `failed to get blender hwnd, creating new window` 鏃ュ織 鈥?杩欏睘浜庡畨鍏ㄦā寮忚矾寰勪笅鐨勬甯歌涓猴紝骞堕潪鍚姩澶辫触锛屼篃涓嶄細褰卞搷浠讳綍鍔熻兘鐨勪娇鐢ㄣ€?
+- 褰撳墠鐗堟湰浠呮敮鎸?Windows 骞冲彴锛孡inux 鏀寔姝ｅ湪寮€鍙戣鍒掍腑銆?
 
-## 另请参阅
+## 鍙﹁鍙傞槄
 
-- [Python 操作器 (API)](/zh/industrial-cg-platform/api/python-operators) — `wm.blender_vfx_viewlayer_manager_show` 操作器参考。
-- [灯光组分量通道](/zh/industrial-cg-platform/features/lightgroup-lobe-passes) — 由管理器的 Cycles Light Pass AOVs 区域控制的分量通道。
-- [Blender 手册：视图层](https://docs.blender.org/manual/en/latest/render/layers/view_layer.html) — 标准 Blender 视图层文档。
+- [Python 鎿嶄綔鍣?(API)](/zh/industrial-cg-platform/api/python-operators) 鈥?`wm.blender_vfx_viewlayer_manager_show` 鎿嶄綔鍣ㄥ弬鑰冦€?
+- [鐏厜缁勫垎閲忛€氶亾](/zh/industrial-cg-platform/features/lightgroup-lobe-passes) 鈥?鐢辩鐞嗗櫒鐨?Cycles Light Pass AOVs 鍖哄煙鎺у埗鐨勫垎閲忛€氶亾銆?
+- [Blender 鎵嬪唽锛氳鍥惧眰](https://docs.blender.org/manual/en/latest/render/layers/view_layer.html) 鈥?鏍囧噯 Blender 瑙嗗浘灞傛枃妗ｃ€?

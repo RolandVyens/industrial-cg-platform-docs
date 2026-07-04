@@ -1,14 +1,9 @@
-# Industrial AOV Connector 用户手册
+﻿# Industrial AOV Connector 鐢ㄦ埛鎵嬪唽
 
-欢迎阅读 **Industrial AOV Connector** 插件的官方使用手册。
-
-## **推荐阅读顺序**
-1. [基础模式](./basic-mode) — 了解基础的通道输出和基本面板操作。
-2. [偏好设置](./preference) — 详细配置命名规则、智能降噪及渲染农场辅助工具。
-3. [高级模式](./advanced-mode) — 探索 EXR 压缩编码格式以及独立的 DATA 渲染层配置。
-4. [Fake Deep 深度合成](./fakedeep) — 基于材质的通道输出，在 Blender 中实现特效深度合成流。
-
+娆㈣繋闃呰 **Industrial AOV Connector** 鎻掍欢鐨勫畼鏂逛娇鐢ㄦ墜鍐屻€?
+## **鎺ㄨ崘闃呰椤哄簭**
+1. [鍩虹妯″紡](./basic-mode) 鈥?浜嗚В鍩虹鐨勯€氶亾杈撳嚭鍜屽熀鏈潰鏉挎搷浣溿€?2. [鍋忓ソ璁剧疆](./preference) 鈥?璇︾粏閰嶇疆鍛藉悕瑙勫垯銆佹櫤鑳介檷鍣強娓叉煋鍐滃満杈呭姪宸ュ叿銆?3. [楂樼骇妯″紡](./advanced-mode) 鈥?鎺㈢储 EXR 鍘嬬缉缂栫爜鏍煎紡浠ュ強鐙珛鐨?DATA 娓叉煋灞傞厤缃€?4. [Fake Deep 娣卞害鍚堟垚](./fakedeep) 鈥?鍩轰簬鏉愯川鐨勯€氶亾杈撳嚭锛屽湪 Blender 涓疄鐜扮壒鏁堟繁搴﹀悎鎴愭祦銆?
 ---
 
-> 💡 **小贴士：**
-> 本插件全面支持保留现有合成节点进行**非破坏性编辑**。您可以使用插件面板上的 `Update Current ViewLayer`（更新当前视图层）按钮，或者在偏好设置中开启/关闭 `Clear Nodes When Running Cook Nodetree`（烘焙节点树时清除节点）选项，从而避免覆盖您自己定制的合成节点。
+> 馃挕 **灏忚创澹細**
+> 鏈彃浠跺叏闈㈡敮鎸佷繚鐣欑幇鏈夊悎鎴愯妭鐐硅繘琛?*闈炵牬鍧忔€х紪杈?*銆傛偍鍙互浣跨敤鎻掍欢闈㈡澘涓婄殑 `Update Current ViewLayer`锛堟洿鏂板綋鍓嶈鍥惧眰锛夋寜閽紝鎴栬€呭湪鍋忓ソ璁剧疆涓紑鍚?鍏抽棴 `Clear Nodes When Running Cook Nodetree`锛堢儤鐒欒妭鐐规爲鏃舵竻闄よ妭鐐癸級閫夐」锛屼粠鑰岄伩鍏嶈鐩栨偍鑷繁瀹氬埗鐨勫悎鎴愯妭鐐广€?

@@ -1,4 +1,4 @@
----
+﻿---
 layout: home
 title: Industrial 3D
 titleTemplate: CG & VFX Pipeline Ecosystem
@@ -19,19 +19,19 @@ hero:
       link: /en/industrial-pipeline-tools
 
 features:
-  - icon: 🎬
+  - icon: 馃幀
     title: Industrial CG Platform
     details: Deep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.
     link: /en/industrial-cg-platform/
-  - icon: 🔌
+  - icon: 馃攲
     title: Industrial AOV Connector
     details: Blender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.
     link: /en/industrial-aov-connector/
-  - icon: 💡
+  - icon: 馃挕
     title: Industrial Light AOV Splitter
     details: Automatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing control.
     link: /en/industrial-light-aov-splitter/
-  - icon: 🎨
+  - icon: 馃帹
     title: AIO-OCIO
     details: Unified cross-application OpenColorIO pipeline configuration (Maya, Nuke, Houdini, Blender).
     link: /en/aio-ocio/
@@ -43,7 +43,7 @@ features:
     Industrial 3D is not a standalone system, but a suite designed specifically to fill the gaps between open-source Blender and high-end film VFX pipelines. By extending Blender's Cycles rendering kernel C++ source code, building automated compositor addon pipelines, and introducing unified cross-DCC color management, we make Blender a first-class citizen in professional studio workflows.
   </p>
   <div style="font-weight: 500; color: var(--vp-c-brand); font-size: 0.95rem;">
-    🎬 Built on Blender • Tailored for VFX • Seamlessly Connected to Nuke/CG Pipelines
+    馃幀 Built on Blender 鈥?Tailored for VFX 鈥?Seamlessly Connected to Nuke/CG Pipelines
   </div>
 </div>
 
@@ -53,6 +53,6 @@ features:
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Sponsorship & Support</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial 3D tools are developed as open-source, production-focused R&D projects.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
-    <a class="VPButton medium brand" href="/industrial-cg-platform-docs/en/donate">Support the Project</a>
+    <a class="VPButton medium brand" href="/en/donate">Support the Project</a>
   </div>
 </div>

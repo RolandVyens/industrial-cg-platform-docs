@@ -1,6 +1,6 @@
-# Faire un don
+﻿# Faire un don
 
-Merci de soutenir **Industrial 3D** ! Vos dons financent directement la recherche et le développement open-source d'outils de CG et de VFX professionnels, les gardant gratuits et accessibles pour les artistes et studios du monde entier.
+Merci de soutenir **Industrial 3D** ! Vos dons financent directement la recherche et le d茅veloppement open-source d'outils de CG et de VFX professionnels, les gardant gratuits et accessibles pour les artistes et studios du monde entier.
 
 ---
 
@@ -8,20 +8,20 @@ Merci de soutenir **Industrial 3D** ! Vos dons financent directement la recherch
   <!-- Patreon Card -->
   <a href="https://www.patreon.com/cw/RolandVyens" target="_blank" class="donation-card patreon">
     <div class="card-header">
-      <span class="card-icon">🧡</span>
+      <span class="card-icon">馃А</span>
       <h3 class="card-title">Patreon</h3>
     </div>
-    <p class="card-desc">Pour les donateurs internationaux. Prend en charge les abonnements mensuels, les actus exclusives et les récompenses en USD.</p>
+    <p class="card-desc">Pour les donateurs internationaux. Prend en charge les abonnements mensuels, les actus exclusives et les r茅compenses en USD.</p>
     <div class="card-button">Soutenir sur Patreon</div>
   </a>
 
   <!-- Afdian Card -->
   <a href="https://www.ifdian.net/a/mogubobi2" target="_blank" class="donation-card afdian">
     <div class="card-header">
-      <span class="card-icon">⚡</span>
-      <h3 class="card-title">Afdian (爱发电)</h3>
+      <span class="card-icon">鈿?/span>
+      <h3 class="card-title">Afdian (鐖卞彂鐢?</h3>
     </div>
-    <p class="card-desc">Pour les donateurs résidant en Chine. Prend en charge les abonnements mensuels et le mécénat direct en CNY.</p>
+    <p class="card-desc">Pour les donateurs r茅sidant en Chine. Prend en charge les abonnements mensuels et le m茅c茅nat direct en CNY.</p>
     <div class="card-button">Soutenir sur Afdian</div>
   </a>
 </div>

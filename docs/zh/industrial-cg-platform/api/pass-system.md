@@ -1,105 +1,105 @@
-# Pass 与 AOV 系统
+﻿# Pass 涓?AOV 绯荤粺
 
-本页记录了 Industrial CG Platform 如何扩展 Blender 的渲染通道（Render Pass）与 AOV 系统。
+鏈〉璁板綍浜?Industrial CG Platform 濡備綍鎵╁睍 Blender 鐨勬覆鏌撻€氶亾锛圧ender Pass锛変笌 AOV 绯荤粺銆?
 
-## 新通道类型
+## 鏂伴€氶亾绫诲瀷
 
-### Deep EXR 通道
+### Deep EXR 閫氶亾
 
-| 通道类型 | 内部名称 | 描述 |
+| 閫氶亾绫诲瀷 | 鍐呴儴鍚嶇О | 鎻忚堪 |
 | --- | --- | --- |
-| `PASS_DEEP_COMBINED` | `Deep Combined` | 用于 deep 合成的逐采样 RGBA 与深度数据 |
-| `PASS_DEEP_POSITION` | `Deep Position` | 逐采样世界空间位置数据 |
+| `PASS_DEEP_COMBINED` | `Deep Combined` | 鐢ㄤ簬 deep 鍚堟垚鐨勯€愰噰鏍?RGBA 涓庢繁搴︽暟鎹?|
+| `PASS_DEEP_POSITION` | `Deep Position` | 閫愰噰鏍蜂笘鐣岀┖闂翠綅缃暟鎹?|
 
-### 雾通道（Environment Fog - 开发中）
+### 闆鹃€氶亾锛圗nvironment Fog - 寮€鍙戜腑锛?
 
-| 通道类型 | 内部名称 | 描述 |
+| 閫氶亾绫诲瀷 | 鍐呴儴鍚嶇О | 鎻忚堪 |
 | --- | --- | --- |
-| `PASS_FOG` | `Fog` | 环境雾贡献通道 |
+| `PASS_FOG` | `Fog` | 鐜闆捐础鐚€氶亾 |
 
 ::: warning
-雾通道是环境雾（Environment Fog）特征的一部分，该特征目前尚未正式发布。
+闆鹃€氶亾鏄幆澧冮浘锛圗nvironment Fog锛夌壒寰佺殑涓€閮ㄥ垎锛岃鐗瑰緛鐩墠灏氭湭姝ｅ紡鍙戝竷銆?
 :::
 
-## 灯光组分量通道注册
+## 鐏厜缁勫垎閲忛€氶亾娉ㄥ唽
 
-在视图层（ViewLayer）上启用 `use_lightgroup_light_pass_aovs` 时，系统会在渲染准备设置（Render Setup）阶段注册额外的逐灯光组通道。
+鍦ㄨ鍥惧眰锛圴iewLayer锛変笂鍚敤 `use_lightgroup_light_pass_aovs` 鏃讹紝绯荤粺浼氬湪娓叉煋鍑嗗璁剧疆锛圧ender Setup锛夐樁娈垫敞鍐岄澶栫殑閫愮伅鍏夌粍閫氶亾銆?
 
-### 注册流程
+### 娉ㄥ唽娴佺▼
 
 ```
-场景同步 Scene sync → Film 设置 Film setup → 对每一个灯光组进行遍历 For each lightgroup:
-  → 如果启用了拆分分量通道 If split passes enabled:
-    → 注册 Combined_<lg>
-    → 注册 Diffuse_Direct_<lg> (如果启用)
-    → 注册 Diffuse_Indirect_<lg> (如果启用)
-    → 注册 Glossy_Direct_<lg> (如果启用)
-    → ... (注册所有已启用的分量组合)
+鍦烘櫙鍚屾 Scene sync 鈫?Film 璁剧疆 Film setup 鈫?瀵规瘡涓€涓伅鍏夌粍杩涜閬嶅巻 For each lightgroup:
+  鈫?濡傛灉鍚敤浜嗘媶鍒嗗垎閲忛€氶亾 If split passes enabled:
+    鈫?娉ㄥ唽 Combined_<lg>
+    鈫?娉ㄥ唽 Diffuse_Direct_<lg> (濡傛灉鍚敤)
+    鈫?娉ㄥ唽 Diffuse_Indirect_<lg> (濡傛灉鍚敤)
+    鈫?娉ㄥ唽 Glossy_Direct_<lg> (濡傛灉鍚敤)
+    鈫?... (娉ㄥ唽鎵€鏈夊凡鍚敤鐨勫垎閲忕粍鍚?
 ```
 
-### 通道命名约定
+### 閫氶亾鍛藉悕绾﹀畾
 
 ```
 <Lobe>_<Direction>_<LightgroupName>
 ```
 
-其中：
-- **Lobe（分量）**：`Diffuse`（漫反射）、`Glossy`（光泽）、`Transmission`（透射）、`Volume`（体积）
-- **Direction（方向）**：`Direct`（直接）、`Indirect`（间接）
-- **LightgroupName**：用户定义的灯光组名称
+鍏朵腑锛?
+- **Lobe锛堝垎閲忥級**锛歚Diffuse`锛堟极鍙嶅皠锛夈€乣Glossy`锛堝厜娉斤級銆乣Transmission`锛堥€忓皠锛夈€乣Volume`锛堜綋绉級
+- **Direction锛堟柟鍚戯級**锛歚Direct`锛堢洿鎺ワ級銆乣Indirect`锛堥棿鎺ワ級
+- **LightgroupName**锛氱敤鎴峰畾涔夌殑鐏厜缁勫悕绉?
 
-每个灯光组的 `Combined_<lg>` 通道将始终默认存在。
+姣忎釜鐏厜缁勭殑 `Combined_<lg>` 閫氶亾灏嗗缁堥粯璁ゅ瓨鍦ㄣ€?
 
-### Film 偏移量映射
+### Film 鍋忕Щ閲忔槧灏?
 
-每个注册的通道都会在 Cycles film 缓冲区中获得一个唯一的偏移量。灯光组拆分分量索引映射公式如下：
+姣忎釜娉ㄥ唽鐨勯€氶亾閮戒細鍦?Cycles film 缂撳啿鍖轰腑鑾峰緱涓€涓敮涓€鐨勫亸绉婚噺銆傜伅鍏夌粍鎷嗗垎鍒嗛噺绱㈠紩鏄犲皠鍏紡濡備笅锛?
 
 ```
 lightgroup_split_index[lightgroup_id * num_split_types + split_type_index] = film_offset
 ```
 
-这可以在内核中通过 `kernel_data_fetch(lightgroup_split_index, index)` 来直接读取。
+杩欏彲浠ュ湪鍐呮牳涓€氳繃 `kernel_data_fetch(lightgroup_split_index, index)` 鏉ョ洿鎺ヨ鍙栥€?
 
-## 通道数据回读 (Pass Readback)
+## 閫氶亾鏁版嵁鍥炶 (Pass Readback)
 
-### 标识一致性保留 (Identity Preservation)
+### 鏍囪瘑涓€鑷存€т繚鐣?(Identity Preservation)
 
-一项关键的正确性修正确保了逐灯光组的拆分分量通道能通过其真实的 `PassType` 标识来正确回读，而不是通过第一个匹配的通用通道类型回读。这可以有效防止：
+涓€椤瑰叧閿殑姝ｇ‘鎬т慨姝ｇ‘淇濅簡閫愮伅鍏夌粍鐨勬媶鍒嗗垎閲忛€氶亾鑳介€氳繃鍏剁湡瀹炵殑 `PassType` 鏍囪瘑鏉ユ纭洖璇伙紝鑰屼笉鏄€氳繃绗竴涓尮閰嶇殑閫氱敤閫氶亾绫诲瀷鍥炶銆傝繖鍙互鏈夋晥闃叉锛?
 
-- 存在间接光通道时，直接光通道异常显示为空白。
-- 不同灯光组分量组合之间的通道内容发生别名/混淆冲突。
+- 瀛樺湪闂存帴鍏夐€氶亾鏃讹紝鐩存帴鍏夐€氶亾寮傚父鏄剧ず涓虹┖鐧姐€?
+- 涓嶅悓鐏厜缁勫垎閲忕粍鍚堜箣闂寸殑閫氶亾鍐呭鍙戠敓鍒悕/娣锋穯鍐茬獊銆?
 
-该修正位于：
+璇ヤ慨姝ｄ綅浜庯細
 ```
 intern/cycles/integrator/path_trace_tile.h
 ```
 
-### 合成器集成 (Compositor Integration)
+### 鍚堟垚鍣ㄩ泦鎴?(Compositor Integration)
 
-灯光组分量通道作为标准的 Blender 渲染通道向外暴露，并会呈现在以下位置：
-- Blender 合成器（Compositor）中，表现为渲染层（Render Layers）节点的独立输出套接字（Socket）。
-- 图像编辑器（Image Editor）的通道选择下拉菜单中。
-- 多层 OpenEXR 输出中，保存为有明确命名的图像图层。
+鐏厜缁勫垎閲忛€氶亾浣滀负鏍囧噯鐨?Blender 娓叉煋閫氶亾鍚戝鏆撮湶锛屽苟浼氬憟鐜板湪浠ヤ笅浣嶇疆锛?
+- Blender 鍚堟垚鍣紙Compositor锛変腑锛岃〃鐜颁负娓叉煋灞傦紙Render Layers锛夎妭鐐圭殑鐙珛杈撳嚭濂楁帴瀛楋紙Socket锛夈€?
+- 鍥惧儚缂栬緫鍣紙Image Editor锛夌殑閫氶亾閫夋嫨涓嬫媺鑿滃崟涓€?
+- 澶氬眰 OpenEXR 杈撳嚭涓紝淇濆瓨涓烘湁鏄庣‘鍛藉悕鐨勫浘鍍忓浘灞傘€?
 
-## Deep EXR 输出格式
+## Deep EXR 杈撳嚭鏍煎紡
 
-启用 Deep EXR 输出时：
+鍚敤 Deep EXR 杈撳嚭鏃讹細
 
-1. 渲染管线在存储颜色数据的同时，将逐采样的深度数据一并进行存储。
-2. 在输出阶段，使用 OpenEXR 的 deep 图像 API 写入生成的 deep 文件。
-3. 该 deep 格式与行业标准的 deep 合成工具完全兼容（如 Nuke 的 `DeepRead` 节点等）。
+1. 娓叉煋绠＄嚎鍦ㄥ瓨鍌ㄩ鑹叉暟鎹殑鍚屾椂锛屽皢閫愰噰鏍风殑娣卞害鏁版嵁涓€骞惰繘琛屽瓨鍌ㄣ€?
+2. 鍦ㄨ緭鍑洪樁娈碉紝浣跨敤 OpenEXR 鐨?deep 鍥惧儚 API 鍐欏叆鐢熸垚鐨?deep 鏂囦欢銆?
+3. 璇?deep 鏍煎紡涓庤涓氭爣鍑嗙殑 deep 鍚堟垚宸ュ叿瀹屽叏鍏煎锛堝 Nuke 鐨?`DeepRead` 鑺傜偣绛夛級銆?
 
-### Deep Tile 预算 (Deep Tile Budget)
+### Deep Tile 棰勭畻 (Deep Tile Budget)
 
-`deep_tile_budget` 参数控制着在 tile 渲染期间每个像素可以存储的最大采样数。数值越高，保留的深度细节就越完美，但也会相应消耗更多内存。
+`deep_tile_budget` 鍙傛暟鎺у埗鐫€鍦?tile 娓叉煋鏈熼棿姣忎釜鍍忕礌鍙互瀛樺偍鐨勬渶澶ч噰鏍锋暟銆傛暟鍊艰秺楂橈紝淇濈暀鐨勬繁搴︾粏鑺傚氨瓒婂畬缇庯紝浣嗕篃浼氱浉搴旀秷鑰楁洿澶氬唴瀛樸€?
 
-## 源文件
+## 婧愭枃浠?
 
-| 文件 | 用途 |
+| 鏂囦欢 | 鐢ㄩ€?|
 | --- | --- |
-| `intern/cycles/scene/film.cpp` | 通道注册与 film 设置逻辑 |
-| `intern/cycles/integrator/path_trace_tile.h` | 带有标识一致性保留的通道数据回读逻辑 |
-| `intern/cycles/blender/addon/properties.py` | Cycles 插件通道属性定义 |
-| `source/blender/render/intern/pipeline.cc` | Blender 渲染管线通道集成逻辑 |
-| `source/blender/makesrna/intern/rna_scene.cc` | RNA 通道属性定义 |
-| `intern/cycles/kernel/types.h` | 内核通道类型枚举定义 |
+| `intern/cycles/scene/film.cpp` | 閫氶亾娉ㄥ唽涓?film 璁剧疆閫昏緫 |
+| `intern/cycles/integrator/path_trace_tile.h` | 甯︽湁鏍囪瘑涓€鑷存€т繚鐣欑殑閫氶亾鏁版嵁鍥炶閫昏緫 |
+| `intern/cycles/blender/addon/properties.py` | Cycles 鎻掍欢閫氶亾灞炴€у畾涔?|
+| `source/blender/render/intern/pipeline.cc` | Blender 娓叉煋绠＄嚎閫氶亾闆嗘垚閫昏緫 |
+| `source/blender/makesrna/intern/rna_scene.cc` | RNA 閫氶亾灞炴€у畾涔?|
+| `intern/cycles/kernel/types.h` | 鍐呮牳閫氶亾绫诲瀷鏋氫妇瀹氫箟 |

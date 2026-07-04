@@ -1,59 +1,59 @@
-# Python 操作器
+﻿# Python 鎿嶄綔鍣?
 
-本页记录了 Industrial CG Platform 添加到 Blender 的 Python 操作器和共享 Qt 运行时 API。
+鏈〉璁板綍浜?Industrial CG Platform 娣诲姞鍒?Blender 鐨?Python 鎿嶄綔鍣ㄥ拰鍏变韩 Qt 杩愯鏃?API銆?
 
-## Blender 操作器
+## Blender 鎿嶄綔鍣?
 
 ### `wm.blender_vfx_viewlayer_manager_show`
 
-| 属性 | 值 |
+| 灞炴€?| 鍊?|
 | --- | --- |
-| **操作器 ID** | `wm.blender_vfx_viewlayer_manager_show` |
-| **标签** | `ViewLayer Manager` |
-| **描述** | 打开或将 ViewLayer 管理器窗口置于最前 |
+| **鎿嶄綔鍣?ID** | `wm.blender_vfx_viewlayer_manager_show` |
+| **鏍囩** | `ViewLayer Manager` |
+| **鎻忚堪** | 鎵撳紑鎴栧皢 ViewLayer 绠＄悊鍣ㄧ獥鍙ｇ疆浜庢渶鍓?|
 
-此操作器：
-1. 为当前会话启用 `blender_vfx_qt_runtime` 系统扩展。
-2. 为当前会话启用 `blender_vfx_viewlayer_manager` 系统扩展。
-3. 打开 ViewLayer 管理器 Qt 窗口，如果已打开则将其置于最前。
+姝ゆ搷浣滃櫒锛?
+1. 涓哄綋鍓嶄細璇濆惎鐢?`blender_vfx_qt_runtime` 绯荤粺鎵╁睍銆?
+2. 涓哄綋鍓嶄細璇濆惎鐢?`blender_vfx_viewlayer_manager` 绯荤粺鎵╁睍銆?
+3. 鎵撳紑 ViewLayer 绠＄悊鍣?Qt 绐楀彛锛屽鏋滃凡鎵撳紑鍒欏皢鍏剁疆浜庢渶鍓嶃€?
 
-## 共享 Qt 运行时 API
+## 鍏变韩 Qt 杩愯鏃?API
 
-位于 `scripts/modules/blender_vfx_qt` 的共享 Qt 运行时包装器模块提供以下公共 API：
+浣嶄簬 `scripts/modules/blender_vfx_qt` 鐨勫叡浜?Qt 杩愯鏃跺寘瑁呭櫒妯″潡鎻愪緵浠ヤ笅鍏叡 API锛?
 
 ### `blender_vfx_qt.ensure_runtime()`
 
-确保当前会话可使用 BQt Qt 运行时。
+纭繚褰撳墠浼氳瘽鍙娇鐢?BQt Qt 杩愯鏃躲€?
 
 ### `blender_vfx_qt.present_window(widget)`
 
-显示并唤起 Qt 窗口，使其置于最前并获取键盘/鼠标焦点。
+鏄剧ず骞跺敜璧?Qt 绐楀彛锛屼娇鍏剁疆浜庢渶鍓嶅苟鑾峰彇閿洏/榧犳爣鐒︾偣銆?
 
 ```python
 from blender_vfx_qt import present_window
 
-# widget 是一个已实例化的 QWidget 对象
+# widget 鏄竴涓凡瀹炰緥鍖栫殑 QWidget 瀵硅薄
 present_window(my_window_instance)
 ```
 
-**参数：**
-- `widget` — 要显示的 `QWidget` 实例。
+**鍙傛暟锛?*
+- `widget` 鈥?瑕佹樉绀虹殑 `QWidget` 瀹炰緥銆?
 
-**行为：**
-- 调用该控件的 `.show()`。
-- 调用该控件的 `.raise_()` 以确保窗口移至最前端。
-- 调用 `.activateWindow()` 以强制捕获操作系统的键盘与鼠标焦点。
-- 返回窗口实例对象。
+**琛屼负锛?*
+- 璋冪敤璇ユ帶浠剁殑 `.show()`銆?
+- 璋冪敤璇ユ帶浠剁殑 `.raise_()` 浠ョ‘淇濈獥鍙ｇЩ鑷虫渶鍓嶇銆?
+- 璋冪敤 `.activateWindow()` 浠ュ己鍒舵崟鑾锋搷浣滅郴缁熺殑閿洏涓庨紶鏍囩劍鐐广€?
+- 杩斿洖绐楀彛瀹炰緥瀵硅薄銆?
 
 ### `blender_vfx_qt.show_unique_window(cache_ref, factory)`
 
-使用字典缓存与工厂函数创建或显示单例 Qt 窗口，以确保在 Blender 运行会话中只有一个窗口实例处于活动状态。
+浣跨敤瀛楀吀缂撳瓨涓庡伐鍘傚嚱鏁板垱寤烘垨鏄剧ず鍗曚緥 Qt 绐楀彛锛屼互纭繚鍦?Blender 杩愯浼氳瘽涓彧鏈変竴涓獥鍙ｅ疄渚嬪浜庢椿鍔ㄧ姸鎬併€?
 
 ```python
 from blender_vfx_qt import show_unique_window
 from blender_vfx_viewlayer_manager.window import ViewLayerManagerWindow
 
-# 定义一个持久化的字典缓存引用
+# 瀹氫箟涓€涓寔涔呭寲鐨勫瓧鍏哥紦瀛樺紩鐢?
 _window_cache = {"value": None}
 
 def factory():
@@ -63,32 +63,32 @@ def factory():
 show_unique_window(_window_cache, factory)
 ```
 
-**参数：**
-- `cache_ref` — 用于缓存活动窗口引用的字典（形如 `{"value": None}`）。
-- `factory` — 一个不接受参数的可调用对象（如函数或 lambda），执行时返回一个新实例化的 `QWidget` 子类对象。
+**鍙傛暟锛?*
+- `cache_ref` 鈥?鐢ㄤ簬缂撳瓨娲诲姩绐楀彛寮曠敤鐨勫瓧鍏革紙褰㈠ `{"value": None}`锛夈€?
+- `factory` 鈥?涓€涓笉鎺ュ彈鍙傛暟鐨勫彲璋冪敤瀵硅薄锛堝鍑芥暟鎴?lambda锛夛紝鎵ц鏃惰繑鍥炰竴涓柊瀹炰緥鍖栫殑 `QWidget` 瀛愮被瀵硅薄銆?
 
-**行为：**
-- 检查缓存中的窗口是否存在并且仍处于活动状态（通过 `qt_window_is_alive(widget)`）。
-- 若窗口仍处于活动状态，直接对该缓存实例调用 `present_window()` 将其置于最前。
-- 若窗口不存在或已被销毁，执行传入的 `factory` 工厂函数创建新窗口，将其引用存入 `cache_ref["value"]` 中，并调用 `present_window()` 进行渲染展示。
-- 返回显示的窗口实例对象。
+**琛屼负锛?*
+- 妫€鏌ョ紦瀛樹腑鐨勭獥鍙ｆ槸鍚﹀瓨鍦ㄥ苟涓斾粛澶勪簬娲诲姩鐘舵€侊紙閫氳繃 `qt_window_is_alive(widget)`锛夈€?
+- 鑻ョ獥鍙ｄ粛澶勪簬娲诲姩鐘舵€侊紝鐩存帴瀵硅缂撳瓨瀹炰緥璋冪敤 `present_window()` 灏嗗叾缃簬鏈€鍓嶃€?
+- 鑻ョ獥鍙ｄ笉瀛樺湪鎴栧凡琚攢姣侊紝鎵ц浼犲叆鐨?`factory` 宸ュ巶鍑芥暟鍒涘缓鏂扮獥鍙ｏ紝灏嗗叾寮曠敤瀛樺叆 `cache_ref["value"]` 涓紝骞惰皟鐢?`present_window()` 杩涜娓叉煋灞曠ず銆?
+- 杩斿洖鏄剧ず鐨勭獥鍙ｅ疄渚嬪璞°€?
 
 ### `blender_vfx_qt.qt_window_is_alive(widget)`
 
-检查一个 Qt 窗口实例当前是否已实例化，且在 C++ 层面没有被销毁或垃圾回收。
+妫€鏌ヤ竴涓?Qt 绐楀彛瀹炰緥褰撳墠鏄惁宸插疄渚嬪寲锛屼笖鍦?C++ 灞傞潰娌℃湁琚攢姣佹垨鍨冨溇鍥炴敹銆?
 
 ```python
 from blender_vfx_qt import qt_window_is_alive
 
 if qt_window_is_alive(my_window):
-    print("窗口处于活动状态且正常渲染！")
+    print("绐楀彛澶勪簬娲诲姩鐘舵€佷笖姝ｅ父娓叉煋锛?)
 ```
 
-**参数：**
-- `widget` — `QWidget` 实例（或 `None`）。
+**鍙傛暟锛?*
+- `widget` 鈥?`QWidget` 瀹炰緥锛堟垨 `None`锛夈€?
 
-**行为：**
-- 若 `widget` 为 `None` 则返回 `False`。
-- 尝试访问该控件的 `objectName()`。
-- 捕获 PySide/PyQt 在交互已被销毁的底层 C++ 对象时抛出的 `RuntimeError`，若捕获到则返回 `False`。
-- 若窗口处于存活状态则返回 `True`。
+**琛屼负锛?*
+- 鑻?`widget` 涓?`None` 鍒欒繑鍥?`False`銆?
+- 灏濊瘯璁块棶璇ユ帶浠剁殑 `objectName()`銆?
+- 鎹曡幏 PySide/PyQt 鍦ㄤ氦浜掑凡琚攢姣佺殑搴曞眰 C++ 瀵硅薄鏃舵姏鍑虹殑 `RuntimeError`锛岃嫢鎹曡幏鍒板垯杩斿洖 `False`銆?
+- 鑻ョ獥鍙ｅ浜庡瓨娲荤姸鎬佸垯杩斿洖 `True`銆?

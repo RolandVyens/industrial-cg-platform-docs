@@ -1,4 +1,4 @@
-# Installation
+﻿# Installation
 
 ## System Requirements
 
@@ -46,8 +46,8 @@ For Cycles GPU rendering with NVIDIA:
 
 1. Open **Edit > Preferences > System**.
 2. Under **Cycles Render Devices**, select either:
-   - **CUDA** — Broad compatibility, slightly slower.
-   - **OptiX** — Faster ray tracing on RTX GPUs (recommended).
+   - **CUDA** 鈥?Broad compatibility, slightly slower.
+   - **OptiX** 鈥?Faster ray tracing on RTX GPUs (recommended).
 3. Check your GPU in the device list.
 
 ## Coexistence with Stock Blender
@@ -67,5 +67,5 @@ To prevent conflicts and stale shader compile states between Industrial CG Platf
 
 ## See Also
 
-- [Building from Source](/en/industrial-cg-platform/guide/building-from-source) — Compile from the GitHub repository.
-- [Blender Manual: Installing on Windows](https://docs.blender.org/manual/en/latest/getting_started/installing/windows.html) — Standard Blender installation guide.
+- [Building from Source](/en/industrial-cg-platform/guide/building-from-source) 鈥?Compile from the GitHub repository.
+- [Blender Manual: Installing on Windows](https://docs.blender.org/manual/en/latest/getting_started/installing/windows.html) 鈥?Standard Blender installation guide.

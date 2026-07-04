@@ -1,4 +1,4 @@
-# Industrial AOV Connector
+﻿# Industrial AOV Connector
 
 **Industrial AOV Connector** is an advanced open-source add-on for Blender designed to streamline and automate the setup of Arbitrary Output Variables (AOVs) and render output file nodes for professional VFX and compositing pipelines. 
 
@@ -8,17 +8,17 @@ By automating the construction of complex compositor node trees and file output 
 
 ## Key Features
 
-### 🔌 Automated Compositor Output Management
+### 馃攲 Automated Compositor Output Management
 *   **Zero Manual Setup:** Automatically generates output node trees (`File Output` nodes) based on active render passes.
 *   **Smart Denoising:** Automatically injects and routes denoising nodes (such as OpenImageDenoise) into your compositing tree.
 *   **Multi-ViewLayer Support:** Handles multiple view layers concurrently, mapping their render output paths systematically.
 
-### 🎭 Custom Material & Light AOVs
+### 馃幁 Custom Material & Light AOVs
 *   Supports material-based custom AOV setups.
 *   Maps light-group-based AOVs directly to separate output channels.
 *   Supports hybrid render paths that mix standard passes and user-defined AOVs.
 
-### 🎬 VFX Pipeline Alignment
+### 馃幀 VFX Pipeline Alignment
 *   Converts and formats data passes (such as vector velocity, normals, and position) into Nuke-compliant naming conventions and formats.
 *   Generates high-quality, anti-aliased Depth ($Z$) and Position ($P$) passes.
 *   Provides a "fake" deep channel option for simple deep-style compositing workflows.
@@ -28,7 +28,7 @@ By automating the construction of complex compositor node trees and file output 
 ## Usage & UI Location
 
 Once installed, the add-on panel can be found in the:
-> 📌 **Properties Panel → View Layer** tab
+> 馃搶 **Properties Panel 鈫?View Layer** tab
 
 ---
 

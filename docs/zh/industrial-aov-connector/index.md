@@ -1,57 +1,35 @@
-# Industrial AOV Connector
+﻿# Industrial AOV Connector
 
-**Industrial AOV Connector** 是一个专为 Blender 打造的高级开源插件，旨在为专业的影视特效（VFX）与合成流程简化并自动化自定义输出通道（AOV）和渲染文件输出节点的配置。
-
-通过自动构建复杂的合成器节点树和文件输出节点，它在 Blender 的 3D 渲染与 Foundry Nuke 等专业合成软件之间搭建起高效的桥梁。
-
+**Industrial AOV Connector** 鏄竴涓笓涓?Blender 鎵撻€犵殑楂樼骇寮€婧愭彃浠讹紝鏃ㄥ湪涓轰笓涓氱殑褰辫鐗规晥锛圴FX锛変笌鍚堟垚娴佺▼绠€鍖栧苟鑷姩鍖栬嚜瀹氫箟杈撳嚭閫氶亾锛圓OV锛夊拰娓叉煋鏂囦欢杈撳嚭鑺傜偣鐨勯厤缃€?
+閫氳繃鑷姩鏋勫缓澶嶆潅鐨勫悎鎴愬櫒鑺傜偣鏍戝拰鏂囦欢杈撳嚭鑺傜偣锛屽畠鍦?Blender 鐨?3D 娓叉煋涓?Foundry Nuke 绛変笓涓氬悎鎴愯蒋浠朵箣闂存惌寤鸿捣楂樻晥鐨勬ˉ姊併€?
 ---
 
-## 核心功能
+## 鏍稿績鍔熻兘
 
-### 🔌 自动合成器输出管理
-*   **零手动配置**：根据当前激活的渲染层通道，自动生成完整的文件输出节点树（`File Output` 节点）。
-*   **智能降噪连接**：自动在合成树中路由并接入降噪节点（如 OpenImageDenoise），输出干净的降噪通道与噪点通道。
-*   **多视图层（ViewLayer）支持**：原生处理多个视图层，系统化映射每个层的渲染输出路径。
-
-### 🎭 自定义材质与灯光 AOV
-*   支持基于材质的自定义 AOV 配置。
-*   将灯光组（Light Group）渲染通道直接映射到单独的输出通道中。
-*   支持混合渲染管线，将标准 Passes 与用户自定义的 AOV 进行统一输出。
-
-### 🎬 VFX 流程对齐
-*   将数据通道（如运动矢量 Vector、法线 Normal、位置 Position）进行格式化，使其遵循 Nuke 的命名规范与通道标准。
-*   生成高质量、支持抗锯齿的深度（$Z$）通道和世界坐标位置（$P$）通道。
-*   为轻量化合成工作流提供“伪深度”（Fake Deep）通道选项。
-
+### 馃攲 鑷姩鍚堟垚鍣ㄨ緭鍑虹鐞?*   **闆舵墜鍔ㄩ厤缃?*锛氭牴鎹綋鍓嶆縺娲荤殑娓叉煋灞傞€氶亾锛岃嚜鍔ㄧ敓鎴愬畬鏁寸殑鏂囦欢杈撳嚭鑺傜偣鏍戯紙`File Output` 鑺傜偣锛夈€?*   **鏅鸿兘闄嶅櫔杩炴帴**锛氳嚜鍔ㄥ湪鍚堟垚鏍戜腑璺敱骞舵帴鍏ラ檷鍣妭鐐癸紙濡?OpenImageDenoise锛夛紝杈撳嚭骞插噣鐨勯檷鍣€氶亾涓庡櫔鐐归€氶亾銆?*   **澶氳鍥惧眰锛圴iewLayer锛夋敮鎸?*锛氬師鐢熷鐞嗗涓鍥惧眰锛岀郴缁熷寲鏄犲皠姣忎釜灞傜殑娓叉煋杈撳嚭璺緞銆?
+### 馃幁 鑷畾涔夋潗璐ㄤ笌鐏厜 AOV
+*   鏀寔鍩轰簬鏉愯川鐨勮嚜瀹氫箟 AOV 閰嶇疆銆?*   灏嗙伅鍏夌粍锛圠ight Group锛夋覆鏌撻€氶亾鐩存帴鏄犲皠鍒板崟鐙殑杈撳嚭閫氶亾涓€?*   鏀寔娣峰悎娓叉煋绠＄嚎锛屽皢鏍囧噯 Passes 涓庣敤鎴疯嚜瀹氫箟鐨?AOV 杩涜缁熶竴杈撳嚭銆?
+### 馃幀 VFX 娴佺▼瀵归綈
+*   灏嗘暟鎹€氶亾锛堝杩愬姩鐭㈤噺 Vector銆佹硶绾?Normal銆佷綅缃?Position锛夎繘琛屾牸寮忓寲锛屼娇鍏堕伒寰?Nuke 鐨勫懡鍚嶈鑼冧笌閫氶亾鏍囧噯銆?*   鐢熸垚楂樿川閲忋€佹敮鎸佹姉閿娇鐨勬繁搴︼紙$Z$锛夐€氶亾鍜屼笘鐣屽潗鏍囦綅缃紙$P$锛夐€氶亾銆?*   涓鸿交閲忓寲鍚堟垚宸ヤ綔娴佹彁渚涒€滀吉娣卞害鈥濓紙Fake Deep锛夐€氶亾閫夐」銆?
 ---
 
-## 面板位置
+## 闈㈡澘浣嶇疆
 
-启用插件后，您可以在 Blender 的下方位置找到该插件的控制面板：
-> 📌 **属性面板 (Properties) → 视图层 (View Layer)** 选项卡
-
+鍚敤鎻掍欢鍚庯紝鎮ㄥ彲浠ュ湪 Blender 鐨勪笅鏂逛綅缃壘鍒拌鎻掍欢鐨勬帶鍒堕潰鏉匡細
+> 馃搶 **灞炴€ч潰鏉?(Properties) 鈫?瑙嗗浘灞?(View Layer)** 閫夐」鍗?
 ---
 
-## 安装与快速上手
-
-### 前提条件
-*   Blender 4.2 LTS 或更高版本。
-*   **生态搭配推荐：** 强烈建议搭配定制的 [Industrial CG Platform](/zh/industrial-cg-platform/) 渲染分支使用，以获得最佳的灯光材质 AOV 以及 Cycles 原生 Deep EXR 深度图输出支持。
-
-### 通过官方扩展平台安装（推荐）
-1.  打开 Blender，前往 `编辑 (Edit)` > `偏好设置 (Preferences)` > `获取扩展 (Get Extensions)`。
-2.  在搜索栏中输入 `Industrial AOV Connector`。
-3.  点击 **安装 (Install)**。
-
-### 通过 GitHub 离线安装
-1.  前往 GitHub 仓库下载最新的 ZIP 压缩包：[Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector/releases)。
-2.  在 Blender 中前往 `偏好设置 (Preferences)` > `插件 (Add-ons)` > `安装... (Install...)`。
-3.  选择下载好的 `.zip` 文件，并勾选启用该插件。
-
+## 瀹夎涓庡揩閫熶笂鎵?
+### 鍓嶆彁鏉′欢
+*   Blender 4.2 LTS 鎴栨洿楂樼増鏈€?*   **鐢熸€佹惌閰嶆帹鑽愶細** 寮虹儓寤鸿鎼厤瀹氬埗鐨?[Industrial CG Platform](/zh/industrial-cg-platform/) 娓叉煋鍒嗘敮浣跨敤锛屼互鑾峰緱鏈€浣崇殑鐏厜鏉愯川 AOV 浠ュ強 Cycles 鍘熺敓 Deep EXR 娣卞害鍥捐緭鍑烘敮鎸併€?
+### 閫氳繃瀹樻柟鎵╁睍骞冲彴瀹夎锛堟帹鑽愶級
+1.  鎵撳紑 Blender锛屽墠寰€ `缂栬緫 (Edit)` > `鍋忓ソ璁剧疆 (Preferences)` > `鑾峰彇鎵╁睍 (Get Extensions)`銆?2.  鍦ㄦ悳绱㈡爮涓緭鍏?`Industrial AOV Connector`銆?3.  鐐瑰嚮 **瀹夎 (Install)**銆?
+### 閫氳繃 GitHub 绂荤嚎瀹夎
+1.  鍓嶅線 GitHub 浠撳簱涓嬭浇鏈€鏂扮殑 ZIP 鍘嬬缉鍖咃細[Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector/releases)銆?2.  鍦?Blender 涓墠寰€ `鍋忓ソ璁剧疆 (Preferences)` > `鎻掍欢 (Add-ons)` > `瀹夎... (Install...)`銆?3.  閫夋嫨涓嬭浇濂界殑 `.zip` 鏂囦欢锛屽苟鍕鹃€夊惎鐢ㄨ鎻掍欢銆?
 ---
 
-## 开源协议与链接
+## 寮€婧愬崗璁笌閾炬帴
 
-*   **开源协议：** GNU General Public License v3.0 (GPL-3.0)
-*   **GitHub 仓库**：[RolandVyens/Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector)
-*   **问题反馈**：[GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-AOV-Connector/issues)
+*   **寮€婧愬崗璁細** GNU General Public License v3.0 (GPL-3.0)
+*   **GitHub 浠撳簱**锛歔RolandVyens/Industrial-AOV-Connector](https://github.com/RolandVyens/Industrial-AOV-Connector)
+*   **闂鍙嶉**锛歔GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-AOV-Connector/issues)

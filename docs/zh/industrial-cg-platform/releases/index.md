@@ -1,9 +1,9 @@
----
+﻿---
 layout: doc
-title: 版本发布
+title: 鐗堟湰鍙戝竷
 ---
 
-# 版本发布
+# 鐗堟湰鍙戝竷
 
 <script setup>
 import { data as releases } from '../../../releases.data.js'
@@ -11,29 +11,29 @@ import { data as releases } from '../../../releases.data.js'
 
 <div class="releases-container">
   <p style="color: var(--vp-c-text-3); font-size: 0.9rem; margin-bottom: 1.5rem;">
-    ⚡ 静态编译自官方主仓库。构建时自动同步更新。
+    鈿?闈欐€佺紪璇戣嚜瀹樻柟涓讳粨搴撱€傛瀯寤烘椂鑷姩鍚屾鏇存柊銆?
   </p>
   <div v-for="(release, index) in releases" :key="release.tag_name" class="release-card">
     <div class="release-card-content">
       <div class="release-header">
         <div>
           <span class="release-title">{{ release.name }}</span>
-          <div class="release-date">发布于 {{ release.publishedAtZH }}</div>
+          <div class="release-date">鍙戝竷浜?{{ release.publishedAtZH }}</div>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <span v-if="index === 0 && !release.prerelease" class="badge badge-latest">最新版本</span>
-          <span v-if="release.prerelease" class="badge badge-prerelease">预发布版</span>
-          <span v-else-if="index !== 0" class="badge badge-regular">稳定版</span>
+          <span v-if="index === 0 && !release.prerelease" class="badge badge-latest">鏈€鏂扮増鏈?/span>
+          <span v-if="release.prerelease" class="badge badge-prerelease">棰勫彂甯冪増</span>
+          <span v-else-if="index !== 0" class="badge badge-regular">绋冲畾鐗?/span>
           <a v-if="release.html_url" :href="release.html_url" target="_blank" class="badge badge-regular" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
-            🔗 仓库 Releases
+            馃敆 浠撳簱 Releases
           </a>
         </div>
       </div>
       <div class="release-body" v-html="release.bodyHtml" style="margin-top: 1rem; font-size: 0.95rem;"></div>
-      <!-- 资源包下载区 -->
+      <!-- 璧勬簮鍖呬笅杞藉尯 -->
       <div v-if="release.assets && release.assets.length" class="assets-box">
         <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.6rem; color: var(--vp-c-text-1);">
-          📦 运行程序下载包 (Windows x64 ZIP)
+          馃摝 杩愯绋嬪簭涓嬭浇鍖?(Windows x64 ZIP)
         </div>
         <div v-for="asset in release.assets" :key="asset.id" class="asset-item">
           <a v-if="asset.browser_download_url" :href="asset.browser_download_url" target="_blank" class="asset-link">

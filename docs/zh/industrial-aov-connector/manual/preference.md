@@ -1,53 +1,40 @@
-# 偏好设置与详细配置
-
-本页将详细解释 **Industrial AOV Connector** 偏好设置中的核心功能、性能优化选项及输出管理工具。
-
+﻿# 鍋忓ソ璁剧疆涓庤缁嗛厤缃?
+鏈〉灏嗚缁嗚В閲?**Industrial AOV Connector** 鍋忓ソ璁剧疆涓殑鏍稿績鍔熻兘銆佹€ц兘浼樺寲閫夐」鍙婅緭鍑虹鐞嗗伐鍏枫€?
 ---
 
-## **核心功能设置 (Core Function)**
+## **鏍稿績鍔熻兘璁剧疆 (Core Function)**
 
-<img width="400" alt="核心功能设置" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="鏍稿績鍔熻兘璁剧疆" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-### 1. **Denoise DiffCol / GlossCol / TransCol (颜色通道降噪)**
-对平涂纯色通道（`DiffCol` / `GlossCol` / `TransCol` 等颜色 AOV）进行降噪处理，能够有效提升后期合成除法计算的精度。
+### 1. **Denoise DiffCol / GlossCol / TransCol (棰滆壊閫氶亾闄嶅櫔)**
+瀵瑰钩娑傜函鑹查€氶亾锛坄DiffCol` / `GlossCol` / `TransCol` 绛夐鑹?AOV锛夎繘琛岄檷鍣鐞嗭紝鑳藉鏈夋晥鎻愬崌鍚庢湡鍚堟垚闄ゆ硶璁＄畻鐨勭簿搴︺€?
+### 2. **Use Old EXR Layer Naming Convention (鏃х増 EXR 鍛藉悕)**
+寮哄埗浣跨敤鏃х増锛堝吋瀹?2.4.x 鍙婁互涓嬬増鏈級鐨?EXR 灞傜骇鍛藉悕瑙勮寖銆傜敱浜庢柊鐗堝眰绾у懡鍚嶅湪 Nuke 涓叿鏈夋瀬浣崇殑鍙鎬э紝閫氬父寤鸿淇濇寔鍏抽棴姝ら€夐」銆?
+### 3. **Only Create Nodes For Enabled Viewlayers (浠呬负鍚敤灞傜敓鎴愯妭鐐?**
+浠呬负鍕鹃€変簡 `Use For Rendering` (鐢ㄤ簬娓叉煋) 鐨勮鍥惧眰鐢熸垚鍚堟垚鑺傜偣锛屼粠鑰岃妭鐪佸悎鎴愮紪杈戝櫒鐨勮妭鐐圭┖闂村拰鐢熸垚閫熷害銆?
+### 4. **Auto Optimize Sample Count For Data Layers (鑷姩浼樺寲鏁版嵁灞傞噰鏍?**
+鍚敤鍚庯紝鎻掍欢鍦ㄧ儤鐒欒妭鐐规爲鏃朵細涓轰笁缁存暟鎹眰搴旂敤 **閲囨牱鐜囪鐩?(sample count override)**銆傜敱浜庢暟鎹€氶亾锛堝娉曠嚎銆佸潗鏍囷級涓嶉渶瑕丅eauty灞傞偅涔堥珮鐨勯噰鏍锋暟锛岃繖鑳芥瀬澶х缉鐭暣浣撴覆鏌撴椂闂淬€傛偍鍙互鍦ㄦ澶勮瀹氭暟鎹眰涓撶敤鐨勯噰鏍锋暟銆?
+### 5. **Custom Name Suffix (鑷畾涔夊悕绉板悗缂€)**
+鍏佽鍦ㄨ緭鍑虹殑鏂囦欢鍚嶇О涓坊鍔犺嚜瀹氫箟鍚庣紑銆備緥濡備娇鐢?`#` 鏉ュ畾涔夊抚鏁板崰浣嶇锛堝抚琛ラ浂锛夈€傚悓鏃讹紝鎻掍欢鏀寔鍦ㄦ覆鏌撴椂鑷姩瑙ｆ瀽鐨勫姩鎬佸彉閲忓崰浣嶇锛?*   `$scene$` 鈥?鍦烘櫙鍚嶇О
+*   `$file$` 鈥?Blender宸ョ▼鏂囦欢鍚?*   `$camera$` 鈥?褰撳墠婵€娲荤殑鎽勫儚鏈哄悕绉?*   `$version$` 鈥?鑷姩鍖归厤鐗堟湰鍙凤紙瑕佹眰鎮ㄧ殑 blend 宸ョ▼鏂囦欢鍚嶇粨灏惧甫鏈夌被浼?**`v001`** 鐨勭増鏈瓧绗︼級銆?
+*鎺ㄨ崘鐨勫悗缂€鎼厤锛? `$camera$_$version$_###`
 
-### 2. **Use Old EXR Layer Naming Convention (旧版 EXR 命名)**
-强制使用旧版（兼容 2.4.x 及以下版本）的 EXR 层级命名规范。由于新版层级命名在 Nuke 中具有极佳的可读性，通常建议保持关闭此选项。
-
-### 3. **Only Create Nodes For Enabled Viewlayers (仅为启用层生成节点)**
-仅为勾选了 `Use For Rendering` (用于渲染) 的视图层生成合成节点，从而节省合成编辑器的节点空间和生成速度。
-
-### 4. **Auto Optimize Sample Count For Data Layers (自动优化数据层采样)**
-启用后，插件在烘焙节点树时会为三维数据层应用 **采样率覆盖 (sample count override)**。由于数据通道（如法线、坐标）不需要Beauty层那么高的采样数，这能极大缩短整体渲染时间。您可以在此处设定数据层专用的采样数。
-
-### 5. **Custom Name Suffix (自定义名称后缀)**
-允许在输出的文件名称中添加自定义后缀。例如使用 `#` 来定义帧数占位符（帧补零）。同时，插件支持在渲染时自动解析的动态变量占位符：
-*   `$scene$` — 场景名称
-*   `$file$` — Blender工程文件名
-*   `$camera$` — 当前激活的摄像机名称
-*   `$version$` — 自动匹配版本号（要求您的 blend 工程文件名结尾带有类似 **`v001`** 的版本字符）。
-
-*推荐的后缀搭配：* `$camera$_$version$_###`
-
-### 6. **Node Interval Scale When Arranging (节点间距缩放)**
-设置整理节点时的间距比例，用于补偿操作系统的显示缩放。例如在 Windows 开启了 150% (1.5x) 的 DPI 缩放时，将此值设为 `0.67` 可以生成排版完美的节点间距，防止间距过大。
-
+### 6. **Node Interval Scale When Arranging (鑺傜偣闂磋窛缂╂斁)**
+璁剧疆鏁寸悊鑺傜偣鏃剁殑闂磋窛姣斾緥锛岀敤浜庤ˉ鍋挎搷浣滅郴缁熺殑鏄剧ず缂╂斁銆備緥濡傚湪 Windows 寮€鍚簡 150% (1.5x) 鐨?DPI 缂╂斁鏃讹紝灏嗘鍊艰涓?`0.67` 鍙互鐢熸垚鎺掔増瀹岀編鐨勮妭鐐归棿璺濓紝闃叉闂磋窛杩囧ぇ銆?
 ---
 
-## **输出工具设置 (Output Tools)**
+## **杈撳嚭宸ュ叿璁剧疆 (Output Tools)**
 
-<img width="400" alt="输出工具设置" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="杈撳嚭宸ュ叿璁剧疆" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-### 1. **Default useless renders gather (无用渲染重定向)**
-自动将 Blender 默认的常规渲染输出路径修改到工程目录下的 `trash_output` 子文件夹，避免污染您的正式交付目录。
-
-### 2. **Show useless renders clean button (显示无用渲染清理按钮)**
-开启后，将在插件面板的 Output Tools 下显示 `Delete Useless Default Renders` 按钮，一键物理删除 `trash_output` 整个垃圾文件夹。
-
+### 1. **Default useless renders gather (鏃犵敤娓叉煋閲嶅畾鍚?**
+鑷姩灏?Blender 榛樿鐨勫父瑙勬覆鏌撹緭鍑鸿矾寰勪慨鏀瑰埌宸ョ▼鐩綍涓嬬殑 `trash_output` 瀛愭枃浠跺す锛岄伩鍏嶆薄鏌撴偍鐨勬寮忎氦浠樼洰褰曘€?
+### 2. **Show useless renders clean button (鏄剧ず鏃犵敤娓叉煋娓呯悊鎸夐挳)**
+寮€鍚悗锛屽皢鍦ㄦ彃浠堕潰鏉跨殑 Output Tools 涓嬫樉绀?`Delete Useless Default Renders` 鎸夐挳锛屼竴閿墿鐞嗗垹闄?`trash_output` 鏁翠釜鍨冨溇鏂囦欢澶广€?
 ---
 
-## **外观设置 (Appearance)**
+## **澶栬璁剧疆 (Appearance)**
 
-<img width="400" alt="外观设置" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="澶栬璁剧疆" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-用于控制面板各区域的主题配色、显示开关和样式风格。
+鐢ㄤ簬鎺у埗闈㈡澘鍚勫尯鍩熺殑涓婚閰嶈壊銆佹樉绀哄紑鍏冲拰鏍峰紡椋庢牸銆?

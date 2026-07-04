@@ -1,73 +1,73 @@
-# Gestionnaire de ViewLayer
+﻿# Gestionnaire de ViewLayer
 
-<Badge type="tip" text="Publié" />
+<Badge type="tip" text="Publi茅" />
 
 ## Qu'est-ce que c'est ?
 
-Le gestionnaire de ViewLayer (ViewLayer Manager) est une fenêtre d'outil dédiée basée sur Qt qui fournit une interface complète pour gérer les ViewLayers (calques de vue), les passes de rendu, les Shader AOVs, les groupes de lumières (lightgroups) et les contrôles AOV des passes de lumière Cycles — le tout depuis un seul panneau organisé, en dehors de l'éditeur de propriétés natif de Blender.
+Le gestionnaire de ViewLayer (ViewLayer Manager) est une fen锚tre d'outil d茅di茅e bas茅e sur Qt qui fournit une interface compl猫te pour g茅rer les ViewLayers (calques de vue), les passes de rendu, les Shader AOVs, les groupes de lumi猫res (lightgroups) et les contr么les AOV des passes de lumi猫re Cycles 鈥?le tout depuis un seul panneau organis茅, en dehors de l'茅diteur de propri茅t茅s natif de Blender.
 
-Il est construit sur [BQt](https://github.com/techartorg/bqt) et est fourni en tant qu'extension système (System Extension) Blender intégrée.
+Il est construit sur [BQt](https://github.com/techartorg/bqt) et est fourni en tant qu'extension syst猫me (System Extension) Blender int茅gr茅e.
 
 ## Pourquoi l'utiliser ?
 
-- **Gestion centralisée** — Tous les paramètres liés aux ViewLayers dans une seule fenêtre au lieu d'être dispersés dans de multiples onglets de propriétés.
-- **Système de préréglages** — Enregistrez et appliquez des configurations de passes en tant que préréglages nommés sur plusieurs ViewLayers à la fois.
-- **Opérations par lots** — Sélectionnez plusieurs ViewLayers dans la liste de gauche et appliquez-y des préréglages simultanément.
-- **Affichage organisé des passes** — Les passes sont regroupées en catégories logiques : Données (Data), Lumière (Light), Shader et Effets/Utilitaires (Effects / Utility).
-- **Interface multilingue** — L'interface du gestionnaire prend en charge les traductions en chinois simplifié, chinois traditionnel et français.
+- **Gestion centralis茅e** 鈥?Tous les param猫tres li茅s aux ViewLayers dans une seule fen锚tre au lieu d'锚tre dispers茅s dans de multiples onglets de propri茅t茅s.
+- **Syst猫me de pr茅r茅glages** 鈥?Enregistrez et appliquez des configurations de passes en tant que pr茅r茅glages nomm茅s sur plusieurs ViewLayers 脿 la fois.
+- **Op茅rations par lots** 鈥?S茅lectionnez plusieurs ViewLayers dans la liste de gauche et appliquez-y des pr茅r茅glages simultan茅ment.
+- **Affichage organis茅 des passes** 鈥?Les passes sont regroup茅es en cat茅gories logiques : Donn茅es (Data), Lumi猫re (Light), Shader et Effets/Utilitaires (Effects / Utility).
+- **Interface multilingue** 鈥?L'interface du gestionnaire prend en charge les traductions en chinois simplifi茅, chinois traditionnel et fran莽ais.
 
 ## Comment le Lancer
 
-1. Regardez dans la barre d'en-tête en haut à droite de Blender, juste à côté du sélecteur `ViewLayer` natif.
-2. Cliquez sur le bouton **ViewLayer Manager** (icône dédiée).
-3. Le gestionnaire s'ouvre sous la forme d'une fenêtre Qt autonome.
+1. Regardez dans la barre d'en-t锚te en haut 脿 droite de Blender, juste 脿 c么t茅 du s茅lecteur `ViewLayer` natif.
+2. Cliquez sur le bouton **ViewLayer Manager** (ic么ne d茅di茅e).
+3. Le gestionnaire s'ouvre sous la forme d'une fen锚tre Qt autonome.
 
 ::: info
-Au premier clic, l'extension d'exécution BQt intégrée est automatiquement activée pour la session en cours. Vous n'avez pas besoin d'activer manuellement des extensions dans les préférences.
+Au premier clic, l'extension d'ex茅cution BQt int茅gr茅e est automatiquement activ茅e pour la session en cours. Vous n'avez pas besoin d'activer manuellement des extensions dans les pr茅f茅rences.
 :::
 
-## Disposition de la Fenêtre du Gestionnaire
+## Disposition de la Fen锚tre du Gestionnaire
 
-### Panneau Gauche — Liste des ViewLayers
+### Panneau Gauche 鈥?Liste des ViewLayers
 
-- Répertorie tous les ViewLayers de la scène actuelle.
+- R茅pertorie tous les ViewLayers de la sc猫ne actuelle.
 - Commutateur **Utiliser pour le rendu (Use For Rendering)** directement en ligne pour chaque ViewLayer.
-- Boutons **Monter (Up)** / **Descendre (Down)** pour réordonner les ViewLayers.
-- Prise en charge de la multi-sélection pour l'application de préréglages par lots.
-- Créez, renommez et supprimez des ViewLayers directement.
+- Boutons **Monter (Up)** / **Descendre (Down)** pour r茅ordonner les ViewLayers.
+- Prise en charge de la multi-s茅lection pour l'application de pr茅r茅glages par lots.
+- Cr茅ez, renommez et supprimez des ViewLayers directement.
 
-### Panneau Droit — Volet de Détails
+### Panneau Droit 鈥?Volet de D茅tails
 
-Modifie le ViewLayer actuellement sélectionné avec des sections pour :
+Modifie le ViewLayer actuellement s茅lectionn茅 avec des sections pour :
 
 #### Passes (Render Passes)
 
-Organisé en sous-groupes natifs de Blender :
+Organis茅 en sous-groupes natifs de Blender :
 
 | Groupe | Contenu |
 | --- | --- |
-| **Données (Data)** | Combined, Z, Mist, Normal, Position, Vector, UV, Object Index, Material Index, etc. |
-| **Lumière (Light)** | Diffuse (Direct/Indirect/Color), Glossy, Transmission, Volume, Emission, Background, Shadow, Ambient Occlusion |
-| **Shader** | Entrées de passes Shader AOV personnalisées |
-| **Effets / Utilitaires** | Données de débruitage (Denoising), Nombre d'échantillons (Sample Count) |
+| **Donn茅es (Data)** | Combined, Z, Mist, Normal, Position, Vector, UV, Object Index, Material Index, etc. |
+| **Lumi猫re (Light)** | Diffuse (Direct/Indirect/Color), Glossy, Transmission, Volume, Emission, Background, Shadow, Ambient Occlusion |
+| **Shader** | Entr茅es de passes Shader AOV personnalis茅es |
+| **Effets / Utilitaires** | Donn茅es de d茅bruitage (Denoising), Nombre d'茅chantillons (Sample Count) |
 
 #### Cryptomatte
 
-Section dédiée aux paramètres de passes Cryptomatte (disponible pour Eevee et Cycles).
+Section d茅di茅e aux param猫tres de passes Cryptomatte (disponible pour Eevee et Cycles).
 
 #### Profondeur (Deep)
 
-Propriété de sortie Deep OpenEXR au niveau du ViewLayer (étiquette volontairement conservée en anglais pour des raisons techniques).
+Propri茅t茅 de sortie Deep OpenEXR au niveau du ViewLayer (茅tiquette volontairement conserv茅e en anglais pour des raisons techniques).
 
 #### Shader AOV
 
-Liste à colonne unique pour gérer les entrées Shader AOV personnalisées.
+Liste 脿 colonne unique pour g茅rer les entr茅es Shader AOV personnalis茅es.
 
-#### Groupes de Lumières (Light Groups)
+#### Groupes de Lumi猫res (Light Groups)
 
-Gère les groupes de lumières affectés au ViewLayer actuel.
+G猫re les groupes de lumi猫res affect茅s au ViewLayer actuel.
 
-#### Passes de Lumière Cycles AOV (Cycles Light Pass AOVs)
+#### Passes de Lumi猫re Cycles AOV (Cycles Light Pass AOVs)
 
 Activez et configurez la sortie de passes par lobe de lightgroup :
 - Diffuse (Direct / Indirect)
@@ -75,39 +75,39 @@ Activez et configurez la sortie de passes par lobe de lightgroup :
 - Transmission (Direct / Indirect)
 - Volume (Direct / Indirect)
 
-### Barre d'outils des préréglages (Presets)
+### Barre d'outils des pr茅r茅glages (Presets)
 
-- **Save** — Enregistre les paramètres de passes du ViewLayer actuel en tant que préréglage nommé.
-- **Update** — Met à jour un préréglage existant avec les paramètres actuels.
-- **Apply** — Applique un préréglage à tous les ViewLayers actuellement sélectionnés dans la liste de gauche.
-- **Delete** — Supprime un préréglage.
+- **Save** 鈥?Enregistre les param猫tres de passes du ViewLayer actuel en tant que pr茅r茅glage nomm茅.
+- **Update** 鈥?Met 脿 jour un pr茅r茅glage existant avec les param猫tres actuels.
+- **Apply** 鈥?Applique un pr茅r茅glage 脿 tous les ViewLayers actuellement s茅lectionn茅s dans la liste de gauche.
+- **Delete** 鈥?Supprime un pr茅r茅glage.
 
-Les préréglages sont stockés sous forme de fichiers JSON dans le répertoire local des ressources de l'extension Blender de l'utilisateur.
+Les pr茅r茅glages sont stock茅s sous forme de fichiers JSON dans le r茅pertoire local des ressources de l'extension Blender de l'utilisateur.
 
-## Visibilité selon le Moteur de Rendu
+## Visibilit茅 selon le Moteur de Rendu
 
 Le gestionnaire affiche ou masque automatiquement des sections selon le moteur de rendu actif :
 
 | Section | CYCLES | EEVEE |
 | --- | --- | --- |
-| Passes Eevee | ❌ | ✅ |
-| Passes Cycles | ✅ | ❌ |
-| Groupes de Lumières | ✅ | ❌ |
-| Passes de Lumière Cycles AOV | ✅ | ❌ |
-| Shader AOV | ✅ | ✅ |
+| Passes Eevee | 鉂?| 鉁?|
+| Passes Cycles | 鉁?| 鉂?|
+| Groupes de Lumi猫res | 鉁?| 鉂?|
+| Passes de Lumi猫re Cycles AOV | 鉁?| 鉂?|
+| Shader AOV | 鉁?| 鉁?|
 
-## Écriture Directe (Live Write-Back)
+## 脡criture Directe (Live Write-Back)
 
-Les modifications de propriétés dans le gestionnaire sont réécrites dans Blender **immédiatement** — il n'y a pas d'étape de validation manuelle pour l'édition normale. Le gestionnaire se synchronise automatiquement lorsqu'il est affiché et lorsqu'il reprend le focus système.
+Les modifications de propri茅t茅s dans le gestionnaire sont r茅茅crites dans Blender **imm茅diatement** 鈥?il n'y a pas d'茅tape de validation manuelle pour l'茅dition normale. Le gestionnaire se synchronise automatiquement lorsqu'il est affich茅 et lorsqu'il reprend le focus syst猫me.
 
 ## Comportement Connu
 
-- Le gestionnaire s'exécute comme une fenêtre Qt autonome de haut niveau (non intégrée à l'interface native de Blender).
-- L'exécution de BQt peut journaliser `failed to get blender hwnd, creating new window` — c'est un comportement attendu dans le chemin du mode sécurisé, et non un échec de lancement.
-- Version Windows uniquement pour le moment. Le support Linux est reporté à une version ultérieure.
+- Le gestionnaire s'ex茅cute comme une fen锚tre Qt autonome de haut niveau (non int茅gr茅e 脿 l'interface native de Blender).
+- L'ex茅cution de BQt peut journaliser `failed to get blender hwnd, creating new window` 鈥?c'est un comportement attendu dans le chemin du mode s茅curis茅, et non un 茅chec de lancement.
+- Version Windows uniquement pour le moment. Le support Linux est report茅 脿 une version ult茅rieure.
 
 ## Voir Aussi
 
-- [Opérateurs Python (API)](/fr/industrial-cg-platform/api/python-operators) — Référence de l'opérateur `wm.blender_vfx_viewlayer_manager_show`.
-- [Passes par lobe de lightgroup](/fr/industrial-cg-platform/features/lightgroup-lobe-passes) — Les passes par lobe contrôlées par la section Cycles Light Pass AOVs.
-- [Manuel Blender: View Layers](https://docs.blender.org/manual/en/latest/render/layers/view_layer.html) — Documentation Blender standard sur les View Layers.
+- [Op茅rateurs Python (API)](/fr/industrial-cg-platform/api/python-operators) 鈥?R茅f茅rence de l'op茅rateur `wm.blender_vfx_viewlayer_manager_show`.
+- [Passes par lobe de lightgroup](/fr/industrial-cg-platform/features/lightgroup-lobe-passes) 鈥?Les passes par lobe contr么l茅es par la section Cycles Light Pass AOVs.
+- [Manuel Blender: View Layers](https://docs.blender.org/manual/en/latest/render/layers/view_layer.html) 鈥?Documentation Blender standard sur les View Layers.

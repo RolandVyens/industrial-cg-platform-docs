@@ -1,4 +1,4 @@
-# Blender Color Management Setup
+﻿# Blender Color Management Setup
 
 This page explains how to install and configure **AIO-OCIO** inside Blender to enable professional color spaces like sRGB, Display P3, and Rec.1886.
 
@@ -14,7 +14,7 @@ Locate the user configuration folder for your Blender version:
 *   **macOS**: `/Users/<YourUsername>/Library/Application Support/Blender/<Version>/datafiles/colormanagement/`
 *   **Linux**: `~/.config/blender/<Version>/datafiles/colormanagement/`
 
-> 💡 **Tip:** If the `datafiles` or `colormanagement` directory does not exist, create them manually.
+> 馃挕 **Tip:** If the `datafiles` or `colormanagement` directory does not exist, create them manually.
 
 ### Step 2: Copy Config Files
 Copy all the contents of the AIO-OCIO folder (including the ACES, BMD, ARRI, etc. subfolders, LUTs, and `.ocio` files) directly into this `colormanagement` folder.

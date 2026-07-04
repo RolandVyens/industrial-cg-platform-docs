@@ -1,17 +1,17 @@
-# Shadow Color
+﻿# Shadow Color
 
 <Badge type="tip" text="Shipped" />
 
 ## What Is It
 
-Shadow Color adds a per-light and per-world color property to Blender Cycles that tints the shadow regions cast by each light source. Instead of shadows being purely the absence of light, you can give them a specific color — a common artistic technique in film and animation lighting.
+Shadow Color adds a per-light and per-world color property to Blender Cycles that tints the shadow regions cast by each light source. Instead of shadows being purely the absence of light, you can give them a specific color 鈥?a common artistic technique in film and animation lighting.
 
 ## Why Use It
 
-- **Artistic control** — Match the shadow tint to your color script without affecting the light color itself.
-- **Per-light granularity** — Different lights can cast differently colored shadows in the same scene.
-- **World shadow color** — The world lighting can also have its own shadow color.
-- **Non-destructive** — Shadow color only affects shadow regions; lit areas remain unchanged.
+- **Artistic control** 鈥?Match the shadow tint to your color script without affecting the light color itself.
+- **Per-light granularity** 鈥?Different lights can cast differently colored shadows in the same scene.
+- **World shadow color** 鈥?The world lighting can also have its own shadow color.
+- **Non-destructive** 鈥?Shadow color only affects shadow regions; lit areas remain unchanged.
 
 ## How To Enable
 
@@ -44,9 +44,9 @@ Start with subtle, desaturated shadow colors. A little tint goes a long way. The
 ## Known Limitations
 
 - Shadow color affects the shadow contribution of the specific light only. It does not alter the shadow behavior of other lights in the scene.
-- The effect is purely additive color in the shadow region — it does not simulate colored translucent shadow casters.
+- The effect is purely additive color in the shadow region 鈥?it does not simulate colored translucent shadow casters.
 
 ## See Also
 
-- [RNA Properties (API)](/en/industrial-cg-platform/api/rna-properties) — `Light.shadow_color` and `World.shadow_color` property reference.
-- [Blender Manual: Light Properties](https://docs.blender.org/manual/en/latest/render/lights/light_object.html) — Standard Blender light settings.
+- [RNA Properties (API)](/en/industrial-cg-platform/api/rna-properties) 鈥?`Light.shadow_color` and `World.shadow_color` property reference.
+- [Blender Manual: Light Properties](https://docs.blender.org/manual/en/latest/render/lights/light_object.html) 鈥?Standard Blender light settings.
