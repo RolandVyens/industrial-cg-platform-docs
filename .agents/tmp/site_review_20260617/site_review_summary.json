@@ -1,0 +1,67 @@
+﻿[
+  {
+    "name": "home_desktop",
+    "url": "https://rolandvyens.github.io/industrial-cg-platform-docs/en/",
+    "status": 200,
+    "title": "Industrial 3D | CG & VFX Pipeline Ecosystem",
+    "h1": "Industrial 3DBlender-Powered CG & VFX Pipeline",
+    "bodyTextStart": "Skip to content\nIndustrial 3D\nSearch\nK\nMain Navigation\nEcosystem\nDocumentation\nDonate\nAbout\nIndustrial 3D\nBlender-Powered CG & VFX Pipeline\n\nProduction-ready rendering, data management, and color pipeline tools, deeply integrated with Blender and optimized for professional studio pipelines.\n\nGet Industrial CG Platform\nPipeline Tools\n馃幀\nIndustrial CG Platform\n\nDeep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.\n\n馃攲\nIndustrial AOV Connector\n\nBlender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.\n\n馃挕\nIndustrial Light AOV Splitter\n\nAutomatic lightgroup separator to split and mat",
+    "hasLatestRelease": false,
+    "visibleOldVersionText": false,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "screenshot": "E:/blender_modify/industrial-cg-platform-docs/.agents/tmp/site_review_20260617/home_desktop.png"
+  },
+  {
+    "name": "platform_desktop",
+    "url": "https://rolandvyens.github.io/industrial-cg-platform-docs/en/cg-platform/",
+    "status": 200,
+    "title": "Industrial CG Platform | Blender VFX Rendering Branch",
+    "h1": "Industrial CG PlatformBlender VFX Rendering Branch",
+    "bodyTextStart": "Skip to content\nIndustrial 3D\nSearch\nK\nMain Navigation\nEcosystem\nDocumentation\nDonate\nAbout\nIndustrial CG Platform\nBlender VFX Rendering Branch\n\nBuilt for VFX. Built from Blender. Built for shots. A Blender-based production platform for advanced VFX workflows.\n\nGetting Started\nFeatures\nAPI Reference\n馃幀\nDeep EXR Output\n\nNative deep compositing output for Cycles 鈥?write per-sample depth data for lossless deep merges in Nuke and other compositing tools.\n\n馃搻\nEXR Overscan\n\nNative EXR overscan support in Cycles 鈥?render extra pixels outside the camera frame to pad lens distortion, camera shake, and transformations.\n\n馃挕\nLightgroup Lobe Passes\n\nPer-lightgroup split diffuse/glossy/transmission/volume",
+    "hasLatestRelease": false,
+    "visibleOldVersionText": false,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "screenshot": "E:/blender_modify/industrial-cg-platform-docs/.agents/tmp/site_review_20260617/platform_desktop.png"
+  },
+  {
+    "name": "releases_desktop",
+    "url": "https://rolandvyens.github.io/industrial-cg-platform-docs/en/cg-platform/releases/",
+    "status": 200,
+    "title": "Releases | Industrial 3D",
+    "h1": "Releases 鈥?,
+    "bodyTextStart": "Skip to content\nIndustrial 3D\nSearch\nK\nMain Navigation\nEcosystem\nDocumentation\nDonate\nAbout\nSidebar Navigation\nGetting Started\n\nAbout the Project\n\nGetting Started\n\nInstallation\n\nBuilding from Source\n\nFAQ & Troubleshooting\n\nFeatures Reference\n\nDeep EXR\n\nEXR Overscan\n\nShadow Color\n\nLightgroup Lobe Passes\n\nViewLayer Manager\n\nAPI Reference\nReleases\n\nRelease Index\n\nReleases\n鈥媆n\n鈿?Compiled statically from the main repository. Updated on build.\n\nIndustrial CG Platform 5.2.0-2026-06-16\nPublished on June 17, 2026\nLatest\n馃敆 GitHub\n\nIndustrial CG Platform 5.2.0-2026-06-16\n\nBuild hash: 51091989dec9\nRelease SHA256: ABF163964C0DDE4754EC1E03BE28B962FD0520892CC20489271E7B1286D82B87\n\nHighlights:\n\n\nincludes th",
+    "hasLatestRelease": true,
+    "visibleOldVersionText": true,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "screenshot": "E:/blender_modify/industrial-cg-platform-docs/.agents/tmp/site_review_20260617/releases_desktop.png"
+  },
+  {
+    "name": "home_mobile",
+    "url": "https://rolandvyens.github.io/industrial-cg-platform-docs/en/",
+    "status": 200,
+    "title": "Industrial 3D | CG & VFX Pipeline Ecosystem",
+    "h1": "Industrial 3DBlender-Powered CG & VFX Pipeline",
+    "bodyTextStart": "Skip to content\nIndustrial 3D\nIndustrial 3D\nBlender-Powered CG & VFX Pipeline\n\nProduction-ready rendering, data management, and color pipeline tools, deeply integrated with Blender and optimized for professional studio pipelines.\n\nGet Industrial CG Platform\nPipeline Tools\n馃幀\nIndustrial CG Platform\n\nDeep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.\n\n馃攲\nIndustrial AOV Connector\n\nBlender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.\n\n馃挕\nIndustrial Light AOV Splitter\n\nAutomatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing co",
+    "hasLatestRelease": false,
+    "visibleOldVersionText": false,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "screenshot": "E:/blender_modify/industrial-cg-platform-docs/.agents/tmp/site_review_20260617/home_mobile.png"
+  },
+  {
+    "name": "zh_mobile",
+    "url": "https://rolandvyens.github.io/industrial-cg-platform-docs/zh/",
+    "status": 200,
+    "title": "Industrial 3D | CG 涓?VFX 娴佺▼绠＄嚎宸ュ叿闆?,
+    "h1": "Industrial 3D鍩轰簬 Blender 鐨勫奖瑙嗙骇 CG & VFX 绠＄嚎鐢熸€?,
+    "bodyTextStart": "Skip to content\nIndustrial 3D\nIndustrial 3D\n鍩轰簬 Blender 鐨勫奖瑙嗙骇 CG & VFX 绠＄嚎鐢熸€乗n\n婧愪簬 Blender锛屼负鐢靛奖绾у埗浣滆€岀敓銆備笓涓哄疄鎷嶇壒鏁堜笌 CG 娴佺▼鎵撻€犵殑鐢熶骇绾?Blender 娓叉煋銆佹暟鎹鐞嗗拰鑹插僵绠＄嚎宸ュ叿鐢熸€併€俓n\n鑾峰彇 Industrial CG Platform\n娴忚绠＄嚎宸ュ叿\n馃幀\nIndustrial CG Platform\n\n鍩轰簬 Blender 5.2 婧愮爜瀹氬埗鐨勬鐗囩骇 VFX 娓叉煋鍒嗘敮銆傛彁渚?Cycles 鍘熺敓 Deep EXR 娣卞害鍥惧啓鍏ャ€侀槾褰辩潃鑹叉帶鍒朵互鍙?PyQt 娓叉煋灞傜鐞嗗櫒銆俓n\n馃攲\nIndustrial AOV Connector\n\nBlender 鍚堟垚鍣ㄨ嚜鍔ㄥ寲鎻掍欢銆備竴閿嚜鍔ㄥ垱寤烘覆鏌撻€氶亾杈撳嚭鏍戯紝鏅鸿兘鎺ュ叆闄嶅櫔鑺傜偣锛屽苟瀵煎嚭涓哄鎺?Nuke 鐨勬爣鍑嗗閫氶亾缁撴瀯銆俓n\n馃挕\nIndustrial Light AOV Splitter\n\n鐏厜缁?AOV 鎷嗗垎宸ュ叿銆傝嚜鍔ㄥ皢鍚堝苟閫氶亾杩涜鎷嗗垎鍜屾潗璐ㄥ寲锛屼负鍚堟垚甯堟彁渚涘婕弽灏勩€侀珮鍏夊強鐜鍒嗛噺鐨勭嫭绔嬪悗鏈熼噸鎵撳厜鑷敱銆俓n\n馃帹\nAIO-OCIO\n\n璺ㄨ蒋浠剁粺涓€鑹插僵绠＄悊鏂规銆傚湪 Maya銆丯uke銆丠oudini 鍜?Blender 涓瀯寤哄畬鍏ㄤ竴鑷寸殑 AgX/Filmic 瀹藉搴﹁壊褰╄浆鎹€俓n\n娣辨浜?Blender 娴佺▼鐢熸€乗n\nIndustrial 3D 骞堕潪娓哥浜?Blender 涔嬪鐨勭嫭绔嬭蒋浠讹紝鑰屾槸涓撻棬涓哄～琛ュ紑婧?Blender 涓庨珮绔數褰辩壒鏁堢绾夸箣闂寸殑绌虹櫧鑰岀敓銆傞€氳繃瀵?Blender C++ 娓叉煋鍐呮牳鐨勫簳灞傛墿灞曪紙Cycles 娓叉煋鍣級銆佽嚜鍔ㄥ寲鍚堟垚鍣ㄧ郴缁熷紑鍙戙€佷互鍙婇拡瀵逛富",
+    "hasLatestRelease": false,
+    "visibleOldVersionText": false,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "screenshot": "E:/blender_modify/industrial-cg-platform-docs/.agents/tmp/site_review_20260617/zh_mobile.png"
+  }
+]

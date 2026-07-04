@@ -2,9 +2,9 @@
 
 MANDATORY syntax rules for VitePress, Vue, and Markdown:
 
-1. RELATIVE PATHS ONLY:
-   Image and CSS background paths MUST be relative (e.g., `../../public/img.png`).
-   NEVER use absolute paths like `/public/img.png`.
+1. ABSOLUTE PATHS PREFERRED:
+   Since the site is hosted on a custom root domain (`cgweave.com`), absolute paths (e.g., `/logo.png`, `/en/donate`) are the safest and most robust way to link assets and pages.
+   Do not use convoluted relative paths like `../../public/img.png` unless necessary.
 
 2. VUE ROUTER LINKS:
    When writing `<a :href="...">` inside a `v-for` in Markdown, the URL MUST be wrapped in VitePress's `withBase(url)`.

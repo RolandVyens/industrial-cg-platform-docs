@@ -10,7 +10,7 @@ B. `docs/[en|zh|fr]/blog/` (Dev Log)
 - ALLOWED: Frontmatter with ONLY `date`, `title`, `summary`. Feed list with 'Read More'.
 - FORBIDDEN: Frontmatter `tags`, `author`. No `h1` (#) in markdown body. No dual-column/waterfall layouts.
 
-C. `docs/[en|zh|fr]/cg-platform/` (Core Docs)
+C. `docs/[en|zh|fr]/industrial-cg-platform/` (Core Docs)
 - ALLOWED: `index.md` contains feature cards. `guide/` for user operation. `features/` for technical explanations.
 - FORBIDDEN: `guide/` must not contain C++ RNA or source-code API logic. API logic goes to `/api/`.
 

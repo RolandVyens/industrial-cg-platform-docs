@@ -1,9 +1,9 @@
-# 01-PRE-PUSH CHECKLIST
+﻿# 01-PRE-PUSH CHECKLIST
 
 MANDATORY actions before any `git push`:
 
 1. RUN AUDIT SCRIPT:
-   Execute `python .agent/scripts/audit_all_links.py`.
+   Execute `python .agents/scripts/audit_all_links.py`.
    Must output `Found 0 issues`.
 
 2. RUN BUILD TEST:
