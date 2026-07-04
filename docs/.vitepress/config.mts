@@ -53,13 +53,13 @@ const frApi = [
 ]
 
 export default defineConfig({
-  base: '/industrial-cg-platform-docs/',
+  base: '/',
   title: 'Industrial 3D',
   description: 'Ecosystem of free & open-source CG & VFX pipeline tools',
   appearance: 'force-dark',
 
   head: [
-    ['link', { rel: 'icon', href: '/industrial-cg-platform-docs/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
