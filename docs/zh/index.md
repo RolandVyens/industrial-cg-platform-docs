@@ -13,24 +13,24 @@ hero:
   actions:
     - theme: brand
       text: 获取 Industrial CG Platform
-      link: /zh/cg-platform/
+      link: /zh/industrial-cg-platform/
     - theme: alt
       text: 浏览管线工具
-      link: /zh/pipeline-tools
+      link: /zh/industrial-pipeline-tools
 
 features:
   - icon: 🎬
     title: Industrial CG Platform
     details: 基于 Blender 5.2 源码定制的正片级 VFX 渲染分支。提供 Cycles 原生 Deep EXR 深度图写入、阴影着色控制以及 PyQt 渲染层管理器。
-    link: /zh/cg-platform/
+    link: /zh/industrial-cg-platform/
   - icon: 🔌
     title: Industrial AOV Connector
     details: Blender 合成器自动化插件。一键自动创建渲染通道输出树，智能接入降噪节点，并导出为对接 Nuke 的标准多通道结构。
-    link: /zh/aov-connector/
+    link: /zh/industrial-aov-connector/
   - icon: 💡
     title: Industrial Light AOV Splitter
     details: 灯光组 AOV 拆分工具。自动将合并通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
-    link: /zh/light-splitter/
+    link: /zh/industrial-light-aov-splitter/
   - icon: 🎨
     title: AIO-OCIO
     details: 跨软件统一色彩管理方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。

@@ -13,24 +13,24 @@ hero:
   actions:
     - theme: brand
       text: Get Industrial CG Platform
-      link: /en/cg-platform/
+      link: /en/industrial-cg-platform/
     - theme: alt
       text: Pipeline Tools
-      link: /en/pipeline-tools
+      link: /en/industrial-pipeline-tools
 
 features:
   - icon: 🎬
     title: Industrial CG Platform
     details: Deep Blender rendering fork featuring native Cycles Deep EXR output, custom shadow color tinters, and Qt ViewLayer Manager.
-    link: /en/cg-platform/
+    link: /en/industrial-cg-platform/
   - icon: 🔌
     title: Industrial AOV Connector
     details: Blender compositor addon for automated AOV trees, denoising node management, and Nuke pass alignment.
-    link: /en/aov-connector/
+    link: /en/industrial-aov-connector/
   - icon: 💡
     title: Industrial Light AOV Splitter
     details: Automatic lightgroup separator to split and materialize individual light AOVs for fine-grained compositing control.
-    link: /en/light-splitter/
+    link: /en/industrial-light-aov-splitter/
   - icon: 🎨
     title: AIO-OCIO
     details: Unified cross-application OpenColorIO pipeline configuration (Maya, Nuke, Houdini, Blender).
