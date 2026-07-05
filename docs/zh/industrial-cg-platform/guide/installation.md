@@ -1,71 +1,71 @@
-﻿# 瀹夎
+# 安装
 
-## 绯荤粺瑕佹眰
+## 系统要求
 
-| 缁勪欢 | 瑕佹眰 |
+| 组件 | 要求 |
 | --- | --- |
-| **鎿嶄綔绯荤粺** | Windows 10/11 x64 |
-| **GPU** | 鏀寔 CUDA 鎴?OptiX 鐨?NVIDIA GPU锛堟帹鑽愶級 |
-| **GPU 椹卞姩** | 鏈€鏂?NVIDIA Game Ready 鎴?Studio 椹卞姩 |
-| **鍐呭瓨 (RAM)** | 鏈€浣?16 GB锛屾帹鑽?32 GB |
-| **纾佺洏绌洪棿** | 瑙ｅ帇鍙戝竷鍖呴渶瑕佺害 1 GB 绌洪棿 |
+| **操作系统** | Windows 10/11 x64 |
+| **GPU** | 支持 CUDA 或 OptiX 的 NVIDIA GPU（推荐） |
+| **GPU 驱动** | 最新 NVIDIA Game Ready 或 Studio 驱动 |
+| **内存 (RAM)** | 最低 16 GB，推荐 32 GB |
+| **磁盘空间** | 解压发布包需要约 1 GB 空间 |
 
-## 涓嬭浇
+## 下载
 
-1. 鍓嶅線 [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) 椤甸潰銆?
-2. 涓嬭浇鏈€鏂扮殑 `industrial-cg-platform-X.X.X-YYYY-MM-DD.zip` 鍘嬬缉鍖呫€?
-3. 閫氳繃妫€鏌ュ彂甯冭鏄庝腑鍒楀嚭鐨?SHA256 鍝堝笇鍊奸獙璇佷笅杞芥枃浠剁殑瀹屾暣鎬с€?
+1. 前往 [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) 页面。
+2. 下载最新的 `industrial-cg-platform-X.X.X-YYYY-MM-DD.zip` 压缩包。
+3. 通过检查发布说明中列出的 SHA256 哈希值验证下载文件的完整性。
 
-## 瑙ｅ帇涓庡畨瑁?
+## 解压与安装
 
-1. 灏?ZIP 鍘嬬缉鍖呰В鍘嬪埌鎮ㄥ亸濂界殑浠绘剰浣嶇疆锛堜緥濡?`D:\Tools\IndustrialCGPlatform\`锛夈€?
-2. 杩愯瑙ｅ帇鏂囦欢澶逛腑鐨?`blender.exe`銆?
-3. 棣栨鍚姩鏃讹紝鎮ㄥ簲璇ヤ細鐪嬪埌甯︽湁 **Industrial CG Platform** 鑹烘湳鏍囪瘑鐨勮嚜瀹氫箟鍚姩鐢婚潰锛圫plash Screen锛夈€?
+1. 将 ZIP 压缩包解压到您偏好的任意位置（例如 `D:\Tools\IndustrialCGPlatform\`）。
+2. 运行解压文件夹中的 `blender.exe`。
+3. 首次启动时，您应该会看到带有 **Industrial CG Platform** 艺术标识的自定义启动画面（Splash Screen）。
 
 ::: warning
-濡傛灉鎮ㄦ兂閬垮厤姣忔鍚姩鏃堕兘寮瑰嚭 UAC锛堢敤鎴疯处鎴锋帶鍒讹級绠＄悊鍛樻潈闄愭彁绀猴紝璇蜂笉瑕佸皢鏂囦欢瑙ｅ帇鍒伴渶瑕佺郴缁熺鐞嗗憳鏉冮檺鐨勬晱鎰熻矾寰勶紙渚嬪 `C:\Program Files\`锛夈€傚儚 `D:\Tools\` 杩欐牱鐢ㄦ埛鍙啓鍏ョ殑鑷畾涔夎矾寰勬晥鏋滄渶浣炽€?
+如果您想避免每次启动时都弹出 UAC（用户账户控制）管理员权限提示，请不要将文件解压到需要系统管理员权限的敏感路径（例如 `C:\Program Files\`）。像 `D:\Tools\` 这样用户可写入的自定义路径效果最佳。
 :::
 
-## 楠岃瘉瀹夎
+## 验证安装
 
-鍦ㄧ粓绔垨鍛戒护鎻愮ず绗︿腑锛屽鑸嚦瀹夎鐩綍骞惰繍琛屼互涓嬪懡浠よ繘琛岀増鏈獙璇侊細
+在终端或命令提示符中，导航至安装目录并运行以下命令进行版本验证：
 
 ```powershell
 .\blender.exe --version
 ```
 
-棰勬湡杈撳嚭锛?
+预期输出：
 
 ```
 Blender 5.2.0-2026-06-16 Industrial CG Platform
 ```
 
-## GPU 娓叉煋璁剧疆
+## GPU 渲染设置
 
-鑻ヨ涓?Cycles 鍚敤 NVIDIA GPU 纭欢鍔犻€熸覆鏌擄細
+若要为 Cycles 启用 NVIDIA GPU 硬件加速渲染：
 
-1. 鎵撳紑鑿滃崟鏍?**缂栬緫 > 鍋忓ソ璁剧疆 > 绯荤粺 (Edit > Preferences > System)**銆?
-2. 鍦?**Cycles 娓叉煋璁惧 (Cycles Render Devices)** 涓嬶紝閫夋嫨锛?
-   - **CUDA** 鈥?骞挎硾鍏煎鑰佹棫纭欢锛岄€熷害绋嶆參銆?
-   - **OptiX** 鈥?RTX 绯诲垪 GPU 涓婄殑纭欢鍏夌嚎杩借釜鍔犻€燂紙寮虹儓鎺ㄨ崘锛夈€?
-3. 鍦ㄤ笅鏂圭殑璁惧鍒楄〃涓嬀閫夋偍鐨?GPU 鏄惧崱銆?
+1. 打开菜单栏 **编辑 > 偏好设置 > 系统 (Edit > Preferences > System)**。
+2. 在 **Cycles 渲染设备 (Cycles Render Devices)** 下，选择：
+   - **CUDA** — 广泛兼容老旧硬件，速度稍慢。
+   - **OptiX** — RTX 系列 GPU 上的硬件光线追踪加速（强烈推荐）。
+3. 在下方的设备列表中勾选您的 GPU 显卡。
 
-## 涓庡畼鏂?Stock Blender 鍏卞瓨
+## 与官方 Stock Blender 共存
 
-Industrial CG Platform 榛樿浣跨敤涓庡畼鏂圭浉鍚岀殑閰嶇疆鐩綍锛坄%APPDATA%\Blender Foundation\Blender\5.2\`锛夈€傚鏋滄偍甯屾湜鍦ㄦ湰鍦颁繚鎸佸畬鍏ㄧ嫭绔嬬殑閰嶇疆鍜岀敤鎴峰亸濂斤細
+Industrial CG Platform 默认使用与官方相同的配置目录（`%APPDATA%\Blender Foundation\Blender\5.2\`）。如果您希望在本地保持完全独立的配置和用户偏好：
 
-- 鍦ㄥ惎鍔ㄥ揩鎹锋柟寮忓悗闄勫姞 `--factory-startup` 鍙傛暟锛屼互杩涜鍏ㄦ柊鐨勫共鍑€浼氳瘽銆?
-- 鎴栬€呭湪杩愯鍓嶏紝灏嗙幆澧冨彉閲?`BLENDER_USER_RESOURCES` 璁剧疆涓轰竴涓嚜瀹氫箟鐨勪笓鐢ㄦ枃浠跺す璺緞銆?
+- 在启动快捷方式后附加 `--factory-startup` 参数，以进行全新的干净会话。
+- 或者在运行前，将环境变量 `BLENDER_USER_RESOURCES` 设置为一个自定义的专用文件夹路径。
 
-## OptiX 鐫€鑹插櫒缂撳瓨闅旂
+## OptiX 着色器缓存隔离
 
-涓轰簡閬垮厤 Industrial CG Platform 涓庡畼鏂瑰師鐢?Blender 鐗堟湰涔嬮棿浜х敓鐫€鑹插櫒缂栬瘧鍐茬獊鎴栫紦瀛樿繃鏈燂紝鏈骇鍝佽嚜鍔ㄥ皢鍏堕粯璁ょ殑 Nvidia OptiX 缂栬瘧缂撳瓨璺緞涓?stock Blender 杩涜浜嗛殧绂汇€?
+为了避免 Industrial CG Platform 与官方原生 Blender 版本之间产生着色器编译冲突或缓存过期，本产品自动将其默认的 Nvidia OptiX 编译缓存路径与 stock Blender 进行了隔离。
 
-- **榛樿缂撳瓨鏂囦欢璺緞**锛?
+- **默认缓存文件路径**：
   `%USERPROFILE%\AppData\Local\IndustrialCGPlatform\Cache\OptiX\optix7cache.db`
-- **鐜鍙橀噺瑕嗙洊**锛氬鏋滄偍鐨勭郴缁熶腑鏄惧紡瀹氫箟浜?`OPTIX_CACHE_PATH` 鐜鍙橀噺锛屽畠灏嗚鐩栦骇鍝佺殑榛樿闅旂璺緞骞跺叿鏈夋渶楂樹紭鍏堢骇銆?
+- **环境变量覆盖**：如果您的系统中显式定义了 `OPTIX_CACHE_PATH` 环境变量，它将覆盖产品的默认隔离路径并具有最高优先级。
 
-## 鍙﹁鍙傞槄
+## 另请参阅
 
-- [浠庢簮鐮佹瀯寤篯(/zh/industrial-cg-platform/guide/building-from-source) 鈥?鑷浠?GitHub 浠撳簱杩涜鏈湴缂栬瘧銆?
-- [Blender 鎵嬪唽锛氬湪 Windows 涓婂畨瑁匽(https://docs.blender.org/manual/en/latest/getting_started/installing/windows.html) 鈥?鏍囧噯 Blender 瀹夎鎸囧崡銆?
+- [从源码构建](/zh/industrial-cg-platform/guide/building-from-source) — 自行从 GitHub 仓库进行本地编译。
+- [Blender 手册：在 Windows 上安装](https://docs.blender.org/manual/en/latest/getting_started/installing/windows.html) — 标准 Blender 安装指南。

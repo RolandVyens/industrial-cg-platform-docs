@@ -1,4 +1,4 @@
-﻿# Building from Source
+# Building from Source
 
 ## Prerequisites
 
@@ -81,11 +81,11 @@ The installed runtime will be in the `install/` directory.
 
 ## Known Build Notes
 
-- **Ninja recommended** 鈥?The Visual Studio generator may hang during compiler-ID detection due to a workstation-local `Tracker.exe` issue. Ninja + VsDevCmd is the validated default build path.
-- **`TrackFileAccess=false`** 鈥?If using MSBuild directly, pass `/p:TrackFileAccess=false` to avoid MSBuild tracker hangs.
-- **PDB generation** 鈥?Release builds may encounter `LNK1318` errors during PDB generation. Build with `WITH_WINDOWS_RELEASE_PDB=OFF` if this occurs.
+- **Ninja recommended** — The Visual Studio generator may hang during compiler-ID detection due to a workstation-local `Tracker.exe` issue. Ninja + VsDevCmd is the validated default build path.
+- **`TrackFileAccess=false`** — If using MSBuild directly, pass `/p:TrackFileAccess=false` to avoid MSBuild tracker hangs.
+- **PDB generation** — Release builds may encounter `LNK1318` errors during PDB generation. Build with `WITH_WINDOWS_RELEASE_PDB=OFF` if this occurs.
 
 ## See Also
 
-- [Blender Manual: Building Blender](https://developer.blender.org/docs/handbook/building_blender/) 鈥?Official Blender build documentation.
-- [Installation](/en/industrial-cg-platform/guide/installation) 鈥?Install from a pre-built release package.
+- [Blender Manual: Building Blender](https://developer.blender.org/docs/handbook/building_blender/) — Official Blender build documentation.
+- [Installation](/en/industrial-cg-platform/guide/installation) — Install from a pre-built release package.

@@ -1,4 +1,4 @@
-﻿# Advanced Mode
+# Advanced Mode
 
 This page details the advanced features exposed when switching the **Industrial AOV Connector** out of its default basic mode.
 
@@ -24,7 +24,7 @@ Controls the compression codec used for each output class.
 | **DWAA / B** | Lossy. Extremely high compression rates for beauty renders. DWAA works on block groups; DWAB is optimized for scanline packages. |
 | **NONE** | Uncompressed. |
 
-> 鈿狅笍 **Note:** Cryptomatte EXR files must use **lossless** compression methods (such as ZIP, ZIPS, or PIZ) to avoid data corruption.
+> ⚠️ **Note:** Cryptomatte EXR files must use **lossless** compression methods (such as ZIP, ZIPS, or PIZ) to avoid data corruption.
 
 ### 3. **Independent DATA Layer Config**
 Decouples utility and data passes from beauty passes, allowing separate sample settings and collections.
@@ -55,7 +55,7 @@ Applies a specialized utility material override to the active layer, setting up 
 *   **Depth / Z**
 *   **Fake DEEP**
 
-> 馃挕 **Tip:** To use **Pref** (Reference Position) correctly, make sure to enable the **`rest position`** setting inside your mesh's shape key section.
+> 💡 **Tip:** To use **Pref** (Reference Position) correctly, make sure to enable the **`rest position`** setting inside your mesh's shape key section.
 
 ### 4. **DEEP From Image Z**
 Converts depth data to a 1/Z format matching Nuke's native depth structure. This allows you to plug the render directly into a Nuke `Deep From Image` node. Due to standard antialiasing, this is best used on edges without motion blur.

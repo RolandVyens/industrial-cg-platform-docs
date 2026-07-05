@@ -1,100 +1,100 @@
-﻿# bQt 闆嗘垚涓庝娇鐢ㄦ寚鍗?
+# bQt 集成与使用指南
 
-Industrial CG Platform 灏嗗畬鏁寸殑鐢熶骇绾?PyQt/PySide6 杩愯鐜 (**bQt**) 鐩存帴浣滀负绯荤粺鎵╁睍锛圫ystem Extension锛夋墦鍖呭唴缃€傝繖浣垮緱寮€鍙戣€呰兘澶熷湪 Blender 鍐呴儴缂栧啓涓板瘜鐨勫熀浜?Qt 鐨勯珮鎬ц兘 UI 宸ュ叿锛岃€屾棤闇€寮鸿揩鑹烘湳瀹舵墜鍔ㄥ畨瑁?Python 鍖呫€?
+Industrial CG Platform 将完整的生产级 PyQt/PySide6 运行环境 (**bQt**) 直接作为系统扩展（System Extension）打包内置。这使得开发者能够在 Blender 内部编写丰富的基于 Qt 的高性能 UI 工具，而无需强迫艺术家手动安装 Python 包。
 
-鏈寚鍗楄缁嗚鏄庝簡鍦ㄦ Blender 鍒嗘敮锛團ork锛変腑闆嗘垚鐨勫簳灞傛灦鏋勩€佹墦鍖呭竷灞€瑙勫垯銆佺嫭绔嬪畨鍏ㄧ幆澧冮厤缃紝浠ュ強鍐呯疆鐨?**ViewLayer 绠＄悊鍣?* 鎻掍欢涓娇鐢ㄧ殑鍚勭楂樼骇杞欢宸ョ▼璁捐妯″紡銆?
+本指南详细说明了在此 Blender 分支（Fork）中集成的底层架构、打包布局规则、独立安全环境配置，以及内置的 **ViewLayer 管理器** 插件中使用的各种高级软件工程设计模式。
 
 ---
 
-## 1. 涓夊眰闆嗘垚鏋舵瀯
+## 1. 三层集成架构
 
-涓轰簡淇濇寔浠ｇ爜鐨勫彲缁存姢鎬с€佸彲澶嶇敤鎬т笌瀹夊叏鎬э紝鏈?Blender 鍒嗘敮涓婄殑 BQt 闆嗘垚閲囩敤浜嗕弗鏍肩殑涓夊眰瑙ｈ€︽灦鏋勶細
+为了保持代码的可维护性、可复用性与安全性，本 Blender 分支上的 BQt 集成采用了严格的三层解耦架构：
 
 ```mermaid
 graph TD
-    subgraph Blender 鍐呴儴鐜
-        OP[scripts/startup/bl_operators/<br>鍚姩鎿嶄綔鍣ㄥ叆鍙
-        SH[scripts/modules/blender_vfx_qt<br>Fork 鍏变韩 Python API 鍖呰灞俔
+    subgraph Blender 内部环境
+        OP[scripts/startup/bl_operators/<br>启动操作器入口]
+        SH[scripts/modules/blender_vfx_qt<br>Fork 共享 Python API 包装层]
     end
 
-    subgraph 绯荤粺鎵╁睍 System Extensions
-        FE[release/extensions/system/blender_vfx_viewlayer_manager<br>涓氬姟鍔熻兘鎵╁睍 - 绾笟鍔?UI]
-        RT[release/extensions/system/blender_vfx_qt_runtime<br>鍏变韩杩愯鏃舵墿灞?- Wheels 涓庡紩瀵奸€昏緫]
+    subgraph 系统扩展 System Extensions
+        FE[release/extensions/system/blender_vfx_viewlayer_manager<br>业务功能扩展 - 纯业务 UI]
+        RT[release/extensions/system/blender_vfx_qt_runtime<br>共享运行时扩展 - Wheels 与引导逻辑]
     end
 
-    OP -->|1. 鍞よ捣| SH
-    SH -->|2. 纭繚鍚敤| RT
-    SH -->|3. 鍚姩骞跺睍绀虹獥鍙 FE
-    FE -->|4. 澶嶇敤 Qt 杩愯鐜涓庡紩瀵奸€昏緫| RT
+    OP -->|1. 唤起| SH
+    SH -->|2. 确保启用| RT
+    SH -->|3. 启动并展示窗口| FE
+    FE -->|4. 复用 Qt 运行环境与引导逻辑| RT
 ```
 
-### 绗竴灞傦細鍏变韩杩愯鏃舵墿灞?(`blender_vfx_qt_runtime`)
-* **瀛樻斁璺緞锛?* `release/extensions/system/blender_vfx_qt_runtime`
-* **鏍稿績鑱岃矗锛?* 浠呯敤浜庢惡甯︾閲嶇殑棰勭紪璇戜緷璧栧寘锛圥ySide6 鍙婂叾渚濊禆椤?wheels锛夛紝骞跺疄鐜板簳灞傜殑寮曞鍚姩锛圔ootstrap锛夐€昏緫銆傚畠鏆撮湶浜嗘瀬钖勭殑杩愯鏃跺垵濮嬪寲閽╁瓙锛?*涓嶅寘鍚换浣?*鍏蜂綋鐨勪笟鍔℃垨 UI 浠ｇ爜銆?
+### 第一层：共享运行时扩展 (`blender_vfx_qt_runtime`)
+* **存放路径：** `release/extensions/system/blender_vfx_qt_runtime`
+* **核心职责：** 仅用于携带笨重的预编译依赖包（PySide6 及其依赖项 wheels），并实现底层的引导启动（Bootstrap）逻辑。它暴露了极薄的运行时初始化钩子，**不包含任何**具体的业务或 UI 代码。
 
-### 绗簩灞傦細Fork 鍏变韩 Python 鍖呰灞?(`blender_vfx_qt`)
-* **瀛樻斁璺緞锛?* `scripts/modules/blender_vfx_qt`
-* **鏍稿績鑱岃矗锛?* 瀹冩槸 Fork 鍏ㄥ眬鐨勫父椹诲叕鍏辨ā鍧楋紝璐熻矗鍔ㄦ€佹煡鎵惧苟鍚敤杩愯鏃舵墿灞曘€佹帶鍒?Qt 涓?Blender 鐨勪簨浠跺惊鐜泦鎴愶紝骞舵毚闇茬ǔ瀹氱殑绐楀彛绠＄悊 API锛?
-  - `ensure_runtime()`: 鍒濆鍖?Qt 骞跺皢鍏跺畨鍏ㄧ粦瀹氬埌 Blender 绐楀彛銆?
-  - `show_unique_window(cache, factory)`: 绠＄悊绐楀彛鍗曚緥鐢熷懡鍛ㄦ湡銆?
+### 第二层：Fork 共享 Python 包装层 (`blender_vfx_qt`)
+* **存放路径：** `scripts/modules/blender_vfx_qt`
+* **核心职责：** 它是 Fork 全局的常驻公共模块，负责动态查找并启用运行时扩展、控制 Qt 与 Blender 的事件循环集成，并暴露稳定的窗口管理 API：
+  - `ensure_runtime()`: 初始化 Qt 并将其安全绑定到 Blender 窗口。
+  - `show_unique_window(cache, factory)`: 管理窗口单例生命周期。
 
-### 绗笁灞傦細涓氬姟鍔熻兘鎵╁睍 (渚嬪 `blender_vfx_viewlayer_manager`)
-* **瀛樻斁璺緞锛?* `release/extensions/system/blender_vfx_viewlayer_manager`
-* **鏍稿績鑱岃矗锛?* 绾补鍏虫敞鑷韩涓氬姟閫昏緫锛圲I 妗嗘灦鏋勫缓銆丷NA 灞炴€у悓姝ャ€侀璁剧鐞嗕互鍙婂璇█缈昏瘧锛夈€傚畠涓嶅寘鍚换浣曠紪璇戝悗鐨?wheel 鏂囦欢锛屼粎閫氳繃璋冪敤绗簩灞?API 鍔ㄦ€佹媺璧?UI 绐楀彛銆?
+### 第三层：业务功能扩展 (例如 `blender_vfx_viewlayer_manager`)
+* **存放路径：** `release/extensions/system/blender_vfx_viewlayer_manager`
+* **核心职责：** 纯粹关注自身业务逻辑（UI 框架构建、RNA 属性同步、预设管理以及多语言翻译）。它不包含任何编译后的 wheel 文件，仅通过调用第二层 API 动态拉起 UI 窗口。
 
 ---
 
-## 2. 鍩轰簬浼氳瘽鐨勫姩鎬佸惎鐢ㄦ満鍒?(Session-Based Enablement)
+## 2. 基于会话的动态启用机制 (Session-Based Enablement)
 
-涓轰簡閬垮厤鍑忔參 Blender 鐨勫紑鏈哄惎鍔ㄩ€熷害锛屾垨鍦ㄧ敤鎴烽厤缃腑鍐欏叆杩囧鎸佷箙璁剧疆锛孊Qt 閲囩敤浜?*鍩轰簬浼氳瘽鐨勫姩鎬佸惎鐢?*璁捐妯″紡锛?
+为了避免减慢 Blender 的开机启动速度，或在用户配置中写入过多持久设置，BQt 采用了**基于会话的动态启用**设计模式：
 
-1. 杩愯鏃舵墿灞曞湪鐢ㄦ埛鍋忓ソ璁剧疆锛圥references锛変腑**榛樿涓嶅惎鐢?*銆?
-2. 鍦ㄥ惎鍔ㄨ剼鏈腑娉ㄥ唽涓€涓瀬杞婚噺鐨勬ˉ鎺ユ搷浣滃櫒锛圔ridge Operator锛夛細`scripts/startup/bl_operators/blender_vfx_viewlayer_manager.py`銆?
-3. 褰撹壓鏈鐐瑰嚮鑿滃崟鏍忔寜閽垨閫氳繃绌烘牸閿悳绱㈠惎鍔ㄥ伐鍏锋椂锛岃鎿嶄綔鍣ㄤ細鍔ㄦ€佽皟鐢?`blender_vfx_qt.ensure_runtime()`锛屼粎鍦?*鏈 Blender 浼氳瘽鐢熷懡鍛ㄦ湡鍐?*鍔ㄦ€佸惎鐢ㄧ郴缁熸墿灞曞苟鎷夎捣绐楀彛锛屼粠鑰屽疄鐜伴浂寮€鏈哄紑閿€銆?
+1. 运行时扩展在用户偏好设置（Preferences）中**默认不启用**。
+2. 在启动脚本中注册一个极轻量的桥接操作器（Bridge Operator）：`scripts/startup/bl_operators/blender_vfx_viewlayer_manager.py`。
+3. 当艺术家点击菜单栏按钮或通过空格键搜索启动工具时，该操作器会动态调用 `blender_vfx_qt.ensure_runtime()`，仅在**本次 Blender 会话生命周期内**动态启用系统扩展并拉起窗口，从而实现零开机开销。
 
-### 妗ユ帴鎿嶄綔鍣ㄦā鏉夸唬鐮侊細
+### 桥接操作器模板代码：
 ```python
 import bpy
 
 class VFX_OT_show_viewlayer_manager(bpy.types.Operator):
-    """鍚姩鐙珛鐨?Qt ViewLayer 绠＄悊鍣?""
+    """启动独立的 Qt ViewLayer 管理器"""
     bl_idname = "wm.blender_vfx_viewlayer_manager_show"
     bl_label = "ViewLayer Manager"
     
     def execute(self, context):
-        # 1. 瀵煎叆 Fork 鍏变韩鍖呰妯″潡
+        # 1. 导入 Fork 共享包装模块
         from blender_vfx_qt import ensure_runtime
         try:
-            # 2. 鍔ㄦ€佸惎鐢ㄨ繍琛屾椂鎵╁睍骞惰幏鍙?bQt 鐜
+            # 2. 动态启用运行时扩展并获取 bQt 环境
             bqt = ensure_runtime()
             
-            # 3. 璋冪敤鍏蜂綋涓氬姟鎵╁睍鐨?manager 鎺ュ彛娓叉煋绐楀彛
+            # 3. 调用具体业务扩展的 manager 接口渲染窗口
             from bl_ext.system.blender_vfx_viewlayer_manager.manager import show_manager
             show_manager()
             return {'FINISHED'}
         except Exception as e:
-            self.report({'ERROR'}, f"鏃犳硶鍚姩 ViewLayer 绠＄悊鍣? {str(e)}")
+            self.report({'ERROR'}, f"无法启动 ViewLayer 管理器: {str(e)}")
             return {'CANCELLED'}
 ```
 
 ---
 
-## 3. 鍒涘缓鎵樼绐楀彛 (鍗曚緥妯″紡)
+## 3. 创建托管窗口 (单例模式)
 
-涓轰簡闃叉鐢ㄦ埛閲嶅鐐瑰嚮鎵撳紑澶氫釜鐩稿悓鐨勫伐鍏风獥鍙ｏ紙杩欏湪 VFX 鍒朵綔鐜涓瀬鏄撳鑷村簳灞傚満鏅暟鎹鍐欏啿绐佷笌鍐呭瓨娉勬紡锛夛紝宸ュ叿绐楀彛蹇呴』鍒嗛厤鍞竴鐨?`objectName`锛屽苟鍦ㄦ敞鍐屾椂浣跨敤 `bqt.add(..., unique=True)`銆?
+为了防止用户重复点击打开多个相同的工具窗口（这在 VFX 制作环境中极易导致底层场景数据读写冲突与内存泄漏），工具窗口必须分配唯一的 `objectName`，并在注册时使用 `bqt.add(..., unique=True)`。
 
-### 鍗曚緥鍚姩璋冪敤妯℃澘锛?
+### 单例启动调用模板：
 ```python
 # release/extensions/system/blender_vfx_viewlayer_manager/manager.py
 from blender_vfx_qt import ensure_runtime, qt_window_is_alive, show_unique_window
 
-# 鐢ㄤ簬瀛樺偍娲诲姩绐楀彛寮曠敤鐨勫瓧鍏哥紦瀛?
+# 用于存储活动窗口引用的字典缓存
 _window_cache = {"value": None}
 
 def show_manager():
     bqt = ensure_runtime()
     
-    # 鑻ョ獥鍙ｅ凡澶勪簬娲诲姩鐘舵€侊紝鍒欏埛鏂板叾鏁版嵁骞跺皢鍏剁疆浜庢渶鍓?
+    # 若窗口已处于活动状态，则刷新其数据并将其置于最前
     cached_window = _window_cache.get("value")
     if qt_window_is_alive(cached_window):
         cached_window.refresh_from_blender()
@@ -103,7 +103,7 @@ def show_manager():
 
     def factory():
         window = ViewLayerManagerWindow()
-        # 娉ㄥ唽骞朵紶鍏?unique=True锛屽惎鐢ㄥ崟渚嬪畨鍏ㄦ牎楠?
+        # 注册并传入 unique=True，启用单例安全校验
         bqt.add(window, unique=True)
         return window
 
@@ -112,72 +112,72 @@ def show_manager():
 
 ---
 
-## 4. 瀹夊叏鐙珛绐楀彛妯″紡 (Standalone Safety Mode)
+## 4. 安全独立窗口模式 (Standalone Safety Mode)
 
-鏈垎鏀腑榛樿浠?*瀹夊叏鐙珛绐楀彛妯″紡**鍚姩 Qt 杩愯鐜銆傝妯″紡鍦?UI 鍝嶅簲搴︺€侀敭鐩樼劍鐐规崟鑾凤紙Focus Integrity锛変笂鏈€涓虹ǔ鍋ワ紝瀹屽叏瑙勯伩浜嗗皢鍘熺敓 Win32 瑙嗗彛鍙ユ焺寮哄埗宓屽叆 Qt 绐楀彛瀹瑰櫒涓椂鍙兘寮曞彂鐨勯殢鏈哄穿婧冦€?
+本分支中默认以**安全独立窗口模式**启动 Qt 运行环境。该模式在 UI 响应度、键盘焦点捕获（Focus Integrity）上最为稳健，完全规避了将原生 Win32 视口句柄强制嵌入 Qt 窗口容器中时可能引发的随机崩溃。
 
-### 鏍稿績鐜鍙橀噺璁剧疆
-鍦ㄦ媺璧?Qt 鐜鍓嶏紝`blender_vfx_qt` 妯″潡浼氶粯璁ら厤缃互涓嬬幆澧冨彉閲忥細
+### 核心环境变量设置
+在拉起 Qt 环境前，`blender_vfx_qt` 模块会默认配置以下环境变量：
 
-* **`BQT_DISABLE_WRAP="1"`**锛氱鐢ㄥ皢 Blender 瑙嗗彛宓屽叆鍒?Qt 甯冨眬妗嗘灦涓殑琛屼负銆俀t 绐楀彛灏嗕互瀹屽叏鐙珛鐨勬搷浣滅郴缁熺骇鍘熺敓绐楀彛褰㈠紡杩愯銆?
-* **`BQT_AUTO_ADD="0"`**锛氱鐢?bQt 鑷姩鎹曡幏骞舵墭绠″绔嬬殑椤剁骇 Qt 寮圭獥鐨勮涓猴紝纭繚绐楀彛鐖跺瓙绾у叧绯诲畬鍏ㄧ敱寮€鍙戣€呭畾涔夈€?
-* **`BQT_DOCKABLE_WRAP="0"`**锛氱鐢ㄥ皢宸叉敞鍐岀殑 Widget 鑷姩鍖呰鍦?`QDockWidget` 渚ц竟闈㈡澘涓殑榛樿琛屼负銆?
-* **`BQT_MANAGE_FOREGROUND="1"`**锛氱洃鎺ф搷浣滅郴缁熺骇鍒殑娲诲姩绐楀彛鍙ユ焺銆傚垏鍑?Blender 鏃惰嚜鍔ㄩ殣钘忔墍鏈夊凡娉ㄥ唽鐨?Qt 娴姩绐楀彛锛涘垏鍥?Blender 鏃讹紝鐬棿鎭㈠瀹冧滑鐨勬樉绀恒€?
+* **`BQT_DISABLE_WRAP="1"`**：禁用将 Blender 视口嵌入到 Qt 布局框架中的行为。Qt 窗口将以完全独立的操作系统级原生窗口形式运行。
+* **`BQT_AUTO_ADD="0"`**：禁用 bQt 自动捕获并托管孤立的顶级 Qt 弹窗的行为，确保窗口父子级关系完全由开发者定义。
+* **`BQT_DOCKABLE_WRAP="0"`**：禁用将已注册的 Widget 自动包装在 `QDockWidget` 侧边面板中的默认行为。
+* **`BQT_MANAGE_FOREGROUND="1"`**：监控操作系统级别的活动窗口句柄。切出 Blender 时自动隐藏所有已注册的 Qt 浮动窗口；切回 Blender 时，瞬间恢复它们的显示。
 
 > [!NOTE]
-> 鍦ㄥ畨鍏ㄧ嫭绔嬬獥鍙ｆā寮忎笅锛孊lender 鎺у埗鍙颁細杈撳嚭涓€鏉¤鍛婏細`failed to get blender hwnd, creating new window`銆?*璇ヨ鍛婂畬鍏ㄦ甯镐笖鏃犲**銆傚畠琛ㄦ槑鐙珛璺敱宸叉垚鍔熸帴绠★紝鍒囧嬁灏嗗叾璇垽涓哄穿婧冩牴鍥犮€?
+> 在安全独立窗口模式下，Blender 控制台会输出一条警告：`failed to get blender hwnd, creating new window`。**该警告完全正常且无害**。它表明独立路由已成功接管，切勿将其误判为崩溃根因。
 
 ---
 
-## 5. 鐜閰嶇疆鍙橀噺閫熸煡琛?
+## 5. 环境配置变量速查表
 
-| 鐜鍙橀噺 | 榛樿鍊?| 鍏佽鐨勫€?| 璇︾粏璇存槑 |
+| 环境变量 | 默认值 | 允许的值 | 详细说明 |
 | :--- | :--- | :--- | :--- |
-| **`BQT_DISABLE_WRAP`** | `0` (鏈缃? | `1`, `0` | 璁句负 `1` 鍚敤瀹夊叏鐙珛绐楀彛妯″紡锛岃烦杩囧鏉傜殑瑙嗗彛瀹瑰櫒宓屽叆銆?|
-| **`BQT_AUTO_ADD`** | `1` (鏈缃? | `1`, `0` | 鍦ㄥ叡浜寘瑁呭櫒涓寮哄埗璁句负 `0`锛岄槻姝㈣鎹曡幏鍏朵粬鍘熺敓鎮诞绐椼€?|
-| **`BQT_DOCKABLE_WRAP`** | `1` (鏈缃? | `1`, `0` | 璁句负 `0` 淇濇寔 Widget 涓哄共鍑€鐨勬诞鍔ㄥ皬宸ュ叿锛岃€屼笉鏄祵鍏ュ紡闈㈡澘銆?|
-| **`BQT_MANAGE_FOREGROUND`** | `1` | `1`, `0` | 鍦?`BQT_DISABLE_WRAP="1"` 鏃剁敓鏁堛€傚惎鐢ㄥ墠鍚庡彴鍙鎬ц嚜鍔ㄥ悓姝ャ€?|
-| **`BQT_NO_STYLESHEET`** | `0` (鏈缃? | `1`, `0` | 璁句负 `1` 绂佺敤鍐呯疆鐨勬繁鑹?Blender 椋庢牸鏍峰紡琛ㄣ€?|
-| **`BQT_DISABLE_CLOSE_DIALOGUE`**| `0` (鏈缃? | `1`, `0` | 璁句负 `1` 鍏抽棴 Qt 渚ц嚜瀹氫箟鐨勯€€鍑虹‘璁ゅ脊绐楋紝鐢?Blender 缁熶竴澶勭悊淇濆瓨銆?|
-| **`BQT_LOG_LEVEL`** | `"WARNING"` | `"DEBUG"`, `"INFO"`, `"WARNING"`, `"ERROR"` | 閰嶇疆杩愯鏃剁殑鏃ュ織杈撳嚭绾у埆銆?|
+| **`BQT_DISABLE_WRAP`** | `0` (未设置) | `1`, `0` | 设为 `1` 启用安全独立窗口模式，跳过复杂的视口容器嵌入。 |
+| **`BQT_AUTO_ADD`** | `1` (未设置) | `1`, `0` | 在共享包装器中被强制设为 `0`，防止误捕获其他原生悬浮窗。 |
+| **`BQT_DOCKABLE_WRAP`** | `1` (未设置) | `1`, `0` | 设为 `0` 保持 Widget 为干净的浮动小工具，而不是嵌入式面板。 |
+| **`BQT_MANAGE_FOREGROUND`** | `1` | `1`, `0` | 在 `BQT_DISABLE_WRAP="1"` 时生效。启用前后台可见性自动同步。 |
+| **`BQT_NO_STYLESHEET`** | `0` (未设置) | `1`, `0` | 设为 `1` 禁用内置的深色 Blender 风格样式表。 |
+| **`BQT_DISABLE_CLOSE_DIALOGUE`**| `0` (未设置) | `1`, `0` | 设为 `1` 关闭 Qt 侧自定义的退出确认弹窗，由 Blender 统一处理保存。 |
+| **`BQT_LOG_LEVEL`** | `"WARNING"` | `"DEBUG"`, `"INFO"`, `"WARNING"`, `"ERROR"` | 配置运行时的日志输出级别。 |
 
 ---
 
-## 6. 绯荤粺鎵╁睍鎵撳寘涓庣洰褰曠粨鏋勮鑼?
+## 6. 系统扩展打包与目录结构规范
 
 > [!CAUTION]
-> **缁濆涓嶅彲杩濊儗鐨勬墦鍖呰鍒欙細** 缁濆涓嶈灏嗙郴缁熸墿灞曞寘瑁呭湪閲嶅鐨勫浣?`system` 鏂囦欢澶逛腑銆傛绫荤洰褰曞閲嶅祵濂椾細瀵艰嚧鎵弿澶辨晥骞惰Е鍙?`bl_ext.system.*` 瀵煎叆閿欒銆?
+> **绝对不可违背的打包规则：** 绝对不要将系统扩展包装在重复的多余 `system` 文件夹中。此类目录多重嵌套会导致扫描失效并触发 `bl_ext.system.*` 导入错误。
 
-### 姝ｇ‘鐨勭洰褰曠粨鏋勫竷灞€
+### 正确的目录结构布局
 ```
-馃搨 release/extensions/system/
-    鈹溾攢鈹€ 馃搨 blender_vfx_qt_runtime/         # 姝ｇ‘鐩存帴鏀惧湪 system/ 涓?
-    鈹?    鈹溾攢鈹€ 馃搫 blender_manifest.toml
-    鈹?    鈹斺攢鈹€ 馃搫 __init__.py
-    鈹斺攢鈹€ 馃搨 blender_vfx_viewlayer_manager/  # 姝ｇ‘鐩存帴鏀惧湪 system/ 涓?
-          鈹溾攢鈹€ 馃搫 blender_manifest.toml
-          鈹斺攢鈹€ 馃搫 __init__.py
-```
-
-### 閿欒鐨勫祵濂楃粨鏋勫竷灞€锛堝垏鍕夸娇鐢級
-```
-馃搨 release/extensions/system/
-    鈹斺攢鈹€ 馃搨 system/                          # 閿欒鐨勫浣欏祵濂楀眰
-          鈹斺攢鈹€ 馃搨 blender_vfx_viewlayer_manager/
+📂 release/extensions/system/
+    ├── 📂 blender_vfx_qt_runtime/         # 正确直接放在 system/ 下
+    │     ├── 📄 blender_manifest.toml
+    │     └── 📄 __init__.py
+    └── 📂 blender_vfx_viewlayer_manager/  # 正确直接放在 system/ 下
+          ├── 📄 blender_manifest.toml
+          └── 📄 __init__.py
 ```
 
-* **浜х敓鍘熷洜锛?* Blender 鑷甫鐨勬墿灞曠鐞嗗櫒锛圗xtension Manager锛夊湪娉ㄥ唽绯荤粺鏈湴浠撳簱鏃讹紝浼氳嚜鍔ㄥ湪瑙ｆ瀽璺緞涓嫾鎺ヤ竴绾?`system` 鍛藉悕绌洪棿銆傝嫢浣犲湪纾佺洏婧愮爜鏍戜笂鍐嶆鎵嬪姩宓屽涓€灞?`system/system/`锛岃В鏋愬眰渚夸細鍑虹幇閫氳矾闃绘柇锛屽鑷存枃浠舵槑鏄庡瓨鍦ㄤ絾澶栭儴鏍规湰鏃犳硶 `import` 瀵煎叆涓氬姟妯″潡銆?
+### 错误的嵌套结构布局（切勿使用）
+```
+📂 release/extensions/system/
+    └── 📂 system/                          # 错误的多余嵌套层
+          └── 📂 blender_vfx_viewlayer_manager/
+```
+
+* **产生原因：** Blender 自带的扩展管理器（Extension Manager）在注册系统本地仓库时，会自动在解析路径中拼接一级 `system` 命名空间。若你在磁盘源码树上再次手动嵌套一层 `system/system/`，解析层便会出现通路阻断，导致文件明明存在但外部根本无法 `import` 导入业务模块。
 
 ---
 
-## 7. ViewLayer 绠＄悊鍣ㄩ珮绾ц璁℃ā寮?
+## 7. ViewLayer 管理器高级设计模式
 
-**ViewLayer 绠＄悊鍣?* 瀹炵幇浜嗕簲绉嶇敓浜х骇鐨勯珮绾?Qt-Blender 浜や簰璁捐妯″紡锛?
+**ViewLayer 管理器** 实现了五种生产级的高级 Qt-Blender 交互设计模式：
 
-### 妯″紡 1锛氫笂涓嬫枃绐楀彛淇濇姢 (`@context_window`)
-褰撶敤鎴峰湪 Qt 鐣岄潰涓Е鍙戞搷浣滐紙渚嬪鐐瑰嚮鎸夐挳锛夋椂锛屼笟鍔℃Ы鍑芥暟鏄湪 Qt 鐨勪簨浠跺惊鐜嚎绋嬩腑杩愯鐨勩€傚鏋滄鏃剁洿鎺ヨ鍐?Blender 鐨?RNA 灞炴€ф垨璋冪敤绠楀瓙锛堜緥濡?`bpy.ops.ed.undo_push`锛夛紝Blender 甯稿父浼氬洜涓婁笅鏂囷紙Context锛夋湭鍒濆鍖栨垨缂哄け鑰屽彂鐢熷穿婧冦€?
+### 模式 1：上下文窗口保护 (`@context_window`)
+当用户在 Qt 界面中触发操作（例如点击按钮）时，业务槽函数是在 Qt 的事件循环线程中运行的。如果此时直接读写 Blender 的 RNA 属性或调用算子（例如 `bpy.ops.ed.undo_push`），Blender 常常会因上下文（Context）未初始化或缺失而发生崩溃。
 
-瑕佽В鍐虫闂锛岃浣跨敤 `bqt.utils` 鎻愪緵鐨?`@context_window` 瑁呴グ鍣ㄥ鎵€鏈変慨鏀?Blender 鍦烘櫙鏁版嵁鐨?Qt 绫绘柟娉曡繘琛岃楗帮細
+要解决此问题，请使用 `bqt.utils` 提供的 `@context_window` 装饰器对所有修改 Blender 场景数据的 Qt 类方法进行装饰：
 
 ```python
 from bqt.utils import context_window
@@ -187,27 +187,27 @@ class ViewLayerManagerWindow(QtWidgets.QDialog):
     
     @context_window
     def _set_view_layer_use_in_blender(self, view_layer_name: str, value: bool) -> bool:
-        # 璇ユ柟娉曞湪鎵ц鏃讹紝浼氳嚜鍔ㄥ寘瑁瑰湪瀹夊叏涓旀椿鍔ㄧ殑 Blender 绐楀彛涓婁笅鏂囧弬鏁颁腑
+        # 该方法在执行时，会自动包裹在安全且活动的 Blender 窗口上下文参数中
         view_layer = self._find_view_layer(view_layer_name)
         if view_layer is None:
             return False
         
         if view_layer.use != value:
             view_layer.use = value
-            # 姝ゆ椂鍙互瀹夊叏鎺ㄩ€佹挙閿€鐘舵€?
+            # 此时可以安全推送撤销状态
             bpy.ops.ed.undo_push(message="ViewLayer Manager: Update Use")
             return True
         return False
 ```
 
-### 妯″紡 2锛氬弻璺緞鍙屽悜鐘舵€佸悓姝?
-褰?Qt 绐楀彛鎵撳紑鏃讹紝鑹烘湳瀹朵粛鑳藉湪 Blender 鍘熺敓鐨勫睘鎬у睘鎬ч潰鏉夸腑鏇存敼灞炴€с€備负浜嗙‘淇?Qt UI 鐨勫疄鏃跺悓姝ヤ笖涓嶅彂鐢熺嚎绋嬪啿绐侊紝闇€缁撳悎涓ょ鍚屾鏂瑰紡锛?
+### 模式 2：双路径双向状态同步
+当 Qt 窗口打开时，艺术家仍能在 Blender 原生的属性属性面板中更改属性。为了确保 Qt UI 的实时同步且不发生线程冲突，需结合两种同步方式：
 
-#### A. QTimer 杞娲诲姩涓婁笅鏂囨洿鏀?
-浣跨敤涓€涓交閲忕骇鐨?`QTimer` 浣庨锛堝 150 姣闂撮殧锛夋鏌?Blender 涓殑褰撳墠娲诲姩椤癸紝鍙戠敓鏇存敼鏃跺埛鏂?UI锛?
+#### A. QTimer 轮询活动上下文更改
+使用一个轻量级的 `QTimer` 低频（如 150 毫秒间隔）检查 Blender 中的当前活动项，发生更改时刷新 UI：
 ```python
 self._active_state_timer = QtCore.QTimer(self)
-self._active_state_timer.setInterval(150) # 150ms 闂撮殧
+self._active_state_timer.setInterval(150) # 150ms 间隔
 self._active_state_timer.timeout.connect(self._poll_active_view_layer_state)
 self._active_state_timer.start()
 
@@ -217,12 +217,12 @@ def _poll_active_view_layer_state(self) -> None:
         self._sync_active_view_layer_from_context()
 ```
 
-#### B. Blender 娑堟伅鎬荤嚎 (MsgBus) 鐨勭嚎绋嬪畨鍏ㄨ皟搴?
-瀵逛簬鐗瑰畾灞炴€х殑鍙樻洿璁㈤槄锛屼娇鐢?Blender 鐨?MsgBus銆傜敱浜?MsgBus 鍥炶皟鏄湪 Blender 鍐呴儴绾跨▼涓縺鍙戠殑锛屼笉鑳界洿鎺ユ搷鎺?Qt UI銆傞渶浣跨敤 `QTimer.singleShot(0, ...)` 灏嗛噸缁橀€昏緫瀹夊叏浼犻€掔粰 Qt 浜嬩欢寰幆鐨?UI 绾跨▼锛?
+#### B. Blender 消息总线 (MsgBus) 的线程安全调度
+对于特定属性的变更订阅，使用 Blender 的 MsgBus。由于 MsgBus 回调是在 Blender 内部线程中激发的，不能直接操控 Qt UI。需使用 `QTimer.singleShot(0, ...)` 将重绘逻辑安全传递给 Qt 事件循环的 UI 线程：
 
 ```python
 def _register_message_bus(self) -> None:
-    # 璁㈤槄娲诲姩 view_layer 鐨勪慨鏀逛簨浠?
+    # 订阅活动 view_layer 的修改事件
     bpy.msgbus.subscribe_rna(
         key=(bpy.types.Window, "view_layer"),
         owner=self._msgbus_owner,
@@ -231,38 +231,38 @@ def _register_message_bus(self) -> None:
     )
 
 def _notify_active_view_layer_changed(window: "ViewLayerManagerWindow") -> None:
-    # 绾跨▼瀹夊叏鍒嗗彂鍥?Qt 鐨勪富浜嬩欢寰幆绾跨▼鎵ц閲嶇粯
+    # 线程安全分发回 Qt 的主事件循环线程执行重绘
     QtCore.QTimer.singleShot(0, window._sync_active_view_layer_from_context)
 ```
 
-### 妯″紡 3锛氭粦鍔ㄨ繛閫夊閫夋 ("Brush Selection")
-鍦ㄦ嫢鏈夊ぇ閲忔覆鏌撻€氶亾锛圧ender Passes锛夌殑琛ㄦ牸涓紝閫愪釜鐐瑰嚮澶嶉€夋闈炲父绻佺悙銆俈iewLayer 绠＄悊鍣ㄥ疄鐜颁簡涓€绉嶁€滃埛瀛愨€濋€夋嫨浣撻獙锛氭寜浣忛紶鏍囧乏閿苟鍦ㄥ閫夋鍒楄〃涓婂垝杩囷紝鍗冲彲涓€姘斿懙鎴愭壒閲忓弽杞垨璁剧疆瀹冧滑鐨勭姸鎬併€?
+### 模式 3：滑动连选复选框 ("Brush Selection")
+在拥有大量渲染通道（Render Passes）的表格中，逐个点击复选框非常繁琐。ViewLayer 管理器实现了一种“刷子”选择体验：按住鼠标左键并在复选框列表上划过，即可一气呵成批量反转或设置它们的状态。
 
-杩欐槸閫氳繃鑷畾涔?`BrushCheckBox` 骞跺畨瑁呭叏灞€搴旂敤绋嬪簭浜嬩欢杩囨护鍣ㄥ疄鐜扮殑锛?
+这是通过自定义 `BrushCheckBox` 并安装全局应用程序事件过滤器实现的：
 
 ```python
 class BrushCheckBox(QtWidgets.QCheckBox):
     def mousePressEvent(self, event) -> None:
         if event.button() == QtCore.Qt.MouseButton.LeftButton and self.isEnabled():
-            # 濮旀墭缁欎富绐楀彛寮€濮嬧€滃埛鍔ㄢ€濇搷浣?
+            # 委托给主窗口开始“刷动”操作
             if self._manager._begin_checkbox_brush(self):
                 event.accept()
                 return
         super().mousePressEvent(event)
 ```
 
-鍦ㄤ富绐楀彛绫讳腑锛屾粦鍔ㄦ湡闂存崟鑾烽紶鏍囧垝杩囩殑鐩爣鎺т欢锛?
+在主窗口类中，滑动期间捕获鼠标划过的目标控件：
 ```python
 def eventFilter(self, watched, event) -> bool:
     if self._checkbox_brush_active:
         if event.type() == QtCore.QEvent.Type.MouseMove:
-            # 鐩戞祴榧犳爣鎷栨嫿鐘舵€?
+            # 监测鼠标拖拽状态
             buttons = event.buttons()
             if not (buttons & QtCore.Qt.MouseButton.LeftButton):
                 self._end_checkbox_brush()
                 return True
             
-            # 鑾峰彇鍏夋爣涓嬬殑 Widget 骞跺簲鐢ㄦ壒閲忎慨鏀?
+            # 获取光标下的 Widget 并应用批量修改
             global_pos = QtGui.QCursor.pos()
             checkbox = self._find_brush_checkbox(QtWidgets.QApplication.widgetAt(global_pos))
             if checkbox:
@@ -276,14 +276,14 @@ def eventFilter(self, watched, event) -> bool:
     return super().eventFilter(watched, event)
 ```
 
-### 妯″紡 4锛氳嚜瀹氫箟 QListWidget Item 涓殑澶氶€変笌淇グ閿鐞?
-褰撴垜浠妸鑷畾涔夌殑澶嶆潅 Widget锛堝甯﹀浘琛ㄧ殑鑷畾涔夊抚锛夐€氳繃 `setItemWidget` 濉炶繘 `QListWidget` 涓椂锛屽瓙 Widget 浼氭嫤鎴墍鏈夌殑榧犳爣浜嬩欢銆傝繖浼氬鑷村師鏈?`QListWidget` 鑷甫鐨勫閫夛紙鎸変綇 Shift 鎴?Ctrl 閿繛閫夛級澶辨晥銆?
+### 模式 4：自定义 QListWidget Item 中的多选与修饰键处理
+当我们把自定义的复杂 Widget（如带图表的自定义帧）通过 `setItemWidget` 塞进 `QListWidget` 中时，子 Widget 会拦截所有的鼠标事件。这会导致原本 `QListWidget` 自带的多选（按住 Shift 或 Ctrl 键连选）失效。
 
-ViewLayer 绠＄悊鍣ㄩ€氳繃閲嶅啓瀛?Widget 鐨?`mousePressEvent`锛屾彁鍙栨縺娲荤殑閿洏淇グ閿紝鐒跺悗鎵嬪伐鍥炶皟涓荤獥鍙ｇ殑鍒楄〃閫夋嫨绠楁硶锛?
+ViewLayer 管理器通过重写子 Widget 的 `mousePressEvent`，提取激活的键盘修饰键，然后手工回调主窗口的列表选择算法：
 
 ```python
 class ViewLayerListRowWidget(QtWidgets.QFrame):
-    clicked = QtCore.Signal(str, int) # 鍙戦€佽鍥惧眰鍚嶇О涓庝慨楗伴敭鐨勬暣鍨嬫暟鍊?
+    clicked = QtCore.Signal(str, int) # 发送视图层名称与修饰键的整型数值
 
     def mousePressEvent(self, event) -> None:
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
@@ -295,7 +295,7 @@ class ViewLayerListRowWidget(QtWidgets.QFrame):
         super().mousePressEvent(event)
 ```
 
-鍦ㄤ富绐楀彛涓紝鎺ユ敹淇″彿骞跺疄鐜板閫夎鐩栵細
+在主窗口中，接收信号并实现多选覆盖：
 ```python
 def _on_classic_row_clicked(self, view_layer_name: str, modifiers: int) -> None:
     ctrl_pressed = bool(modifiers & QtCore.Qt.KeyboardModifier.ControlModifier.value)
@@ -303,13 +303,13 @@ def _on_classic_row_clicked(self, view_layer_name: str, modifiers: int) -> None:
     
     self.view_layer_list.blockSignals(True)
     if shift_pressed and self._selection_anchor:
-        # 閫夋嫨閿氱偣涓庣洰鏍囪涔嬮棿鐨勬墍鏈夐」
+        # 选择锚点与目标行之间的所有项
         self._select_range(self._selection_anchor, view_layer_name)
     elif ctrl_pressed:
-        # 浠呭弽杞綋鍓嶉€変腑椤圭殑鐘舵€?
+        # 仅反转当前选中项的状态
         self._toggle_selection(view_layer_name)
     else:
-        # 鏅€氬崟閫?
+        # 普通单选
         self._select_single(view_layer_name)
         self._selection_anchor = view_layer_name
     self.view_layer_list.blockSignals(False)
@@ -317,47 +317,47 @@ def _on_classic_row_clicked(self, view_layer_name: str, modifiers: int) -> None:
     self.refresh_from_blender()
 ```
 
-### 妯″紡 5锛氭瀬鑷村儚绱犵骇娴佺晠鍒楄〃婊氬姩
-瀵逛簬鍒楄〃鍏冪礌杩囬暱涓旂揣鍑戠殑瑙嗗浘锛屽師鐢?Qt 婊氬姩鏉℃槸鎸夐」锛坕tem-by-item锛夋粴鍔ㄧ殑锛屼細鏈夋槑鏄剧殑椤挎尗鎰熴€傚彲浠ラ€氳繃寮哄埗寮€鍚儚绱犵骇骞虫粦婊氬姩鏉ヤ紭鍖栬壓鏈浣撻獙锛?
+### 模式 5：极致像素级流畅列表滚动
+对于列表元素过长且紧凑的视图，原生 Qt 滚动条是按项（item-by-item）滚动的，会有明显的顿挫感。可以通过强制开启像素级平滑滚动来优化艺术家体验：
 
 ```python
 def _configure_smooth_scroll(view: QtWidgets.QAbstractScrollArea) -> None:
     view.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollMode.ScrollPerPixel)
     
     vertical_scrollbar = view.verticalScrollBar()
-    vertical_scrollbar.setSingleStep(18)  # 鍗曟骞虫粦鍍忕礌璺濈
-    vertical_scrollbar.setPageStep(72)    # 椤甸潰鍗曢〉缈绘粴鍍忕礌璺濈
+    vertical_scrollbar.setSingleStep(18)  # 单步平滑像素距离
+    vertical_scrollbar.setPageStep(72)    # 页面单页翻滚像素距离
 ```
 
 ---
 
-## 8. 鏂板缓 Qt 宸ュ叿寮€鍙戞祦绋?
+## 8. 新建 Qt 工具开发流程
 
-鑻ヤ綘璁″垝鍦ㄦ Blender 鍒嗘敮涓泦鎴愬叏鏂扮殑 Qt 宸ュ叿锛岃鍔″繀閬靛惊浠ヤ笅瀹夊叏鐨勬帴鍏ヨ鑼冿細
+若你计划在此 Blender 分支中集成全新的 Qt 工具，请务必遵循以下安全的接入规范：
 
-### 绗竴姝ワ細鏋勫缓妗ユ帴绠楀瓙鍏ュ彛
-棣栧厛鍦?`scripts/startup/bl_operators/` 鐩綍涓嬪垱寤鸿交閲忕殑鍏ュ彛绠楀瓙锛堜緥濡?`blender_vfx_my_new_tool.py`锛夈€傜‘璁よ兘姝ｅ父娉ㄥ唽骞跺湪鑿滃崟鏍忔樉绀猴紝鍏堜笉瑕佺紪鍐欎换浣曞鏉傜殑 UI 閫昏緫銆?
+### 第一步：构建桥接算子入口
+首先在 `scripts/startup/bl_operators/` 目录下创建轻量的入口算子（例如 `blender_vfx_my_new_tool.py`）。确认能正常注册并在菜单栏显示，先不要编写任何复杂的 UI 逻辑。
 
-### 绗簩姝ワ細鍒涘缓涓嶅惈渚濊禆鐨勭郴缁熸墿灞?
-鍦?`release/extensions/system/my_new_tool_extension/` 鐩綍涓嬪缓绔嬩綘鑷繁鐨勬墿灞曞寘銆傞厤缃ソ鍩虹鐨?`blender_manifest.toml`銆?*缁濆绂佹**鍦ㄨ鎵╁睍鍖呭唴鎼哄甫浠讳綍 `.whl` 鏂囦欢銆?
+### 第二步：创建不含依赖的系统扩展
+在 `release/extensions/system/my_new_tool_extension/` 目录下建立你自己的扩展包。配置好基础的 `blender_manifest.toml`。**绝对禁止**在该扩展包内携带任何 `.whl` 文件。
 
-### 绗簩姝ワ細缂栧啓 UI 涓庡悓姝ユ満鍒?
-鍦ㄦ墿灞曞寘鍐呭疄鐜?`manager.py`锛屽湪鍏跺唴璋冪敤甯搁┗鍖呰妯″潡鐨?`ensure_runtime()` 寮曞 Qt锛屽苟鍩轰簬鍗曚緥妯″紡瀹炰緥鍖栦綘鐨?Standalone 绐楀彛銆傜‘淇濇秹鍙?Blender 灞炴€т慨鏀圭殑鏂规硶琚?`@context_window` 姝ｇ‘瑕嗙洊銆?
+### 第二步：编写 UI 与同步机制
+在扩展包内实现 `manager.py`，在其内调用常驻包装模块的 `ensure_runtime()` 引导 Qt，并基于单例模式实例化你的 Standalone 窗口。确保涉及 Blender 属性修改的方法被 `@context_window` 正确覆盖。
 
 ---
 
-## 9. 鑷姩鍖栭泦鎴愪笌楠岃瘉娴佹按绾?
+## 9. 自动化集成与验证流水线
 
-鎵€鏈夊紑鍙戠殑 BQt 宸ュ叿鍦ㄥ悎骞惰繘鍏ヤ富绾垮墠锛屽繀椤婚€氳繃浠ヤ笅瀹屾暣鐨勫垎灞傞獙璇侀獙璇侀摼锛?
+所有开发的 BQt 工具在合并进入主线前，必须通过以下完整的分层验证验证链：
 
 ```
-[姝ラ涓€锛氱紪璇戦獙璇乚 鉃?[姝ラ浜岋細甯冨眬瀹屾暣鎬ч獙璇乚 鉃?[姝ラ涓夛細鍚庡彴妯″紡鍐掔儫楠岃瘉] 鉃?[姝ラ鍥涳細GUI 鍔熻兘鍐掔儫楠岃瘉]
+[步骤一：编译验证] ➔ [步骤二：布局完整性验证] ➔ [步骤三：后台模式冒烟验证] ➔ [步骤四：GUI 功能冒烟验证]
 ```
 
-1. **姝ラ涓€锛氱紪璇戦獙璇?*锛氫娇鐢?`python -m compileall` 妫€鏌ユ墍鏈夎剼鏈殑璇硶姝ｇ‘鎬с€?
-2. **姝ラ浜岋細甯冨眬瀹屾暣鎬ч獙璇?*锛氳繍琛屾墦鍖呭竷灞€娴嬭瘯锛岄槻姝㈡墿灞曡璇皝瑁呭湪宓屽鐨?`system/system/` 鏂囦欢澶逛笅銆傛墽琛屾祴璇曞懡浠わ細
+1. **步骤一：编译验证**：使用 `python -m compileall` 检查所有脚本的语法正确性。
+2. **步骤二：布局完整性验证**：运行打包布局测试，防止扩展被误封装在嵌套的 `system/system/` 文件夹下。执行测试命令：
    ```bash
    ctest -R blender_vfx_system_extensions_layout_test
    ```
-3. **姝ラ涓夛細鍚庡彴妯″紡鍐掔儫楠岃瘉**锛氬惎鍔?Blender 鍚庡彴妯″紡锛圚eadless Mode锛夛紝璋冪敤绠楀瓙娴嬭瘯纭繚鍚敤 `bqt` 鏃朵笉鍙戠敓瀵煎叆姝婚攣鎴栧穿婧冦€?
-4. **姝ラ鍥涳細GUI 鍔熻兘鍐掔儫楠岃瘉**锛氬湪缂栬瘧鍚庣殑 Blender release 涓墿鐞嗘媺璧峰伐鍏风獥鍙ｏ紝瀹炴祴婊戝姩杩為€夈€佸儚绱犵骇骞虫粦婊氬姩浠ュ強鍓嶅悗鍙扮劍鐐瑰垏鎹㈣嚜鍔ㄩ殣钘忓姛鑳姐€?
+3. **步骤三：后台模式冒烟验证**：启动 Blender 后台模式（Headless Mode），调用算子测试确保启用 `bqt` 时不发生导入死锁或崩溃。
+4. **步骤四：GUI 功能冒烟验证**：在编译后的 Blender release 中物理拉起工具窗口，实测滑动连选、像素级平滑滚动以及前后台焦点切换自动隐藏功能。

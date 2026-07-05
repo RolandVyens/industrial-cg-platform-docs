@@ -1,4 +1,4 @@
-﻿# Lightgroup Lobe Passes
+# Lightgroup Lobe Passes
 
 <Badge type="tip" text="Shipped" />
 
@@ -6,14 +6,14 @@
 
 Lightgroup Lobe Passes extend Blender Cycles' light pass system by breaking down each **lightgroup** into its individual lighting components (lobes). Instead of getting only a combined lightgroup pass, you can now output separate **diffuse**, **glossy**, **transmission**, and **volume** passes for each lightgroup, with further **direct** and **indirect** separation.
 
-This gives lighting artists and compositors the same level of control per lightgroup that Blender already provides at the global level 鈥?but isolated to each lighting setup.
+This gives lighting artists and compositors the same level of control per lightgroup that Blender already provides at the global level — but isolated to each lighting setup.
 
 ## Why Use It
 
-- **Fine-grained relighting** 鈥?Adjust individual light contributions by their component type in comp, not just by overall intensity.
-- **Per-lightgroup breakdown** 鈥?See exactly how each lightgroup contributes to diffuse, glossy, transmission, and volume independently.
-- **Aggregate balance** 鈥?The sum of all per-lightgroup lobe passes reconstructs back to the combined beauty pass, enabling reliable round-trip compositing.
-- **Production-proven** 鈥?Validated on real production scenes with area, point, spot, and sun light types.
+- **Fine-grained relighting** — Adjust individual light contributions by their component type in comp, not just by overall intensity.
+- **Per-lightgroup breakdown** — See exactly how each lightgroup contributes to diffuse, glossy, transmission, and volume independently.
+- **Aggregate balance** — The sum of all per-lightgroup lobe passes reconstructs back to the combined beauty pass, enabling reliable round-trip compositing.
+- **Production-proven** — Validated on real production scenes with area, point, spot, and sun light types.
 
 ## How To Enable
 
@@ -53,7 +53,7 @@ For example, with a lightgroup named `key`:
 The lobe passes are designed so that:
 
 ```
-Combined_<lg> 鈮?危 (Lobe_Direct_<lg> + Lobe_Indirect_<lg>)
+Combined_<lg> ≈ Σ (Lobe_Direct_<lg> + Lobe_Indirect_<lg>)
 ```
 
 for each lightgroup. This means:
@@ -83,11 +83,11 @@ A useful compositing check: the sum of all lightgroup lobe passes (plus emissive
 
 ## Known Limitations
 
-- **Emissive meshes** 鈥?Emissive mesh lightgroups remain combined-only and do not split into direct/indirect lobes. This is by design.
-- **Full arbitrary LPE** 鈥?Full Light Path Expression syntax is future work. The current system provides the most commonly needed lobe breakdown.
+- **Emissive meshes** — Emissive mesh lightgroups remain combined-only and do not split into direct/indirect lobes. This is by design.
+- **Full arbitrary LPE** — Full Light Path Expression syntax is future work. The current system provides the most commonly needed lobe breakdown.
 
 ## See Also
 
-- [Pass & AOV System (API)](/en/industrial-cg-platform/api/pass-system) 鈥?Internal pass registration and readback architecture.
-- [Cycles Kernel Extensions (API)](/en/industrial-cg-platform/api/cycles-kernel) 鈥?Kernel-level lightgroup split index data.
-- [Blender Manual: Light Groups](https://docs.blender.org/manual/en/latest/render/layers/passes.html) 鈥?Standard Blender light group documentation.
+- [Pass & AOV System (API)](/en/industrial-cg-platform/api/pass-system) — Internal pass registration and readback architecture.
+- [Cycles Kernel Extensions (API)](/en/industrial-cg-platform/api/cycles-kernel) — Kernel-level lightgroup split index data.
+- [Blender Manual: Light Groups](https://docs.blender.org/manual/en/latest/render/layers/passes.html) — Standard Blender light group documentation.

@@ -1,4 +1,4 @@
-﻿# General Software Setup
+# General Software Setup
 
 This page explains how to integrate **AIO-OCIO** config recipes with Autodesk Maya, Foundry Nuke, SideFX Houdini, and other DCC applications.
 

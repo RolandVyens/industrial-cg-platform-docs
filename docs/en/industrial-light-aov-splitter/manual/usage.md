@@ -1,4 +1,4 @@
-﻿# Light Splitter Usage & Guidelines
+# Light Splitter Usage & Guidelines
 
 This page explains the production workflow and naming constraints for the **Industrial Light AOV Splitter**.
 
@@ -13,7 +13,7 @@ Place all lights you wish to split into scene collections whose names start with
 
 ### 2. **Alphanumeric Light Naming**
 Name your lights using **letters and numbers only**. 
-> 鈿狅笍 **Important:** Do not use any underscores (`_`) in light names, as the splitter uses underscores to append the component passes (e.g., `diffuse_env`, `specular_env`).
+> ⚠️ **Important:** Do not use any underscores (`_`) in light names, as the splitter uses underscores to append the component passes (e.g., `diffuse_env`, `specular_env`).
 
 ### 3. **Light Duplication & Reusability**
 If you want multiple physical lights to share the same lightgroup name, simply duplicate the lights. Blender automatically appends suffixes like `.001` or `.002`. The add-on recognizes and ignores these suffixes, automatically mapping them to the base name group.

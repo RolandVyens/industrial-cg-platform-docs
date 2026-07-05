@@ -1,4 +1,4 @@
-﻿# Deep EXR Output
+# Deep EXR Output
 
 <Badge type="tip" text="Shipped" />
 
@@ -10,10 +10,10 @@ Industrial CG Platform adds native Deep EXR output support to Blender Cycles, ma
 
 ## Why Use It
 
-- **Lossless deep merge** 鈥?Combine multiple CG render layers in Nuke using `DeepMerge` without edge artifacts or manual holdout mattes.
-- **Per-sample depth** 鈥?Each pixel carries full depth information, allowing downstream compositors to slice, resample, and relight at arbitrary depth ranges.
-- **Volume support** 鈥?Volume rendering data is included in the deep output with the current shipped behavior.
-- **Direct scene output and compositor** 鈥?Works both as direct render output and through the Blender compositor.
+- **Lossless deep merge** — Combine multiple CG render layers in Nuke using `DeepMerge` without edge artifacts or manual holdout mattes.
+- **Per-sample depth** — Each pixel carries full depth information, allowing downstream compositors to slice, resample, and relight at arbitrary depth ranges.
+- **Volume support** — Volume rendering data is included in the deep output with the current shipped behavior.
+- **Direct scene output and compositor** — Works both as direct render output and through the Blender compositor.
 
 ## How To Enable
 
@@ -32,7 +32,7 @@ Industrial CG Platform adds native Deep EXR output support to Blender Cycles, ma
 4. The deep file output node works correctly when the compositor device is set to `GPU`.
 
 ::: info
-Deep EXR File Output does not force the rest of the compositor off the GPU 鈥?it integrates seamlessly with GPU compositing.
+Deep EXR File Output does not force the rest of the compositor off the GPU — it integrates seamlessly with GPU compositing.
 :::
 
 ## Parameters
@@ -55,9 +55,9 @@ For best results, render each major CG element (characters, environments, effect
 
 ## Known Limitations
 
-- **Volume deep behavior** 鈥?Current volume deep output is accepted as shipped. Memory-heavy volume scenes may produce large deep files.
-- **Metadata reconstruction** 鈥?Full deep metadata reconstruction is future work, not part of the current baseline.
-- **Memory usage** 鈥?Deep output stores significantly more data than flat EXR. Use the Deep Tile Budget parameter to control the tradeoff.
+- **Volume deep behavior** — Current volume deep output is accepted as shipped. Memory-heavy volume scenes may produce large deep files.
+- **Metadata reconstruction** — Full deep metadata reconstruction is future work, not part of the current baseline.
+- **Memory usage** — Deep output stores significantly more data than flat EXR. Use the Deep Tile Budget parameter to control the tradeoff.
 
 ## Future Work
 
@@ -66,5 +66,5 @@ For best results, render each major CG element (characters, environments, effect
 
 ## See Also
 
-- [Pass & AOV System (API)](/en/industrial-cg-platform/api/pass-system) 鈥?How deep passes are registered internally.
-- [Blender Manual: Output Properties](https://docs.blender.org/manual/en/latest/render/output/properties/output.html) 鈥?Standard Blender output settings.
+- [Pass & AOV System (API)](/en/industrial-cg-platform/api/pass-system) — How deep passes are registered internally.
+- [Blender Manual: Output Properties](https://docs.blender.org/manual/en/latest/render/output/properties/output.html) — Standard Blender output settings.

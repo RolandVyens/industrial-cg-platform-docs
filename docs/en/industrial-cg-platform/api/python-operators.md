@@ -1,4 +1,4 @@
-﻿# Python Operators
+# Python Operators
 
 This page documents the Python operators and the shared Qt runtime API that Industrial CG Platform adds to Blender.
 
@@ -67,7 +67,7 @@ present_window(my_window_instance)
 ```
 
 **Parameters:**
-- `widget` 鈥?A `QWidget` instance to display.
+- `widget` — A `QWidget` instance to display.
 
 **Behavior:**
 - Calls `.show()` on the widget.
@@ -93,8 +93,8 @@ show_unique_window(_window_cache, factory)
 ```
 
 **Parameters:**
-- `cache_ref` 鈥?A dictionary (e.g. `{"value": None}`) used to store the active window reference.
-- `factory` 鈥?A callable (function or lambda) that takes no arguments and returns a newly instantiated `QWidget` subclass.
+- `cache_ref` — A dictionary (e.g. `{"value": None}`) used to store the active window reference.
+- `factory` — A callable (function or lambda) that takes no arguments and returns a newly instantiated `QWidget` subclass.
 
 **Behavior:**
 - Checks if the cached window exists and is alive (using `qt_window_is_alive(widget)`).
@@ -114,7 +114,7 @@ if qt_window_is_alive(my_window):
 ```
 
 **Parameters:**
-- `widget` 鈥?A `QWidget` instance (or `None`).
+- `widget` — A `QWidget` instance (or `None`).
 
 **Behavior:**
 - Returns `False` if `widget` is `None`.

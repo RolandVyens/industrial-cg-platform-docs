@@ -1,48 +1,48 @@
-﻿# 浠庢簮鐮佹瀯寤?
+# 从源码构建
 
-## 鍓嶇疆渚濊禆鏉′欢
+## 前置依赖条件
 
-| 宸ュ叿 | 鐗堟湰瑕佹眰 | 澶囨敞 |
+| 工具 | 版本要求 | 备注 |
 | --- | --- | --- |
-| **Visual Studio** | 2022 (17.x) | 蹇呴』鍕鹃€夆€滀娇鐢?C++ 鐨勬闈㈠紑鍙戔€濆伐浣滆礋杞?|
-| **CMake** | 3.24+ | Visual Studio 鑷甫鎴栫嫭绔嬪畨瑁呯増鏈潎鍙?|
-| **Ninja** | 1.11+ | 寮虹儓鎺ㄨ崘鐨勮交閲忕骇鏋勫缓绯荤粺 |
-| **Git** | 2.30+ | 蹇呴』闆嗘垚 Git LFS 鏀寔 |
-| **Python** | 3.13 | 鐢?Blender 鐨勬瀯寤虹郴缁熻嚜鍔ㄨ幏鍙栧苟绠＄悊 |
+| **Visual Studio** | 2022 (17.x) | 必须勾选“使用 C++ 的桌面开发”工作负载 |
+| **CMake** | 3.24+ | Visual Studio 自带或独立安装版本均可 |
+| **Ninja** | 1.11+ | 强烈推荐的轻量级构建系统 |
+| **Git** | 2.30+ | 必须集成 Git LFS 支持 |
+| **Python** | 3.13 | 由 Blender 的构建系统自动获取并管理 |
 
-## 鍏嬮殕浠撳簱
+## 克隆仓库
 
 ```powershell
 git clone https://github.com/RolandVyens/industrial-cg-platform.git
 cd industrial-cg-platform
 ```
 
-## 鑾峰彇缂栬瘧渚濊禆
+## 获取编译依赖
 
-Blender 缂栬瘧闇€瑕佸ぇ閲忕殑棰勭紪璇戦潤鎬佸簱銆傝繍琛屼互涓嬪懡浠や互鎷夊彇瀹樻柟渚濊禆锛?
+Blender 编译需要大量的预编译静态库。运行以下命令以拉取官方依赖：
 
 ```powershell
 make update
 ```
 
-杩欎細鑷姩浠?Blender 瀹樻柟鐨?SVN 浠撳簱涓媺鍙栧搴旂殑 `lib/windows_x64` 棰勭紪璇戜緷璧栥€?
+这会自动从 Blender 官方的 SVN 仓库中拉取对应的 `lib/windows_x64` 预编译依赖。
 
-::: warning LFS 璧勬簮姘村悎鎷︽埅 (LFS Hydration Gate)
-鍦ㄥ紑濮嬬紪璇戝墠锛岃鍔″繀楠岃瘉浠撳簱涓嚜甯︾殑 LFS 浜岃繘鍒惰祫浜ф槸鍚﹀凡琚纭€滄按鍚堚€濓紙鍗充笅杞戒负鐪熷疄鐨勫疄浣撴枃浠惰€岄潪鎸囬拡瀛樻牴锛夈€傝妫€鏌ヤ互涓嬭矾寰勭殑鏂囦欢鏄惁鍖呭惈浜嗘寚閽堝瓨鏍规枃鏈細
+::: warning LFS 资源水合拦截 (LFS Hydration Gate)
+在开始编译前，请务必验证仓库中自带的 LFS 二进制资产是否已被正确“水合”（即下载为真实的实体文件而非指针存根）。请检查以下路径的文件是否包含了指针存根文本：
 
 - `assets/`
 - `release/datafiles/`
 - `scripts/startup/bl_app_templates_system/`
 
-濡傛灉浠讳綍璧勪骇鏂囦欢浠呭寘鍚?`version https://git-lfs.github.com/spec/v1` 鐨勭函鏂囨湰鍐呭锛岃〃绀哄叾浠嶄负瀛樻牴鐘舵€侊紝鎮ㄩ渶瑕佸厛浠庡彲淇＄殑 Git 婧愬鍏惰繍琛?`git lfs pull` 浠ュ畬鎴愭按鍚堛€?
+如果任何资产文件仅包含 `version https://git-lfs.github.com/spec/v1` 的纯文本内容，表示其仍为存根状态，您需要先从可信的 Git 源对其运行 `git lfs pull` 以完成水合。
 :::
 
-## 閰嶇疆缂栬瘧鍙傛暟
+## 配置编译参数
 
-浣跨敤 Ninja 缂栬瘧绯荤粺杩涜 CMake 閰嶇疆锛堝畼鏂规帹鑽愯矾寰勶級锛?
+使用 Ninja 编译系统进行 CMake 配置（官方推荐路径）：
 
 ```powershell
-# 蹇呴』棣栧厛鍔犺浇 Visual Studio 寮€鍙戣€呯幆澧冨懡浠よ鐜
+# 必须首先加载 Visual Studio 开发者环境命令行环境
 & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
 cmake -G Ninja -B build -S . `
@@ -53,39 +53,39 @@ cmake -G Ninja -B build -S . `
 ```
 
 ::: tip
-璇锋牴鎹偍鏈満鐨勫叿浣?GPU 鏄惧崱鏋舵瀯鏋舵瀯锛屽皢 `sm_89` 鏇挎崲涓虹浉搴旂殑璁＄畻鑳藉姏锛圕ompute Capability锛夛細
-- RTX 4080/4090锛歚sm_89`
-- RTX 3080/3090锛歚sm_86`
-- RTX 2080锛歚sm_75`
+请根据您本机的具体 GPU 显卡架构架构，将 `sm_89` 替换为相应的计算能力（Compute Capability）：
+- RTX 4080/4090：`sm_89`
+- RTX 3080/3090：`sm_86`
+- RTX 2080：`sm_75`
 :::
 
-## 鎵ц缂栬瘧
+## 执行编译
 
 ```powershell
 cmake --build build --target blender
 ```
 
-## 瀹夎
+## 安装
 
 ```powershell
 cmake --install build --prefix install
 ```
 
-缂栬瘧杈撳嚭鐨勮繍琛屾椂鐜浼氳鎻愬彇骞跺畨瑁呭湪 `install/` 鐩綍涓嬨€?
+编译输出的运行时环境会被提取并安装在 `install/` 目录下。
 
-## 楠岃瘉
+## 验证
 
 ```powershell
 .\install\blender.exe --version
 ```
 
-## 宸茬煡鏋勫缓娉ㄦ剰浜嬮」 (Known Build Notes)
+## 已知构建注意事项 (Known Build Notes)
 
-- **寮虹儓寤鸿浣跨敤 Ninja** 鈥?浼犵粺鐨?Visual Studio 瑙ｅ喅鏂规鐢熸垚鍣ㄥ湪杩涜缂栬瘧鍣?ID 鎺㈡祴锛坈ompiler-ID detection锛夋椂锛屽彲鑳戒細鍥犱负宸ヤ綔绔欐湰鍦扮殑 `Tracker.exe` 鍐茬獊鑰屽交搴曟寕璧枫€備娇鐢?VS 寮€鍙戣€呯粓绔姞杞?Ninja 鏄粡杩囦弗瀵嗛獙璇佺殑瀹樻柟榛樿鏋勫缓璺緞銆?
-- **`TrackFileAccess=false`** 鈥?濡傛灉鎮ㄥ繀椤荤洿鎺ヤ娇鐢?MSBuild锛岃鍔″繀鍦ㄥ懡浠よ鍙傛暟涓紶鍏?`/p:TrackFileAccess=false`锛屼互閬垮厤 MSBuild Tracker 鎸傝捣銆?
-- **PDB 绗﹀彿鐢熸垚澶辫触** 鈥?鍦ㄧ敓鎴?Release 鏋勫缓鏃讹紝鍙兘浼氬洜涓?PDB 绗﹀彿鏂囦欢浣撶Н搴炲ぇ鑰屽湪鐢熸垚闃舵瑙﹀彂 `LNK1318` 杩炴帴鍣ㄩ敊璇€傝嫢閬囧埌姝ら棶棰橈紝寤鸿浼犲叆 `-DWITH_WINDOWS_RELEASE_PDB=OFF` 绂佺敤 PDB 绗﹀彿鐢熸垚銆?
+- **强烈建议使用 Ninja** — 传统的 Visual Studio 解决方案生成器在进行编译器 ID 探测（compiler-ID detection）时，可能会因为工作站本地的 `Tracker.exe` 冲突而彻底挂起。使用 VS 开发者终端加载 Ninja 是经过严密验证的官方默认构建路径。
+- **`TrackFileAccess=false`** — 如果您必须直接使用 MSBuild，请务必在命令行参数中传入 `/p:TrackFileAccess=false`，以避免 MSBuild Tracker 挂起。
+- **PDB 符号生成失败** — 在生成 Release 构建时，可能会因为 PDB 符号文件体积庞大而在生成阶段触发 `LNK1318` 连接器错误。若遇到此问题，建议传入 `-DWITH_WINDOWS_RELEASE_PDB=OFF` 禁用 PDB 符号生成。
 
-## 鍙﹁鍙傞槄
+## 另请参阅
 
-- [Blender 寮€鍙戣€呮墜鍐岋細鏋勫缓 Blender](https://developer.blender.org/docs/handbook/building_blender/) 鈥?瀹樻柟 Blender 婧愮爜鏋勫缓鍙傝€冩枃妗ｃ€?
-- [瀹夎](/zh/industrial-cg-platform/guide/installation) 鈥?浠庨缂栬瘧濂界殑 Release 鍖呭揩閫熷畨瑁呫€?
+- [Blender 开发者手册：构建 Blender](https://developer.blender.org/docs/handbook/building_blender/) — 官方 Blender 源码构建参考文档。
+- [安装](/zh/industrial-cg-platform/guide/installation) — 从预编译好的 Release 包快速安装。

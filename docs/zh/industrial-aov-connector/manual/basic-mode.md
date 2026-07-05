@@ -1,24 +1,36 @@
-﻿# 鍩虹妯″紡
+# 基础模式
 
-鏈〉灏嗕负鎮ㄤ粙缁?**Industrial AOV Connector** 鐨勫熀纭€鍔熻兘鍜岀晫闈㈤€夐」銆?
-<img width="300" alt="鍩虹妯″紡闈㈡澘" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+本页将为您介绍 **Industrial AOV Connector** 的基础功能和界面选项。
 
-## **UI 榛樿閫夐」**
+<img width="300" alt="基础模式面板" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-### 1. **Main Config (涓婚厤缃璁?**
-鍩虹妯″紡涓嬬殑棰勮閰嶆柟锛屽喅瀹氫簡鐢熸垚鍚堟垚鑺傜偣鏃剁殑閫氶亾杈撳嚭缁撴瀯鍜屾枃浠舵牸寮忋€?
-### 2. **Output Settings (杈撳嚭璁剧疆)**
-鍖呭惈涓€绯诲垪蹇€熷紑鍏筹紝鐢ㄤ簬鍦ㄧ敓鎴愯妭鐐规爲鍓嶅揩閫熷井璋冿紙渚嬪寮€鍚檷鍣€佹寚瀹氳矾寰勭瓑锛夈€?
-### 3. **`Cook Nodetree` 鎸夐挳**
-涓€閿负鍦烘櫙涓?*鎵€鏈夌殑瑙嗗浘灞?(ViewLayers)** 鑷姩鐢熸垚瀹屾暣鐨勫悎鎴愯緭鍑鸿妭鐐规爲锛坄File Output` 鑺傜偣锛夈€傞粯璁ゆ儏鍐典笅锛屽畠浼氬厛娓呯┖鍚堟垚鍣ㄤ腑鐨勭幇鏈夎妭鐐癸紝鎮ㄥ彲浠ュ湪鍋忓ソ璁剧疆涓叧闂娓呯┖鍔ㄤ綔銆?
-### 4. **`Update Current Viewlayer` 鎸夐挳**
-浠呬负**褰撳墠閫変腑鐨勮鍥惧眰**鐢熸垚杈撳嚭鑺傜偣銆傝繖灞炰簬闈炵牬鍧忔€ф搷浣滐紝涓嶄細褰卞搷褰撳墠瑙嗗浘灞備箣澶栫殑浠讳綍宸叉湁鑺傜偣銆?
-### 5. **`Arrange Connector Nodes` 鎸夐挳**
-涓€閿嚜鍔ㄦ暣鐞嗗苟瀵归綈鍚堟垚鍣ㄤ腑鐢辨湰鎻掍欢鐢熸垚鐨勮妭鐐规爲锛屼娇鐣岄潰淇濇寔鏁存磥銆?
+## **UI 默认选项**
+
+### 1. **Main Config (主配置预设)**
+基础模式下的预设配方，决定了生成合成节点时的通道输出结构和文件格式。
+
+### 2. **Output Settings (输出设置)**
+包含一系列快速开关，用于在生成节点树前快速微调（例如开启降噪、指定路径等）。
+
+### 3. **`Cook Nodetree` 按钮**
+一键为场景中**所有的视图层 (ViewLayers)** 自动生成完整的合成输出节点树（`File Output` 节点）。默认情况下，它会先清空合成器中的现有节点，您可以在偏好设置中关闭此清空动作。
+
+### 4. **`Update Current Viewlayer` 按钮**
+仅为**当前选中的视图层**生成输出节点。这属于非破坏性操作，不会影响当前视图层之外的任何已有节点。
+
+### 5. **`Arrange Connector Nodes` 按钮**
+一键自动整理并对齐合成器中由本插件生成的节点树，使界面保持整洁。
+
 ---
 
-## **UI 闅愯棌/杈呭姪鍔熻兘**
+## **UI 隐藏/辅助功能**
 
-### **`Delete Useless Default Renders` 鎸夐挳**
-榛樿闅愯棌銆傛鎸夐挳涓撻棬鐢ㄤ簬娓呯悊鍚嶄负 `trash_output` 鐨勬枃浠跺す锛堣鏂囦欢澶瑰唴鍖呭惈浜?Blender 鐨勯粯璁ゆ棤鐢ㄦ覆鏌撹緭鍑猴級銆傛墽琛屾鎿嶄綔闈炲父瀹夊叏锛屽洜涓烘湰鎻掍欢鐢熸垚鐨勬湁鏁堟覆鏌撹矾寰勭粷瀵逛笉浼氭斁鍦?`trash_output` 鐩綍涓嬨€?
-鑻ヨ寮€鍚鎸夐挳锛?1. 鐐瑰嚮鎻掍欢澶撮儴鏍忎笂鐨?**`Preference` (鍋忓ソ璁剧疆)**銆?2. 鎵惧埌 **"Output Tools"** (杈撳嚭宸ュ叿) 閮ㄥ垎銆?3. 鍕鹃€夊苟寮€鍚互涓嬩袱涓€夐」锛?   * **`Default useless renders gather`**锛氳嚜鍔ㄥ皢 Blender 榛樿鐨勬覆鏌撹緭鍑鸿矾寰勯噸瀹氬悜鑷?`trash_output` 鏂囦欢澶癸紝鏂逛究鍚庣画缁熶竴娓呯悊銆?   * **`Show useless renders clean button`**锛氬湪杈撳嚭宸ュ叿闈㈡澘涓婃樉绀衡€淒elete Useless Default Renders鈥濇竻鐞嗘寜閽€?
+### **`Delete Useless Default Renders` 按钮**
+默认隐藏。此按钮专门用于清理名为 `trash_output` 的文件夹（该文件夹内包含了 Blender 的默认无用渲染输出）。执行此操作非常安全，因为本插件生成的有效渲染路径绝对不会放在 `trash_output` 目录下。
+
+若要开启此按钮：
+1. 点击插件头部栏上的 **`Preference` (偏好设置)**。
+2. 找到 **"Output Tools"** (输出工具) 部分。
+3. 勾选并开启以下两个选项：
+   * **`Default useless renders gather`**：自动将 Blender 默认的渲染输出路径重定向至 `trash_output` 文件夹，方便后续统一清理。
+   * **`Show useless renders clean button`**：在输出工具面板上显示“Delete Useless Default Renders”清理按钮。

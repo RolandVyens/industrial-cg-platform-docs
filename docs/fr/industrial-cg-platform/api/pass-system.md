@@ -1,6 +1,6 @@
-﻿# Syst猫me de Passes & AOV
+# Système de Passes & AOV
 
-Cette page documente comment Industrial CG Platform 茅tend le syst猫me de passes de rendu et d'AOV de Blender.
+Cette page documente comment Industrial CG Platform étend le système de passes de rendu et d'AOV de Blender.
 
 ## Nouveaux Types de Passes
 
@@ -8,51 +8,51 @@ Cette page documente comment Industrial CG Platform 茅tend le syst猫me de pass
 
 | Type de Passe | Nom Interne | Description |
 | --- | --- | --- |
-| `PASS_DEEP_COMBINED` | `Deep Combined` | RGBA par 茅chantillon avec profondeur pour la composition deep |
-| `PASS_DEEP_POSITION` | `Deep Position` | Donn茅es de position en espace monde par 茅chantillon |
+| `PASS_DEEP_COMBINED` | `Deep Combined` | RGBA par échantillon avec profondeur pour la composition deep |
+| `PASS_DEEP_POSITION` | `Deep Position` | Données de position en espace monde par échantillon |
 
-### Passe de Brouillard (Environment Fog - En d茅veloppement)
+### Passe de Brouillard (Environment Fog - En développement)
 
 | Type de Passe | Nom Interne | Description |
 | --- | --- | --- |
 | `PASS_FOG` | `Fog` | Passe de contribution du brouillard d'environnement |
 
 ::: warning
-La passe de brouillard fait partie de la fonctionnalit茅 Brouillard d'Environnement (Environment Fog) qui n'est pas encore finalis茅e.
+La passe de brouillard fait partie de la fonctionnalité Brouillard d'Environnement (Environment Fog) qui n'est pas encore finalisée.
 :::
 
 ## Enregistrement des Passes par Lobe de Lightgroup
 
-Lorsque `use_lightgroup_light_pass_aovs` est activ茅 sur un ViewLayer, le syst猫me enregistre des passes suppl茅mentaires par lightgroup lors de la configuration du rendu.
+Lorsque `use_lightgroup_light_pass_aovs` est activé sur un ViewLayer, le système enregistre des passes supplémentaires par lightgroup lors de la configuration du rendu.
 
 ### Flux d'Enregistrement
 
 ```
-Sync Sc猫neScene sync 鈫?Config Film Film setup 鈫?Pour chaque lightgroup For each lightgroup:
-  鈫?Si les passes s茅par茅es sont activ茅es If split passes enabled:
-    鈫?Enregistrer Combined_<lg>
-    鈫?Enregistrer Diffuse_Direct_<lg> (si activ茅)
-    鈫?Enregistrer Diffuse_Indirect_<lg> (si activ茅)
-    鈫?Enregistrer Glossy_Direct_<lg> (si activ茅)
-    鈫?... (toutes les combinaisons de lobes activ茅es)
+Sync ScèneScene sync → Config Film Film setup → Pour chaque lightgroup For each lightgroup:
+  → Si les passes séparées sont activées If split passes enabled:
+    → Enregistrer Combined_<lg>
+    → Enregistrer Diffuse_Direct_<lg> (si activé)
+    → Enregistrer Diffuse_Indirect_<lg> (si activé)
+    → Enregistrer Glossy_Direct_<lg> (si activé)
+    → ... (toutes les combinaisons de lobes activées)
 ```
 
-### Convention de D茅nomination des Passes
+### Convention de Dénomination des Passes
 
 ```
 <Lobe>_<Direction>_<LightgroupName>
 ```
 
-O霉 :
+Où :
 - **Lobe** : `Diffuse`, `Glossy`, `Transmission`, `Volume`
 - **Direction** : `Direct`, `Indirect`
-- **LightgroupName** : Le nom du lightgroup d茅fini par l'utilisateur
+- **LightgroupName** : Le nom du lightgroup défini par l'utilisateur
 
-La passe `Combined_<lg>` est toujours pr茅sente pour chaque lightgroup par d茅faut.
+La passe `Combined_<lg>` est toujours présente pour chaque lightgroup par défaut.
 
-### Mappage du D茅calage de Film
+### Mappage du Décalage de Film
 
-Chaque passe enregistr茅e re莽oit un d茅calage unique dans le tampon du film de Cycles. Le tableau d'index de s茅paration de lightgroup mappe :
+Chaque passe enregistrée reçoit un décalage unique dans le tampon du film de Cycles. Le tableau d'index de séparation de lightgroup mappe :
 
 ```
 lightgroup_split_index[lightgroup_id * num_split_types + split_type_index] = film_offset
@@ -62,44 +62,44 @@ Cela est accessible dans le noyau (kernel) via `kernel_data_fetch(lightgroup_spl
 
 ## Lecture de Passe (Pass Readback)
 
-### Pr茅servation de l'Identit茅 (Identity Preservation)
+### Préservation de l'Identité (Identity Preservation)
 
-Un correctif de pr茅cision essentiel garantit que les passes de lobe s茅par茅es par lightgroup sont lues via leur v茅ritable identit茅 `PassType`, et non via le premier type de passe g茅n茅rique correspondant. Cela 茅vite :
+Un correctif de précision essentiel garantit que les passes de lobe séparées par lightgroup sont lues via leur véritable identité `PassType`, et non via le premier type de passe générique correspondant. Cela évite :
 
 - Les passes direct-only apparaissant vides lorsque des passes indirect-only existent.
-- Les conflits d'alias de contenu de passe entre diff茅rentes combinaisons de lobes de lightgroup.
+- Les conflits d'alias de contenu de passe entre différentes combinaisons de lobes de lightgroup.
 
-Le correctif r茅side dans :
+Le correctif réside dans :
 ```
 intern/cycles/integrator/path_trace_tile.h
 ```
 
-### Int茅gration du Compositeur (Compositor Integration)
+### Intégration du Compositeur (Compositor Integration)
 
-Les passes par lobe de lightgroup sont expos茅es sous forme de passes de rendu standard de Blender et apparaissent dans :
-- Le compositeur de Blender sous forme de sorties de n艙ud Render Layers.
-- Le s茅lecteur de passes de l'茅diteur d'images.
-- La sortie OpenEXR multicouche sous forme de calques nomm茅s.
+Les passes par lobe de lightgroup sont exposées sous forme de passes de rendu standard de Blender et apparaissent dans :
+- Le compositeur de Blender sous forme de sorties de nœud Render Layers.
+- Le sélecteur de passes de l'éditeur d'images.
+- La sortie OpenEXR multicouche sous forme de calques nommés.
 
 ## Format de Sortie Deep EXR
 
-Lorsque la sortie Deep EXR est activ茅e :
+Lorsque la sortie Deep EXR est activée :
 
-1. Le pipeline de rendu stocke les donn茅es de profondeur par 茅chantillon en plus des donn茅es de couleur.
-2. Lors de la sortie, l'API d'image deep d'OpenEXR est utilis茅e pour 茅crire le fichier deep.
-3. Le format deep est compatible avec les outils de composition deep standard de l'industrie (n艙ud `DeepRead` de Nuke, etc.).
+1. Le pipeline de rendu stocke les données de profondeur par échantillon en plus des données de couleur.
+2. Lors de la sortie, l'API d'image deep d'OpenEXR est utilisée pour écrire le fichier deep.
+3. Le format deep est compatible avec les outils de composition deep standard de l'industrie (nœud `DeepRead` de Nuke, etc.).
 
 ### Budget de Tile Deep (Deep Tile Budget)
 
-Le param猫tre `deep_tile_budget` contr么le le nombre d'茅chantillons par pixel pouvant 锚tre stock茅s pendant le rendu des tiles. Des valeurs plus 茅lev茅es pr茅servent plus de d茅tails de profondeur mais consomment plus de m茅moire.
+Le paramètre `deep_tile_budget` contrôle le nombre d'échantillons par pixel pouvant être stockés pendant le rendu des tiles. Des valeurs plus élevées préservent plus de détails de profondeur mais consomment plus de mémoire.
 
 ## Fichiers Sources
 
 | Fichier | Objectif |
 | --- | --- |
 | `intern/cycles/scene/film.cpp` | Enregistrement des passes et configuration du film |
-| `intern/cycles/integrator/path_trace_tile.h` | Lecture de passe avec pr茅servation de l'identit茅 |
-| `intern/cycles/blender/addon/properties.py` | D茅finitions des propri茅t茅s de passe de l'extension Cycles |
-| `source/blender/render/intern/pipeline.cc` | Int茅gration des passes du pipeline de rendu de Blender |
-| `source/blender/makesrna/intern/rna_scene.cc` | D茅finitions des propri茅t茅s de passe RNA |
-| `intern/cycles/kernel/types.h` | 脡num茅rations des types de passes du noyau |
+| `intern/cycles/integrator/path_trace_tile.h` | Lecture de passe avec préservation de l'identité |
+| `intern/cycles/blender/addon/properties.py` | Définitions des propriétés de passe de l'extension Cycles |
+| `source/blender/render/intern/pipeline.cc` | Intégration des passes du pipeline de rendu de Blender |
+| `source/blender/makesrna/intern/rna_scene.cc` | Définitions des propriétés de passe RNA |
+| `intern/cycles/kernel/types.h` | Énumérations des types de passes du noyau |

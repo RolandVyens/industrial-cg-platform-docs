@@ -1,4 +1,4 @@
-﻿# Pass & AOV System
+# Pass & AOV System
 
 This page documents how Industrial CG Platform extends Blender's render pass and AOV system.
 
@@ -28,13 +28,13 @@ When `use_lightgroup_light_pass_aovs` is enabled on a ViewLayer, the system regi
 ### Registration Flow
 
 ```
-Scene sync 鈫?Film setup 鈫?For each lightgroup:
-  鈫?If split passes enabled:
-    鈫?Register Combined_<lg>
-    鈫?Register Diffuse_Direct_<lg> (if enabled)
-    鈫?Register Diffuse_Indirect_<lg> (if enabled)
-    鈫?Register Glossy_Direct_<lg> (if enabled)
-    鈫?... (all enabled lobe combinations)
+Scene sync → Film setup → For each lightgroup:
+  → If split passes enabled:
+    → Register Combined_<lg>
+    → Register Diffuse_Direct_<lg> (if enabled)
+    → Register Diffuse_Indirect_<lg> (if enabled)
+    → Register Glossy_Direct_<lg> (if enabled)
+    → ... (all enabled lobe combinations)
 ```
 
 ### Pass Naming Convention

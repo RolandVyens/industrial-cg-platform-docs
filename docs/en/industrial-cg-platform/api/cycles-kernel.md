@@ -1,4 +1,4 @@
-﻿# Cycles Kernel Extensions
+# Cycles Kernel Extensions
 
 This page documents the C++ kernel-level additions that Industrial CG Platform makes to the Cycles rendering engine.
 

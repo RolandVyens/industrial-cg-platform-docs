@@ -1,48 +1,60 @@
-﻿# 楂樼骇妯″紡
+# 高级模式
 
-鏈〉灏嗚缁嗕粙缁嶅垏鎹㈣嚦 **Advanced Mode** (楂樼骇妯″紡) 鍚庢墍瑙ｉ攣鐨勭粏鍒嗗姛鑳戒笌宸ヤ綔娴併€?
+本页将详细介绍切换至 **Advanced Mode** (高级模式) 后所解锁的细分功能与工作流。
+
 ---
 
-## **楂樼骇闈㈡澘閰嶇疆**
+## **高级面板配置**
 
-<img width="300" alt="楂樼骇妯″紡闈㈡澘" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="高级模式面板" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-### 1. **Use Advanced Mode (浣跨敤楂樼骇妯″紡)**
-鍕鹃€夊悗锛屾彃浠跺皢鍒囨崲杩涘叆楂樼骇妯″紡銆傛鏃跺熀纭€妯″紡涓嬬殑鈥淢ain Config鈥濋璁惧皢琚拷鐣ワ紝浠庤€屾毚闇叉渶搴曞眰鐨勭粏鍒嗗弬鏁版帶鍒躲€?
-### 2. **EXR Codec (EXR 鍘嬬缉缂栫爜)**
-瀹氫箟涓嶅悓娓叉煋灞傜骇鍦ㄥ啓鍏?EXR 鏂囦欢鏃舵墍閲囩敤鐨勫帇缂╃畻娉曘€?
-| **鍘嬬缉绠楁硶** | **璇︾粏璇存槑** |
+### 1. **Use Advanced Mode (使用高级模式)**
+勾选后，插件将切换进入高级模式。此时基础模式下的“Main Config”预设将被忽略，从而暴露最底层的细分参数控制。
+
+### 2. **EXR Codec (EXR 压缩编码)**
+定义不同渲染层级在写入 EXR 文件时所采用的压缩算法。
+
+| **压缩算法** | **详细说明** |
 | :--- | :--- |
-| **ZIP** | 鏃犳崯銆傚吋椤句簡楂樺帇缂╃巼涓庣浉瀵硅緝蹇殑璇诲彇閫熷害銆傝涓氶€氱敤棣栭€夈€?|
-| **PIZ** | 鏃犳崯銆傚鍣偣杈冨ぇ鎴栭绮掓劅鏄庢樉鐨勫浘灞傚帇缂╃巼鏈€楂橈紝浣嗚鍙栭€熷害杈冩參銆?|
-| **RLE** | 鏃犳崯銆傝鍐欓€熷害鏋佸揩锛屼絾鐢熸垚鐨勬枃浠朵綋绉細鏄庢樉澶т簬鍏朵粬鏃犳崯鏂瑰紡銆?|
-| **ZIPS** | 鏃犳崯銆傚帇缂╃巼涓?ZIP 鐩稿悓锛屼絾鍦?Nuke 绛夊悎鎴愯蒋浠朵腑鍗曟壂鎻忕嚎鍥炴斁閫熷害蹇繎 40%銆傚己鐑堟帹鑽愪娇鐢ㄦ鏍煎紡銆?|
-| **PXR24** | 鏈夋崯銆傚皢 32 浣嶆诞鐐规暟鍘嬬缉涓?24 浣嶏紝涓嶅奖鍝?16 浣嶅拰 8 浣嶃€備笉閫傜敤浜?Cryptomatte 鑺傜偣锛屼絾閫傚悎鏅€氭暟鎹眰浠ョ缉鍑忔枃浠朵綋绉€?|
-| **DWAA / B** | 鏈夋崯銆傚 Beauty 鐢婚潰鍏锋湁鏋佷匠鐨勫帇缂╃巼鍜岀粏鑺備繚鐣欍€侱WAA 鎸夌収鍍忕礌鍧楄繘琛屽帇缂╋紝DWAB 鎸夌収鎵弿绾垮寘杩涜鍘嬬缉銆?|
-| **NONE** | 涓嶅帇缂┿€?|
+| **ZIP** | 无损。兼顾了高压缩率与相对较快的读取速度。行业通用首选。 |
+| **PIZ** | 无损。对噪点较大或颗粒感明显的图层压缩率最高，但读取速度较慢。 |
+| **RLE** | 无损。读写速度极快，但生成的文件体积会明显大于其他无损方式。 |
+| **ZIPS** | 无损。压缩率与 ZIP 相同，但在 Nuke 等合成软件中单扫描线回放速度快近 40%。强烈推荐使用此格式。 |
+| **PXR24** | 有损。将 32 位浮点数压缩为 24 位，不影响 16 位和 8 位。不适用于 Cryptomatte 节点，但适合普通数据层以缩减文件体积。 |
+| **DWAA / B** | 有损。对 Beauty 画面具有极佳的压缩率和细节保留。DWAA 按照像素块进行压缩，DWAB 按照扫描线包进行压缩。 |
+| **NONE** | 不压缩。 |
 
-> 鈿狅笍 **閲嶈鎻愮ず锛?* Cryptomatte (鏉愯川/鐗╀綋ID) 閫氶亾蹇呴』浣跨敤**鏃犳崯**鍘嬬缉鏂瑰紡锛堝 ZIP銆乑IPS銆丳IZ锛夛紝浣跨敤鏈夋崯鍘嬬缉锛堝 DWAA锛変細瀵艰嚧ID杈圭紭鍙嶈蛋鏍锋暟鎹崯鍧忋€佹棤娉曟甯告彁鍙栭伄缃┿€?
-### 3. **Independent DATA Layer Config (鐙珛鏁版嵁灞傞厤缃?**
-姝ら」涓洪珮绾ф牳蹇冨姛鑳斤紝鍏佽鍦ㄥ満鏅腑灏嗘暟鎹€氶亾鐨勯噰鏍峰拰鍙鎬т笌Beauty娓叉煋鍥惧眰瀹屽叏瑙ｈ€︼紝杩涜鍗曠嫭閰嶇疆銆?
+> ⚠️ **重要提示：** Cryptomatte (材质/物体ID) 通道必须使用**无损**压缩方式（如 ZIP、ZIPS、PIZ），使用有损压缩（如 DWAA）会导致ID边缘反走样数据损坏、无法正常提取遮罩。
+
+### 3. **Independent DATA Layer Config (独立数据层配置)**
+此项为高级核心功能，允许在场景中将数据通道的采样和可见性与Beauty渲染图层完全解耦，进行单独配置。
+
 ---
 
-## **鐙珛鏁版嵁鍥惧眰 (Independent DATA Layer)**
+## **独立数据图层 (Independent DATA Layer)**
 
-<img width="300" alt="鐙珛鏁版嵁灞?UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="独立数据层 UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-寮€鍚?**`Use Independent DATA Layer`** 閫夐」鍚庯紝甯歌鐨勮鍥炬覆鏌撳浘灞傚皢涓嶅啀浜х敓 **DATA**锛堜笁缁寸┖闂存暟鎹紝濡傛繁搴︺€佷綅缃€佹硶绾跨瓑锛夎緭鍑猴紝鎵€鏈夌殑涓夌淮鏁版嵁鍥惧眰蹇呴』浠庝笓闂ㄧ殑鈥淒ATA Layer鈥濊緭鍑恒€傛彃浠朵細閫氳繃鍛藉悕鍓嶇紑/鍚庣紑锛堜緥濡?`-_-exP_` 鎴?`_DATA`锛夋潵鏅鸿兘璇嗗埆鏁版嵁灞傘€?
-### **瀹為檯鐢熶骇鐢ㄤ緥**
-鍋囪鎮ㄧ殑鍦烘櫙涓寘鍚ぇ鑼冨洿鐨勪綋绉浘鏁堟灉銆傚綋鎮ㄥ皾璇曟覆鏌撲笘鐣岀┖闂翠綅缃紙Position锛夋垨娣卞害锛圖epth锛夐€氶亾鏃讹紝闆炬皵鏈韩浼氱粰杩欎簺绌洪棿鏁版嵁灞傚甫鏉ヤ弗閲嶇殑鍣偣鍜屾柇灞傦紝瀵艰嚧鍚庢湡涓夌淮鍚堟垚澶辫触銆?閫氳繃浣跨敤 **Independent DATA Layer**锛屾偍鍙互鍦ㄦ暟鎹笓灞炲浘灞備腑閫氳繃闅愯棌闆嗗悎锛圕ollection锛夋潵杩囨护鎺変綋绉浘瀵硅薄銆傛鏃讹紝璇ュ眰娓叉煋鍑虹殑 Depth銆丯ormals銆丳world 閮戒細淇濇寔骞插噣銆佹竻鐖戒笖鏃犱綋绉浘鍣偣锛岃€屽湪Beauty鍥惧眰涓緷鏃т繚鐣欓浘鐨勮鏁堛€?
-### 1. **`Make A DATA Layer` 鎸夐挳**
-鍦ㄥ彸涓婅寮瑰嚭涓€涓揩鎹疯彍鍗曪紝涓撻棬鐢ㄤ簬鍒涘缓鏁版嵁涓撳睘鐨勮鍥惧浘灞傘€傝鎸夐挳瀹炶川涓婃槸 Blender 鍘熺敓 `Add View Layer` 鎸夐挳鐨勯噸鏋勭増锛屽寘鍚簡瀹氬埗鐨?`Copy Settings` (澶嶅埗璁剧疆) 鍜?`New` (鏂板缓)銆?
-### 2. **`Convert To DATA Layer` 鎸夐挳**
-灏嗗綋鍓嶇殑瑙嗗浘鍥惧眰閲嶅懡鍚嶏紝娣诲姞 `-_-exP_` 鍜?`_DATA` 鏍囪锛屼娇鍏惰浆鍖栦负鎻掍欢鍙瘑鍒殑鏁版嵁涓撳睘灞傘€?
-### 3. **DATA Layer Material Override (鏁版嵁灞傛潗璐ㄨ鐩?**
-鑷姩涓鸿鍥惧眰璁剧疆**鏉愯川閫氶亾瑕嗙洊 (AOV Material Override)**锛屽苟鑷姩鍒涘缓鎮ㄩ€夋嫨鐨?AOV 閫氶亾銆傜洰鍓嶆敮鎸?4 绉?AOV 绌洪棿鏁版嵁杈撳嚭锛?*   **Antialiased Pworld** (鎶楅敮榻夸笘鐣屽潗鏍囦綅缃?
-*   **Pref** (闈欐€佸弬鑰冧笘鐣屽潗鏍?
-*   **Depth / Z** (鎶楅敮榻挎繁搴?
-*   **Fake DEEP** (娣卞害鍚堟垚Fake Deep閫氶亾)
+开启 **`Use Independent DATA Layer`** 选项后，常规的视图渲染图层将不再产生 **DATA**（三维空间数据，如深度、位置、法线等）输出，所有的三维数据图层必须从专门的“DATA Layer”输出。插件会通过命名前缀/后缀（例如 `-_-exP_` 或 `_DATA`）来智能识别数据层。
 
-> 馃挕 **灏忚创澹細** 瑕佹兂璁?**Pref** (鍙傝€冧綅缃? 姝ｇ‘宸ヤ綔锛屾偍蹇呴』鍦ㄧ墿浣撳睘鎬х殑 Shape Keys 涓嬪嬀閫夊紑鍚?**`rest position`** 閫夐」锛屼粠鑰岄攣瀹氳鑹茬殑闈欐€侀楠煎熀纭€鍧愭爣銆?
+### **实际生产用例**
+假设您的场景中包含大范围的体积雾效果。当您尝试渲染世界空间位置（Position）或深度（Depth）通道时，雾气本身会给这些空间数据层带来严重的噪点和断层，导致后期三维合成失败。
+通过使用 **Independent DATA Layer**，您可以在数据专属图层中通过隐藏集合（Collection）来过滤掉体积雾对象。此时，该层渲染出的 Depth、Normals、Pworld 都会保持干净、清爽且无体积雾噪点，而在Beauty图层中依旧保留雾的视效。
+
+### 1. **`Make A DATA Layer` 按钮**
+在右上角弹出一个快捷菜单，专门用于创建数据专属的视图图层。该按钮实质上是 Blender 原生 `Add View Layer` 按钮的重构版，包含了定制的 `Copy Settings` (复制设置) 和 `New` (新建)。
+
+### 2. **`Convert To DATA Layer` 按钮**
+将当前的视图图层重命名，添加 `-_-exP_` 和 `_DATA` 标记，使其转化为插件可识别的数据专属层。
+
+### 3. **DATA Layer Material Override (数据层材质覆盖)**
+自动为该图层设置**材质通道覆盖 (AOV Material Override)**，并自动创建您选择的 AOV 通道。目前支持 4 种 AOV 空间数据输出：
+*   **Antialiased Pworld** (抗锯齿世界坐标位置)
+*   **Pref** (静态参考世界坐标)
+*   **Depth / Z** (抗锯齿深度)
+*   **Fake DEEP** (深度合成Fake Deep通道)
+
+> 💡 **小贴士：** 要想让 **Pref** (参考位置) 正确工作，您必须在物体属性的 Shape Keys 下勾选开启 **`rest position`** 选项，从而锁定角色的静态骨骼基础坐标。
+
 ### 4. **DEEP From Image Z**
-灏?Blender 榛樿鐨?Z 娣卞害杞崲涓?1/Z 鏍煎紡锛屼粠鑰屽彲浠ョ洿鎺ヤ笌 Nuke 鐨?`Deep From Image` 鑺傜偣瀵规帴銆傚洜涓哄瓨鍦ㄦ姉閿娇锛屾鏂规硶闈炲父閫傚悎鍦ㄤ笉甯︽湁涓夌淮杩愬姩妯＄硦锛圡otion Blur锛夌殑鍥惧眰杈圭紭涓婂伐浣溿€?
+将 Blender 默认的 Z 深度转换为 1/Z 格式，从而可以直接与 Nuke 的 `Deep From Image` 节点对接。因为存在抗锯齿，此方法非常适合在不带有三维运动模糊（Motion Blur）的图层边缘上工作。

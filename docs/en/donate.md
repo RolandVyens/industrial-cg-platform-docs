@@ -1,4 +1,4 @@
-﻿# Donate
+# Donate
 
 Thank you for supporting **Industrial 3D**! Your donations directly power the open-source research and development of production-ready CG and VFX tools, keeping them free and accessible for artists and studios worldwide.
 
@@ -8,7 +8,7 @@ Thank you for supporting **Industrial 3D**! Your donations directly power the op
   <!-- Patreon Card -->
   <a href="https://www.patreon.com/cw/RolandVyens" target="_blank" class="donation-card patreon">
     <div class="card-header">
-      <span class="card-icon">馃А</span>
+      <span class="card-icon">🧡</span>
       <h3 class="card-title">Patreon</h3>
     </div>
     <p class="card-desc">For international sponsors. Supports monthly subscription tiers, exclusive updates, and developer rewards in USD.</p>
@@ -18,8 +18,8 @@ Thank you for supporting **Industrial 3D**! Your donations directly power the op
   <!-- Afdian Card -->
   <a href="https://www.ifdian.net/a/mogubobi2" target="_blank" class="donation-card afdian">
     <div class="card-header">
-      <span class="card-icon">鈿?/span>
-      <h3 class="card-title">Afdian (鐖卞彂鐢?</h3>
+      <span class="card-icon">⚡</span>
+      <h3 class="card-title">Afdian (爱发电)</h3>
     </div>
     <p class="card-desc">For Chinese domestic sponsors. Supports monthly subscriptions, direct sponsorships, and platform rewards in CNY.</p>
     <div class="card-button">Support on Afdian</div>

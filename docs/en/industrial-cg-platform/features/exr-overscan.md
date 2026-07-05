@@ -1,4 +1,4 @@
-﻿---
+---
 title: EXR Overscan
 description: Technical reference and user guide for offline EXR Overscan rendering in Industrial CG Platform.
 ---
@@ -15,9 +15,9 @@ When exporting to OpenEXR, the engine preserves the standard delivery resolution
 
 ## Why Use It
 
-- **Downstream VFX Padding** 鈥?Matches standard VFX pipeline demands by providing extra border padding for lens undistortion, camera shake simulation, and 2D/3D matchmoving in compositing packages.
-- **Edge Stretch Prevention** 鈥?Prevents black borders or pixel stretching when matchmove cameras translate, rotate, or reproject plates.
-- **Deep and Multi-Layer Support** 鈥?Integrates seamlessly with all EXR formats, including multi-layer EXR and Deep EXR renders.
+- **Downstream VFX Padding** — Matches standard VFX pipeline demands by providing extra border padding for lens undistortion, camera shake simulation, and 2D/3D matchmoving in compositing packages.
+- **Edge Stretch Prevention** — Prevents black borders or pixel stretching when matchmove cameras translate, rotate, or reproject plates.
+- **Deep and Multi-Layer Support** — Integrates seamlessly with all EXR formats, including multi-layer EXR and Deep EXR renders.
 
 ## How To Enable
 
@@ -51,18 +51,33 @@ To ensure downstream software parses overscanned EXR files correctly, Industrial
 
 ```
                   Data Window (Overscanned bounds: 2304 x 1464)
-    鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?    鈹?                                                                 鈹?    鈹? (-192, -192)                                                    鈹?    鈹?        Display Window (Delivery resolution: 1920 x 1080)        鈹?    鈹?        鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?        鈹?    鈹?        鈹?                                             鈹?        鈹?    鈹?        鈹?(0, 0)                                       鈹?        鈹?    鈹?        鈹?                                             鈹?        鈹?    鈹?        鈹?                                             鈹?        鈹?    鈹?        鈹?                                             鈹?        鈹?    鈹?        鈹?                                 (1920, 1080)鈹?        鈹?    鈹?        鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?        鈹?    鈹?                                                                 鈹?    鈹?                                                     (2112, 1272)鈹?    鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?```
+    ┌──────────────────────────────────────────────────────────────────┐
+    │                                                                  │
+    │  (-192, -192)                                                    │
+    │         Display Window (Delivery resolution: 1920 x 1080)        │
+    │         ┌──────────────────────────────────────────────┐         │
+    │         │                                              │         │
+    │         │ (0, 0)                                       │         │
+    │         │                                              │         │
+    │         │                                              │         │
+    │         │                                              │         │
+    │         │                                  (1920, 1080)│         │
+    │         └──────────────────────────────────────────────┘         │
+    │                                                                  │
+    │                                                      (2112, 1272)│
+    └──────────────────────────────────────────────────────────────────┘
+```
 
 When imported into compositors, the file will automatically align to the project's standard 1920x1080 format, while the overscan pixels outside the viewport boundaries are preserved inside the bounding box (BBox) and remain accessible for transformations.
 
 ## Known Limitations
 
-- **No Viewport Render Preview** 鈥?There is no true live overscanned rendered image viewport preview outside the camera frame. The viewport behavior is limited to displaying an outward safety-frame guide overlay.
-- **Render Region Mutex** 鈥?Overscan output and viewport guides are disabled when Render Region is active.
-- **Cycles Only** 鈥?Non-Cycles renderers do not support overscan.
-- **Compositor Node Constraints** 鈥?When rendering through a compositor `File Output` node, the node group must contain a live `Group Output` node to trigger overscan window metadata propagation.
+- **No Viewport Render Preview** — There is no true live overscanned rendered image viewport preview outside the camera frame. The viewport behavior is limited to displaying an outward safety-frame guide overlay.
+- **Render Region Mutex** — Overscan output and viewport guides are disabled when Render Region is active.
+- **Cycles Only** — Non-Cycles renderers do not support overscan.
+- **Compositor Node Constraints** — When rendering through a compositor `File Output` node, the node group must contain a live `Group Output` node to trigger overscan window metadata propagation.
 
 ## See Also
 
-- [RNA Properties (API Reference)](/en/industrial-cg-platform/api/rna-properties) 鈥?The Python API properties for configuring overscan programmatically.
-- [Installation Guide](/en/industrial-cg-platform/guide/installation) 鈥?Details on OptiX shader cache isolation.
+- [RNA Properties (API Reference)](/en/industrial-cg-platform/api/rna-properties) — The Python API properties for configuring overscan programmatically.
+- [Installation Guide](/en/industrial-cg-platform/guide/installation) — Details on OptiX shader cache isolation.

@@ -1,6 +1,6 @@
-﻿# Modules & Outils de Pipeline
+# Modules & Outils de Pipeline
 
-La suite Industrial 3D fournit un ensemble de modules compl茅mentaires open-source et de configurations de couleur con莽us pour automatiser, simplifier et int茅grer Blender et la gestion des couleurs dans les pipelines VFX professionnels.
+La suite Industrial 3D fournit un ensemble de modules complémentaires open-source et de configurations de couleur conçus pour automatiser, simplifier et intégrer Blender et la gestion des couleurs dans les pipelines VFX professionnels.
 
 ---
 
@@ -14,9 +14,9 @@ La suite Industrial 3D fournit un ensemble de modules compl茅mentaires open-sou
         <span class="tool-badge">Module Blender</span>
       </div>
       <p class="tool-desc">
-        Configure automatiquement les arbres de n艙uds de composition, connecte le d茅bruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
+        Configure automatiquement les arbres de nœuds de composition, connecte le débruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
       </p>
-      <a href="/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
+      <a href="/industrial-cg-platform-docs/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
     </div>
   </div>
 
@@ -29,9 +29,9 @@ La suite Industrial 3D fournit un ensemble de modules compl茅mentaires open-sou
         <span class="tool-badge">Module Blender</span>
       </div>
       <p class="tool-desc">
-        Divise et mat茅rialise automatiquement les passes de groupes de lumi猫res pour offrir un contr么le total et ind茅pendant du compositing.
+        Divise et matérialise automatiquement les passes de groupes de lumières pour offrir un contrôle total et indépendant du compositing.
       </p>
-      <a href="/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du S茅parateur</a>
+      <a href="/industrial-cg-platform-docs/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
     </div>
   </div>
 
@@ -44,9 +44,9 @@ La suite Industrial 3D fournit un ensemble de modules compl茅mentaires open-sou
         <span class="tool-badge">Config Couleur</span>
       </div>
       <p class="tool-desc">
-        Configuration OpenColorIO unifi茅e garantissant une conversion de couleurs AgX/Filmic coh茅rente et identique sur Maya, Nuke, Houdini et Blender.
+        Configuration OpenColorIO unifiée garantissant une conversion de couleurs AgX/Filmic cohérente et identique sur Maya, Nuke, Houdini et Blender.
       </p>
-      <a href="/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
+      <a href="/industrial-cg-platform-docs/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
     </div>
   </div>
 </div>

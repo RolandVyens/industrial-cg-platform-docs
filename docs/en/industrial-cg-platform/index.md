@@ -1,4 +1,4 @@
-﻿---
+---
 layout: home
 title: Industrial CG Platform
 titleTemplate: Blender VFX Rendering Branch
@@ -22,25 +22,25 @@ hero:
       link: /en/industrial-cg-platform/api/
 
 features:
-  - icon: 馃幀
+  - icon: 🎬
     title: Deep EXR Output
-    details: Native deep compositing output for Cycles 鈥?write per-sample depth data for lossless deep merges in Nuke and other compositing tools.
+    details: Native deep compositing output for Cycles — write per-sample depth data for lossless deep merges in Nuke and other compositing tools.
     link: /en/industrial-cg-platform/features/deep-exr
-  - icon: 馃搻
+  - icon: 📐
     title: EXR Overscan
-    details: Native EXR overscan support in Cycles 鈥?render extra pixels outside the camera frame to pad lens distortion, camera shake, and transformations.
+    details: Native EXR overscan support in Cycles — render extra pixels outside the camera frame to pad lens distortion, camera shake, and transformations.
     link: /en/industrial-cg-platform/features/exr-overscan
-  - icon: 馃挕
+  - icon: 💡
     title: Lightgroup Lobe Passes
     details: Per-lightgroup split diffuse/glossy/transmission/volume passes with direct and indirect separation for fine-grained relighting control.
     link: /en/industrial-cg-platform/features/lightgroup-lobe-passes
-  - icon: 馃帹
+  - icon: 🎨
     title: Shadow Color
-    details: Artistic per-light and per-world shadow color control 鈥?tint shadows without affecting the rest of the lighting.
+    details: Artistic per-light and per-world shadow color control — tint shadows without affecting the rest of the lighting.
     link: /en/industrial-cg-platform/features/shadow-color
-  - icon: 馃枼锔?
+  - icon: 🖥️
     title: ViewLayer Manager
-    details: Qt-based ViewLayer management tool with preset system, pass grouping, and batch ViewLayer operations 鈥?all from a dedicated manager window.
+    details: Qt-based ViewLayer management tool with preset system, pass grouping, and batch ViewLayer operations — all from a dedicated manager window.
     link: /en/industrial-cg-platform/features/viewlayer-manager
 ---
 

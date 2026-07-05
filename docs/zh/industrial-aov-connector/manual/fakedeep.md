@@ -1,32 +1,43 @@
-﻿# Fake Deep 涓庢繁搴﹀悎鎴?
-鏈〉闈㈠皢鍚戞偍浠嬬粛濡備綍浣跨敤 Blender 杈撳嚭鐨?**Fake Deep** 宸ヤ綔娴佹潵瀹炵幇娣卞害鍚堟垚銆?
+# Fake Deep 与深度合成
+
+本页面将向您介绍如何使用 Blender 输出的 **Fake Deep** 工作流来实现深度合成。
+
 ---
 
-## **浠€涔堟槸娣卞害鍚堟垚锛?*
+## **什么是深度合成？**
 
-**娣卞害鍚堟垚锛圖eep Compositing锛?* 鏄瑙夌壒鏁堬紙VFX锛変腑涓€绉嶅厛杩涚殑鍚庢湡鍚堟垚鎶€鏈紝鍏舵覆鏌撳浘灞傚湪姣忎釜鍍忕礌涓婂瓨鍌ㄤ簡澶氫釜娣卞害閲囨牱鐐癸紙鍖呭惈 Z 娣卞害銆侀鑹插拰閫忔槑搴?涓嶉€忔槑搴︽暟鍊硷級銆?
-涓庝紶缁熺殑浠呭寘鍚崟涓€ 2D RGBA 鍍忕礌鍊肩殑鈥滃钩闈⑩€濆悎鎴愪笉鍚岋紝娣卞害鍚堟垚鍏佽鎮ㄤ互缁濆鐨勭┖闂寸簿搴︽潵娣峰悎閲嶅彔鐨勫厓绱犮€佺儫闆俱€佺矑瀛愬拰閫忔槑琛ㄩ潰銆傚畠娑堥櫎浜嗘覆鏌撳鏉傜殑閬僵锛圚oldout锛夌殑闇€瑕侊紝鏀寔鍦ㄦ覆鏌撳悗璋冩暣鏅繁锛屽苟鑳藉闈炲父杞绘澗鍦版暣鍚堜綋绉壒鏁堛€?
+**深度合成（Deep Compositing）** 是视觉特效（VFX）中一种先进的后期合成技术，其渲染图层在每个像素上存储了多个深度采样点（包含 Z 深度、颜色和透明度/不透明度数值）。
+
+与传统的仅包含单一 2D RGBA 像素值的“平面”合成不同，深度合成允许您以绝对的空间精度来混合重叠的元素、烟雾、粒子和透明表面。它消除了渲染复杂的遮罩（Holdout）的需要，支持在渲染后调整景深，并能够非常轻松地整合体积特效。
+
 ---
 
-## **浠€涔堟槸 Fake Deep锛?*
+## **什么是 Fake Deep？**
 
-Blender 鍘熺敓骞朵笉鏀寔杈撳嚭鍖呭惈澶氬眰娣卞害鍍忕礌鐨?Deep EXR 鏂囦欢銆?*Fake Deep**锛堜吉娣卞害锛夋槸涓€绉嶅皢绮剧‘鐨?Z 娣卞害鏁版嵁鐩存帴鏄犲皠鍒板儚绱犱笂鐨勫伐浣滄祦鏂规硶锛屽畠閫氳繃鑷畾涔夌潃鑹插櫒/鏉愯川鐨勬繁搴﹁鐩栵紙Depth Override锛夛紝鏉ュ尮閰?Beauty 娓叉煋鍥剧殑绮剧‘杈圭紭銆?
-### **鍒朵綔闄愬埗涓庤鍒?*
-1. **鏃犺繍鍔ㄦā绯婏紙No Motion Blur锛夛細** 甯︽湁鎽勫儚鏈鸿繍鍔ㄦā绯婄殑娓叉煋浼氱牬鍧忓儚绱犺竟缂樼殑娣卞害鍊笺€傛偍搴旇娓叉煋娓呮櫚鐨勮竟缂橈紝骞跺湪鍚庢湡鍚堟垚涓簲鐢ㄥ熀浜庣煝閲忕殑杩愬姩妯＄硦銆?2. **浣撶Н鐗规晥锛圴olumetrics锛夛細** 浣撶Н寰堥毦鐢ㄥ崟灞傜殑 Fake Deep 娣卞害鏁版嵁鏉ヨ〃绀猴紝鍥犱负瀹冧滑闇€瑕佸鏉傜殑娣卞害鑼冨洿淇℃伅銆?3. **鐩镐氦鍑犱綍浣擄紙Intersecting Geometry锛夛細** 濡傛灉涓や釜缃戞牸闈犲緱闈炲父杩戞垨鐩镐氦锛岀敱浜?32 浣嶆繁搴︾簿搴︾殑闄愬埗锛屽垏绾垮彲鑳戒細浜х敓杞诲井鐨勬姈鍔紙鐩告瘮浜庣湡瀹炵殑澶氶噰鏍锋繁搴︽覆鏌擄級銆?
+Blender 原生并不支持输出包含多层深度像素的 Deep EXR 文件。**Fake Deep**（伪深度）是一种将精确的 Z 深度数据直接映射到像素上的工作流方法，它通过自定义着色器/材质的深度覆盖（Depth Override），来匹配 Beauty 渲染图的精确边缘。
+
+### **制作限制与规则**
+1. **无运动模糊（No Motion Blur）：** 带有摄像机运动模糊的渲染会破坏像素边缘的深度值。您应该渲染清晰的边缘，并在后期合成中应用基于矢量的运动模糊。
+2. **体积特效（Volumetrics）：** 体积很难用单层的 Fake Deep 深度数据来表示，因为它们需要复杂的深度范围信息。
+3. **相交几何体（Intersecting Geometry）：** 如果两个网格靠得非常近或相交，由于 32 位深度精度的限制，切线可能会产生轻微的抖动（相比于真实的多采样深度渲染）。
+
 ---
 
-## **Nuke 涓殑娣卞害鍚堟垚璁剧疆**
+## **Nuke 中的深度合成设置**
 
-濡傛灉鎮ㄥ杩欎簺闄愬埗鏈夋墍浜嗚В锛屽彲浠ユ寜鐓т互涓嬫楠ゅ湪 Nuke 涓繘琛岃缃細
+如果您对这些限制有所了解，可以按照以下步骤在 Nuke 中进行设置：
 
-### 姝ラ 1锛歋huffle锛堥€氶亾閲嶇粍锛塅ake Deep 鍜?Alpha
-灏?Fake Deep 閫氶亾鍜?Beauty 鍥剧殑 Alpha 閫氶亾 Shuffle锛堥噸缁勶級鎴愭爣鍑嗙殑 RGBA 缁撴瀯锛?
-<img width="600" alt="Nuke Shuffle 鑺傜偣璁剧疆" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+### 步骤 1：Shuffle（通道重组）Fake Deep 和 Alpha
+将 Fake Deep 通道和 Beauty 图的 Alpha 通道 Shuffle（重组）成标准的 RGBA 结构：
 
-鐒跺悗锛屽皢杈撳嚭杩炴帴鍒颁竴涓?**Premult**锛堥涔橈級鑺傜偣浠ユ竻闄よ竟缂樺儚绱犮€?
-### 姝ラ 2锛歋huffle 鍥?Depth
-灏嗗鐞嗗悗鐨?RGBA 閫氶亾閲嶆柊 Shuffle 鍥?Nuke 鐨?Depth (`depth.Z`) 閫氶亾锛?
-<img width="600" alt="Nuke Shuffle Depth 鑺傜偣璁剧疆" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Nuke Shuffle 节点设置" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
 
-### 姝ラ 3锛氳浆鎹负 Deep
-灏嗚緭鍑鸿繛鎺ュ埌 **DeepFromImage** 鑺傜偣銆傜幇鍦紝鎮ㄥ湪 Nuke 涓氨鎷ユ湁浜嗕竴涓姛鑳藉畬鏁寸殑 Deep 鍥惧眰锛佹偍鍙互鍍忓線甯镐竴鏍蜂娇鐢?`DeepMerge`銆乣DeepRecolor` 鍜?`DeepWrite` 绛夎妭鐐广€?
+然后，将输出连接到一个 **Premult**（预乘）节点以清除边缘像素。
+
+### 步骤 2：Shuffle 回 Depth
+将处理后的 RGBA 通道重新 Shuffle 回 Nuke 的 Depth (`depth.Z`) 通道：
+
+<img width="600" alt="Nuke Shuffle Depth 节点设置" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+
+### 步骤 3：转换为 Deep
+将输出连接到 **DeepFromImage** 节点。现在，您在 Nuke 中就拥有了一个功能完整的 Deep 图层！您可以像往常一样使用 `DeepMerge`、`DeepRecolor` 和 `DeepWrite` 等节点。

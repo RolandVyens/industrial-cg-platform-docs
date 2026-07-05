@@ -1,4 +1,4 @@
-﻿# Addons & Pipeline Tools
+# Addons & Pipeline Tools
 
 The Industrial 3D suite includes specialized open-source tools and color configurations designed to automate, streamline, and integrate Blender and color pipelines into high-end film and VFX workflows.
 
@@ -16,7 +16,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         Automatically builds composition node trees, hooks up OIDN denoisers, and structures output channels to align with VFX studio standards (Nuke).
       </p>
-      <a href="/en/industrial-aov-connector/" class="tool-button">Read Addon Guide</a>
+      <a href="/industrial-cg-platform-docs/en/industrial-aov-connector/" class="tool-button">Read Addon Guide</a>
     </div>
   </div>
 
@@ -31,7 +31,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         Automatically splits combined rendering passes into individual light component AOVs, giving compositors absolute lighting control.
       </p>
-      <a href="/en/industrial-light-aov-splitter/" class="tool-button">Read Splitter Guide</a>
+      <a href="/industrial-cg-platform-docs/en/industrial-light-aov-splitter/" class="tool-button">Read Splitter Guide</a>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         A unified OpenColorIO configuration ensuring pixel-perfect AgX/Filmic viewport consistency across Maya, Nuke, Houdini, and Blender.
       </p>
-      <a href="/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
+      <a href="/industrial-cg-platform-docs/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-﻿# About the Project
+# About the Project
 
 ## Why This Exists
 
@@ -24,7 +24,7 @@ Industrial CG Platform is developed as production-focused open-source R&D.
 If this project helps your studio, course, pipeline, or personal production work, sponsorship helps keep development moving faster. Sponsorship is especially helpful for funding features that are difficult to justify as small add-ons: render output behavior, deep data, Qt runtime packaging, light pass design, and pipeline-facing documentation.
 
 - Support the creator on [Patreon](https://www.patreon.com/cw/RolandVyens)
-- Support the creator on [Afdian (鐖卞彂鐢?](https://www.ifdian.net/a/mogubobi2)
+- Support the creator on [Afdian (爱发电)](https://www.ifdian.net/a/mogubobi2)
 - Star the repository and share it with Blender and VFX artists who need stronger production workflows
 
 ## Upstream Relationship

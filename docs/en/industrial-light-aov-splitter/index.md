@@ -1,4 +1,4 @@
-﻿# Industrial Light AOV Splitter
+# Industrial Light AOV Splitter
 
 **Industrial Light AOV Splitter** is a specialized production utility add-on for Blender that automates the setup, separation, and materialization of individual light group AOV (Arbitrary Output Variable) passes. 
 
@@ -8,12 +8,12 @@ Instead of exporting generic merged lightgroups, this tool automatically splits 
 
 ## Key Features
 
-### 馃挕 Automated Light Group Split
+### 💡 Automated Light Group Split
 *   **One-Click Split:** Automatically breaks down your active Blender Light Groups into detailed component channels.
 *   **Lobe-Level Granularity:** Materializes passes for diffuse, specular, transmission, and volume components per light group.
 *   **Nuke Compatibility:** Designed to easily build composite networks in Foundry Nuke, Autodesk Flame, or Blackmagic Fusion.
 
-### 馃幁 Integration with AOV Connector
+### 🎭 Integration with AOV Connector
 *   Designed to work seamlessly with the **Industrial AOV Connector** add-on to automatically write these split components to EXR file trees.
 *   Includes a companion Python script (`nuke_blender_autoaov.py`) in the repository to automatically shuffle and combine these light group AOV channels inside Nuke.
 

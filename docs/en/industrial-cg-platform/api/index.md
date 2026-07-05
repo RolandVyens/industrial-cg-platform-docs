@@ -1,4 +1,4 @@
-﻿# API Reference
+# API Reference
 
 This section documents the C++ and Python API surface that Industrial CG Platform adds to or modifies in Blender and Cycles.
 

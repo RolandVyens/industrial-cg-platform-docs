@@ -1,4 +1,4 @@
-﻿# Preferences & Configurations
+# Preferences & Configurations
 
 This page explains the core settings, performance optimizations, and output tools available in the preferences of the **Industrial AOV Connector**.
 
@@ -22,10 +22,10 @@ Automatically overrides the sample count for data layers when generating nodes t
 
 ### 5. **Custom Name Suffix**
 Allows you to append custom text to the generated files. For example, use `#` to customize the frame padding format. The plugin also supports dynamic tokens that evaluate at render time:
-*   `$scene$` 鈥?Scene Name
-*   `$file$` 鈥?Blend File Name
-*   `$camera$` 鈥?Active Camera Name
-*   `$version$` 鈥?Evaluates the active version number (looks for a suffix like `v001` at the end of the blend file name).
+*   `$scene$` — Scene Name
+*   `$file$` — Blend File Name
+*   `$camera$` — Active Camera Name
+*   `$version$` — Evaluates the active version number (looks for a suffix like `v001` at the end of the blend file name).
 
 *Example configuration:* `$camera$_$version$_###`
 

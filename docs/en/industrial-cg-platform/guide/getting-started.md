@@ -1,4 +1,4 @@
-﻿# Getting Started
+# Getting Started
 
 ![Industrial CG Platform Splash](/splash.png)
 
@@ -13,12 +13,12 @@ The current version is based on **Blender 5.2** and the branch is named `industr
 ## Who Is It For?
 
 Industrial CG Platform is intended for:
-- **VFX Studios** 鈥?that want to acquire Blender into their production pipeline.
-- **Lighting Artists** 鈥?who need stronger pass control.
-- **Compositors** 鈥?who need better render data from Blender.
-- **TDs and Pipeline Developers** 鈥?evaluating Blender for shot-based work.
-- **Small Studios** 鈥?building a Blender-centered VFX workflow.
-- **Technical Artists** 鈥?who need source-level features rather than only add-ons.
+- **VFX Studios** — that want to acquire Blender into their production pipeline.
+- **Lighting Artists** — who need stronger pass control.
+- **Compositors** — who need better render data from Blender.
+- **TDs and Pipeline Developers** — evaluating Blender for shot-based work.
+- **Small Studios** — building a Blender-centered VFX workflow.
+- **Technical Artists** — who need source-level features rather than only add-ons.
 
 ## Key Features
 
@@ -32,13 +32,13 @@ Industrial CG Platform is intended for:
 
 ## How It Differs from Stock Blender
 
-- **Full compatibility** 鈥?`.blend` files created in Industrial CG Platform are compatible with stock Blender 5.2. Custom features simply won't be available when opened in stock Blender.
-- **Same executable names** 鈥?The executable is still called `blender.exe` and uses the same config directory structure.
-- **Branch suffix** 鈥?The window title shows `Blender 5.2.0-2026-06-16 Industrial CG Platform` to distinguish it from stock Blender.
-- **Windows only** 鈥?Current releases are Windows x64 ZIP packages only. Linux support is planned for the future.
+- **Full compatibility** — `.blend` files created in Industrial CG Platform are compatible with stock Blender 5.2. Custom features simply won't be available when opened in stock Blender.
+- **Same executable names** — The executable is still called `blender.exe` and uses the same config directory structure.
+- **Branch suffix** — The window title shows `Blender 5.2.0-2026-06-16 Industrial CG Platform` to distinguish it from stock Blender.
+- **Windows only** — Current releases are Windows x64 ZIP packages only. Linux support is planned for the future.
 
 ## Next Steps
 
-- [Installation](/en/industrial-cg-platform/guide/installation) 鈥?Download and set up the release.
-- [Building from Source](/en/industrial-cg-platform/guide/building-from-source) 鈥?Build from the GitHub repository.
-- [FAQ](/en/industrial-cg-platform/guide/faq) 鈥?Common questions and answers.
+- [Installation](/en/industrial-cg-platform/guide/installation) — Download and set up the release.
+- [Building from Source](/en/industrial-cg-platform/guide/building-from-source) — Build from the GitHub repository.
+- [FAQ](/en/industrial-cg-platform/guide/faq) — Common questions and answers.
