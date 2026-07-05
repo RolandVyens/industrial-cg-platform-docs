@@ -53,6 +53,6 @@ features:
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">支持与赞助开发</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial 3D 流程工具集是作为专注于生产的开源研发项目进行开发的。</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
-    <a class="VPButton medium brand" href="/industrial-cg-platform-docs/zh/donate">赞助支持项目</a>
+    <a class="VPButton medium brand" href="/zh/donate">赞助支持项目</a>
   </div>
 </div>

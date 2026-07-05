@@ -53,6 +53,6 @@ features:
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Soutenir le développement</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Les outils Industrial 3D sont développés sous forme de projets R&D open-source axés sur la production.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">
-    <a class="VPButton medium brand" href="/industrial-cg-platform-docs/fr/donate">Soutenir le Projet</a>
+    <a class="VPButton medium brand" href="/fr/donate">Soutenir le Projet</a>
   </div>
 </div>

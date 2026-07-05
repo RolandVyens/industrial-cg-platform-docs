@@ -16,7 +16,7 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Configure automatiquement les arbres de nœuds de composition, connecte le débruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
       </p>
-      <a href="/industrial-cg-platform-docs/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
+      <a href="/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
     </div>
   </div>
 
@@ -31,7 +31,7 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Divise et matérialise automatiquement les passes de groupes de lumières pour offrir un contrôle total et indépendant du compositing.
       </p>
-      <a href="/industrial-cg-platform-docs/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
+      <a href="/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Configuration OpenColorIO unifiée garantissant une conversion de couleurs AgX/Filmic cohérente et identique sur Maya, Nuke, Houdini et Blender.
       </p>
-      <a href="/industrial-cg-platform-docs/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
+      <a href="/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
     </div>
   </div>
 </div>

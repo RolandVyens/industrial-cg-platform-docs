@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); const path = 'docs/blog/posts/2026-06-29-code-quality-month.md'; let content = fs.readFileSync(path, 'utf8'); content = content.replace('editLink: false', '\r\neditLink: false'); fs.writeFileSync(path, content, 'utf8');
