@@ -55,7 +55,7 @@ const frApi = [
 export default defineConfig({
   base: '/',
   title: 'Industrial CG Platform',
-  description: 'Blender VFX Rendering Fork by CGWeave',
+  description: 'Blender VFX Fork by CGWeave',
   appearance: 'force-dark',
   sitemap: {
     hostname: 'https://cgweave.com'
@@ -89,8 +89,8 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
     ['meta', { name: 'theme-color', content: '#7c4dff' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Industrial CG Platform — Blender VFX Rendering Fork by CGWeave' }],
-    ['meta', { property: 'og:description', content: 'A Blender-based VFX rendering platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.' }],
+    ['meta', { property: 'og:title', content: 'Industrial CG Platform — Blender VFX Fork by CGWeave' }],
+    ['meta', { property: 'og:description', content: 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com;" }],
     ['script', {}, "if (self !== top) { top.location = self.location; }"],
   ],

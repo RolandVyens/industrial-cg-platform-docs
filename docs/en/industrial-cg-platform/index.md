@@ -1,11 +1,11 @@
 ---
 layout: home
 title: Industrial CG Platform
-titleTemplate: Blender VFX Rendering Branch
+titleTemplate: Blender VFX Branch
 
 hero:
   name: Industrial CG Platform
-  text: Blender VFX Rendering Branch
+  text: Blender VFX Branch
   tagline: Built for VFX. Built from Blender. Built for shots. A Blender-based production platform for advanced VFX workflows.
   image:
     src: /logo.png

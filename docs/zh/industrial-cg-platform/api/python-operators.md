@@ -11,11 +11,29 @@
 | **操作器 ID** | `wm.blender_vfx_viewlayer_manager_show` |
 | **标签** | `ViewLayer Manager` |
 | **描述** | 打开或将 ViewLayer 管理器窗口置于最前 |
+| **类别** | Window Manager |
+
+```python
+bpy.ops.wm.blender_vfx_viewlayer_manager_show()
+```
 
 此操作器：
-1. 为当前会话启用 `blender_vfx_qt_runtime` 系统扩展。
-2. 为当前会话启用 `blender_vfx_viewlayer_manager` 系统扩展。
+
+1. 为当前会话启用 `blender_vfx_qt_runtime` 系统扩展（如果尚未启用）。
+2. 为当前会话启用 `blender_vfx_viewlayer_manager` 系统扩展（如果尚未启用）。
 3. 打开 ViewLayer 管理器 Qt 窗口，如果已打开则将其置于最前。
+
+#### 注册
+
+该操作器注册于：
+```
+scripts/startup/bl_operators/blender_vfx_viewlayer_manager.py
+```
+
+顶部栏启动按钮添加于：
+```
+scripts/startup/bl_ui/space_topbar.py
+```
 
 ## 共享 Qt 运行时 API
 
@@ -24,6 +42,18 @@
 ### `blender_vfx_qt.ensure_runtime()`
 
 确保当前会话可使用 BQt Qt 运行时。
+
+```python
+from blender_vfx_qt import ensure_runtime
+
+ensure_runtime()  # 启用运行时扩展并导入 PySide6
+```
+
+**行为：**
+- 如果尚未启用，则启用 `blender_vfx_qt_runtime` 系统扩展。
+- 将捆绑的 wheels（BQt、PySide6 等）安装到会话的 Python 路径中。
+- 设置安全模式环境变量：`BQT_DISABLE_WRAP=1`, `BQT_AUTO_ADD=0` 等。
+- 每个会话只运行一次设置；后续调用为空操作。
 
 ### `blender_vfx_qt.present_window(widget)`
 
@@ -53,7 +83,6 @@ present_window(my_window_instance)
 from blender_vfx_qt import show_unique_window
 from blender_vfx_viewlayer_manager.window import ViewLayerManagerWindow
 
-# 定义一个持久化的字典缓存引用
 _window_cache = {"value": None}
 
 def factory():
@@ -92,3 +121,28 @@ if qt_window_is_alive(my_window):
 - 尝试访问该控件的 `objectName()`。
 - 捕获 PySide/PyQt 在交互已被销毁的底层 C++ 对象时抛出的 `RuntimeError`，若捕获到则返回 `False`。
 - 若窗口处于存活状态则返回 `True`。
+
+## 捆绑的运行时栈
+
+Qt 运行时由以下捆绑的 wheels 提供：
+
+| 包名 | 版本 | 许可证 |
+| --- | --- | --- |
+| `bqt` | 2.2.0 | MIT |
+| `blender-qt-stylesheet` | 0.0.3 | MIT |
+| `QtPy` | 2.4.3 | MIT |
+| `packaging` | 26.2 | Apache-2.0 / BSD-2 |
+| `PySide6` | 6.11.0 | LGPL-3.0 |
+| `PySide6_Essentials` | 6.11.0 | LGPL-3.0 |
+| `PySide6_Addons` | 6.11.0 | LGPL-3.0 |
+| `shiboken6` | 6.11.0 | LGPL-3.0 |
+
+## 源文件
+
+| 文件 | 用途 |
+| --- | --- |
+| `scripts/startup/bl_operators/blender_vfx_viewlayer_manager.py` | 操作器注册和桥接逻辑 |
+| `scripts/startup/bl_ui/space_topbar.py` | 顶部栏启动按钮 |
+| `scripts/modules/blender_vfx_qt/` | 共享 Qt 运行时包装器模块 |
+| `release/extensions/system/blender_vfx_qt_runtime/` | 包含捆绑 wheels 的运行时扩展 |
+| `release/extensions/system/blender_vfx_viewlayer_manager/` | 管理器扩展源代码 |

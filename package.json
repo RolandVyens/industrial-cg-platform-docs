@@ -1,7 +1,7 @@
 {
   "name": "industrial-cg-platform-docs",
   "version": "1.0.0",
-  "description": "Trilingual documentation for Industrial CG Platform (Blender VFX rendering branch)",
+  "description": "Trilingual documentation for Industrial CG Platform (Blender VFX branch)",
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev docs",

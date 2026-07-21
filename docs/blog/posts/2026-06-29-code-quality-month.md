@@ -1,11 +1,11 @@
 ---
-title: Industrial CG Platform 架构升级：Blender VFX 渲染分支代码质量月全记录
+title: Industrial CG Platform 架构升级：Blender VFX 分支代码质量月全记录
 date: 2026-06-29
 summary: 在等待 Blender 5.2 正式版发布的这一个月里，我在 Industrial CG Platform 分支按下了一次长达四周的“暂停键”。在此期间，我没有添加任何新功能，而是开启了 W0 到 W6 阶段的“代码质量与功能包加固行动”。
 editLink: false
 ---
 
-# Industrial CG Platform 架构升级：Blender VFX 渲染分支代码质量月全记录
+# Industrial CG Platform 架构升级：Blender VFX 分支代码质量月全记录
 
 在等待 Blender 5.2 正式版发布的这一个月里，我在 **Industrial CG Platform** 分支按下了一次长达四周的“暂停键”。在此期间，我没有添加任何新功能，而是开启了 W0 到 W6 阶段的“代码质量与功能包加固行动”。
 

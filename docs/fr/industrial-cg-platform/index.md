@@ -1,11 +1,11 @@
 ---
 layout: home
 title: Industrial CG Platform
-titleTemplate: Branche de rendu VFX pour Blender
+titleTemplate: Branche VFX pour Blender
 
 hero:
   name: Industrial CG Platform
-  text: Branche de rendu VFX pour Blender
+  text: Branche VFX pour Blender
   tagline: Conçu pour les VFX. Construit à partir de Blender. Fait pour les plans. Une plateforme de production basée sur Blender pour des flux de travail VFX avancés.
   image:
     src: /logo.png
