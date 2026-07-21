@@ -1,3 +1,10 @@
+---
+title: Per-Lightgroup Direct and Indirect Lobe Passes in Cycles
+head:
+  - - meta
+    - name: description
+      content: "Learn how to separate diffuse, glossy, transmission, and volume lobes for individual lightgroups in Blender Cycles for fine-grained Nuke relighting."
+---
 # Lightgroup Lobe Passes
 
 <Badge type="tip" text="Shipped" />

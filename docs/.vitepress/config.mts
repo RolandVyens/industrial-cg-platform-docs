@@ -54,11 +54,32 @@ const frApi = [
 
 export default defineConfig({
   base: '/',
-  title: 'Industrial 3D',
-  description: 'Ecosystem of free & open-source CG & VFX pipeline tools',
+  title: 'Industrial CG Platform',
+  description: 'Blender VFX Rendering Fork by CGWeave',
   appearance: 'force-dark',
   sitemap: {
     hostname: 'https://cgweave.com'
+  },
+  transformPageData(pageData) {
+    const relativePath = pageData.relativePath.replace(/index\.md$/, '');
+    let cleanPath = relativePath.replace(/\.md$/, '');
+    if (cleanPath && !cleanPath.endsWith('/')) {
+        cleanPath += '/';
+    }
+    
+    let basePath = cleanPath;
+    if (cleanPath.startsWith('zh/')) basePath = cleanPath.substring(3);
+    else if (cleanPath.startsWith('fr/')) basePath = cleanPath.substring(3);
+    else if (cleanPath.startsWith('en/')) basePath = cleanPath.substring(3);
+
+    pageData.frontmatter.head ??= [];
+    const baseUrl = 'https://cgweave.com/';
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}en/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: `${baseUrl}zh/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'fr', href: `${baseUrl}fr/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}en/${basePath}` }]
+    );
   },
 
   head: [
@@ -68,8 +89,8 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
     ['meta', { name: 'theme-color', content: '#7c4dff' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Industrial 3D Ecosystem' }],
-    ['meta', { property: 'og:description', content: 'Free and open-source CG & VFX pipeline tools by Roland Vyens' }],
+    ['meta', { property: 'og:title', content: 'Industrial CG Platform — Blender VFX Rendering Fork by CGWeave' }],
+    ['meta', { property: 'og:description', content: 'A Blender-based VFX rendering platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com;" }],
     ['script', {}, "if (self !== top) { top.location = self.location; }"],
   ],
@@ -569,8 +590,14 @@ export default defineConfig({
       },
       { text: 'Blog', link: '/blog/' },
       { text: 'Donate', link: '/en/donate' },
-      { text: 'About', link: '/en/industrial-cg-platform/about/' }
-    ]
+    ],
+    lastUpdated: {
+      text: 'Last updated',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    }
   },
 
   lastUpdated: true,

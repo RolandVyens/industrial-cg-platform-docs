@@ -1,6 +1,9 @@
 ---
-title: EXR Overscan
-description: Technical reference and user guide for offline EXR Overscan rendering in Industrial CG Platform.
+title: How to Render EXR Overscan in Blender Without Changing Camera Framing
+head:
+  - - meta
+    - name: description
+      content: "Learn how to render true EXR overscan in Blender Cycles for lens distortion and redistortion workflows, preserving the displayWindow metadata."
 ---
 
 # EXR Overscan

@@ -1,3 +1,10 @@
+---
+title: Comment générer un rendu Deep EXR natif dans Blender Cycles pour Nuke
+head:
+  - - meta
+    - name: description
+      content: "Découvrez comment générer un Deep EXR natif depuis Blender Cycles pour un compositing deep sans perte dans Nuke, et en quoi cela diffère du Z-Depth standard."
+---
 # Sortie Deep EXR
 
 <Badge type="tip" text="Publié" />

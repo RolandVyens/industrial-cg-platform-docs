@@ -1,3 +1,10 @@
+---
+title: 如何在 Blender Cycles 中渲染并输出原生 Deep EXR 给 Nuke
+head:
+  - - meta
+    - name: description
+      content: "了解如何从 Blender Cycles 输出原生 Deep EXR，实现 Nuke 中的无损深度合成，以及它与标准 Z-Depth 的区别。"
+---
 # Deep EXR 深度输出
 
 <Badge type="tip" text="已发布" />

@@ -1,7 +1,29 @@
 ---
 layout: home
-title: Industrial 3D
-titleTemplate: Écosystème de Pipelines CG & VFX
+title: Fork VFX de Blender avec Deep EXR Natif & EXR Overscan
+titleTemplate: Industrial CG Platform
+head:
+  - - meta
+    - name: description
+      content: "Industrial CG Platform est un fork de rendu VFX basé sur Blender 5.2 pour Windows, intégrant des fonctions de Deep EXR natif, d'overscan EXR, des passes de lightgroups par lobe, et la gestion des ViewLayers via Qt."
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Industrial CG Platform",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows 64-bit",
+        "description": "Une plateforme de rendu VFX basée sur Blender intégrant Deep EXR, EXR overscan, des passes de lightgroup et des outils de production de ViewLayer.",
+        "softwareVersion": "5.2.0",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
 
 hero:
   name: Industrial 3D

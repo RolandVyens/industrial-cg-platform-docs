@@ -1,6 +1,9 @@
 ---
-title: Overscan EXR
-description: Référence technique et guide de l'utilisateur pour le rendu Overscan EXR hors ligne dans Industrial CG Platform.
+title: Comment rendre l'Overscan EXR dans Blender sans changer le cadrage de la caméra
+head:
+  - - meta
+    - name: description
+      content: "Apprenez à rendre un véritable overscan EXR dans Blender Cycles pour les workflows de distorsion d'objectif, en préservant les métadonnées displayWindow."
 ---
 
 # Overscan EXR

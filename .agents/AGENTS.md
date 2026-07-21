@@ -1,4 +1,4 @@
-﻿DOCUMENTATION ROUTER & CORE OPERATING RULES
+DOCUMENTATION ROUTER & CORE OPERATING RULES
 
 [CORE OPERATING RULES]
 1. BOUNDARY: Do NOT modify files outside E:\blender_modify\industrial-cg-platform-docs\
@@ -26,3 +26,7 @@ Use your file reading tool to load specific rule files below based on your activ
 4. READ WHEN ADJUSTING CSS OR LAYOUT:
    - path: .agents/rules/04-ui-styling.md
    - purpose: Layout restrictions (no tags, no authors) and approved color tokens.
+
+5. READ BEFORE WRITING NEW CONTENT OR TRANSLATIONS:
+   - path: .agents/rules/05-seo-guidelines.md
+   - purpose: Mandatory Hreflang file symmetry and Implicit SEO/Metadata constraints.

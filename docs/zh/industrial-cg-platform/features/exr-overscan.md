@@ -1,6 +1,9 @@
 ---
-title: EXR Overscan 溢画幅
-description: Industrial CG Platform 中离线 EXR 溢画幅（Overscan）渲染的技术参考与用户指南。
+title: 如何在 Blender 中渲染真实的 EXR 溢画幅 (Overscan) 且不改变相机取景
+head:
+  - - meta
+    - name: description
+      content: "学习如何在 Blender Cycles 中渲染真正的 EXR Overscan，完美保留 displayWindow 元数据，为 Nuke 镜头畸变工作流提供支持。"
 ---
 
 # EXR Overscan 溢画幅

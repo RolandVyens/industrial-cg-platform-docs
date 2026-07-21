@@ -1,7 +1,29 @@
 ---
 layout: home
-title: Industrial 3D
-titleTemplate: CG 与 VFX 流程管线工具集
+title: 具备原生 Deep EXR 与 EXR Overscan 的 Blender VFX 定制分支
+titleTemplate: Industrial CG Platform
+head:
+  - - meta
+    - name: description
+      content: "Industrial CG Platform 是一个基于 Blender 5.2 的 Windows 专属 VFX 渲染分支。提供原生的 Cycles Deep EXR、EXR 溢画幅 (Overscan)、基于灯光组的通道分离、阴影颜色和 Qt 视图层管理工具。"
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Industrial CG Platform",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows 64-bit",
+        "description": "基于 Blender 的 VFX 渲染平台，内置原生 Deep EXR、EXR Overscan、灯光组直接/间接通道及影视级 ViewLayer 管理工具。",
+        "softwareVersion": "5.2.0",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
 
 hero:
   name: Industrial 3D

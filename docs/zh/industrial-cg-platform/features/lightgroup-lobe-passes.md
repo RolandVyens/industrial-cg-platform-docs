@@ -1,3 +1,10 @@
+---
+title: Blender Cycles 渲染：针对每个灯光组输出独立的直接与间接光照通道
+head:
+  - - meta
+    - name: description
+      content: "学习如何在 Blender Cycles 中将单个灯光组拆分为漫反射、高光、透射和体积等分量通道，为 Nuke 精细重打光提供可能。"
+---
 # 灯光组分量通道
 
 <Badge type="tip" text="已发布" />

@@ -1,3 +1,10 @@
+---
+title: How to Render Native Deep EXR in Blender Cycles for Nuke
+head:
+  - - meta
+    - name: description
+      content: "Learn how to output native Deep EXR from Blender Cycles for lossless deep compositing in Nuke, and how it differs from standard Z-Depth."
+---
 # Deep EXR Output
 
 <Badge type="tip" text="Shipped" />
