@@ -82,6 +82,17 @@ export default defineConfig({
     );
   },
 
+  transformHead(context) {
+    const { pageData } = context;
+    const ogTitle = pageData.frontmatter.title || 'Industrial CG Platform — Blender VFX Fork by CGWeave';
+    const ogDescription = pageData.frontmatter.description || pageData.frontmatter.summary || 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.';
+    const head: import('vitepress').HeadConfig[] = [
+      ['meta', { property: 'og:title', content: ogTitle }],
+      ['meta', { property: 'og:description', content: ogDescription }]
+    ];
+    return head;
+  },
+
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -89,8 +100,6 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
     ['meta', { name: 'theme-color', content: '#7c4dff' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Industrial CG Platform — Blender VFX Fork by CGWeave' }],
-    ['meta', { property: 'og:description', content: 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com;" }],
     ['script', {}, "if (self !== top) { top.location = self.location; }"],
   ],
