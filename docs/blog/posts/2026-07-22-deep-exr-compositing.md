@@ -1,3 +1,4 @@
+---
 title: "Blender Deep EXR: Breaking the Limits of 2D Render Layers in Nuke"
 description: "The core benefit of Blender Deep EXR is allowing complex, multi-layer CG renders to be recombined in Nuke according to true spatial relationships. Learn how Deep Compositing avoids cascading re-renders caused by element updates."
 date: 2026-07-22

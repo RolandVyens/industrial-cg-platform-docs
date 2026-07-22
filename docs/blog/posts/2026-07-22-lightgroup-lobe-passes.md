@@ -1,3 +1,4 @@
+---
 title: "From Blender to Nuke: Unlocking Light Group Controllability with Lobe Passes"
 description: "While Blender Lightgroups can output Cycles render passes by light group, obtaining the combined color of a single light is still insufficient in feature-film Nuke compositing. Learn how Lightgroup Lobe Passes enable precise modification of a light's individual components, avoiding costly re-renders."
 date: 2026-07-22
