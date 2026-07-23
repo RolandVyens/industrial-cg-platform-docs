@@ -1,0 +1,4 @@
+﻿python .agents/scripts/audit_all_links.py
+python .agents/scripts/audit_content_parity.py
+node .agents/scripts/audit_frontmatter.js
+npm run docs:build

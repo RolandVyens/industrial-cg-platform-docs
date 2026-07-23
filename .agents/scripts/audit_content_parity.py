@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import json
 
@@ -103,8 +104,10 @@ def main():
             print(issue)
         with open('parity_report.txt', 'w', encoding='utf-8') as f:
             f.write('\n'.join(issues))
+        sys.exit(1)
     else:
         print("ALL CONTENT PARITY CHECKS PASSED.")
+        sys.exit(0)
 
 if __name__ == '__main__':
     main()

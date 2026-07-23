@@ -1,6 +1,5 @@
 ---
 layout: false
-description: "if (typeof window !== 'undefined') {"
 ---
 <script>
 if (typeof window !== 'undefined') {

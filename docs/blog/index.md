@@ -2,7 +2,6 @@
 layout: page
 title: Ecosystem Devlog
 titleTemplate: Industrial 3D Development Updates
-description: "import { withBase } from 'vitepress'"
 ---
 <script setup>
 import { withBase } from 'vitepress'

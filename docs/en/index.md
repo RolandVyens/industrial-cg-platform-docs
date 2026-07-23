@@ -39,8 +39,7 @@ hero:
     - theme: alt
       text: Pipeline Tools
       link: /en/industrial-pipeline-tools
-
-description: ".custom-features-grid {"
+description: "Industrial CG Platform is a Windows-exclusive VFX rendering fork based on Blender 5.2. Features native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and production ViewLayers."
 ---
 <div class="custom-features-grid">
   <a href="/en/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

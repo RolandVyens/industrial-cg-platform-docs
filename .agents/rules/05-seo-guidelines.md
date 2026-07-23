@@ -14,3 +14,8 @@ MANDATORY constraints for SEO, Frontmatter, and Language variations:
 
 3. GOOGLE TITLE REWRITE RISK:
    If the discrepancy between the frontmatter `title` and the visible `<h1>` is too extreme, Google may rewrite the SERP title. Keep the `<h1>` concise, but ensure it accurately reflects the core subject of the longer frontmatter title.
+
+4. EXPLICIT OG:IMAGE COVER FIELDS:
+   The `transformHead` hook in `config.mts` relies on `pageData.frontmatter.cover` to generate dynamic `og:image` and `twitter:image` tags.
+   - ALWAYS explicitly define `cover: /path/to/image.png` in the frontmatter of Blog posts and Feature pages.
+   - If omitted, the social media scraper will fall back to the generic global logo, ruining social media link previews.

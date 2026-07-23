@@ -1,7 +1,6 @@
 ---
 layout: doc
 title: Releases
-description: "import { data as releases } from '../../../releases.data.js'"
 ---
 # Releases
 
