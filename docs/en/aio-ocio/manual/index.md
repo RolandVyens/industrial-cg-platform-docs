@@ -1,3 +1,7 @@
+---
+title: "AIO-OCIO Manual"
+description: "Welcome to the user manual for AIO-OCIO (All in 1 OpenColorIO configuration)."
+---
 # AIO-OCIO Manual
 
 Welcome to the user manual for **AIO-OCIO** (All in 1 OpenColorIO configuration).

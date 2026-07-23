@@ -1,3 +1,7 @@
+---
+title: "Modules & Outils de Pipeline"
+description: "La suite Industrial 3D fournit un ensemble de modules complémentaires open-source et de configurations de couleur conçus pour automatiser, simplifier ..."
+---
 # Modules & Outils de Pipeline
 
 La suite Industrial 3D fournit un ensemble de modules complémentaires open-source et de configurations de couleur conçus pour automatiser, simplifier et intégrer Blender et la gestion des couleurs dans les pipelines VFX professionnels.

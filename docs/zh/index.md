@@ -40,8 +40,8 @@ hero:
       text: 浏览管线工具
       link: /zh/industrial-pipeline-tools
 
+description: ".custom-features-grid {"
 ---
-
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">
     <div class="feature-bg-overlay">
@@ -139,7 +139,7 @@ hero:
 
 <br id="tools-ecosystem">
 
-<div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--vp-c-divider);">
+<div style="text-align: center; margin-top: 4rem; padding-top: 4rem;">
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">支持与赞助开发</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Industrial 3D 流程工具集是作为专注于生产的开源研发项目进行开发的。</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">

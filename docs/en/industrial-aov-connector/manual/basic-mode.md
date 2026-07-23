@@ -1,3 +1,7 @@
+---
+title: "Basic Mode"
+description: "This page outlines the basic features and interface options of the Industrial AOV Connector."
+---
 # Basic Mode
 
 This page outlines the basic features and interface options of the **Industrial AOV Connector**.

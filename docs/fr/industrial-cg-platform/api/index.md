@@ -1,3 +1,7 @@
+---
+title: "Référence API"
+description: "Cette section documente la surface API C++ et Python qu'Industrial CG Platform ajoute ou modifie dans Blender et Cycles."
+---
 # Référence API
 
 Cette section documente la surface API C++ et Python qu'Industrial CG Platform ajoute ou modifie dans Blender et Cycles.

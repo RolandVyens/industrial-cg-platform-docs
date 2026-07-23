@@ -1,3 +1,7 @@
+---
+title: "Industrial AOV Connector"
+description: "Industrial AOV Connector is an advanced open-source add-on for Blender designed to streamline and automate the setup of Arbitrary Output Variables (AO..."
+---
 # Industrial AOV Connector
 
 **Industrial AOV Connector** is an advanced open-source add-on for Blender designed to streamline and automate the setup of Arbitrary Output Variables (AOVs) and render output file nodes for professional VFX and compositing pipelines. 

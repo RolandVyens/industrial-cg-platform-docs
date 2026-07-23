@@ -1,3 +1,7 @@
+---
+title: "Blender 色彩管理配置手册"
+description: "本页面将介绍如何在 Blender 中安装和应用 AIO-OCIO 配置文件，以实现与行业接轨的 sRGB, Display P3, Rec.1886 显示转换。"
+---
 # Blender 色彩管理配置手册
 
 本页面将介绍如何在 Blender 中安装和应用 **AIO-OCIO** 配置文件，以实现与行业接轨的 sRGB, Display P3, Rec.1886 显示转换。

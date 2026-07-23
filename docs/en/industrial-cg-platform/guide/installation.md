@@ -1,3 +1,7 @@
+---
+title: "Installation"
+description: "| Component | Requirement |"
+---
 # Installation
 
 ## System Requirements

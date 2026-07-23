@@ -1,3 +1,7 @@
+---
+title: "Nuke 自动通道重组配置"
+description: "Industrial Light AOV Splitter 配套提供了一个辅助 Python 脚本，用于在 Foundry Nuke 合成软件中自动对拆分出的灯光通道进行 Shuffle 重组与拼合。"
+---
 # Nuke 自动通道重组配置
 
 **Industrial Light AOV Splitter** 配套提供了一个辅助 Python 脚本，用于在 Foundry Nuke 合成软件中自动对拆分出的灯光通道进行 Shuffle 重组与拼合。

@@ -1,3 +1,7 @@
+---
+title: "Getting Started"
+description: "!Industrial CG Platform Splash"
+---
 # Getting Started
 
 ![Industrial CG Platform Splash](/splash.png)

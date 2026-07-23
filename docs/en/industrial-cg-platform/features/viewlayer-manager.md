@@ -1,3 +1,7 @@
+---
+title: "ViewLayer Manager"
+description: "The ViewLayer Manager is a dedicated Qt-based tool window that provides a comprehensive interface for managing ViewLayers, render passes, Shader AOVs,..."
+---
 # ViewLayer Manager
 
 <Badge type="tip" text="Shipped" />

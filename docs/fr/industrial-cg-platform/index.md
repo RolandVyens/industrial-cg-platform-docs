@@ -43,7 +43,6 @@ features:
     details: Outil de gestion de ViewLayer basé sur Qt avec système de préréglages, regroupement de passes et opérations de ViewLayer par lots — le tout depuis une fenêtre de gestion dédiée.
     link: /fr/industrial-cg-platform/features/viewlayer-manager
 ---
-
 <br>
 
 <div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--vp-c-divider);">

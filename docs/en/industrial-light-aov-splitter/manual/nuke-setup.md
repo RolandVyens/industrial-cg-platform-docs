@@ -1,3 +1,7 @@
+---
+title: "Nuke Auto-Shuffle Setup"
+description: "The Industrial Light AOV Splitter includes a companion script to automatically shuffle and combine split lightgroup passes inside Foundry Nuke."
+---
 # Nuke Auto-Shuffle Setup
 
 The **Industrial Light AOV Splitter** includes a companion script to automatically shuffle and combine split lightgroup passes inside Foundry Nuke.

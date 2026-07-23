@@ -1,3 +1,7 @@
+---
+title: "Premiers pas"
+description: "!Industrial CG Platform Splash"
+---
 # Premiers pas
 
 ![Industrial CG Platform Splash](/splash.png)

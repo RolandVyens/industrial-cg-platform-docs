@@ -4,8 +4,8 @@ head:
   - - meta
     - name: description
       content: "Apprenez à rendre un véritable overscan EXR dans Blender Cycles pour les workflows de distorsion d'objectif, en préservant les métadonnées displayWindow."
+description: "L'Overscan EXR est une fonctionnalité de rendu dans Industrial CG Platform qui permet au moteur Cycles de Blender de calculer des marges de pixels sup..."
 ---
-
 # Overscan EXR
 
 <Badge type="tip" text="Intégré" />
@@ -20,7 +20,6 @@ Lors de l'exportation vers OpenEXR, le moteur de rendu préserve la résolution 
 
 - **Marges de sécurité VFX en aval** — Répond aux exigences des pipelines VFX standard en fournissant des pixels supplémentaires pour la correction de distorsion de l'objectif (undistortion), la simulation de tremblement de caméra et le matchmoving 2D/3D dans les logiciels de compositing.
 - **Prévention de l'étirement des bords** — Évite les bordures noires ou l'étirement des pixels lors des translations, des rotations ou des reprojections de caméras.
-- **Support des formats Deep et Multi-couches** — S'intègre parfaitement avec tous les formats EXR, y compris les fichiers EXR multi-couches (OpenEXR Multilayer) et les rendus Deep EXR.
 
 ## Comment l'activer ?
 
@@ -71,7 +70,7 @@ Pour que les logiciels de compositing en aval (tels que Foundry Nuke ou Blackmag
     └──────────────────────────────────────────────────────────────────┘
 ```
 
-Lors de l'importation dans les logiciels de compositing, le fichier s'alignera naturellement sur le format standard 1920x1080 du projet, tandis que les pixels d'overscan à l'extérieur des limites du projet sont préservés dans la boîte englobante (Bounding Box, ou BBox) et restent accessibles pour les transformations.
+Lors de l'importation dans les logiciels de compositing, le fichier s'alignera naturellement sur le format de livraison standard du projet, tandis que les pixels d'overscan à l'extérieur des limites du projet sont préservés dans la boîte englobante (Bounding Box, ou BBox) et restent accessibles pour les transformations.
 
 ## Limitations connues
 

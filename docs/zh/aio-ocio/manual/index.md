@@ -1,3 +1,7 @@
+---
+title: "AIO-OCIO 用户手册"
+description: "欢迎阅读 AIO-OCIO（多合一 OpenColorIO 色彩配置文件）的官方用户手册。"
+---
 # AIO-OCIO 用户手册
 
 欢迎阅读 **AIO-OCIO**（多合一 OpenColorIO 色彩配置文件）的官方用户手册。

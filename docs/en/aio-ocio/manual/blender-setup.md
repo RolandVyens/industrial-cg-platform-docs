@@ -1,3 +1,7 @@
+---
+title: "Blender Color Management Setup"
+description: "This page explains how to install and configure AIO-OCIO inside Blender to enable professional color spaces like sRGB, Display P3, and Rec.1886."
+---
 # Blender Color Management Setup
 
 This page explains how to install and configure **AIO-OCIO** inside Blender to enable professional color spaces like sRGB, Display P3, and Rec.1886.

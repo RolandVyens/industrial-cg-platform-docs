@@ -1,3 +1,7 @@
+---
+title: "AIO-OCIO"
+description: "AIO-OCIO is a unified, all-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG producti..."
+---
 # AIO-OCIO
 
 **AIO-OCIO** is a unified, all-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG production pipelines.

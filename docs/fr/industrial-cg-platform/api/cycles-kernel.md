@@ -1,3 +1,7 @@
+---
+title: "Extensions du Noyau Cycles"
+description: "Cette page documente les ajouts C++ au niveau du noyau (kernel) qu'Industrial CG Platform apporte au moteur de rendu Cycles."
+---
 # Extensions du Noyau Cycles
 
 Cette page documente les ajouts C++ au niveau du noyau (kernel) qu'Industrial CG Platform apporte au moteur de rendu Cycles.

@@ -1,3 +1,7 @@
+---
+title: "灯光拆分器使用说明与规范"
+description: "本页面将介绍 Industrial Light AOV Splitter 的影视级制作流程和命名规范。"
+---
 # 灯光拆分器使用说明与规范
 
 本页面将介绍 **Industrial Light AOV Splitter** 的影视级制作流程和命名规范。

@@ -1,8 +1,8 @@
 ---
 layout: doc
 title: 版本发布
+description: "import { data as releases } from '../../../releases.data.js'"
 ---
-
 # 版本发布
 
 <script setup>

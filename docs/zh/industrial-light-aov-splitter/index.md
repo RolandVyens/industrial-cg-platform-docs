@@ -1,3 +1,7 @@
+---
+title: "Industrial Light AOV Splitter"
+description: "Industrial Light AOV Splitter 是一个专为 Blender 打造的高级流程辅助插件，用于自动配置、分离和材质化灯光组（Light Group）的单个 AOV（自定义输出通道）通道。"
+---
 # Industrial Light AOV Splitter
 
 **Industrial Light AOV Splitter** 是一个专为 Blender 打造的高级流程辅助插件，用于自动配置、分离和材质化灯光组（Light Group）的单个 AOV（自定义输出通道）通道。

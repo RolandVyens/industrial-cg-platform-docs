@@ -4,6 +4,7 @@ head:
   - - meta
     - name: description
       content: "学习如何在 Blender Cycles 中将单个灯光组拆分为漫反射、高光、透射和体积等分量通道，为 Nuke 精细重打光提供可能。"
+description: "灯光组分量通道（Lightgroup Lobe Passes）扩展了 Blender Cycles 的灯光通道系统，通过将每个灯光组 (lightgroup) 分解为其独立的照明分量（即 Lobes）。您现在可以为每个灯光组输出单独的漫反射 (diffuse)、光泽 (glossy)、透射 (tra..."
 ---
 # 灯光组分量通道
 

@@ -1,3 +1,7 @@
+---
+title: "À propos du projet"
+description: "Blender est déjà un outil de création puissant, mais la production VFX nécessite souvent plus que de simples résultats visuels magnifiques dans le vie..."
+---
 # À propos du projet
 
 ## Pourquoi cette plateforme existe-t-elle ?

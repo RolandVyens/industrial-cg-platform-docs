@@ -1,3 +1,7 @@
+---
+title: "Fake Deep & Composition Profonde"
+description: "Cette page explique comment réaliser une composition profonde (deep compositing) en utilisant le flux de travail de sortie Fake Deep depuis Blender."
+---
 # Fake Deep & Composition Profonde
 
 Cette page explique comment réaliser une composition profonde (deep compositing) en utilisant le flux de travail de sortie **Fake Deep** depuis Blender.

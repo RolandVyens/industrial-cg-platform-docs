@@ -1,3 +1,7 @@
+---
+title: "Utilisation du Diviseur de Lumière & Directives"
+description: "Cette page explique le flux de travail de production et les contraintes de nommage pour l'Industrial Light AOV Splitter."
+---
 # Utilisation du Diviseur de Lumière & Directives
 
 Cette page explique le flux de travail de production et les contraintes de nommage pour l'**Industrial Light AOV Splitter**.

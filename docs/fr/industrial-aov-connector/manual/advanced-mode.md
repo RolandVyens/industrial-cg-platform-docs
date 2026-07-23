@@ -1,3 +1,7 @@
+---
+title: "Mode avancé"
+description: "Cette page détaille les fonctionnalités avancées affichées lorsque l'Industrial AOV Connector est basculé hors de son mode basique par défaut."
+---
 # Mode avancé
 
 Cette page détaille les fonctionnalités avancées affichées lorsque l'**Industrial AOV Connector** est basculé hors de son mode basique par défaut.

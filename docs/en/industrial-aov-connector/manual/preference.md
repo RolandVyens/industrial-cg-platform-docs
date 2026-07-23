@@ -1,3 +1,7 @@
+---
+title: "Preferences & Configurations"
+description: "This page explains the core settings, performance optimizations, and output tools available in the preferences of the Industrial AOV Connector."
+---
 # Preferences & Configurations
 
 This page explains the core settings, performance optimizations, and output tools available in the preferences of the **Industrial AOV Connector**.

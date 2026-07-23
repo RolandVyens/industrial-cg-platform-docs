@@ -4,6 +4,7 @@ head:
   - - meta
     - name: description
       content: "Learn how to output native Deep EXR from Blender Cycles for lossless deep compositing in Nuke, and how it differs from standard Z-Depth."
+description: "Deep EXR is a rendering output format that stores per-sample depth information alongside color data. Unlike standard 'flat' EXR files that only store ..."
 ---
 # Deep EXR Output
 
@@ -36,18 +37,13 @@ Industrial CG Platform adds native Deep EXR output support to Blender Cycles, ma
 1. Add a **File Output** node in the compositor.
 2. Set its format to `Deep OpenEXR`.
 3. Connect your render layers.
-4. The deep file output node works correctly when the compositor device is set to `GPU`.
-
-::: info
-Deep EXR File Output does not force the rest of the compositor off the GPU — it integrates seamlessly with GPU compositing.
-:::
 
 ## Parameters
 
 | Parameter | Description | Default |
 | --- | --- | --- |
 | **Deep Output** | Enable deep EXR output format | Off |
-| **Deep Tile Budget** | Memory budget per tile for deep sample storage (higher = more samples preserved) | Automatic |
+| **Deep Tile Budget** | Memory budget per tile for deep sample storage (higher = more samples preserved) | 1024 MB |
 
 ## Nuke Workflow
 
@@ -62,7 +58,6 @@ For best results, render each major CG element (characters, environments, effect
 
 ## Known Limitations
 
-- **Volume deep behavior** — Current volume deep output is accepted as shipped. Memory-heavy volume scenes may produce large deep files.
 - **Metadata reconstruction** — Full deep metadata reconstruction is future work, not part of the current baseline.
 - **Memory usage** — Deep output stores significantly more data than flat EXR. Use the Deep Tile Budget parameter to control the tradeoff.
 

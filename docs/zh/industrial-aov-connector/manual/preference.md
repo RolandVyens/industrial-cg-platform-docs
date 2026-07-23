@@ -1,3 +1,7 @@
+---
+title: "偏好设置与详细配置"
+description: "本页将详细解释 Industrial AOV Connector 偏好设置中的核心功能、性能优化选项及输出管理工具。"
+---
 # 偏好设置与详细配置
 
 本页将详细解释 **Industrial AOV Connector** 偏好设置中的核心功能、性能优化选项及输出管理工具。

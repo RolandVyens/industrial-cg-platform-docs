@@ -1,3 +1,7 @@
+---
+title: "Manuel de l'AIO-OCIO"
+description: "Bienvenue dans le manuel d'utilisation officiel de l'AIO-OCIO (configuration All in 1 OpenColorIO)."
+---
 # Manuel de l'AIO-OCIO
 
 Bienvenue dans le manuel d'utilisation officiel de l'**AIO-OCIO** (configuration All in 1 OpenColorIO).

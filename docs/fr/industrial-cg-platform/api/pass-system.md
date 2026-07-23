@@ -1,3 +1,7 @@
+---
+title: "Système de Passes & AOV"
+description: "Cette page documente comment Industrial CG Platform étend le système de passes de rendu et d'AOV de Blender."
+---
 # Système de Passes & AOV
 
 Cette page documente comment Industrial CG Platform étend le système de passes de rendu et d'AOV de Blender.

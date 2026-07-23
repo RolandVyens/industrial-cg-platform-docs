@@ -40,8 +40,8 @@ hero:
       text: Outils de pipeline
       link: /fr/industrial-pipeline-tools
 
+description: ".custom-features-grid {"
 ---
-
 <div class="custom-features-grid">
   <a href="/fr/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">
     <div class="feature-bg-overlay">

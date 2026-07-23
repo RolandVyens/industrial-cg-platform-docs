@@ -1,3 +1,7 @@
+---
+title: "AIO-OCIO"
+description: "AIO-OCIO est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG ..."
+---
 # AIO-OCIO
 
 **AIO-OCIO** est un profil de configuration de gestion des couleurs OpenColorIO (OCIO) unifié et multi-en-un, optimisé pour les pipelines de VFX et de CG multi-logiciels modernes.

@@ -1,3 +1,7 @@
+---
+title: "Préférences et configurations"
+description: "Cette page explique les paramètres principaux, les optimisations de performance et les outils de sortie disponibles dans les préférences de l'Industri..."
+---
 # Préférences et configurations
 
 Cette page explique les paramètres principaux, les optimisations de performance et les outils de sortie disponibles dans les préférences de l'**Industrial AOV Connector**.

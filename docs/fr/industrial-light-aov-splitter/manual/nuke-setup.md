@@ -1,3 +1,7 @@
+---
+title: "Configuration Auto-Shuffle dans Nuke"
+description: "L'Industrial Light AOV Splitter comprend un script compagnon pour séparer (shuffle) et combiner automatiquement les passes de groupes de lumières divi..."
+---
 # Configuration Auto-Shuffle dans Nuke
 
 L'**Industrial Light AOV Splitter** comprend un script compagnon pour séparer (shuffle) et combiner automatiquement les passes de groupes de lumières divisées dans Foundry Nuke.

@@ -1,3 +1,7 @@
+---
+title: "About the Project"
+description: "Blender is already a strong creative tool, but VFX production often needs more than beautiful viewport results."
+---
 # About the Project
 
 ## Why This Exists

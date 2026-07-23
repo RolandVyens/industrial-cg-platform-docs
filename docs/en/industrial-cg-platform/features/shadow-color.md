@@ -1,3 +1,7 @@
+---
+title: "Shadow Color"
+description: "Shadow Color adds a per-light and per-world color property to Blender Cycles that tints the shadow regions cast by each light source. Instead of shado..."
+---
 # Shadow Color
 
 <Badge type="tip" text="Shipped" />

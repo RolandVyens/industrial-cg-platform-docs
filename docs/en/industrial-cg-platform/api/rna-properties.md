@@ -1,3 +1,7 @@
+---
+title: "RNA Properties"
+description: "This page documents the new RNA properties that Industrial CG Platform adds to Blender's data model."
+---
 # RNA Properties
 
 This page documents the new RNA properties that Industrial CG Platform adds to Blender's data model.

@@ -1,3 +1,7 @@
+---
+title: "Opérateurs Python"
+description: "Cette page documente les opérateurs Python et l'API d'exécution Qt partagée qu'Industrial CG Platform ajoute à Blender."
+---
 # Opérateurs Python
 
 Cette page documente les opérateurs Python et l'API d'exécution Qt partagée qu'Industrial CG Platform ajoute à Blender.

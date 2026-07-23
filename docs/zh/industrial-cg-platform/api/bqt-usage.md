@@ -1,3 +1,7 @@
+---
+title: "bQt 集成与使用指南"
+description: "Industrial CG Platform 将完整的生产级 PyQt/PySide6 运行环境 (bQt) 直接作为系统扩展（System Extension）打包内置。这使得开发者能够在 Blender 内部编写丰富的基于 Qt 的高性能 UI 工具，而无需强迫艺术家手动安装 Python 包。"
+---
 # bQt 集成与使用指南
 
 Industrial CG Platform 将完整的生产级 PyQt/PySide6 运行环境 (**bQt**) 直接作为系统扩展（System Extension）打包内置。这使得开发者能够在 Blender 内部编写丰富的基于 Qt 的高性能 UI 工具，而无需强迫艺术家手动安装 Python 包。

@@ -1,3 +1,7 @@
+---
+title: "Gestionnaire de ViewLayer"
+description: "Le gestionnaire de ViewLayer (ViewLayer Manager) est une fenêtre d'outil dédiée basée sur Qt qui fournit une interface complète pour gérer les ViewLay..."
+---
 # Gestionnaire de ViewLayer
 
 <Badge type="tip" text="Publié" />

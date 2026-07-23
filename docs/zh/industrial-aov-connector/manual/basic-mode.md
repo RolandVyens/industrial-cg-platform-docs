@@ -1,3 +1,7 @@
+---
+title: "基础模式"
+description: "本页将为您介绍 Industrial AOV Connector 的基础功能和界面选项。"
+---
 # 基础模式
 
 本页将为您介绍 **Industrial AOV Connector** 的基础功能和界面选项。

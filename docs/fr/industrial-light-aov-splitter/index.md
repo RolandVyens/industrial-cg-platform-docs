@@ -1,3 +1,7 @@
+---
+title: "Industrial Light AOV Splitter"
+description: "Industrial Light AOV Splitter est un module de production spécialisé pour Blender qui automatise la configuration, la séparation et la matérialisation..."
+---
 # Industrial Light AOV Splitter
 
 **Industrial Light AOV Splitter** est un module de production spécialisé pour Blender qui automatise la configuration, la séparation et la matérialisation des passes de groupes de lumières individuelles (AOV).

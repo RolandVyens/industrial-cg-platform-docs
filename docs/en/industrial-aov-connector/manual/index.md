@@ -1,3 +1,7 @@
+---
+title: "Industrial AOV Connector Manual"
+description: "Welcome to the official user manual for the Industrial AOV Connector plugin."
+---
 # Industrial AOV Connector Manual
 
 Welcome to the official user manual for the **Industrial AOV Connector** plugin.

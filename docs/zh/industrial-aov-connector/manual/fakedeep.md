@@ -1,3 +1,7 @@
+---
+title: "Fake Deep 与深度合成"
+description: "本页面将向您介绍如何使用 Blender 输出的 Fake Deep 工作流来实现深度合成。"
+---
 # Fake Deep 与深度合成
 
 本页面将向您介绍如何使用 Blender 输出的 **Fake Deep** 工作流来实现深度合成。

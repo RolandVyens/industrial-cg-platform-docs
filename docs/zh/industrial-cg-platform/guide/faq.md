@@ -1,3 +1,7 @@
+---
+title: "常见问题 (FAQ)"
+description: "不是。Industrial CG Platform 是一个由社区发起并维护的 Blender 生产级分支（Fork），与 Blender 基金会（Blender Foundation）无直接关联或背书关系。它使用与 Blender 相同的 GPL-2.0-or-later（或更高版本）开源许可证发布..."
+---
 # 常见问题 (FAQ)
 
 ## 一般问题

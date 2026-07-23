@@ -1,3 +1,7 @@
+---
+title: "RNA 属性"
+description: "本页记录了 Industrial CG Platform 添加到 Blender 数据模型中的新 RNA 属性。"
+---
 # RNA 属性
 
 本页记录了 Industrial CG Platform 添加到 Blender 数据模型中的新 RNA 属性。

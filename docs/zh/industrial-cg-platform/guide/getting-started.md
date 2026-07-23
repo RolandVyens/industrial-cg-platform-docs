@@ -1,3 +1,7 @@
+---
+title: "快速开始"
+description: "!Industrial CG Platform Splash"
+---
 # 快速开始
 
 ![Industrial CG Platform Splash](/splash.png)

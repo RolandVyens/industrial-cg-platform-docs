@@ -1,3 +1,7 @@
+---
+title: "API 参考"
+description: "本节记录了 Industrial CG Platform 对 Blender 和 Cycles 添加或修改的 C++ 和 Python API 表面。"
+---
 # API 参考
 
 本节记录了 Industrial CG Platform 对 Blender 和 Cycles 添加或修改的 C++ 和 Python API 表面。

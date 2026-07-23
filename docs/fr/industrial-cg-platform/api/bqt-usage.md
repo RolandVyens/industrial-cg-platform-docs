@@ -1,3 +1,7 @@
+---
+title: "Guide d'Intégration & d'Utilisation de bQt"
+description: "Industrial CG Platform intègre un environnement d'exécution complet PyQt/PySide6 de qualité production (bQt) directement en tant qu'extension système...."
+---
 # Guide d'Intégration & d'Utilisation de bQt
 
 Industrial CG Platform intègre un environnement d'exécution complet PyQt/PySide6 de qualité production (**bQt**) directement en tant qu'extension système. Cela permet aux développeurs de créer des outils d'interface utilisateur riches basés sur Qt au sein de Blender, sans obliger les artistes à installer manuellement des packages Python.

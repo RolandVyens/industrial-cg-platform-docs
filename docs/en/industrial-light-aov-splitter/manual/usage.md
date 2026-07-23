@@ -1,3 +1,7 @@
+---
+title: "Light Splitter Usage & Guidelines"
+description: "This page explains the production workflow and naming constraints for the Industrial Light AOV Splitter."
+---
 # Light Splitter Usage & Guidelines
 
 This page explains the production workflow and naming constraints for the **Industrial Light AOV Splitter**.

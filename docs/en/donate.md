@@ -1,3 +1,7 @@
+---
+title: "Donate"
+description: "Thank you for supporting Industrial 3D! Your donations directly power the open-source research and development of production-ready CG and VFX tools, k..."
+---
 # Donate
 
 Thank you for supporting **Industrial 3D**! Your donations directly power the open-source research and development of production-ready CG and VFX tools, keeping them free and accessible for artists and studios worldwide.

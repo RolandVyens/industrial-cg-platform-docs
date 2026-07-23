@@ -1,3 +1,7 @@
+---
+title: "Faire un don"
+description: "Merci de soutenir Industrial 3D ! Vos dons financent directement la recherche et le développement open-source d'outils de CG et de VFX professionnels,..."
+---
 # Faire un don
 
 Merci de soutenir **Industrial 3D** ! Vos dons financent directement la recherche et le développement open-source d'outils de CG et de VFX professionnels, les gardant gratuits et accessibles pour les artistes et studios du monde entier.

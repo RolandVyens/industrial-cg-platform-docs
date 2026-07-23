@@ -1,3 +1,7 @@
+---
+title: "Configuration de la Gestion des Couleurs dans Blender"
+description: "Cette page explique comment installer et configurer AIO-OCIO dans Blender pour activer des profils d'affichage professionnels tels que sRGB, Display P..."
+---
 # Configuration de la Gestion des Couleurs dans Blender
 
 Cette page explique comment installer et configurer **AIO-OCIO** dans Blender pour activer des profils d'affichage professionnels tels que sRGB, Display P3 et Rec.1886.

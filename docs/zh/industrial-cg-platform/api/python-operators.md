@@ -1,3 +1,7 @@
+---
+title: "Python 操作器"
+description: "本页记录了 Industrial CG Platform 添加到 Blender 的 Python 操作器和共享 Qt 运行时 API。"
+---
 # Python 操作器
 
 本页记录了 Industrial CG Platform 添加到 Blender 的 Python 操作器和共享 Qt 运行时 API。

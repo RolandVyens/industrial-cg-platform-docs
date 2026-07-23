@@ -4,6 +4,7 @@ head:
   - - meta
     - name: description
       content: "Découvrez comment générer un Deep EXR natif depuis Blender Cycles pour un compositing deep sans perte dans Nuke, et en quoi cela diffère du Z-Depth standard."
+description: "Deep EXR est un format de sortie de rendu qui stocke les informations de profondeur par échantillon avec les données de couleur. Contrairement aux fic..."
 ---
 # Sortie Deep EXR
 
@@ -36,18 +37,13 @@ Industrial CG Platform ajoute une prise en charge native de la sortie Deep EXR �
 1. Ajoutez un nœud **File Output** dans le compositeur.
 2. Définissez son format sur `Deep OpenEXR`.
 3. Connectez vos calques de rendu.
-4. Le nœud de sortie de fichier profond fonctionne correctement lorsque le périphérique du compositeur (Compositor Device) est défini sur `GPU`.
-
-::: info
-La sortie de fichier Deep EXR ne force pas le reste du compositeur à quitter le GPU — elle s'intègre parfaitement au compositing GPU.
-:::
 
 ## Paramètres
 
 | Paramètre | Description | Défaut |
 | --- | --- | --- |
 | **Deep Output** | Activer le format de sortie Deep EXR | Désactivé |
-| **Deep Tile Budget** | Budget mémoire par tuile pour le stockage d'échantillons profonds (plus élevé = plus d'échantillons préservés) | Automatique |
+| **Deep Tile Budget** | Budget mémoire par tuile pour le stockage d'échantillons profonds (plus élevé = plus d'échantillons préservés) | 1024 MB |
 
 ## Flux de travail Nuke
 
@@ -62,7 +58,6 @@ Pour de meilleurs résultats, rendez chaque élément CG majeur (personnages, d�
 
 ## Limites connues
 
-- **Comportement profond du volume** — Le comportement actuel de la sortie profonde de volume est accepté tel quel. Les scènes de volume lourdes en mémoire peuvent produire des fichiers profonds très volumineux.
 - **Reconstruction des métadonnées** — La reconstruction complète des métadonnées profondes est un travail futur et ne fait pas partie de la version de référence actuelle.
 - **Utilisation de la mémoire** — La sortie profonde stocke beaucoup plus de données que l'EXR plat. Utilisez le paramètre Deep Tile Budget pour contrôler ce compromis.
 

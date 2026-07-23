@@ -1,3 +1,7 @@
+---
+title: "Installation"
+description: "| Composant | Configuration |"
+---
 # Installation
 
 ## Configuration Requise

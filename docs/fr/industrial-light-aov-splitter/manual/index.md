@@ -1,3 +1,7 @@
+---
+title: "Manuel de l'Industrial Light AOV Splitter"
+description: "Bienvenue dans le manuel d'utilisation officiel du module Industrial Light AOV Splitter pour Blender."
+---
 # Manuel de l'Industrial Light AOV Splitter
 
 Bienvenue dans le manuel d'utilisation officiel du module **Industrial Light AOV Splitter** pour Blender.

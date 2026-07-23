@@ -1,3 +1,7 @@
+---
+title: "Pass & AOV System"
+description: "This page documents how Industrial CG Platform extends Blender's render pass and AOV system."
+---
 # Pass & AOV System
 
 This page documents how Industrial CG Platform extends Blender's render pass and AOV system.

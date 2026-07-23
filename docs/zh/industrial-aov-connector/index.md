@@ -1,3 +1,7 @@
+---
+title: "Industrial AOV Connector"
+description: "Industrial AOV Connector 是一个专为 Blender 打造的高级开源插件，旨在为专业的影视特效（VFX）与合成流程简化并自动化自定义输出通道（AOV）和渲染文件输出节点的配置。"
+---
 # Industrial AOV Connector
 
 **Industrial AOV Connector** 是一个专为 Blender 打造的高级开源插件，旨在为专业的影视特效（VFX）与合成流程简化并自动化自定义输出通道（AOV）和渲染文件输出节点的配置。

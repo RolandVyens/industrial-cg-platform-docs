@@ -1,3 +1,7 @@
+---
+title: "Addons & Pipeline Tools"
+description: "The Industrial 3D suite includes specialized open-source tools and color configurations designed to automate, streamline, and integrate Blender and co..."
+---
 # Addons & Pipeline Tools
 
 The Industrial 3D suite includes specialized open-source tools and color configurations designed to automate, streamline, and integrate Blender and color pipelines into high-end film and VFX workflows.

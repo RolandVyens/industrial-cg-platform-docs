@@ -1,3 +1,7 @@
+---
+title: "Industrial Light AOV Splitter Manual"
+description: "Welcome to the user manual for the Industrial Light AOV Splitter add-on for Blender."
+---
 # Industrial Light AOV Splitter Manual
 
 Welcome to the user manual for the **Industrial Light AOV Splitter** add-on for Blender.

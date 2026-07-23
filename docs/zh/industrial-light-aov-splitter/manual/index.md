@@ -1,3 +1,7 @@
+---
+title: "Industrial Light AOV Splitter 用户手册"
+description: "欢迎阅读 Blender 插件 Industrial Light AOV Splitter 的官方用户手册。"
+---
 # Industrial Light AOV Splitter 用户手册
 
 欢迎阅读 Blender 插件 **Industrial Light AOV Splitter** 的官方用户手册。

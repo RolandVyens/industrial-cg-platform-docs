@@ -1,3 +1,7 @@
+---
+title: "Pass 与 AOV 系统"
+description: "本页记录了 Industrial CG Platform 如何扩展 Blender 的渲染通道（Render Pass）与 AOV 系统。"
+---
 # Pass 与 AOV 系统
 
 本页记录了 Industrial CG Platform 如何扩展 Blender 的渲染通道（Render Pass）与 AOV 系统。

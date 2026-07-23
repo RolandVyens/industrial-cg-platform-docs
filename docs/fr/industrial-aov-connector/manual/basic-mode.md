@@ -1,3 +1,7 @@
+---
+title: "Mode basique"
+description: "Cette page présente les fonctionnalités de base et les options d'interface d'Industrial AOV Connector."
+---
 # Mode basique
 
 Cette page présente les fonctionnalités de base et les options d'interface d'**Industrial AOV Connector**.

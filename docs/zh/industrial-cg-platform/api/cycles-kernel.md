@@ -1,3 +1,7 @@
+---
+title: "Cycles 内核扩展"
+description: "本页记录了 Industrial CG Platform 对 Cycles 渲染引擎进行的 C++ 内核级添加。"
+---
 # Cycles 内核扩展
 
 本页记录了 Industrial CG Platform 对 Cycles 渲染引擎进行的 C++ 内核级添加。

@@ -1,3 +1,7 @@
+---
+title: "通用软件色彩管理配置"
+description: "本页面介绍如何将 AIO-OCIO 预制的色彩配置文件整合到 Autodesk Maya、Foundry Nuke、SideFX Houdini 等主流 DCC 创作软件中。"
+---
 # 通用软件色彩管理配置
 
 本页面介绍如何将 **AIO-OCIO** 预制的色彩配置文件整合到 Autodesk Maya、Foundry Nuke、SideFX Houdini 等主流 DCC 创作软件中。

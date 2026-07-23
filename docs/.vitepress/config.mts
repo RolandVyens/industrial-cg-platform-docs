@@ -75,6 +75,7 @@ export default defineConfig({
     pageData.frontmatter.head ??= [];
     const baseUrl = 'https://cgweave.com/';
     pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: `${baseUrl}${cleanPath}` }],
       ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}en/${basePath}` }],
       ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: `${baseUrl}zh/${basePath}` }],
       ['link', { rel: 'alternate', hreflang: 'fr', href: `${baseUrl}fr/${basePath}` }],
@@ -86,9 +87,15 @@ export default defineConfig({
     const { pageData } = context;
     const ogTitle = pageData.frontmatter.title || 'Industrial CG Platform — Blender VFX Fork by CGWeave';
     const ogDescription = pageData.frontmatter.description || pageData.frontmatter.summary || 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.';
+    const ogImage = pageData.frontmatter.cover ? `https://cgweave.com${pageData.frontmatter.cover}` : 'https://cgweave.com/logo.png';
     const head: import('vitepress').HeadConfig[] = [
       ['meta', { property: 'og:title', content: ogTitle }],
-      ['meta', { property: 'og:description', content: ogDescription }]
+      ['meta', { property: 'og:description', content: ogDescription }],
+      ['meta', { property: 'og:image', content: ogImage }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: ogTitle }],
+      ['meta', { name: 'twitter:description', content: ogDescription }],
+      ['meta', { name: 'twitter:image', content: ogImage }]
     ];
     return head;
   },

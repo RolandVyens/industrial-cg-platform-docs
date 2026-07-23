@@ -1,3 +1,7 @@
+---
+title: "FAQ"
+description: "Non. Industrial CG Platform est un fork de Blender maintenu par la communauté. Il n'est en aucun cas affilié ou approuvé par la Fondation Blender. Il ..."
+---
 # FAQ
 
 ## Généralités

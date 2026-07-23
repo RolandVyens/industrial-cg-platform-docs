@@ -1,3 +1,7 @@
+---
+title: "Advanced Mode"
+description: "This page details the advanced features exposed when switching the Industrial AOV Connector out of its default basic mode."
+---
 # Advanced Mode
 
 This page details the advanced features exposed when switching the **Industrial AOV Connector** out of its default basic mode.

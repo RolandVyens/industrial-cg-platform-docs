@@ -1,3 +1,7 @@
+---
+title: "Industrial AOV Connector 用户手册"
+description: "欢迎阅读 Industrial AOV Connector 插件的官方使用手册。"
+---
 # Industrial AOV Connector 用户手册
 
 欢迎阅读 **Industrial AOV Connector** 插件的官方使用手册。

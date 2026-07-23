@@ -4,8 +4,8 @@ head:
   - - meta
     - name: description
       content: "Learn how to render true EXR overscan in Blender Cycles for lens distortion and redistortion workflows, preserving the displayWindow metadata."
+description: "EXR Overscan is a rendering feature in Industrial CG Platform that allows Blender Cycles to calculate extra pixel margins outside of the standard deli..."
 ---
-
 # EXR Overscan
 
 <Badge type="tip" text="Shipped" />
@@ -20,7 +20,6 @@ When exporting to OpenEXR, the engine preserves the standard delivery resolution
 
 - **Downstream VFX Padding** — Matches standard VFX pipeline demands by providing extra border padding for lens undistortion, camera shake simulation, and 2D/3D matchmoving in compositing packages.
 - **Edge Stretch Prevention** — Prevents black borders or pixel stretching when matchmove cameras translate, rotate, or reproject plates.
-- **Deep and Multi-Layer Support** — Integrates seamlessly with all EXR formats, including multi-layer EXR and Deep EXR renders.
 
 ## How To Enable
 
@@ -71,7 +70,7 @@ To ensure downstream software parses overscanned EXR files correctly, Industrial
     └──────────────────────────────────────────────────────────────────┘
 ```
 
-When imported into compositors, the file will automatically align to the project's standard 1920x1080 format, while the overscan pixels outside the viewport boundaries are preserved inside the bounding box (BBox) and remain accessible for transformations.
+When imported into compositors, the file will automatically align to the project's standard delivery format, while the overscan pixels outside the viewport boundaries are preserved inside the bounding box (BBox) and remain accessible for transformations.
 
 ## Known Limitations
 

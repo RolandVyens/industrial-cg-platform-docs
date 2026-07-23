@@ -1,3 +1,7 @@
+---
+title: "Python Operators"
+description: "This page documents the Python operators and the shared Qt runtime API that Industrial CG Platform adds to Blender."
+---
 # Python Operators
 
 This page documents the Python operators and the shared Qt runtime API that Industrial CG Platform adds to Blender.
