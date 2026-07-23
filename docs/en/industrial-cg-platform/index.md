@@ -21,7 +21,7 @@ hero:
       text: API Reference
       link: /en/industrial-cg-platform/api/
 
-description: ".custom-features-grid {"
+description: "A Blender-based production platform for advanced VFX workflows."
 ---
 <div class="custom-features-grid">
   <a href="/en/industrial-cg-platform/features/deep-exr" class="feature-bg-card" style="background-image: url('/features/deep-exr.webp')">

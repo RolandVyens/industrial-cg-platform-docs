@@ -21,7 +21,7 @@ hero:
       text: API 参考
       link: /zh/industrial-cg-platform/api/
 
-description: ".custom-features-grid {"
+description: "基于 Blender 的高级 VFX 工作流生产平台。"
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/features/deep-exr" class="feature-bg-card" style="background-image: url('/features/deep-exr.webp')">
