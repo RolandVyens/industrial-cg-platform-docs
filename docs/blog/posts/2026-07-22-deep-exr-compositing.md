@@ -7,6 +7,7 @@ tags:
   - Deep Compositing
   - VFX
 editLink: false
+cover: "/blog/nuke-deep-compositing.png"
 ---
 
 # Blender Deep EXR: Breaking the Limits of 2D Render Layers in Nuke

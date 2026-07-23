@@ -5,6 +5,7 @@ head:
     - name: description
       content: "Learn how to output native Deep EXR from Blender Cycles for lossless deep compositing in Nuke, and how it differs from standard Z-Depth."
 description: "Deep EXR is a rendering output format that stores per-sample depth information alongside color data. Unlike standard 'flat' EXR files that only store ..."
+cover: "/features/deep-exr.webp"
 ---
 # Deep EXR Output
 

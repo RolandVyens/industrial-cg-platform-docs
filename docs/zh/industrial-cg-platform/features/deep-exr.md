@@ -5,6 +5,7 @@ head:
     - name: description
       content: "了解如何从 Blender Cycles 输出原生 Deep EXR，实现 Nuke 中的无损深度合成，以及它与标准 Z-Depth 的区别。"
 description: "Deep EXR 是一种渲染输出格式，在颜色数据旁边存储逐采样的深度信息。与只存储最近可见表面的标准“平面”EXR 文件不同，Deep EXR 保留了每个对最终像素有贡献的深度采样。这使得在 Nuke 等工具中进行无损深度合成成为可能，CG 图层可以基于其实际深度进行合并，而不是简单的叠加操作。"
+cover: "/features/deep-exr.webp"
 ---
 # Deep EXR 深度输出
 

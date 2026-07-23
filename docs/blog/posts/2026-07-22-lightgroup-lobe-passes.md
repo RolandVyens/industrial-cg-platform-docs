@@ -7,6 +7,7 @@ tags:
   - Compositing
   - Lighting
 editLink: false
+cover: "/blog/nuke-lightgroup-lobes.png"
 ---
 
 # From Blender to Nuke: Unlocking Light Group Controllability with Lobe Passes

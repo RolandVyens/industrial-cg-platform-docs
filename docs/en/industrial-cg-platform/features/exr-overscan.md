@@ -5,6 +5,7 @@ head:
     - name: description
       content: "Learn how to render true EXR overscan in Blender Cycles for lens distortion and redistortion workflows, preserving the displayWindow metadata."
 description: "EXR Overscan is a rendering feature in Industrial CG Platform that allows Blender Cycles to calculate extra pixel margins outside of the standard deli..."
+cover: "/features/overscan.webp"
 ---
 # EXR Overscan
 

@@ -5,6 +5,7 @@ head:
     - name: description
       content: "Apprenez à rendre un véritable overscan EXR dans Blender Cycles pour les workflows de distorsion d'objectif, en préservant les métadonnées displayWindow."
 description: "L'Overscan EXR est une fonctionnalité de rendu dans Industrial CG Platform qui permet au moteur Cycles de Blender de calculer des marges de pixels sup..."
+cover: "/features/overscan.webp"
 ---
 # Overscan EXR
 

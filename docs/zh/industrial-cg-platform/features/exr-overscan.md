@@ -5,6 +5,7 @@ head:
     - name: description
       content: "学习如何在 Blender Cycles 中渲染真正的 EXR Overscan，完美保留 displayWindow 元数据，为 Nuke 镜头畸变工作流提供支持。"
 description: "EXR Overscan（溢画幅）是 Industrial CG Platform 中的一项渲染功能，它允许 Blender Cycles 渲染引擎在标准相机画幅大小之外计算额外的像素边缘。"
+cover: "/features/overscan.webp"
 ---
 # EXR Overscan 溢画幅
 
