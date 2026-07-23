@@ -40,13 +40,13 @@ hero:
       text: 浏览管线工具
       link: /zh/industrial-pipeline-tools
 
-description: ".custom-features-grid {"
+description: "源于 Blender，为电影级制作而生。专为实拍特效与 CG 流程打造的生产级 Blender 渲染、数据管理和色彩管线工具生态。"
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">
     <div class="feature-bg-overlay">
       <h3>Industrial CG Platform</h3>
-      <p>Blender VFX branch: Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager.</p>
+      <p>Blender VFX 专属分支：提供原生的 Cycles Deep EXR、EXR 溢画幅 (Overscan)、基于灯光组的通道分离、阴影颜色和 Qt 视图层管理工具。</p>
     </div>
   </a>
   <a href="/zh/industrial-aov-connector/" class="feature-bg-card" style="background-image: url('/features/aov.webp')">

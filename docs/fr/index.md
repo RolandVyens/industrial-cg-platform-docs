@@ -40,13 +40,13 @@ hero:
       text: Outils de pipeline
       link: /fr/industrial-pipeline-tools
 
-description: ".custom-features-grid {"
+description: "Outils de rendu, de gestion des données et de colorimétrie prêts pour la production, profondément intégrés à Blender et optimisés pour les exigences des studios."
 ---
 <div class="custom-features-grid">
   <a href="/fr/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">
     <div class="feature-bg-overlay">
       <h3>Industrial CG Platform</h3>
-      <p>Blender VFX branch: Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager.</p>
+      <p>Branche VFX pour Blender : Deep EXR, Overscan EXR, Passes de Lobe de Lightgroup, Couleur d'Ombre et Gestionnaire de ViewLayer.</p>
     </div>
   </a>
   <a href="/fr/industrial-aov-connector/" class="feature-bg-card" style="background-image: url('/features/aov.webp')">
