@@ -11,6 +11,8 @@ MANDATORY actions before any `git push`:
 2. RUN BUILD TEST:
    Execute `npm run docs:build`.
    Must output `build complete` (catches Vue template errors).
+   Execute `npm run audit:built-assets`.
+   Must output `ALL BUILT ASSET CHECKS PASSED` (catches generated pages that reference missing local assets).
 
 3. EXPLICIT CONSENT:
    List modified files and ask the User.

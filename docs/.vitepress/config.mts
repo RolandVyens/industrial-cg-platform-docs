@@ -87,7 +87,7 @@ export default defineConfig({
     const { pageData } = context;
     const ogTitle = pageData.frontmatter.title || 'Industrial CG Platform — Blender VFX Fork by CGWeave';
     const ogDescription = pageData.frontmatter.description || pageData.frontmatter.summary || 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.';
-    const ogImage = pageData.frontmatter.cover ? `https://cgweave.com${pageData.frontmatter.cover}` : 'https://cgweave.com/logo.png';
+    const ogImage = pageData.frontmatter.cover ? `https://cgweave.com${pageData.frontmatter.cover}` : 'https://cgweave.com/logo.webp';
     const head: import('vitepress').HeadConfig[] = [
       ['meta', { property: 'og:title', content: ogTitle }],
       ['meta', { property: 'og:description', content: ogDescription }],
@@ -101,7 +101,7 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo.webp' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap' }],
@@ -546,7 +546,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.webp',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RolandVyens/industrial-cg-platform' },
     ],
