@@ -32,7 +32,7 @@ Les paramètres d'overscan sont situés dans l'onglet **Propriétés de sortie (
 4. Configurez vos marges d'overscan dans le panneau **Overscan**.
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/exr-overscan/output-properties-overscan.jpg" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.jpg" alt="Propriétés de sortie d’Industrial CG Platform avec le panneau Overscan en mode Percentage réglé à 10 %" loading="lazy"></a>
+<a href="/screenshots/exr-overscan/output-properties-overscan.webp" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.webp" alt="Propriétés de sortie d’Industrial CG Platform avec le panneau Overscan en mode Percentage réglé à 10 %" loading="lazy"></a>
 <figcaption>Le panneau Overscan se trouve directement sous Format. Cet exemple utilise le mode Percentage à 10 % ; Render Region est désactivé afin que les contrôles restent disponibles.</figcaption>
 </figure>
 

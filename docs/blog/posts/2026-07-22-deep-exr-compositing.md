@@ -7,12 +7,12 @@ tags:
   - Deep Compositing
   - VFX
 editLink: false
-cover: "/blog/nuke-deep-compositing.png"
+cover: "/blog/nuke-deep-compositing.webp"
 ---
 
 # Blender Deep EXR: Breaking the Limits of 2D Render Layers in Nuke
 
-![Deep EXR Nuke Compositing](/blog/nuke-deep-compositing.png)
+![Deep EXR Nuke Compositing](/blog/nuke-deep-compositing.webp)
 
 The core benefit of Blender Deep EXR is allowing complex, multi-layer CG renders to be recombined in Nuke according to true spatial relationships. Characters, environments, hair, smoke, particles, and fractured rigid bodies can be rendered independently, then composited with correct 3D occlusion during the comp stage. This minimizes various Holdouts between Render Layers and avoids cascading re-renders triggered by element updates.
 

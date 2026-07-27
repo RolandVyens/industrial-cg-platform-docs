@@ -15,3 +15,13 @@ MANDATORY constraints for CSS and Visual Design:
 
 4. STRICT MINIMALISM:
    Do not add decorative placeholders. Keep the UI extremely clean.
+
+5. DOCUMENTATION SCREENSHOT FRAMING:
+   - Capture the smallest complete panel or standalone tool window that explains the feature. Do not publish full-screen application captures when a focused crop is sufficient.
+   - Move the pointer and any on-screen-control cursor highlight outside the final crop.
+   - When documenting native Blender controls, exclude custom add-on panels, overlays, and unrelated UI. The screenshot must match the interface named in the caption.
+   - Reuse an existing feature cover when it is the approved page illustration; do not add redundant UI screenshots solely to increase image count.
+
+6. SCREENSHOT MARKUP:
+   - Store final assets under `docs/public/screenshots/<feature>/` and reference them with absolute `/screenshots/<feature>/<file>` paths.
+   - Use the shared `.doc-screenshot` figure styles and include localized `alt` text and a concise `figcaption` in every language variant.

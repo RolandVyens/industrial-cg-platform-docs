@@ -30,7 +30,7 @@ hero:
   text: Blender-Powered CG & VFX Pipeline
   tagline: Production-ready rendering, data management, and color pipeline tools, deeply integrated with Blender and optimized for professional studio pipelines.
   image:
-    src: /logo.png
+    src: /logo.webp
     alt: Industrial 3D Logo
   actions:
     - theme: brand

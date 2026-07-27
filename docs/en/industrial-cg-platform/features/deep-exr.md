@@ -38,12 +38,12 @@ Use this path when the render should write one Deep EXR directly from the scene 
 4. Set the output path and render normally.
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/output-format-menu.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.png" alt="Blender Output Properties file format menu with Deep EXR selected" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-menu.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.webp" alt="Blender Output Properties file format menu with Deep EXR selected" loading="lazy"></a>
 <figcaption>Select Deep EXR from the File Format menu in Output Properties. Click the image to view it at full size.</figcaption>
 </figure>
 
 <figure class="doc-screenshot">
-<a href="/screenshots/deep-exr/output-format-settings.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.png" alt="Deep EXR output settings showing color channels, bit depth, codec, and merge tolerances" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-settings.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.webp" alt="Deep EXR output settings showing color channels, bit depth, codec, and merge tolerances" loading="lazy"></a>
 <figcaption>All controls shown here belong to the scene Output panel. The displayed values are an example configuration.</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ Use this path when the compositor must control the file path, naming, or image s
 4. Add the required image sockets, connect the render data, and set the output paths.
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/deep-exr/compositor-file-output.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.png" alt="Blender compositor File Output node configured to write Deep EXR" loading="lazy"></a>
+<a href="/screenshots/deep-exr/compositor-file-output.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.webp" alt="Blender compositor File Output node configured to write Deep EXR" loading="lazy"></a>
 <figcaption>The compositor File Output node has its own Node Format, Images, and Output Paths panels.</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ These controls are separate from both output-format locations. Open **Render Pro
 Deep Tile Budget is a memory limit, not a Deep quality setting. It does not directly reduce depth precision or merge samples.
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/deep-tile-budget.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.png" alt="Blender Cycles Memory panel showing Tile Size and Deep Tile Budget controls" loading="lazy"></a>
+<a href="/screenshots/deep-exr/deep-tile-budget.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.webp" alt="Blender Cycles Memory panel showing Tile Size and Deep Tile Budget controls" loading="lazy"></a>
 <figcaption>These controls belong to Render Properties > Performance > Memory. The values shown are examples, not defaults.</figcaption>
 </figure>
 

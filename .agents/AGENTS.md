@@ -23,9 +23,9 @@ Use your file reading tool to load specific rule files below based on your activ
    - path: .agents/rules/03-code-pitfalls.md
    - purpose: Syntax constraints to prevent VitePress build failures (e.g., relative paths).
 
-4. READ WHEN ADJUSTING CSS OR LAYOUT:
+4. READ WHEN ADJUSTING CSS, LAYOUT, OR DOCUMENTATION SCREENSHOTS:
    - path: .agents/rules/04-ui-styling.md
-   - purpose: Layout restrictions (no tags, no authors) and approved color tokens.
+   - purpose: Layout restrictions, approved color tokens, and screenshot framing rules.
 
 5. READ BEFORE WRITING NEW CONTENT OR TRANSLATIONS:
    - path: .agents/rules/05-seo-guidelines.md

@@ -4,7 +4,7 @@ description: "!Industrial CG Platform Splash"
 ---
 # Getting Started
 
-![Industrial CG Platform Splash](/splash.png)
+![Industrial CG Platform Splash](/splash.webp)
 
 ## What Is Industrial CG Platform?
 

@@ -28,7 +28,7 @@ Il est construit sur [BQt](https://github.com/techartorg/bqt) et est fourni en t
 3. Le gestionnaire s'ouvre sous la forme d'une fenêtre Qt autonome.
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/viewlayer-manager/manager-window.jpg" target="_blank" rel="noopener"><img src="/screenshots/viewlayer-manager/manager-window.jpg" alt="Fenêtre ViewLayer Manager d’Industrial CG Platform avec les ViewLayers Beauty, Characters et Environment" loading="lazy"></a>
+<a href="/screenshots/viewlayer-manager/manager-window.webp" target="_blank" rel="noopener"><img src="/screenshots/viewlayer-manager/manager-window.webp" alt="Fenêtre ViewLayer Manager d’Industrial CG Platform avec les ViewLayers Beauty, Characters et Environment" loading="lazy"></a>
 <figcaption>Le gestionnaire autonome conserve la liste des ViewLayers à gauche, et regroupe à droite les réglages, les passes et la barre des préréglages du calque sélectionné.</figcaption>
 </figure>
 

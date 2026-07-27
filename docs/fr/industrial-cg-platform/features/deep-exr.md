@@ -38,12 +38,12 @@ Utilisez cette méthode lorsque le rendu doit écrire directement un seul Deep E
 4. Définissez le chemin de sortie et lancez le rendu.
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/output-format-menu.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.png" alt="Menu du format de fichier dans les propriétés de sortie de Blender avec Deep EXR sélectionné" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-menu.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.webp" alt="Menu du format de fichier dans les propriétés de sortie de Blender avec Deep EXR sélectionné" loading="lazy"></a>
 <figcaption>Sélectionnez Deep EXR dans le menu du format de fichier des propriétés de sortie. Cliquez sur l’image pour l’afficher en taille réelle.</figcaption>
 </figure>
 
 <figure class="doc-screenshot">
-<a href="/screenshots/deep-exr/output-format-settings.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.png" alt="Réglages de sortie Deep EXR montrant les canaux, la profondeur, le codec et les tolérances de fusion" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-settings.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.webp" alt="Réglages de sortie Deep EXR montrant les canaux, la profondeur, le codec et les tolérances de fusion" loading="lazy"></a>
 <figcaption>Tous les contrôles affichés ici appartiennent au panneau Sortie de la scène. Les valeurs sont données à titre d’exemple.</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ Utilisez cette méthode lorsque le compositeur doit contrôler le chemin, le nom
 4. Ajoutez les entrées nécessaires, connectez les données de rendu et définissez les chemins de sortie.
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/deep-exr/compositor-file-output.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.png" alt="Nœud File Output du compositeur Blender configuré pour écrire un Deep EXR" loading="lazy"></a>
+<a href="/screenshots/deep-exr/compositor-file-output.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.webp" alt="Nœud File Output du compositeur Blender configuré pour écrire un Deep EXR" loading="lazy"></a>
 <figcaption>Le nœud File Output du compositeur possède ses propres panneaux Node Format, Images et Output Paths.</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ Ces contrôles sont séparés des deux emplacements de format précédents. Avec
 Deep Tile Budget est une limite de mémoire, pas un réglage de qualité Deep. Il ne réduit pas directement la précision de profondeur et ne fusionne pas les échantillons.
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/deep-tile-budget.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.png" alt="Panneau Memory de Blender Cycles avec les réglages Tile Size et Deep Tile Budget" loading="lazy"></a>
+<a href="/screenshots/deep-exr/deep-tile-budget.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.webp" alt="Panneau Memory de Blender Cycles avec les réglages Tile Size et Deep Tile Budget" loading="lazy"></a>
 <figcaption>Ces contrôles se trouvent dans Propriétés de rendu > Performance > Memory. Les valeurs affichées sont des exemples, pas les valeurs par défaut.</figcaption>
 </figure>
 

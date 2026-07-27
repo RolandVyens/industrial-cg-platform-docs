@@ -32,7 +32,7 @@ Overscan settings are located in the **Output Properties** tab, under the **Over
 4. Configure your overscan margins in the **Overscan** panel.
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/exr-overscan/output-properties-overscan.jpg" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.jpg" alt="Industrial CG Platform Output Properties with the Overscan panel set to Percentage and 10 percent" loading="lazy"></a>
+<a href="/screenshots/exr-overscan/output-properties-overscan.webp" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.webp" alt="Industrial CG Platform Output Properties with the Overscan panel set to Percentage and 10 percent" loading="lazy"></a>
 <figcaption>The Overscan panel sits directly below Format. This example uses Percentage mode at 10%; Render Region is disabled so the controls remain available.</figcaption>
 </figure>
 

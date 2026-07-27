@@ -30,7 +30,7 @@ hero:
   text: Écosystème CG & VFX propulsé par Blender
   tagline: Outils de rendu, de gestion des données et de colorimétrie prêts pour la production, profondément intégrés à Blender et optimisés pour les exigences des studios.
   image:
-    src: /logo.png
+    src: /logo.webp
     alt: Industrial 3D Logo
   actions:
     - theme: brand

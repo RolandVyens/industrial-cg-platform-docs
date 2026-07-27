@@ -4,7 +4,7 @@ description: "!Industrial CG Platform Splash"
 ---
 # 快速开始
 
-![Industrial CG Platform Splash](/splash.png)
+![Industrial CG Platform Splash](/splash.webp)
 
 ## 什么是 Industrial CG Platform？
 

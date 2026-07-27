@@ -36,7 +36,7 @@ This gives lighting artists and compositors the same level of control per lightg
    - **Volume** (Direct / Indirect)
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" target="_blank" rel="noopener"><img src="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" alt="Industrial CG Platform View Layer Properties showing a Lightgroup and the expanded Light Pass AOVs controls" loading="lazy"></a>
+<a href="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.webp" target="_blank" rel="noopener"><img src="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.webp" alt="Industrial CG Platform View Layer Properties showing a Lightgroup and the expanded Light Pass AOVs controls" loading="lazy"></a>
 <figcaption>The native View Layer Properties UI: add at least one Light Group before configuring Combined, Direct, and Indirect Light Pass AOVs for each supported lobe.</figcaption>
 </figure>
 

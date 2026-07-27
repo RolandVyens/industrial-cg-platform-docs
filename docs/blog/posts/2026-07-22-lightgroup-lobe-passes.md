@@ -7,12 +7,12 @@ tags:
   - Compositing
   - Lighting
 editLink: false
-cover: "/blog/nuke-lightgroup-lobes.png"
+cover: "/blog/nuke-lightgroup-lobes.webp"
 ---
 
 # From Blender to Nuke: Unlocking Light Group Controllability with Lobe Passes
 
-![Nuke Node Graph Compositing](/blog/nuke-lightgroup-lobes.png)
+![Nuke Node Graph Compositing](/blog/nuke-lightgroup-lobes.webp)
 
 While Blender Lightgroups can output Cycles render passes by light group, obtaining the combined color of a single light is still insufficient in feature-film Nuke compositing. What compositors truly need are Direct and Indirect Lobe passes: the ability to explicitly know how much energy a specific light contributes to Diffuse, Glossy, Transmission, and Volume, and to correct these components without resubmitting the entire frame.
 

@@ -8,7 +8,7 @@ hero:
   text: Branche VFX pour Blender
   tagline: Conçu pour les VFX. Construit à partir de Blender. Fait pour les plans. Une plateforme de production basée sur Blender pour des flux de travail VFX avancés.
   image:
-    src: /logo.png
+    src: /logo.webp
     alt: Industrial CG Platform Logo
   actions:
     - theme: brand

@@ -17,3 +17,7 @@ C. `docs/[en|zh|fr]/industrial-cg-platform/` (Core Docs)
 D. `docs/[en|zh|fr]/[aov-connector|light-splitter|aio-ocio]/` (Plugin Docs)
 - ALLOWED: Node graphs, installation, UI panels.
 - FORBIDDEN: Do not mix features from Plugin A into Plugin B's manual. Total isolation.
+
+E. `docs/public/screenshots/<feature>/` (Documentation Screenshots)
+- ALLOWED: Final, page-ready screenshots grouped by feature slug and referenced through absolute `/screenshots/<feature>/<file>` URLs.
+- FORBIDDEN: Full-screen source captures, temporary crop files, duplicate variants, or screenshots that are not referenced by the documentation.

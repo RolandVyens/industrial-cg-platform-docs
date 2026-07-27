@@ -38,12 +38,12 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 4. 设置输出路径并正常渲染。
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/output-format-menu.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.png" alt="Blender 输出属性的文件格式菜单，其中已选择 Deep EXR" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-menu.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.webp" alt="Blender 输出属性的文件格式菜单，其中已选择 Deep EXR" loading="lazy"></a>
 <figcaption>在输出属性的文件格式菜单中选择 Deep EXR。点击图片可查看原始尺寸。</figcaption>
 </figure>
 
 <figure class="doc-screenshot">
-<a href="/screenshots/deep-exr/output-format-settings.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.png" alt="Deep EXR 输出设置，显示颜色通道、位深、压缩格式和合并容差" loading="lazy"></a>
+<a href="/screenshots/deep-exr/output-format-settings.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.webp" alt="Deep EXR 输出设置，显示颜色通道、位深、压缩格式和合并容差" loading="lazy"></a>
 <figcaption>图中的控件都属于场景的输出面板；当前数值仅为配置示例。</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 4. 添加需要的图像插槽、连接渲染数据并设置输出路径。
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/deep-exr/compositor-file-output.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.png" alt="配置为写入 Deep EXR 的 Blender 合成器文件输出节点" loading="lazy"></a>
+<a href="/screenshots/deep-exr/compositor-file-output.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.webp" alt="配置为写入 Deep EXR 的 Blender 合成器文件输出节点" loading="lazy"></a>
 <figcaption>合成器文件输出节点拥有独立的节点格式、图像和输出路径面板。</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 Deep Tile Budget 是内存限制，不是 Deep 质量参数。它不会直接降低深度精度，也不会合并样本。
 
 <figure class="doc-screenshot doc-screenshot--compact">
-<a href="/screenshots/deep-exr/deep-tile-budget.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.png" alt="Blender Cycles 内存面板中的 Tile Size 和 Deep Tile Budget 控件" loading="lazy"></a>
+<a href="/screenshots/deep-exr/deep-tile-budget.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.webp" alt="Blender Cycles 内存面板中的 Tile Size 和 Deep Tile Budget 控件" loading="lazy"></a>
 <figcaption>这些控件位于渲染属性 > 性能 > 内存。图中数值仅为示例，并非默认值。</figcaption>
 </figure>
 
