@@ -31,6 +31,11 @@ EXR Overscan（溢画幅）是 Industrial CG Platform 中的一项渲染功能�
 3. 将活动的文件格式设置为 `OpenEXR`、`OpenEXR Multilayer` 或 `Deep OpenEXR`。
 4. 在 **Overscan** 面板中配置您的溢画幅边缘大小。
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/exr-overscan/output-properties-overscan.jpg" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.jpg" alt="Industrial CG Platform 输出属性中的 Overscan 面板，使用 Percentage 模式并设置为 10%" loading="lazy"></a>
+<figcaption>Overscan 面板位于 Format 正下方。图中使用 Percentage 模式和 10% 示例值；Render Region 已关闭，因此参数可用。</figcaption>
+</figure>
+
 ::: info 启用限制条件
 在以下情况下，Overscan 面板将呈灰色不可用状态：
 - 选择了非 Cycles 渲染引擎（Eevee 或 Workbench）。

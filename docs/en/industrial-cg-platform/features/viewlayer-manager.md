@@ -27,6 +27,11 @@ It is built on [BQt](https://github.com/techartorg/bqt) and ships as a bundled B
 2. Click the **ViewLayer Manager** button.
 3. The manager opens as a standalone Qt window.
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/viewlayer-manager/manager-window.jpg" target="_blank" rel="noopener"><img src="/screenshots/viewlayer-manager/manager-window.jpg" alt="Industrial CG Platform ViewLayer Manager window with Beauty, Characters, and Environment view layers" loading="lazy"></a>
+<figcaption>The standalone manager keeps the ViewLayer list on the left and the selected layer’s settings, passes, and preset toolbar on the right.</figcaption>
+</figure>
+
 ::: info
 On first click, the bundled BQt runtime extension is automatically enabled for the current session. You do not need to manually enable any extensions.
 :::

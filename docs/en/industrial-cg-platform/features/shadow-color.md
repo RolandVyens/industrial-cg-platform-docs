@@ -11,6 +11,11 @@ cover: "/features/shadow-color.webp"
 
 Shadow Color adds a per-light and per-world color property to Blender Cycles that tints the shadow regions cast by each light source. Instead of shadows being purely the absence of light, you can give them a specific color — a common artistic technique in film and animation lighting.
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/features/shadow-color.webp" target="_blank" rel="noopener"><img src="/features/shadow-color.webp" alt="Rendered scene demonstrating colored shadows in Industrial CG Platform" loading="lazy"></a>
+<figcaption>Shadow Color adds an art-directable tint to shadowed regions while leaving illuminated surfaces unchanged.</figcaption>
+</figure>
+
 ## Why Use It
 
 - **Artistic control** — Match the shadow tint to your color script without affecting the light color itself.
@@ -30,8 +35,9 @@ Shadow Color adds a per-light and per-world color property to Blender Cycles tha
 ### World Shadow Color
 
 1. Open **Properties > World Properties**.
-2. Find the **Shadow Color** property.
-3. Set the desired world shadow tint.
+2. Expand **Settings > Surface**.
+3. Find the **Shadow Color** property.
+4. Set the desired world shadow tint.
 
 ## Artistic Use Cases
 
@@ -53,5 +59,5 @@ Start with subtle, desaturated shadow colors. A little tint goes a long way. The
 
 ## See Also
 
-- [RNA Properties (API)](/en/industrial-cg-platform/api/rna-properties) — `Light.shadow_color` and `World.shadow_color` property reference.
+- [RNA Properties (API)](/en/industrial-cg-platform/api/rna-properties) — `Light.shadow_color` and `World.cycles.shadow_color` property reference.
 - [Blender Manual: Light Properties](https://docs.blender.org/manual/en/latest/render/lights/light_object.html) — Standard Blender light settings.

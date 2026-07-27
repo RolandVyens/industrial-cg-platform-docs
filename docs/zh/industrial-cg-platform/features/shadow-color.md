@@ -11,6 +11,11 @@ cover: "/features/shadow-color.webp"
 
 阴影颜色（Shadow Color）为 Blender Cycles 中的每个灯光和世界属性添加了颜色属性，用于为各灯光源投射的阴影区域着色。阴影不再只是光的缺失，您可以赋予它们特定的颜色——这是电影和动画灯光中常见的艺术技法。
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/features/shadow-color.webp" target="_blank" rel="noopener"><img src="/features/shadow-color.webp" alt="Industrial CG Platform 渲染场景中的彩色阴影效果" loading="lazy"></a>
+<figcaption>阴影颜色为阴影区域添加可艺术指导的色调，同时不改变受光表面。</figcaption>
+</figure>
+
 ## 为什么使用它？
 
 - **艺术化控制** — 让阴影的色调完美匹配您的色彩脚本（color script），而无需更改光源本身的颜色。
@@ -30,8 +35,9 @@ cover: "/features/shadow-color.webp"
 ### 世界阴影颜色
 
 1. 打开 **属性面板 > 世界属性 (Properties > World Properties)**。
-2. 找到 **阴影颜色 (Shadow Color)** 属性。
-3. 设置所需的世界阴影色调。
+2. 展开 **Settings > Surface**。
+3. 找到 **阴影颜色 (Shadow Color)** 属性。
+4. 设置所需的世界阴影色调。
 
 ## 艺术用例
 
@@ -53,5 +59,5 @@ cover: "/features/shadow-color.webp"
 
 ## 另请参阅
 
-- [RNA 属性 (API)](/zh/industrial-cg-platform/api/rna-properties) — `Light.shadow_color` 和 `World.shadow_color` 属性参考。
+- [RNA 属性 (API)](/zh/industrial-cg-platform/api/rna-properties) — `Light.shadow_color` 和 `World.cycles.shadow_color` 属性参考。
 - [Blender 手册：灯光属性](https://docs.blender.org/manual/en/latest/render/lights/light_object.html) — 标准 Blender 灯光设置。

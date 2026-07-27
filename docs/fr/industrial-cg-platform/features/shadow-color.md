@@ -11,6 +11,11 @@ cover: "/features/shadow-color.webp"
 
 La couleur d'ombre (Shadow Color) ajoute une propriété de couleur par lumière et par monde à Blender Cycles qui teinte les régions d'ombre projetées par chaque source de lumière. Au lieu que les ombres soient purement l'absence de lumière, vous pouvez leur donner une couleur spécifique — une technique artistique courante dans l'éclairage de films et d'animations.
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/features/shadow-color.webp" target="_blank" rel="noopener"><img src="/features/shadow-color.webp" alt="Scène rendue montrant des ombres colorées dans Industrial CG Platform" loading="lazy"></a>
+<figcaption>Shadow Color ajoute une teinte réglable aux zones d’ombre sans modifier les surfaces éclairées.</figcaption>
+</figure>
+
 ## Pourquoi l'utiliser ?
 
 - **Contrôle artistique** — Harmonisez la teinte de l'ombre avec votre script couleur (color script) sans modifier la couleur de la lumière elle-même.
@@ -30,8 +35,9 @@ La couleur d'ombre (Shadow Color) ajoute une propriété de couleur par lumière
 ### Couleur d'ombre du monde
 
 1. Ouvrez **Propriétés > Propriétés du monde (Properties > World Properties)**.
-2. Trouvez la propriété **Shadow Color** (Couleur d'ombre).
-3. Définissez la teinte d'ombre du monde souhaitée.
+2. Ouvrez **Settings > Surface**.
+3. Trouvez la propriété **Shadow Color** (Couleur d'ombre).
+4. Définissez la teinte d'ombre du monde souhaitée.
 
 ## Cas d'utilisation artistiques
 
@@ -53,5 +59,5 @@ Commencez par des couleurs d'ombre subtiles et désaturées. Une légère teinte
 
 ## Voir Aussi
 
-- [Propriétés RNA (API)](/fr/industrial-cg-platform/api/rna-properties) — Référence des propriétés `Light.shadow_color` et `World.shadow_color`.
+- [Propriétés RNA (API)](/fr/industrial-cg-platform/api/rna-properties) — Référence des propriétés `Light.shadow_color` et `World.cycles.shadow_color`.
 - [Manuel Blender: Propriétés de lumière](https://docs.blender.org/manual/en/latest/render/lights/light_object.html) — Paramètres de lumière standard de Blender.

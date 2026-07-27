@@ -35,6 +35,11 @@ Cela donne aux artistes lumière et aux compositeurs le même niveau de contrôl
    - **Transmission** (Direct / Indirect)
    - **Volume** (Direct / Indirect)
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" target="_blank" rel="noopener"><img src="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" alt="Propriétés du View Layer d’Industrial CG Platform montrant un Lightgroup et les contrôles Light Pass AOVs ouverts" loading="lazy"></a>
+<figcaption>Interface native des propriétés du View Layer : ajoutez au moins un Light Group avant de configurer les AOV Combined, Direct et Indirect de chaque lobe pris en charge.</figcaption>
+</figure>
+
 ## Convention de Nommage des Sorties
 
 Chaque passe de lobe de lightgroup est nommée selon le modèle suivant :

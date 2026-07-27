@@ -27,6 +27,11 @@ ViewLayer 管理器是一个专用的、基于 Qt 的工具窗口，提供了一
 2. 点击 **ViewLayer Manager** 图标按钮。
 3. 管理器将作为独立的顶级 Qt 窗口打开。
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/viewlayer-manager/manager-window.jpg" target="_blank" rel="noopener"><img src="/screenshots/viewlayer-manager/manager-window.jpg" alt="Industrial CG Platform ViewLayer Manager 窗口，包含 Beauty、Characters 和 Environment 三个视图层" loading="lazy"></a>
+<figcaption>独立管理器左侧列出 ViewLayer，右侧集中显示所选视图层的设置、通道和预设工具栏。</figcaption>
+</figure>
+
 ::: info
 首次点击时，捆绑的 BQt 运行时扩展会在当前会话中自动启用。您无需手动前往偏好设置启用任何扩展。
 :::

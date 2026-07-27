@@ -31,6 +31,11 @@ Overscan settings are located in the **Output Properties** tab, under the **Over
 3. Set your active file format to `OpenEXR`, `OpenEXR Multilayer`, or `Deep OpenEXR`.
 4. Configure your overscan margins in the **Overscan** panel.
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/exr-overscan/output-properties-overscan.jpg" target="_blank" rel="noopener"><img src="/screenshots/exr-overscan/output-properties-overscan.jpg" alt="Industrial CG Platform Output Properties with the Overscan panel set to Percentage and 10 percent" loading="lazy"></a>
+<figcaption>The Overscan panel sits directly below Format. This example uses Percentage mode at 10%; Render Region is disabled so the controls remain available.</figcaption>
+</figure>
+
 ::: info Gating Conditions
 The Overscan panel will be greyed out if:
 - A non-Cycles engine (Eevee or Workbench) is selected.

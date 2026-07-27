@@ -24,27 +24,79 @@ Industrial CG Platform ajoute une prise en charge native de la sortie Deep EXR �
 - **Prise en charge du volume** — Les données de rendu de volume sont incluses dans la sortie profonde (comportement par défaut actuel).
 - **Sortie directe et compositeur** — Fonctionne à la fois comme sortie de rendu de scène directe et via le nœud de sortie de fichier du compositeur Blender.
 
-## Comment l'activer
+## Choisir un mode de sortie
 
-### Sortie de Scène
+Deep EXR est activé automatiquement lorsque la sortie de scène ou un nœud File Output du compositeur utilise le format `Deep EXR`. Il n’existe aucun interrupteur Deep Output séparé à activer.
 
-1. Ouvrez **Propriétés > Propriétés de sortie > Sortie (Properties > Output Properties > Output)**.
-2. Remplacez le **Format de fichier (File Format)** par `Deep OpenEXR`.
-3. Définissez le **Deep Tile Budget** souhaité (contrôle le compromis mémoire/qualité pour les données profondes).
-4. Rendez votre scène normalement.
+### Option A : sortie directe de la scène
 
-### Sortie de fichier du Compositeur
+Utilisez cette méthode lorsque le rendu doit écrire directement un seul Deep EXR depuis les réglages de sortie de la scène.
+
+1. Ouvrez **Propriétés de sortie > Sortie (Output Properties > Output)**.
+2. Définissez le **Format de fichier** sur `Deep EXR`.
+3. Configurez les canaux, la profondeur de couleur, le codec et les tolérances de fusion dans le même panneau.
+4. Définissez le chemin de sortie et lancez le rendu.
+
+<figure class="doc-screenshot doc-screenshot--compact">
+<a href="/screenshots/deep-exr/output-format-menu.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-menu.png" alt="Menu du format de fichier dans les propriétés de sortie de Blender avec Deep EXR sélectionné" loading="lazy"></a>
+<figcaption>Sélectionnez Deep EXR dans le menu du format de fichier des propriétés de sortie. Cliquez sur l’image pour l’afficher en taille réelle.</figcaption>
+</figure>
+
+<figure class="doc-screenshot">
+<a href="/screenshots/deep-exr/output-format-settings.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/output-format-settings.png" alt="Réglages de sortie Deep EXR montrant les canaux, la profondeur, le codec et les tolérances de fusion" loading="lazy"></a>
+<figcaption>Tous les contrôles affichés ici appartiennent au panneau Sortie de la scène. Les valeurs sont données à titre d’exemple.</figcaption>
+</figure>
+
+#### Contrôles du panneau Sortie
+
+| Contrôle | Effet | Conseil pour débuter |
+| --- | --- | --- |
+| **Format de fichier** | Sélectionne la sortie Deep EXR native et active automatiquement le rendu Deep. | Choisissez `Deep EXR`. |
+| **Couleur** | Sélectionne les canaux de couleur stockés sans modifier `Z` ou `ZBack`. | Utilisez `RGBA` si la transparence est nécessaire, sinon `RGB` suffit. |
+| **Profondeur de couleur** | Contrôle uniquement le stockage RGBA. `16 bits` utilise le half-float et `32 bits` le full-float ; `Z` et `ZBack` restent toujours en flottant 32 bits. | 16 bits réduit la sortie ; 32 bits préserve davantage les couleurs et l’alpha. |
+| **Codec** | Compresse le fichier Deep EXR. Deep EXR prend en charge None, RLE et ZIPS. | `ZIPS` est le choix général sans perte. |
+| **Tolérance de fusion Deep** | Seuil de distance en profondeur pour fusionner les échantillons Deep voisins. | Valeur par défaut `0.010` ; une valeur plus petite conserve plus d’échantillons distincts. |
+| **Tolérance de fusion Alpha** | Seuil d’écart alpha utilisé avec la tolérance de profondeur. | Valeur par défaut `0.010` ; une valeur plus petite préserve davantage les détails d’opacité. |
+
+Les échantillons ne sont fusionnés que si les deux tests de tolérance sont satisfaits. La profondeur de couleur ne modifie ni leur nombre ni leur position, uniquement la précision de stockage RGBA.
+
+### Option B : sortie de fichier du compositeur
+
+Utilisez cette méthode lorsque le compositeur doit contrôler le chemin, le nom ou les entrées d’image.
 
 1. Ajoutez un nœud **File Output** dans le compositeur.
-2. Définissez son format sur `Deep OpenEXR`.
-3. Connectez vos calques de rendu.
+2. Dans **Node Format**, choisissez `Image`, puis définissez le **Format de fichier** sur `Deep EXR`.
+3. Configurez la profondeur de couleur, le codec et les tolérances propres au nœud.
+4. Ajoutez les entrées nécessaires, connectez les données de rendu et définissez les chemins de sortie.
 
-## Paramètres
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/deep-exr/compositor-file-output.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/compositor-file-output.png" alt="Nœud File Output du compositeur Blender configuré pour écrire un Deep EXR" loading="lazy"></a>
+<figcaption>Le nœud File Output du compositeur possède ses propres panneaux Node Format, Images et Output Paths.</figcaption>
+</figure>
 
-| Paramètre | Description | Défaut |
+#### Panneaux du nœud File Output
+
+- **Node Format** — Contient le format Deep EXR, la profondeur de couleur, le codec et les tolérances propres au nœud.
+- **Images** — Définit les entrées d’image écrites par ce nœud.
+- **Output Paths** — Contrôle la destination et le nom des fichiers du nœud.
+
+Le nœud File Output conserve ses propres réglages de format. Modifier le panneau Sortie de la scène ne configure pas ce nœud.
+
+## Réglages de mémoire du rendu
+
+Ces contrôles sont séparés des deux emplacements de format précédents. Avec Cycles, ouvrez **Propriétés de rendu > Performance > Memory (Render Properties > Performance > Memory)**.
+
+| Contrôle | Effet | Défaut |
 | --- | --- | --- |
-| **Deep Output** | Activer le format de sortie Deep EXR | Désactivé |
-| **Deep Tile Budget** | Budget mémoire par tuile pour le stockage d'échantillons profonds (plus élevé = plus d'échantillons préservés) | 1024 MB |
+| **Tile Size** | Définit la dimension de tuile demandée pour le rendu haute résolution. | 2048 px |
+| **Deep Tile Budget** | Limite la mémoire du tampon de tuile Deep par périphérique de rendu. Cycles réduit si nécessaire la taille de tuile effective pour respecter ce budget. `0` désactive la limite. | 1024 MB |
+
+Deep Tile Budget est une limite de mémoire, pas un réglage de qualité Deep. Il ne réduit pas directement la précision de profondeur et ne fusionne pas les échantillons.
+
+<figure class="doc-screenshot doc-screenshot--compact">
+<a href="/screenshots/deep-exr/deep-tile-budget.png" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-tile-budget.png" alt="Panneau Memory de Blender Cycles avec les réglages Tile Size et Deep Tile Budget" loading="lazy"></a>
+<figcaption>Ces contrôles se trouvent dans Propriétés de rendu > Performance > Memory. Les valeurs affichées sont des exemples, pas les valeurs par défaut.</figcaption>
+</figure>
 
 ## Flux de travail Nuke
 

@@ -35,6 +35,11 @@ cover: "/features/lightgroups.webp"
    - **Transmission** 透射 (Direct 直接 / Indirect 间接)
    - **Volume** 体积 (Direct 直接 / Indirect 间接)
 
+<figure class="doc-screenshot doc-screenshot--wide">
+<a href="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" target="_blank" rel="noopener"><img src="/screenshots/lightgroup-lobe-passes/view-layer-light-pass-aovs.jpg" alt="Industrial CG Platform 视图层属性，显示一个 Lightgroup 和展开的 Light Pass AOVs 控件" loading="lazy"></a>
+<figcaption>这是视图层属性中的原生界面。需要先添加至少一个 Light Group，才能为每种受支持的分量配置 Combined、Direct 和 Indirect Light Pass AOV。</figcaption>
+</figure>
+
 ## 输出命名规则
 
 每个灯光组分量通道遵循以下命名模式：

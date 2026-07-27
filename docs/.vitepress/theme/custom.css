@@ -155,3 +155,41 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   box-shadow: none !important;
 }
 
+/* Technical documentation screenshots */
+.doc-screenshot {
+  margin: 1.5rem auto 2rem;
+  text-align: center;
+}
+
+.doc-screenshot a {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.doc-screenshot img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+}
+
+.doc-screenshot--compact img {
+  max-height: 520px;
+}
+
+.doc-screenshot--wide {
+  width: min(100%, 960px);
+}
+
+.doc-screenshot figcaption {
+  max-width: 720px;
+  margin: 0.65rem auto 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
