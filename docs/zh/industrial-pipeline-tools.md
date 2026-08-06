@@ -20,7 +20,10 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
       <p class="tool-desc">
         一键自动创建渲染通道输出树，智能接入降噪节点，并自动导出为完美对接 Nuke 的标准多通道 EXR 结构。
       </p>
-      <a href="/zh/industrial-aov-connector/" class="tool-button">阅读插件指南</a>
+      <div class="tool-actions">
+        <a href="/zh/industrial-aov-connector/" class="tool-button">阅读插件指南</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-aov-connector/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">下载</a>
+      </div>
     </div>
   </div>
 
@@ -35,7 +38,10 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
       <p class="tool-desc">
         自动将渲染的灯光组（Light Groups）通道进行拆分和材质化，为合成师提供对漫反射、高光及环境分量的独立后期重打光自由。
       </p>
-      <a href="/zh/industrial-light-aov-splitter/" class="tool-button">阅读拆分器指南</a>
+      <div class="tool-actions">
+        <a href="/zh/industrial-light-aov-splitter/" class="tool-button">阅读拆分器指南</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-light-aov-splitter/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">下载</a>
+      </div>
     </div>
   </div>
 
@@ -50,7 +56,10 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
       <p class="tool-desc">
         跨 DCC 统一的 OpenColorIO 色彩方案。在 Maya、Nuke、Houdini 和 Blender 中构建完全一致的 AgX/Filmic 宽容度色彩转换。
       </p>
-      <a href="/zh/aio-ocio/" class="tool-button">阅读色彩配置指南</a>
+      <div class="tool-actions">
+        <a href="/zh/aio-ocio/" class="tool-button">阅读色彩配置指南</a>
+        <a href="https://github.com/RolandVyens/AIO-OCIO/releases" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">下载</a>
+      </div>
     </div>
   </div>
 </div>
@@ -122,7 +131,16 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
+.tool-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+}
 .tool-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   text-align: center;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -136,5 +154,12 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
 .tool-button:hover {
   background: var(--vp-c-brand-1);
   color: #ffffff !important;
+}
+.tool-button-download {
+  background: var(--vp-c-brand-1);
+  color: #ffffff;
+}
+.tool-button-download:hover {
+  background: var(--vp-c-brand-2);
 }
 </style>

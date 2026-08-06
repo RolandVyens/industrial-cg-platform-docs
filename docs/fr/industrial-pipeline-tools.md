@@ -20,7 +20,10 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Configure automatiquement les arbres de nœuds de composition, connecte le débruitage OIDN et structure les canaux de sortie pour s'aligner sur les normes Nuke.
       </p>
-      <a href="/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
+      <div class="tool-actions">
+        <a href="/fr/industrial-aov-connector/" class="tool-button">Lire le Guide du Module</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-aov-connector/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Télécharger</a>
+      </div>
     </div>
   </div>
 
@@ -35,7 +38,10 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Divise et matérialise automatiquement les passes de groupes de lumières pour offrir un contrôle total et indépendant du compositing.
       </p>
-      <a href="/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
+      <div class="tool-actions">
+        <a href="/fr/industrial-light-aov-splitter/" class="tool-button">Lire le Guide du Séparateur</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-light-aov-splitter/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Télécharger</a>
+      </div>
     </div>
   </div>
 
@@ -50,7 +56,10 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
       <p class="tool-desc">
         Configuration OpenColorIO unifiée garantissant une conversion de couleurs AgX/Filmic cohérente et identique sur Maya, Nuke, Houdini et Blender.
       </p>
-      <a href="/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
+      <div class="tool-actions">
+        <a href="/fr/aio-ocio/" class="tool-button">Lire le Guide de Couleur</a>
+        <a href="https://github.com/RolandVyens/AIO-OCIO/releases" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Télécharger</a>
+      </div>
     </div>
   </div>
 </div>
@@ -122,7 +131,16 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
+.tool-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+}
 .tool-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   text-align: center;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -136,5 +154,12 @@ La suite Industrial 3D fournit un ensemble de modules complémentaires open-sour
 .tool-button:hover {
   background: var(--vp-c-brand-1);
   color: #ffffff !important;
+}
+.tool-button-download {
+  background: var(--vp-c-brand-1);
+  color: #ffffff;
+}
+.tool-button-download:hover {
+  background: var(--vp-c-brand-2);
 }
 </style>

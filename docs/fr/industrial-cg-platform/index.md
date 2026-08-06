@@ -12,6 +12,9 @@ hero:
     alt: Industrial CG Platform Logo
   actions:
     - theme: brand
+      text: Télécharger
+      link: /fr/industrial-cg-platform/releases/
+    - theme: brand
       text: Premiers pas
       link: /fr/industrial-cg-platform/guide/getting-started
     - theme: alt

@@ -20,7 +20,10 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         Automatically builds composition node trees, hooks up OIDN denoisers, and structures output channels to align with VFX studio standards (Nuke).
       </p>
-      <a href="/en/industrial-aov-connector/" class="tool-button">Read Addon Guide</a>
+      <div class="tool-actions">
+        <a href="/en/industrial-aov-connector/" class="tool-button">Read Addon Guide</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-aov-connector/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Download</a>
+      </div>
     </div>
   </div>
 
@@ -35,7 +38,10 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         Automatically splits combined rendering passes into individual light component AOVs, giving compositors absolute lighting control.
       </p>
-      <a href="/en/industrial-light-aov-splitter/" class="tool-button">Read Splitter Guide</a>
+      <div class="tool-actions">
+        <a href="/en/industrial-light-aov-splitter/" class="tool-button">Read Splitter Guide</a>
+        <a href="https://extensions.blender.org/add-ons/industrial-light-aov-splitter/" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Download</a>
+      </div>
     </div>
   </div>
 
@@ -50,7 +56,10 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       <p class="tool-desc">
         A unified OpenColorIO configuration ensuring pixel-perfect AgX/Filmic viewport consistency across Maya, Nuke, Houdini, and Blender.
       </p>
-      <a href="/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
+      <div class="tool-actions">
+        <a href="/en/aio-ocio/" class="tool-button">Read OCIO Config Guide</a>
+        <a href="https://github.com/RolandVyens/AIO-OCIO/releases" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">Download</a>
+      </div>
     </div>
   </div>
 </div>
@@ -122,7 +131,16 @@ The Industrial 3D suite includes specialized open-source tools and color configu
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
+.tool-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+}
 .tool-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   text-align: center;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -136,5 +154,12 @@ The Industrial 3D suite includes specialized open-source tools and color configu
 .tool-button:hover {
   background: var(--vp-c-brand-1);
   color: #ffffff !important;
+}
+.tool-button-download {
+  background: var(--vp-c-brand-1);
+  color: #ffffff;
+}
+.tool-button-download:hover {
+  background: var(--vp-c-brand-2);
 }
 </style>
