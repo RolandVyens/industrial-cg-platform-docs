@@ -14,11 +14,17 @@ function parseMarkdown(text) {
 
   // Split into lines for block parsing
   const lines = html.split('\n')
+  const firstContentLine = lines.findIndex(line => line.trim() !== '')
   let result = []
   let inList = false
 
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i].trim()
+
+    // The release card already renders the release name as its title.
+    if (i === firstContentLine && line.startsWith('# ')) {
+      continue
+    }
 
     // Handle Headers
     if (line.startsWith('## ')) {
@@ -88,9 +94,16 @@ function formatBytes(bytes, locale) {
 
 function processReleases(data) {
   if (!Array.isArray(data)) return []
-  return data.map(release => {
+  const sortedReleases = [...data].sort((a, b) => {
+    const publishedAtA = Date.parse(a.published_at || '') || 0
+    const publishedAtB = Date.parse(b.published_at || '') || 0
+    return publishedAtB - publishedAtA
+  })
+  const latestStable = sortedReleases.find(release => !release.prerelease)
+
+  return sortedReleases.map(release => {
     const assets = (release.assets || []).map(asset => ({
-      id: asset.id,
+      id: asset.id || asset.browser_download_url || asset.name,
       name: asset.name,
       size: asset.size,
       sizeFormattedEN: formatBytes(asset.size, 'en-US'),
@@ -108,6 +121,7 @@ function processReleases(data) {
       publishedAtZH: formatDate(release.published_at, 'zh-CN'),
       publishedAtFR: formatDate(release.published_at, 'fr-FR'),
       prerelease: !!release.prerelease,
+      isLatestStable: release.tag_name === latestStable?.tag_name,
       html_url: release.html_url,
       bodyHtml: parseMarkdown(release.body),
       assets
@@ -138,50 +152,53 @@ export default {
     // Fallback data
     const fallback = [
       {
-        tag_name: 'industrial-cg-platform-5.2.0-2026-06-16',
-        name: 'Industrial CG Platform 5.2.0-2026-06-16',
-        published_at: '2026-06-16T17:30:00Z',
+        tag_name: 'industrial-cg-platform-5.2.1',
+        name: 'Industrial CG Platform 5.2.1 Stable Release',
+        published_at: '2026-08-29T07:53:41Z',
         prerelease: false,
-        body: '### Highlights\n- Includes the validated EXR overscan redesign-v2 stack, covering offline EXR overscan output, compositor/File Output window preservation, render-region gating, Output-panel overscan controls, viewport safety-frame guidance, and the OptiX cache-path policy\n- Keeps the shipped Deep EXR runtime kernel-header packaging follow-up, so fallback Cycles kernel compilation does not lose `deep_write.h` in the installed runtime\n- Keeps the Deep EXR output UI cleanup, removing the redundant standalone Deep EXR panel while preserving the existing file-output workflow\n- Carries the current Industrial CG Platform branded runtime and passes the full self-contained feature suite\n\n### Notes\n- Build hash: `51091989dec9`\n- Release SHA256: `ABF163964C0DDE4754EC1E03BE28B962FD0520892CC20489271E7B1286D82B87`\n- Installed runtime root: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-06-16`\n- Release zip: `industrial-cg-platform-5.2.0-2026-06-16.zip`',
-        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-16',
+        body: '# Industrial CG Platform 5.2.1 Stable\n\n- Updated to the official Blender 5.2.1 LTS foundation.\n- Fixed an issue where the Deep Tile Budget setting could remain grayed out in some projects.\n- Improved Deep EXR reliability and workflow defaults.\n- Added a dedicated bug report entry for Industrial CG Platform.',
+        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.1',
         assets: [
           {
-            name: 'industrial-cg-platform-5.2.0-2026-06-16.zip',
-            size: 562575295,
-            download_count: 85,
-            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-16/industrial-cg-platform-5.2.0-2026-06-16.zip'
+            id: 534935238,
+            name: 'industrial-cg-platform-5.2.1.zip',
+            size: 593318777,
+            download_count: 0,
+            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.1/industrial-cg-platform-5.2.1.zip'
           }
         ]
       },
       {
-        tag_name: 'industrial-cg-platform-5.2.0-2026-05-27',
-        name: 'industrial-cg-platform-5.2.0-2026-05-27',
-        published_at: '2026-05-27T16:00:51Z',
+        tag_name: 'industrial-cg-platform-5.2.0',
+        name: 'Industrial CG Platform 5.2.0 Stable Release',
+        published_at: '2026-07-17T14:37:37Z',
         prerelease: false,
-        body: '### Highlights\n- Sync Cycles rendering core with upstream Blender 5.2\n- Add MoonRay project acknowledgments in documentation and source headers\n- General stability improvements for Deep EXR output.',
-        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-27',
+        body: '# Industrial CG Platform 5.2.0 Stable\n\n- Updated to the official Blender 5.2 LTS foundation.\n- Promoted from preview to stable release.\n- Improved stability and NVIDIA GPU compatibility.',
+        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0',
         assets: [
           {
-            name: 'industrial-cg-platform-5.2.0-2026-05-27.zip',
-            size: 562177484,
-            download_count: 52,
-            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-27/industrial-cg-platform-5.2.0-2026-05-27.zip'
+            id: 480471978,
+            name: 'industrial-cg-platform-5.2.0.zip',
+            size: 595219590,
+            download_count: 23,
+            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0/industrial-cg-platform-5.2.0.zip'
           }
         ]
       },
       {
-        tag_name: 'industrial-cg-platform-5.2.0-2026-05-20',
-        name: 'Industrial CG Platform 5.2.0-2026-05-20',
-        published_at: '2026-05-20T04:52:46Z',
-        prerelease: false,
-        body: '### Highlights\n- Integrated Qt runtime packaging under system extension\n- Native Deep EXR support and shadow color tinters\n- Qt-based ViewLayer Manager dashboard',
-        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-20',
+        tag_name: 'industrial-cg-platform-5.2.0-2026-06-18',
+        name: 'industrial-cg-platform-5.2.0-2026-06-18',
+        published_at: '2026-06-18T04:03:04Z',
+        prerelease: true,
+        body: '# Industrial CG Platform 5.2.0-2026-06-18\n\n- Runtime build hash: `0554f88d0014`\n- GitHub continuation snapshot: `427d6476`\n- Release ZIP SHA256: `CAEF0F41BDCEAEAB50BD4E0944D151B61622DBF23515F2B885851B8739924681`\n\n## Panel Identifier Hotfix\n\n- Registers the Output Properties Overscan panel as `RENDER_PT_exr_overscan` instead of the generic `RENDER_PT_overscan`.\n- Prevents third-party add-ons that use the generic identifier from replacing the Industrial CG Platform panel.\n- Keeps the retained release identity synchronized as `Blender 5.2.0-2026-06-18 Industrial CG Platform`.',
+        html_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-18',
         assets: [
           {
-            name: 'industrial-cg-platform-5.2.0-2026-05-20.zip',
-            size: 559590825,
-            download_count: 142,
-            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-20/industrial-cg-platform-5.2.0-2026-05-20.zip'
+            id: 451374008,
+            name: 'industrial-cg-platform-5.2.0-2026-06-18.zip',
+            size: 559823975,
+            download_count: 26,
+            browser_download_url: 'https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-18/industrial-cg-platform-5.2.0-2026-06-18.zip'
           }
         ]
       }

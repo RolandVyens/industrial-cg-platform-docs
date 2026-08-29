@@ -12,7 +12,7 @@ import { data as releases } from '../../../releases.data.js'
   <p style="color: var(--vp-c-text-3); font-size: 0.9rem; margin-bottom: 1.5rem;">
     ⚡ Compilé statiquement depuis le dépôt principal. Mis à jour lors de la build.
   </p>
-  <div v-for="(release, index) in releases" :key="release.tag_name" class="release-card">
+  <div v-for="release in releases" :key="release.tag_name" class="release-card">
     <div class="release-card-content">
       <div class="release-header">
         <div>
@@ -20,9 +20,9 @@ import { data as releases } from '../../../releases.data.js'
           <div class="release-date">Publié le {{ release.publishedAtFR }}</div>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <span v-if="index === 0 && !release.prerelease" class="badge badge-latest">Dernière version</span>
+          <span v-if="release.isLatestStable" class="badge badge-latest">Dernière version</span>
           <span v-if="release.prerelease" class="badge badge-prerelease">Pré-version</span>
-          <span v-else-if="index !== 0" class="badge badge-regular">Stable</span>
+          <span v-else-if="!release.isLatestStable" class="badge badge-regular">Stable</span>
           <a v-if="release.html_url" :href="release.html_url" target="_blank" class="badge badge-regular" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
             🔗 GitHub
           </a>
