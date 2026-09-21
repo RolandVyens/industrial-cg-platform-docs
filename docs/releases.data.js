@@ -1,3 +1,8 @@
+import fs from 'node:fs'
+import path from 'node:path'
+
+const RELEASES_DATA_PATH = path.resolve('docs', 'releases.data.json')
+
 function parseMarkdown(text) {
   if (!text) return ''
   
@@ -132,21 +137,15 @@ function processReleases(data) {
 export default {
   async load() {
     try {
-      console.log('Fetching releases at build time...')
-      const headers = {}
-      if (process.env.GITHUB_TOKEN) {
-        console.log('Found GITHUB_TOKEN in environment, using authenticated requests to raise rate limit.')
-        headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`
-      }
-      const res = await fetch('https://api.github.com/repos/RolandVyens/industrial-cg-platform/releases', { headers })
-      if (!res.ok) throw new Error(`Failed to fetch releases: ${res.statusText}`)
-      const data = await res.json()
+      const data = JSON.parse(fs.readFileSync(RELEASES_DATA_PATH, 'utf8'))
+      if (!Array.isArray(data) || data.length === 0) throw new Error('Release snapshot is empty')
       if (Array.isArray(data) && data.length > 0) {
-        console.log(`Successfully loaded ${data.length} releases from GitHub API at build time.`)
+        console.log(`Loaded ${data.length} releases from the repository snapshot.`)
         return processReleases(data)
       }
     } catch (err) {
-      console.error('Error loading releases at build-time, using fallback:', err)
+      console.error('Error loading the repository release snapshot:', err)
+      return []
     }
     
     // Fallback data
