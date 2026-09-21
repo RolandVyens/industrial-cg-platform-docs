@@ -1,1 +1,315 @@
-[{"tag_name":"industrial-cg-platform-5.2.2","name":"Industrial CG Platform 5.2.2 Stable Release","published_at":"2026-09-18T11:30:10Z","prerelease":false,"body":"# Industrial CG Platform 5.2.2 Stable\n\n- Updated to the official Blender 5.2.2 LTS foundation.\n- Updated Industrial CG Platform splash and version branding for 5.2.2.\n- Preserved the validated Deep EXR, Lightgroup, Shadow Color, EXR Overscan, and BQt feature set.","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.2","assets":[{"id":572484348,"name":"industrial-cg-platform-5.2.2.zip","size":593968234,"download_count":1,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.2/industrial-cg-platform-5.2.2.zip"}]},{"tag_name":"industrial-cg-platform-5.2.1","name":"Industrial CG Platform 5.2.1 Stable Release","published_at":"2026-08-29T07:53:41Z","prerelease":false,"body":"# Industrial CG Platform 5.2.1 Stable\n\n- Updated to the official Blender 5.2.1 LTS foundation.\n- Fixed an issue where the Deep Tile Budget setting could remain grayed out in some projects.\n- Improved Deep EXR reliability and workflow defaults.\n- Added a dedicated bug report entry for Industrial CG Platform.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.1","assets":[{"id":534935238,"name":"industrial-cg-platform-5.2.1.zip","size":593318777,"download_count":27,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.1/industrial-cg-platform-5.2.1.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0","name":"Industrial CG Platform 5.2.0 Stable Release","published_at":"2026-07-17T14:37:37Z","prerelease":false,"body":"# Industrial CG Platform 5.2.0 Stable\n\n- Updated to the official Blender 5.2 LTS foundation.\n- Promoted from preview to stable release.\n- Improved stability and NVIDIA GPU compatibility.","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0","assets":[{"id":480471978,"name":"industrial-cg-platform-5.2.0.zip","size":595219590,"download_count":28,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0/industrial-cg-platform-5.2.0.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0-2026-06-18","name":"industrial-cg-platform-5.2.0-2026-06-18","published_at":"2026-06-18T04:03:04Z","prerelease":true,"body":"# Industrial CG Platform 5.2.0-2026-06-18\n\n- Runtime build hash: `0554f88d0014`\n- GitHub continuation snapshot: `427d6476`\n- Release ZIP SHA256: `CAEF0F41BDCEAEAB50BD4E0944D151B61622DBF23515F2B885851B8739924681`\n\n## Panel Identifier Hotfix\n\n- Registers the Output Properties Overscan panel as\n  `RENDER_PT_exr_overscan` instead of the generic `RENDER_PT_overscan`.\n- Prevents third-party add-ons that use the generic identifier from replacing\n  the Industrial CG Platform panel.\n- Adds a runtime regression assertion that requires the product-specific panel\n  identifier and rejects the old generic identifier.\n- Keeps the retained release identity synchronized as\n  `Blender 5.2.0-2026-06-18 Industrial CG Platform`.\n\n## Highlights\n\n- Publishes the clean Industrial CG Platform feature stack while preserving\n  the curated GitHub continuation-repository model.\n- Includes Shadow Color, Deep EXR and GPU compositor support, Lightgroup lobe\n  passes, the BQt ViewLayer Manager, Industrial CG Platform branding, and the\n  accepted EXR Overscan workflow.\n- Passes the installed-release integrity gate, including bundled BQt runtime\n  and ViewLayer Manager import checks.\n- Passes the complete EXR Overscan offline regression suite and both GUI popup\n  states with `panel_idname` recorded as `RENDER_PT_exr_overscan`.\n\n## Publication Notes\n\n- This asset replaces the earlier package under the existing\n  `industrial-cg-platform-5.2.0-2026-06-18` release identity.\n- The GitHub repository is a curated continuation repository. Its snapshot\n  commit intentionally differs from the local full-history source hash.\n- The previous local release root, ZIP, and notes are preserved under\n  `.agent/archive/release-staging/2026-06-18_pre_panel_id_fix_formal_release`.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-18","assets":[{"id":451374008,"name":"industrial-cg-platform-5.2.0-2026-06-18.zip","size":559823975,"download_count":26,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-18/industrial-cg-platform-5.2.0-2026-06-18.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0-2026-06-16","name":"Industrial CG Platform 5.2.0-2026-06-16","published_at":"2026-06-17T07:35:15Z","prerelease":true,"body":"Industrial CG Platform 5.2.0-2026-06-16\n\nBuild hash: 51091989dec9\nRelease SHA256: ABF163964C0DDE4754EC1E03BE28B962FD0520892CC20489271E7B1286D82B87\n\nHighlights:\n- includes the validated EXR overscan redesign-v2 stack from `b1178a6f684`, `3cb97d34346`, and `51091989dec`, covering offline EXR overscan output, compositor/File Output window preservation, render-region gating, Output-panel overscan controls, viewport safety-frame guidance, and the OptiX cache-path policy\n- keeps the shipped Deep EXR runtime kernel-header packaging follow-up from `e3e08831df1`, so fallback Cycles kernel compilation does not lose `deep_write.h` in the installed runtime\n- keeps the Deep EXR output UI cleanup from `ee70775a762`, removing the redundant standalone Deep EXR panel while preserving the existing file-output workflow\n- carries the current Industrial CG Platform branded runtime and passes the full self-contained feature suite, including HADY GUI Cycles on both CPU and OPTIX plus the old-scene compositor Deep EXR semantic gate\n\nNotes:\n- Installed runtime root: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-06-16`\n- Release zip: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-06-16.zip`\n- Full-scope validation proof root: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\release_20260616_full_scope_selfcontained_20260617`\n- Full-scope validation summary: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\release_20260616_full_scope_selfcontained_20260617\\branch_feature_suite_summary.json`\n- Clean-mainline acceptance proof root: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\mainline_acceptance_20260616`\n- `blender.exe --version` in the installed package begins with `Blender 5.2.0-2026-06-16 Industrial CG Platform` and reports `build hash: 51091989dec9`, `build branch: industrial-cg-platform`\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-16","assets":[{"id":449998601,"name":"industrial-cg-platform-5.2.0-2026-06-16.zip","size":562575295,"download_count":12,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-16/industrial-cg-platform-5.2.0-2026-06-16.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0-2026-05-27","name":"industrial-cg-platform-5.2.0-2026-05-27","published_at":"2026-05-27T16:00:51Z","prerelease":true,"body":"Industrial CG Platform 5.2.0-2026-05-27\n\nBuild hash: c598559a0b58\nRelease SHA256: 2D709759A355681692423806F9F3DE2EE83996C9B3149ED9FC81888B0D39C6C9\n\nHighlights:\n- includes the BQt startup-prewarm integration from `0bff869674a` so the bundled ViewLayer Manager preloads its Qt runtime during Windows GUI startup instead of paying the full cold-start cost on first open\n- includes the `.blend` launch re-arm fix from `c598559a0b5`, ensuring the prewarm timer survives file-load startup and keeps direct project-launch sessions on the warmed path\n- keeps the deeper bundled-runtime integrity checks in `scripts\\modules\\blender_vfx_qt\\__init__.py`, so stale partial `bqt` or `PySide6` imports are cleared before recovery enable attempts\n- rebuilds the branded package through the validated clean Ninja release workflow with the release date and runtime version string aligned to `2026-05-27`\n\nNotes:\n- Installed runtime root: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-05-27`\n- Release zip: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-05-27.zip`\n- Splash verification capture: `E:\\blender_modify\\blender\\.agent\\tmp\\isolated_release_splash_check_20260527.png`\n- BQt release validation output root: `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2`\n- Key validation reports:\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\runtime_enable_background.json`\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\gui_probe_factory.json`\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\gui_probe_with_blend.json`\n- `blender.exe --version` in the installed package now begins with `Blender 5.2.0-2026-05-27 Industrial CG Platform` and reports `build hash: c598559a0b58`\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-27","assets":[{"id":431225676,"name":"industrial-cg-platform-5.2.0-2026-05-27.zip","size":562177484,"download_count":27,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-27/industrial-cg-platform-5.2.0-2026-05-27.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0-2026-05-20","name":"Industrial CG Platform 5.2.0-2026-05-20","published_at":"2026-05-20T04:52:46Z","prerelease":true,"body":"Industrial CG Platform 5.2.0-2026-05-20\n\nBuild hash: dd7891b5db68\nRelease SHA256: 75FB8757A1BD67C057F7E4066BD1642615E728CABB71775CD06AE55BB127FC47\n\nHighlights:\n- refreshes the public continuation branch onto the corrected `vfx-rendering-branch-github` pre-rename baseline while keeping the `industrial-cg-platform` branch name\n- keeps the approved Industrial CG Platform branding replay, bundled BQt/ViewLayer Manager integration, and VFX translation surface on the published line\n- rebuilds the 2026-05-20 branded release from the documented Ninja workflow after a clean release-root reset\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-20","assets":[{"id":425165351,"name":"industrial-cg-platform-5.2.0-2026-05-20.zip","size":559590825,"download_count":7,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-20/industrial-cg-platform-5.2.0-2026-05-20.zip"}]},{"tag_name":"industrial-cg-platform-5.2.0-2026-05-19","name":"Industrial CG Platform 5.2.0-2026-05-19","published_at":"2026-05-19T10:22:14Z","prerelease":true,"body":"Industrial CG Platform 5.2.0-2026-05-19\n\nBinary build source commit: bede48d67c1e\nGitHub continuation snapshot commit: d915fa57\n\nRelease artifact:\n- industrial-cg-platform-5.2.0-2026-05-19.zip\n- SHA256: 519D82A17F18C2F4B2F0D36C512BA6CAFFB209D70D0EBA9CC06AA8152C3D421F\n\nNotes:\n- This GitHub branch is a continuation snapshot for ongoing development, not a full historical mirror of the local source repo.\n- The continuation snapshot intentionally omits heavyweight upstream test fixture payloads under tests/files/ that are not locally available on this workstation.\n- The continuation snapshot also omits two macOS-only upstream LFS resources that were not locally available during publication: release/darwin/Blender.app/Contents/Resources/Assets.car and release/darwin/Blender.app/Contents/Resources/blender_icon_legacy.icns.\n- The branded Windows runtime and splash used for this release were verified locally before packaging.\r\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-19","assets":[{"id":424093385,"name":"industrial-cg-platform-5.2.0-2026-05-19.zip","size":548722516,"download_count":1,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-19/industrial-cg-platform-5.2.0-2026-05-19.zip"}]},{"tag_name":"blender-vfx-5.2-2026-05-18","name":"blender-vfx-5.2-2026-05-18","published_at":"2026-05-18T08:11:49Z","prerelease":true,"body":"# blender-vfx-5.2-2026-05-18\n\n## Included\n\n- BQt-based `ViewLayer Manager` bundled into the Windows zip release.\n- Shared Qt runtime bundled as a system extension, including the staged `bqt`, `PySide6`,\n  `QtPy`, and related wheel payloads needed by the manager.\n- ViewLayer Manager workflow includes:\n  - top-right `ViewLayer Manager` launcher in Blender\n  - current-scene ViewLayer lifecycle controls\n  - pass controls for Eevee and Cycles\n  - `Cryptomatte`\n  - Shader AOV\n  - Light Groups\n  - Cycles light-pass AOVs\n  - `Deep`\n  - pass presets\n  - Chinese and French manager translations\n- Bundled system-extension repo layout fix, so the packaged runtime now discovers:\n  - `blender_vfx_qt_runtime`\n  - `blender_vfx_viewlayer_manager`\n  from the installed `System` repository without manual directory repair.\n\n## Validation\n\n- Installed release reports:\n  - `build hash: af21acdd037d`\n  - `build branch: vfx-rendering-branch-github`\n- Installed package command checks pass:\n  - `--factory-startup --command help`\n- Installed package system-extension discovery checks pass:\n  - local `System` repo scan includes `blender_vfx_qt_runtime`\n  - local `System` repo scan includes `blender_vfx_viewlayer_manager`\n  - packaged runtime imports:\n    - `bl_ext.system.blender_vfx_qt_runtime`\n    - `bl_ext.system.blender_vfx_viewlayer_manager`\n- Installed package contains no broken nested `extensions/system/system/<extension>` runtime path.\n\n## Notes\n\n- The published branch head for the packaged extension-layout fix is:\n  `b69596cd20bf10812a84fccc34ae9f4f1e5978df`\n- The executable `build hash` remains `af21acdd037d` because the follow-up fix only changed the\n  bundled extension payload layout, not the compiled Blender binary itself.\n- Release asset:\n  `blender-vfx-5.2-2026-05-18.zip`\n- SHA256:\n  `22BED42C919650915C4AAB1FD052961F6B9A40237B6F636F6E14986DA3B0AEAB`\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-05-18","assets":[{"id":423104075,"name":"blender-vfx-5.2-2026-05-18.zip","size":585010417,"download_count":3,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-18/blender-vfx-5.2-2026-05-18.zip"}]},{"tag_name":"blender-vfx-5.2-2026-05-11","name":"blender-vfx-5.2-2026-05-11","published_at":"2026-05-11T09:44:59Z","prerelease":true,"body":"# blender-vfx-5.2-2026-05-11\n\n## Included\n\n- Env lightgroup lobe reconstruction fixes for world/background contributions, including the\n  follow-up for view layers that disable both `Background` and `Emission` passes.\n- Ordinary finite-light lamp-hit split-lobe fix, so area/finite lightgroups such as production\n  `fill03` now reconstruct back to `Combined` instead of losing energy in the split-lobe family.\n- Built from the local public-release branch head `3d76509a3fc` on\n  `vfx-rendering-branch-github`.\n\n## Validation\n\n- Installed release reports:\n  - `build hash: 3d76509a3fce`\n  - `build branch: vfx-rendering-branch-github`\n- Installed package command checks pass:\n  - `--factory-startup --command help`\n  - `--factory-startup --command maketx --help`\n- Installed package contains no Git LFS pointer stubs.\n\n## Notes\n\n- The matching branch head and tag have been pushed to GitHub.\n- Release asset:\n  `blender-vfx-5.2-2026-05-11.zip`\n- SHA256:\n  `BFF8702952C87578EDA1BECE884154F760BA975326DEF28C95E04A54E3A8BDC7`\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-05-11","assets":[{"id":417324452,"name":"blender-vfx-5.2-2026-05-11.zip","size":338138507,"download_count":1,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-11/blender-vfx-5.2-2026-05-11.zip"}]},{"tag_name":"blender-vfx-5.2-2026-04-22","name":"blender-vfx-5.2-2026-04-22","published_at":"2026-04-23T06:05:35Z","prerelease":true,"body":"# blender-vfx-5.2-2026-04-22\n\nPublic GitHub release package for the current `vfx-rendering-branch-github` snapshot.\n\n## Included\n\n- Cycles lightgroup split-pass readback output support and aggregate balance validation.\n- Deep EXR compositor GPU compatibility follow-up already merged into the public branch.\n- Full release CUDA architecture matrix plus OptiX kernels.\n\n## Package Truth\n\n- Build hash: `5f56807d0c3f`\n- Build branch: `vfx-rendering-branch-github`\n- Release asset: `blender-vfx-5.2-2026-04-22.zip`\n- Zip SHA256: `033AC9768D115DD88A9413BAE0553B8D9C0285291A36AD00376E1E5058318D33`\n\n## Validation\n\n- Installed package `--version`: passed\n- Installed package `--factory-startup --command help`: passed\n- Installed package `--factory-startup --command maketx --help`: passed\n- Installed package contains no Git LFS pointer stubs\n- Background render of `D:\\blender_projects\\HADY1000work\\HADY1000_lgt_v005.blend` frame `1090`\n  completed successfully using the scene's saved settings\n\n## Notes\n\n- This is the published public-branch package for `2026-04-22`.\n- User-profile startup may still log unrelated third-party add-on import/runtime errors, but they\n  did not block package validation or background rendering in the release test run.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-22","assets":[{"id":403152472,"name":"blender-vfx-5.2-2026-04-22.zip","size":341390688,"download_count":5,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-22/blender-vfx-5.2-2026-04-22.zip"}]},{"tag_name":"blender-vfx-5.2-2026-04-20","name":"blender-vfx-5.2-2026-04-20","published_at":"2026-04-20T10:04:31Z","prerelease":true,"body":"# blender-vfx-5.2-2026-04-20\n\nPublic GitHub release package for the Cycles lightgroup split-pass readback fix.\n\n## Fixes\n\n- Fixes lightgroup lobe split-pass output when only `Direct` and/or `Indirect` passes are enabled.\n- Preserves named lightgroup/lobe pass identity during `PathTraceTile` readback.\n- Avoids the direct/indirect-only empty-output and cross-pass overwrite regression.\n- Keeps the validated source patch minimal and limited to the 5-file Cycles readback fix set.\n\n## Package Truth\n\n- Build hash: `1529cdc8582b`\n- Build branch: `vfx-rendering-branch-github`\n- Package folder: `E:\\blender_modify\\release\\blender-vfx-5.2-2026-04-20`\n- Zip: `E:\\blender_modify\\release\\blender-vfx-5.2-2026-04-20.zip`\n- Zip SHA256: `763AE69E8F12F51324F6C6671813A9BA275A2170984E0904FB5DEDBDEA152060`\n\n## Validation\n\n- CUDA `direct_indirect_only`: passed\n- OPTIX `direct_indirect_only`: passed\n- CUDA `combined_plus_split` with aggregate balance checks: passed\n- OPTIX `combined_plus_split` with aggregate balance checks: passed\n- `maketx` command help works in the installed package\n- Installed package contains no Git LFS pointer stubs\n- Installed package contains the full release CUDA architecture matrix plus OptiX kernels\n- Packaged `.pdb` files were archived outside the release folder before zipping\n\n## Notes\n\n- Per-lightgroup aggregate direct/indirect balance for `env` and `key` is gating.\n- Global raw beauty comparisons remain diagnostic/report-only.\n- `RGBA_emissive` remains combined-only and is included only in the global beauty diagnostic path.\n- The earlier full-history `2026-04-20` candidate was archived after GitHub push attempts stalled on remote pack/index processing.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-20","assets":[{"id":400587211,"name":"blender-vfx-5.2-2026-04-20.zip","size":338124502,"download_count":0,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-20/blender-vfx-5.2-2026-04-20.zip"}]},{"tag_name":"blender-vfx-5.2-2026-04-14","name":"blender-vfx-5.2-2026-04-14","published_at":"2026-04-14T04:32:28Z","prerelease":true,"body":"## Release Notes\n\n- Fix Deep EXR compositor GPU compatibility so `scene.render.compositor_device='GPU'` can write Deep EXR file outputs without forcing the whole compositor back to CPU.\n- Keep the rest of the compositor GPU scheduling path active for non-Deep-EXR nodes instead of disabling GPU execution broadly.\n- Continue to ship the current VFX rendering branch feature set, including Deep EXR, Shadow Color, Lightgroup Lobe Passes, and the recent upstream Blender 5.2 texture-cache command workflow.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-14","assets":[{"id":395916808,"name":"blender-vfx-5.2-2026-04-14.zip","size":341043329,"download_count":14,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-14/blender-vfx-5.2-2026-04-14.zip"}]},{"tag_name":"blender-vfx-5.2-2026-04-12","name":"blender-vfx-5.2-2026-04-12","published_at":"2026-04-13T04:37:16Z","prerelease":true,"body":"## Release Notes\n\n- Cycles now includes Blender 5.2 texture cache (`.tx`) support from the latest upstream sync, including the new `blender --command maketx` workflow for generating texture cache files.\n- This release continues to include the VFX branch rendering features Deep EXR, Shadow Color, and Lightgroup Lobe Passes, with the rest of the update focused on upstream sync, packaging refresh, and maintenance.\n","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-12","assets":[{"id":395143479,"name":"blender-vfx-5.2-2026-04-12.zip","size":341257151,"download_count":3,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-12/blender-vfx-5.2-2026-04-12.zip"}]},{"tag_name":"blender-vfx-5.2-2026-03-26","name":"blender-vfx-5.2-2026-03-26","published_at":"2026-03-26T23:34:38Z","prerelease":true,"body":"## Release Build\n\nBuilt from `vfx-rendering-branch` commit `8f9b69dcb70`.\n\n### Included work\n- Deep EXR hard-surface surface-coverage integration merged into the VFX branch.\n- Preserved deep surface sample routing through volume direct-light shadow paths.\n- Widened deep surface metadata for large scenes without increasing per-sample memory size.\n- Per-lightgroup lobe / light AOV outputs in Cycles are included in this release.\n- Includes the GPU lightgroup split-pass addressing fix for combined-only lightgroups, keeping outputs like `Combined_emissive` valid without corrupting flat beauty.\n\n### Validation\n- Deep EXR verification passed on `D:\\blender_projects\\light-passes-test-v001.blend`.\n- CPU and OptiX render matrix completed successfully.\n- Nuke visual validation passed for direct/compositor RGBA deep outputs.\n- Regression scripts passed for single-surface alpha and mixed surface+volume case 1.\n- Front-alpha diagnostic still reports the known 8 mismatch pixels.\n\n### Artifact\n- `blender-vfx-5.2-2026-03-26.zip`\n- SHA256: `3CA37F6EDF717E71A7219D025BF0615AFB327B91EB1D1F47A264B6508E413815`","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-03-26","assets":[{"id":382471652,"name":"blender-vfx-5.2-2026-03-26.zip","size":309960669,"download_count":13,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-26/blender-vfx-5.2-2026-03-26.zip"}]},{"tag_name":"blender-vfx-5.2-2026-03-04","name":"blender-vfx-5.2-2026-03-04","published_at":"2026-03-04T15:39:54Z","prerelease":true,"body":"Release build: multi-arch CUDA (sm_75/86/89).\r\n\r\nfix deepoutput don't create folder\r\n\r\ntest blend: https://github.com/RolandVyens/blender-vfx/releases/download/blender-vfx-5.2-2026-02-22/shadow-color-test.blend","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-03-04","assets":[{"id":366864767,"name":"blender-vfx-5.2-2026-03-04.zip","size":309678579,"download_count":1,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-04/blender-vfx-5.2-2026-03-04.zip"}]},{"tag_name":"blender-vfx-5.2-2026-02-22","name":"blender-vfx-5.2-2026-02-22","published_at":"2026-02-22T15:52:24Z","prerelease":true,"body":"Release build: multi-arch CUDA (sm_75/86/89).\r\nthis version includes 2 features:\r\n :loudspeaker: 1. deep output for cycles. (you can use compositor file output node for alpha only deepexr, refer to the blend file I provided in the release. when output deepexr, the render will gets tiled. you can increase the \"deep memory budget\" under tile size to get fewer tiles. )\r\n :loudspeaker: 2. shadow color for light and world in cycles. (under light/world settings -> shadow color)","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-02-22","assets":[{"id":360246228,"name":"blender-vfx-5.2-2026-02-22.zip","size":309884060,"download_count":4,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/blender-vfx-5.2-2026-02-22.zip"},{"id":360251584,"name":"shadow-color-test.blend","size":311413127,"download_count":5,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/shadow-color-test.blend"}]},{"tag_name":"blender-vfx-5.2-2026-02-21","name":"blender-vfx-5.2-2026-02-21","published_at":"2026-02-21T14:34:04Z","prerelease":true,"body":"Release build: multi-arch CUDA (sm_75/86/89).","html_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-02-21","assets":[{"id":359703897,"name":"blender-vfx-5.2-2026-02-21.zip","size":309883412,"download_count":2,"browser_download_url":"https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-21/blender-vfx-5.2-2026-02-21.zip"}]}]
+[
+  {
+    "tag_name": "industrial-cg-platform-5.2.2",
+    "name": "Industrial CG Platform 5.2.2 Stable Release",
+    "published_at": "2026-09-18T11:30:10Z",
+    "prerelease": false,
+    "body": "# Industrial CG Platform 5.2.2 Stable\n\n- Updated to the official Blender 5.2.2 LTS foundation.\n- Updated Industrial CG Platform splash and version branding for 5.2.2.\n- Preserved the validated Deep EXR, Lightgroup, Shadow Color, EXR Overscan, and BQt feature set.",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.2",
+    "assets": [
+      {
+        "id": 572484348,
+        "name": "industrial-cg-platform-5.2.2.zip",
+        "size": 593968234,
+        "download_count": 2,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.2/industrial-cg-platform-5.2.2.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.1",
+    "name": "Industrial CG Platform 5.2.1 Stable Release",
+    "published_at": "2026-08-29T07:53:41Z",
+    "prerelease": false,
+    "body": "# Industrial CG Platform 5.2.1 Stable\n\n- Updated to the official Blender 5.2.1 LTS foundation.\n- Fixed an issue where the Deep Tile Budget setting could remain grayed out in some projects.\n- Improved Deep EXR reliability and workflow defaults.\n- Added a dedicated bug report entry for Industrial CG Platform.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.1",
+    "assets": [
+      {
+        "id": 534935238,
+        "name": "industrial-cg-platform-5.2.1.zip",
+        "size": 593318777,
+        "download_count": 27,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.1/industrial-cg-platform-5.2.1.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0",
+    "name": "Industrial CG Platform 5.2.0 Stable Release",
+    "published_at": "2026-07-17T14:37:37Z",
+    "prerelease": false,
+    "body": "# Industrial CG Platform 5.2.0 Stable\n\n- Updated to the official Blender 5.2 LTS foundation.\n- Promoted from preview to stable release.\n- Improved stability and NVIDIA GPU compatibility.",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0",
+    "assets": [
+      {
+        "id": 480471978,
+        "name": "industrial-cg-platform-5.2.0.zip",
+        "size": 595219590,
+        "download_count": 28,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0/industrial-cg-platform-5.2.0.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0-2026-06-18",
+    "name": "industrial-cg-platform-5.2.0-2026-06-18",
+    "published_at": "2026-06-18T04:03:04Z",
+    "prerelease": true,
+    "body": "# Industrial CG Platform 5.2.0-2026-06-18\n\n- Runtime build hash: `0554f88d0014`\n- GitHub continuation snapshot: `427d6476`\n- Release ZIP SHA256: `CAEF0F41BDCEAEAB50BD4E0944D151B61622DBF23515F2B885851B8739924681`\n\n## Panel Identifier Hotfix\n\n- Registers the Output Properties Overscan panel as\n  `RENDER_PT_exr_overscan` instead of the generic `RENDER_PT_overscan`.\n- Prevents third-party add-ons that use the generic identifier from replacing\n  the Industrial CG Platform panel.\n- Adds a runtime regression assertion that requires the product-specific panel\n  identifier and rejects the old generic identifier.\n- Keeps the retained release identity synchronized as\n  `Blender 5.2.0-2026-06-18 Industrial CG Platform`.\n\n## Highlights\n\n- Publishes the clean Industrial CG Platform feature stack while preserving\n  the curated GitHub continuation-repository model.\n- Includes Shadow Color, Deep EXR and GPU compositor support, Lightgroup lobe\n  passes, the BQt ViewLayer Manager, Industrial CG Platform branding, and the\n  accepted EXR Overscan workflow.\n- Passes the installed-release integrity gate, including bundled BQt runtime\n  and ViewLayer Manager import checks.\n- Passes the complete EXR Overscan offline regression suite and both GUI popup\n  states with `panel_idname` recorded as `RENDER_PT_exr_overscan`.\n\n## Publication Notes\n\n- This asset replaces the earlier package under the existing\n  `industrial-cg-platform-5.2.0-2026-06-18` release identity.\n- The GitHub repository is a curated continuation repository. Its snapshot\n  commit intentionally differs from the local full-history source hash.\n- The previous local release root, ZIP, and notes are preserved under\n  `.agent/archive/release-staging/2026-06-18_pre_panel_id_fix_formal_release`.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-18",
+    "assets": [
+      {
+        "id": 451374008,
+        "name": "industrial-cg-platform-5.2.0-2026-06-18.zip",
+        "size": 559823975,
+        "download_count": 26,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-18/industrial-cg-platform-5.2.0-2026-06-18.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0-2026-06-16",
+    "name": "Industrial CG Platform 5.2.0-2026-06-16",
+    "published_at": "2026-06-17T07:35:15Z",
+    "prerelease": true,
+    "body": "Industrial CG Platform 5.2.0-2026-06-16\n\nBuild hash: 51091989dec9\nRelease SHA256: ABF163964C0DDE4754EC1E03BE28B962FD0520892CC20489271E7B1286D82B87\n\nHighlights:\n- includes the validated EXR overscan redesign-v2 stack from `b1178a6f684`, `3cb97d34346`, and `51091989dec`, covering offline EXR overscan output, compositor/File Output window preservation, render-region gating, Output-panel overscan controls, viewport safety-frame guidance, and the OptiX cache-path policy\n- keeps the shipped Deep EXR runtime kernel-header packaging follow-up from `e3e08831df1`, so fallback Cycles kernel compilation does not lose `deep_write.h` in the installed runtime\n- keeps the Deep EXR output UI cleanup from `ee70775a762`, removing the redundant standalone Deep EXR panel while preserving the existing file-output workflow\n- carries the current Industrial CG Platform branded runtime and passes the full self-contained feature suite, including HADY GUI Cycles on both CPU and OPTIX plus the old-scene compositor Deep EXR semantic gate\n\nNotes:\n- Installed runtime root: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-06-16`\n- Release zip: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-06-16.zip`\n- Full-scope validation proof root: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\release_20260616_full_scope_selfcontained_20260617`\n- Full-scope validation summary: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\release_20260616_full_scope_selfcontained_20260617\\branch_feature_suite_summary.json`\n- Clean-mainline acceptance proof root: `E:\\blender_modify\\blender\\.agent\\tmp\\n8n\\mainline_acceptance_20260616`\n- `blender.exe --version` in the installed package begins with `Blender 5.2.0-2026-06-16 Industrial CG Platform` and reports `build hash: 51091989dec9`, `build branch: industrial-cg-platform`\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-06-16",
+    "assets": [
+      {
+        "id": 449998601,
+        "name": "industrial-cg-platform-5.2.0-2026-06-16.zip",
+        "size": 562575295,
+        "download_count": 12,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-16/industrial-cg-platform-5.2.0-2026-06-16.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0-2026-05-27",
+    "name": "industrial-cg-platform-5.2.0-2026-05-27",
+    "published_at": "2026-05-27T16:00:51Z",
+    "prerelease": true,
+    "body": "Industrial CG Platform 5.2.0-2026-05-27\n\nBuild hash: c598559a0b58\nRelease SHA256: 2D709759A355681692423806F9F3DE2EE83996C9B3149ED9FC81888B0D39C6C9\n\nHighlights:\n- includes the BQt startup-prewarm integration from `0bff869674a` so the bundled ViewLayer Manager preloads its Qt runtime during Windows GUI startup instead of paying the full cold-start cost on first open\n- includes the `.blend` launch re-arm fix from `c598559a0b5`, ensuring the prewarm timer survives file-load startup and keeps direct project-launch sessions on the warmed path\n- keeps the deeper bundled-runtime integrity checks in `scripts\\modules\\blender_vfx_qt\\__init__.py`, so stale partial `bqt` or `PySide6` imports are cleared before recovery enable attempts\n- rebuilds the branded package through the validated clean Ninja release workflow with the release date and runtime version string aligned to `2026-05-27`\n\nNotes:\n- Installed runtime root: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-05-27`\n- Release zip: `E:\\blender_modify\\release\\industrial-cg-platform-5.2.0-2026-05-27.zip`\n- Splash verification capture: `E:\\blender_modify\\blender\\.agent\\tmp\\isolated_release_splash_check_20260527.png`\n- BQt release validation output root: `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2`\n- Key validation reports:\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\runtime_enable_background.json`\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\gui_probe_factory.json`\n  - `E:\\blender_modify\\blender\\.agent\\tmp\\release_bqt_startup_prewarm_validation_20260527_v2\\gui_probe_with_blend.json`\n- `blender.exe --version` in the installed package now begins with `Blender 5.2.0-2026-05-27 Industrial CG Platform` and reports `build hash: c598559a0b58`\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-27",
+    "assets": [
+      {
+        "id": 431225676,
+        "name": "industrial-cg-platform-5.2.0-2026-05-27.zip",
+        "size": 562177484,
+        "download_count": 27,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-27/industrial-cg-platform-5.2.0-2026-05-27.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0-2026-05-20",
+    "name": "Industrial CG Platform 5.2.0-2026-05-20",
+    "published_at": "2026-05-20T04:52:46Z",
+    "prerelease": true,
+    "body": "Industrial CG Platform 5.2.0-2026-05-20\n\nBuild hash: dd7891b5db68\nRelease SHA256: 75FB8757A1BD67C057F7E4066BD1642615E728CABB71775CD06AE55BB127FC47\n\nHighlights:\n- refreshes the public continuation branch onto the corrected `vfx-rendering-branch-github` pre-rename baseline while keeping the `industrial-cg-platform` branch name\n- keeps the approved Industrial CG Platform branding replay, bundled BQt/ViewLayer Manager integration, and VFX translation surface on the published line\n- rebuilds the 2026-05-20 branded release from the documented Ninja workflow after a clean release-root reset\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-20",
+    "assets": [
+      {
+        "id": 425165351,
+        "name": "industrial-cg-platform-5.2.0-2026-05-20.zip",
+        "size": 559590825,
+        "download_count": 7,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-20/industrial-cg-platform-5.2.0-2026-05-20.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.0-2026-05-19",
+    "name": "Industrial CG Platform 5.2.0-2026-05-19",
+    "published_at": "2026-05-19T10:22:14Z",
+    "prerelease": true,
+    "body": "Industrial CG Platform 5.2.0-2026-05-19\n\nBinary build source commit: bede48d67c1e\nGitHub continuation snapshot commit: d915fa57\n\nRelease artifact:\n- industrial-cg-platform-5.2.0-2026-05-19.zip\n- SHA256: 519D82A17F18C2F4B2F0D36C512BA6CAFFB209D70D0EBA9CC06AA8152C3D421F\n\nNotes:\n- This GitHub branch is a continuation snapshot for ongoing development, not a full historical mirror of the local source repo.\n- The continuation snapshot intentionally omits heavyweight upstream test fixture payloads under tests/files/ that are not locally available on this workstation.\n- The continuation snapshot also omits two macOS-only upstream LFS resources that were not locally available during publication: release/darwin/Blender.app/Contents/Resources/Assets.car and release/darwin/Blender.app/Contents/Resources/blender_icon_legacy.icns.\n- The branded Windows runtime and splash used for this release were verified locally before packaging.\r\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.0-2026-05-19",
+    "assets": [
+      {
+        "id": 424093385,
+        "name": "industrial-cg-platform-5.2.0-2026-05-19.zip",
+        "size": 548722516,
+        "download_count": 1,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-19/industrial-cg-platform-5.2.0-2026-05-19.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-05-18",
+    "name": "blender-vfx-5.2-2026-05-18",
+    "published_at": "2026-05-18T08:11:49Z",
+    "prerelease": true,
+    "body": "# blender-vfx-5.2-2026-05-18\n\n## Included\n\n- BQt-based `ViewLayer Manager` bundled into the Windows zip release.\n- Shared Qt runtime bundled as a system extension, including the staged `bqt`, `PySide6`,\n  `QtPy`, and related wheel payloads needed by the manager.\n- ViewLayer Manager workflow includes:\n  - top-right `ViewLayer Manager` launcher in Blender\n  - current-scene ViewLayer lifecycle controls\n  - pass controls for Eevee and Cycles\n  - `Cryptomatte`\n  - Shader AOV\n  - Light Groups\n  - Cycles light-pass AOVs\n  - `Deep`\n  - pass presets\n  - Chinese and French manager translations\n- Bundled system-extension repo layout fix, so the packaged runtime now discovers:\n  - `blender_vfx_qt_runtime`\n  - `blender_vfx_viewlayer_manager`\n  from the installed `System` repository without manual directory repair.\n\n## Validation\n\n- Installed release reports:\n  - `build hash: af21acdd037d`\n  - `build branch: vfx-rendering-branch-github`\n- Installed package command checks pass:\n  - `--factory-startup --command help`\n- Installed package system-extension discovery checks pass:\n  - local `System` repo scan includes `blender_vfx_qt_runtime`\n  - local `System` repo scan includes `blender_vfx_viewlayer_manager`\n  - packaged runtime imports:\n    - `bl_ext.system.blender_vfx_qt_runtime`\n    - `bl_ext.system.blender_vfx_viewlayer_manager`\n- Installed package contains no broken nested `extensions/system/system/<extension>` runtime path.\n\n## Notes\n\n- The published branch head for the packaged extension-layout fix is:\n  `b69596cd20bf10812a84fccc34ae9f4f1e5978df`\n- The executable `build hash` remains `af21acdd037d` because the follow-up fix only changed the\n  bundled extension payload layout, not the compiled Blender binary itself.\n- Release asset:\n  `blender-vfx-5.2-2026-05-18.zip`\n- SHA256:\n  `22BED42C919650915C4AAB1FD052961F6B9A40237B6F636F6E14986DA3B0AEAB`\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-05-18",
+    "assets": [
+      {
+        "id": 423104075,
+        "name": "blender-vfx-5.2-2026-05-18.zip",
+        "size": 585010417,
+        "download_count": 3,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-18/blender-vfx-5.2-2026-05-18.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-05-11",
+    "name": "blender-vfx-5.2-2026-05-11",
+    "published_at": "2026-05-11T09:44:59Z",
+    "prerelease": true,
+    "body": "# blender-vfx-5.2-2026-05-11\n\n## Included\n\n- Env lightgroup lobe reconstruction fixes for world/background contributions, including the\n  follow-up for view layers that disable both `Background` and `Emission` passes.\n- Ordinary finite-light lamp-hit split-lobe fix, so area/finite lightgroups such as production\n  `fill03` now reconstruct back to `Combined` instead of losing energy in the split-lobe family.\n- Built from the local public-release branch head `3d76509a3fc` on\n  `vfx-rendering-branch-github`.\n\n## Validation\n\n- Installed release reports:\n  - `build hash: 3d76509a3fce`\n  - `build branch: vfx-rendering-branch-github`\n- Installed package command checks pass:\n  - `--factory-startup --command help`\n  - `--factory-startup --command maketx --help`\n- Installed package contains no Git LFS pointer stubs.\n\n## Notes\n\n- The matching branch head and tag have been pushed to GitHub.\n- Release asset:\n  `blender-vfx-5.2-2026-05-11.zip`\n- SHA256:\n  `BFF8702952C87578EDA1BECE884154F760BA975326DEF28C95E04A54E3A8BDC7`\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-05-11",
+    "assets": [
+      {
+        "id": 417324452,
+        "name": "blender-vfx-5.2-2026-05-11.zip",
+        "size": 338138507,
+        "download_count": 1,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-11/blender-vfx-5.2-2026-05-11.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-04-22",
+    "name": "blender-vfx-5.2-2026-04-22",
+    "published_at": "2026-04-23T06:05:35Z",
+    "prerelease": true,
+    "body": "# blender-vfx-5.2-2026-04-22\n\nPublic GitHub release package for the current `vfx-rendering-branch-github` snapshot.\n\n## Included\n\n- Cycles lightgroup split-pass readback output support and aggregate balance validation.\n- Deep EXR compositor GPU compatibility follow-up already merged into the public branch.\n- Full release CUDA architecture matrix plus OptiX kernels.\n\n## Package Truth\n\n- Build hash: `5f56807d0c3f`\n- Build branch: `vfx-rendering-branch-github`\n- Release asset: `blender-vfx-5.2-2026-04-22.zip`\n- Zip SHA256: `033AC9768D115DD88A9413BAE0553B8D9C0285291A36AD00376E1E5058318D33`\n\n## Validation\n\n- Installed package `--version`: passed\n- Installed package `--factory-startup --command help`: passed\n- Installed package `--factory-startup --command maketx --help`: passed\n- Installed package contains no Git LFS pointer stubs\n- Background render of `D:\\blender_projects\\HADY1000work\\HADY1000_lgt_v005.blend` frame `1090`\n  completed successfully using the scene's saved settings\n\n## Notes\n\n- This is the published public-branch package for `2026-04-22`.\n- User-profile startup may still log unrelated third-party add-on import/runtime errors, but they\n  did not block package validation or background rendering in the release test run.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-22",
+    "assets": [
+      {
+        "id": 403152472,
+        "name": "blender-vfx-5.2-2026-04-22.zip",
+        "size": 341390688,
+        "download_count": 5,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-22/blender-vfx-5.2-2026-04-22.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-04-20",
+    "name": "blender-vfx-5.2-2026-04-20",
+    "published_at": "2026-04-20T10:04:31Z",
+    "prerelease": true,
+    "body": "# blender-vfx-5.2-2026-04-20\n\nPublic GitHub release package for the Cycles lightgroup split-pass readback fix.\n\n## Fixes\n\n- Fixes lightgroup lobe split-pass output when only `Direct` and/or `Indirect` passes are enabled.\n- Preserves named lightgroup/lobe pass identity during `PathTraceTile` readback.\n- Avoids the direct/indirect-only empty-output and cross-pass overwrite regression.\n- Keeps the validated source patch minimal and limited to the 5-file Cycles readback fix set.\n\n## Package Truth\n\n- Build hash: `1529cdc8582b`\n- Build branch: `vfx-rendering-branch-github`\n- Package folder: `E:\\blender_modify\\release\\blender-vfx-5.2-2026-04-20`\n- Zip: `E:\\blender_modify\\release\\blender-vfx-5.2-2026-04-20.zip`\n- Zip SHA256: `763AE69E8F12F51324F6C6671813A9BA275A2170984E0904FB5DEDBDEA152060`\n\n## Validation\n\n- CUDA `direct_indirect_only`: passed\n- OPTIX `direct_indirect_only`: passed\n- CUDA `combined_plus_split` with aggregate balance checks: passed\n- OPTIX `combined_plus_split` with aggregate balance checks: passed\n- `maketx` command help works in the installed package\n- Installed package contains no Git LFS pointer stubs\n- Installed package contains the full release CUDA architecture matrix plus OptiX kernels\n- Packaged `.pdb` files were archived outside the release folder before zipping\n\n## Notes\n\n- Per-lightgroup aggregate direct/indirect balance for `env` and `key` is gating.\n- Global raw beauty comparisons remain diagnostic/report-only.\n- `RGBA_emissive` remains combined-only and is included only in the global beauty diagnostic path.\n- The earlier full-history `2026-04-20` candidate was archived after GitHub push attempts stalled on remote pack/index processing.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-20",
+    "assets": [
+      {
+        "id": 400587211,
+        "name": "blender-vfx-5.2-2026-04-20.zip",
+        "size": 338124502,
+        "download_count": 0,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-20/blender-vfx-5.2-2026-04-20.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-04-14",
+    "name": "blender-vfx-5.2-2026-04-14",
+    "published_at": "2026-04-14T04:32:28Z",
+    "prerelease": true,
+    "body": "## Release Notes\n\n- Fix Deep EXR compositor GPU compatibility so `scene.render.compositor_device='GPU'` can write Deep EXR file outputs without forcing the whole compositor back to CPU.\n- Keep the rest of the compositor GPU scheduling path active for non-Deep-EXR nodes instead of disabling GPU execution broadly.\n- Continue to ship the current VFX rendering branch feature set, including Deep EXR, Shadow Color, Lightgroup Lobe Passes, and the recent upstream Blender 5.2 texture-cache command workflow.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-14",
+    "assets": [
+      {
+        "id": 395916808,
+        "name": "blender-vfx-5.2-2026-04-14.zip",
+        "size": 341043329,
+        "download_count": 14,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-14/blender-vfx-5.2-2026-04-14.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-04-12",
+    "name": "blender-vfx-5.2-2026-04-12",
+    "published_at": "2026-04-13T04:37:16Z",
+    "prerelease": true,
+    "body": "## Release Notes\n\n- Cycles now includes Blender 5.2 texture cache (`.tx`) support from the latest upstream sync, including the new `blender --command maketx` workflow for generating texture cache files.\n- This release continues to include the VFX branch rendering features Deep EXR, Shadow Color, and Lightgroup Lobe Passes, with the rest of the update focused on upstream sync, packaging refresh, and maintenance.\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-04-12",
+    "assets": [
+      {
+        "id": 395143479,
+        "name": "blender-vfx-5.2-2026-04-12.zip",
+        "size": 341257151,
+        "download_count": 3,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-12/blender-vfx-5.2-2026-04-12.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-03-26",
+    "name": "blender-vfx-5.2-2026-03-26",
+    "published_at": "2026-03-26T23:34:38Z",
+    "prerelease": true,
+    "body": "## Release Build\n\nBuilt from `vfx-rendering-branch` commit `8f9b69dcb70`.\n\n### Included work\n- Deep EXR hard-surface surface-coverage integration merged into the VFX branch.\n- Preserved deep surface sample routing through volume direct-light shadow paths.\n- Widened deep surface metadata for large scenes without increasing per-sample memory size.\n- Per-lightgroup lobe / light AOV outputs in Cycles are included in this release.\n- Includes the GPU lightgroup split-pass addressing fix for combined-only lightgroups, keeping outputs like `Combined_emissive` valid without corrupting flat beauty.\n\n### Validation\n- Deep EXR verification passed on `D:\\blender_projects\\light-passes-test-v001.blend`.\n- CPU and OptiX render matrix completed successfully.\n- Nuke visual validation passed for direct/compositor RGBA deep outputs.\n- Regression scripts passed for single-surface alpha and mixed surface+volume case 1.\n- Front-alpha diagnostic still reports the known 8 mismatch pixels.\n\n### Artifact\n- `blender-vfx-5.2-2026-03-26.zip`\n- SHA256: `3CA37F6EDF717E71A7219D025BF0615AFB327B91EB1D1F47A264B6508E413815`",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-03-26",
+    "assets": [
+      {
+        "id": 382471652,
+        "name": "blender-vfx-5.2-2026-03-26.zip",
+        "size": 309960669,
+        "download_count": 13,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-26/blender-vfx-5.2-2026-03-26.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-03-04",
+    "name": "blender-vfx-5.2-2026-03-04",
+    "published_at": "2026-03-04T15:39:54Z",
+    "prerelease": true,
+    "body": "Release build: multi-arch CUDA (sm_75/86/89).\r\n\r\nfix deepoutput don't create folder\r\n\r\ntest blend: https://github.com/RolandVyens/blender-vfx/releases/download/blender-vfx-5.2-2026-02-22/shadow-color-test.blend",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-03-04",
+    "assets": [
+      {
+        "id": 366864767,
+        "name": "blender-vfx-5.2-2026-03-04.zip",
+        "size": 309678579,
+        "download_count": 1,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-04/blender-vfx-5.2-2026-03-04.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-02-22",
+    "name": "blender-vfx-5.2-2026-02-22",
+    "published_at": "2026-02-22T15:52:24Z",
+    "prerelease": true,
+    "body": "Release build: multi-arch CUDA (sm_75/86/89).\r\nthis version includes 2 features:\r\n :loudspeaker: 1. deep output for cycles. (you can use compositor file output node for alpha only deepexr, refer to the blend file I provided in the release. when output deepexr, the render will gets tiled. you can increase the \"deep memory budget\" under tile size to get fewer tiles. )\r\n :loudspeaker: 2. shadow color for light and world in cycles. (under light/world settings -> shadow color)",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-02-22",
+    "assets": [
+      {
+        "id": 360246228,
+        "name": "blender-vfx-5.2-2026-02-22.zip",
+        "size": 309884060,
+        "download_count": 4,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/blender-vfx-5.2-2026-02-22.zip"
+      },
+      {
+        "id": 360251584,
+        "name": "shadow-color-test.blend",
+        "size": 311413127,
+        "download_count": 5,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/shadow-color-test.blend"
+      }
+    ]
+  },
+  {
+    "tag_name": "blender-vfx-5.2-2026-02-21",
+    "name": "blender-vfx-5.2-2026-02-21",
+    "published_at": "2026-02-21T14:34:04Z",
+    "prerelease": true,
+    "body": "Release build: multi-arch CUDA (sm_75/86/89).",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/blender-vfx-5.2-2026-02-21",
+    "assets": [
+      {
+        "id": 359703897,
+        "name": "blender-vfx-5.2-2026-02-21.zip",
+        "size": 309883412,
+        "download_count": 2,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-21/blender-vfx-5.2-2026-02-21.zip"
+      }
+    ]
+  }
+]
