@@ -74,6 +74,15 @@ export default defineConfig({
 
     pageData.frontmatter.head ??= [];
     const baseUrl = 'https://cgweave.com/';
+    // The shared blog is English-only and has no locale-prefixed copies.
+    if (cleanPath.startsWith('blog/')) {
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'canonical', href: `${baseUrl}${cleanPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}${cleanPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}${cleanPath}` }]
+      );
+      return;
+    }
     pageData.frontmatter.head.push(
       ['link', { rel: 'canonical', href: `${baseUrl}${cleanPath}` }],
       ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}en/${basePath}` }],
