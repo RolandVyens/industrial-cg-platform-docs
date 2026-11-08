@@ -1,5 +1,22 @@
 [
   {
+    "tag_name": "industrial-cg-platform-5.2.1-alpha.1",
+    "name": "Industrial CG Platform 5.2.1 Alpha 1 — Deep EXR Architecture Upgrade",
+    "published_at": "2026-11-08T06:52:52Z",
+    "prerelease": true,
+    "body": "# Industrial CG Platform 5.2.1 Alpha 1 — Deep EXR Architecture Upgrade\r\n\r\n## What’s New\r\n\r\n- **Deep EXR Architecture Upgrade**: Improved volume-slice Alpha and Deep compositing performance.\r\n- Added **Simple / Physical modes** under **Render Properties → Performance → Deep → Simple Mode**, shared by Surface and Volume. **Simple** is enabled by default and redistributes the final Beauty color across Deep samples, reducing color capture and storage overhead. Uncheck it to enable **Physical**, which captures native color contributions at their source depths.\r\n\r\n## Performance Reference\r\n\r\nOn an RTX 4080 SUPER using OptiX, with adaptive sampling enabled and file output included, Deep Simple added approximately **20.4% / 18.6%** overhead compared with Flat rendering at maximum sample counts of **128 / 512**, respectively. These results apply only to the tested scene.\r\n\r\n## Known Limitations\r\n\r\n- Deep storage is limited to **32 samples per pixel**. Sample merging still requires fixes; increasing render samples does not guarantee more accurate slices.\r\n- Deep rendering currently supports **OptiX only**. For Physical mode, set **Render Properties → Film → Exposure** to **1.0**.\r\n- World Volume is currently unsupported.\r\n- Multi-GPU configurations and other graphics cards have not yet been validated.\r\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.1-alpha.1",
+    "assets": [
+      {
+        "id": 722893915,
+        "name": "industrial-cg-platform-5.2.1-alpha.1-Deep-EXR-Architecture-Upgrade.zip",
+        "size": 713170744,
+        "download_count": 1,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.1-alpha.1/industrial-cg-platform-5.2.1-alpha.1-Deep-EXR-Architecture-Upgrade.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "industrial-cg-platform-5.2.2",
     "name": "Industrial CG Platform 5.2.2 Stable Release",
     "published_at": "2026-09-18T11:30:10Z",
@@ -11,7 +28,7 @@
         "id": 572484348,
         "name": "industrial-cg-platform-5.2.2.zip",
         "size": 593968234,
-        "download_count": 2,
+        "download_count": 42,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.2/industrial-cg-platform-5.2.2.zip"
       }
     ]
@@ -28,7 +45,7 @@
         "id": 534935238,
         "name": "industrial-cg-platform-5.2.1.zip",
         "size": 593318777,
-        "download_count": 27,
+        "download_count": 31,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.1/industrial-cg-platform-5.2.1.zip"
       }
     ]
@@ -45,7 +62,7 @@
         "id": 480471978,
         "name": "industrial-cg-platform-5.2.0.zip",
         "size": 595219590,
-        "download_count": 28,
+        "download_count": 32,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0/industrial-cg-platform-5.2.0.zip"
       }
     ]
@@ -62,7 +79,7 @@
         "id": 451374008,
         "name": "industrial-cg-platform-5.2.0-2026-06-18.zip",
         "size": 559823975,
-        "download_count": 26,
+        "download_count": 27,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-18/industrial-cg-platform-5.2.0-2026-06-18.zip"
       }
     ]
@@ -79,7 +96,7 @@
         "id": 449998601,
         "name": "industrial-cg-platform-5.2.0-2026-06-16.zip",
         "size": 562575295,
-        "download_count": 12,
+        "download_count": 13,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-06-16/industrial-cg-platform-5.2.0-2026-06-16.zip"
       }
     ]
@@ -96,7 +113,7 @@
         "id": 431225676,
         "name": "industrial-cg-platform-5.2.0-2026-05-27.zip",
         "size": 562177484,
-        "download_count": 27,
+        "download_count": 28,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-27/industrial-cg-platform-5.2.0-2026-05-27.zip"
       }
     ]
@@ -113,7 +130,7 @@
         "id": 425165351,
         "name": "industrial-cg-platform-5.2.0-2026-05-20.zip",
         "size": 559590825,
-        "download_count": 7,
+        "download_count": 8,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-20/industrial-cg-platform-5.2.0-2026-05-20.zip"
       }
     ]
@@ -130,7 +147,7 @@
         "id": 424093385,
         "name": "industrial-cg-platform-5.2.0-2026-05-19.zip",
         "size": 548722516,
-        "download_count": 1,
+        "download_count": 2,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.0-2026-05-19/industrial-cg-platform-5.2.0-2026-05-19.zip"
       }
     ]
@@ -147,7 +164,7 @@
         "id": 423104075,
         "name": "blender-vfx-5.2-2026-05-18.zip",
         "size": 585010417,
-        "download_count": 3,
+        "download_count": 4,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-18/blender-vfx-5.2-2026-05-18.zip"
       }
     ]
@@ -164,7 +181,7 @@
         "id": 417324452,
         "name": "blender-vfx-5.2-2026-05-11.zip",
         "size": 338138507,
-        "download_count": 1,
+        "download_count": 2,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-05-11/blender-vfx-5.2-2026-05-11.zip"
       }
     ]
@@ -181,7 +198,7 @@
         "id": 403152472,
         "name": "blender-vfx-5.2-2026-04-22.zip",
         "size": 341390688,
-        "download_count": 5,
+        "download_count": 6,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-22/blender-vfx-5.2-2026-04-22.zip"
       }
     ]
@@ -198,7 +215,7 @@
         "id": 400587211,
         "name": "blender-vfx-5.2-2026-04-20.zip",
         "size": 338124502,
-        "download_count": 0,
+        "download_count": 1,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-20/blender-vfx-5.2-2026-04-20.zip"
       }
     ]
@@ -215,7 +232,7 @@
         "id": 395916808,
         "name": "blender-vfx-5.2-2026-04-14.zip",
         "size": 341043329,
-        "download_count": 14,
+        "download_count": 15,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-14/blender-vfx-5.2-2026-04-14.zip"
       }
     ]
@@ -232,7 +249,7 @@
         "id": 395143479,
         "name": "blender-vfx-5.2-2026-04-12.zip",
         "size": 341257151,
-        "download_count": 3,
+        "download_count": 4,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-04-12/blender-vfx-5.2-2026-04-12.zip"
       }
     ]
@@ -249,7 +266,7 @@
         "id": 382471652,
         "name": "blender-vfx-5.2-2026-03-26.zip",
         "size": 309960669,
-        "download_count": 13,
+        "download_count": 14,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-26/blender-vfx-5.2-2026-03-26.zip"
       }
     ]
@@ -266,7 +283,7 @@
         "id": 366864767,
         "name": "blender-vfx-5.2-2026-03-04.zip",
         "size": 309678579,
-        "download_count": 1,
+        "download_count": 2,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-03-04/blender-vfx-5.2-2026-03-04.zip"
       }
     ]
@@ -283,14 +300,14 @@
         "id": 360246228,
         "name": "blender-vfx-5.2-2026-02-22.zip",
         "size": 309884060,
-        "download_count": 4,
+        "download_count": 5,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/blender-vfx-5.2-2026-02-22.zip"
       },
       {
         "id": 360251584,
         "name": "shadow-color-test.blend",
         "size": 311413127,
-        "download_count": 5,
+        "download_count": 6,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-22/shadow-color-test.blend"
       }
     ]
@@ -307,7 +324,7 @@
         "id": 359703897,
         "name": "blender-vfx-5.2-2026-02-21.zip",
         "size": 309883412,
-        "download_count": 2,
+        "download_count": 3,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/blender-vfx-5.2-2026-02-21/blender-vfx-5.2-2026-02-21.zip"
       }
     ]
