@@ -88,51 +88,52 @@ description: "源于 Blender，为电影级制作而生。专为实拍特效与 
   justify-content: flex-end;
   height: 280px;
   border-radius: 12px;
+  border: none;
   overflow: hidden;
   text-decoration: none !important;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+  transition: transform 0.25s ease;
+  box-shadow: none;
+}
 .feature-bg-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-2px);
+  box-shadow: none;
+  border: none;
 }
 .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.33) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.65) 60%, rgba(11, 12, 16, 0.28) 100%);
   padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 .feature-bg-card:hover .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.45) 75%, rgba(11, 12, 16, 0.18) 100%);
 }
 .feature-bg-overlay h3 {
-  color: #ffffff !important;
+  color: #f4f6fb !important;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 650;
   margin: 0 0 0.5rem 0;
   border: none !important;
 }
 .feature-bg-overlay p {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 0.9rem;
+  color: #d0d6e2 !important;
+  font-size: 0.92rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>
 
-<div style="margin-top: 6rem; padding: 3rem 2rem; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); border-radius: 16px; text-align: center;">
+<div style="margin-top: 6rem; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.028); border: none; border-radius: 16px; text-align: center;">
   <h2 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 1rem; color: var(--vp-c-text-1);">深植于 Blender 流程生态</h2>
   <p style="max-width: 760px; margin: 0 auto 1.5rem; line-height: 1.7; color: var(--vp-c-text-2); font-size: 0.98rem;">
     Industrial 3D 并非游离于 Blender 之外的独立软件，而是专门为填补开源 Blender 与高端电影特效管线之间的空白而生。通过对 Blender C++ 渲染内核的底层扩展（Cycles 渲染器）、自动化合成器系统开发、以及针对主流 DCC 软件的统一色彩管理支持，让 Blender 得以在复杂的影视生产线上无缝存活与流转。
   </p>
-  <div style="font-weight: 500; color: var(--vp-c-brand); font-size: 0.95rem;">
+  <div style="font-weight: 500; color: var(--vp-c-text-1); font-size: 0.95rem;">
     🎬 源于 Blender • 专为特效打造 • 完美契合 Nuke/CG 制作管线
   </div>
 </div>

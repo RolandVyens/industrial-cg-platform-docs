@@ -8,3 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 .idea/
 .vscode/
+
+# Agent transient files (logs, screenshots, scratch scripts)
+.agents/tmp/
+.codex-remote-attachments/

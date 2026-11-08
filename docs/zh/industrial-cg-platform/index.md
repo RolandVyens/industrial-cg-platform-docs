@@ -23,6 +23,9 @@ hero:
     - theme: alt
       text: API 参考
       link: /zh/industrial-cg-platform/api/
+    - theme: alt
+      text: 开发追踪
+      link: /zh/feature-tracking
 
 description: "基于 Blender 的高级 VFX 工作流生产平台。"
 ---
@@ -78,42 +81,43 @@ description: "基于 Blender 的高级 VFX 工作流生产平台。"
   justify-content: flex-end;
   height: 280px;
   border-radius: 12px;
+  border: none;
   overflow: hidden;
   text-decoration: none !important;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+  transition: transform 0.25s ease;
+  box-shadow: none;
+}
 .feature-bg-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-2px);
+  box-shadow: none;
+  border: none;
 }
 .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.33) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.65) 60%, rgba(11, 12, 16, 0.28) 100%);
   padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 .feature-bg-card:hover .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.45) 75%, rgba(11, 12, 16, 0.18) 100%);
 }
 .feature-bg-overlay h3 {
-  color: #ffffff !important;
+  color: #f4f6fb !important;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 650;
   margin: 0 0 0.5rem 0;
   border: none !important;
 }
 .feature-bg-overlay p {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 0.9rem;
+  color: #d0d6e2 !important;
+  font-size: 0.92rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>
 

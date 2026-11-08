@@ -10,7 +10,7 @@ description: "本页将详细解释 Industrial AOV Connector 偏好设置中的�
 
 ## **核心功能设置 (Core Function)**
 
-<img width="400" alt="核心功能设置" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="核心功能设置" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Denoise DiffCol / GlossCol / TransCol (颜色通道降噪)**
 对平涂纯色通道（`DiffCol` / `GlossCol` / `TransCol` 等颜色 AOV）进行降噪处理，能够有效提升后期合成除法计算的精度。
@@ -40,7 +40,7 @@ description: "本页将详细解释 Industrial AOV Connector 偏好设置中的�
 
 ## **输出工具设置 (Output Tools)**
 
-<img width="400" alt="输出工具设置" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="输出工具设置" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Default useless renders gather (无用渲染重定向)**
 自动将 Blender 默认的常规渲染输出路径修改到工程目录下的 `trash_output` 子文件夹，避免污染您的正式交付目录。
@@ -52,6 +52,6 @@ description: "本页将详细解释 Industrial AOV Connector 偏好设置中的�
 
 ## **外观设置 (Appearance)**
 
-<img width="400" alt="外观设置" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="外观设置" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 用于控制面板各区域的主题配色、显示开关和样式风格。

@@ -42,24 +42,20 @@ description: "感谢您对 Industrial 3D 的支持！您的赞助将直接驱动
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  background: rgba(255, 255, 255, 0.028);
+  border: none;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.5rem 1.65rem;
   text-decoration: none !important;
   color: inherit !important;
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  box-shadow: none;
 }
 .donation-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-}
-.patreon:hover {
-  border-color: #ff4500;
-}
-.afdian:hover {
-  border-color: #9457e6;
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+  border: none;
 }
 .card-header {
   display: flex;
@@ -73,13 +69,13 @@ description: "感谢您对 Industrial 3D 的支持！您的赞助将直接驱动
 .card-title {
   margin: 0 !important;
   font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
+  font-weight: 650;
+  color: #f4f6fb;
 }
 .card-desc {
-  font-size: 0.9rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
+  font-size: 0.92rem;
+  color: #c8ceda;
+  line-height: 1.62;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -89,19 +85,20 @@ description: "感谢您对 Industrial 3D 的支持！您的赞助将直接驱动
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
+  border: none;
   transition: background-color 0.2s, color 0.2s;
 }
 .patreon .card-button {
-  background: rgba(255, 69, 0, 0.1);
-  color: #ff4500;
+  background: rgba(255, 69, 0, 0.12);
+  color: #ff6a33;
 }
 .patreon:hover .card-button {
   background: #ff4500;
   color: #ffffff;
 }
 .afdian .card-button {
-  background: rgba(148, 87, 230, 0.1);
-  color: #9457e6;
+  background: rgba(148, 87, 230, 0.14);
+  color: #b39ddb;
 }
 .afdian:hover .card-button {
   background: #9457e6;

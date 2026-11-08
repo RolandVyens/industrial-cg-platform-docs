@@ -76,24 +76,25 @@ The Industrial 3D suite includes specialized open-source tools and color configu
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  background: rgba(255, 255, 255, 0.028);
+  border: none;
   border-radius: 12px;
-  padding: 1.25rem;
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  padding: 1.35rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  box-shadow: none;
 }
 .tool-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+  border: none;
 }
 .tool-preview {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 1rem;
-  border: 1px solid var(--vp-c-divider);
+  margin-bottom: 1.05rem;
+  border: none;
   aspect-ratio: 1200/600;
   object-fit: cover;
 }
@@ -107,27 +108,28 @@ The Industrial 3D suite includes specialized open-source tools and color configu
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 .tool-title {
   margin: 0 !important;
   font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
+  font-weight: 650;
+  color: #f4f6fb;
 }
 .tool-badge {
-  font-size: 0.75rem;
-  font-weight: 500;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  background: rgba(124, 77, 255, 0.16);
+  color: #b39ddb;
+  padding: 0.15rem 0.55rem;
+  border-radius: 5px;
   white-space: nowrap;
+  border: none;
 }
 .tool-desc {
-  font-size: 0.9rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
+  font-size: 0.92rem;
+  color: #c8ceda;
+  line-height: 1.62;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -146,8 +148,9 @@ The Industrial 3D suite includes specialized open-source tools and color configu
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
+  background: rgba(124, 77, 255, 0.14);
+  color: #b39ddb;
+  border: none;
   text-decoration: none !important;
   transition: background-color 0.2s, color 0.2s;
 }

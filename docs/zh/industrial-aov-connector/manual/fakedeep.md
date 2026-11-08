@@ -34,14 +34,14 @@ Blender 原生并不支持输出包含多层深度像素的 Deep EXR 文件。**
 ### 步骤 1：Shuffle（通道重组）Fake Deep 和 Alpha
 将 Fake Deep 通道和 Beauty 图的 Alpha 通道 Shuffle（重组）成标准的 RGBA 结构：
 
-<img width="600" alt="Nuke Shuffle 节点设置" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Nuke Shuffle 节点设置" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 然后，将输出连接到一个 **Premult**（预乘）节点以清除边缘像素。
 
 ### 步骤 2：Shuffle 回 Depth
 将处理后的 RGBA 通道重新 Shuffle 回 Nuke 的 Depth (`depth.Z`) 通道：
 
-<img width="600" alt="Nuke Shuffle Depth 节点设置" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Nuke Shuffle Depth 节点设置" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 步骤 3：转换为 Deep
 将输出连接到 **DeepFromImage** 节点。现在，您在 Nuke 中就拥有了一个功能完整的 Deep 图层！您可以像往常一样使用 `DeepMerge`、`DeepRecolor` 和 `DeepWrite` 等节点。

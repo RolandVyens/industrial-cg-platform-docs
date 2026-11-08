@@ -88,58 +88,59 @@ description: "Outils de rendu, de gestion des données et de colorimétrie prêt
   justify-content: flex-end;
   height: 280px;
   border-radius: 12px;
+  border: none;
   overflow: hidden;
   text-decoration: none !important;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+  transition: transform 0.25s ease;
+  box-shadow: none;
+}
 .feature-bg-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-2px);
+  box-shadow: none;
+  border: none;
 }
 .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.33) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.65) 60%, rgba(11, 12, 16, 0.28) 100%);
   padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 .feature-bg-card:hover .feature-bg-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.94) 0%, rgba(11, 12, 16, 0.45) 75%, rgba(11, 12, 16, 0.18) 100%);
 }
 .feature-bg-overlay h3 {
-  color: #ffffff !important;
+  color: #f4f6fb !important;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 650;
   margin: 0 0 0.5rem 0;
   border: none !important;
 }
 .feature-bg-overlay p {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 0.9rem;
+  color: #d0d6e2 !important;
+  font-size: 0.92rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>
 
-<div style="margin-top: 6rem; padding: 3rem 2rem; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); border-radius: 16px; text-align: center;">
+<div style="margin-top: 6rem; padding: 3rem 2rem; background: rgba(255, 255, 255, 0.028); border: none; border-radius: 16px; text-align: center;">
   <h2 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 1rem; color: var(--vp-c-text-1);">Profondément intégré à l'écosystème Blender</h2>
   <p style="max-width: 760px; margin: 0 auto 1.5rem; line-height: 1.7; color: var(--vp-c-text-2); font-size: 0.98rem;">
     Industrial 3D n'est pas un système autonome, mais une suite conçue spécifiquement pour combler le fossé entre le logiciel libre Blender et les pipelines VFX haut de gamme. En étendant le code source C++ du moteur de rendu Cycles de Blender, en automatisant le compositeur via des scripts dédiés et en introduisant une gestion unifiée des couleurs cross-DCC, nous faisons de Blender un outil de premier choix pour les flux de production professionnels.
   </p>
-  <div style="font-weight: 500; color: var(--vp-c-brand); font-size: 0.95rem;">
+  <div style="font-weight: 500; color: var(--vp-c-text-1); font-size: 0.95rem;">
     🎬 Basé sur Blender • Conçu pour les VFX • Connecté aux pipelines Nuke/CG
   </div>
 </div>
 
 <br id="tools-ecosystem">
 
-<div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--vp-c-divider);">
+<div style="text-align: center; margin-top: 4rem; padding-top: 4rem;">
   <h2 style="margin-bottom: 1rem; font-weight: 600; font-size: 1.5rem;">Soutenir le développement</h2>
   <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Les outils Industrial 3D sont développés sous forme de projets R&D open-source axés sur la production.</p>
   <div style="display: flex; gap: 1rem; justify-content: center;">

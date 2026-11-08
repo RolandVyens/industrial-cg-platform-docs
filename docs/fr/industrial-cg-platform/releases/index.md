@@ -53,18 +53,19 @@ import { data as releases } from '../../../releases.data.js'
   margin-top: 1.5rem;
 }
 .release-card {
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  background: rgba(255, 255, 255, 0.028);
+  border: none;
   border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  padding: 1.5rem 1.65rem;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 .release-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-  border-color: var(--vp-c-brand);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+  border: none;
 }
 .release-header {
   display: flex;
@@ -72,65 +73,66 @@ import { data as releases } from '../../../releases.data.js'
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 0.4rem;
+  border-bottom: none;
 }
 .release-title {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
+  font-weight: 650;
+  color: #f4f6fb;
 }
 .release-date {
-  font-size: 0.8rem;
-  color: var(--vp-c-text-2);
+  font-size: 0.82rem;
+  color: #8f98aa;
   margin-top: 0.2rem;
 }
 .badge {
   display: inline-block;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 6px;
+  border: none;
 }
 .badge-latest {
-  background: rgba(16, 185, 129, 0.1);
-  color: rgb(16, 185, 129);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(0, 229, 255, 0.12);
+  color: #00e5ff;
+  border: none;
 }
 .badge-prerelease {
-  background: rgba(245, 158, 11, 0.1);
-  color: rgb(245, 158, 11);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(124, 77, 255, 0.16);
+  color: #b39ddb;
+  border: none;
 }
 .badge-regular {
-  background: var(--vp-c-bg-mute);
-  color: var(--vp-c-text-2);
-  border: 1px solid var(--vp-c-divider);
+  background: rgba(255, 255, 255, 0.06);
+  color: #c8ceda;
+  border: none;
   transition: color 0.2s, background 0.2s;
 }
 a.badge-regular:hover {
-  background: var(--vp-c-brand);
+  background: var(--vp-c-brand-1);
   color: #fff;
-  border-color: var(--vp-c-brand);
+  border: none;
 }
 .assets-box {
-  margin-top: 1.2rem;
-  border-top: 1px dashed var(--vp-c-divider);
-  padding-top: 1rem;
+  margin-top: 1.1rem;
+  border-top: none;
+  padding-top: 0.4rem;
 }
 .asset-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.75rem;
-  background: var(--vp-c-bg-mute);
-  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 8px;
   margin-bottom: 0.5rem;
-  font-size: 0.85rem;
-  border: 1px solid var(--vp-c-divider);
+  font-size: 0.86rem;
+  border: none;
 }
 .asset-link {
-  color: var(--vp-c-brand);
+  color: #9e7aff;
   font-weight: 500;
   text-decoration: none;
   display: inline-flex;
@@ -140,7 +142,7 @@ a.badge-regular:hover {
   text-decoration: underline;
 }
 .asset-meta {
-  color: var(--vp-c-text-3);
-  font-size: 0.8rem;
+  color: #8f98aa;
+  font-size: 0.82rem;
 }
 </style>

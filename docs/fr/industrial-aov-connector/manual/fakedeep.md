@@ -34,14 +34,14 @@ Si ces contraintes ne vous posent pas de problème, suivez ces étapes de config
 ### Étape 1 : Shuffle (fusionner/réorganiser) Fake Deep et Alpha
 Mélangez la passe Fake Deep et le canal Alpha de votre passe Beauty dans une structure RGBA standard :
 
-<img width="600" alt="Configuration du nœud Shuffle de Nuke" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Configuration du nœud Shuffle de Nuke" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 Ensuite, faites passer la sortie par un nœud **Premult** (prémultiplication) pour nettoyer les pixels de bordure.
 
 ### Étape 2 : Shuffle à nouveau vers la profondeur (Depth)
 Réorganisez les canaux RGBA traités vers le canal de profondeur de Nuke (`depth.Z`) :
 
-<img width="600" alt="Configuration du nœud Shuffle Depth de Nuke" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Configuration du nœud Shuffle Depth de Nuke" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### Étape 3 : Convertir en Deep
 Connectez la sortie à un nœud **DeepFromImage**. Vous disposez maintenant d'un calque profond (Deep Layer) entièrement fonctionnel dans Nuke ! Vous pouvez utiliser les nœuds tels que `DeepMerge`, `DeepRecolor` et `DeepWrite` normalement.

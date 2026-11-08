@@ -21,6 +21,8 @@ Les orientations prévues axées sur les VFX et la production comprennent :
 - Comportement du brouillard de l'environnement mondial similaire à `aiFog`, axé sur les cas d'utilisation de la lumière directe
 - Documentation plus approfondie sur le rendu par plan et les flux de travail de compositing
 
+Pour un aperçu en direct de la R&D en cours, des jalons publiés et des fonctionnalités prévues, consultez la page [Suivi du développement](/fr/feature-tracking).
+
 ## Soutien et Parrainage
 
 Industrial CG Platform est développé en tant que projet R&D open-source axé sur la production.

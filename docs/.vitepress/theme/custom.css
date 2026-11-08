@@ -96,22 +96,35 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   opacity: 0.85;
 }
 
-/* Card glassmorphism & lift animation */
+/* Keep Hero brand title pure white without colored text fill */
+:root,
+.dark {
+  --vp-home-hero-name-color: #ffffff;
+  --vp-home-hero-name-background: none;
+}
+
+.VPHero .name,
+.VPHero .name .clip {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Card borderless surface & lift animation */
 .VPFeature {
-  background: var(--custom-feature-bg) !important;
+  background: rgba(255, 255, 255, 0.028) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--custom-feature-border) !important;
-  box-shadow: 0 4px 30px var(--custom-feature-shadow);
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-              border-color 0.4s ease !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: transform 0.25s ease, background-color 0.25s ease !important;
 }
 
 .VPFeature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(124, 77, 255, 0.15);
-  border-color: var(--vp-c-brand-1) !important;
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.045) !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Logo animation */
@@ -122,19 +135,49 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   transform: rotate(12deg) scale(1.1);
 }
 
-/* Button premium gradient styles */
+/* Unified rounded-rectangle button styles in Hero matching card buttons */
+.VPHero .VPButton,
+.VPHero .VPButton.medium,
+.VPHero .VPButton.big {
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+/* Keep bottom/inline doc VPButton backgrounds square as before */
+.vp-doc .VPButton {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
 .VPButton.brand {
-  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%) !important;
+  background: var(--vp-c-brand-1) !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 15px rgba(124, 77, 255, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
 }
 
 .VPButton.brand:hover {
+  background: var(--vp-c-brand-2) !important;
   color: #ffffff !important;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(124, 77, 255, 0.45);
+  box-shadow: none !important;
+}
+
+.VPButton.alt {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #f4f6fb !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.VPButton.alt:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 /* Footer text contrast optimizations */
@@ -172,7 +215,7 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  border: 1px solid var(--vp-c-divider);
+  border: none;
   border-radius: 10px;
   background: var(--vp-c-bg-soft);
 }
@@ -193,3 +236,35 @@ h1, h2, h3, h4, h5, h6, .VPNavBarTitle {
   line-height: 1.5;
 }
 
+/* Dynamic top-left brand title transition (Industrial 3D <-> Industrial CG Platform) */
+.vp-dynamic-brand-title {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.vp-brand-switch-enter-active,
+.vp-brand-switch-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.vp-brand-switch-enter-from {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.vp-brand-switch-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+/* Clickable top-level dropdown menu items in desktop navbar */
+.VPNavBarMenu .VPNavBarMenuGroup > .button {
+  cursor: pointer;
+}
+
+.VPNavBarMenu .VPNavBarMenuGroup:hover > .button .text {
+  color: var(--vp-c-brand-1);
+}

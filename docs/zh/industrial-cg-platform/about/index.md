@@ -21,6 +21,8 @@ Industrial CG Platform 的存在就是为了推动 Blender 向这个方向走得
 - 类似于 `aiFog` 的世界环境雾行为，专注于直接光用例
 - 更深入的基于镜头渲染和合成工作流的文档
 
+如需查看正在研发的特性、已发布里程碑及长期规划的实时状态，请参阅[开发追踪 (Development Tracking)](/zh/feature-tracking)页面。
+
 ## 支持与赞助 (Sponsor)
 
 Industrial CG Platform 是作为专注于生产的开源研发项目进行开发的。

@@ -10,7 +10,7 @@ Cette page détaille les fonctionnalités avancées affichées lorsque l'**Indus
 
 ## **Panneau des paramètres avancés**
 
-<img width="300" alt="Panneau du Mode avancé" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="Panneau du Mode avancé" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Use Advanced Mode (Utiliser le mode avancé)**
 Bascule le plugin en Mode avancé, contournant les préréglages de base (`Main Config`) et affichant des commandes individuelles et granulaires.
@@ -37,7 +37,7 @@ Sépare les passes utilitaires et de données des passes Beauty, permettant ains
 
 ## **Couches DATA indépendantes**
 
-<img width="300" alt="Interface de la couche DATA indépendante" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="Interface de la couche DATA indépendante" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 Lorsque vous activez **`Use Independent DATA Layer`**, vos calques de vue Beauty standard ne génèreront plus de passes de données (telles que Depth, Normals ou Position). À la place, elles seront dirigées vers un calque de vue dédié "DATA".
 
