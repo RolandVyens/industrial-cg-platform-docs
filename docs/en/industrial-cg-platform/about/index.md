@@ -21,6 +21,8 @@ Planned VFX and production-focused directions include:
 - world environment fog behavior similar to `aiFog`, focused on direct-light use cases
 - deeper documentation for shot-based rendering and compositing workflows
 
+For a live overview of in-progress R&D, released milestones, and planned features, see the [Development Tracking](/en/feature-tracking) page.
+
 ## Support / Sponsor
 
 Industrial CG Platform is developed as production-focused open-source R&D.

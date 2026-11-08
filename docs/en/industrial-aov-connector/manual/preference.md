@@ -10,7 +10,7 @@ This page explains the core settings, performance optimizations, and output tool
 
 ## **Core Function Settings**
 
-<img width="400" alt="Core Function Preferences" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Core Function Preferences" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Denoise DiffCol / GlossCol / TransCol**
 Applies denoising filters to the flat color passes (`DiffCol`, `GlossCol`, `TransCol`). This can help improve detail fidelity and reduce division precision artifacts in post-production.
@@ -40,7 +40,7 @@ Adjusts the spacing between nodes when running the `Arrange Nodes` command. This
 
 ## **Output Tools Settings**
 
-<img width="400" alt="Output Tools Settings" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Output Tools Settings" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Default Useless Renders Gather**
 Automatically changes Blender's default render output path to a `trash_output` subfolder, keeping your actual production directories clean.
@@ -52,6 +52,6 @@ Exposes the `Delete Useless Default Renders` button in the Output Tools UI for e
 
 ## **Appearance Settings**
 
-<img width="400" alt="Appearance Settings" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Appearance Settings" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 Adjusts UI elements, color-coding, and custom panel themes.

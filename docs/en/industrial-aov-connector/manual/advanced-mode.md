@@ -10,7 +10,7 @@ This page details the advanced features exposed when switching the **Industrial 
 
 ## **Advanced Settings Panel**
 
-<img width="300" alt="Advanced Mode Panel" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="Advanced Mode Panel" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Use Advanced Mode**
 Switches the addon into Advanced Mode, bypassing the basic presets (`Main Config`) and exposing individual, granular controls.
@@ -37,7 +37,7 @@ Decouples utility and data passes from beauty passes, allowing separate sample s
 
 ## **Independent DATA Layers**
 
-<img width="300" alt="Independent Data Layer UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="Independent Data Layer UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 When you enable **`Use Independent DATA Layer`**, your standard beauty viewlayers will no longer output data passes (like Depth, Normals, or Position). Instead, they are routed to a separate, dedicated "DATA" viewlayer. 
 

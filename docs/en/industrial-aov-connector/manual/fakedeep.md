@@ -34,14 +34,14 @@ If you are comfortable with these constraints, follow this step-by-step setup in
 ### Step 1: Shuffle Fake Deep and Alpha
 Shuffle the Fake Deep pass and your beauty's alpha channel into a standard RGBA structure:
 
-<img width="600" alt="Nuke Shuffle Node Setup" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Nuke Shuffle Node Setup" src="https://github.com/user-attachments/assets/cabc27ab-516c-4aee-b38c-a46d9132cdff" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 Then, run the output through a **Premult** node to clean up the edge pixels.
 
 ### Step 2: Shuffle Back to Depth
 Shuffle the processed RGBA channels back into the Nuke Depth (`depth.Z`) channel:
 
-<img width="600" alt="Nuke Shuffle Depth Node Setup" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="600" alt="Nuke Shuffle Depth Node Setup" src="https://github.com/user-attachments/assets/249b9baa-0936-4c98-b2df-18ed31fc60ed" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### Step 3: Convert to Deep
 Connect the output to a **DeepFromImage** node. You now have a fully functional Deep Layer inside Nuke! You can use nodes like `DeepMerge`, `DeepRecolor`, and `DeepWrite` normally.

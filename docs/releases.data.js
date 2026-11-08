@@ -14,7 +14,7 @@ function parseMarkdown(text) {
 
   // Inline formatting: Bold, Code, Links
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-  html = html.replace(/`(.*?)`/g, '<code style="background: var(--vp-c-bg-mute); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; border: 1px solid var(--vp-c-divider);">$1</code>')
+  html = html.replace(/`(.*?)`/g, '<code style="background: rgba(255, 255, 255, 0.06); padding: 0.15rem 0.4rem; border-radius: 4px; font-family: monospace; font-size: 0.88em; border: none; color: #f4f6fb;">$1</code>')
   html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color: var(--vp-c-brand); font-weight: 500; text-decoration: underline;">$1</a>')
 
   // Split into lines for block parsing

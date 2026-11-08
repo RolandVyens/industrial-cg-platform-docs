@@ -12,7 +12,6 @@ import { data as posts } from '../blog.data.js'
   <p class="blog-subtitle">
     Design logs, technical writeups, and development progress of the Industrial 3D tools ecosystem.
   </p>
-  <div class="blog-tagline-divider"></div>
 </div>
 
 <div class="blog-container">
@@ -55,85 +54,80 @@ import { data as posts } from '../blog.data.js'
 
 .blog-subtitle {
   font-size: 1.05rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
-  margin-bottom: 1.8rem;
-}
-
-.blog-tagline-divider {
-  height: 1px;
-  background: linear-gradient(to right, var(--vp-c-divider) 50%, transparent 100%);
-  width: 100%;
+  color: #c8ceda;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 .blog-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 6rem;
+  padding: 1.75rem 1.5rem 6rem;
 }
 
 .no-posts {
   padding: 4rem 0;
-  color: var(--vp-c-text-3);
+  color: #8f98aa;
   font-size: 1rem;
 }
 
 .blog-list {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 
 .blog-post-item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 1.55rem 1.75rem;
+  background: rgba(255, 255, 255, 0.028);
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.blog-post-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.blog-post-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.045);
 }
 
 .post-header {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .post-meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--vp-c-text-3);
-  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  color: #8f98aa;
+  margin-bottom: 0.45rem;
 }
-
-
 
 .post-title {
   font-family: 'Outfit', 'Inter', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 650;
   line-height: 1.35;
   margin: 0 !important;
 }
 
 .post-title a {
-  color: var(--vp-c-text-1);
+  color: #f4f6fb;
   text-decoration: none !important;
   transition: color 0.15s ease;
 }
 
 .post-title a:hover {
-  color: var(--vp-c-brand);
+  color: #9e7aff;
 }
 
 .post-excerpt {
-  font-size: 0.98rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  color: #c8ceda;
+  line-height: 1.65;
+  margin-bottom: 1.15rem;
 }
 
 .post-excerpt p {
@@ -148,7 +142,7 @@ import { data as posts } from '../blog.data.js'
 .read-more-link {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--vp-c-brand);
+  color: #9e7aff;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -157,7 +151,7 @@ import { data as posts } from '../blog.data.js'
 }
 
 .read-more-link:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .read-more-link .arrow {
@@ -170,7 +164,7 @@ import { data as posts } from '../blog.data.js'
 
 @media (max-width: 768px) {
   .post-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
 </style>

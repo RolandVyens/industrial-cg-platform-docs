@@ -6,7 +6,7 @@ description: "This page outlines the basic features and interface options of the
 
 This page outlines the basic features and interface options of the **Industrial AOV Connector**.
 
-<img width="300" alt="Basic Mode Panel" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="Basic Mode Panel" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ## **UI Default Content**
 

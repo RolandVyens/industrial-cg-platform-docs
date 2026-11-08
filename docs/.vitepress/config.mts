@@ -128,39 +128,39 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'Ecosystem',
+            text: 'Industrial CG Platform',
+            activeMatch: '(en|zh|fr)/(industrial-cg-platform|feature-tracking)',
             items: [
               {
-                text: 'Core Platform',
+                text: 'Platform',
                 items: [
-                  { text: 'Industrial CG Platform', link: '/en/industrial-cg-platform/' }
+                  { text: 'Platform Home', link: '/en/industrial-cg-platform/' },
+                  { text: 'Development Tracking', link: '/en/feature-tracking' }
                 ]
               },
               {
-                text: 'Pipeline Plugins & Colors',
-                items: [
-                  { text: 'Addon Directory', link: '/en/industrial-pipeline-tools' },
-                  { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
-                  { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
-                ]
-              }
-            ]
-          },
-          {
-            text: 'Documentation',
-            items: [
-              {
-                text: 'Platform Manual',
+                text: 'Documentation',
                 items: [
                   { text: 'User Guide', link: '/en/industrial-cg-platform/guide/getting-started' },
                   { text: 'Features Reference', link: '/en/industrial-cg-platform/features/deep-exr' },
                   { text: 'API Reference', link: '/en/industrial-cg-platform/api/' },
                   { text: 'Release Notes', link: '/en/industrial-cg-platform/releases/' }
                 ]
+              }
+            ]
+          },
+          {
+            text: 'Plugins',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            items: [
+              {
+                text: 'Overview',
+                items: [
+                  { text: 'Plugin Directory', link: '/en/industrial-pipeline-tools' }
+                ]
               },
               {
-                text: 'Addon Manuals',
+                text: 'Plugins & Manuals',
                 items: [
                   { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },
@@ -268,39 +268,39 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: '开源生态',
+            text: 'Industrial CG Platform',
+            activeMatch: '(en|zh|fr)/(industrial-cg-platform|feature-tracking)',
             items: [
               {
                 text: '核心平台',
                 items: [
-                  { text: 'Industrial CG Platform', link: '/zh/industrial-cg-platform/' }
+                  { text: '平台主页', link: '/zh/industrial-cg-platform/' },
+                  { text: '开发追踪', link: '/zh/feature-tracking' }
                 ]
               },
               {
-                text: '流程插件与色彩',
-                items: [
-                  { text: '插件导览', link: '/zh/industrial-pipeline-tools' },
-                  { text: 'Industrial AOV Connector', link: '/zh/industrial-aov-connector/' },
-                  { text: 'Industrial Light AOV Splitter', link: '/zh/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
-                ]
-              }
-            ]
-          },
-          {
-            text: '技术文档',
-            items: [
-              {
-                text: '平台文档',
+                text: '技术文档',
                 items: [
                   { text: '用户指南', link: '/zh/industrial-cg-platform/guide/getting-started' },
                   { text: '功能介绍', link: '/zh/industrial-cg-platform/features/deep-exr' },
                   { text: 'API 参考手册', link: '/zh/industrial-cg-platform/api/' },
                   { text: '版本发布记录', link: '/zh/industrial-cg-platform/releases/' }
                 ]
+              }
+            ]
+          },
+          {
+            text: '插件',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            items: [
+              {
+                text: '插件生态',
+                items: [
+                  { text: '插件导览', link: '/zh/industrial-pipeline-tools' }
+                ]
               },
               {
-                text: '插件文档',
+                text: '插件与文档',
                 items: [
                   { text: 'Industrial AOV Connector', link: '/zh/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/zh/industrial-light-aov-splitter/' },
@@ -414,39 +414,39 @@ export default defineConfig({
       themeConfig: {
         nav: [
           {
-            text: 'Écosystème',
+            text: 'Industrial CG Platform',
+            activeMatch: '(en|zh|fr)/(industrial-cg-platform|feature-tracking)',
             items: [
               {
-                text: 'Plateforme Principale',
+                text: 'Plateforme',
                 items: [
-                  { text: 'Industrial CG Platform', link: '/fr/industrial-cg-platform/' }
+                  { text: 'Accueil Plateforme', link: '/fr/industrial-cg-platform/' },
+                  { text: 'Suivi du développement', link: '/fr/feature-tracking' }
                 ]
               },
               {
-                text: 'Modules & Pipelines',
-                items: [
-                  { text: 'Guide des plugins', link: '/fr/industrial-pipeline-tools' },
-                  { text: 'Industrial AOV Connector', link: '/fr/industrial-aov-connector/' },
-                  { text: 'Industrial Light AOV Splitter', link: '/fr/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
-                ]
-              }
-            ]
-          },
-          {
-            text: 'Documentation',
-            items: [
-              {
-                text: 'Manuel de Plateforme',
+                text: 'Documentation',
                 items: [
                   { text: 'Guide Utilisateur', link: '/fr/industrial-cg-platform/guide/getting-started' },
                   { text: 'Référence des Fonctions', link: '/fr/industrial-cg-platform/features/deep-exr' },
                   { text: 'Référence API', link: '/fr/industrial-cg-platform/api/' },
                   { text: 'Notes de Version', link: '/fr/industrial-cg-platform/releases/' }
                 ]
+              }
+            ]
+          },
+          {
+            text: 'Plugins',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            items: [
+              {
+                text: 'Aperçu',
+                items: [
+                  { text: 'Guide des plugins', link: '/fr/industrial-pipeline-tools' }
+                ]
               },
               {
-                text: 'Docs des Modules',
+                text: 'Plugins & Manuels',
                 items: [
                   { text: 'Industrial AOV Connector', link: '/fr/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/fr/industrial-light-aov-splitter/' },
@@ -555,6 +555,7 @@ export default defineConfig({
   },
 
   themeConfig: {
+    siteTitle: false,
     logo: '/logo.webp',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RolandVyens/industrial-cg-platform' },
@@ -572,39 +573,39 @@ export default defineConfig({
     },
     nav: [
       {
-        text: 'Ecosystem',
+        text: 'Industrial CG Platform',
+        activeMatch: '(en|zh|fr)/(industrial-cg-platform|feature-tracking)',
         items: [
           {
-            text: 'Core Platform',
+            text: 'Platform',
             items: [
-              { text: 'Industrial CG Platform', link: '/en/industrial-cg-platform/' }
+              { text: 'Platform Home', link: '/en/industrial-cg-platform/' },
+              { text: 'Development Tracking', link: '/en/feature-tracking' }
             ]
           },
           {
-            text: 'Pipeline Plugins & Colors',
-            items: [
-              { text: 'Addon Directory', link: '/en/industrial-pipeline-tools' },
-              { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
-              { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },
-              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
-            ]
-          }
-        ]
-      },
-      {
-        text: 'Documentation',
-        items: [
-          {
-            text: 'Platform Manual',
+            text: 'Documentation',
             items: [
               { text: 'User Guide', link: '/en/industrial-cg-platform/guide/getting-started' },
               { text: 'Features Reference', link: '/en/industrial-cg-platform/features/deep-exr' },
               { text: 'API Reference', link: '/en/industrial-cg-platform/api/' },
               { text: 'Release Notes', link: '/en/industrial-cg-platform/releases/' }
             ]
+          }
+        ]
+      },
+      {
+        text: 'Plugins',
+        activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+        items: [
+          {
+            text: 'Overview',
+            items: [
+              { text: 'Plugin Directory', link: '/en/industrial-pipeline-tools' }
+            ]
           },
           {
-            text: 'Addon Manuals',
+            text: 'Plugins & Manuals',
             items: [
               { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
               { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },

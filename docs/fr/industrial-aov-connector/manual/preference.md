@@ -10,7 +10,7 @@ Cette page explique les paramètres principaux, les optimisations de performance
 
 ## **Paramètres des fonctions principales**
 
-<img width="400" alt="Préférences des fonctions principales" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Préférences des fonctions principales" src="https://github.com/user-attachments/assets/9fa6bb66-417a-4c57-a933-9a5ed51d6764" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Denoise DiffCol / GlossCol / TransCol**
 Applique des filtres de débruitage aux passes de couleur unie (`DiffCol`, `GlossCol`, `TransCol`). Cela permet d'améliorer la fidélité des détails et de réduire les artefacts de division de précision en post-production.
@@ -40,7 +40,7 @@ Ajuste l'espacement entre les nœuds lors de l'exécution de la commande `Arrang
 
 ## **Paramètres des outils de sortie**
 
-<img width="400" alt="Paramètres des outils de sortie" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Paramètres des outils de sortie" src="https://github.com/user-attachments/assets/ffa908d7-e51f-4367-8544-2ec1629dbe2a" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Default Useless Renders Gather (Regroupement des rendus inutiles par défaut)**
 Modifie automatiquement le chemin de sortie par défaut de Blender vers un sous-dossier `trash_output`, gardant ainsi vos dossiers de production réels propres.
@@ -52,6 +52,6 @@ Affiche le bouton `Delete Useless Default Renders` dans l'interface des outils d
 
 ## **Paramètres d'apparence**
 
-<img width="400" alt="Paramètres d'apparence" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="400" alt="Paramètres d'apparence" src="https://github.com/user-attachments/assets/cefe5d71-8107-4109-b097-34c9872092eb" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 Ajuste les éléments d'interface, le codage couleur et les thèmes des panneaux personnalisés.

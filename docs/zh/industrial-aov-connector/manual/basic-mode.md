@@ -6,7 +6,7 @@ description: "本页将为您介绍 Industrial AOV Connector 的基础功能和�
 
 本页将为您介绍 **Industrial AOV Connector** 的基础功能和界面选项。
 
-<img width="300" alt="基础模式面板" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="基础模式面板" src="https://github.com/user-attachments/assets/277fb64b-c135-47f4-9cef-7c9736c90133" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ## **UI 默认选项**
 

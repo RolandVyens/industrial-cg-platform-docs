@@ -10,7 +10,7 @@ description: "本页将详细介绍切换至 Advanced Mode (高级模式) 后所
 
 ## **高级面板配置**
 
-<img width="300" alt="高级模式面板" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="高级模式面板" src="https://github.com/user-attachments/assets/42ba84fc-4f39-4c9d-a890-b028c910fd01" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 ### 1. **Use Advanced Mode (使用高级模式)**
 勾选后，插件将切换进入高级模式。此时基础模式下的“Main Config”预设将被忽略，从而暴露最底层的细分参数控制。
@@ -37,7 +37,7 @@ description: "本页将详细介绍切换至 Advanced Mode (高级模式) 后所
 
 ## **独立数据图层 (Independent DATA Layer)**
 
-<img width="300" alt="独立数据层 UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border: 1px solid var(--vp-c-divider); border-radius: 8px; margin: 1.5rem 0;" />
+<img width="300" alt="独立数据层 UI" src="https://github.com/user-attachments/assets/5a197960-a39e-4bdb-a4eb-de761e92fe09" style="border-radius: 8px; margin: 1.5rem 0;" />
 
 开启 **`Use Independent DATA Layer`** 选项后，常规的视图渲染图层将不再产生 **DATA**（三维空间数据，如深度、位置、法线等）输出，所有的三维数据图层必须从专门的“DATA Layer”输出。插件会通过命名前缀/后缀（例如 `-_-exP_` 或 `_DATA`）来智能识别数据层。
 
