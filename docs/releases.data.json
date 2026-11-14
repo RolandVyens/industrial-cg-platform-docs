@@ -1,5 +1,22 @@
 [
   {
+    "tag_name": "industrial-cg-platform-5.2.4",
+    "name": "Industrial CG Platform 5.2.4 LTS",
+    "published_at": "2026-11-14T16:22:25Z",
+    "prerelease": false,
+    "body": "# Industrial CG Platform 5.2.4 LTS\n\n- 升级至官方 Blender 5.2.4 LTS。\n- **Deep EXR 架构升级**：提升 Deep 渲染速度与合成性能，改善体积切片的 Alpha 表现。新增 **Simple／Physical 两种模式**，位于 **渲染属性 → Performance → Deep → Simple Mode**。Simple 默认开启，将最终 Beauty 颜色分配到 Deep 样本，减少颜色捕获和存储开销；取消勾选后切换到 Physical，在对应深度记录原生颜色贡献。\n- 修复启用 EXR Overscan、多视图层渲染时，前面视图层的 Position／Pworld、Normal 等通道丢失的问题。\n\n### Deep EXR 使用限制\n\n暂不支持世界体积（World Volume）。\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4",
+    "assets": [
+      {
+        "id": 748020693,
+        "name": "industrial-cg-platform-5.2.4.zip",
+        "size": 709397567,
+        "download_count": 1,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.4/industrial-cg-platform-5.2.4.zip"
+      }
+    ]
+  },
+  {
     "tag_name": "industrial-cg-platform-5.2.1-alpha.1",
     "name": "Industrial CG Platform 5.2.1 Alpha 1 — Deep EXR Architecture Upgrade",
     "published_at": "2026-11-08T06:52:52Z",
@@ -28,7 +45,7 @@
         "id": 572484348,
         "name": "industrial-cg-platform-5.2.2.zip",
         "size": 593968234,
-        "download_count": 42,
+        "download_count": 51,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.2/industrial-cg-platform-5.2.2.zip"
       }
     ]
