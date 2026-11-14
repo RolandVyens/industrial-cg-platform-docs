@@ -17,7 +17,7 @@ description: "| Component | Requirement |"
 ## Download
 
 1. Go to the [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) page.
-2. Download the latest `industrial-cg-platform-X.X.X-YYYY-MM-DD.zip` file.
+2. Download the latest `industrial-cg-platform-X.X.X.zip` file (e.g., `industrial-cg-platform-5.2.4.zip`).
 3. Verify the download integrity by checking the SHA256 hash listed in the release notes.
 
 ## Install
@@ -41,7 +41,7 @@ Run the following from a command prompt to verify:
 Expected output:
 
 ```
-Blender 5.2.0-2026-06-16 Industrial CG Platform
+Blender 5.2.4 LTS Industrial CG Platform
 ```
 
 ## GPU Setup

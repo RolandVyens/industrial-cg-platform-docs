@@ -46,7 +46,7 @@ ViewLayer 管理器使用 Qt（通过 BQt）构建其高级 UI 界面。由于 B
 
 ### 我能在 Linux 上使用它吗？
 
-目前还不支持。当前的发布版本仅提供 Windows x64 二进制 ZIP 压缩包。我们已经制定了针对 Linux 平台（初步拟定支持 Rocky Linux 9 / X11 视窗环境）的移植计划，将在未来的版本中发布。
+目前还不支持。当前的发布版本仅提供 Windows x64 二进制 ZIP 压缩包。针对 Linux 平台（Rocky Linux 9 / X11 视窗环境）的移植与支持目前正在进行中。
 
 ### 启动时提示的 `failed to get blender hwnd` 日志代表什么？
 

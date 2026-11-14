@@ -16,7 +16,7 @@ head:
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 64-bit",
         "description": "基于 Blender 的 VFX 平台，内置原生 Deep EXR、EXR Overscan、灯光组直接/间接通道及影视级 ViewLayer 管理工具。",
-        "softwareVersion": "5.2.0",
+        "softwareVersion": "5.2.4",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "offers": {
           "@type": "Offer",

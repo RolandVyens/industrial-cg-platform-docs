@@ -16,7 +16,7 @@ head:
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 64-bit",
         "description": "Une plateforme VFX basée sur Blender intégrant Deep EXR, EXR overscan, des passes de lightgroup et des outils de production de ViewLayer.",
-        "softwareVersion": "5.2.0",
+        "softwareVersion": "5.2.4",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "offers": {
           "@type": "Offer",

@@ -17,7 +17,7 @@ description: "| 组件 | 要求 |"
 ## 下载
 
 1. 前往 [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) 页面。
-2. 下载最新的 `industrial-cg-platform-X.X.X-YYYY-MM-DD.zip` 压缩包。
+2. 下载最新的 `industrial-cg-platform-X.X.X.zip` 压缩包（例如 `industrial-cg-platform-5.2.4.zip`）。
 3. 通过检查发布说明中列出的 SHA256 哈希值验证下载文件的完整性。
 
 ## 解压与安装
@@ -41,7 +41,7 @@ description: "| 组件 | 要求 |"
 预期输出：
 
 ```
-Blender 5.2.0-2026-06-16 Industrial CG Platform
+Blender 5.2.4 LTS Industrial CG Platform
 ```
 
 ## GPU 渲染设置

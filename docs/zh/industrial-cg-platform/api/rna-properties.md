@@ -141,6 +141,35 @@ scene.cycles.overscan_mode = 'PERCENTAGE'
 scene.cycles.overscan_size = 10.0
 ```
 
+## Cycles Deep EXR 属性
+
+以下属性配置了 Cycles 引擎设置下的 Deep EXR 行为（可通过 `Scene.cycles` 访问）。
+
+### `CyclesRenderSettings.deep_simple_mode`
+
+| 属性 | 值 |
+| --- | --- |
+| **类型** | `BoolProperty` |
+| **默认值** | `True` |
+| **描述** | 启用简化模式（Simple Mode）：从未经降噪的 Beauty 重建 Deep 表面与体积颜色，而非捕获原生深度颜色；关闭则切换为 Physical 模式 |
+| **UI 位置** | 属性 > 渲染 > 性能 > Deep > Simple Mode |
+
+```python
+# Python 访问示例
+scene = bpy.context.scene
+scene.cycles.deep_simple_mode = True   # Simple 模式（默认）
+scene.cycles.deep_simple_mode = False  # Physical 模式（原生深度颜色）
+```
+
+### `CyclesRenderSettings.deep_tile_budget_mb`
+
+| 属性 | 值 |
+| --- | --- |
+| **类型** | `IntProperty` |
+| **默认值** | `1024` (范围: `0` 到 `65536`) |
+| **描述** | 渲染设备上用于 Deep 图块处理的工作内存预算（单位 MB，`0` 表示关闭限制） |
+| **UI 位置** | 属性 > 渲染 > 性能 > Memory > Deep Tile Budget |
+
 ## 源文件
 
 | 文件 | 用途 |

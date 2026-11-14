@@ -114,7 +114,7 @@ ViewLayer 级别的 Deep EXR 深度输出开关（由于软件后端要求，此
 
 - 管理器作为独立的顶级 Qt 窗口运行（不嵌入 Blender Native 窗口中）。
 - BQt 运行时在某些情况下可能会输出 `failed to get blender hwnd, creating new window` 日志 — 这属于安全模式路径下的正常行为，并非启动失败，也不会影响任何功能的使用。
-- 当前版本仅支持 Windows 平台，Linux 支持正在开发规划中。
+- 当前版本仅支持 Windows 平台，Linux 平台支持正在推进中。
 
 ## 另请参阅
 

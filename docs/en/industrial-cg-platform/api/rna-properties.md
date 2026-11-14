@@ -141,6 +141,35 @@ scene.cycles.overscan_mode = 'PERCENTAGE'
 scene.cycles.overscan_size = 10.0
 ```
 
+## Cycles Deep EXR Properties
+
+The following properties configure Deep EXR behavior under the Cycles engine settings (accessible via `Scene.cycles`).
+
+### `CyclesRenderSettings.deep_simple_mode`
+
+| Property | Value |
+| --- | --- |
+| **Type** | `BoolProperty` |
+| **Default** | `True` |
+| **Description** | Reconstruct Deep surface and volume colors from undenoised Beauty instead of capturing native depth colors |
+| **UI Location** | Properties > Render > Performance > Deep > Simple Mode |
+
+```python
+# Python access
+scene = bpy.context.scene
+scene.cycles.deep_simple_mode = True   # Simple mode (default)
+scene.cycles.deep_simple_mode = False  # Physical mode (native depth colors)
+```
+
+### `CyclesRenderSettings.deep_tile_budget_mb`
+
+| Property | Value |
+| --- | --- |
+| **Type** | `IntProperty` |
+| **Default** | `1024` (range: `0` to `65536`) |
+| **Description** | Working memory budget (in MB) for Deep tile processing on the rendering device (`0` disables the limit) |
+| **UI Location** | Properties > Render > Performance > Memory > Deep Tile Budget |
+
 ## Source Files
 
 | File | Purpose |

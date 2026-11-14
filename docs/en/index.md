@@ -16,7 +16,7 @@ head:
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 64-bit",
         "description": "A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.",
-        "softwareVersion": "5.2.0",
+        "softwareVersion": "5.2.4",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "offers": {
           "@type": "Offer",

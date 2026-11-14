@@ -10,7 +10,7 @@ aside: false
 
 <div class="ft-summary-grid">
   <div class="ft-stat-card">
-    <span class="ft-stat-num ft-stat-brand">5</span>
+    <span class="ft-stat-num ft-stat-brand">6</span>
     <span class="ft-stat-label">已发布生产特性</span>
   </div>
   <div class="ft-stat-card">
@@ -18,7 +18,7 @@ aside: false
     <span class="ft-stat-label">架构研发与验证中</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">4</span>
+    <span class="ft-stat-num">3</span>
     <span class="ft-stat-label">路线图规划特性</span>
   </div>
 </div>
@@ -31,16 +31,16 @@ aside: false
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="125.66 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-125.66" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">45.5%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="150.80 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-150.80" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">54.5%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">已交付</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">已发布生产特性</span>
-        <span class="ft-legend-val">5 项 (45.5%)</span>
+        <span class="ft-legend-val">6 项 (54.5%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
@@ -50,7 +50,7 @@ aside: false
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">路线图规划中</span>
-        <span class="ft-legend-val">4 项 (36.4%)</span>
+        <span class="ft-legend-val">3 项 (27.3%)</span>
       </div>
     </div>
   </div>
@@ -61,38 +61,6 @@ aside: false
 ## 正在研发与候选验证 (In Progress)
 
 <div class="ft-list">
-  <div class="ft-card ft-card-active">
-    <div class="ft-card-header">
-      <div class="ft-title-group">
-        <span class="ft-title">Deep EXR 深度渲染架构升级 (v2)</span>
-        <span class="ft-module">Cycles · OpenEXR</span>
-      </div>
-      <span class="ft-badge ft-badge-progress">研发验证中 · Alpha</span>
-    </div>
-    <p class="ft-desc">
-      全面升级 Cycles 的 Deep EXR 深度输出管线，重点解决复杂体积雾（烟火、大气）与高采样镜头下的深度合成难题，大幅提升文件写入稳定性、显存可控性与 Nuke 后期深度合并表现，并提供更轻量的简化色彩重建模式（<code>Simple Mode</code>）。
-    </p>
-    <div class="ft-progress-block">
-      <div class="ft-progress-meta">
-        <span class="ft-progress-label">当前研发进度（已进入 Alpha 候选版本实测阶段）</span>
-        <span class="ft-progress-pct">80%</span>
-      </div>
-      <div class="ft-progress-track">
-        <span class="ft-progress-fill" style="width: 80%"></span>
-      </div>
-    </div>
-    <div class="ft-milestones">
-      <span class="ft-milestone">✓ 核心深度渲染管线重写完成</span>
-      <span class="ft-milestone">✓ 简化模式 (<code>Simple Mode</code>) 与多视图输出支持</span>
-      <span class="ft-milestone">✓ 体积雾深度精度与半精度 (<code>HALF</code>) 合成表现修复</span>
-      <span class="ft-milestone">✓ Alpha 预览版打包完成</span>
-      <span class="ft-milestone ft-milestone-pending">→ 复杂生产镜头实测与稳定性打磨中</span>
-    </div>
-    <div class="ft-links">
-      <a href="/blog/posts/2026-10-17-deep-exr-architecture" class="ft-link">阅读工程研发日志 (Devlog) →</a>
-      <a href="/zh/industrial-cg-platform/features/deep-exr" class="ft-link ft-link-muted">查看当前稳定版文档</a>
-    </div>
-  </div>
   <div class="ft-card ft-card-active">
     <div class="ft-card-header">
       <div class="ft-title-group">
@@ -119,6 +87,30 @@ aside: false
       <span class="ft-milestone">✓ 点光源、聚光灯与面光源体积光束支持</span>
       <span class="ft-milestone ft-milestone-pending">→ 面向近实时视口交互与高速渲染的性能优化攻坚中</span>
       <span class="ft-milestone ft-milestone-pending">→ 大规模多灯光与面光源下的降噪与收敛打磨中</span>
+    </div>
+  </div>
+  <div class="ft-card ft-card-active">
+    <div class="ft-card-header">
+      <div class="ft-title-group">
+        <span class="ft-title">Linux 生产环境支持</span>
+        <span class="ft-module">bQt · Platform · Build Pipeline</span>
+      </div>
+      <span class="ft-badge ft-badge-progress">研发验证中 · In Progress</span>
+    </div>
+    <p class="ft-desc">
+      将 Industrial CG Platform 编译打包管线、Cycles GPU/Deep EXR 运行时与 bQt 视图层管理器窗口运行环境扩展至 Linux 工作室生产系统（面向 Rocky Linux 9 / X11）。
+    </p>
+    <div class="ft-progress-block">
+      <div class="ft-progress-meta">
+        <span class="ft-progress-label">当前研发进度（仅完成基础生产环境搭建）</span>
+        <span class="ft-progress-pct">5%</span>
+      </div>
+      <div class="ft-progress-track">
+        <span class="ft-progress-fill" style="width: 5%"></span>
+      </div>
+    </div>
+    <div class="ft-milestones">
+      <span class="ft-milestone">✓ 基础 Linux 生产环境搭建</span>
     </div>
   </div>
 </div>
@@ -151,6 +143,32 @@ aside: false
       <div class="ft-links">
         <a href="/zh/industrial-cg-platform/features/deep-exr" class="ft-link">阅读功能手册 →</a>
         <a href="/zh/industrial-cg-platform/api/pass-system" class="ft-link ft-link-muted">Pass 系统 API</a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-card ft-card-media">
+    <div class="ft-card-thumb-wrap">
+      <img src="/blog/nuke-deep-compositing.webp" alt="Deep EXR 深度渲染架构升级 (v2)" class="ft-card-thumb" loading="lazy" />
+    </div>
+    <div class="ft-card-body">
+      <div class="ft-card-header">
+        <div class="ft-title-group">
+          <span class="ft-title">Deep EXR 深度渲染架构升级 (v2)</span>
+          <span class="ft-module">Cycles · OpenEXR</span>
+        </div>
+        <span class="ft-badge ft-badge-released">已发布 · 5.2.4 LTS</span>
+      </div>
+      <p class="ft-desc">
+        全面升级 Cycles 的 Deep EXR 深度输出管线，显著提升 Deep 渲染与合成性能，改善体积切片 Alpha 表现，并在<strong>渲染属性 → Performance → Deep</strong> 下新增可切换的 <code>Simple</code> 与 <code>Physical</code> 模式。
+      </p>
+      <div class="ft-milestones">
+        <span class="ft-milestone">✓ 核心深度渲染管线重写与体积切片 Alpha 表现优化</span>
+        <span class="ft-milestone">✓ 新增 <code>Simple Mode</code>（默认）与 <code>Physical Mode</code> 原生深度色彩捕获</span>
+        <span class="ft-milestone">✓ 随 Industrial CG Platform 5.2.4 LTS 正式发布</span>
+      </div>
+      <div class="ft-links">
+        <a href="/zh/industrial-cg-platform/features/deep-exr" class="ft-link">阅读功能手册 →</a>
+        <a href="/blog/posts/2026-10-17-deep-exr-architecture" class="ft-link ft-link-muted">工程研发日志</a>
       </div>
     </div>
   </div>
@@ -288,14 +306,6 @@ aside: false
     </div>
     <h3 class="ft-roadmap-title">任意光通路表达式 (LPE) 语法支持</h3>
     <p class="ft-roadmap-desc">在现有固定灯光组分量通道基础上，扩展完整的任意光通路表达式（Light Path Expression）自定义通道提取能力。</p>
-  </div>
-  <div class="ft-roadmap-item">
-    <div class="ft-roadmap-top">
-      <span class="ft-module">bQt · Platform</span>
-      <span class="ft-badge ft-badge-planned">规划中</span>
-    </div>
-    <h3 class="ft-roadmap-title">Linux 生产环境支持</h3>
-    <p class="ft-roadmap-desc">将 Industrial CG Platform 编译打包管线与 bQt 视图层管理器窗口运行环境扩展至 Linux 工作室生产系统。</p>
   </div>
 </div>
 

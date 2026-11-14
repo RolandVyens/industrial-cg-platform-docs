@@ -46,7 +46,7 @@ Le gestionnaire de ViewLayer utilise Qt (via le runtime BQt) pour son interface 
 
 ### Puis-je l'utiliser sur Linux ?
 
-Pas encore. La version actuelle est exclusive à Windows x64 (sous forme d'archive ZIP). La prise en charge de Linux (en commençant par Rocky Linux 9 / X11) est planifiée pour une prochaine mise à jour majeure.
+Pas encore. La version actuelle est exclusive à Windows x64 (sous forme d'archive ZIP). La prise en charge de Linux (Rocky Linux 9 / X11) est actuellement en cours de développement.
 
 ### Que signifie le message `failed to get blender hwnd` dans les logs ?
 

@@ -21,7 +21,7 @@ Industrial CG Platform adds native Deep EXR output support to Blender Cycles, ma
 
 - **Lossless deep merge** — Combine multiple CG render layers in Nuke using `DeepMerge` without edge artifacts or manual holdout mattes.
 - **Per-sample depth** — Each pixel carries full depth information, allowing downstream compositors to slice, resample, and relight at arbitrary depth ranges.
-- **Volume support** — Volume rendering data is included in the deep output with the current shipped behavior.
+- **Volume support** — Volume rendering data is included in the deep output with improved volume-slice Alpha behavior and deep compositing performance (5.2.4 LTS architecture upgrade).
 - **Direct scene output and compositor** — Works both as direct render output and through the Blender compositor.
 
 ## Choose an Output Path
@@ -52,7 +52,7 @@ Use this path when the render should write one Deep EXR directly from the scene 
 | Control | What it changes | Beginner guidance |
 | --- | --- | --- |
 | **File Format** | Selects native Deep EXR output and enables Deep rendering automatically. | Choose `Deep EXR`. |
-| **Color** | Selects which color channels are stored. It does not change `Z` or `ZBack`. | Use `RGBA` when transparency is required; otherwise `RGB` is sufficient. |
+| **Color** | Selects which color channels are stored. It does not change `Z` or `ZBack`. | Must use `RGBA`. Deep EXR compositing requires the Alpha channel. |
 | **Color Depth** | Controls RGBA storage only. `16-bit` uses half-float; `32-bit` uses full-float. `Z` and `ZBack` always remain 32-bit float. | Use 16-bit for smaller output or 32-bit for greater color and alpha precision. |
 | **Codec** | Compresses the Deep EXR file. Deep EXR supports None, RLE, and ZIPS. | `ZIPS` is the general lossless choice. |
 | **Deep Merge Tolerance** | Depth-distance threshold for merging nearby Deep samples. | Default `0.010`. Smaller values preserve more separate depth samples. |
@@ -81,6 +81,18 @@ Use this path when the compositor must control the file path, naming, or image s
 - **Output Paths** — Controls the destination and naming for the node output.
 
 The File Output node stores its own format settings. Changing the scene Output panel does not configure this node.
+
+## Deep Color Modes (Simple vs. Physical)
+
+Under **Render Properties > Performance > Deep**, Cycles provides **Simple Mode** (shared by Surface and Volume):
+
+- **Simple Mode (Default, Enabled)** — Distributes the final undenoised Beauty color across Deep samples, reducing color capture and storage overhead while improving render performance.
+- **Physical Mode (Disabled)** — Uncheck **Simple Mode** to record native color contributions directly at their corresponding source depths.
+
+<figure class="doc-screenshot doc-screenshot--compact">
+<a href="/screenshots/deep-exr/deep-simple-mode.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-simple-mode.webp" alt="Blender Render Properties Performance Deep panel showing Simple Mode enabled" loading="lazy"></a>
+<figcaption>Render Properties > Performance > Deep > Simple Mode. Enabled by default for Simple mode; uncheck to switch to Physical mode.</figcaption>
+</figure>
 
 ## Render Memory Settings
 
@@ -111,12 +123,12 @@ For best results, render each major CG element (characters, environments, effect
 
 ## Known Limitations
 
+- **World Volume** — World Volume is currently unsupported in Deep EXR output.
 - **Metadata reconstruction** — Full deep metadata reconstruction is future work, not part of the current baseline.
 - **Memory usage** — Deep output stores significantly more data than flat EXR. Use the Deep Tile Budget parameter to control the tradeoff.
 
 ## Future Work
 
-- Sparse/compressed deep storage inspired by MoonRay is a potential future optimization.
 - Metadata reconstruction for more complete downstream compositing metadata.
 
 ## See Also

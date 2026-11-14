@@ -10,7 +10,7 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
 
 <div class="ft-summary-grid">
   <div class="ft-stat-card">
-    <span class="ft-stat-num ft-stat-brand">5</span>
+    <span class="ft-stat-num ft-stat-brand">6</span>
     <span class="ft-stat-label">Released in Stable</span>
   </div>
   <div class="ft-stat-card">
@@ -18,7 +18,7 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     <span class="ft-stat-label">In Progress (Active R&amp;D)</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">4</span>
+    <span class="ft-stat-num">3</span>
     <span class="ft-stat-label">Planned on Roadmap</span>
   </div>
 </div>
@@ -31,16 +31,16 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="125.66 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-125.66" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">45.5%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="150.80 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-150.80" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">54.5%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">Shipped</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">Released in Stable</span>
-        <span class="ft-legend-val">5 (45.5%)</span>
+        <span class="ft-legend-val">6 (54.5%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
@@ -50,7 +50,7 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">Planned Roadmap</span>
-        <span class="ft-legend-val">4 (36.4%)</span>
+        <span class="ft-legend-val">3 (27.3%)</span>
       </div>
     </div>
   </div>
@@ -61,38 +61,6 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
 ## Active Candidate R&D (In Progress)
 
 <div class="ft-list">
-  <div class="ft-card ft-card-active">
-    <div class="ft-card-header">
-      <div class="ft-title-group">
-        <span class="ft-title">Deep EXR Architecture Upgrade (v2)</span>
-        <span class="ft-module">Cycles · OpenEXR</span>
-      </div>
-      <span class="ft-badge ft-badge-progress">In Progress · Alpha</span>
-    </div>
-    <p class="ft-desc">
-      A major upgrade to the Cycles Deep EXR output workflow designed for complex volumetric shots (smoke, fire, fog) and high sample counts—delivering more predictable memory usage, cleaner Nuke deep compositing holdouts, and an optional lightweight <code>Simple Mode</code> for color reconstruction.
-    </p>
-    <div class="ft-progress-block">
-      <div class="ft-progress-meta">
-        <span class="ft-progress-label">Development Progress (Alpha Preview Packaged &amp; In Shot Testing)</span>
-        <span class="ft-progress-pct">80%</span>
-      </div>
-      <div class="ft-progress-track">
-        <span class="ft-progress-fill" style="width: 80%"></span>
-      </div>
-    </div>
-    <div class="ft-milestones">
-      <span class="ft-milestone">✓ Core Deep Rendering Pipeline Rebuilt</span>
-      <span class="ft-milestone">✓ <code>Simple Mode</code> &amp; Multi-View Output Support</span>
-      <span class="ft-milestone">✓ Volume Depth Accuracy &amp; <code>HALF</code> Precision Compositing Fixes</span>
-      <span class="ft-milestone">✓ Alpha Preview Build Packaged</span>
-      <span class="ft-milestone ft-milestone-pending">→ Production Shot Testing &amp; Stability Polish</span>
-    </div>
-    <div class="ft-links">
-      <a href="/blog/posts/2026-10-17-deep-exr-architecture" class="ft-link">Read Engineering Devlog →</a>
-      <a href="/en/industrial-cg-platform/features/deep-exr" class="ft-link ft-link-muted">Current Stable Docs</a>
-    </div>
-  </div>
   <div class="ft-card ft-card-active">
     <div class="ft-card-header">
       <div class="ft-title-group">
@@ -119,6 +87,30 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
       <span class="ft-milestone">✓ Point, Spot &amp; Area Light Volumetric Beam Support</span>
       <span class="ft-milestone ft-milestone-pending">→ Performance Optimization Toward Near-Real-Time Viewport &amp; Render Speed</span>
       <span class="ft-milestone ft-milestone-pending">→ Multi-Light &amp; Area Light Noise Reduction &amp; Convergence Polish</span>
+    </div>
+  </div>
+  <div class="ft-card ft-card-active">
+    <div class="ft-card-header">
+      <div class="ft-title-group">
+        <span class="ft-title">Linux Platform Support</span>
+        <span class="ft-module">bQt · Platform · Build Pipeline</span>
+      </div>
+      <span class="ft-badge ft-badge-progress">In Progress · Active R&amp;D</span>
+    </div>
+    <p class="ft-desc">
+      Extending the Industrial CG Platform build pipeline, Cycles GPU/Deep EXR runtime, and bQt ViewLayer Manager window integration to Linux studio environments (targeting Rocky Linux 9 / X11).
+    </p>
+    <div class="ft-progress-block">
+      <div class="ft-progress-meta">
+        <span class="ft-progress-label">Development Progress (Base Production Environment Only)</span>
+        <span class="ft-progress-pct">5%</span>
+      </div>
+      <div class="ft-progress-track">
+        <span class="ft-progress-fill" style="width: 5%"></span>
+      </div>
+    </div>
+    <div class="ft-milestones">
+      <span class="ft-milestone">✓ Base Linux Production Environment Setup</span>
     </div>
   </div>
 </div>
@@ -151,6 +143,32 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
       <div class="ft-links">
         <a href="/en/industrial-cg-platform/features/deep-exr" class="ft-link">Feature Manual →</a>
         <a href="/en/industrial-cg-platform/api/pass-system" class="ft-link ft-link-muted">Pass System API</a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-card ft-card-media">
+    <div class="ft-card-thumb-wrap">
+      <img src="/blog/nuke-deep-compositing.webp" alt="Deep EXR Architecture Upgrade (v2)" class="ft-card-thumb" loading="lazy" />
+    </div>
+    <div class="ft-card-body">
+      <div class="ft-card-header">
+        <div class="ft-title-group">
+          <span class="ft-title">Deep EXR Architecture Upgrade (v2)</span>
+          <span class="ft-module">Cycles · OpenEXR</span>
+        </div>
+        <span class="ft-badge ft-badge-released">Released · 5.2.4 LTS</span>
+      </div>
+      <p class="ft-desc">
+        Upgrades the Cycles Deep EXR pipeline for improved rendering and compositing performance, cleaner volume-slice Alpha behavior, and configurable <code>Simple</code> / <code>Physical</code> color modes under <strong>Render Properties → Performance → Deep</strong>.
+      </p>
+      <div class="ft-milestones">
+        <span class="ft-milestone">✓ Core Deep Rendering Pipeline Rebuilt &amp; Volume-Slice Alpha Improved</span>
+        <span class="ft-milestone">✓ <code>Simple Mode</code> (Default) &amp; <code>Physical Mode</code> Native Color Capture</span>
+        <span class="ft-milestone">✓ Shipped in Industrial CG Platform 5.2.4 LTS</span>
+      </div>
+      <div class="ft-links">
+        <a href="/en/industrial-cg-platform/features/deep-exr" class="ft-link">Feature Manual →</a>
+        <a href="/blog/posts/2026-10-17-deep-exr-architecture" class="ft-link ft-link-muted">Engineering Devlog</a>
       </div>
     </div>
   </div>
@@ -288,14 +306,6 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     </div>
     <h3 class="ft-roadmap-title">Arbitrary Light Path Expressions (LPE)</h3>
     <p class="ft-roadmap-desc">Custom LPE syntax support extending beyond fixed Lightgroup lobe splits for specialized studio AOV extraction.</p>
-  </div>
-  <div class="ft-roadmap-item">
-    <div class="ft-roadmap-top">
-      <span class="ft-module">bQt · Platform</span>
-      <span class="ft-badge ft-badge-planned">Planned</span>
-    </div>
-    <h3 class="ft-roadmap-title">Linux Platform Support</h3>
-    <p class="ft-roadmap-desc">Extending the Industrial CG Platform build environment and bQt ViewLayer Manager window integration to Linux studio pipelines.</p>
   </div>
 </div>
 

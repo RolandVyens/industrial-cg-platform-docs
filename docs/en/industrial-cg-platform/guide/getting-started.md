@@ -38,8 +38,8 @@ Industrial CG Platform is intended for:
 
 - **Full compatibility** — `.blend` files created in Industrial CG Platform are compatible with stock Blender 5.2. Custom features simply won't be available when opened in stock Blender.
 - **Same executable names** — The executable is still called `blender.exe` and uses the same config directory structure.
-- **Branch suffix** — The window title shows `Blender 5.2.0-2026-06-16 Industrial CG Platform` to distinguish it from stock Blender.
-- **Windows only** — Current releases are Windows x64 ZIP packages only. Linux support is planned for the future.
+- **Branch suffix** — The window title shows `Blender 5.2.4 LTS Industrial CG Platform` to distinguish it from stock Blender.
+- **Windows only** — Current releases are Windows x64 ZIP packages only. Linux support is currently in progress.
 
 ## Next Steps
 

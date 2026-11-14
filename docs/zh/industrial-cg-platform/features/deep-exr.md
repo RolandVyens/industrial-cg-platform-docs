@@ -21,7 +21,7 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 
 - **无损深度合并** — 在 Nuke 中使用 `DeepMerge` 合并多个 CG 渲染图层，避免边缘产生伪影，也无需手动绘制遮罩（holdout mattes）。
 - **逐采样深度** — 每个像素携带完整的深度信息，允许下游合成人员在任意深度范围内对画面进行切片、重新采样和重打光。
-- **体积支持** — 体积渲染数据包含在深度输出中（当前已发布的默认行为）。
+- **体积支持** — 体积渲染数据包含在深度输出中；5.2.4 LTS 架构升级进一步改善了体积切片（volume-slice）的 Alpha 表现与 Deep 渲染/合成性能。
 - **合成器集成** — 同时支持直接场景渲染输出和 Blender 合成器节点输出。
 
 ## 选择输出方式
@@ -52,7 +52,7 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 | 控件 | 作用 | 新手建议 |
 | --- | --- | --- |
 | **文件格式** | 选择原生 Deep EXR 输出，并自动启用 Deep 渲染。 | 选择 `Deep EXR`。 |
-| **颜色** | 选择要存储的颜色通道，不会改变 `Z` 或 `ZBack`。 | 需要透明度时使用 `RGBA`，否则使用 `RGB` 即可。 |
+| **颜色** | 选择要存储的颜色通道，不会改变 `Z` 或 `ZBack`。 | 必须使用 `RGBA`。Deep EXR 深度合成依赖 Alpha 通道记录样本不透明度。 |
 | **颜色位深** | 仅控制 RGBA 存储。`16-bit` 使用 half-float，`32-bit` 使用 full-float；`Z` 与 `ZBack` 始终为 32 位浮点。 | 16 位可减小输出，32 位可保留更高的颜色与 Alpha 精度。 |
 | **压缩格式** | 压缩 Deep EXR 文件。Deep EXR 支持 None、RLE 和 ZIPS。 | 一般使用无损的 `ZIPS`。 |
 | **Deep 合并容差** | 合并相邻 Deep 样本时使用的深度距离阈值。 | 默认 `0.010`；数值越小，保留的独立深度样本越多。 |
@@ -81,6 +81,18 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 - **输出路径 (Output Paths)** — 控制节点输出的目标位置和命名。
 
 文件输出节点保存自己的格式设置。修改场景输出面板不会配置这个节点。
+
+## Deep 色彩模式（Simple 与 Physical）
+
+在 **渲染属性 > 性能 > Deep (Render Properties > Performance > Deep)** 下，Cycles 提供了 **Simple Mode** 选项（Surface 与 Volume 共用）：
+
+- **Simple 模式（默认开启）** — 将未经降噪的最终 Beauty 色彩分配到各 Deep 样本中，以降低色彩捕获与存储开销并提升渲染性能。
+- **Physical 模式（取消勾选）** — 取消勾选 **Simple Mode** 即可切换为 Physical 模式，在对应的原始深度位置记录原生色彩贡献。
+
+<figure class="doc-screenshot doc-screenshot--compact">
+<a href="/screenshots/deep-exr/deep-simple-mode.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-simple-mode.webp" alt="Blender 渲染属性 Performance > Deep 面板中的 Simple Mode 选项" loading="lazy"></a>
+<figcaption>渲染属性 > Performance > Deep > Simple Mode。默认启用 Simple 模式；取消勾选可切换为 Physical 模式。</figcaption>
+</figure>
 
 ## 渲染内存设置
 
@@ -111,12 +123,12 @@ Deep Tile Budget 是内存限制，不是 Deep 质量参数。它不会直接降
 
 ## 已知限制
 
+- **World Volume** — 当前暂不支持世界体积（World Volume）的 Deep EXR 输出。
 - **元数据重建** — 完整的深度元数据重建属于未来规划，不包含在当前基线中。
 - **内存占用** — 深度输出存储的数据量远多于平面 EXR。请使用 Deep Tile Budget 参数来控制平衡。
 
 ## 未来工作
 
-- 受 MoonRay 启发的稀疏/压缩深度存储，是一个潜在的未来优化方向。
 - 元数据重建，为下游合成提供更完整的元数据信息。
 
 ## 另请参阅

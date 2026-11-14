@@ -38,8 +38,8 @@ Industrial CG Platform 专为以下人群设计：
 
 - **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在官方 Blender 5.2 中打开。自定义功能在官方版本中不可用，但数据会被保留。
 - **相同的可执行文件名** — 可执行文件仍然是 `blender.exe`，使用相同的配置目录结构。
-- **分支后缀** — 窗口标题显示 `Blender 5.2.0-2026-06-16 Industrial CG Platform` 以区分官方版本。
-- **仅 Windows** — 当前发布版本仅提供 Windows x64 ZIP 包。Linux 支持计划在未来版本中提供。
+- **分支后缀** — 窗口标题显示 `Blender 5.2.4 LTS Industrial CG Platform` 以区分官方版本。
+- **仅 Windows** — 当前发布版本仅提供 Windows x64 ZIP 包，Linux 平台支持正在推进中。
 
 ## 下一步
 

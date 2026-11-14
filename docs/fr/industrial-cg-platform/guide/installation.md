@@ -17,7 +17,7 @@ description: "| Composant | Configuration |"
 ## Téléchargement
 
 1. Rendez-vous sur la page des [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases).
-2. Téléchargez le fichier compressé `industrial-cg-platform-X.X.X-YYYY-MM-DD.zip` le plus récent.
+2. Téléchargez le fichier compressé `industrial-cg-platform-X.X.X.zip` le plus récent (ex. : `industrial-cg-platform-5.2.4.zip`).
 3. Vérifiez l'intégrité du téléchargement à l'aide de la clé de hachage SHA256 indiquée dans les notes de version.
 
 ## Installation
@@ -41,7 +41,7 @@ Exécutez la commande suivante dans une invite de commande ou PowerShell dans le
 Sortie attendue :
 
 ```
-Blender 5.2.0-2026-06-16 Industrial CG Platform
+Blender 5.2.4 LTS Industrial CG Platform
 ```
 
 ## Configuration GPU

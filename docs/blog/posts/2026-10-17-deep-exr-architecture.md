@@ -15,7 +15,11 @@ cover: "/blog/nuke-deep-compositing.webp"
 
 ![Deep EXR Architecture](/blog/nuke-deep-compositing.webp)
 
-Industrial CG Platform is currently executing a fundamental architectural overhaul of its Deep EXR pipeline. This upgrade is **in active candidate development (In Progress)**.
+::: tip Shipped in 5.2.4 LTS
+The Deep EXR architecture upgrade described in this engineering log is now **released in [Industrial CG Platform 5.2.4 LTS](/en/industrial-cg-platform/releases/)**, including the new **Simple Mode** / **Physical Mode** toggle. See the [Deep EXR Feature Manual](/en/industrial-cg-platform/features/deep-exr) for current usage details.
+:::
+
+Industrial CG Platform executed a fundamental architectural overhaul of its Deep EXR pipeline (originally tracked in candidate development when this post was published).
 
 For experienced technical directors and compositors, Deep EXR is an established tool. However, implementing Deep output inside a path-tracing engine reveals a critical architectural truth: **2D flattened visual parity is only a baseline check—preserving correct physical behavior along depth is the real engineering challenge.**
 

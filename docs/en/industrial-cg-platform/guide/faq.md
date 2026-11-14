@@ -46,7 +46,7 @@ The ViewLayer Manager uses Qt (via BQt) for its UI, which cannot be embedded dir
 
 ### Can I use it on Linux?
 
-Not yet. The current release is Windows-only. Linux support (starting with Rocky 9 / X11) is planned for a future release.
+Not yet. The current release is Windows-only. Linux support (starting with Rocky 9 / X11) is currently in progress.
 
 ### What is the `failed to get blender hwnd` message?
 

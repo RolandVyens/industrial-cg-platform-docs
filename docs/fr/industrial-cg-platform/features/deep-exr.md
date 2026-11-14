@@ -21,7 +21,7 @@ Industrial CG Platform ajoute une prise en charge native de la sortie Deep EXR �
 
 - **Fusion profonde sans perte** — Combinez plusieurs calques de rendu CG dans Nuke à l'aide de `DeepMerge` sans artefacts de bord ni masques de découpe manuels (holdout mattes).
 - **Profondeur par échantillon** — Chaque pixel contient des informations de profondeur complètes, permettant aux compositeurs en aval de découper, rééchantillonner et réeclairer à des plages de profondeur arbitraires.
-- **Prise en charge du volume** — Les données de rendu de volume sont incluses dans la sortie profonde (comportement par défaut actuel).
+- **Prise en charge du volume** — Les données de rendu de volume sont incluses dans la sortie profonde, avec un comportement Alpha amélioré sur les tranches volumétriques et de meilleures performances de compositing Deep (mise à niveau 5.2.4 LTS).
 - **Sortie directe et compositeur** — Fonctionne à la fois comme sortie de rendu de scène directe et via le nœud de sortie de fichier du compositeur Blender.
 
 ## Choisir un mode de sortie
@@ -52,7 +52,7 @@ Utilisez cette méthode lorsque le rendu doit écrire directement un seul Deep E
 | Contrôle | Effet | Conseil pour débuter |
 | --- | --- | --- |
 | **Format de fichier** | Sélectionne la sortie Deep EXR native et active automatiquement le rendu Deep. | Choisissez `Deep EXR`. |
-| **Couleur** | Sélectionne les canaux de couleur stockés sans modifier `Z` ou `ZBack`. | Utilisez `RGBA` si la transparence est nécessaire, sinon `RGB` suffit. |
+| **Couleur** | Sélectionne les canaux de couleur stockés sans modifier `Z` ou `ZBack`. | Utilisez obligatoirement `RGBA`. Le compositing Deep EXR nécessite le canal Alpha. |
 | **Profondeur de couleur** | Contrôle uniquement le stockage RGBA. `16 bits` utilise le half-float et `32 bits` le full-float ; `Z` et `ZBack` restent toujours en flottant 32 bits. | 16 bits réduit la sortie ; 32 bits préserve davantage les couleurs et l’alpha. |
 | **Codec** | Compresse le fichier Deep EXR. Deep EXR prend en charge None, RLE et ZIPS. | `ZIPS` est le choix général sans perte. |
 | **Tolérance de fusion Deep** | Seuil de distance en profondeur pour fusionner les échantillons Deep voisins. | Valeur par défaut `0.010` ; une valeur plus petite conserve plus d’échantillons distincts. |
@@ -81,6 +81,18 @@ Utilisez cette méthode lorsque le compositeur doit contrôler le chemin, le nom
 - **Output Paths** — Contrôle la destination et le nom des fichiers du nœud.
 
 Le nœud File Output conserve ses propres réglages de format. Modifier le panneau Sortie de la scène ne configure pas ce nœud.
+
+## Modes de couleur Deep (Simple vs Physical)
+
+Sous **Propriétés de rendu > Performance > Deep (Render Properties > Performance > Deep)**, Cycles propose l'option **Simple Mode** (partagée entre Surface et Volume) :
+
+- **Mode Simple (Activé par défaut)** — Distribue la couleur Beauty finale non débruitée sur les échantillons Deep afin de réduire le coût de capture et de stockage des couleurs.
+- **Mode Physical (Désactivé)** — Décochez **Simple Mode** pour passer en mode Physical, qui enregistre les contributions de couleur natives à leurs profondeurs correspondantes.
+
+<figure class="doc-screenshot doc-screenshot--compact">
+<a href="/screenshots/deep-exr/deep-simple-mode.webp" target="_blank" rel="noopener"><img src="/screenshots/deep-exr/deep-simple-mode.webp" alt="Panneau Performance Deep des propriétés de rendu Blender affichant Simple Mode activé" loading="lazy"></a>
+<figcaption>Propriétés de rendu > Performance > Deep > Simple Mode. Activé par défaut (mode Simple) ; décochez pour passer en mode Physical.</figcaption>
+</figure>
 
 ## Réglages de mémoire du rendu
 
@@ -111,12 +123,12 @@ Pour de meilleurs résultats, rendez chaque élément CG majeur (personnages, d�
 
 ## Limites connues
 
+- **World Volume** — Le World Volume n'est actuellement pas pris en charge en sortie Deep EXR.
 - **Reconstruction des métadonnées** — La reconstruction complète des métadonnées profondes est un travail futur et ne fait pas partie de la version de référence actuelle.
 - **Utilisation de la mémoire** — La sortie profonde stocke beaucoup plus de données que l'EXR plat. Utilisez le paramètre Deep Tile Budget pour contrôler ce compromis.
 
 ## Travaux futurs
 
-- Le stockage profond fragmenté/compressé inspiré de MoonRay est une optimisation future potentielle.
 - Reconstruction des métadonnées pour des métadonnées de compositing en aval plus complètes.
 
 ## Voir Aussi
