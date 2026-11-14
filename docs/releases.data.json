@@ -4,7 +4,7 @@
     "name": "Industrial CG Platform 5.2.4 LTS",
     "published_at": "2026-11-14T16:22:25Z",
     "prerelease": false,
-    "body": "# Industrial CG Platform 5.2.4 LTS\n\n- 升级至官方 Blender 5.2.4 LTS。\n- **Deep EXR 架构升级**：提升 Deep 渲染速度与合成性能，改善体积切片的 Alpha 表现。新增 **Simple／Physical 两种模式**，位于 **渲染属性 → Performance → Deep → Simple Mode**。Simple 默认开启，将最终 Beauty 颜色分配到 Deep 样本，减少颜色捕获和存储开销；取消勾选后切换到 Physical，在对应深度记录原生颜色贡献。\n- 修复启用 EXR Overscan、多视图层渲染时，前面视图层的 Position／Pworld、Normal 等通道丢失的问题。\n\n### Deep EXR 使用限制\n\n暂不支持世界体积（World Volume）。\n",
+    "body": "# Industrial CG Platform 5.2.4 LTS\n\n- Updated to official Blender 5.2.4 LTS.\n- **Deep EXR architecture upgrade**: improves Deep rendering and compositing performance, with better Alpha behavior in volume slices. Adds **Simple and Physical modes**, available under **Render Properties → Performance → Deep → Simple Mode**. Simple is enabled by default and distributes the final Beauty color across Deep samples to reduce color capture and storage overhead. Disable it to switch to Physical mode, which records native color contributions at their corresponding depths.\n- Fixed missing Position／Pworld, Normal, and other passes in earlier view layers when rendering multiple view layers with EXR Overscan enabled.\n\n### Deep EXR Limitations\n\nWorld Volume is currently unsupported.\n",
     "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4",
     "assets": [
       {
