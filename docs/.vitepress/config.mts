@@ -151,7 +151,7 @@ export default defineConfig({
           },
           {
             text: 'Plugins',
-            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio|auto-light-shuffle)',
             items: [
               {
                 text: 'Overview',
@@ -164,7 +164,8 @@ export default defineConfig({
                 items: [
                   { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+                  { text: 'AIO-OCIO', link: '/en/aio-ocio/' },
+                  { text: 'Auto Light Shuffle', link: '/en/auto-light-shuffle/' }
                 ]
               }
             ]
@@ -256,6 +257,14 @@ export default defineConfig({
                 { text: 'Blender Color Management', link: '/en/aio-ocio/manual/blender-setup' }
               ]
             }
+          ],
+          '/en/auto-light-shuffle/': [
+            {
+              text: 'Auto Light Shuffle',
+              items: [
+                { text: 'Overview & Setup', link: '/en/auto-light-shuffle/' }
+              ]
+            }
           ]
         },
       },
@@ -291,7 +300,7 @@ export default defineConfig({
           },
           {
             text: '插件',
-            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio|auto-light-shuffle)',
             items: [
               {
                 text: '插件生态',
@@ -304,7 +313,8 @@ export default defineConfig({
                 items: [
                   { text: 'Industrial AOV Connector', link: '/zh/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/zh/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+                  { text: 'AIO-OCIO', link: '/zh/aio-ocio/' },
+                  { text: 'Auto Light Shuffle', link: '/zh/auto-light-shuffle/' }
                 ]
               }
             ]
@@ -396,6 +406,14 @@ export default defineConfig({
                 { text: 'Blender 色彩管理配置手册', link: '/zh/aio-ocio/manual/blender-setup' }
               ]
             }
+          ],
+          '/zh/auto-light-shuffle/': [
+            {
+              text: 'Auto Light Shuffle',
+              items: [
+                { text: '概述与安装配置', link: '/zh/auto-light-shuffle/' }
+              ]
+            }
           ]
         },
         outline: { label: '本页目录' },
@@ -437,7 +455,7 @@ export default defineConfig({
           },
           {
             text: 'Plugins',
-            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+            activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio|auto-light-shuffle)',
             items: [
               {
                 text: 'Aperçu',
@@ -450,7 +468,8 @@ export default defineConfig({
                 items: [
                   { text: 'Industrial AOV Connector', link: '/fr/industrial-aov-connector/' },
                   { text: 'Industrial Light AOV Splitter', link: '/fr/industrial-light-aov-splitter/' },
-                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+                  { text: 'AIO-OCIO', link: '/fr/aio-ocio/' },
+                  { text: 'Auto Light Shuffle', link: '/fr/auto-light-shuffle/' }
                 ]
               }
             ]
@@ -542,6 +561,14 @@ export default defineConfig({
                 { text: 'Gestion des Couleurs Blender', link: '/fr/aio-ocio/manual/blender-setup' }
               ]
             }
+          ],
+          '/fr/auto-light-shuffle/': [
+            {
+              text: 'Auto Light Shuffle',
+              items: [
+                { text: 'Aperçu & Installation', link: '/fr/auto-light-shuffle/' }
+              ]
+            }
           ]
         },
         outline: { label: 'Sur cette page' },
@@ -596,7 +623,7 @@ export default defineConfig({
       },
       {
         text: 'Plugins',
-        activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio)',
+        activeMatch: '(en|zh|fr)/(industrial-pipeline-tools|industrial-aov-connector|industrial-light-aov-splitter|aio-ocio|auto-light-shuffle)',
         items: [
           {
             text: 'Overview',
@@ -609,7 +636,8 @@ export default defineConfig({
             items: [
               { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
               { text: 'Industrial Light AOV Splitter', link: '/en/industrial-light-aov-splitter/' },
-              { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+              { text: 'AIO-OCIO', link: '/en/aio-ocio/' },
+              { text: 'Auto Light Shuffle', link: '/en/auto-light-shuffle/' }
             ]
           }
         ]

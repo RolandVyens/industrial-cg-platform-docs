@@ -62,6 +62,23 @@ Industrial 3D 生态提供了一系列正片级的开源渲染插件与色彩配
       </div>
     </div>
   </div>
+  <!-- Auto Light Shuffle -->
+  <div class="tool-card">
+    <img src="/features/lightgroups.webp" alt="Auto Light Shuffle" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Auto Light Shuffle</h3>
+        <span class="tool-badge">Nuke 脚本</span>
+      </div>
+      <p class="tool-desc">
+        在 Nuke 中自动识别 Blender 灯光组与分量 AOV，一键构建带标签 Backdrop 的多层均衡 Merge 树，保留 Alpha 并重建 Beauty 画面。
+      </p>
+      <div class="tool-actions">
+        <a href="/zh/auto-light-shuffle/" class="tool-button">阅读脚本指南</a>
+        <a href="https://github.com/RolandVyens/auto-light-shuffle" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style scoped>

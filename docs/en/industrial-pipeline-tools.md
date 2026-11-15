@@ -62,6 +62,23 @@ The Industrial 3D suite includes specialized open-source tools and color configu
       </div>
     </div>
   </div>
+  <!-- Auto Light Shuffle -->
+  <div class="tool-card">
+    <img src="/features/lightgroups.webp" alt="Auto Light Shuffle" class="tool-preview" />
+    <div class="tool-content">
+      <div class="tool-header">
+        <h3 class="tool-title">Auto Light Shuffle</h3>
+        <span class="tool-badge">Nuke Script</span>
+      </div>
+      <p class="tool-desc">
+        Automatically detects Blender lightgroup and lobe AOVs in Nuke, builds balanced layered Merge trees with labelled Backdrops, and reconstructs Beauty with preserved alpha.
+      </p>
+      <div class="tool-actions">
+        <a href="/en/auto-light-shuffle/" class="tool-button">Read Script Guide</a>
+        <a href="https://github.com/RolandVyens/auto-light-shuffle" class="tool-button tool-button-download" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style scoped>

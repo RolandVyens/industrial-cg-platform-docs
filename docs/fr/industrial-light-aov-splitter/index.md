@@ -19,7 +19,7 @@ Plutôt que d'exporter des groupes de lumières fusionnés génériques, cet out
 
 ### 🔌 Intégration avec AOV Connector
 *   Conçu pour fonctionner de manière transparente avec le module **Industrial AOV Connector** afin d'écrire automatiquement ces composants divisés dans des fichiers EXR structurés.
-*   Inclut un script Python compagnon (`nuke_blender_autoaov.py`) dans le dépôt pour regrouper et combiner automatiquement ces canaux dans Nuke.
+*   S'associe à l'outil compagnon autonome pour Nuke **[Auto Light Shuffle](/fr/auto-light-shuffle/)** (`nuke_blender_autoaov.py`) pour séparer et combiner automatiquement ces canaux AOV de groupes de lumières dans Nuke.
 
 ---
 
@@ -49,4 +49,5 @@ Pour garantir le bon fonctionnement du séparateur, veuillez respecter ces règl
 ## Liens du dépôt
 
 *   **Dépôt GitHub :** [RolandVyens/Industrial-Light-AOV-Splitter](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter)
+*   **Outil compagnon Nuke :** [RolandVyens/auto-light-shuffle](https://github.com/RolandVyens/auto-light-shuffle)
 *   **Signaler un problème :** [GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter/issues)

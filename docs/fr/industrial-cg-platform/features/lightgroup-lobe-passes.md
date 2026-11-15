@@ -91,6 +91,10 @@ Pour chaque groupe de lumières, cela signifie :
 3. Utilisez des nœuds `Shuffle` pour isoler et étalonner les contributions individuelles des lobes.
 4. Additionnez-les à nouveau pour obtenir l'image finale rééclairée.
 
+::: tip Outil recommandé : Auto Light Shuffle
+Connecter manuellement des arbres `Shuffle` et `Merge` pour des dizaines de passes `<lobe>_<direct|indirect>_<lightgroup>` peut être fastidieux. Nous recommandons **[Auto Light Shuffle](/fr/auto-light-shuffle/)** ([GitHub](https://github.com/RolandVyens/auto-light-shuffle)) — un script Python open-source pour Nuke qui détecte automatiquement les AOV de lightgroups Blender depuis le nœud `Read` sélectionné (en priorisant les passes directes/indirectes, avec repli sur les passes de lobe ou `Combined_<light>`), construit un arbre `Merge` équilibré avec des nœuds `Backdrop` étiquetés, préserve l'alpha et reconstruit le Beauty en un clic.
+:::
+
 ::: tip
 Un contrôle de compositing utile : la somme de toutes les passes par lobe de lightgroup (plus les passes émissives combinées `Combined_<lg>`) doit correspondre de très près à la passe de beauté globale `rgba`.
 :::
@@ -102,6 +106,7 @@ Un contrôle de compositing utile : la somme de toutes les passes par lobe de li
 
 ## Voir Aussi
 
+- [Auto Light Shuffle](/fr/auto-light-shuffle/) — Script Nuke automatique pour séparer et fusionner en couches les AOV de lightgroups et de lobes Blender.
 - [Système de passes et AOV (API)](/fr/industrial-cg-platform/api/pass-system) — Architecture interne d'enregistrement et de lecture des passes.
 - [Extensions du noyau Cycles (API)](/fr/industrial-cg-platform/api/cycles-kernel) — Données d'index de division de lightgroup au niveau du noyau.
 - [Manuel Blender: Groupes de lumières](https://docs.blender.org/manual/en/latest/render/layers/passes.html) — Documentation standard sur les groupes de lumières dans Blender.

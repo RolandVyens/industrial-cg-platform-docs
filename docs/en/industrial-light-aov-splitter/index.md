@@ -19,7 +19,7 @@ Instead of exporting generic merged lightgroups, this tool automatically splits 
 
 ### 🎭 Integration with AOV Connector
 *   Designed to work seamlessly with the **Industrial AOV Connector** add-on to automatically write these split components to EXR file trees.
-*   Includes a companion Python script (`nuke_blender_autoaov.py`) in the repository to automatically shuffle and combine these light group AOV channels inside Nuke.
+*   Pairs with the standalone companion Nuke tool **[Auto Light Shuffle](/en/auto-light-shuffle/)** (`nuke_blender_autoaov.py`) to automatically shuffle, merge, and reconstruct these light group AOV channels inside Nuke.
 
 ---
 
@@ -49,4 +49,5 @@ To ensure the splitter operates correctly, please follow these guidelines:
 ## Repository & Links
 
 *   **GitHub Repository:** [RolandVyens/Industrial-Light-AOV-Splitter](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter)
+*   **Companion Nuke Tool:** [RolandVyens/auto-light-shuffle](https://github.com/RolandVyens/auto-light-shuffle)
 *   **Report Issues:** [GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter/issues)

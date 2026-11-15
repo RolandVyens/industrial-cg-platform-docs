@@ -19,7 +19,7 @@ description: "Industrial Light AOV Splitter 是一个专为 Blender 打造的高
 
 ### 🔌 AOV Connector 深度协同
 *   可与 **Industrial AOV Connector** 插件无缝协同，自动将拆分出的灯光分量写入多通道 EXR 文件中。
-*   提供配套的 Nuke 自动合成脚本 `nuke_blender_autoaov.py`（位于 GitHub 仓库中），可一键在 Nuke 中自动重组拆分出的灯光通道。
+*   推荐搭配独立维护的配套 Nuke 脚本 **[Auto Light Shuffle](/zh/auto-light-shuffle/)**（`nuke_blender_autoaov.py`），可在 Nuke 中一键自动分流、分层合并并重组拆分出的灯光通道。
 
 ---
 
@@ -49,4 +49,5 @@ description: "Industrial Light AOV Splitter 是一个专为 Blender 打造的高
 ## 开源仓库与链接
 
 *   **GitHub 仓库**：[RolandVyens/Industrial-Light-AOV-Splitter](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter)
+*   **配套 Nuke 工具**：[RolandVyens/auto-light-shuffle](https://github.com/RolandVyens/auto-light-shuffle)
 *   **问题反馈**：[GitHub Issues Tracker](https://github.com/RolandVyens/Industrial-Light-AOV-Splitter/issues)

@@ -91,6 +91,10 @@ Combined_<lg> ≈ Σ (Lobe_Direct_<lg> + Lobe_Indirect_<lg>)
 3. 使用 `Shuffle` 节点隔离并对各个分量贡献进行调色。
 4. 将它们求和相加，即可得到最终重打光后的 Beauty 画面。
 
+::: tip 推荐工具：Auto Light Shuffle
+当场景包含大量 `<lobe>_<direct|indirect>_<lightgroup>` 通道时，手动连接 `Shuffle` 与 `Merge` 节点树会非常繁琐。推荐使用开源 Nuke 脚本 **[Auto Light Shuffle](/zh/auto-light-shuffle/)**（[GitHub](https://github.com/RolandVyens/auto-light-shuffle)）—— 只需选中 `Read` 节点即可一键自动识别 Blender 灯光组 AOV（优先匹配直接/间接分量通道，并支持分量级与 `Combined_<light>` 回退），自动生成带标签 `Backdrop` 的多层均衡 `Merge` 节点树、保留 Alpha 通道并重建最终 Beauty 输出。
+:::
+
 ::: tip
 一个实用的合成检查方法：所有灯光组分量通道（加上自发光 `Combined_<lg>` 通道）的总和应与整体的 `rgba` Beauty 通道几乎完全一致。
 :::
@@ -102,6 +106,7 @@ Combined_<lg> ≈ Σ (Lobe_Direct_<lg> + Lobe_Indirect_<lg>)
 
 ## 另请参阅
 
+- [Auto Light Shuffle](/zh/auto-light-shuffle/) — 面向 Blender 灯光组与分量 AOV 的 Nuke 自动分流与分层合并脚本。
 - [Pass 与 AOV 系统 (API)](/zh/industrial-cg-platform/api/pass-system) — 内部 Pass 注册和回读架构。
 - [Cycles 内核扩展 (API)](/zh/industrial-cg-platform/api/cycles-kernel) — 内核级灯光组拆分索引数据。
 - [Blender 手册：灯光组](https://docs.blender.org/manual/en/latest/render/layers/passes.html) — 标准 Blender 灯光组文档。

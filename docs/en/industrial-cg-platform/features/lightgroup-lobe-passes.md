@@ -91,6 +91,10 @@ for each lightgroup. This means:
 3. Use `Shuffle` nodes to isolate and grade individual lobe contributions.
 4. Sum them back together for the final relit beauty.
 
+::: tip Recommended Tool: Auto Light Shuffle
+Manually wiring `Shuffle` and `Merge` trees for dozens of `<lobe>_<direct|indirect>_<lightgroup>` passes can be tedious. We recommend **[Auto Light Shuffle](/en/auto-light-shuffle/)** ([GitHub](https://github.com/RolandVyens/auto-light-shuffle)) — an open-source Nuke Python script that automatically detects Blender lightgroup AOVs from a selected `Read` node (prioritizing direct/indirect lobe passes, with lobe-only and `Combined_<light>` fallbacks), builds a clean balanced `Merge` tree with labelled `Backdrop` nodes, preserves alpha, and reconstructs the Beauty pass in one click.
+:::
+
 ::: tip
 A useful compositing check: the sum of all lightgroup lobe passes (plus emissive `Combined_<lg>` passes) should closely match the overall `rgba` beauty pass.
 :::
@@ -102,6 +106,7 @@ A useful compositing check: the sum of all lightgroup lobe passes (plus emissive
 
 ## See Also
 
+- [Auto Light Shuffle](/en/auto-light-shuffle/) — Automatic Nuke shuffling and layered merging for Blender lightgroup & lobe AOVs.
 - [Pass & AOV System (API)](/en/industrial-cg-platform/api/pass-system) — Internal pass registration and readback architecture.
 - [Cycles Kernel Extensions (API)](/en/industrial-cg-platform/api/cycles-kernel) — Kernel-level lightgroup split index data.
 - [Blender Manual: Light Groups](https://docs.blender.org/manual/en/latest/render/layers/passes.html) — Standard Blender light group documentation.
