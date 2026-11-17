@@ -27,6 +27,12 @@ description: "本页将为您介绍 Industrial AOV Connector 的基础功能和�
 
 ---
 
+## 自动关闭默认渲染输出（5.3.0）
+
+在插件偏好设置 → 核心功能中，“自动关闭默认渲染输出”默认开启。执行 `Cook Nodetree` 或 `Update Current Viewlayer` 后，会自动关闭场景的 `Save Output`，通过文件输出节点保存 AOV。需要 Blender 5.2 或支持该功能的版本。
+
+---
+
 ## **UI 隐藏/辅助功能**
 
 ### **`Delete Useless Default Renders` 按钮**

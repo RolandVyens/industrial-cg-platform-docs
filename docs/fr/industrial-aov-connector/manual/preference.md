@@ -21,10 +21,13 @@ Force le plugin à utiliser l'ancienne convention de nommage des couches EXR (co
 ### 3. **Only Create Nodes For Enabled Viewlayers (Créer des nœuds uniquement pour les calques de vue activés)**
 Lorsqu'il est actif, le plugin ignore les calques de vue dont la case `Use for Rendering` (Utiliser pour le rendu) est décochée dans les propriétés des calques de vue, ce qui permet d'économiser de l'espace de nœud et du temps de traitement.
 
-### 4. **Auto Optimize Sample Count For Data Layers (Optimiser automatiquement le nombre d'échantillons pour les couches de données)**
+### 4. **Automatically Disable Default Render Output (Désactiver automatiquement la sortie de rendu par défaut)**
+Ajouté dans la version 5.3.0 et activé par défaut. Après `Cook Nodetree` ou `Update Current Viewlayer`, désactive automatiquement `Save Output` pour la scène afin que les nœuds File Output enregistrent les AOV sans fichier de rendu par défaut supplémentaire. Nécessite Blender 5.2 ou une version prenant en charge cette fonction ; l'option est indisponible sur les versions non compatibles.
+
+### 5. **Auto Optimize Sample Count For Data Layers (Optimiser automatiquement le nombre d'échantillons pour les couches de données)**
 Remplace automatiquement le nombre d'échantillons pour les couches de données lors de la génération de nœuds afin d'accélérer le rendu. Vous pouvez configurer une limite d'échantillons spécifique (par exemple, moins d'échantillons pour les passes utilitaires comme Position et Normals).
 
-### 5. **Custom Name Suffix (Suffixe de nom personnalisé)**
+### 6. **Custom Name Suffix (Suffixe de nom personnalisé)**
 Vous permet d'ajouter un texte personnalisé aux fichiers générés. Par exemple, utilisez `#` pour personnaliser le format de remplissage des numéros d'images (frame padding). Le plugin prend également en charge les variables dynamiques (tokens) évaluées au moment du rendu :
 * `$scene$` — Nom de la scène
 * `$file$` — Nom du fichier .blend
@@ -33,7 +36,7 @@ Vous permet d'ajouter un texte personnalisé aux fichiers générés. Par exempl
 
 *Exemple de configuration :* `$camera$_$version$_###`
 
-### 6. **Node Interval Scale When Arranging (Échelle d'intervalle des nœuds lors de l'organisation)**
+### 7. **Node Interval Scale When Arranging (Échelle d'intervalle des nœuds lors de l'organisation)**
 Ajuste l'espacement entre les nœuds lors de l'exécution de la commande `Arrange Nodes`. Cela permet de compenser la mise à l'échelle de l'interface système (par exemple, sur Windows avec une mise à l'échelle d'affichage de 1,5x, définir cette valeur sur `0.67` génère un arbre de nœuds parfaitement espacé).
 
 ---

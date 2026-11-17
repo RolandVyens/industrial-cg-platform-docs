@@ -10,6 +10,16 @@ By automating the construction of complex compositor node trees and file output 
 
 ---
 
+## 5.3.0 Update Log
+
+2026-11-17
+
+- Added **Automatically Disable Default Render Output** under Preferences → Core Function, enabled by default.
+- Creating or updating the node tree automatically disables scene `Save Output`, avoiding additional default render files.
+- Automatically skips unsupported Blender versions, where the preference is shown as unavailable.
+
+---
+
 ## Key Features
 
 ### 🔌 Automated Compositor Output Management

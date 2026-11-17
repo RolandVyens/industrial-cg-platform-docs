@@ -27,6 +27,12 @@ Réaligne et nettoie la disposition des nœuds associés à l'Industrial AOV Con
 
 ---
 
+## Contrôle automatique de la sortie de rendu par défaut (5.3.0)
+
+**Automatically Disable Default Render Output** est activé par défaut dans les préférences du plugin → Core Function. `Cook Nodetree` et `Update Current Viewlayer` désactivent automatiquement `Save Output` pour la scène, laissant les nœuds File Output enregistrer les AOV. Nécessite Blender 5.2 ou une version prenant en charge cette fonction.
+
+---
+
 ## **Contenu masqué / d'aide de l'interface**
 
 ### **Bouton `Delete Useless Default Renders` (Supprimer les rendus par défaut inutiles)**

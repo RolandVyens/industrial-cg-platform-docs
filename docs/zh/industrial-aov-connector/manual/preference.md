@@ -21,10 +21,13 @@ description: "本页将详细解释 Industrial AOV Connector 偏好设置中的�
 ### 3. **Only Create Nodes For Enabled Viewlayers (仅为启用层生成节点)**
 仅为勾选了 `Use For Rendering` (用于渲染) 的视图层生成合成节点，从而节省合成编辑器的节点空间和生成速度。
 
-### 4. **Auto Optimize Sample Count For Data Layers (自动优化数据层采样)**
+### 4. **Automatically Disable Default Render Output (自动关闭默认渲染输出)**
+5.3.0 新增，默认开启。执行 `Cook Nodetree` 或 `Update Current Viewlayer` 后，自动关闭场景的 `Save Output`，通过文件输出节点保存 AOV，避免额外生成默认渲染文件。需要 Blender 5.2 或支持该功能的版本；不支持时，设置项显示为不可用。
+
+### 5. **Auto Optimize Sample Count For Data Layers (自动优化数据层采样)**
 启用后，插件在烘焙节点树时会为三维数据层应用 **采样率覆盖 (sample count override)**。由于数据通道（如法线、坐标）不需要Beauty层那么高的采样数，这能极大缩短整体渲染时间。您可以在此处设定数据层专用的采样数。
 
-### 5. **Custom Name Suffix (自定义名称后缀)**
+### 6. **Custom Name Suffix (自定义名称后缀)**
 允许在输出的文件名称中添加自定义后缀。例如使用 `#` 来定义帧数占位符（帧补零）。同时，插件支持在渲染时自动解析的动态变量占位符：
 *   `$scene$` — 场景名称
 *   `$file$` — Blender工程文件名
@@ -33,7 +36,7 @@ description: "本页将详细解释 Industrial AOV Connector 偏好设置中的�
 
 *推荐的后缀搭配：* `$camera$_$version$_###`
 
-### 6. **Node Interval Scale When Arranging (节点间距缩放)**
+### 7. **Node Interval Scale When Arranging (节点间距缩放)**
 设置整理节点时的间距比例，用于补偿操作系统的显示缩放。例如在 Windows 开启了 150% (1.5x) 的 DPI 缩放时，将此值设为 `0.67` 可以生成排版完美的节点间距，防止间距过大。
 
 ---

@@ -27,6 +27,12 @@ Re-aligns and cleans up the node layout associated with the Industrial AOV Conne
 
 ---
 
+## Automatic Default Render Output Control (5.3.0)
+
+**Automatically Disable Default Render Output** is enabled by default under add-on Preferences → Core Function. `Cook Nodetree` and `Update Current Viewlayer` automatically disable scene `Save Output`, letting File Output nodes save AOVs. Requires Blender 5.2 or a build that supports this feature.
+
+---
+
 ## **UI Hidden / Helper Content**
 
 ### **`Delete Useless Default Renders` Button**

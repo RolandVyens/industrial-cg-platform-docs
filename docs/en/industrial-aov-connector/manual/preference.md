@@ -21,10 +21,13 @@ Forces the plugin to use the legacy EXR layer naming convention (compatible with
 ### 3. **Only Create Nodes For Enabled Viewlayers**
 When active, the plugin ignores viewlayers that have their `Use for Rendering` checkbox turned off in the View Layer properties, saving node space and build time.
 
-### 4. **Auto Optimize Sample Count For Data Layers**
+### 4. **Automatically Disable Default Render Output**
+Added in 5.3.0 and enabled by default. After `Cook Nodetree` or `Update Current Viewlayer`, automatically disables scene `Save Output` so File Output nodes save AOVs without an additional default render file. Requires Blender 5.2 or a build that supports this feature; the preference is unavailable on unsupported builds.
+
+### 5. **Auto Optimize Sample Count For Data Layers**
 Automatically overrides the sample count for data layers when generating nodes to speed up rendering. You can configure a specific sample limit (e.g., lower samples for utility passes like Position and Normals).
 
-### 5. **Custom Name Suffix**
+### 6. **Custom Name Suffix**
 Allows you to append custom text to the generated files. For example, use `#` to customize the frame padding format. The plugin also supports dynamic tokens that evaluate at render time:
 *   `$scene$` — Scene Name
 *   `$file$` — Blend File Name
@@ -33,7 +36,7 @@ Allows you to append custom text to the generated files. For example, use `#` to
 
 *Example configuration:* `$camera$_$version$_###`
 
-### 6. **Node Interval Scale When Arranging**
+### 7. **Node Interval Scale When Arranging**
 Adjusts the spacing between nodes when running the `Arrange Nodes` command. This helps compensate for system-wide UI scaling (e.g., on Windows with a 1.5x display scale, setting this to `0.67` generates a perfectly spaced nodetree).
 
 ---

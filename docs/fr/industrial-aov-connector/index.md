@@ -10,6 +10,16 @@ En automatisant la construction d'arbres de nœuds de compositing complexes et d
 
 ---
 
+## Journal des modifications 5.3.0
+
+2026-11-17
+
+- Ajout de **Automatically Disable Default Render Output** dans Preferences → Core Function, activé par défaut.
+- La création ou la mise à jour de l'arbre de nœuds désactive automatiquement `Save Output` pour la scène, afin d'éviter les fichiers de rendu par défaut supplémentaires.
+- Les versions de Blender qui ne prennent pas en charge cette fonction sont ignorées et l'option apparaît comme indisponible.
+
+---
+
 ## Fonctionnalités clés
 
 ### 🔌 Gestion automatisée des sorties du compositeur
