@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Non. Industrial CG Platform est un fork de Blender maintenu par la communauté. Il n'est en aucun cas affilié ou approuvé par la Fondation Blender. Il ..."
+description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender 5.2 et fichiers .blend, backends CUDA/OptiX/CPU, gestionnaire ViewLayer, statut Linux Rocky 9 et compilation."
 ---
 # FAQ
 
@@ -8,7 +8,7 @@ description: "Non. Industrial CG Platform est un fork de Blender maintenu par la
 
 ### S'agit-il d'une version officielle de Blender ?
 
-Non. Industrial CG Platform est un fork de Blender maintenu par la communauté. Il n'est en aucun cas affilié ou approuvé par la Fondation Blender. Il est publié sous la même licence open-source GPL-2.0-or-later que Blender.
+Non. Industrial CG Platform est un fork de Blender maintenu par la communauté. Il n'est en aucun cas affilié ou approuvé par la Fondation Blender. Il est publié sous la licence Blender License (GNU GPL v3 ou ultérieure / GPL-3.0-or-later), conformément à Blender.
 
 ### Les fichiers `.blend` sont-ils compatibles avec Blender standard ?
 

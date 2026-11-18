@@ -19,14 +19,16 @@ def parse_markdown(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Extract frontmatter keys
+    # Extract top-level frontmatter keys (ignore indented nested YAML lines)
     fm_keys = set()
-    fm_match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+    fm_match = re.match(r'^---\r?\n(.*?)\r?\n---', content, re.DOTALL)
     if fm_match:
         for line in fm_match.group(1).split('\n'):
+            if line.startswith((' ', '\t', '-', '#')):
+                continue
             if ':' in line:
                 key = line.split(':', 1)[0].strip()
-                if key and not key.startswith('#'):
+                if key:
                     fm_keys.add(key)
     
     # Exclude frontmatter from body search
@@ -55,13 +57,14 @@ def parse_markdown(filepath):
     }
 
 def main():
-    en_files = get_files('docs/en')
+    docs_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../docs'))
+    en_files = get_files(os.path.join(docs_root, 'en'))
     issues = []
     
     for rel_path in sorted(list(en_files)):
-        en_path = os.path.join('docs/en', rel_path)
-        zh_path = os.path.join('docs/zh', rel_path)
-        fr_path = os.path.join('docs/fr', rel_path)
+        en_path = os.path.join(docs_root, 'en', rel_path)
+        zh_path = os.path.join(docs_root, 'zh', rel_path)
+        fr_path = os.path.join(docs_root, 'fr', rel_path)
         
         en_ast = parse_markdown(en_path)
         zh_ast = parse_markdown(zh_path)

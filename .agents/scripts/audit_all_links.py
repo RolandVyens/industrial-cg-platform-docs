@@ -4,7 +4,7 @@ import re
 import urllib.parse
 
 def audit():
-    docs_dir = r"e:\blender_modify\industrial-cg-platform-docs\docs"
+    docs_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../docs"))
     md_files = []
     
     for root, dirs, files in os.walk(docs_dir):

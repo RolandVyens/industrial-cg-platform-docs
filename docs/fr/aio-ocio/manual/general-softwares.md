@@ -1,6 +1,6 @@
 ---
 title: "Configuration Générale des Logiciels"
-description: "Cette page explique comment intégrer les recettes de configuration AIO-OCIO avec Autodesk Maya, Foundry Nuke, SideFX Houdini, et d'autres applications..."
+description: "Guide d'intégration d'AIO-OCIO avec Autodesk Maya, Foundry Nuke, SideFX Houdini et d'autres logiciels DCC."
 ---
 # Configuration Générale des Logiciels
 

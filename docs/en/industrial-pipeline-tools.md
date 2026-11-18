@@ -1,6 +1,7 @@
 ---
 title: "Addons & Pipeline Tools"
-description: "The Industrial 3D suite includes specialized open-source tools and color configurations designed to automate, streamline, and integrate Blender and co..."
+cover: /features/aov.webp
+description: "Open-source Blender VFX add-ons, Nuke scripts, and cross-DCC OpenColorIO configurations including Industrial AOV Connector, Light AOV Splitter, Auto Light Shuffle, and AIO-OCIO."
 ---
 # Addons & Pipeline Tools
 

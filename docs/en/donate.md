@@ -1,6 +1,6 @@
 ---
 title: "Donate"
-description: "Thank you for supporting Industrial 3D! Your donations directly power the open-source research and development of production-ready CG and VFX tools, k..."
+description: "Support Industrial 3D and the open-source development of Industrial CG Platform, Cycles Deep EXR, and VFX pipeline tools for Blender."
 ---
 # Donate
 

@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: 版本发布
+description: "Industrial CG Platform 官方 Windows x64 ZIP 安装包下载、更新日志与 SHA256 校验信息（含 5.2.4 LTS、5.2.2 及历史 5.2.0 版本）。"
 ---
 # 版本发布
 

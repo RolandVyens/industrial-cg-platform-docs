@@ -1,6 +1,6 @@
 ---
 title: "Shadow Color"
-description: "Shadow Color adds a per-light and per-world color property to Blender Cycles that tints the shadow regions cast by each light source. Instead of shado..."
+description: "Shadow Color adds per-light and per-world color properties to Blender Cycles to tint shadow regions artistically without altering lit surfaces."
 cover: "/features/shadow-color.webp"
 ---
 # Shadow Color

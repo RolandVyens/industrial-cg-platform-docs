@@ -1,5 +1,5 @@
 ---
-title: "Development Tracking & Roadmap — Industrial CG Platform"
+title: "Development Tracking & Roadmap"
 description: "Track released production features, active candidate R&D, and planned roadmap items for the Industrial CG Platform Blender VFX fork."
 cover: /features/platform.webp
 aside: false

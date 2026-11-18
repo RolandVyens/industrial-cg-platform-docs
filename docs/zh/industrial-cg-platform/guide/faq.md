@@ -1,6 +1,6 @@
 ---
 title: "常见问题 (FAQ)"
-description: "不是。Industrial CG Platform 是一个由社区发起并维护的 Blender 生产级分支（Fork），与 Blender 基金会（Blender Foundation）无直接关联或背书关系。它使用与 Blender 相同的 GPL-2.0-or-later（或更高版本）开源许可证发布..."
+description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blender 5.2 兼容性、.blend 文件互通、CUDA/OptiX/CPU 渲染后端、ViewLayer 管理器、Rocky Linux 9 进度及源码编译。"
 ---
 # 常见问题 (FAQ)
 
@@ -8,7 +8,7 @@ description: "不是。Industrial CG Platform 是一个由社区发起并维护�
 
 ### 这是 Blender 的官方发行版吗？
 
-不是。Industrial CG Platform 是一个由社区发起并维护的 Blender 生产级分支（Fork），与 Blender 基金会（Blender Foundation）无直接关联或背书关系。它使用与 Blender 相同的 GPL-2.0-or-later（或更高版本）开源许可证发布。
+不是。Industrial CG Platform 是一个由社区发起并维护的 Blender 生产级分支（Fork），与 Blender 基金会（Blender Foundation）无直接关联或背书关系。它遵循与 Blender 一致的 Blender License（GNU GPL v3 或更高版本 / GPL-3.0-or-later）开源许可证发布。
 
 ### 在此平台创建的 `.blend` 文件与官方 Stock Blender 兼容吗？
 

@@ -24,3 +24,7 @@ MANDATORY syntax rules for VitePress, Vue, and Markdown:
 6. REGEX MASS-REPLACE ON FRONTMATTER:
    When using Python scripts or regex to mass-replace text across markdown files, ALWAYS implement logic to explicitly skip the YAML frontmatter block (between `---`).
    - Failure to isolate frontmatter can lead to catastrophic metadata corruption (e.g., replacing SEO `description` values with CSS snippets).
+
+7. FRONTMATTER `description` & CLEAN URL TRAILING SLASHES:
+   - Never add `meta[name="description"]` inside `frontmatter.head`; always use top-level `description:` so VitePress and `docs/.vitepress/seo.ts` stay aligned.
+   - Because `cleanUrls: true` is enabled, non-index `.md` pages resolve WITHOUT trailing slashes; never hardcode trailing slashes on non-index internal links or canonicals.

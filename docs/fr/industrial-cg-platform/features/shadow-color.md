@@ -1,6 +1,6 @@
 ---
 title: "Couleur d'ombre"
-description: "La couleur d'ombre (Shadow Color) ajoute une propriété de couleur par lumière et par monde à Blender Cycles qui teinte les régions d'ombre projetées p..."
+description: "La couleur d'ombre (Shadow Color) ajoute une propriété par lumière et par monde dans Blender Cycles pour teinter artistiquement les ombres sans altérer les zones éclairées."
 cover: "/features/shadow-color.webp"
 ---
 # Couleur d'ombre

@@ -7,6 +7,8 @@ MANDATORY actions before any `git push`:
    Must output `Found 0 issues`.
    Execute `python .agents/scripts/audit_content_parity.py`.
    Must output `ALL CONTENT PARITY CHECKS PASSED.`.
+   Execute `node .agents/scripts/audit_frontmatter.js`.
+   Must output `ALL FRONTMATTER CHECKS PASSED.`.
 
 2. RUN BUILD TEST:
    Execute `npm run docs:build`.

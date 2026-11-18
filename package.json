@@ -8,6 +8,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "audit:built-assets": "node .agents/scripts/audit_built_assets.js",
+    "update:lastmod": "node .agents/scripts/update_lastmod_map.mjs",
     "prepare": "husky"
   },
   "devDependencies": {

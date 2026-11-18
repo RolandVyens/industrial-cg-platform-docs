@@ -28,6 +28,7 @@ hero:
       link: /en/feature-tracking
 
 description: "A Blender-based production platform for advanced VFX workflows."
+cover: /splash.webp
 ---
 <div class="custom-features-grid">
   <a href="/en/industrial-cg-platform/features/deep-exr" class="feature-bg-card" style="background-image: url('/features/deep-exr.webp')">

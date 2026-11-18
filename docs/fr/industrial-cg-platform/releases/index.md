@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Versions
+description: "Téléchargements officiels ZIP Windows x64, notes de version et empreintes SHA256 pour Industrial CG Platform (incluant 5.2.4 LTS, 5.2.2 et les versions 5.2.0)."
 ---
 # Versions
 

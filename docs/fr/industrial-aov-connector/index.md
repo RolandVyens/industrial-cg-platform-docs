@@ -1,6 +1,7 @@
 ---
 title: "Industrial AOV Connector"
-description: "Industrial AOV Connector est un module externe open-source avancé pour Blender, conçu pour simplifier et automatiser la configuration des variables de..."
+cover: /features/aov.webp
+description: "Industrial AOV Connector est un add-on Blender open-source qui automatise les arbres File Output d'AOV, le débruitage, Fake Deep et l'alignement des passes Nuke."
 ---
 # Industrial AOV Connector
 

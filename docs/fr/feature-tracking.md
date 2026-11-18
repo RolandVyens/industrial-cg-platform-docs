@@ -1,5 +1,5 @@
 ---
-title: "Suivi du développement & Feuille de route — Industrial CG Platform"
+title: "Suivi du développement & Feuille de route"
 description: "Suivez les fonctionnalités de production publiées, la R&D candidate en cours et la feuille de route prévue pour la branche VFX Blender Industrial CG Platform."
 cover: /features/platform.webp
 aside: false

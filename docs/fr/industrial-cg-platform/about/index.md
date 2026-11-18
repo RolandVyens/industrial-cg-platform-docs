@@ -1,6 +1,6 @@
 ---
 title: "À propos du projet"
-description: "Blender est déjà un outil de création puissant, mais la production VFX nécessite souvent plus que de simples résultats visuels magnifiques dans le vie..."
+description: "Origine, feuille de route VFX, relations amont avec Blender, crédits et licences d'Industrial CG Platform."
 ---
 # À propos du projet
 

@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Releases
+description: "Official Windows x64 ZIP downloads, release notes, and SHA256 hashes for Industrial CG Platform (including 5.2.4 LTS, 5.2.2, and historical 5.2.0 builds)."
 ---
 # Releases
 

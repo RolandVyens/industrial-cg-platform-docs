@@ -1,6 +1,7 @@
 ---
 title: "AIO-OCIO"
-description: "AIO-OCIO is a unified, all-in-one OpenColorIO (OCIO) color management configuration profile optimized for modern cross-application VFX and CG producti..."
+cover: /features/ocio.webp
+description: "AIO-OCIO is a unified OpenColorIO (OCIO) 2.0+ configuration profile aligning AgX, Filmic, ACES, and camera log spaces across Blender, Maya, Nuke, and Houdini."
 ---
 # AIO-OCIO
 

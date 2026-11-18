@@ -1,6 +1,6 @@
 ---
 title: "bQt Integration & Usage Guide"
-description: "Industrial CG Platform bundles a complete, production-grade PyQt/PySide6 runtime environment (bQt) directly as a system extension. This enables develo..."
+description: "Guide to the bundled PySide6 / bQt runtime extension in Industrial CG Platform for building production Qt UI tools inside Blender."
 ---
 # bQt Integration & Usage Guide
 

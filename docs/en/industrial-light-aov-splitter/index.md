@@ -1,6 +1,7 @@
 ---
 title: "Industrial Light AOV Splitter"
-description: "Industrial Light AOV Splitter is a specialized production utility add-on for Blender that automates the setup, separation, and materialization of indi..."
+cover: /features/light.webp
+description: "Industrial Light AOV Splitter is a Blender add-on that separates lightgroups into diffuse, specular, transmission, and volume AOV passes for Nuke relighting."
 ---
 # Industrial Light AOV Splitter
 

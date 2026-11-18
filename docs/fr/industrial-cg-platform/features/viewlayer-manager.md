@@ -1,6 +1,6 @@
 ---
 title: "Gestionnaire de ViewLayer"
-description: "Le gestionnaire de ViewLayer (ViewLayer Manager) est une fenêtre d'outil dédiée basée sur Qt qui fournit une interface complète pour gérer les ViewLay..."
+description: "Le gestionnaire de ViewLayer est une fenêtre Qt/BQt autonome dans Industrial CG Platform pour gérer ViewLayers, passes de rendu, Shader AOVs, lightgroups et préréglages."
 cover: "/features/viewlayer.webp"
 ---
 # Gestionnaire de ViewLayer

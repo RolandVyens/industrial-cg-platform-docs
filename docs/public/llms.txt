@@ -1,0 +1,53 @@
+# Industrial CG Platform
+
+> Industrial CG Platform is a production-oriented VFX fork of Blender 5.2 (current release 5.2.4 LTS, Windows x64) with native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
+
+- Current release: 5.2.4 LTS (Windows x64 ZIP)
+- Linux support: Rocky Linux 9 (in progress, ~5%, not yet released)
+- Primary audiences: VFX studios, technical directors (TDs), lighting artists, and compositors
+
+## Core Documentation
+
+- [Platform Home](https://cgweave.com/en/industrial-cg-platform/): Overview of the Blender 5.2 VFX branch and core feature set.
+- [Getting Started](https://cgweave.com/en/industrial-cg-platform/guide/getting-started): Introduction, target workflows, compatibility with stock Blender 5.2, and quick links.
+- [Installation](https://cgweave.com/en/industrial-cg-platform/guide/installation): Windows 10/11 x64 requirements, ZIP setup, and Cycles CUDA/OptiX configuration.
+- [Building from Source](https://cgweave.com/en/industrial-cg-platform/guide/building-from-source): Source build guide with Visual Studio 2022, CMake, Ninja, `make update`, and Git LFS hydration checks.
+- [FAQ](https://cgweave.com/en/industrial-cg-platform/guide/faq): Blender compatibility, GPU/CPU backends, ViewLayer Manager behavior, and build troubleshooting.
+- [Development Tracking](https://cgweave.com/en/feature-tracking): Live status of shipped features, active R&D, and planned roadmap items.
+
+## Core Platform Features
+
+- [Deep EXR](https://cgweave.com/en/industrial-cg-platform/features/deep-exr): Native Cycles Deep EXR output (Simple and Physical modes, surface and volume deep samples) for lossless deep compositing in Nuke.
+- [EXR Overscan](https://cgweave.com/en/industrial-cg-platform/features/exr-overscan): Cycles overscan rendering preserving `displayWindow` and expanding `dataWindow` in OpenEXR metadata.
+- [Lightgroup Lobe Passes](https://cgweave.com/en/industrial-cg-platform/features/lightgroup-lobe-passes): Per-lightgroup direct and indirect diffuse, glossy, transmission, and volume passes in Cycles.
+- [Shadow Color](https://cgweave.com/en/industrial-cg-platform/features/shadow-color): Per-light and per-world artistic shadow tinting in Cycles.
+- [ViewLayer Manager](https://cgweave.com/en/industrial-cg-platform/features/viewlayer-manager): Standalone Qt/BQt window for ViewLayers, render passes, Shader AOVs, lightgroups, and batch presets.
+
+## Pipeline Plugins & Color Management
+
+- [Pipeline Tools Overview](https://cgweave.com/en/industrial-pipeline-tools): Directory of Industrial 3D add-ons, Nuke scripts, and cross-DCC color configs.
+- [Industrial AOV Connector](https://cgweave.com/en/industrial-aov-connector/): Blender compositor add-on (5.3.0) automating AOV File Output trees, denoising routing, Fake Deep, and Nuke pass naming.
+- [Industrial Light AOV Splitter](https://cgweave.com/en/industrial-light-aov-splitter/): Blender add-on separating `lgt_*` lightgroups into diffuse, specular, transmission, and volume AOV passes.
+- [Auto Light Shuffle](https://cgweave.com/en/auto-light-shuffle/): Companion Foundry Nuke Python script reconstructing Blender lightgroup AOVs into balanced layered Merge trees.
+- [AIO-OCIO](https://cgweave.com/en/aio-ocio/): Unified OpenColorIO 2.0+ configuration aligning AgX, Filmic, ACES, and camera log spaces across Blender, Maya, Nuke, and Houdini.
+
+## API Reference & Releases
+
+- [API Reference](https://cgweave.com/en/industrial-cg-platform/api/): C++ Cycles kernel extensions, RNA properties, Python operators, bQt runtime, and Pass/AOV internals.
+- [Release Notes & Downloads](https://cgweave.com/en/industrial-cg-platform/releases/): Windows x64 ZIP release archive, SHA256 hashes, and changelogs.
+- [GitHub Repository](https://github.com/RolandVyens/industrial-cg-platform): Source code repository.
+- [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases): Official Windows x64 release binaries and checksums.
+
+## Engineering Blog
+
+- [Ecosystem Devlog](https://cgweave.com/blog/): Technical architecture notes and engineering updates.
+- [Deep EXR Architecture Upgrade](https://cgweave.com/blog/posts/2026-10-17-deep-exr-architecture): Architectural overhaul for continuous volume integration and Simple/Physical modes shipped in 5.2.4 LTS.
+- [Blender Deep EXR in Nuke](https://cgweave.com/blog/posts/2026-07-22-deep-exr-compositing): Eliminating 2D holdout re-renders in Nuke deep compositing workflows.
+- [Lightgroup Lobe Passes in Nuke](https://cgweave.com/blog/posts/2026-07-22-lightgroup-lobe-passes): Separating direct and indirect diffuse, glossy, transmission, and volume passes per lightgroup.
+- [Code Quality Month](https://cgweave.com/blog/posts/2026-06-29-code-quality-month): W0-W6 refactoring and Deep EXR memory reduction log.
+
+## Multilingual Documentation
+
+- [English](https://cgweave.com/en/)
+- [简体中文](https://cgweave.com/zh/)
+- [Français](https://cgweave.com/fr/)
