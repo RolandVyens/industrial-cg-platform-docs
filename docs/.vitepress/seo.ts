@@ -108,13 +108,36 @@ const PLUGIN_SCHEMA: Record<
   },
 }
 
+interface LastmodEntry {
+  lastmod: string
+  blob?: string
+}
+
 interface GitLastmodState {
   isShallow: boolean
-  staticMap: Record<string, string>
+  staticMap: Record<string, LastmodEntry>
   shallowOverrides: Record<string, string>
+  headBlobs: Record<string, string>
+  headCommitIso: string
 }
 
 let cachedLastmodState: GitLastmodState | null = null
+
+function parseStaticMap(raw: unknown): Record<string, LastmodEntry> {
+  if (!raw || typeof raw !== 'object') return {}
+  const out: Record<string, LastmodEntry> = {}
+  for (const [k, v] of Object.entries(raw as Record<string, unknown>)) {
+    if (typeof v === 'string') {
+      out[k] = { lastmod: v }
+    } else if (v && typeof v === 'object' && typeof (v as LastmodEntry).lastmod === 'string') {
+      out[k] = {
+        lastmod: (v as LastmodEntry).lastmod,
+        ...(typeof (v as LastmodEntry).blob === 'string' ? { blob: (v as LastmodEntry).blob } : {}),
+      }
+    }
+  }
+  return out
+}
 
 function getGitLastmodState(): GitLastmodState {
   if (cachedLastmodState) return cachedLastmodState
@@ -129,30 +152,52 @@ function getGitLastmodState(): GitLastmodState {
     isShallow = false
   }
 
-  let staticMap: Record<string, string> = {}
+  let staticMap: Record<string, LastmodEntry> = {}
   if (fs.existsSync(LASTMOD_MAP_PATH)) {
     try {
-      staticMap = JSON.parse(fs.readFileSync(LASTMOD_MAP_PATH, 'utf8'))
+      staticMap = parseStaticMap(JSON.parse(fs.readFileSync(LASTMOD_MAP_PATH, 'utf8')))
     } catch {
       staticMap = {}
     }
   }
 
   const shallowOverrides: Record<string, string> = {}
+  const headBlobs: Record<string, string> = {}
+  let headCommitIso = ''
+
   if (isShallow) {
     try {
+      const headTs = execFileSync('git', ['log', '-1', '--format=%cI', 'HEAD'], {
+        encoding: 'utf8',
+      }).trim()
+      if (headTs) headCommitIso = new Date(headTs).toISOString()
+
+      const treeOut = execFileSync('git', ['ls-tree', '-r', 'HEAD', '--', 'docs'], {
+        encoding: 'utf8',
+        maxBuffer: 16 * 1024 * 1024,
+      })
+      for (const line of treeOut.split(/\r?\n/)) {
+        const match = line.match(/^\d+\s+blob\s+([0-9a-f]+)\tdocs\/(.+\.md)$/)
+        if (match) headBlobs[match[2]] = match[1]
+      }
+
+      // Only trust git log --name-only for commits that have a parent in this shallow repo;
+      // grafted shallow-root commits list every file in the repository.
       const logOut = execFileSync(
         'git',
-        ['log', '--name-only', '--pretty=format:__COMMIT__%cI', '--', 'docs'],
-        { encoding: 'utf8' }
+        ['log', '--name-only', '--pretty=format:__COMMIT__%cI|%P', '--', 'docs'],
+        { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }
       )
       let currentIso = ''
+      let hasParent = false
       for (const rawLine of logOut.split(/\r?\n/)) {
         const line = rawLine.trim()
         if (!line) continue
         if (line.startsWith('__COMMIT__')) {
-          currentIso = new Date(line.slice('__COMMIT__'.length)).toISOString()
-        } else if (currentIso && line.startsWith('docs/') && line.endsWith('.md')) {
+          const [isoRaw, parentsRaw = ''] = line.slice('__COMMIT__'.length).split('|')
+          hasParent = parentsRaw.trim().length > 0
+          currentIso = hasParent && isoRaw ? new Date(isoRaw).toISOString() : ''
+        } else if (hasParent && currentIso && line.startsWith('docs/') && line.endsWith('.md')) {
           const relFromDocs = line.slice('docs/'.length)
           if (!shallowOverrides[relFromDocs]) {
             shallowOverrides[relFromDocs] = currentIso
@@ -164,14 +209,29 @@ function getGitLastmodState(): GitLastmodState {
     }
   }
 
-  cachedLastmodState = { isShallow, staticMap, shallowOverrides }
+  cachedLastmodState = { isShallow, staticMap, shallowOverrides, headBlobs, headCommitIso }
   return cachedLastmodState
 }
 
-export function resolveFallbackTimestamp(relativePath: string): number | undefined {
+function resolveShallowIso(relativePath: string): string | undefined {
   const state = getGitLastmodState()
   if (!state.isShallow) return undefined
-  const iso = state.shallowOverrides[relativePath] ?? state.staticMap[relativePath]
+  if (state.shallowOverrides[relativePath]) {
+    return state.shallowOverrides[relativePath]
+  }
+  const entry = state.staticMap[relativePath]
+  const headBlob = state.headBlobs[relativePath]
+  if (entry) {
+    if (!entry.blob || !headBlob || entry.blob === headBlob) {
+      return entry.lastmod
+    }
+    return state.headCommitIso || entry.lastmod
+  }
+  return state.headCommitIso || undefined
+}
+
+export function resolveFallbackTimestamp(relativePath: string): number | undefined {
+  const iso = resolveShallowIso(relativePath)
   if (!iso) return undefined
   const ms = Date.parse(iso)
   return Number.isNaN(ms) ? undefined : ms
@@ -206,7 +266,7 @@ export function transformSitemapItems(items: SitemapItem[]): SitemapItem[] {
       if (state.isShallow) {
         const relPath = resolveRelPathFromSitemapUrl(item.url)
         if (relPath) {
-          const iso = state.shallowOverrides[relPath] ?? state.staticMap[relPath]
+          const iso = resolveShallowIso(relPath)
           if (iso) {
             updated.lastmod = iso
           }
