@@ -1,11 +1,9 @@
 ---
 layout: home
 title: Blender VFX Fork with Native Deep EXR & EXR Overscan
-titleTemplate: Industrial CG Platform
+titleTemplate: ":title | Industrial CG Platform"
+cover: /home-splash.webp
 head:
-  - - meta
-    - name: description
-      content: "Industrial CG Platform is a Windows-exclusive VFX rendering fork based on Blender 5.2. Features native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and production ViewLayers."
   - - script
     - type: application/ld+json
     - |
@@ -17,7 +15,12 @@ head:
         "operatingSystem": "Windows 64-bit",
         "description": "A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.",
         "softwareVersion": "5.2.4",
+        "url": "https://cgweave.com/en/industrial-cg-platform/",
+        "downloadUrl": "https://cgweave.com/en/industrial-cg-platform/releases/",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "publisher": {
+          "@id": "https://cgweave.com/#organization"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -39,7 +42,7 @@ hero:
     - theme: alt
       text: Pipeline Tools
       link: /en/industrial-pipeline-tools
-description: "Industrial CG Platform is a Windows-exclusive VFX rendering fork based on Blender 5.2. Features native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and production ViewLayers."
+description: "Download Industrial CG Platform (5.2.4 LTS, Windows x64), a Blender 5.2 VFX fork with native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and ViewLayer Manager for Nuke, Maya, and Houdini pipelines."
 ---
 <div class="custom-features-grid">
   <a href="/en/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

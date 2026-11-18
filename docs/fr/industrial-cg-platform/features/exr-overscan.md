@@ -1,10 +1,6 @@
 ---
 title: Comment rendre l'Overscan EXR dans Blender sans changer le cadrage de la caméra
-head:
-  - - meta
-    - name: description
-      content: "Apprenez à rendre un véritable overscan EXR dans Blender Cycles pour les workflows de distorsion d'objectif, en préservant les métadonnées displayWindow."
-description: "L'Overscan EXR est une fonctionnalité de rendu dans Industrial CG Platform qui permet au moteur Cycles de Blender de calculer des marges de pixels sup..."
+description: "Apprenez à rendre un véritable overscan EXR dans Blender Cycles pour les workflows de distorsion d'objectif, en préservant les métadonnées displayWindow."
 cover: "/features/overscan.webp"
 ---
 # Overscan EXR

@@ -1,6 +1,6 @@
 ---
 title: "Faire un don"
-description: "Merci de soutenir Industrial 3D ! Vos dons financent directement la recherche et le développement open-source d'outils de CG et de VFX professionnels,..."
+description: "Soutenez Industrial 3D et le développement open-source d'Industrial CG Platform, de Cycles Deep EXR et des outils de pipeline VFX pour Blender."
 ---
 # Faire un don
 

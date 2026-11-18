@@ -1,6 +1,6 @@
 ---
 title: "Building from Source"
-description: "| Tool | Version | Notes |"
+description: "Build Industrial CG Platform from source on Windows using Visual Studio 2022, CMake, Ninja, precompiled Blender dependencies via make update, and Git LFS hydration checks."
 ---
 # Building from Source
 

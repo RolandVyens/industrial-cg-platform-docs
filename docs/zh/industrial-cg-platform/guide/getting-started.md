@@ -1,6 +1,7 @@
 ---
 title: "快速开始"
-description: "!Industrial CG Platform Splash"
+cover: /splash.webp
+description: "快速上手 Industrial CG Platform：面向影视特效工作室、TD、灯光师与合成师的 Blender 5.2 VFX 分支，原生提供 Cycles Deep EXR、EXR Overscan、灯光组分量通道、阴影颜色与 ViewLayer 管理器。"
 ---
 # 快速开始
 

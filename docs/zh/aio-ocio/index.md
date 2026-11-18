@@ -1,5 +1,6 @@
 ---
 title: "AIO-OCIO"
+cover: /features/ocio.webp
 description: "AIO-OCIO 是一个统一的、多合一的 OpenColorIO (OCIO) 色彩管理配置文件，专为现代跨软件 VFX 和 CG 制作管线优化。"
 ---
 # AIO-OCIO

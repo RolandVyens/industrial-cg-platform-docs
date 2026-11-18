@@ -28,6 +28,7 @@ hero:
       link: /fr/feature-tracking
 
 description: "Une plateforme de production basée sur Blender pour des flux de travail VFX avancés."
+cover: /splash.webp
 ---
 
 <div class="custom-features-grid">

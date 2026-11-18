@@ -1,6 +1,6 @@
 ---
 title: "Compilation depuis les sources"
-description: "| Outil | Version | Notes |"
+description: "Compilez Industrial CG Platform depuis les sources sous Windows avec Visual Studio 2022, CMake, Ninja, make update pour les dépendances Blender et la vérification Git LFS."
 ---
 # Compilation depuis les sources
 

@@ -1,10 +1,6 @@
 ---
 title: Passes de lobes direct et indirect par Lightgroup dans Cycles
-head:
-  - - meta
-    - name: description
-      content: "Découvrez comment séparer les lobes diffus, brillants, de transmission et de volume pour des lightgroups individuels dans Blender Cycles pour un relighting précis dans Nuke."
-description: "Les passes par lobe de lightgroup étendent le système de passes de lumière de Blender Cycles en décomposant chaque lightgroup (groupe de lumières) en ..."
+description: "Découvrez comment séparer les lobes diffus, brillants, de transmission et de volume pour des lightgroups individuels dans Blender Cycles pour un relighting précis dans Nuke."
 cover: "/features/lightgroups.webp"
 ---
 # Passes par lobe de lightgroup

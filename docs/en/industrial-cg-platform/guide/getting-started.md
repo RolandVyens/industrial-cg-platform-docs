@@ -1,6 +1,7 @@
 ---
 title: "Getting Started"
-description: "!Industrial CG Platform Splash"
+cover: /splash.webp
+description: "Get started with Industrial CG Platform, a Blender 5.2 VFX fork for studios, TDs, lighting artists, and compositors featuring native Cycles Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager."
 ---
 # Getting Started
 

@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "| Composant | Configuration |"
+description: "Configuration requise et guide d'installation ZIP Windows x64 pour Industrial CG Platform 5.2.4 LTS, incluant la vérification SHA256, la configuration GPU CUDA/OptiX et la coexistence avec Blender 5.2 standard."
 ---
 # Installation
 

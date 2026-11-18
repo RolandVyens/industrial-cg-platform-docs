@@ -1,6 +1,6 @@
 ---
 title: "ViewLayer 管理器"
-description: "ViewLayer 管理器是一个专用的、基于 Qt 的工具窗口，提供了一个直观且全面的界面，用于管理场景 ViewLayer（视图层）、渲染通道（Render Passes）、Shader AOV（着色器 AOV）、灯光组（Lightgroups）以及 Cycles 灯光通道 AOV 控制——全部集..."
+description: "ViewLayer 管理器是 Industrial CG Platform 内置的独立 Qt/BQt 工具窗口，支持集中管理视图层、渲染通道、Shader AOV、灯光组与批量预设。"
 cover: "/features/viewlayer.webp"
 ---
 # ViewLayer 管理器

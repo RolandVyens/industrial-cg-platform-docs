@@ -14,7 +14,7 @@ C. `docs/[en|zh|fr]/industrial-cg-platform/` (Core Docs)
 - ALLOWED: `index.md` contains platform Hero (`Industrial CG Platform`) and feature cards. `guide/` for user operation. `features/` for technical explanations. `api/` for C++/RNA/Python internals. `releases/` for release feed.
 - FORBIDDEN: `guide/` must not contain C++ RNA or source-code API logic. API logic goes to `/api/`.
 
-D. `docs/[en|zh|fr]/[industrial-aov-connector|industrial-light-aov-splitter|aio-ocio]/` (Plugin Docs)
+D. `docs/[en|zh|fr]/[industrial-aov-connector|industrial-light-aov-splitter|auto-light-shuffle|aio-ocio]/` (Plugin Docs)
 - ALLOWED: Node graphs, installation, UI panels.
 - FORBIDDEN: Do not mix features from Plugin A into Plugin B's manual. Total isolation.
 
@@ -30,3 +30,8 @@ G. Top Navbar & Dynamic Brand Architecture (`docs/.vitepress/config.mts` & `docs
 - Top-level ecosystem navigation consists of two primary dropdowns: **`Industrial CG Platform`** and **`Plugins` (`插件` / `Plugins`)**, with each product's technical manual nested inside its respective dropdown (no separate top-level `Technical Docs` menu).
 - Top-level navbar dropdown triggers (`Industrial CG Platform` and `Plugins`) are clickable in desktop view and navigate directly to `/[locale]/industrial-cg-platform/` and `/[locale]/industrial-pipeline-tools`.
 - Top-left navbar brand title (`siteTitle: false` + `#nav-bar-title-after` slot) dynamically switches between **`Industrial CG Platform`** (on `/[locale]/industrial-cg-platform/...` and `/[locale]/feature-tracking`) and **`Industrial 3D`** (on global homepage, plugin pages, blog, donate, and about pages).
+
+H. SEO, AI Discovery & Root Routing (`docs/index.md`, `docs/public/`, `docs/.vitepress/seo.ts`, `docs/.vitepress/git-lastmod.json`)
+- `docs/index.md` serves as the `<noscript>`/metadata fallback for `/` while `docs/public/_redirects` handles the Cloudflare Pages 301 redirect (`/ -> /en/`).
+- `docs/public/robots.txt`, `llms.txt`, `llms-full.txt`, and `_headers` govern crawler access, LLM indexing, and response headers.
+- `docs/.vitepress/seo.ts` centralizes OG/Twitter meta, JSON-LD, clean canonical URLs, and `sitemap.xml` `lastmod` shallow-clone fallback via `docs/.vitepress/git-lastmod.json`.

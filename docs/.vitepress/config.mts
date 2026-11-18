@@ -1,4 +1,14 @@
 import { defineConfig } from 'vitepress'
+import {
+  BASE_URL,
+  buildSeoHead,
+  normalizePageSeoData,
+  resolveFallbackTimestamp,
+  SITE_ORIGIN,
+  toCanonicalUrl,
+  toCleanPath,
+  transformSitemapItems,
+} from './seo'
 
 // Shared nav/sidebar helpers mapped to the new /industrial-cg-platform/ nested structure
 const enFeatures = [
@@ -58,55 +68,45 @@ export default defineConfig({
   description: 'Blender VFX Fork by CGWeave',
   appearance: 'force-dark',
   sitemap: {
-    hostname: 'https://cgweave.com'
+    hostname: SITE_ORIGIN,
+    transformItems: transformSitemapItems,
   },
   transformPageData(pageData) {
-    const relativePath = pageData.relativePath.replace(/index\.md$/, '');
-    let cleanPath = relativePath.replace(/\.md$/, '');
-    if (cleanPath && !cleanPath.endsWith('/')) {
-        cleanPath += '/';
-    }
-    
-    let basePath = cleanPath;
-    if (cleanPath.startsWith('zh/')) basePath = cleanPath.substring(3);
-    else if (cleanPath.startsWith('fr/')) basePath = cleanPath.substring(3);
-    else if (cleanPath.startsWith('en/')) basePath = cleanPath.substring(3);
+    normalizePageSeoData(pageData)
+    const cleanPath = toCleanPath(pageData.relativePath)
 
-    pageData.frontmatter.head ??= [];
-    const baseUrl = 'https://cgweave.com/';
+    const fallbackTs = resolveFallbackTimestamp(pageData.relativePath)
+    if (fallbackTs !== undefined) {
+      pageData.lastUpdated = fallbackTs
+    }
+
+    let basePath = cleanPath
+    if (cleanPath.startsWith('zh/')) basePath = cleanPath.substring(3)
+    else if (cleanPath.startsWith('fr/')) basePath = cleanPath.substring(3)
+    else if (cleanPath.startsWith('en/')) basePath = cleanPath.substring(3)
+
+    pageData.frontmatter.head ??= []
+    const canonicalHref = toCanonicalUrl(pageData.relativePath)
     // The shared blog is English-only and has no locale-prefixed copies.
     if (cleanPath.startsWith('blog/')) {
       pageData.frontmatter.head.push(
-        ['link', { rel: 'canonical', href: `${baseUrl}${cleanPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}${cleanPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}${cleanPath}` }]
-      );
-      return;
+        ['link', { rel: 'canonical', href: canonicalHref }],
+        ['link', { rel: 'alternate', hreflang: 'en', href: canonicalHref }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: canonicalHref }]
+      )
+      return
     }
     pageData.frontmatter.head.push(
-      ['link', { rel: 'canonical', href: `${baseUrl}${cleanPath}` }],
-      ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}en/${basePath}` }],
-      ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: `${baseUrl}zh/${basePath}` }],
-      ['link', { rel: 'alternate', hreflang: 'fr', href: `${baseUrl}fr/${basePath}` }],
-      ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}en/${basePath}` }]
-    );
+      ['link', { rel: 'canonical', href: canonicalHref }],
+      ['link', { rel: 'alternate', hreflang: 'en', href: `${BASE_URL}en/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: `${BASE_URL}zh/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'fr', href: `${BASE_URL}fr/${basePath}` }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: `${BASE_URL}en/${basePath}` }]
+    )
   },
 
   transformHead(context) {
-    const { pageData } = context;
-    const ogTitle = pageData.frontmatter.title || 'Industrial CG Platform — Blender VFX Fork by CGWeave';
-    const ogDescription = pageData.frontmatter.description || pageData.frontmatter.summary || 'A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.';
-    const ogImage = pageData.frontmatter.cover ? `https://cgweave.com${pageData.frontmatter.cover}` : 'https://cgweave.com/logo.webp';
-    const head: import('vitepress').HeadConfig[] = [
-      ['meta', { property: 'og:title', content: ogTitle }],
-      ['meta', { property: 'og:description', content: ogDescription }],
-      ['meta', { property: 'og:image', content: ogImage }],
-      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-      ['meta', { name: 'twitter:title', content: ogTitle }],
-      ['meta', { name: 'twitter:description', content: ogDescription }],
-      ['meta', { name: 'twitter:image', content: ogImage }]
-    ];
-    return head;
+    return buildSeoHead(context)
   },
 
   head: [

@@ -1,6 +1,7 @@
 ---
 title: "Premiers pas"
-description: "!Industrial CG Platform Splash"
+cover: /splash.webp
+description: "Démarrez avec Industrial CG Platform, un fork VFX de Blender 5.2 pour studios, TD, éclairagistes et compositeurs, intégrant Deep EXR natif, EXR Overscan, passes par lobe, Shadow Color et ViewLayer Manager."
 ---
 # Premiers pas
 

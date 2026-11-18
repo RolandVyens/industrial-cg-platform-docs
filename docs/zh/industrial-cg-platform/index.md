@@ -28,6 +28,7 @@ hero:
       link: /zh/feature-tracking
 
 description: "基于 Blender 的高级 VFX 工作流生产平台。"
+cover: /splash.webp
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/features/deep-exr" class="feature-bg-card" style="background-image: url('/features/deep-exr.webp')">

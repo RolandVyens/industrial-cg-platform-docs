@@ -2,6 +2,7 @@
 layout: page
 title: Ecosystem Devlog
 titleTemplate: Industrial 3D Development Updates
+description: "Design logs, technical writeups, and engineering updates on Industrial CG Platform, Blender Cycles Deep EXR, EXR Overscan, Lightgroup Lobe Passes, and VFX pipeline tools."
 ---
 <script setup>
 import { withBase } from 'vitepress'

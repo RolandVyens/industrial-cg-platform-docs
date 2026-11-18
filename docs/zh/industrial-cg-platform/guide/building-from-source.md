@@ -1,6 +1,6 @@
 ---
 title: "从源码构建"
-description: "| 工具 | 版本要求 | 备注 |"
+description: "在 Windows 上从源码编译构建 Industrial CG Platform，涵盖 Visual Studio 2022、CMake、Ninja、make update 预编译依赖拉取与 Git LFS 资源水合检查。"
 ---
 # 从源码构建
 

@@ -1,11 +1,9 @@
 ---
 layout: home
 title: 具备原生 Deep EXR 与 EXR Overscan 的 Blender VFX 定制分支
-titleTemplate: Industrial CG Platform
+titleTemplate: ":title | Industrial CG Platform"
+cover: /home-splash.webp
 head:
-  - - meta
-    - name: description
-      content: "Industrial CG Platform 是一个基于 Blender 5.2 的 Windows 专属 VFX 分支。提供原生的 Cycles Deep EXR、EXR 溢画幅 (Overscan)、基于灯光组的通道分离、阴影颜色和 Qt 视图层管理工具。"
   - - script
     - type: application/ld+json
     - |
@@ -17,7 +15,12 @@ head:
         "operatingSystem": "Windows 64-bit",
         "description": "基于 Blender 的 VFX 平台，内置原生 Deep EXR、EXR Overscan、灯光组直接/间接通道及影视级 ViewLayer 管理工具。",
         "softwareVersion": "5.2.4",
+        "url": "https://cgweave.com/zh/industrial-cg-platform/",
+        "downloadUrl": "https://cgweave.com/zh/industrial-cg-platform/releases/",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "publisher": {
+          "@id": "https://cgweave.com/#organization"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -40,7 +43,7 @@ hero:
       text: 浏览管线工具
       link: /zh/industrial-pipeline-tools
 
-description: "源于 Blender，为电影级制作而生。专为实拍特效与 CG 流程打造的生产级 Blender 渲染、数据管理和色彩管线工具生态。"
+description: "免费下载 Industrial CG Platform (5.2.4 LTS, Windows x64)：面向 Nuke、Maya 与 Houdini 管线的 Blender 5.2 VFX 定制分支，原生集成 Cycles Deep EXR、EXR Overscan、灯光组分量通道与 Qt ViewLayer 管理器。"
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">
