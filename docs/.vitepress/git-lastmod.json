@@ -1,125 +1,494 @@
 {
-  "blog/index.md": "2026-11-08T17:00:20.000Z",
-  "blog/posts/2026-06-29-code-quality-month.md": "2026-07-27T13:54:09.000Z",
-  "blog/posts/2026-07-22-deep-exr-compositing.md": "2026-07-27T13:54:09.000Z",
-  "blog/posts/2026-07-22-lightgroup-lobe-passes.md": "2026-07-27T13:54:09.000Z",
-  "blog/posts/2026-10-17-deep-exr-architecture.md": "2026-11-14T18:55:48.000Z",
-  "en/aio-ocio/index.md": "2026-07-23T07:48:29.000Z",
-  "en/aio-ocio/manual/blender-setup.md": "2026-07-23T07:48:29.000Z",
-  "en/aio-ocio/manual/general-softwares.md": "2026-07-23T07:48:29.000Z",
-  "en/aio-ocio/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "en/auto-light-shuffle/index.md": "2026-11-15T07:55:12.000Z",
-  "en/donate.md": "2026-11-08T17:00:20.000Z",
-  "en/feature-tracking.md": "2026-11-14T18:55:48.000Z",
-  "en/index.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-aov-connector/index.md": "2026-11-17T08:50:37.000Z",
-  "en/industrial-aov-connector/manual/advanced-mode.md": "2026-11-08T17:00:20.000Z",
-  "en/industrial-aov-connector/manual/basic-mode.md": "2026-11-17T08:50:37.000Z",
-  "en/industrial-aov-connector/manual/fakedeep.md": "2026-11-08T17:00:20.000Z",
-  "en/industrial-aov-connector/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-aov-connector/manual/preference.md": "2026-11-17T08:50:37.000Z",
-  "en/industrial-cg-platform/about/index.md": "2026-11-08T17:00:20.000Z",
-  "en/industrial-cg-platform/api/bqt-usage.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/api/cycles-kernel.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/api/index.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/api/pass-system.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/api/python-operators.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/api/rna-properties.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/features/deep-exr.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/features/exr-overscan.md": "2026-07-27T13:54:09.000Z",
-  "en/industrial-cg-platform/features/lightgroup-lobe-passes.md": "2026-11-15T07:55:12.000Z",
-  "en/industrial-cg-platform/features/shadow-color.md": "2026-07-27T08:45:48.000Z",
-  "en/industrial-cg-platform/features/viewlayer-manager.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/guide/building-from-source.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/guide/faq.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/guide/getting-started.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/guide/installation.md": "2026-11-14T18:55:48.000Z",
-  "en/industrial-cg-platform/index.md": "2026-11-08T17:00:20.000Z",
-  "en/industrial-cg-platform/releases/5.2.0-2026-05-19.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-cg-platform/releases/5.2.0-2026-06-16.md": "2026-08-29T09:52:56.000Z",
-  "en/industrial-cg-platform/releases/index.md": "2026-11-08T17:00:20.000Z",
-  "en/industrial-light-aov-splitter/index.md": "2026-11-15T07:55:12.000Z",
-  "en/industrial-light-aov-splitter/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-light-aov-splitter/manual/nuke-setup.md": "2026-11-15T07:55:12.000Z",
-  "en/industrial-light-aov-splitter/manual/usage.md": "2026-07-23T07:48:29.000Z",
-  "en/industrial-pipeline-tools.md": "2026-11-15T07:55:12.000Z",
-  "fr/aio-ocio/index.md": "2026-07-23T07:48:29.000Z",
-  "fr/aio-ocio/manual/blender-setup.md": "2026-07-23T07:48:29.000Z",
-  "fr/aio-ocio/manual/general-softwares.md": "2026-07-23T07:48:29.000Z",
-  "fr/aio-ocio/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "fr/auto-light-shuffle/index.md": "2026-11-15T07:55:12.000Z",
-  "fr/donate.md": "2026-11-08T17:00:20.000Z",
-  "fr/feature-tracking.md": "2026-11-14T18:55:48.000Z",
-  "fr/index.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-aov-connector/index.md": "2026-11-17T08:50:37.000Z",
-  "fr/industrial-aov-connector/manual/advanced-mode.md": "2026-11-08T17:00:20.000Z",
-  "fr/industrial-aov-connector/manual/basic-mode.md": "2026-11-17T08:50:37.000Z",
-  "fr/industrial-aov-connector/manual/fakedeep.md": "2026-11-08T17:00:20.000Z",
-  "fr/industrial-aov-connector/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-aov-connector/manual/preference.md": "2026-11-17T08:50:37.000Z",
-  "fr/industrial-cg-platform/about/index.md": "2026-11-08T17:00:20.000Z",
-  "fr/industrial-cg-platform/api/bqt-usage.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/api/cycles-kernel.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/api/index.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/api/pass-system.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/api/python-operators.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/api/rna-properties.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/features/deep-exr.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/features/exr-overscan.md": "2026-07-27T13:54:09.000Z",
-  "fr/industrial-cg-platform/features/lightgroup-lobe-passes.md": "2026-11-15T07:55:12.000Z",
-  "fr/industrial-cg-platform/features/shadow-color.md": "2026-07-27T08:45:48.000Z",
-  "fr/industrial-cg-platform/features/viewlayer-manager.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/guide/building-from-source.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/guide/faq.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/guide/getting-started.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/guide/installation.md": "2026-11-14T18:55:48.000Z",
-  "fr/industrial-cg-platform/index.md": "2026-11-08T17:00:20.000Z",
-  "fr/industrial-cg-platform/releases/5.2.0-2026-05-19.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-cg-platform/releases/5.2.0-2026-06-16.md": "2026-08-29T09:52:56.000Z",
-  "fr/industrial-cg-platform/releases/index.md": "2026-11-08T17:00:20.000Z",
-  "fr/industrial-light-aov-splitter/index.md": "2026-11-15T07:55:12.000Z",
-  "fr/industrial-light-aov-splitter/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-light-aov-splitter/manual/nuke-setup.md": "2026-11-15T07:55:12.000Z",
-  "fr/industrial-light-aov-splitter/manual/usage.md": "2026-07-23T07:48:29.000Z",
-  "fr/industrial-pipeline-tools.md": "2026-11-15T07:55:12.000Z",
-  "index.md": "2026-07-23T09:12:49.000Z",
-  "zh/aio-ocio/index.md": "2026-07-23T07:48:29.000Z",
-  "zh/aio-ocio/manual/blender-setup.md": "2026-07-23T07:48:29.000Z",
-  "zh/aio-ocio/manual/general-softwares.md": "2026-07-23T07:48:29.000Z",
-  "zh/aio-ocio/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "zh/auto-light-shuffle/index.md": "2026-11-15T07:55:12.000Z",
-  "zh/donate.md": "2026-11-08T17:00:20.000Z",
-  "zh/feature-tracking.md": "2026-11-14T18:55:48.000Z",
-  "zh/index.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-aov-connector/index.md": "2026-11-17T08:50:37.000Z",
-  "zh/industrial-aov-connector/manual/advanced-mode.md": "2026-11-08T17:00:20.000Z",
-  "zh/industrial-aov-connector/manual/basic-mode.md": "2026-11-17T08:50:37.000Z",
-  "zh/industrial-aov-connector/manual/fakedeep.md": "2026-11-08T17:00:20.000Z",
-  "zh/industrial-aov-connector/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-aov-connector/manual/preference.md": "2026-11-17T08:50:37.000Z",
-  "zh/industrial-cg-platform/about/index.md": "2026-11-08T17:00:20.000Z",
-  "zh/industrial-cg-platform/api/bqt-usage.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/api/cycles-kernel.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/api/index.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/api/pass-system.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/api/python-operators.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/api/rna-properties.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/features/deep-exr.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/features/exr-overscan.md": "2026-07-27T13:54:09.000Z",
-  "zh/industrial-cg-platform/features/lightgroup-lobe-passes.md": "2026-11-15T07:55:12.000Z",
-  "zh/industrial-cg-platform/features/shadow-color.md": "2026-07-27T08:45:48.000Z",
-  "zh/industrial-cg-platform/features/viewlayer-manager.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/guide/building-from-source.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/guide/faq.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/guide/getting-started.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/guide/installation.md": "2026-11-14T18:55:48.000Z",
-  "zh/industrial-cg-platform/index.md": "2026-11-08T17:00:20.000Z",
-  "zh/industrial-cg-platform/releases/5.2.0-2026-05-19.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-cg-platform/releases/5.2.0-2026-06-16.md": "2026-08-29T09:52:56.000Z",
-  "zh/industrial-cg-platform/releases/index.md": "2026-11-08T17:00:20.000Z",
-  "zh/industrial-light-aov-splitter/index.md": "2026-11-15T07:55:12.000Z",
-  "zh/industrial-light-aov-splitter/manual/index.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-light-aov-splitter/manual/nuke-setup.md": "2026-11-15T07:55:12.000Z",
-  "zh/industrial-light-aov-splitter/manual/usage.md": "2026-07-23T07:48:29.000Z",
-  "zh/industrial-pipeline-tools.md": "2026-11-15T07:55:12.000Z"
+  "blog/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "8abe9e61107d0c004748790ffc855dd22f1e9344"
+  },
+  "blog/posts/2026-06-29-code-quality-month.md": {
+    "lastmod": "2026-07-27T13:54:09.000Z",
+    "blob": "49d187c4051de5f15dcec82d61c88e07daa261be"
+  },
+  "blog/posts/2026-07-22-deep-exr-compositing.md": {
+    "lastmod": "2026-07-27T13:54:09.000Z",
+    "blob": "32048c4f2072460c8d9a38c25d3e021c08e6e473"
+  },
+  "blog/posts/2026-07-22-lightgroup-lobe-passes.md": {
+    "lastmod": "2026-07-27T13:54:09.000Z",
+    "blob": "40422f8a4a62f0dbc45f6cb2c81d9f1cbd4fa53d"
+  },
+  "blog/posts/2026-10-17-deep-exr-architecture.md": {
+    "lastmod": "2026-11-14T18:55:48.000Z",
+    "blob": "a06980292580ed26339a45aa4b861082aa049813"
+  },
+  "en/aio-ocio/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "44ae9034d3401b5b696f723debd4a22beeb2dfa1"
+  },
+  "en/aio-ocio/manual/blender-setup.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "614bd5f8b6bb2d950690c3607e1ecbf1273062c9"
+  },
+  "en/aio-ocio/manual/general-softwares.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "bc147e979d8ed991117ad2d0c3d9ad7b92b7138e"
+  },
+  "en/aio-ocio/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "0a7d2ceaf3b30fab3143b2fb6d120a20c3040945"
+  },
+  "en/auto-light-shuffle/index.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "0291a1c1d53af6f13cc4e58614a91e893fc0a999"
+  },
+  "en/donate.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "243180297921654f80b4e822769625e94b0ddf81"
+  },
+  "en/feature-tracking.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "8be230eee3132cd66bc4987d74a7f042c7156ca2"
+  },
+  "en/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "8ba6a00e1fe9f40305715d281f42f189c9ff94f4"
+  },
+  "en/industrial-aov-connector/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "1732513ce3c5f115ccac0abc89e971929bf6d916"
+  },
+  "en/industrial-aov-connector/manual/advanced-mode.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "3bf60f3e453ac6caa05d00fc5d4c11a79f72fd68"
+  },
+  "en/industrial-aov-connector/manual/basic-mode.md": {
+    "lastmod": "2026-11-17T08:50:37.000Z",
+    "blob": "44a0621e2f598fa1973071bac24b1159dd07dd6b"
+  },
+  "en/industrial-aov-connector/manual/fakedeep.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "4a505c30ba1ac58d342151e0bd911abc011674d1"
+  },
+  "en/industrial-aov-connector/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "5615dfb14d7b484aaac1741d27b796ea05fd5cad"
+  },
+  "en/industrial-aov-connector/manual/preference.md": {
+    "lastmod": "2026-11-17T08:50:37.000Z",
+    "blob": "c5604b53e5a493b805840cdb1fb626f57b96f513"
+  },
+  "en/industrial-cg-platform/about/index.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "53f06986d9b12d9e5816c4b5d5022a1328f1b7f5"
+  },
+  "en/industrial-cg-platform/api/bqt-usage.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "16cf1f96393c471bc2bd450c232e6b5533e305c9"
+  },
+  "en/industrial-cg-platform/api/cycles-kernel.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "e0809bb450b37018670d77a5b4b8f74a0c2282cc"
+  },
+  "en/industrial-cg-platform/api/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "06870bf0f1d6ced3c4c2c2927a7864a99e60908d"
+  },
+  "en/industrial-cg-platform/api/pass-system.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "cd8bcc1da0b0ac8ef2bc53905e5dfb1fa3b7c17d"
+  },
+  "en/industrial-cg-platform/api/python-operators.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "41629f306873a6549620ed6373327851754d475a"
+  },
+  "en/industrial-cg-platform/api/rna-properties.md": {
+    "lastmod": "2026-11-14T18:55:48.000Z",
+    "blob": "f9ca4b46e000aa849827944d34f2825be7d4ff12"
+  },
+  "en/industrial-cg-platform/features/deep-exr.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "26f6c2f03c650645792fc63c8a4c3d04b1038924"
+  },
+  "en/industrial-cg-platform/features/exr-overscan.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "42da76193980b82741dda94c1bb275c279504212"
+  },
+  "en/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "0967fcae5119056178dd850a9330fcace8e45ba7"
+  },
+  "en/industrial-cg-platform/features/shadow-color.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "b68b15705c0ff80e165578634d0e19a3aa1ac96a"
+  },
+  "en/industrial-cg-platform/features/viewlayer-manager.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "69aa6eb36b123328c81e6592885ddf0e67adfdc2"
+  },
+  "en/industrial-cg-platform/guide/building-from-source.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "a150a4c4e7bb3b71f78444417fa76dcbc7182031"
+  },
+  "en/industrial-cg-platform/guide/faq.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "7535a993924f63a283dafae37310e1660e662d1d"
+  },
+  "en/industrial-cg-platform/guide/getting-started.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "0f1f6ea9c515f1d1fed20350b3d661fc85e03027"
+  },
+  "en/industrial-cg-platform/guide/installation.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "aa111e383449cf0a2cc8b915cf4969635271b5a9"
+  },
+  "en/industrial-cg-platform/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "31d95b50c7171992e7ae25caff610ef98412d616"
+  },
+  "en/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "4b272addd48ea9d06686104ceb3fea33d717925d"
+  },
+  "en/industrial-cg-platform/releases/5.2.0-2026-06-16.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "e04f4a323b21d861f3f9f85589e326868a14ce1d"
+  },
+  "en/industrial-cg-platform/releases/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "1b83f71d6d8ed7af48c51920cbe8e8241bd675e0"
+  },
+  "en/industrial-light-aov-splitter/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "a9aa20e56f11bdeed0594162e7ea46b005573fef"
+  },
+  "en/industrial-light-aov-splitter/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "f884b3fab803ac957dd67c6c5b86f16be73bb8cd"
+  },
+  "en/industrial-light-aov-splitter/manual/nuke-setup.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "159fef51cc68c3dfddc2489f8ff51010f9c956db"
+  },
+  "en/industrial-light-aov-splitter/manual/usage.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "99d135966ae63903fcc1fa0ec95c33f393c2ac9e"
+  },
+  "en/industrial-pipeline-tools.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "b36a7d3318e3da4cc838ec178cd827c1c5744d1b"
+  },
+  "fr/aio-ocio/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "dbf2bed5dc74c16d05f38bbe545bca3631e2b035"
+  },
+  "fr/aio-ocio/manual/blender-setup.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "902ba72a6f12332e32d2972ea35b0a86f5020dd1"
+  },
+  "fr/aio-ocio/manual/general-softwares.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "719c3f85295939b7a51d9fad3c3fb5409cce7103"
+  },
+  "fr/aio-ocio/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "67f04a27bd1d3c903274e97afc27f49ba5ef142f"
+  },
+  "fr/auto-light-shuffle/index.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "f0a3b36da6bb48c54b790abfdbdb029172a4224b"
+  },
+  "fr/donate.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "9274924829a46942afb6272b1b3a3e5581087afc"
+  },
+  "fr/feature-tracking.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "944df2f63232d6f63b2e124746b6918366165585"
+  },
+  "fr/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "7275bd6a95cd467efa76fb438b8569f1c9773c48"
+  },
+  "fr/industrial-aov-connector/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "6241805941aaa679964668fcf425550bcdd207b3"
+  },
+  "fr/industrial-aov-connector/manual/advanced-mode.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "0927825d60aa0f513a920412a41089f283e36e62"
+  },
+  "fr/industrial-aov-connector/manual/basic-mode.md": {
+    "lastmod": "2026-11-17T08:50:37.000Z",
+    "blob": "cacff1d3b15eed21ee403386e1e79ac2294c17ce"
+  },
+  "fr/industrial-aov-connector/manual/fakedeep.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "64567aef5e591504b0653e1839f606c4bbd50e6a"
+  },
+  "fr/industrial-aov-connector/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "3f5bdb5983a04787b25e0674ce5d67187159aadb"
+  },
+  "fr/industrial-aov-connector/manual/preference.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "9ab102171cc62e306cee18ea1e53c55922b7168b"
+  },
+  "fr/industrial-cg-platform/about/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "6feaccf5e509745187551577107d1b8fc1cd4133"
+  },
+  "fr/industrial-cg-platform/api/bqt-usage.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "667eba5515e64d39ae6d124571f6281503f98f84"
+  },
+  "fr/industrial-cg-platform/api/cycles-kernel.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "354224c39ffdc2643e31656f1a74e624851b71a9"
+  },
+  "fr/industrial-cg-platform/api/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "740d50055c3a7acbc64d35ba09fad1f14ef063fd"
+  },
+  "fr/industrial-cg-platform/api/pass-system.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "2f1aa937b32d4e5b471f158719895a45f06864e6"
+  },
+  "fr/industrial-cg-platform/api/python-operators.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "0a2fd6b259dfcea9cf5f6820672764c5a373219c"
+  },
+  "fr/industrial-cg-platform/api/rna-properties.md": {
+    "lastmod": "2026-11-14T18:55:48.000Z",
+    "blob": "08f887c3c06715ed243c69e1f850fcdaf8c5ee92"
+  },
+  "fr/industrial-cg-platform/features/deep-exr.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "7b9564b1882086f126463ea57298e68bb0911598"
+  },
+  "fr/industrial-cg-platform/features/exr-overscan.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "3e90c7c7c6269eb4187d8755842273616362b86f"
+  },
+  "fr/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "05b9877496f003faafd73d12577a73980215df8a"
+  },
+  "fr/industrial-cg-platform/features/shadow-color.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "40ca02caf61ec9152df65db37d2ad39fb594559d"
+  },
+  "fr/industrial-cg-platform/features/viewlayer-manager.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "d7d717f0734cf1fb18286727bcbfbfa0ba493d64"
+  },
+  "fr/industrial-cg-platform/guide/building-from-source.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "e56dac0beec29fec751716715a6785468492d70e"
+  },
+  "fr/industrial-cg-platform/guide/faq.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "dd2f7420e622b1dc94aa99b39e6d82520993b5f2"
+  },
+  "fr/industrial-cg-platform/guide/getting-started.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "c89cd3f948f998f7cb8e32d28c26bcc8b6d6edda"
+  },
+  "fr/industrial-cg-platform/guide/installation.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "afac59399ee428036541d42c8d7349e3b7b180ba"
+  },
+  "fr/industrial-cg-platform/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "58ce71b828f3fca2f05d8cc8a9f177b2177601a2"
+  },
+  "fr/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "8cadbb5c11c8ff273df5e0eb780b31df079b8968"
+  },
+  "fr/industrial-cg-platform/releases/5.2.0-2026-06-16.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "eccc5901bc9ec8fc76dd6d6e7d08fab6418d7fdb"
+  },
+  "fr/industrial-cg-platform/releases/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "ce6122df57d6ea8b13f0a3007035a174b911bad5"
+  },
+  "fr/industrial-light-aov-splitter/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "67c6a7baeca432a9b52d325ef99a03eca29243c5"
+  },
+  "fr/industrial-light-aov-splitter/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "631a8655982a8b56bc3cfe311aad0351dc717e0e"
+  },
+  "fr/industrial-light-aov-splitter/manual/nuke-setup.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "6a8acbd7cf9b3b06f93e49ab79e27f49ea217e28"
+  },
+  "fr/industrial-light-aov-splitter/manual/usage.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "e760ca6bc267555b2b57d1d49be293de7471bf65"
+  },
+  "fr/industrial-pipeline-tools.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "662dcf6d55e05da2b9373c465a14efa807788d62"
+  },
+  "index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "936a4cf4b0f7d04a8bc4faa4e40244781e6ac05b"
+  },
+  "zh/aio-ocio/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "12f73333b61e892554a815fbce4b29e28372bfbb"
+  },
+  "zh/aio-ocio/manual/blender-setup.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "4f5a877f20ded4bcf4f1c28a7e461d1b03902f01"
+  },
+  "zh/aio-ocio/manual/general-softwares.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "3b8fe5e6489f93cdcd4dfa2e091e3df0b754a27f"
+  },
+  "zh/aio-ocio/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "897f7023fb1926fadaccda3b37cfa77881726122"
+  },
+  "zh/auto-light-shuffle/index.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "3e8f361b08d8aa7952b505837170f532b66c6e1d"
+  },
+  "zh/donate.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "dc93562aced942d1bfe1db83e4923594ae2b15a9"
+  },
+  "zh/feature-tracking.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "55fd21b9ac0b7d8992251d1173e7be2d1a7bc7a4"
+  },
+  "zh/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "0d1ed41bf8fcaea0ca18d4f3514219ab8bebc293"
+  },
+  "zh/industrial-aov-connector/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "7caaa0a918b5a4c2e18f8ea6fb16871e504d121f"
+  },
+  "zh/industrial-aov-connector/manual/advanced-mode.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "3ab30a23d3ca4c8dd0a18f2b5d6d3aa975c08618"
+  },
+  "zh/industrial-aov-connector/manual/basic-mode.md": {
+    "lastmod": "2026-11-17T08:50:37.000Z",
+    "blob": "4e8c835c1d53a1bcfd0de819ef9e2d4282ec2316"
+  },
+  "zh/industrial-aov-connector/manual/fakedeep.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "8b5cb94bfade5d9c3aad5da4a4fac7bf9c94b23f"
+  },
+  "zh/industrial-aov-connector/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "b7c5ec1ccf77f99a65ab34a2bccdabfd027dddfa"
+  },
+  "zh/industrial-aov-connector/manual/preference.md": {
+    "lastmod": "2026-11-17T08:50:37.000Z",
+    "blob": "2e4da654d2ef1740678c7cb9dba39ef9e77b00d3"
+  },
+  "zh/industrial-cg-platform/about/index.md": {
+    "lastmod": "2026-11-08T17:00:20.000Z",
+    "blob": "5df81bbf32e3d786a7d0f020329904f39029e36f"
+  },
+  "zh/industrial-cg-platform/api/bqt-usage.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "79c33746d07b561682fb69ae31c31817c0656f60"
+  },
+  "zh/industrial-cg-platform/api/cycles-kernel.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "985816002bbda94ffb30c6d867a9e28e3bda3c62"
+  },
+  "zh/industrial-cg-platform/api/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "602e1a7e7c1c4a3b4c4aa7f5d7b0ec330ffbcca6"
+  },
+  "zh/industrial-cg-platform/api/pass-system.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "b10518c09d5525c70a00222ddebfc09d94dd54e7"
+  },
+  "zh/industrial-cg-platform/api/python-operators.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "740293c64866c8e36c479483d966d465ba832730"
+  },
+  "zh/industrial-cg-platform/api/rna-properties.md": {
+    "lastmod": "2026-11-14T18:55:48.000Z",
+    "blob": "6afea873b821fe1f24cea69d5a308ad6194d451e"
+  },
+  "zh/industrial-cg-platform/features/deep-exr.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "bdab99c4dd5fd02e412f61a0293e224e45f6eb9d"
+  },
+  "zh/industrial-cg-platform/features/exr-overscan.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "cf59acb3023734dc69478aee0fef93a933c2880e"
+  },
+  "zh/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "f243ab575439ee5b9a45afcdac948b75608583a9"
+  },
+  "zh/industrial-cg-platform/features/shadow-color.md": {
+    "lastmod": "2026-07-27T08:45:48.000Z",
+    "blob": "7a29e044820cd599bde0e856acf7dc82f30d1fe1"
+  },
+  "zh/industrial-cg-platform/features/viewlayer-manager.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "310f09190ec6a6c0ef9952102edeb1bd82f440a1"
+  },
+  "zh/industrial-cg-platform/guide/building-from-source.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "71cbf0f7639ef2bc8dde7182a89a877772dbe273"
+  },
+  "zh/industrial-cg-platform/guide/faq.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "6cd8f06af4da51e39a0db73f511eeb4661a246bc"
+  },
+  "zh/industrial-cg-platform/guide/getting-started.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "eccbb89b0da9ea4946700f65d60cb0f9dd3c1444"
+  },
+  "zh/industrial-cg-platform/guide/installation.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "830ff4077cb47addab06d965fb12646dc2c5f6ef"
+  },
+  "zh/industrial-cg-platform/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "070802a4de4ba1650fba15c0b224a93249335cfa"
+  },
+  "zh/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "ebbdba0b7b0576273fbab2e04579d06003c3e328"
+  },
+  "zh/industrial-cg-platform/releases/5.2.0-2026-06-16.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "7606cf06e9927d840e13be79dcab5afc1e8d54cc"
+  },
+  "zh/industrial-cg-platform/releases/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "0c7c5fbe5e606dfc0af33db9566e0a3485c87743"
+  },
+  "zh/industrial-light-aov-splitter/index.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "a473cdb8025dee9092f1ce024946620dc1773249"
+  },
+  "zh/industrial-light-aov-splitter/manual/index.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "0d023cf34dac1e1f5cbe4cb0fb2c5ed008091b06"
+  },
+  "zh/industrial-light-aov-splitter/manual/nuke-setup.md": {
+    "lastmod": "2026-11-15T07:55:12.000Z",
+    "blob": "b070625674b14ba4eb67b4484b917f1a92b1fe14"
+  },
+  "zh/industrial-light-aov-splitter/manual/usage.md": {
+    "lastmod": "2026-07-23T07:48:29.000Z",
+    "blob": "a2983a5f56b44122c09c1524993f9d81cae4317c"
+  },
+  "zh/industrial-pipeline-tools.md": {
+    "lastmod": "2026-11-18T11:40:10.000Z",
+    "blob": "d70637f4db17368cd49a0be6130241db0d72fe75"
+  }
 }
