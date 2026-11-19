@@ -112,7 +112,7 @@ aside: false
     <div class="ft-milestones">
       <span class="ft-milestone">✓ Rocky Linux 8.10（EL8 / glibc 2.28+）构建打包与 658 个 ELF 依赖审计通过</span>
       <span class="ft-milestone">✓ Linux/X11 bQt（<code>Qt 6.9.3</code>）ViewLayer 管理器及 21 项 CPU 功能测试、27 项单元测试通过</span>
-      <span class="ft-milestone">✓ 发布公开 Linux Beta 1 预发布包（<code>.tar.xz</code> + <code>SHA256SUMS</code>；已编译 CPU/CUDA/OptiX/动态 HIP）</span>
+      <span class="ft-milestone">✓ 发布公开 Linux Beta 1 预发布包（<code>.tar.xz</code> + <code>SHA256SUMS</code>；已编译 CPU/OptiX/动态 HIP）</span>
       <span class="ft-milestone ft-milestone-pending">→ 原生 Linux 实体机 GPU/OptiX 渲染、HIP/ROCm 与多卡运行时验证</span>
       <span class="ft-milestone ft-milestone-pending">→ 原生 Linux 桌面环境、完整 DPI/Wayland 与生产场景性能验收</span>
     </div>
@@ -182,12 +182,12 @@ aside: false
   </div>
   <div class="ft-card ft-card-media">
     <div class="ft-card-thumb-wrap">
-      <img src="/features/overscan.webp" alt="原生 EXR Overscan 溢画幅" class="ft-card-thumb" loading="lazy" />
+      <img src="/features/overscan.webp" alt="原生 EXR Overscan" class="ft-card-thumb" loading="lazy" />
     </div>
     <div class="ft-card-body">
       <div class="ft-card-header">
         <div class="ft-title-group">
-          <span class="ft-title">原生 EXR Overscan 溢画幅</span>
+          <span class="ft-title">原生 EXR Overscan</span>
           <span class="ft-module">Cycles Camera · OpenEXR BBox</span>
         </div>
         <span class="ft-badge ft-badge-released">已发布</span>
@@ -208,12 +208,12 @@ aside: false
   </div>
   <div class="ft-card ft-card-media">
     <div class="ft-card-thumb-wrap">
-      <img src="/features/lightgroups.webp" alt="灯光组分量通道" class="ft-card-thumb" loading="lazy" />
+      <img src="/features/lightgroups.webp" alt="材质通道灯光 AOV" class="ft-card-thumb" loading="lazy" />
     </div>
     <div class="ft-card-body">
       <div class="ft-card-header">
         <div class="ft-title-group">
-          <span class="ft-title">灯光组分量通道 (Lightgroup Lobe Passes)</span>
+          <span class="ft-title">材质通道灯光 AOV (Lightgroup Lobe Passes)</span>
           <span class="ft-module">Cycles Kernel · ViewLayer Passes</span>
         </div>
         <span class="ft-badge ft-badge-released">已发布</span>

@@ -1,95 +1,100 @@
 ---
 title: "Compilation depuis les sources"
-description: "Compilez Industrial CG Platform depuis les sources sous Windows avec Visual Studio 2022, CMake, Ninja, make update pour les dépendances Blender et la vérification Git LFS."
+description: "Compilez Industrial CG Platform 5.2.4 LTS depuis les sources sous Windows selon le workflow Release actuel : Visual Studio 2022, CMake, Ninja, SDK OptiX, cible install complète et vérification post-installation."
 ---
+
 # Compilation depuis les sources
+
+Ce guide suit le workflow actuel de compilation Release Windows x64 d'**Industrial CG Platform 5.2.4 LTS** (Ninja + `VsDevCmd` sur le graphe de dépendances complet `install`).
 
 ## Prérequis
 
 | Outil | Version | Notes |
 | --- | --- | --- |
-| **Visual Studio** | 2022 (17.x) | Avec charge de travail "Développement de bureau en C++" |
-| **CMake** | 3.24+ | Inclus avec Visual Studio ou installé de manière autonome |
-| **Ninja** | 1.11+ | Système de génération léger recommandé |
-| **Git** | 2.30+ | Avec la prise en charge de Git LFS |
-| **Python** | 3.13 | Géré automatiquement par le système de compilation de Blender |
+| **Visual Studio** | 2022 (17.x) ou Build Tools 2022 | Avec la charge de travail « Développement de bureau en C++ » |
+| **CMake** | 3.24+ | Inclus avec Visual Studio ou installé séparément |
+| **Ninja** | 1.11+ | Générateur par défaut validé |
+| **Git** | 2.30+ | Avec Git LFS activé |
+| **SDK OptiX + chaîne de compilation NVIDIA** | Selon les prérequis officiels Blender 5.2 | Requis uniquement pour compiler le support GPU Cycles OptiX (noyaux PTX OptiX) |
+| **Python** | 3.13 | Fourni automatiquement par les dépendances précompilées de Blender |
 
-## Cloner le Répertoire
+## Cloner le dépôt et récupérer les dépendances
 
 ```powershell
 git clone https://github.com/RolandVyens/industrial-cg-platform.git
 cd industrial-cg-platform
-```
-
-## Obtenir les Dépendances
-
-Blender nécessite des bibliothèques précompilées. Exécutez la commande suivante pour les récupérer :
-
-```powershell
 make update
 ```
 
-Cette commande télécharge les dépendances précompilées `lib/windows_x64` depuis le dépôt SVN officiel de Blender.
+`make update` télécharge les bibliothèques précompilées `lib/windows_x64` depuis le dépôt officiel de dépendances Blender.
 
-::: warning Barrière d'Hydratation LFS
-Avant de compiler, vérifiez que les ressources Git LFS fournies avec le dépôt sont correctement "hydratées" (téléchargées en tant que fichiers réels et non de simples fichiers texte pointeurs). Vérifiez que les chemins suivants ne contiennent pas de pointeurs textuels :
+::: warning Vérification Git LFS (clonage initial ou synchronisation amont)
+Après un clonage initial ou une synchronisation amont, vérifiez que les ressources embarquées sont bien hydratées et non de simples pointeurs Git LFS :
 
 - `assets/`
 - `release/datafiles/`
 - `scripts/startup/bl_app_templates_system/`
 
-Si l'un de ces fichiers contient uniquement le texte `version https://git-lfs.github.com/spec/v1`, vous devez d'abord l'hydrater à partir d'une source de confiance en exécutant `git lfs pull`.
+Si un fichier commence par `version https://git-lfs.github.com/spec/v1`, restaurez la ressource réelle avant de compiler. Les recompilations incrémentales locales n'ont pas besoin de retélécharger LFS.
 :::
 
-## Configuration
+## Configurer la compilation Release
 
-Utilisation de Ninja (fortement recommandé) :
+Initialisez l'environnement développeur Visual Studio x64 puis configurez un dossier de build Release et un préfixe d'installation dédiés avec Ninja :
 
 ```powershell
-# Ouvrez d'abord une invite de commande développeur Visual Studio
-& "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
-
-cmake -G Ninja -B build -S . `
-  -DCMAKE_BUILD_TYPE=Release `
-  -DWITH_CYCLES_CUDA_BINARIES=ON `
-  -DCYCLES_CUDA_BINARIES_ARCH=sm_89 `
-  -DWITH_CYCLES_DEVICE_OPTIX=ON
+# Initialiser l'environnement Visual Studio 2022 x64 (adapter le chemin selon Community ou BuildTools)
+& $env:ComSpec /c 'call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64 -host_arch=x64 && cmake -G Ninja -S . -B build_release -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install_release -DWITH_BUILDINFO=ON -DWITH_CYCLES_DEVICE_OPTIX=ON -DOPTIX_ROOT_DIR="C:/path/to/optix-dev" -DWITH_WINDOWS_RELEASE_PDB=OFF'
 ```
 
-::: tip
-Remplacez `sm_89` par la capacité de calcul (Compute Capability) correspondant à votre carte graphique NVIDIA :
-- RTX 4080/4090 : `sm_89`
-- RTX 3080/3090 : `sm_86`
-- RTX 2080 : `sm_75`
+::: tip Options GPU et préréglage Release
+- Pour une compilation CPU uniquement, passez `-DWITH_CYCLES_DEVICE_OPTIX=OFF` et omettez `-DOPTIX_ROOT_DIR`.
+- Pour partir de la matrice complète de fonctionnalités Release de Blender, ajoutez `-C build_files/cmake/config/blender_release.cmake` avant vos options locales et désactivez les backends GPU absents de votre poste.
 :::
 
-## Compilation
+## Compiler et installer (cible `install` complète)
+
+Compilez directement la cible **`install`** plutôt que la seule cible `blender` :
 
 ```powershell
-cmake --build build --target blender
+& $env:ComSpec /c 'call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64 -host_arch=x64 && ninja -C build_release install'
 ```
 
-## Installation
+::: warning Pourquoi `ninja install` est indispensable
+Compiler uniquement la cible `blender` omet la génération des noyaux GPU Cycles et une partie du déploiement runtime. Lancer `ninja -C build_release install` construit l'ensemble du graphe — écran de démarrage intégré (`splash.png.c`), `buildinfo` et noyaux Cycles OptiX — et installe un exécutable portable complet dans `install_release/`.
+:::
+
+## Vérification post-installation
+
+Validez le runtime installé avant tout empaquetage ou test de plan :
 
 ```powershell
-cmake --install build --prefix install
+# 1. Vérifier l'identité de version et les métadonnées propres
+.\install_release\blender.exe --version
+
+# 2. Test rapide en session isolée (sans toucher aux préférences locales)
+.\install_release\blender.exe --factory-startup --command help
 ```
 
-L'exécutable et l'environnement d'exécution compilés seront installés dans le répertoire `install/`.
+Première ligne attendue pour `--version` :
 
-## Vérification
-
-```powershell
-.\install\blender.exe --version
+```text
+Blender 5.2.4 LTS Industrial CG Platform
 ```
 
-## Notes de Compilation Connues
+Contrôlez également ces trois points d'intégrité :
 
-- **Ninja est fortement recommandé** — Le générateur Visual Studio classique peut se bloquer pendant la détection de l'ID du compilateur en raison d'un problème avec l'outil local de traçage MSBuild `Tracker.exe`. L'invite VsDevCmd associée à Ninja est la méthode par défaut validée.
-- **`TrackFileAccess=false`** — Si vous utilisez MSBuild directement en ligne de commande, passez le paramètre `/p:TrackFileAccess=false` pour éviter que le tracker MSBuild ne se bloque.
-- **Génération des fichiers PDB** — Les compilations Release peuvent rencontrer des erreurs de type `LNK1318` lors de la génération de fichiers de symboles PDB trop volumineux. Si cela se produit, compilez avec `-DWITH_WINDOWS_RELEASE_PDB=OFF`.
+1. **Métadonnées propres** : depuis une branche Release propre, `build branch` ne doit pas afficher `(modified)`.
+2. **Noyaux OptiX présents** : lorsque OptiX est activé, vérifiez la présence de fichiers noyaux non vides dans `install_release\5.2\scripts\addons_core\cycles\lib\`.
+3. **Aucun pointeur LFS résiduel** : confirmez que les fichiers `.blend` dans `install_release\5.2\datafiles\` sont bien des binaires réels.
 
-## Voir Aussi
+## Notes connues et statut des plateformes
 
-- [Manuel de compilation de Blender](https://developer.blender.org/docs/handbook/building_blender/) — Documentation de compilation officielle de Blender.
-- [Installation](/fr/industrial-cg-platform/guide/installation) — Installez directement à partir d'un package précompilé.
+- **Pourquoi Ninja + `VsDevCmd`** : sur certains postes Windows, le générateur Visual Studio / MSBuild peut se bloquer lors de la détection du compilateur à cause de `Tracker.exe`. Ninja + `VsDevCmd -arch=x64 -host_arch=x64` est la voie Release validée. En cas d'appel direct à MSBuild, ajoutez `/p:TrackFileAccess=false`.
+- **Éviter les erreurs d'édition de liens `LNK1318`** : conservez `-DWITH_WINDOWS_RELEASE_PDB=OFF` si la génération de PDB provoque une erreur `LNK1318`.
+- **Compilations Linux** : la version stable actuelle vise Windows x64. Linux est actuellement en **Linux Beta 1** publique (base Rocky Linux 8.10 / EL8) ; suivez l'avancement sur [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).
+
+## Voir aussi
+
+- [Manuel Blender : Building Blender](https://developer.blender.org/docs/handbook/building_blender/) — Documentation officielle sur la chaîne de compilation amont.
+- [Installation](/fr/industrial-cg-platform/guide/installation) — Télécharger et déployer le package ZIP Release Windows x64 précompilé.

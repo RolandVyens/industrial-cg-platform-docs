@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform 5.2.4 LTS, including SHA256 verification, CUDA/OptiX GPU setup, and coexistence with stock Blender 5.2."
+description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform 5.2.4 LTS, including SHA256 verification, OptiX GPU setup, and coexistence with stock Blender 5.2."
 ---
 # Installation
 
@@ -9,7 +9,7 @@ description: "System requirements and Windows x64 ZIP installation guide for Ind
 | Component | Requirement |
 | --- | --- |
 | **OS** | Windows 10/11 x64 |
-| **GPU** | NVIDIA GPU with CUDA or OptiX support (recommended) |
+| **GPU** | NVIDIA RTX GPU with OptiX support (recommended) |
 | **GPU Driver** | Latest NVIDIA Game Ready or Studio driver |
 | **RAM** | 16 GB minimum, 32 GB recommended |
 | **Disk** | ~1 GB for the release package |
@@ -49,9 +49,8 @@ Blender 5.2.4 LTS Industrial CG Platform
 For Cycles GPU rendering with NVIDIA:
 
 1. Open **Edit > Preferences > System**.
-2. Under **Cycles Render Devices**, select either:
-   - **CUDA** — Broad compatibility, slightly slower.
-   - **OptiX** — Faster ray tracing on RTX GPUs (recommended).
+2. Under **Cycles Render Devices**, select:
+   - **OptiX** — Hardware-accelerated ray tracing on NVIDIA RTX GPUs (recommended).
 3. Check your GPU in the device list.
 
 ## Coexistence with Stock Blender

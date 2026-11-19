@@ -24,6 +24,12 @@ hero:
       text: API 参考
       link: /zh/industrial-cg-platform/api/
     - theme: alt
+      text: Blender 到 Nuke 工作流
+      link: /zh/blender-to-nuke-workflow/
+    - theme: alt
+      text: Blender VFX 管线
+      link: /zh/blender-vfx-pipeline/
+    - theme: alt
       text: 开发追踪
       link: /zh/feature-tracking
 
@@ -33,32 +39,32 @@ cover: /splash.webp
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/features/deep-exr" class="feature-bg-card" style="background-image: url('/features/deep-exr.webp')">
     <div class="feature-bg-overlay">
-      <h3>Deep EXR 深度输出</h3>
-      <p>Cycles 原生深度合成输出 — 写入逐采样深度数据，支持在 Nuke 等合成工具中进行无损深度合并。</p>
+      <h3>Deep EXR</h3>
+      <p>Cycles 原生深度合成输出 — 写入逐采样三维深度数据，支持在 Nuke 等合成工具中进行无损深度合并。</p>
     </div>
   </a>
   <a href="/zh/industrial-cg-platform/features/exr-overscan" class="feature-bg-card" style="background-image: url('/features/overscan.webp')">
     <div class="feature-bg-overlay">
-      <h3>EXR Overscan 溢画幅</h3>
-      <p>Cycles 原生 EXR 溢画幅支持 — 在相机框外计算额外的像素边缘，为后期镜头防抖、去畸变和图像变形提供缓冲。</p>
+      <h3>EXR Overscan</h3>
+      <p>Cycles 原生 EXR Overscan — 在相机交付画幅外额外渲染边缘像素，为后期镜头防抖、去畸变和图像变形留出安全边。</p>
     </div>
   </a>
   <a href="/zh/industrial-cg-platform/features/lightgroup-lobe-passes" class="feature-bg-card" style="background-image: url('/features/lightgroups.webp')">
     <div class="feature-bg-overlay">
-      <h3>灯光组分量通道</h3>
-      <p>逐灯光组的漫反射/光泽/透射/体积分量通道，支持直接光和间接光分离，实现精细重打光控制。</p>
+      <h3>材质通道灯光 AOV</h3>
+      <p>按灯光组拆分的漫反射/高光/透射/体积 AOV，支持 Direct 与 Indirect 分离，实现后期精细重打光。</p>
     </div>
   </a>
   <a href="/zh/industrial-cg-platform/features/shadow-color" class="feature-bg-card" style="background-image: url('/features/shadow-color.webp'); background-position: 15% center;">
     <div class="feature-bg-overlay">
-      <h3>阴影颜色</h3>
-      <p>美术级逐灯光和逐世界阴影颜色控制 — 为阴影着色而不影响其余照明。</p>
+      <h3>Shadow Color</h3>
+      <p>单灯与世界环境的艺术级阴影染色 — 独立调整阴影色彩而不影响受光面照明。</p>
     </div>
   </a>
   <a href="/zh/industrial-cg-platform/features/viewlayer-manager" class="feature-bg-card" style="background-image: url('/features/viewlayer.webp')">
     <div class="feature-bg-overlay">
       <h3>ViewLayer 管理器</h3>
-      <p>基于 Qt 的 ViewLayer 管理工具，提供预设系统、通道分组和批量 ViewLayer 操作 — 全部通过专用管理器窗口。</p>
+      <p>独立的多 ViewLayer 批量管理窗口，集中管理渲染通道、Shader AOV、灯光组与批量预设。</p>
     </div>
   </a>
 </div>

@@ -27,7 +27,7 @@ F. `docs/[en|zh|fr]/feature-tracking.md` (Development Tracking & Roadmap)
 - FORBIDDEN: Hardcoded version number lock-ins in general labels/titles (use version-agnostic `Blender VFX Branch` / `Blender VFX 定制分支`); secondary bar charts or stacked horizontal bars; multi-column wrapped milestone pills.
 
 G. Top Navbar & Dynamic Brand Architecture (`docs/.vitepress/config.mts` & `docs/.vitepress/theme/index.ts`)
-- Top-level ecosystem navigation consists of two primary dropdowns: **`Industrial CG Platform`** and **`Plugins` (`插件` / `Plugins`)**, with each product's technical manual nested inside its respective dropdown (no separate top-level `Technical Docs` menu).
+- Top-level ecosystem navigation consists of primary dropdowns: **`Industrial CG Platform`**, **`Plugins` (`插件` / `Plugins`)**, and **`Pipeline Cases` (`流程案例` / `Cas de Pipeline`)**, with each product's technical manual nested inside its respective dropdown (no separate top-level `Technical Docs` menu).
 - Top-level navbar dropdown triggers (`Industrial CG Platform` and `Plugins`) are clickable in desktop view and navigate directly to `/[locale]/industrial-cg-platform/` and `/[locale]/industrial-pipeline-tools`.
 - Top-left navbar brand title (`siteTitle: false` + `#nav-bar-title-after` slot) dynamically switches between **`Industrial CG Platform`** (on `/[locale]/industrial-cg-platform/...` and `/[locale]/feature-tracking`) and **`Industrial 3D`** (on global homepage, plugin pages, blog, donate, and about pages).
 

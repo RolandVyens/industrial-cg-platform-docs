@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Frequently asked questions for Industrial CG Platform covering Blender 5.2 compatibility, .blend interoperability, CUDA/OptiX/CPU support, ViewLayer Manager, Rocky Linux 9 status, and source builds."
+description: "Frequently asked questions for Industrial CG Platform covering Blender 5.2 compatibility, .blend interoperability, OptiX/CPU support, ViewLayer Manager, Linux Beta 1 status, and source builds."
 ---
 # FAQ
 
@@ -26,13 +26,12 @@ Most Blender add-ons that work with Blender 5.2 should work with Industrial CG P
 
 ### Which GPU backends are supported?
 
-- **CUDA** — All NVIDIA GPUs with compute capability 5.0+
 - **OptiX** — NVIDIA RTX GPUs (recommended for best performance)
 - **CPU** — Always available as a fallback
 
 ### Do the custom features work on CPU?
 
-Yes. Deep EXR, lightgroup lobe passes, and shadow color all work on CPU, CUDA, and OptiX backends.
+Yes. Deep EXR, lightgroup lobe passes, and shadow color all work on CPU and OptiX backends.
 
 ### How much overhead do lightgroup lobe passes add?
 
@@ -46,7 +45,7 @@ The ViewLayer Manager uses Qt (via BQt) for its UI, which cannot be embedded dir
 
 ### Can I use it on Linux?
 
-Not yet. The current release is Windows-only. Linux support (starting with Rocky 9 / X11) is currently in progress.
+The current stable release (**5.2.4 LTS**) is Windows x64 only. A public **Linux Beta 1 pre-release** (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10 / EL8 baseline) is available for testing and feedback, while full native Linux GPU/OptiX and desktop qualification is still in progress. See [Development Tracking](/en/feature-tracking) and [Releases](/en/industrial-cg-platform/releases/).
 
 ### What is the `failed to get blender hwnd` message?
 

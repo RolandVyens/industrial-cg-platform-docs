@@ -112,7 +112,7 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     <div class="ft-milestones">
       <span class="ft-milestone">✓ Compilation Rocky Linux 8.10 (EL8 / glibc 2.28+), empaquetage et audit de 658 binaires ELF</span>
       <span class="ft-milestone">✓ ViewLayer Manager bQt Linux/X11 (<code>Qt 6.9.3</code>), 21 tests fonctionnels CPU et 27 tests unitaires validés</span>
-      <span class="ft-milestone">✓ Pré-version publique Linux Bêta 1 (<code>.tar.xz</code> + <code>SHA256SUMS</code> ; CPU, CUDA, OptiX et HIP dynamique compilés)</span>
+      <span class="ft-milestone">✓ Pré-version publique Linux Bêta 1 (<code>.tar.xz</code> + <code>SHA256SUMS</code> ; CPU, OptiX et HIP dynamique compilés)</span>
       <span class="ft-milestone ft-milestone-pending">→ Validation GPU/OptiX Linux natif, HIP/ROCm et configurations multi-GPU</span>
       <span class="ft-milestone ft-milestone-pending">→ Qualification bureau Linux natif, DPI/Wayland complet et performances sur scènes de production</span>
     </div>

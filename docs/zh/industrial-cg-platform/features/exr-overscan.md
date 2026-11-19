@@ -1,9 +1,9 @@
 ---
-title: 如何在 Blender 中渲染真实的 EXR 溢画幅 (Overscan) 且不改变相机取景
+title: 如何在 Blender 中渲染真实的 EXR Overscan 且不改变相机取景
 description: "学习如何在 Blender Cycles 中渲染真正的 EXR Overscan，完美保留 displayWindow 元数据，为 Nuke 镜头畸变工作流提供支持。"
 cover: "/features/overscan.webp"
 ---
-# EXR Overscan 溢画幅
+# EXR Overscan
 
 <Badge type="tip" text="已发布" />
 

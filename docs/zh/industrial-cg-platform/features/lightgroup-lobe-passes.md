@@ -1,15 +1,15 @@
 ---
-title: Blender Cycles 渲染：针对每个灯光组输出独立的直接与间接光照通道
-description: "学习如何在 Blender Cycles 中将单个灯光组拆分为漫反射、高光、透射和体积等分量通道，为 Nuke 精细重打光提供可能。"
+title: Blender Cycles 渲染：按灯光组输出材质通道灯光 AOV（Direct / Indirect）
+description: "学习如何在 Blender Cycles 中按灯光组拆分漫反射、高光、透射和体积等材质通道灯光 AOV，在 Nuke 中实现后期精细重打光。"
 cover: "/features/lightgroups.webp"
 ---
-# 灯光组分量通道
+# 材质通道灯光 AOV
 
 <Badge type="tip" text="已发布" />
 
-## 什么是灯光组分量通道？
+## 什么是材质通道灯光 AOV？
 
-灯光组分量通道（Lightgroup Lobe Passes）扩展了 Blender Cycles 的灯光通道系统，通过将每个**灯光组 (lightgroup)** 分解为其独立的照明分量（即 Lobes）。您现在可以为每个灯光组输出单独的**漫反射 (diffuse)**、**光泽 (glossy)**、**透射 (transmission)** 和**体积 (volume)** 通道，并进一步分离**直接光 (direct)** 和**间接光 (indirect)**，而不是仅仅获得一个合并的灯光组通道。
+材质通道灯光 AOV（Lightgroup Lobe Passes）扩展了 Blender Cycles 的灯光通道系统，通过将每个**灯光组 (lightgroup)** 分解为独立的材质通道分量。您现在可以为每个灯光组输出单独的**漫反射 (Diffuse)**、**高光 (Glossy)**、**透射 (Transmission)** 和**体积 (Volume)** 通道，并进一步分离**直接光 (Direct)** 和**间接光 (Indirect)**，而不仅仅是一个合并的灯光组通道。
 
 这使得灯光艺术家和合成师在单独的灯光设置上能够拥有与 Blender 全局通道同等水平的控制力。
 

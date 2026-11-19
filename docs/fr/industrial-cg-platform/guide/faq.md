@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender 5.2 et fichiers .blend, backends CUDA/OptiX/CPU, gestionnaire ViewLayer, statut Linux Rocky 9 et compilation."
+description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender 5.2 et fichiers .blend, backends OptiX/CPU, gestionnaire ViewLayer, statut Linux Bêta 1 et compilation."
 ---
 # FAQ
 
@@ -26,13 +26,12 @@ La grande majorité des add-ons Blender compatibles avec la version 5.2 officiel
 
 ### Quels backends GPU sont pris en charge ?
 
-- **CUDA** — Tous les GPU NVIDIA ayant une capacité de calcul (Compute Capability) supérieure ou égale à 5.0.
 - **OptiX** — GPU NVIDIA RTX (fortement recommandé pour obtenir les meilleures performances de lancer de rayons).
 - **CPU** — Toujours disponible comme alternative de secours.
 
 ### Les fonctionnalités personnalisées fonctionnent-elles sur CPU ?
 
-Oui. La sortie Deep EXR, les passes par lobe de lightgroup et la couleur d'ombre (Shadow Color) fonctionnent toutes de manière identique sur les processeurs (CPU) et les GPU NVIDIA (via CUDA ou OptiX).
+Oui. La sortie Deep EXR, les passes par lobe de lightgroup et la couleur d'ombre (Shadow Color) fonctionnent toutes de manière identique sur les processeurs (CPU) et les GPU NVIDIA RTX (via OptiX).
 
 ### Quel est l'impact sur le temps de rendu des passes par lobe de lightgroup ?
 
@@ -46,7 +45,7 @@ Le gestionnaire de ViewLayer utilise Qt (via le runtime BQt) pour son interface 
 
 ### Puis-je l'utiliser sur Linux ?
 
-Pas encore. La version actuelle est exclusive à Windows x64 (sous forme d'archive ZIP). La prise en charge de Linux (Rocky Linux 9 / X11) est actuellement en cours de développement.
+La version stable actuelle (**5.2.4 LTS**) vise uniquement Windows x64 (archive ZIP). Une **préversion publique Linux Beta 1** (`industrial-cg-platform-5.2.4-linux-beta.1`, compilée sur base Rocky Linux 8.10 / EL8) est disponible pour tests et retours, tandis que la qualification complète GPU/OptiX et bureau Linux reste en cours. Voir [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).
 
 ### Que signifie le message `failed to get blender hwnd` dans les logs ?
 

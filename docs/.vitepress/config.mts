@@ -20,10 +20,10 @@ const enFeatures = [
 ]
 
 const zhFeatures = [
-  { text: 'Deep EXR 深度输出', link: '/zh/industrial-cg-platform/features/deep-exr' },
-  { text: 'EXR Overscan 溢画幅', link: '/zh/industrial-cg-platform/features/exr-overscan' },
+  { text: 'Deep EXR', link: '/zh/industrial-cg-platform/features/deep-exr' },
+  { text: 'EXR Overscan', link: '/zh/industrial-cg-platform/features/exr-overscan' },
   { text: '阴影颜色', link: '/zh/industrial-cg-platform/features/shadow-color' },
-  { text: '灯光组分量通道', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
+  { text: '材质通道灯光 AOV', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
   { text: 'ViewLayer 管理器', link: '/zh/industrial-cg-platform/features/viewlayer-manager' },
 ]
 
@@ -170,6 +170,14 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: 'Pipeline Cases',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            items: [
+              { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
+              { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+            ]
+          },
           { text: 'Blog', link: '/blog/' },
           { text: 'Donate', link: '/en/donate' },
           { text: 'About', link: '/en/industrial-cg-platform/about/' }
@@ -265,6 +273,49 @@ export default defineConfig({
                 { text: 'Overview & Setup', link: '/en/auto-light-shuffle/' }
               ]
             }
+          ],
+          '/en/blender-to-nuke-workflow/': [
+            {
+              text: 'Pipeline Cases',
+              items: [
+                { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: 'Related Manuals',
+              items: [
+                { text: 'Deep EXR Output', link: '/en/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/en/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Lightgroup Lobe Passes', link: '/en/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'ViewLayer Manager', link: '/en/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Industrial AOV Connector', link: '/en/industrial-aov-connector/' },
+                { text: 'Auto Light Shuffle', link: '/en/auto-light-shuffle/' },
+                { text: 'AIO-OCIO', link: '/en/aio-ocio/' }
+              ]
+            }
+          ],
+          '/en/blender-vfx-pipeline/': [
+            {
+              text: 'Pipeline Cases',
+              items: [
+                { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: 'Related Manuals',
+              items: [
+                { text: 'Getting Started', link: '/en/industrial-cg-platform/guide/getting-started' },
+                { text: 'Installation', link: '/en/industrial-cg-platform/guide/installation' },
+                { text: 'Development Tracking', link: '/en/feature-tracking' },
+                { text: 'Deep EXR Output', link: '/en/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/en/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Lightgroup Lobe Passes', link: '/en/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'ViewLayer Manager', link: '/en/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Release Notes', link: '/en/industrial-cg-platform/releases/' }
+              ]
+            }
           ]
         },
       },
@@ -317,6 +368,14 @@ export default defineConfig({
                   { text: 'Auto Light Shuffle', link: '/zh/auto-light-shuffle/' }
                 ]
               }
+            ]
+          },
+          {
+            text: '流程案例',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            items: [
+              { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
+              { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
             ]
           },
           { text: '博客', link: '/blog/' },
@@ -414,6 +473,49 @@ export default defineConfig({
                 { text: '概述与安装配置', link: '/zh/auto-light-shuffle/' }
               ]
             }
+          ],
+          '/zh/blender-to-nuke-workflow/': [
+            {
+              text: '流程案例',
+              items: [
+                { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: '关联文档',
+              items: [
+                { text: 'Deep EXR', link: '/zh/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/zh/industrial-cg-platform/features/exr-overscan' },
+                { text: '材质通道灯光 AOV', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'ViewLayer 管理器', link: '/zh/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Industrial AOV Connector', link: '/zh/industrial-aov-connector/' },
+                { text: 'Auto Light Shuffle', link: '/zh/auto-light-shuffle/' },
+                { text: 'AIO-OCIO', link: '/zh/aio-ocio/' }
+              ]
+            }
+          ],
+          '/zh/blender-vfx-pipeline/': [
+            {
+              text: '流程案例',
+              items: [
+                { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: '关联文档',
+              items: [
+                { text: '快速开始', link: '/zh/industrial-cg-platform/guide/getting-started' },
+                { text: '安装指南', link: '/zh/industrial-cg-platform/guide/installation' },
+                { text: '开发追踪', link: '/zh/feature-tracking' },
+                { text: 'Deep EXR', link: '/zh/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/zh/industrial-cg-platform/features/exr-overscan' },
+                { text: '材质通道灯光 AOV', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'ViewLayer 管理器', link: '/zh/industrial-cg-platform/features/viewlayer-manager' },
+                { text: '版本发布记录', link: '/zh/industrial-cg-platform/releases/' }
+              ]
+            }
           ]
         },
         outline: { label: '本页目录' },
@@ -472,6 +574,14 @@ export default defineConfig({
                   { text: 'Auto Light Shuffle', link: '/fr/auto-light-shuffle/' }
                 ]
               }
+            ]
+          },
+          {
+            text: 'Cas de Pipeline',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            items: [
+              { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
+              { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
             ]
           },
           { text: 'Blog', link: '/blog/' },
@@ -569,6 +679,49 @@ export default defineConfig({
                 { text: 'Aperçu & Installation', link: '/fr/auto-light-shuffle/' }
               ]
             }
+          ],
+          '/fr/blender-to-nuke-workflow/': [
+            {
+              text: 'Cas de Pipeline',
+              items: [
+                { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
+                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: 'Manuels associés',
+              items: [
+                { text: 'Deep EXR', link: '/fr/industrial-cg-platform/features/deep-exr' },
+                { text: 'Overscan EXR', link: '/fr/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Passes par lobe de lightgroup', link: '/fr/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'Gestionnaire de ViewLayer', link: '/fr/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Industrial AOV Connector', link: '/fr/industrial-aov-connector/' },
+                { text: 'Auto Light Shuffle', link: '/fr/auto-light-shuffle/' },
+                { text: 'AIO-OCIO', link: '/fr/aio-ocio/' }
+              ]
+            }
+          ],
+          '/fr/blender-vfx-pipeline/': [
+            {
+              text: 'Cas de Pipeline',
+              items: [
+                { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
+                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
+              ]
+            },
+            {
+              text: 'Manuels associés',
+              items: [
+                { text: 'Premiers pas', link: '/fr/industrial-cg-platform/guide/getting-started' },
+                { text: 'Installation', link: '/fr/industrial-cg-platform/guide/installation' },
+                { text: 'Suivi du développement', link: '/fr/feature-tracking' },
+                { text: 'Deep EXR', link: '/fr/industrial-cg-platform/features/deep-exr' },
+                { text: 'Overscan EXR', link: '/fr/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Passes par lobe de lightgroup', link: '/fr/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'Gestionnaire de ViewLayer', link: '/fr/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Notes de Version', link: '/fr/industrial-cg-platform/releases/' }
+              ]
+            }
           ]
         },
         outline: { label: 'Sur cette page' },
@@ -640,6 +793,14 @@ export default defineConfig({
               { text: 'Auto Light Shuffle', link: '/en/auto-light-shuffle/' }
             ]
           }
+        ]
+      },
+      {
+        text: 'Pipeline Cases',
+        activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+        items: [
+          { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
+          { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
         ]
       },
       { text: 'Blog', link: '/blog/' },

@@ -112,7 +112,7 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     <div class="ft-milestones">
       <span class="ft-milestone">✓ Rocky Linux 8.10 (EL8 / glibc 2.28+) Build, Packaging &amp; 658 ELF Dependency Audit</span>
       <span class="ft-milestone">✓ Linux/X11 bQt (<code>Qt 6.9.3</code>) ViewLayer Manager, 21 CPU Feature Tests &amp; 27 Unit Tests Passed on Rocky 8.10</span>
-      <span class="ft-milestone">✓ Public Linux Beta 1 Pre-release (<code>.tar.xz</code> + <code>SHA256SUMS</code>; CPU, CUDA, OptiX &amp; Dynamic HIP Compiled)</span>
+      <span class="ft-milestone">✓ Public Linux Beta 1 Pre-release (<code>.tar.xz</code> + <code>SHA256SUMS</code>; CPU, OptiX &amp; Dynamic HIP Compiled)</span>
       <span class="ft-milestone ft-milestone-pending">→ Native Linux GPU/OptiX Rendering, HIP/ROCm &amp; Multi-GPU Runtime Validation</span>
       <span class="ft-milestone ft-milestone-pending">→ Native Linux Desktop, Full DPI/Wayland &amp; Production Scene Performance Qualification</span>
     </div>

@@ -1,6 +1,6 @@
 ---
 title: "常见问题 (FAQ)"
-description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blender 5.2 兼容性、.blend 文件互通、CUDA/OptiX/CPU 渲染后端、ViewLayer 管理器、Rocky Linux 9 进度及源码编译。"
+description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blender 5.2 兼容性、.blend 文件互通、OptiX/CPU 渲染后端、ViewLayer 管理器、Linux Beta 1 进度及源码编译。"
 ---
 # 常见问题 (FAQ)
 
@@ -26,13 +26,12 @@ description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blende
 
 ### 支持哪些 GPU 渲染后端？
 
-- **CUDA** — 支持所有计算能力（Compute Capability）在 5.0 及以上的 NVIDIA 独立显卡。
 - **OptiX** — 强烈推荐 NVIDIA RTX 系列显卡使用，可获得最佳的光线追踪吞吐与渲染速度。
 - **CPU** — 始终作为最后的保底和回退渲染器可用。
 
 ### 这些自定义的扩展渲染功能可以在 CPU 上运行吗？
 
-可以。无论是 Deep EXR 深度输出、灯光组分量通道、还是艺术阴影着色（Shadow Color），都完美兼容并支持 CPU、CUDA 和 OptiX 渲染后端。
+可以。无论是 Deep EXR 深度输出、灯光组分量通道、还是艺术阴影着色（Shadow Color），都完美兼容并支持 CPU 和 OptiX 渲染后端。
 
 ### 灯光组分量通道（Lobe Passes）会带来多少渲染时间开销？
 
@@ -46,7 +45,7 @@ ViewLayer 管理器使用 Qt（通过 BQt）构建其高级 UI 界面。由于 B
 
 ### 我能在 Linux 上使用它吗？
 
-目前还不支持。当前的发布版本仅提供 Windows x64 二进制 ZIP 压缩包。针对 Linux 平台（Rocky Linux 9 / X11 视窗环境）的移植与支持目前正在进行中。
+当前稳定版（**5.2.4 LTS**）仅提供 Windows x64 ZIP 压缩包。Linux 方面现已发布基于 Rocky Linux 8.10 / EL8 基线的公开 **Linux Beta 1 预发布版**（`industrial-cg-platform-5.2.4-linux-beta.1`）供测试与反馈，完整的原生 Linux GPU/OptiX 与桌面验收仍在进行中，最新进度请参阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
 
 ### 启动时提示的 `failed to get blender hwnd` 日志代表什么？
 

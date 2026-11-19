@@ -114,7 +114,7 @@ Property changes in the manager are written back to Blender immediately — ther
 
 - The manager runs as a standalone top-level Qt window (not embedded in Blender's UI).
 - The BQt runtime may log `failed to get blender hwnd, creating new window` — this is expected behavior in the safe-mode path and is not a launch failure.
-- Windows only in the current release. Linux support is in progress.
+- Stable builds target Windows x64; a public Linux Beta 1 pre-release (Rocky Linux 8.10 / EL8 baseline) is available for testing and feedback.
 
 ## See Also
 

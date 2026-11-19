@@ -332,13 +332,17 @@ function stripMarkdown(md: string): string {
     .trim()
 }
 
-function extractFaqEntities(relativePath: string): Array<Record<string, unknown>> {
+function extractFaqEntities(
+  relativePath: string,
+  faqSectionOnly = false
+): Array<Record<string, unknown>> {
   const fullPath = path.join(DOCS_ROOT, relativePath)
   if (!fs.existsSync(fullPath)) return []
   const raw = fs.readFileSync(fullPath, 'utf8')
   const body = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
   const lines = body.split(/\r?\n/)
   const entities: Array<Record<string, unknown>> = []
+  let inFaqSection = !faqSectionOnly
   let currentQuestion = ''
   let currentAnswerLines: string[] = []
 
@@ -360,12 +364,20 @@ function extractFaqEntities(relativePath: string): Array<Record<string, unknown>
   }
 
   for (const line of lines) {
-    if (line.startsWith('### ')) {
+    if (line.startsWith('## ')) {
+      flush()
+      if (faqSectionOnly) {
+        const heading = line.slice(3).trim()
+        inFaqSection = /(?:FAQ|Frequently Asked Questions|常见问题|Questions fréquentes)/i.test(
+          heading
+        )
+      }
+    } else if (line.startsWith('# ')) {
+      flush()
+    } else if (inFaqSection && line.startsWith('### ')) {
       flush()
       currentQuestion = line.slice(4).trim()
-    } else if (line.startsWith('## ') || line.startsWith('# ')) {
-      flush()
-    } else if (currentQuestion) {
+    } else if (inFaqSection && currentQuestion) {
       currentAnswerLines.push(line)
     }
   }
@@ -476,6 +488,8 @@ function resolveDefaultCover(relativePath: string): string {
   if (relativePath.includes('/industrial-light-aov-splitter/')) return '/features/light.webp'
   if (relativePath.includes('/auto-light-shuffle/')) return '/features/lightgroups.webp'
   if (relativePath.includes('/aio-ocio/')) return '/features/ocio.webp'
+  if (relativePath.includes('/blender-to-nuke-workflow/')) return '/blog/nuke-deep-compositing.webp'
+  if (relativePath.includes('/blender-vfx-pipeline/')) return '/splash.webp'
   if (/\/feature-tracking\.md$/.test(relativePath)) return '/features/platform.webp'
   return '/logo.webp'
 }
@@ -571,8 +585,8 @@ export function buildSeoHead(context: TransformContext): HeadConfig[] {
     }),
   ]
 
-  if (relPath.endsWith('/guide/faq.md')) {
-    const faqEntities = extractFaqEntities(relPath)
+  if (relPath.endsWith('/guide/faq.md') || fm.faq === true) {
+    const faqEntities = extractFaqEntities(relPath, !relPath.endsWith('/guide/faq.md'))
     if (faqEntities.length > 0) {
       head.push(
         jsonLdScript({

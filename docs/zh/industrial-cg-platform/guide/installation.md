@@ -1,6 +1,6 @@
 ---
 title: "安装"
-description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles CUDA/OptiX GPU 配置以及与官方 Blender 5.2 共存方式。"
+description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles OptiX GPU 配置以及与官方 Blender 5.2 共存方式。"
 ---
 # 安装
 
@@ -9,7 +9,7 @@ description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP �
 | 组件 | 要求 |
 | --- | --- |
 | **操作系统** | Windows 10/11 x64 |
-| **GPU** | 支持 CUDA 或 OptiX 的 NVIDIA GPU（推荐） |
+| **GPU** | 支持 OptiX 的 NVIDIA RTX GPU（推荐） |
 | **GPU 驱动** | 最新 NVIDIA Game Ready 或 Studio 驱动 |
 | **内存 (RAM)** | 最低 16 GB，推荐 32 GB |
 | **磁盘空间** | 解压发布包需要约 1 GB 空间 |
@@ -50,7 +50,6 @@ Blender 5.2.4 LTS Industrial CG Platform
 
 1. 打开菜单栏 **编辑 > 偏好设置 > 系统 (Edit > Preferences > System)**。
 2. 在 **Cycles 渲染设备 (Cycles Render Devices)** 下，选择：
-   - **CUDA** — 广泛兼容老旧硬件，速度稍慢。
    - **OptiX** — RTX 系列 GPU 上的硬件光线追踪加速（强烈推荐）。
 3. 在下方的设备列表中勾选您的 GPU 显卡。
 

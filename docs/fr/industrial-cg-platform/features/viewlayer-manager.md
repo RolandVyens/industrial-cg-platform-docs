@@ -114,7 +114,7 @@ Les modifications de propriétés dans le gestionnaire sont réécrites dans Ble
 
 - Le gestionnaire s'exécute comme une fenêtre Qt autonome de haut niveau (non intégrée à l'interface native de Blender).
 - L'exécution de BQt peut journaliser `failed to get blender hwnd, creating new window` — c'est un comportement attendu dans le chemin du mode sécurisé, et non un échec de lancement.
-- Version Windows uniquement pour le moment. La prise en charge de Linux est en cours.
+- Les versions stables ciblent Windows x64 ; une préversion publique Linux Beta 1 (base Rocky Linux 8.10 / EL8) est disponible pour test.
 
 ## Voir Aussi
 

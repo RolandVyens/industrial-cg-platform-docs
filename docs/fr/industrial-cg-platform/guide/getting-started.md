@@ -40,10 +40,12 @@ Industrial CG Platform est destiné aux :
 - **Compatibilité totale** — Les fichiers `.blend` créés dans Industrial CG Platform sont compatibles avec Blender 5.2 standard. Les fonctionnalités personnalisées ne seront tout simplement pas disponibles lorsqu'elles sont ouvertes dans Blender standard.
 - **Mêmes noms d'exécutables** — L'exécutable s'appelle toujours `blender.exe` et utilise la même structure de répertoire de configuration.
 - **Suffixe de branche** — Le titre de la fenêtre affiche `Blender 5.2.4 LTS Industrial CG Platform` pour le distinguer de Blender standard.
-- **Windows uniquement** — Les versions actuelles sont uniquement des packages ZIP Windows x64. La prise en charge de Linux est en cours de développement.
+- **Windows x64 stable + Linux Beta 1** — Les versions stables actuelles sont distribuées en archives ZIP Windows x64. Une préversion publique Linux Beta 1 (base Rocky Linux 8.10 / EL8) est disponible pour tests et retours.
 
 ## Prochaines Étapes
 
+- [Workflow Blender vers Nuke](/fr/blender-to-nuke-workflow/) — Guide de production complet du rendu Cycles Deep EXR, Overscan et lobes de lightgroup jusqu'à Nuke.
+- [Pipeline VFX Blender](/fr/blender-vfx-pipeline/) — Architecture studio, évaluation par rôle et liste de contrôle pilote pour adopter Industrial CG Platform.
 - [Installation](/fr/industrial-cg-platform/guide/installation) — Télécharger et configurer la version.
 - [Compilation depuis les sources](/fr/industrial-cg-platform/guide/building-from-source) — Compiler à partir du dépôt GitHub.
 - [FAQ](/fr/industrial-cg-platform/guide/faq) — Questions fréquentes et réponses.

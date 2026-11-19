@@ -29,21 +29,23 @@ Industrial CG Platform 专为以下人群设计：
 
 | 功能 | 说明 |
 | --- | --- |
-| [Deep EXR 深度输出](/zh/industrial-cg-platform/features/deep-exr) | Cycles 原生深度合成输出 |
-| [EXR Overscan 溢画幅](/zh/industrial-cg-platform/features/exr-overscan) | 保留 displayWindow 并扩展 dataWindow，供下游 VFX 流程使用 |
-| [灯光组分量通道](/zh/industrial-cg-platform/features/lightgroup-lobe-passes) | 逐灯光组的漫反射/光泽/透射/体积分量通道 |
-| [阴影颜色](/zh/industrial-cg-platform/features/shadow-color) | 逐灯光和逐世界的艺术级阴影着色 |
-| [ViewLayer 管理器](/zh/industrial-cg-platform/features/viewlayer-manager) | 基于 Qt 的 ViewLayer 管理工具，支持预设系统 |
+| [Deep EXR](/zh/industrial-cg-platform/features/deep-exr) | Cycles 原生深度合成输出 |
+| [EXR Overscan](/zh/industrial-cg-platform/features/exr-overscan) | 在保持成片裁切框不变的前提下向外多渲染边缘画面，适配 Nuke 镜头畸变与稳像 |
+| [材质通道灯光 AOV](/zh/industrial-cg-platform/features/lightgroup-lobe-passes) | 按灯光组拆分 Direct/Indirect 漫反射、高光、透射与体积 AOV |
+| [Shadow Color](/zh/industrial-cg-platform/features/shadow-color) | 单灯与世界环境的艺术阴影染色 |
+| [ViewLayer 管理器](/zh/industrial-cg-platform/features/viewlayer-manager) | 独立多 ViewLayer 批量管理工具，支持预设系统 |
 
 ## 与官方 Blender 的区别
 
 - **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在官方 Blender 5.2 中打开。自定义功能在官方版本中不可用，但数据会被保留。
 - **相同的可执行文件名** — 可执行文件仍然是 `blender.exe`，使用相同的配置目录结构。
 - **分支后缀** — 窗口标题显示 `Blender 5.2.4 LTS Industrial CG Platform` 以区分官方版本。
-- **仅 Windows** — 当前发布版本仅提供 Windows x64 ZIP 包，Linux 平台支持正在推进中。
+- **Windows x64 稳定版 + Linux Beta 1** — 当前稳定版提供 Windows x64 绿色 ZIP 包；Linux 方面已发布基于 Rocky Linux 8.10 / EL8 基线的公开 Beta 1 预发布版供测试与反馈。
 
 ## 下一步
 
+- [Blender 到 Nuke 工作流](/zh/blender-to-nuke-workflow/) — 从 Cycles 原生 Deep EXR、Overscan 与材质通道灯光 AOV 到 Nuke 合成的端到端生产指南。
+- [Blender VFX 管线](/zh/blender-vfx-pipeline/) — 面向工作室的架构总览、角色收益对照与试点评估清单。
 - [安装](/zh/industrial-cg-platform/guide/installation) — 下载并设置发布版本。
 - [从源码构建](/zh/industrial-cg-platform/guide/building-from-source) — 从 GitHub 仓库编译。
 - [常见问题](/zh/industrial-cg-platform/guide/faq) — 常见问题解答。

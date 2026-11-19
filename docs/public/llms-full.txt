@@ -14,20 +14,26 @@
 
 ## Core Platform Documentation
 
+### Blender to Nuke Workflow — https://cgweave.com/en/blender-to-nuke-workflow/
+Complete end-to-end Blender Cycles to Foundry Nuke compositing workflow using Industrial CG Platform 5.2.4 LTS, ViewLayer Manager, native Deep EXR (Simple and Physical modes), EXR Overscan, Lightgroup Lobe Passes vs. Industrial Light AOV Splitter, Industrial AOV Connector, Auto Light Shuffle, and AIO-OCIO. Covers Nuke `DeepRead`/`DeepRecolor`/`DeepMerge`/`DeepToImage` chains, handoff naming conventions, troubleshooting, and FAQ.
+
+### Blender VFX Pipeline — https://cgweave.com/en/blender-vfx-pipeline/
+Studio-level Blender VFX pipeline architecture mapping Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, AOV Connector, Light AOV Splitter, Auto Light Shuffle, and AIO-OCIO across six shot stages. Differentiates Industrial CG Platform from stock Blender and shot trackers (such as Blender_Plumber) and provides a side-by-side pilot evaluation checklist.
+
 ### Platform Home — https://cgweave.com/en/industrial-cg-platform/
 Central entry point for the Industrial CG Platform Blender VFX branch. Summarizes the five core engine/UI additions—Deep EXR Output, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager—and links directly to downloads, guides, API reference, and development tracking.
 
 ### Getting Started — https://cgweave.com/en/industrial-cg-platform/guide/getting-started
-Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender 5.2. Documents `.blend` compatibility, the `Blender 5.2.4 LTS Industrial CG Platform` version identifier, and the Windows-only release status.
+Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender 5.2. Documents `.blend` compatibility, the `Blender 5.2.4 LTS Industrial CG Platform` version identifier, and the Windows x64 stable + public Linux Beta 1 pre-release status.
 
 ### Installation — https://cgweave.com/en/industrial-cg-platform/guide/installation
-Lists hardware and OS prerequisites (Windows 10/11 x64, NVIDIA CUDA/OptiX GPU recommended, 16 GB RAM minimum / 32 GB recommended, ~1 GB disk space) and step-by-step ZIP installation. Covers SHA256 verification, CLI verification (`blender.exe --version`), GPU backend selection, and isolated OptiX shader cache paths.
+Lists hardware and OS prerequisites (Windows 10/11 x64, NVIDIA RTX OptiX GPU recommended, 16 GB RAM minimum / 32 GB recommended, ~1 GB disk space) and step-by-step ZIP installation. Covers SHA256 verification, CLI verification (`blender.exe --version`), GPU backend selection, and isolated OptiX shader cache paths.
 
 ### Building from Source — https://cgweave.com/en/industrial-cg-platform/guide/building-from-source
-Documents the Windows source build workflow using Visual Studio 2022, CMake 3.24+, Ninja 1.11+, Git with LFS, and `make update` for precompiled `lib/windows_x64` dependencies. Includes the mandatory Git LFS hydration gate check (`assets/`, `release/datafiles/`, `scripts/startup/bl_app_templates_system/`) and Ninja + VsDevCmd CMake flags.
+Documents the Windows Release source build workflow using Visual Studio 2022, CMake 3.24+, Ninja 1.11+, Git with LFS, OptiX SDK, and `make update` for precompiled `lib/windows_x64` dependencies. Covers the full `ninja install` dependency graph (so Cycles OptiX kernels and embedded splash/buildinfo are built), Git LFS asset checks, and post-install verification.
 
 ### FAQ — https://cgweave.com/en/industrial-cg-platform/guide/faq
-Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/CUDA/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and Rocky Linux 9 status.
+Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and Linux Beta 1 (Rocky Linux 8.10 / EL8 baseline) status.
 
 ### Development Tracking — https://cgweave.com/en/feature-tracking
 Tracks shipped production features, active R&D candidates (such as Linux Beta 1 / EL8 platform support and Atmosphere Volume), and planned roadmap directions. Provides milestone checklists and status cards across the platform lifecycle.
@@ -44,7 +50,7 @@ Enables Cycles to render extra margin pixels beyond the delivery frame without a
 Extends Cycles lightgroups to output separate diffuse, glossy, transmission, and volume passes split into direct and indirect lobes per lightgroup. Preserves aggregate energy balance back to the Beauty pass so compositors in Nuke can relight individual light components without re-rendering.
 
 ### Shadow Color — https://cgweave.com/en/industrial-cg-platform/features/shadow-color
-Adds per-light and per-world `Shadow Color` properties in Cycles to tint shadowed regions independently from illuminated surfaces. Works across CPU, CUDA, and OptiX backends for artistic color-script control without altering light color.
+Adds per-light and per-world `Shadow Color` properties in Cycles to tint shadowed regions independently from illuminated surfaces. Works across CPU and OptiX backends for artistic color-script control without altering light color.
 
 ### ViewLayer Manager — https://cgweave.com/en/industrial-cg-platform/features/viewlayer-manager
 Provides a standalone Qt window (built on the bundled BQt / PySide6 system extension) for managing ViewLayers, render passes, Shader AOVs, lightgroups, and Cycles light-pass AOV controls in one place. Supports saving and batch-applying pass presets across multiple selected ViewLayers, with English, Simplified Chinese, Traditional Chinese, and French UI translations.

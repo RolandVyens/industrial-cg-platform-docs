@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "Configuration requise et guide d'installation ZIP Windows x64 pour Industrial CG Platform 5.2.4 LTS, incluant la vérification SHA256, la configuration GPU CUDA/OptiX et la coexistence avec Blender 5.2 standard."
+description: "Configuration requise et guide d'installation ZIP Windows x64 pour Industrial CG Platform 5.2.4 LTS, incluant la vérification SHA256, la configuration GPU OptiX et la coexistence avec Blender 5.2 standard."
 ---
 # Installation
 
@@ -9,7 +9,7 @@ description: "Configuration requise et guide d'installation ZIP Windows x64 pour
 | Composant | Configuration |
 | --- | --- |
 | **OS** | Windows 10/11 x64 |
-| **GPU** | GPU NVIDIA avec prise en charge CUDA ou OptiX (recommandé) |
+| **GPU** | GPU NVIDIA RTX avec prise en charge OptiX (recommandé) |
 | **Pilote GPU** | Pilote NVIDIA Game Ready ou Studio le plus récent |
 | **RAM** | 16 Go minimum, 32 Go recommandés |
 | **Espace Disque** | ~1 Go pour le package de publication |
@@ -49,8 +49,7 @@ Blender 5.2.4 LTS Industrial CG Platform
 Pour activer le rendu matériel Cycles GPU avec NVIDIA :
 
 1. Ouvrez **Édition > Préférences > Système (Edit > Preferences > System)**.
-2. Sous **Périphériques de rendu Cycles (Cycles Render Devices)**, sélectionnez soit :
-   - **CUDA** — Large compatibilité avec le matériel ancien, légèrement plus lent.
+2. Sous **Périphériques de rendu Cycles (Cycles Render Devices)**, sélectionnez :
    - **OptiX** — Lancer de rayons accéléré matériellement sur les GPU RTX (fortement recommandé).
 3. Cochez votre carte graphique GPU dans la liste des périphériques.
 

@@ -8,9 +8,11 @@
 
 ## Core Documentation
 
+- [Blender to Nuke Workflow](https://cgweave.com/en/blender-to-nuke-workflow/): End-to-end production guide from Cycles Deep EXR, EXR Overscan, Lightgroup Lobe Passes, and AOV Connector to Nuke DeepMerge and Auto Light Shuffle.
+- [Blender VFX Pipeline](https://cgweave.com/en/blender-vfx-pipeline/): Studio VFX pipeline architecture, role-based evaluation, side-by-side pilot checklist, and stock Blender boundaries.
 - [Platform Home](https://cgweave.com/en/industrial-cg-platform/): Overview of the Blender 5.2 VFX branch and core feature set.
 - [Getting Started](https://cgweave.com/en/industrial-cg-platform/guide/getting-started): Introduction, target workflows, compatibility with stock Blender 5.2, and quick links.
-- [Installation](https://cgweave.com/en/industrial-cg-platform/guide/installation): Windows 10/11 x64 requirements, ZIP setup, and Cycles CUDA/OptiX configuration.
+- [Installation](https://cgweave.com/en/industrial-cg-platform/guide/installation): Windows 10/11 x64 requirements, ZIP setup, and Cycles OptiX configuration.
 - [Building from Source](https://cgweave.com/en/industrial-cg-platform/guide/building-from-source): Source build guide with Visual Studio 2022, CMake, Ninja, `make update`, and Git LFS hydration checks.
 - [FAQ](https://cgweave.com/en/industrial-cg-platform/guide/faq): Blender compatibility, GPU/CPU backends, ViewLayer Manager behavior, and build troubleshooting.
 - [Development Tracking](https://cgweave.com/en/feature-tracking): Live status of shipped features, active R&D, and planned roadmap items.

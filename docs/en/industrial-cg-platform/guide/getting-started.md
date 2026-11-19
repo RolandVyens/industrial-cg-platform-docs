@@ -40,10 +40,12 @@ Industrial CG Platform is intended for:
 - **Full compatibility** — `.blend` files created in Industrial CG Platform are compatible with stock Blender 5.2. Custom features simply won't be available when opened in stock Blender.
 - **Same executable names** — The executable is still called `blender.exe` and uses the same config directory structure.
 - **Branch suffix** — The window title shows `Blender 5.2.4 LTS Industrial CG Platform` to distinguish it from stock Blender.
-- **Windows only** — Current releases are Windows x64 ZIP packages only. Linux support is currently in progress.
+- **Windows x64 stable + Linux Beta 1** — Current stable releases are Windows x64 ZIP packages. A public Linux Beta 1 pre-release (Rocky Linux 8.10 / EL8 baseline) is available for testing and feedback.
 
 ## Next Steps
 
+- [Blender to Nuke Workflow](/en/blender-to-nuke-workflow/) — End-to-end production guide from Cycles Deep EXR, Overscan, and Lightgroup Lobes to Nuke compositing.
+- [Blender VFX Pipeline](/en/blender-vfx-pipeline/) — Studio architecture, role evaluation, and pilot checklist for adopting Industrial CG Platform.
 - [Installation](/en/industrial-cg-platform/guide/installation) — Download and set up the release.
 - [Building from Source](/en/industrial-cg-platform/guide/building-from-source) — Build from the GitHub repository.
 - [FAQ](/en/industrial-cg-platform/guide/faq) — Common questions and answers.
