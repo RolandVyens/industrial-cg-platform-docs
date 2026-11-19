@@ -95,22 +95,30 @@ aside: false
         <span class="ft-title">Linux 生产环境支持</span>
         <span class="ft-module">bQt · Platform · Build Pipeline</span>
       </div>
-      <span class="ft-badge ft-badge-progress">研发验证中 · In Progress</span>
+      <span class="ft-badge ft-badge-progress">Beta 1 · 公开测试中</span>
     </div>
     <p class="ft-desc">
-      将 Industrial CG Platform 编译打包管线、Cycles GPU/Deep EXR 运行时与 bQt 视图层管理器窗口运行环境扩展至 Linux 工作室生产系统（面向 Rocky Linux 9 / X11）。
+      将 Industrial CG Platform 编译打包管线、Cycles GPU/Deep EXR 运行时与 bQt 视图层管理器窗口运行环境扩展至 Linux x86-64 工作室生产系统（基于 Rocky Linux 8.10 / EL8 基线，glibc 2.28+，X11/XWayland）。首个公开 Linux Beta 1 预发布版现已上线，供测试与反馈。
     </p>
     <div class="ft-progress-block">
       <div class="ft-progress-meta">
-        <span class="ft-progress-label">当前研发进度（仅完成基础生产环境搭建）</span>
-        <span class="ft-progress-pct">5%</span>
+        <span class="ft-progress-label">当前研发进度（公开 Linux Beta 1 已上线；原生 Linux GPU/OptiX 与桌面验收待完成）</span>
+        <span class="ft-progress-pct">90%</span>
       </div>
       <div class="ft-progress-track">
-        <span class="ft-progress-fill" style="width: 5%"></span>
+        <span class="ft-progress-fill" style="width: 90%"></span>
       </div>
     </div>
     <div class="ft-milestones">
-      <span class="ft-milestone">✓ 基础 Linux 生产环境搭建</span>
+      <span class="ft-milestone">✓ Rocky Linux 8.10（EL8 / glibc 2.28+）构建打包与 658 个 ELF 依赖审计通过</span>
+      <span class="ft-milestone">✓ Linux/X11 bQt（<code>Qt 6.9.3</code>）ViewLayer 管理器及 21 项 CPU 功能测试、27 项单元测试通过</span>
+      <span class="ft-milestone">✓ 发布公开 Linux Beta 1 预发布包（<code>.tar.xz</code> + <code>SHA256SUMS</code>；已编译 CPU/CUDA/OptiX/动态 HIP）</span>
+      <span class="ft-milestone ft-milestone-pending">→ 原生 Linux 实体机 GPU/OptiX 渲染、HIP/ROCm 与多卡运行时验证</span>
+      <span class="ft-milestone ft-milestone-pending">→ 原生 Linux 桌面环境、完整 DPI/Wayland 与生产场景性能验收</span>
+    </div>
+    <div class="ft-links">
+      <a href="https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.1" target="_blank" rel="noopener" class="ft-link">Linux Beta 1 预发布页 →</a>
+      <a href="/zh/industrial-cg-platform/releases/" class="ft-link ft-link-muted">版本发布记录</a>
     </div>
   </div>
 </div>

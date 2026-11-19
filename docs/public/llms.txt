@@ -3,7 +3,7 @@
 > Industrial CG Platform is a production-oriented VFX fork of Blender 5.2 (current release 5.2.4 LTS, Windows x64) with native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
 
 - Current release: 5.2.4 LTS (Windows x64 ZIP)
-- Linux support: Rocky Linux 9 (in progress, ~5%, not yet released)
+- Linux support: Public Linux Beta 1 pre-release available (Rocky Linux 8.10 / EL8 baseline, glibc 2.28+; pre-release for testing, not yet a stable release)
 - Primary audiences: VFX studios, technical directors (TDs), lighting artists, and compositors
 
 ## Core Documentation

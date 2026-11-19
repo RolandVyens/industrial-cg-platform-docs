@@ -95,22 +95,30 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
         <span class="ft-title">Linux Platform Support</span>
         <span class="ft-module">bQt · Platform · Build Pipeline</span>
       </div>
-      <span class="ft-badge ft-badge-progress">In Progress · Active R&amp;D</span>
+      <span class="ft-badge ft-badge-progress">Beta 1 · Pre-release</span>
     </div>
     <p class="ft-desc">
-      Extending the Industrial CG Platform build pipeline, Cycles GPU/Deep EXR runtime, and bQt ViewLayer Manager window integration to Linux studio environments (targeting Rocky Linux 9 / X11).
+      Extending the Industrial CG Platform build pipeline, Cycles GPU/Deep EXR runtime, and bQt ViewLayer Manager window integration to Linux x86-64 studio environments (built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+, X11/XWayland). First public Linux Beta 1 pre-release is now available for testing and feedback.
     </p>
     <div class="ft-progress-block">
       <div class="ft-progress-meta">
-        <span class="ft-progress-label">Development Progress (Base Production Environment Only)</span>
-        <span class="ft-progress-pct">5%</span>
+        <span class="ft-progress-label">Development Progress (Public Linux Beta 1 Available; Native Linux GPU/OptiX &amp; Desktop Acceptance Pending)</span>
+        <span class="ft-progress-pct">90%</span>
       </div>
       <div class="ft-progress-track">
-        <span class="ft-progress-fill" style="width: 5%"></span>
+        <span class="ft-progress-fill" style="width: 90%"></span>
       </div>
     </div>
     <div class="ft-milestones">
-      <span class="ft-milestone">✓ Base Linux Production Environment Setup</span>
+      <span class="ft-milestone">✓ Rocky Linux 8.10 (EL8 / glibc 2.28+) Build, Packaging &amp; 658 ELF Dependency Audit</span>
+      <span class="ft-milestone">✓ Linux/X11 bQt (<code>Qt 6.9.3</code>) ViewLayer Manager, 21 CPU Feature Tests &amp; 27 Unit Tests Passed on Rocky 8.10</span>
+      <span class="ft-milestone">✓ Public Linux Beta 1 Pre-release (<code>.tar.xz</code> + <code>SHA256SUMS</code>; CPU, CUDA, OptiX &amp; Dynamic HIP Compiled)</span>
+      <span class="ft-milestone ft-milestone-pending">→ Native Linux GPU/OptiX Rendering, HIP/ROCm &amp; Multi-GPU Runtime Validation</span>
+      <span class="ft-milestone ft-milestone-pending">→ Native Linux Desktop, Full DPI/Wayland &amp; Production Scene Performance Qualification</span>
+    </div>
+    <div class="ft-links">
+      <a href="https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.1" target="_blank" rel="noopener" class="ft-link">Linux Beta 1 Pre-release →</a>
+      <a href="/en/industrial-cg-platform/releases/" class="ft-link ft-link-muted">Release Notes</a>
     </div>
   </div>
 </div>

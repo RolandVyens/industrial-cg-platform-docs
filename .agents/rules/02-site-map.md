@@ -7,8 +7,8 @@ A. `docs/[en|zh|fr]/index.md` (Global Homepage)
 - FORBIDDEN: Deep-dive feature cards (e.g., Deep EXR, Overscan). Do not copy these from subdirectories!
 
 B. `docs/blog/` (Dev Log)
-- ALLOWED: Frontmatter with ONLY `date`, `title`, `summary` (plus optional `cover` for OG metadata). Single-column borderless feed list with 'Read More'.
-- FORBIDDEN: Frontmatter `tags`, `author`. No `h1` (#) in markdown body. No dual-column/waterfall layouts.
+- ALLOWED: `docs/blog/index.md` renders a single-column borderless feed list with 'Read More' (no dual-column/waterfall layouts). Posts live under `docs/blog/posts/*.md` (shared English-only devlog) with `title`, `date`, `description` (or `summary`), `cover`, and optional `category` / `tags` / `editLink`.
+- FORBIDDEN: Translating `docs/blog/` into `/[en|zh|fr]/blog/` subdirectories without updating `transformPageData` and `seo.ts`.
 
 C. `docs/[en|zh|fr]/industrial-cg-platform/` (Core Docs)
 - ALLOWED: `index.md` contains platform Hero (`Industrial CG Platform`) and feature cards. `guide/` for user operation. `features/` for technical explanations. `api/` for C++/RNA/Python internals. `releases/` for release feed.
@@ -33,5 +33,5 @@ G. Top Navbar & Dynamic Brand Architecture (`docs/.vitepress/config.mts` & `docs
 
 H. SEO, AI Discovery & Root Routing (`docs/index.md`, `docs/public/`, `docs/.vitepress/seo.ts`, `docs/.vitepress/git-lastmod.json`)
 - `docs/index.md` serves as the `<noscript>`/metadata fallback for `/` while `docs/public/_redirects` handles the Cloudflare Pages 301 redirect (`/ -> /en/`).
-- `docs/public/robots.txt`, `llms.txt`, `llms-full.txt`, and `_headers` govern crawler access, LLM indexing, and response headers.
-- `docs/.vitepress/seo.ts` centralizes OG/Twitter meta, JSON-LD, clean canonical URLs, and `sitemap.xml` `lastmod` shallow-clone fallback via `docs/.vitepress/git-lastmod.json`.
+- `docs/public/robots.txt`, `llms.txt`, `llms-full.txt`, and `_headers` govern crawler access, LLM indexing, and edge headers (`/sitemap.xml` MIME type and `/robots.txt` `Cache-Control`).
+- `docs/.vitepress/seo.ts` centralizes OG/Twitter meta, JSON-LD, clean canonical URLs, and shallow-clone `sitemap.xml` `lastmod` resolution via `docs/.vitepress/git-lastmod.json` (`{ lastmod, blob }` entries maintained by `npm run update:lastmod`).

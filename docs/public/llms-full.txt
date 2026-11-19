@@ -5,8 +5,8 @@
 ## Platform Facts & Scope
 
 - Base version: Blender 5.2 (current stable release: 5.2.4 LTS)
-- Supported OS: Windows 10/11 x64 (ZIP distribution)
-- Linux status: Rocky Linux 9 support is in progress (~5%) and is not yet released
+- Supported OS: Windows 10/11 x64 (stable ZIP distribution)
+- Linux status: Public Linux Beta 1 pre-release (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+) is available for testing and feedback; full native Linux GPU/OptiX and desktop qualification is still in progress (not yet a stable release)
 - File compatibility: `.blend` files created in Industrial CG Platform open in stock Blender 5.2 (custom data is preserved and ignored in stock builds)
 - Source repository: https://github.com/RolandVyens/industrial-cg-platform
 - Releases & Windows x64 ZIP downloads: https://github.com/RolandVyens/industrial-cg-platform/releases
@@ -30,7 +30,7 @@ Documents the Windows source build workflow using Visual Studio 2022, CMake 3.24
 Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/CUDA/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and Rocky Linux 9 status.
 
 ### Development Tracking — https://cgweave.com/en/feature-tracking
-Tracks shipped production features, active R&D candidates (such as Linux Rocky 9 support), and planned roadmap directions. Provides milestone checklists and status cards across the platform lifecycle.
+Tracks shipped production features, active R&D candidates (such as Linux Beta 1 / EL8 platform support and Atmosphere Volume), and planned roadmap directions. Provides milestone checklists and status cards across the platform lifecycle.
 
 ## Core Platform Features
 

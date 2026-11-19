@@ -17,8 +17,9 @@ MANDATORY constraints for SEO, GEO (AI discovery), Frontmatter, and Language var
    - NEVER leave `description` empty, duplicated across pages, starting with `!` (image alt residue), starting with `|` / `---` (table residue), or containing `...` truncation.
    - `docs/.vitepress/seo.ts` automatically strips redundant `meta[name="description"]` from `frontmatter.head`, prevents duplicate `| Industrial CG Platform` title suffixes, and supplies default landscape `cover` images per product route; set explicit `cover: /path/to/image.webp` (under `docs/public/`) on Blog posts and Feature pages.
 
-4. STRUCTURED DATA, LICENSE & AI DISCOVERY:
+4. STRUCTURED DATA, LICENSE, EDGE CACHING & AI DISCOVERY:
    - `docs/.vitepress/seo.ts` automatically generates `Organization` + `WebSite`, `BreadcrumbList`, `FAQPage` (from `###` headings in `guide/faq.md`), `BlogPosting`, and plugin `SoftwareApplication`/`CreativeWork` JSON-LD.
    - Keep license references unified at **GNU GPL v3 or later (`GPL-3.0-or-later`)** (`https://www.gnu.org/licenses/gpl-3.0.html`).
    - Whenever adding, renaming, or retiring core features, plugins, or releases, update `docs/public/llms.txt` and `docs/public/llms-full.txt` using verified repository facts only.
-   - `docs/.vitepress/seo.ts` combines `docs/.vitepress/git-lastmod.json` with shallow `HEAD` history so Cloudflare Pages shallow clones preserve per-page `sitemap.xml` `<lastmod>` timestamps; run `npm run update:lastmod` periodically on a full clone to sync historical entries.
+   - `docs/public/_headers` sets `Cache-Control: public, max-age=0, must-revalidate` on `/robots.txt` (requires Cloudflare Zone `Browser Cache TTL` set to *Respect Existing Headers* to override the 4h CDN default).
+   - `docs/.vitepress/git-lastmod.json` stores `{ lastmod, blob }` per `.md` file; in shallow clones (`depth=1`), `docs/.vitepress/seo.ts` ignores parentless grafted commits and compares `git ls-tree -r HEAD -- docs` blob SHAs against `git-lastmod.json`. Run `npm run update:lastmod` on a full clone before committing `.md` changes.
