@@ -18,6 +18,8 @@ MANDATORY actions before any `git push`:
    Must output `build complete` (catches Vue template errors).
    Execute `npm run audit:built-assets`.
    Must output `ALL BUILT ASSET CHECKS PASSED` (catches generated pages that reference missing local assets).
+   Execute `npm run audit:site-policy`.
+   Must output `ALL SITE POLICY CHECKS PASSED` (enforces factual redlines, built FAQPage/SEO metadata, and `git-lastmod.json` parity).
 
 4. EXPLICIT CONSENT:
    List modified files and ask the User.

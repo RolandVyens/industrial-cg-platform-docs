@@ -14,11 +14,11 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     <span class="ft-stat-label">Released in Stable</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num ft-stat-cyan">2</span>
+    <span class="ft-stat-num ft-stat-cyan">3</span>
     <span class="ft-stat-label">In Progress (Active R&amp;D)</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">3</span>
+    <span class="ft-stat-num">6</span>
     <span class="ft-stat-label">Planned on Roadmap</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">Lifecycle Distribution</span>
-    <span class="ft-chart-sub">11 Tracked Features</span>
+    <span class="ft-chart-sub">15 Tracked Features</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="150.80 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-150.80" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">54.5%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">Shipped</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">Released in Stable</span>
-        <span class="ft-legend-val">6 (54.5%)</span>
+        <span class="ft-legend-val">6 (40.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">In Progress R&amp;D</span>
-        <span class="ft-legend-val">2 (18.2%)</span>
+        <span class="ft-legend-val">3 (20.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">Planned Roadmap</span>
-        <span class="ft-legend-val">3 (27.3%)</span>
+        <span class="ft-legend-val">6 (40.0%)</span>
       </div>
     </div>
   </div>
@@ -119,6 +119,32 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     <div class="ft-links">
       <a href="https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.1" target="_blank" rel="noopener" class="ft-link">Linux Beta 1 Pre-release →</a>
       <a href="/en/industrial-cg-platform/releases/" class="ft-link ft-link-muted">Release Notes</a>
+    </div>
+  </div>
+  <div class="ft-card ft-card-active">
+    <div class="ft-card-header">
+      <div class="ft-title-group">
+        <span class="ft-title">World Volume Deep Support</span>
+        <span class="ft-module">Cycles Deep EXR · World Volume</span>
+      </div>
+      <span class="ft-badge ft-badge-progress">Initiated · Kickoff</span>
+    </div>
+    <p class="ft-desc">
+      Extending native Cycles Deep EXR capture to World Volume shaders, closing the current World Volume limitation so full-scene atmospheric fog and environment volumes output per-sample deep data for lossless Nuke deep compositing.
+    </p>
+    <div class="ft-progress-block">
+      <div class="ft-progress-meta">
+        <span class="ft-progress-label">Development Progress (Just Initiated, Preparing Architecture &amp; Implementation)</span>
+        <span class="ft-progress-pct">1%</span>
+      </div>
+      <div class="ft-progress-track">
+        <span class="ft-progress-fill" style="width: 1%"></span>
+      </div>
+    </div>
+    <div class="ft-milestones">
+      <span class="ft-milestone">✓ Project Kickoff &amp; Technical Scope Definition</span>
+      <span class="ft-milestone ft-milestone-pending">→ World Volume Deep Interval Sampling &amp; Transmittance Architecture</span>
+      <span class="ft-milestone ft-milestone-pending">→ CPU / OptiX Implementation &amp; Nuke DeepMerge Accuracy Verification</span>
     </div>
   </div>
 </div>
@@ -314,6 +340,30 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     </div>
     <h3 class="ft-roadmap-title">Arbitrary Light Path Expressions (LPE)</h3>
     <p class="ft-roadmap-desc">Custom LPE syntax support extending beyond fixed Lightgroup lobe splits for specialized studio AOV extraction.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">ViewLayer · Collections</span>
+      <span class="ft-badge ft-badge-planned">Planned</span>
+    </div>
+    <h3 class="ft-roadmap-title">Collection Visibility Control Upgrade</h3>
+    <p class="ft-roadmap-desc">Upgraded collection-level render and viewport visibility controls for granular per-ViewLayer holdout, indirect-only toggles, and batch shot layering.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Core · Pipeline API</span>
+      <span class="ft-badge ft-badge-planned">Planned</span>
+    </div>
+    <h3 class="ft-roadmap-title">High Performance Data Manipulation Layer / Script Engine</h3>
+    <p class="ft-roadmap-desc">High-performance scene data access layer and scripting engine tailored for heavy VFX scenes, removing bottlenecks in bulk object, pass, and attribute manipulation.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Raytracing</span>
+      <span class="ft-badge ft-badge-planned">Planned</span>
+    </div>
+    <h3 class="ft-roadmap-title">Rendering Trace Set</h3>
+    <p class="ft-roadmap-desc">Production-grade trace set controls allowing artists and TDs to include or exclude specific object collections per ray type (reflection, refraction, shadow, and indirect rays).</p>
   </div>
 </div>
 

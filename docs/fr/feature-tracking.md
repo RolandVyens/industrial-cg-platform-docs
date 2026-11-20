@@ -14,11 +14,11 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     <span class="ft-stat-label">Publiées en version stable</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num ft-stat-cyan">2</span>
+    <span class="ft-stat-num ft-stat-cyan">3</span>
     <span class="ft-stat-label">En cours (R&amp;D Active)</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">3</span>
+    <span class="ft-stat-num">6</span>
     <span class="ft-stat-label">Prévues sur la feuille de route</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">Répartition du cycle de vie</span>
-    <span class="ft-chart-sub">11 fonctionnalités suivies</span>
+    <span class="ft-chart-sub">15 fonctionnalités suivies</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="150.80 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-150.80" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">54.5%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">Publié</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">Publiées en version stable</span>
-        <span class="ft-legend-val">6 (54.5%)</span>
+        <span class="ft-legend-val">6 (40.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">R&amp;D en cours</span>
-        <span class="ft-legend-val">2 (18.2%)</span>
+        <span class="ft-legend-val">3 (20.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">Feuille de route</span>
-        <span class="ft-legend-val">3 (27.3%)</span>
+        <span class="ft-legend-val">6 (40.0%)</span>
       </div>
     </div>
   </div>
@@ -119,6 +119,32 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     <div class="ft-links">
       <a href="https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.1" target="_blank" rel="noopener" class="ft-link">Pré-version Linux Bêta 1 →</a>
       <a href="/fr/industrial-cg-platform/releases/" class="ft-link ft-link-muted">Notes de version</a>
+    </div>
+  </div>
+  <div class="ft-card ft-card-active">
+    <div class="ft-card-header">
+      <div class="ft-title-group">
+        <span class="ft-title">Support Deep EXR pour World Volume (<code>World Volume Deep Support</code>)</span>
+        <span class="ft-module">Cycles Deep EXR · World Volume</span>
+      </div>
+      <span class="ft-badge ft-badge-progress">Initialisé · Lancement</span>
+    </div>
+    <p class="ft-desc">
+      Extension de la capture Deep EXR native de Cycles aux shaders World Volume afin de lever la limitation actuelle et de permettre le compositing profond sans perte du brouillard global et des atmosphères dans Nuke.
+    </p>
+    <div class="ft-progress-block">
+      <div class="ft-progress-meta">
+        <span class="ft-progress-label">Progression (Projet tout juste initialisé, préparation de l'architecture et du développement)</span>
+        <span class="ft-progress-pct">1%</span>
+      </div>
+      <div class="ft-progress-track">
+        <span class="ft-progress-fill" style="width: 1%"></span>
+      </div>
+    </div>
+    <div class="ft-milestones">
+      <span class="ft-milestone">✓ Lancement du projet et définition du périmètre technique</span>
+      <span class="ft-milestone ft-milestone-pending">→ Architecture d'échantillonnage par intervalles et d'intégration de transmittance World Volume</span>
+      <span class="ft-milestone ft-milestone-pending">→ Implémentation CPU / OptiX et validation de précision sous Nuke DeepMerge</span>
     </div>
   </div>
 </div>
@@ -314,6 +340,30 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     </div>
     <h3 class="ft-roadmap-title">Expressions de chemin lumineux arbitraires (LPE)</h3>
     <p class="ft-roadmap-desc">Prise en charge d'une syntaxe LPE personnalisée au-delà des passes de lobes de groupes de lumières prédéfinies.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">ViewLayer · Collections</span>
+      <span class="ft-badge ft-badge-planned">Prévu</span>
+    </div>
+    <h3 class="ft-roadmap-title">Amélioration du contrôle de visibilité des collections (<code>Collection Visibility Control Upgrade</code>)</h3>
+    <p class="ft-roadmap-desc">Contrôles avancés de visibilité rendu et viewport par collection : holdout, éclairage indirect seul et gestion par lots sur plusieurs ViewLayers.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Core · Pipeline API</span>
+      <span class="ft-badge ft-badge-planned">Prévu</span>
+    </div>
+    <h3 class="ft-roadmap-title">Couche de manipulation de données haute performance / Moteur de script (<code>High Performance Data Manipulation Layer / Script Engine</code>)</h3>
+    <p class="ft-roadmap-desc">Couche d'accès aux données de scène haute performance et moteur de script dédiés aux scènes VFX lourdes pour accélérer les opérations massives sur objets, passes et attributs.</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Raytracing</span>
+      <span class="ft-badge ft-badge-planned">Prévu</span>
+    </div>
+    <h3 class="ft-roadmap-title">Jeux de tracé de rayons (<code>Rendering Trace Set</code>)</h3>
+    <p class="ft-roadmap-desc">Mécanisme de Trace Sets de niveau studio permettant d'inclure ou d'exclure finement des collections d'objets par type de rayon (réflexion, réfraction, ombre et rebonds indirects).</p>
   </div>
 </div>
 

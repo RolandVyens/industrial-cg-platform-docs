@@ -36,7 +36,7 @@ Documents the Windows Release source build workflow using Visual Studio 2022, CM
 Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and Linux Beta 1 (Rocky Linux 8.10 / EL8 baseline) status.
 
 ### Development Tracking — https://cgweave.com/en/feature-tracking
-Tracks shipped production features, active R&D candidates (such as Linux Beta 1 / EL8 platform support and Atmosphere Volume), and planned roadmap directions. Provides milestone checklists and status cards across the platform lifecycle.
+Tracks shipped production features, active R&D candidates (Linux Beta 1 / EL8 platform support, Atmosphere Volume, and World Volume Deep Support), and planned roadmap directions (including Collection Visibility Control Upgrade, High Performance Data Manipulation Layer / Script Engine, and Rendering Trace Set). Provides milestone checklists and status cards across the platform lifecycle.
 
 ## Core Platform Features
 

@@ -14,11 +14,11 @@ aside: false
     <span class="ft-stat-label">已发布生产特性</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num ft-stat-cyan">2</span>
+    <span class="ft-stat-num ft-stat-cyan">3</span>
     <span class="ft-stat-label">架构研发与验证中</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">3</span>
+    <span class="ft-stat-num">6</span>
     <span class="ft-stat-label">路线图规划特性</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ aside: false
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">生命周期状态分布</span>
-    <span class="ft-chart-sub">共追踪 11 项核心特性</span>
+    <span class="ft-chart-sub">共追踪 15 项核心特性</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="150.80 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="50.27 276.46" stroke-dashoffset="-150.80" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">54.5%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">已交付</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">已发布生产特性</span>
-        <span class="ft-legend-val">6 项 (54.5%)</span>
+        <span class="ft-legend-val">6 项 (40.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">正在研发与验证中</span>
-        <span class="ft-legend-val">2 项 (18.2%)</span>
+        <span class="ft-legend-val">3 项 (20.0%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">路线图规划中</span>
-        <span class="ft-legend-val">3 项 (27.3%)</span>
+        <span class="ft-legend-val">6 项 (40.0%)</span>
       </div>
     </div>
   </div>
@@ -119,6 +119,32 @@ aside: false
     <div class="ft-links">
       <a href="https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.1" target="_blank" rel="noopener" class="ft-link">Linux Beta 1 预发布页 →</a>
       <a href="/zh/industrial-cg-platform/releases/" class="ft-link ft-link-muted">版本发布记录</a>
+    </div>
+  </div>
+  <div class="ft-card ft-card-active">
+    <div class="ft-card-header">
+      <div class="ft-title-group">
+        <span class="ft-title">世界体积 Deep EXR 支持 (<code>World Volume Deep Support</code>)</span>
+        <span class="ft-module">Cycles Deep EXR · World Volume</span>
+      </div>
+      <span class="ft-badge ft-badge-progress">已立项 · 准备开发</span>
+    </div>
+    <p class="ft-desc">
+      将 Cycles 原生 Deep EXR 深度采集扩展至世界环境体积（World Volume），补齐当前 Deep EXR 暂不支持世界体积的边界，让大场景全局雾效与大气层也能输出完整的逐采样深度数据用于 Nuke 深度合成。
+    </p>
+    <div class="ft-progress-block">
+      <div class="ft-progress-meta">
+        <span class="ft-progress-label">当前研发进度（刚立项，准备启动架构设计与开发）</span>
+        <span class="ft-progress-pct">1%</span>
+      </div>
+      <div class="ft-progress-track">
+        <span class="ft-progress-fill" style="width: 1%"></span>
+      </div>
+    </div>
+    <div class="ft-milestones">
+      <span class="ft-milestone">✓ 需求立项与技术范围界定</span>
+      <span class="ft-milestone ft-milestone-pending">→ World Volume 深度区间采样与透射率积分架构设计</span>
+      <span class="ft-milestone ft-milestone-pending">→ CPU / OptiX 后端实现与 Nuke DeepMerge 精度验收</span>
     </div>
   </div>
 </div>
@@ -313,7 +339,31 @@ aside: false
       <span class="ft-badge ft-badge-planned">规划中</span>
     </div>
     <h3 class="ft-roadmap-title">任意光通路表达式 (LPE) 语法支持</h3>
-    <p class="ft-roadmap-desc">在现有固定灯光组分量通道基础上，扩展完整的任意光通路表达式（Light Path Expression）自定义通道提取能力。</p>
+    <p class="ft-roadmap-desc">在现有固定材质通道灯光 AOV 基础上，扩展完整的任意光通路表达式（Light Path Expression）自定义通道提取能力。</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">ViewLayer · Collections</span>
+      <span class="ft-badge ft-badge-planned">规划中</span>
+    </div>
+    <h3 class="ft-roadmap-title">集合可见性控制升级 (<code>Collection Visibility Control Upgrade</code>)</h3>
+    <p class="ft-roadmap-desc">升级面向大型镜头的集合级渲染与视口可见性控制，提供更灵活的 ViewLayer 显隐、Holdout、间接光开关与批量管理能力。</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Core · Pipeline API</span>
+      <span class="ft-badge ft-badge-planned">规划中</span>
+    </div>
+    <h3 class="ft-roadmap-title">高性能数据操作层 / 脚本引擎 (<code>High Performance Data Manipulation Layer / Script Engine</code>)</h3>
+    <p class="ft-roadmap-desc">面向超大规模影视资产与管线自动化的高性能场景数据读写层与脚本执行引擎，大幅降低海量物体、通道与属性批处理的性能瓶颈。</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Raytracing</span>
+      <span class="ft-badge ft-badge-planned">规划中</span>
+    </div>
+    <h3 class="ft-roadmap-title">渲染光线追踪集合 (<code>Rendering Trace Set</code>)</h3>
+    <p class="ft-roadmap-desc">引入影视级渲染器标准的 Trace Set 机制，支持按集合精细控制反射、折射、阴影与间接光等光线追踪的包含与排除范围。</p>
   </div>
 </div>
 
