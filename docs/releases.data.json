@@ -11,8 +11,32 @@
         "id": 770455156,
         "name": "industrial-cg-platform-5.2.4.zip",
         "size": 724402384,
-        "download_count": 0,
+        "download_count": 2,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.4/industrial-cg-platform-5.2.4.zip"
+      }
+    ]
+  },
+  {
+    "tag_name": "industrial-cg-platform-5.2.4-linux-beta.2",
+    "name": "Industrial CG Platform 5.2.4 LTS for Linux — Beta 2",
+    "published_at": "2026-11-20T08:36:04Z",
+    "prerelease": true,
+    "body": "# Industrial CG Platform for Linux — Beta 2\r\n\r\nThe second public Linux beta of **Blender 5.2.4 LTS Industrial CG Platform**, available for testing and feedback. This is a **pre-release**, not the stable release.\r\n\r\n### Requirements\r\n\r\n- Linux x86-64 with an **x86-64-v2 CPU**, **glibc 2.28 or newer**, and working **OpenGL 4.3+** drivers.\r\n- Built on **Rocky Linux 8.10**, with the EL8 library baseline. Use the supplied launcher for X11/XWayland and Qt integration.\r\n- Minimal Rocky installations may need `xcb-util-cursor`, `xcb-util-wm`, `xcb-util-keysyms`, `libxkbcommon-x11`, fonts and Mesa/OpenGL runtime packages.\r\n\r\n### Included\r\n\r\n- Industrial Deep EXR and the ViewLayer Manager, using the Linux/X11 bQt implementation and **Qt 6.9.3**.\r\n- CPU, CUDA, OptiX and dynamic HIP backends compiled. CUDA kernels cover `sm_50`, `sm_52`, `sm_60`, `sm_70`, `sm_75`, `sm_86`, `sm_120` and `compute_75` PTX.\r\n- HIP precompiled kernels, HIPRT and oneAPI are not included. HIP needs a compatible ROCm environment and is untested.\r\n- Deep EXR uses **CPU or OptiX**; standalone CUDA Deep is not supported.\r\n\r\n### What's new\r\n\r\nThis build includes the mainline EXR Overscan fix. Cycles sizes the shared render result before it renders ViewLayers, preserving passes from completed layers in single-scene renders. Cross-scene Overscan is rejected before rendering.\r\n\r\n### Validation\r\n\r\nThe released archive was freshly extracted and tested on Rocky Linux 8.10 under WSL2. All 23 CPU feature tests passed, including 9 Overscan tests for multilayer pass preservation, EXR windows and cross-scene rejection. All 27 bundled-Python unit tests passed.\r\n\r\nCUDA flat EXR rendering passed on an RTX 4080 SUPER. The CUDA Deep guard, CPU Deep cancellation, host-budget and writer failure recovery, and EXR decoding also passed. The actual ViewLayer Manager passed workflow and lifecycle checks, including presets, multiple windows, dialogs, scrolling and the branded startup visual under WSLg with llvmpipe.\r\n\r\nThe package passed archive, license, embedded splash, 105 kernel, 8 wheel and 658 ELF ABI checks against glibc 2.28. OptiX did not enumerate a device under WSL, so OptiX rendering remains pending on native Linux. Native desktop, HIP and full production-scene and performance validation are pending.\r\n\r\n### Try it\r\n\r\nExtract the `.tar.xz` on a Linux filesystem, enter the extracted folder and run:\r\n\r\n```sh\r\nBLENDER_USER_RESOURCES=\"$PWD/beta-test-profile\" ./industrial-cg-platform --factory-startup\r\n```\r\n\r\nVerify the download with the attached `SHA256SUMS`. Please report OS, GPU/driver, session type, launch method, logs and reproduction steps in [Issues](https://github.com/RolandVyens/industrial-cg-platform/issues).\r\n\r\n[Source and build instructions](https://github.com/RolandVyens/industrial-cg-platform/blob/industrial-cg-platform-5.2.4-linux-beta.2/BUILDING_LINUX_BETA.md). The corresponding bQt fork source and third-party notices are included in the package.\r\n\r\nThe existing [5.2.4 stable release](https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4) remains unchanged and remains Latest.\r\n",
+    "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.2",
+    "assets": [
+      {
+        "id": 771062344,
+        "name": "industrial-cg-platform-5.2.4-linux-x64-beta.2.tar.xz",
+        "size": 755639668,
+        "download_count": 0,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.4-linux-beta.2/industrial-cg-platform-5.2.4-linux-x64-beta.2.tar.xz"
+      },
+      {
+        "id": 771062346,
+        "name": "SHA256SUMS",
+        "size": 119,
+        "download_count": 0,
+        "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.2.4-linux-beta.2/SHA256SUMS"
       }
     ]
   },
