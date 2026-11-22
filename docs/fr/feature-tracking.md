@@ -18,7 +18,7 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     <span class="ft-stat-label">En cours (R&amp;D Active)</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">6</span>
+    <span class="ft-stat-num">7</span>
     <span class="ft-stat-label">Prévues sur la feuille de route</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">Répartition du cycle de vie</span>
-    <span class="ft-chart-sub">15 fonctionnalités suivies</span>
+    <span class="ft-chart-sub">16 fonctionnalités suivies</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="103.67 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="51.84 276.46" stroke-dashoffset="-103.67" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">37.5%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">Publié</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">Publiées en version stable</span>
-        <span class="ft-legend-val">6 (40.0%)</span>
+        <span class="ft-legend-val">6 (37.5%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">R&amp;D en cours</span>
-        <span class="ft-legend-val">3 (20.0%)</span>
+        <span class="ft-legend-val">3 (18.8%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">Feuille de route</span>
-        <span class="ft-legend-val">6 (40.0%)</span>
+        <span class="ft-legend-val">7 (43.7%)</span>
       </div>
     </div>
   </div>
@@ -364,6 +364,14 @@ Suivez l'état des fonctionnalités publiées en production, les travaux de R&D 
     </div>
     <h3 class="ft-roadmap-title">Jeux de tracé de rayons (<code>Rendering Trace Set</code>)</h3>
     <p class="ft-roadmap-desc">Mécanisme de Trace Sets de niveau studio permettant d'inclure ou d'exclure finement des collections d'objets par type de rayon (réflexion, réfraction, ombre et rebonds indirects).</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Lighting · Motion Blur</span>
+      <span class="ft-badge ft-badge-planned">Prévu</span>
+    </div>
+    <h3 class="ft-roadmap-title">Flou de mouvement des lumières (<code>Light Motion Blur</code>)</h3>
+    <p class="ft-roadmap-desc">Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — évitant un flou de mouvement erroné lorsque les lumières se déplacent ou suivent la caméra.</p>
   </div>
 </div>
 

@@ -18,7 +18,7 @@ aside: false
     <span class="ft-stat-label">架构研发与验证中</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">6</span>
+    <span class="ft-stat-num">7</span>
     <span class="ft-stat-label">路线图规划特性</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ aside: false
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">生命周期状态分布</span>
-    <span class="ft-chart-sub">共追踪 15 项核心特性</span>
+    <span class="ft-chart-sub">共追踪 16 项核心特性</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="103.67 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="51.84 276.46" stroke-dashoffset="-103.67" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">37.5%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">已交付</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">已发布生产特性</span>
-        <span class="ft-legend-val">6 项 (40.0%)</span>
+        <span class="ft-legend-val">6 项 (37.5%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">正在研发与验证中</span>
-        <span class="ft-legend-val">3 项 (20.0%)</span>
+        <span class="ft-legend-val">3 项 (18.8%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">路线图规划中</span>
-        <span class="ft-legend-val">6 项 (40.0%)</span>
+        <span class="ft-legend-val">7 项 (43.7%)</span>
       </div>
     </div>
   </div>
@@ -364,6 +364,14 @@ aside: false
     </div>
     <h3 class="ft-roadmap-title">渲染光线追踪集合 (<code>Rendering Trace Set</code>)</h3>
     <p class="ft-roadmap-desc">引入影视级渲染器标准的 Trace Set 机制，支持按集合精细控制反射、折射、阴影与间接光等光线追踪的包含与排除范围。</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Lighting · Motion Blur</span>
+      <span class="ft-badge ft-badge-planned">规划中</span>
+    </div>
+    <h3 class="ft-roadmap-title">灯光 Motion Blur (<code>Light Motion Blur</code>)</h3>
+    <p class="ft-roadmap-desc">解决官方 Cycles 运动模糊未计算灯光在世界坐标中位移的问题（当前帧渲染期间灯光保持静止，导致随相机或载具同步移动的灯光产生错误拖影），在快门区间内支持灯光世界空间运动插值。</p>
   </div>
 </div>
 

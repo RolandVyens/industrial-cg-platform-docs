@@ -18,7 +18,7 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     <span class="ft-stat-label">In Progress (Active R&amp;D)</span>
   </div>
   <div class="ft-stat-card">
-    <span class="ft-stat-num">6</span>
+    <span class="ft-stat-num">7</span>
     <span class="ft-stat-label">Planned on Roadmap</span>
   </div>
 </div>
@@ -26,31 +26,31 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
 <div class="ft-chart-card ft-donut-only-card">
   <div class="ft-chart-header">
     <span class="ft-chart-title">Lifecycle Distribution</span>
-    <span class="ft-chart-sub">15 Tracked Features</span>
+    <span class="ft-chart-sub">16 Tracked Features</span>
   </div>
   <div class="ft-donut-wrap">
     <svg class="ft-donut-svg" viewBox="0 0 120 120" aria-hidden="true">
       <circle cx="60" cy="60" r="44" fill="none" stroke="var(--vp-c-bg-mute)" stroke-width="14" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
-      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="55.29 276.46" stroke-dashoffset="-110.58" transform="rotate(-90 60 60)" />
-      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">40.0%</text>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7c4dff" stroke-width="14" stroke-dasharray="103.67 276.46" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#00e5ff" stroke-width="14" stroke-dasharray="51.84 276.46" stroke-dashoffset="-103.67" transform="rotate(-90 60 60)" />
+      <text x="60" y="57" text-anchor="middle" class="ft-donut-num">37.5%</text>
       <text x="60" y="73" text-anchor="middle" class="ft-donut-caption">Shipped</text>
     </svg>
     <div class="ft-donut-legend">
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-brand"></span>
         <span class="ft-legend-name">Released in Stable</span>
-        <span class="ft-legend-val">6 (40.0%)</span>
+        <span class="ft-legend-val">6 (37.5%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-cyan"></span>
         <span class="ft-legend-name">In Progress R&amp;D</span>
-        <span class="ft-legend-val">3 (20.0%)</span>
+        <span class="ft-legend-val">3 (18.8%)</span>
       </div>
       <div class="ft-legend-row">
         <span class="ft-dot ft-dot-muted"></span>
         <span class="ft-legend-name">Planned Roadmap</span>
-        <span class="ft-legend-val">6 (40.0%)</span>
+        <span class="ft-legend-val">7 (43.7%)</span>
       </div>
     </div>
   </div>
@@ -364,6 +364,14 @@ Track the production status, active candidate R&D, and upcoming roadmap mileston
     </div>
     <h3 class="ft-roadmap-title">Rendering Trace Set</h3>
     <p class="ft-roadmap-desc">Production-grade trace set controls allowing artists and TDs to include or exclude specific object collections per ray type (reflection, refraction, shadow, and indirect rays).</p>
+  </div>
+  <div class="ft-roadmap-item">
+    <div class="ft-roadmap-top">
+      <span class="ft-module">Cycles Lighting · Motion Blur</span>
+      <span class="ft-badge ft-badge-planned">Planned</span>
+    </div>
+    <h3 class="ft-roadmap-title">Light Motion Blur</h3>
+    <p class="ft-roadmap-desc">Addresses stock Cycles' limitation where lights remain stationary in world coordinates during a frame—preventing incorrect motion blur when lights move independently or travel together with the camera.</p>
   </div>
 </div>
 
