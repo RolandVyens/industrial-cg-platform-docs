@@ -1,7 +1,7 @@
 ---
 title: "Premiers pas"
 cover: /splash.webp
-description: "Démarrez avec Industrial CG Platform, un fork VFX de Blender 5.2 pour studios, TD, éclairagistes et compositeurs, intégrant Deep EXR natif, EXR Overscan, passes par lobe, Shadow Color et ViewLayer Manager."
+description: "Démarrez avec Industrial CG Platform, un fork VFX de Blender officiel pour studios, TD, éclairagistes et compositeurs, intégrant Deep EXR natif, EXR Overscan, passes par lobe, Shadow Color et ViewLayer Manager."
 ---
 # Premiers pas
 
@@ -13,7 +13,7 @@ description: "Démarrez avec Industrial CG Platform, un fork VFX de Blender 5.2 
 
 Il ne s'agit pas d'un fork Blender généraliste avec des ajouts aléatoires. C'est une plateforme Blender orientée production pour les studios VFX, les artistes, les directeurs techniques (TD), les développeurs de pipeline et les petites équipes qui ont besoin d'un comportement de rendu de style VFX directement dans une chaîne d'outils basée sur Blender.
 
-La version actuelle est basée sur **Blender 5.2** et la branche est nommée `industrial-cg-platform`.
+Industrial CG Platform est basé sur **Blender officiel** et la branche est nommée `industrial-cg-platform`.
 
 ## À qui s'adresse-t-il ?
 
@@ -37,10 +37,12 @@ Industrial CG Platform est destiné aux :
 
 ## Comment diffère-t-il de Blender standard ?
 
-- **Compatibilité totale** — Les fichiers `.blend` créés dans Industrial CG Platform sont compatibles avec Blender 5.2 standard. Les fonctionnalités personnalisées ne seront tout simplement pas disponibles lorsqu'elles sont ouvertes dans Blender standard.
+- **Compatibilité totale** — Les fichiers `.blend` créés dans Industrial CG Platform sont compatibles avec Blender officiel. Les fonctionnalités personnalisées ne seront tout simplement pas disponibles lorsqu'elles sont ouvertes dans Blender officiel.
 - **Mêmes noms d'exécutables** — L'exécutable s'appelle toujours `blender.exe` et utilise la même structure de répertoire de configuration.
 - **Suffixe de branche** — Le titre de la fenêtre affiche `Blender 5.2.4 LTS Industrial CG Platform` pour le distinguer de Blender standard.
 - **Windows x64 stable + Linux Beta 1** — Les versions stables actuelles sont distribuées en archives ZIP Windows x64. Une préversion publique Linux Beta 1 (base Rocky Linux 8.10 / EL8) est disponible pour tests et retours.
+
+Pour le tableau comparatif complet, les raisons du fork et les cas où rester sur Blender officiel, consultez **[Industrial CG Platform vs Blender officiel](/fr/vs-stock-blender/)**.
 
 ## Prochaines Étapes
 

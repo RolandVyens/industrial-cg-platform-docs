@@ -9,7 +9,7 @@ faq: true
 
 在真实影视特效工作室里，引入 Blender 很少卡在建模或视口预览上，真正容易断链的是**渲染数据交接**。如果缺少原生 Deep EXR、标准 EXR Overscan、材质通道灯光 AOV，以及跨软件一致的色彩观感，镜头在 Blender 和 Nuke 之间就会陷入无休止的手动遮罩和返工重渲。
 
-**Industrial CG Platform 5.2.4 LTS** 直接在 Blender 5.2 的渲染内核里补齐了这些工作室刚需（Windows x64 稳定版；另有面向 Linux 的公开 Beta 1 预发布版供测试），并配套开源工具链，让 Blender 顺畅对接 **Foundry Nuke**、**Autodesk Maya** 与 **SideFX Houdini**。
+**Industrial CG Platform 5.2.4 LTS** 直接在原版 Blender 的渲染内核里补齐了这些工作室刚需（Windows x64 稳定版；另有面向 Linux 的公开 Beta 1 预发布版供测试），并配套开源工具链，让 Blender 顺畅对接 **Foundry Nuke**、**Autodesk Maya** 与 **SideFX Houdini**。
 
 ## 1. 生产级 Blender VFX 管线真正需要什么
 
@@ -17,7 +17,7 @@ faq: true
 
 先把 **Industrial CG Platform** 在整条管线里的定位说清楚：
 
-- **对比官方 Blender 5.2**：官方 Blender 拥有出色的建模、动画和 Cycles 路径追踪能力，但缺少原生 Deep EXR、标准 EXR Overscan、按灯光拆分的 Direct/Indirect 细分通道以及 ViewLayer 批量管理器。Industrial CG Platform 在保持 `.blend` 工程完全兼容的前提下，把这些能力直接做进了内核。
+- **对比原版 Blender**：原版 Blender 拥有出色的建模、动画和 Cycles 路径追踪能力，但缺少原生 Deep EXR、标准 EXR Overscan、按灯光拆分的 Direct/Indirect 细分通道以及 ViewLayer 批量管理器。Industrial CG Platform 在保持 `.blend` 工程完全兼容的前提下，把这些能力直接做进了内核。
 - **对比镜头/资产管理工具（如 Blender_Plumber、Kitsu、ShotGrid）**：流程管理工具负责任务分配、版本控制和素材入库；Industrial CG Platform 专注解决**渲染输出、分层架构、EXR 数据交接与色彩一致性**，与现有资产/镜头管理系统天然互补，而不是替代它们。
 
 ## 2. 平台架构：每个模块解决什么问题
@@ -61,13 +61,13 @@ faq: true
    - **操作系统**：当前 5.2.4 LTS 稳定版为 Windows 10/11 x64 绿色便携包。（另有基于 Rocky Linux 8.10 基线的公开 **Linux Beta 1 预发布版** 供测试与反馈，尚未作为稳定版交付。）
    - **显卡**：推荐使用支持 OptiX 的 NVIDIA RTX 显卡；CPU 渲染始终可用。
    - **内存与空间**：最低 16 GB 内存（多 ViewLayer Deep EXR 渲染推荐 32 GB 及以上），解压后约占 1 GB 硬盘空间。
-2. **与官方 Blender 并行部署**：将绿色 ZIP 包解压到任意可写目录（如 `D:\Tools\IndustrialCGPlatform\`）即可运行。窗口标题会清晰显示 `Blender 5.2.4 LTS Industrial CG Platform`，默认 OptiX 缓存也会自动隔离到独立目录，不污染原环境。
-3. **验证 `.blend` 双向兼容**：打开现有的 Blender 5.2 生产工程，开启 Deep EXR、Overscan 与灯光细分通道并保存，确认该文件依然能在官方 Blender 5.2 里正常打开（扩展参数会被安全保留并自动忽略）。
+2. **与原版 Blender 并行部署**：将绿色 ZIP 包解压到任意可写目录（如 `D:\Tools\IndustrialCGPlatform\`）即可运行。窗口标题会清晰显示 `Blender 5.2.4 LTS Industrial CG Platform`，默认 OptiX 缓存也会自动隔离到独立目录，不污染原环境。
+3. **验证 `.blend` 双向兼容**：打开现有的原版 Blender 生产工程，开启 Deep EXR、Overscan 与灯光细分通道并保存，确认该文件依然能在原版 Blender 里正常打开（扩展参数会被安全保留并自动忽略）。
 4. **跑通 Nuke 完整回环**：在 Nuke 中确认 `Read` 自动识别 Overscan bbox、`DeepRead` → `DeepMerge` 深度合成正常，以及 Auto Light Shuffle 一键灯光重建无误。
 
 <figure class="doc-screenshot doc-screenshot--wide">
 <a href="/splash.webp" target="_blank" rel="noopener"><img src="/splash.webp" alt="Industrial CG Platform Blender 影视特效分支定制启动画面" loading="lazy"></a>
-<figcaption>Industrial CG Platform 采用绿色便携包形态，版本标识清晰，与官方 Blender 5.2 保持完整 .blend 工程兼容。</figcaption>
+<figcaption>Industrial CG Platform 采用绿色便携包形态，版本标识清晰，与原版 Blender 保持完整 .blend 工程兼容。</figcaption>
 </figure>
 
 ## 5. 单镜头端到端走查（高层索引）
@@ -85,15 +85,15 @@ faq: true
 
 ## 6. 与官方 Blender 的核心差异边界
 
-Industrial CG Platform 紧跟上游 Blender 5.2 LTS，确保工作室已有的第三方插件、Python 工具和 `.blend` 资产无缝沿用。它不破坏 Blender 原有操作习惯或文件格式，而是专注补齐纯插件无法实现的 Cycles 与 OpenEXR 内核级能力——原生 Deep EXR、标准 EXR Overscan、按灯光拆分的细分通道、Shadow Color，以及内置的独立窗口界面支持（bQt / `PySide6`）。
+Industrial CG Platform 紧跟上游原版 Blender，确保工作室已有的第三方插件、Python 工具和 `.blend` 资产无缝沿用。它不破坏 Blender 原有操作习惯或文件格式，而是专注补齐纯插件无法实现的 Cycles 与 OpenEXR 内核级能力——原生 Deep EXR、标准 EXR Overscan、按灯光拆分的细分通道、Shadow Color，以及内置的独立窗口界面支持（bQt / `PySide6`）。
 
-兼容性说明请参阅 [快速开始](/zh/industrial-cg-platform/guide/getting-started)，开发者接口请参阅 [API 参考](/zh/industrial-cg-platform/api/)，在研功能（如 Atmosphere Volume 与 Linux 验收进展）请参阅 [开发追踪](/zh/feature-tracking)。
+如需完整的逐项功能对照表、分支原因、兼容性边界以及何时应留在原版 Blender，请参阅 **[Industrial CG Platform 对比原版 Blender](/zh/vs-stock-blender/)**。更多兼容性说明请参阅 [快速开始](/zh/industrial-cg-platform/guide/getting-started)，开发者接口请参阅 [API 参考](/zh/industrial-cg-platform/api/)，在研功能（如 Atmosphere Volume 与 Linux 验收进展）请参阅 [开发追踪](/zh/feature-tracking)。
 
 ## 7. 常见问题 (FAQ)
 
-### 工作室可以把 Industrial CG Platform 和官方 Blender 5.2 并行装在一起测试吗？
+### 工作室可以把 Industrial CG Platform 和原版 Blender 并行装在一起测试吗？
 
-可以。Industrial CG Platform 以 Windows x64 绿色便携包发布，默认使用独立的 OptiX 缓存路径，且 `.blend` 工程与官方 Blender 5.2 完全兼容。如果连用户偏好设置也想彻底隔离，启动前设置 `BLENDER_USER_RESOURCES` 环境变量即可。
+可以。Industrial CG Platform 以 Windows x64 绿色便携包发布，默认使用独立的 OptiX 缓存路径，且 `.blend` 工程与原版 Blender 完全兼容。如果连用户偏好设置也想彻底隔离，启动前设置 `BLENDER_USER_RESOURCES` 环境变量即可。
 
 ### Industrial CG Platform 采用什么开源许可证？
 

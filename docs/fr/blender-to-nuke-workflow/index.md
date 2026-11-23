@@ -7,7 +7,7 @@ faq: true
 
 # Workflow Blender vers Nuke : Deep EXR natif, rendu hors-champ et rééclairage par lumière
 
-Blender officiel s'arrête aux fichiers EXR plats, obligeant les compositeurs à multiplier les rendus de masques manuels, à subir des bordures noires après distorsion d'objectif et à retourner en 3D pour ajuster une seule lumière. **Industrial CG Platform 5.2.4 LTS** intègre directement ces capacités de production dans Blender 5.2 : **sortie Deep EXR native**, **rendu hors-champ (EXR Overscan)**, **passes d'éclairage détaillées par lumière** et **gestionnaire de couches de rendu** (version stable Windows x64 ; préversion publique Linux Beta 1 disponible pour test).
+Blender officiel s'arrête aux fichiers EXR plats, obligeant les compositeurs à multiplier les rendus de masques manuels, à subir des bordures noires après distorsion d'objectif et à retourner en 3D pour ajuster une seule lumière. **Industrial CG Platform 5.2.4 LTS** intègre directement ces capacités de production dans Blender officiel : **sortie Deep EXR native**, **rendu hors-champ (EXR Overscan)**, **passes d'éclairage détaillées par lumière** et **gestionnaire de couches de rendu** (version stable Windows x64 ; préversion publique Linux Beta 1 disponible pour test).
 
 À partir d'un véritable plan VFX multicouche, ce guide détaille la chaîne complète de Cycles vers Foundry Nuke en combinant Industrial CG Platform avec nos outils open-source compagnons : export EXR automatisé ([Industrial AOV Connector](/fr/industrial-aov-connector/)), reconstruction lumineuse en un clic dans Nuke ([Auto Light Shuffle](/fr/auto-light-shuffle/)) et configuration couleur partagée ([AIO-OCIO](/fr/aio-ocio/)).
 
@@ -167,7 +167,7 @@ DeepRead -> DeepSample (inspecter Z / ZBack / Alpha par pixel)
 
 ### Blender officiel peut-il réaliser ce workflow Deep EXR et hors-champ vers Nuke ?
 
-Pas nativement. Blender 5.2 officiel ne propose ni sortie Deep EXR native dans Cycles, ni rendu hors-champ OpenEXR standard, ni passes directes/indirectes par lumière. Vous pouvez toutefois utiliser nos outils autonomes ([Industrial AOV Connector](/fr/industrial-aov-connector/), [Industrial Light AOV Splitter](/fr/industrial-light-aov-splitter/), [Auto Light Shuffle](/fr/auto-light-shuffle/) et [AIO-OCIO](/fr/aio-ocio/)) avec Blender officiel, mais le Deep EXR natif et le véritable rendu hors-champ nécessitent [Industrial CG Platform](/fr/industrial-cg-platform/).
+Pas nativement. Blender officiel ne propose ni sortie Deep EXR native dans Cycles, ni rendu hors-champ OpenEXR standard, ni passes directes/indirectes par lumière. Vous pouvez toutefois utiliser nos outils autonomes ([Industrial AOV Connector](/fr/industrial-aov-connector/), [Industrial Light AOV Splitter](/fr/industrial-light-aov-splitter/), [Auto Light Shuffle](/fr/auto-light-shuffle/) et [AIO-OCIO](/fr/aio-ocio/)) avec Blender officiel, mais le Deep EXR natif et le véritable rendu hors-champ nécessitent [Industrial CG Platform](/fr/industrial-cg-platform/).
 
 ### Faut-il installer Industrial AOV Connector si l'on utilise déjà Industrial CG Platform ?
 

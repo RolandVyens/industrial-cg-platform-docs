@@ -24,12 +24,6 @@ hero:
       text: API 参考
       link: /zh/industrial-cg-platform/api/
     - theme: alt
-      text: Blender 到 Nuke 工作流
-      link: /zh/blender-to-nuke-workflow/
-    - theme: alt
-      text: Blender VFX 管线
-      link: /zh/blender-vfx-pipeline/
-    - theme: alt
       text: 开发追踪
       link: /zh/feature-tracking
 

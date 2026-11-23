@@ -43,7 +43,7 @@ hero:
       text: Outils de pipeline
       link: /fr/industrial-pipeline-tools
 
-description: "Téléchargez Industrial CG Platform (5.2.4 LTS, Windows x64), un fork VFX basé sur Blender 5.2 avec Deep EXR natif Cycles, EXR Overscan, passes par lobe et ViewLayer Manager pour les pipelines Nuke, Maya et Houdini."
+description: "Téléchargez Industrial CG Platform (5.2.4 LTS, Windows x64), un fork VFX basé sur Blender officiel avec Deep EXR natif Cycles, EXR Overscan, passes par lobe et ViewLayer Manager pour les pipelines Nuke, Maya et Houdini."
 ---
 <div class="custom-features-grid">
   <a href="/fr/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

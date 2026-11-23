@@ -15,7 +15,7 @@ This guide follows the current **Industrial CG Platform 5.2.4 LTS** Windows x64 
 | **CMake** | 3.24+ | Included with Visual Studio or standalone |
 | **Ninja** | 1.11+ | Validated default build generator |
 | **Git** | 2.30+ | With Git LFS enabled |
-| **OptiX SDK + NVIDIA Compiler Toolchain** | Per official Blender 5.2 build requirements | Required only when building Cycles OptiX GPU support (for OptiX PTX kernels) |
+| **OptiX SDK + NVIDIA Compiler Toolchain** | Per stock Blender build requirements | Required only when building Cycles OptiX GPU support (for OptiX PTX kernels) |
 | **Python** | 3.13 | Bundled automatically by Blender's precompiled dependencies |
 
 ## Clone & Fetch Dependencies

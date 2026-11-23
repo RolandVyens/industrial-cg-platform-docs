@@ -1,6 +1,6 @@
 # Industrial CG Platform
 
-> Industrial CG Platform is a production-oriented VFX fork of Blender 5.2 (current release 5.2.4 LTS, Windows x64) with native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
+> Industrial CG Platform is a production-oriented VFX fork of stock Blender (current release 5.2.4 LTS, Windows x64) with native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
 
 - Current release: 5.2.4 LTS (Windows x64 ZIP)
 - Linux support: Public Linux Beta 1 pre-release available (Rocky Linux 8.10 / EL8 baseline, glibc 2.28+; pre-release for testing, not yet a stable release)
@@ -10,8 +10,9 @@
 
 - [Blender to Nuke Workflow](https://cgweave.com/en/blender-to-nuke-workflow/): End-to-end production guide from Cycles Deep EXR, EXR Overscan, Lightgroup Lobe Passes, and AOV Connector to Nuke DeepMerge and Auto Light Shuffle.
 - [Blender VFX Pipeline](https://cgweave.com/en/blender-vfx-pipeline/): Studio VFX pipeline architecture, role-based evaluation, side-by-side pilot checklist, and stock Blender boundaries.
-- [Platform Home](https://cgweave.com/en/industrial-cg-platform/): Overview of the Blender 5.2 VFX branch and core feature set.
-- [Getting Started](https://cgweave.com/en/industrial-cg-platform/guide/getting-started): Introduction, target workflows, compatibility with stock Blender 5.2, and quick links.
+- [Industrial CG Platform vs Stock Blender](https://cgweave.com/en/vs-stock-blender/): Side-by-side comparison with stock Blender covering Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, integrated Qt 6.9.3 (bQt) runtime, fork rationale, compatibility boundaries, and when to stay on stock Blender.
+- [Platform Home](https://cgweave.com/en/industrial-cg-platform/): Overview of the stock-Blender-based VFX branch and core feature set.
+- [Getting Started](https://cgweave.com/en/industrial-cg-platform/guide/getting-started): Introduction, target workflows, compatibility with stock Blender, and quick links.
 - [Installation](https://cgweave.com/en/industrial-cg-platform/guide/installation): Windows 10/11 x64 requirements, ZIP setup, and Cycles OptiX configuration.
 - [Building from Source](https://cgweave.com/en/industrial-cg-platform/guide/building-from-source): Source build guide with Visual Studio 2022, CMake, Ninja, `make update`, and Git LFS hydration checks.
 - [FAQ](https://cgweave.com/en/industrial-cg-platform/guide/faq): Blender compatibility, GPU/CPU backends, ViewLayer Manager behavior, and build troubleshooting.

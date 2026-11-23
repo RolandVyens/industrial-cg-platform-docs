@@ -15,7 +15,7 @@ Ce guide suit le workflow actuel de compilation Release Windows x64 d'**Industri
 | **CMake** | 3.24+ | Inclus avec Visual Studio ou installé séparément |
 | **Ninja** | 1.11+ | Générateur par défaut validé |
 | **Git** | 2.30+ | Avec Git LFS activé |
-| **SDK OptiX + chaîne de compilation NVIDIA** | Selon les prérequis officiels Blender 5.2 | Requis uniquement pour compiler le support GPU Cycles OptiX (noyaux PTX OptiX) |
+| **SDK OptiX + chaîne de compilation NVIDIA** | Selon les prérequis officiels de Blender | Requis uniquement pour compiler le support GPU Cycles OptiX (noyaux PTX OptiX) |
 | **Python** | 3.13 | Fourni automatiquement par les dépendances précompilées de Blender |
 
 ## Cloner le dépôt et récupérer les dépendances

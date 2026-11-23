@@ -1,13 +1,13 @@
 # Industrial CG Platform — Full Reference for LLMs
 
-> Industrial CG Platform is a production-oriented VFX fork of Blender 5.2 (current release 5.2.4 LTS, Windows x64) maintained by Roland Vyens / CGWeave. It brings native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager directly into Blender, paired with open-source pipeline add-ons and color configs for Foundry Nuke, Autodesk Maya, and SideFX Houdini.
+> Industrial CG Platform is a production-oriented VFX fork of stock Blender (current release 5.2.4 LTS, Windows x64) maintained by Roland Vyens / CGWeave. It brings native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager directly into Blender, paired with open-source pipeline add-ons and color configs for Foundry Nuke, Autodesk Maya, and SideFX Houdini.
 
 ## Platform Facts & Scope
 
-- Base version: Blender 5.2 (current stable release: 5.2.4 LTS)
+- Base: stock Blender (current stable release: 5.2.4 LTS)
 - Supported OS: Windows 10/11 x64 (stable ZIP distribution)
 - Linux status: Public Linux Beta 1 pre-release (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+) is available for testing and feedback; full native Linux GPU/OptiX and desktop qualification is still in progress (not yet a stable release)
-- File compatibility: `.blend` files created in Industrial CG Platform open in stock Blender 5.2 (custom data is preserved and ignored in stock builds)
+- File compatibility: `.blend` files created in Industrial CG Platform open in stock Blender (custom data is preserved and ignored in stock builds)
 - Source repository: https://github.com/RolandVyens/industrial-cg-platform
 - Releases & Windows x64 ZIP downloads: https://github.com/RolandVyens/industrial-cg-platform/releases
 - Documentation site: https://cgweave.com/en/ (also available in Chinese at https://cgweave.com/zh/ and French at https://cgweave.com/fr/)
@@ -20,11 +20,14 @@ Complete end-to-end Blender Cycles to Foundry Nuke compositing workflow using In
 ### Blender VFX Pipeline — https://cgweave.com/en/blender-vfx-pipeline/
 Studio-level Blender VFX pipeline architecture mapping Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, AOV Connector, Light AOV Splitter, Auto Light Shuffle, and AIO-OCIO across six shot stages. Differentiates Industrial CG Platform from stock Blender and shot trackers (such as Blender_Plumber) and provides a side-by-side pilot evaluation checklist.
 
+### Industrial CG Platform vs Stock Blender — https://cgweave.com/en/vs-stock-blender/
+Direct comparison of Industrial CG Platform 5.2.4 LTS against stock Blender: feature-by-feature table (native Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color with known limitation, ViewLayer Manager, and integrated Qt 6.9.3 / bQt runtime), why these additions require a fork at the Cycles kernel and runtime level, `.blend` compatibility, side-by-side installation and hardware/OS boundaries (Windows x64 NVIDIA RTX OptiX + CPU; Linux Beta 1 pre-release on Rocky Linux 8.10; 16 GB min / 32 GB recommended; GPL-3.0-or-later), when to stay on stock Blender, and FAQ.
+
 ### Platform Home — https://cgweave.com/en/industrial-cg-platform/
 Central entry point for the Industrial CG Platform Blender VFX branch. Summarizes the five core engine/UI additions—Deep EXR Output, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager—and links directly to downloads, guides, API reference, and development tracking.
 
 ### Getting Started — https://cgweave.com/en/industrial-cg-platform/guide/getting-started
-Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender 5.2. Documents `.blend` compatibility, the `Blender 5.2.4 LTS Industrial CG Platform` version identifier, and the Windows x64 stable + public Linux Beta 1 pre-release status.
+Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender. Documents `.blend` compatibility, the `Blender 5.2.4 LTS Industrial CG Platform` version identifier, and the Windows x64 stable + public Linux Beta 1 pre-release status.
 
 ### Installation — https://cgweave.com/en/industrial-cg-platform/guide/installation
 Lists hardware and OS prerequisites (Windows 10/11 x64, NVIDIA RTX OptiX GPU recommended, 16 GB RAM minimum / 32 GB recommended, ~1 GB disk space) and step-by-step ZIP installation. Covers SHA256 verification, CLI verification (`blender.exe --version`), GPU backend selection, and isolated OptiX shader cache paths.

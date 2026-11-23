@@ -1,7 +1,7 @@
 ---
 title: "快速开始"
 cover: /splash.webp
-description: "快速上手 Industrial CG Platform：面向影视特效工作室、TD、灯光师与合成师的 Blender 5.2 VFX 分支，原生提供 Cycles Deep EXR、EXR Overscan、灯光组分量通道、阴影颜色与 ViewLayer 管理器。"
+description: "快速上手 Industrial CG Platform：面向影视特效工作室、TD、灯光师与合成师、基于原版 Blender 的 VFX 分支，原生提供 Cycles Deep EXR、EXR Overscan、灯光组分量通道、阴影颜色与 ViewLayer 管理器。"
 ---
 # 快速开始
 
@@ -13,7 +13,7 @@ description: "快速上手 Industrial CG Platform：面向影视特效工作室�
 
 它不是一个随意堆砌额外功能的普通 Blender 分支。它是一个面向生产的 Blender 平台，专为需要直接在基于 Blender 的工具链中获得 VFX 风格渲染行为的 VFX 工作室、艺术家、技术总监（TD）、流程开发人员和小型团队而设计。
 
-当前版本基于 **Blender 5.2**，分支名称为 `industrial-cg-platform`。
+Industrial CG Platform 基于 **原版 Blender** 构建，分支名称为 `industrial-cg-platform`。
 
 ## 适用人群
 
@@ -35,12 +35,14 @@ Industrial CG Platform 专为以下人群设计：
 | [Shadow Color](/zh/industrial-cg-platform/features/shadow-color) | 单灯与世界环境的艺术阴影染色 |
 | [ViewLayer 管理器](/zh/industrial-cg-platform/features/viewlayer-manager) | 独立多 ViewLayer 批量管理工具，支持预设系统 |
 
-## 与官方 Blender 的区别
+## 与原版 Blender 的区别
 
-- **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在官方 Blender 5.2 中打开。自定义功能在官方版本中不可用，但数据会被保留。
+- **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在原版 Blender 中打开。自定义功能在原版中不可用，但数据会被保留。
 - **相同的可执行文件名** — 可执行文件仍然是 `blender.exe`，使用相同的配置目录结构。
-- **分支后缀** — 窗口标题显示 `Blender 5.2.4 LTS Industrial CG Platform` 以区分官方版本。
+- **分支后缀** — 窗口标题显示 `Blender 5.2.4 LTS Industrial CG Platform` 以区分原版。
 - **Windows x64 稳定版 + Linux Beta 1** — 当前稳定版提供 Windows x64 绿色 ZIP 包；Linux 方面已发布基于 Rocky Linux 8.10 / EL8 基线的公开 Beta 1 预发布版供测试与反馈。
+
+如需完整的功能对照表、分支原因以及何时建议继续使用原版 Blender，请参阅 **[Industrial CG Platform 对比原版 Blender](/zh/vs-stock-blender/)**。
 
 ## 下一步
 
