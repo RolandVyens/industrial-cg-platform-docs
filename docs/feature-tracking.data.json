@@ -230,21 +230,42 @@
     },
     {
       "id": "world-volume-deep-support",
-      "status": "in_progress",
-      "progress": 95,
+      "status": "released",
+      "progress": 100,
       "module": "Cycles Deep EXR · World Volume",
-      "thumb": null,
+      "thumb": "/features/deep-exr.webp",
       "thumbPosition": null,
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": "f6704e87cbbbdb7b",
-      "links": [],
+      "releaseTag": "industrial-cg-platform-5.3.0",
+      "syncedHash": "a5230415681d09ed",
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/deep-exr",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/releases/",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "5.3.0 Release Notes",
+            "zh": "5.3.0 版本发布记录",
+            "fr": "Notes de version 5.3.0"
+          }
+        }
+      ],
       "i18n": {
         "en": {
           "titleHtml": "World Volume Deep Support",
-          "badge": "Merged Locally · Awaiting 5.3.0",
-          "descHtml": "Extends native Cycles Deep EXR capture to World Volume shaders, completing per-sample deep output for full-scene atmospheric fog and environment volumes in Nuke deep compositing. Merged into local 5.3.0 mainline with local CPU, OptiX, and Nuke DeepMerge acceptance completed—awaiting the public 5.3.0 release.",
-          "progressLabel": "Development Progress (Merged into Local 5.3.0 Mainline; CPU, OptiX & Nuke Acceptance Passed, Awaiting Public 5.3.0 Release)",
+          "thumbAlt": "World Volume Deep Support",
+          "badge": "Released · 5.3.0",
+          "descHtml": "Extends native Cycles Deep EXR capture to Blender's native World Volume shaders—preserving depth intervals for finite atmospheric fog and storing the remaining unbounded fog contribution in a far-depth sample for lossless foreground/background insertion in Nuke deep compositing.",
           "milestones": [
             {
               "done": true,
@@ -259,16 +280,16 @@
               "html": "CPU / OptiX Backend Acceptance &amp; Nuke DeepMerge Insert Verification"
             },
             {
-              "done": false,
-              "html": "Public Release in Industrial CG Platform 5.3.0"
+              "done": true,
+              "html": "Shipped in Industrial CG Platform 5.3.0 (Windows)"
             }
           ]
         },
         "zh": {
           "titleHtml": "世界体积 Deep EXR 支持 (<code>World Volume Deep Support</code>)",
-          "badge": "已合入本地 5.3.0 · 待公开发布",
-          "descHtml": "将 Cycles 原生 Deep EXR 深度采集扩展至世界环境体积（World Volume），补齐全局环境雾效与大气层的逐采样深度输出用于 Nuke 深度合成。现已合入本地 5.3.0 主线，并完成 CPU、OptiX 与 Nuke DeepMerge 本地验收，等待随 5.3.0 公开发布。",
-          "progressLabel": "当前研发进度（已合入本地 5.3.0 主线，CPU / OptiX 与 Nuke 本地验收完成，待 5.3.0 公开发布）",
+          "thumbAlt": "世界体积 Deep EXR 支持",
+          "badge": "已发布 · 5.3.0",
+          "descHtml": "将 Cycles 原生 Deep EXR 深度采集扩展至 Blender 原生世界环境体积（World Volume）：有限雾段保留完整深度区间，无界雾的剩余贡献存入远端深度样本，便于在 Nuke 深度合成中无损插入前景与背景元素。",
           "milestones": [
             {
               "done": true,
@@ -283,16 +304,16 @@
               "html": "完成 CPU / OptiX 后端验收及 Nuke DeepMerge 插片验证"
             },
             {
-              "done": false,
-              "html": "随 Industrial CG Platform 5.3.0 公开发布"
+              "done": true,
+              "html": "随 Industrial CG Platform 5.3.0（Windows）正式公开发布"
             }
           ]
         },
         "fr": {
           "titleHtml": "Support Deep EXR pour World Volume (<code>World Volume Deep Support</code>)",
-          "badge": "Fusionné en local (5.3.0) · En attente de publication",
-          "descHtml": "Étend la capture Deep EXR native de Cycles aux shaders World Volume afin d'assurer la sortie de profondeur par échantillon du brouillard global et des atmosphères pour le compositing profond dans Nuke. Fusionné dans la branche locale 5.3.0 avec validation locale CPU, OptiX et Nuke DeepMerge terminée, en attente de la publication publique 5.3.0.",
-          "progressLabel": "Progression (Fusionné dans la branche locale 5.3.0 ; validation locale CPU, OptiX et Nuke terminée, en attente de la sortie publique 5.3.0)",
+          "thumbAlt": "Support Deep EXR pour World Volume",
+          "badge": "Publié · 5.3.0",
+          "descHtml": "Étend la capture Deep EXR native de Cycles aux shaders World Volume natifs de Blender : le brouillard fini conserve ses intervalles de profondeur et la contribution restante du brouillard non borné est enregistrée dans un échantillon de profondeur lointaine pour l'insertion avant-plan/arrière-plan dans Nuke.",
           "milestones": [
             {
               "done": true,
@@ -307,8 +328,8 @@
               "html": "Validation des backends CPU / OptiX et vérification d'insertion Nuke DeepMerge"
             },
             {
-              "done": false,
-              "html": "Publication publique dans Industrial CG Platform 5.3.0"
+              "done": true,
+              "html": "Publié dans Industrial CG Platform 5.3.0 (Windows)"
             }
           ]
         }
