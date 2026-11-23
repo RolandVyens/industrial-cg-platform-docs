@@ -16,7 +16,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "46f41d86d846a083",
       "links": [],
       "i18n": {
         "en": {
@@ -117,7 +117,7 @@
         "includePrerelease": true
       },
       "releaseTag": "industrial-cg-platform-5.2.4-linux-beta.2",
-      "syncedHash": null,
+      "syncedHash": "7be7f9b0c6dfe7ab",
       "links": [
         {
           "href": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.2",
@@ -237,7 +237,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "63eaefb671e50c86",
       "links": [],
       "i18n": {
         "en": {
@@ -310,8 +310,8 @@
       "thumb": "/features/deep-exr.webp",
       "thumbPosition": null,
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": null,
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "syncedHash": "ba487a97b04a93e5",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/deep-exr",
@@ -406,7 +406,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": "industrial-cg-platform-5.2.4",
-      "syncedHash": null,
+      "syncedHash": "3fb4812712b0515e",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/deep-exr",
@@ -500,8 +500,8 @@
       "thumb": "/features/overscan.webp",
       "thumbPosition": null,
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": null,
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "syncedHash": "8c2f6146c364d8c3",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/exr-overscan",
@@ -595,8 +595,8 @@
       "thumb": "/features/lightgroups.webp",
       "thumbPosition": null,
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": null,
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "syncedHash": "76ee88a2fa4825c9",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/lightgroup-lobe-passes",
@@ -690,8 +690,8 @@
       "thumb": "/features/shadow-color.webp",
       "thumbPosition": "15% center",
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": null,
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "syncedHash": "28029cfa5f30ea4a",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/shadow-color",
@@ -785,8 +785,8 @@
       "thumb": "/features/viewlayer.webp",
       "thumbPosition": null,
       "releaseTrack": null,
-      "releaseTag": null,
-      "syncedHash": null,
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "syncedHash": "09292cae8b646bb5",
       "links": [
         {
           "href": "/{locale}/industrial-cg-platform/features/viewlayer-manager",
@@ -881,7 +881,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "171d0d93cc45c269",
       "links": [],
       "i18n": {
         "en": {
@@ -913,7 +913,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "880697d4275b7d37",
       "links": [],
       "i18n": {
         "en": {
@@ -945,7 +945,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "f80c5a06eb7c2c0b",
       "links": [],
       "i18n": {
         "en": {
@@ -977,7 +977,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "bc7b351f8702c066",
       "links": [],
       "i18n": {
         "en": {
@@ -1009,7 +1009,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "9a63c61310f5b89f",
       "links": [],
       "i18n": {
         "en": {
@@ -1041,7 +1041,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "0d7b317a41742fc4",
       "links": [],
       "i18n": {
         "en": {
@@ -1073,7 +1073,7 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": null,
+      "syncedHash": "ecae50c0df3c813e",
       "links": [],
       "i18n": {
         "en": {
