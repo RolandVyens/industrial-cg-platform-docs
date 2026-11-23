@@ -10,6 +10,8 @@
     "audit:built-assets": "node .agents/scripts/audit_built_assets.js",
     "audit:site-policy": "node .agents/scripts/audit_site_policy.mjs",
     "update:lastmod": "node .agents/scripts/update_lastmod_map.mjs",
+    "ft:check": "node .agents/scripts/sync_feature_tracking.mjs --check",
+    "ft:sync": "node .agents/scripts/sync_feature_tracking.mjs --apply",
     "prepare": "husky"
   },
   "devDependencies": {

@@ -46,6 +46,9 @@ for (const line of treeOut.split(/\r?\n/)) {
   }
 }
 
+const trackingDataRel = 'feature-tracking.data.json'
+let trackingDataLastmod = ''
+
 const lastmodMap = {}
 const logOut = execFileSync(
   'git',
@@ -59,18 +62,34 @@ for (const rawLine of logOut.split(/\r?\n/)) {
   if (!line) continue
   if (line.startsWith('__COMMIT__')) {
     currentIso = new Date(line.slice('__COMMIT__'.length)).toISOString()
-  } else if (currentIso && line.startsWith('docs/') && line.endsWith('.md')) {
+  } else if (currentIso && line.startsWith('docs/')) {
     const relFromDocs = line.slice('docs/'.length)
-    if (existingFiles.has(relFromDocs) && !lastmodMap[relFromDocs]) {
+    if (relFromDocs === trackingDataRel && !trackingDataLastmod) {
+      trackingDataLastmod = currentIso
+    } else if (line.endsWith('.md') && existingFiles.has(relFromDocs) && !lastmodMap[relFromDocs]) {
       lastmodMap[relFromDocs] = currentIso
     }
   }
 }
 
+const trackingDataFull = path.join(docsRoot, trackingDataRel)
+if (!trackingDataLastmod && fs.existsSync(trackingDataFull)) {
+  trackingDataLastmod = fs.statSync(trackingDataFull).mtime.toISOString()
+}
+
+function maxIso(a, b) {
+  if (!a) return b
+  if (!b) return a
+  return Date.parse(b) > Date.parse(a) ? b : a
+}
+
 const entries = {}
 for (const relFromDocs of [...existingFiles].sort()) {
-  const lastmod =
+  let lastmod =
     lastmodMap[relFromDocs] || fs.statSync(path.join(docsRoot, relFromDocs)).mtime.toISOString()
+  if (/^(en|zh|fr)\/feature-tracking\.md$/.test(relFromDocs) && trackingDataLastmod) {
+    lastmod = maxIso(lastmod, trackingDataLastmod)
+  }
   const blob =
     blobMap[relFromDocs] ||
     execFileSync('git', ['hash-object', path.join('docs', relFromDocs)], gitOpts).trim()

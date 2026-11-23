@@ -197,7 +197,12 @@ function getGitLastmodState(): GitLastmodState {
           const [isoRaw, parentsRaw = ''] = line.slice('__COMMIT__'.length).split('|')
           hasParent = parentsRaw.trim().length > 0
           currentIso = hasParent && isoRaw ? new Date(isoRaw).toISOString() : ''
-        } else if (hasParent && currentIso && line.startsWith('docs/') && line.endsWith('.md')) {
+        } else if (
+          hasParent &&
+          currentIso &&
+          line.startsWith('docs/') &&
+          (line.endsWith('.md') || line === 'docs/feature-tracking.data.json')
+        ) {
           const relFromDocs = line.slice('docs/'.length)
           if (!shallowOverrides[relFromDocs]) {
             shallowOverrides[relFromDocs] = currentIso
@@ -216,18 +221,27 @@ function getGitLastmodState(): GitLastmodState {
 function resolveShallowIso(relativePath: string): string | undefined {
   const state = getGitLastmodState()
   if (!state.isShallow) return undefined
-  if (state.shallowOverrides[relativePath]) {
-    return state.shallowOverrides[relativePath]
-  }
-  const entry = state.staticMap[relativePath]
-  const headBlob = state.headBlobs[relativePath]
-  if (entry) {
-    if (!entry.blob || !headBlob || entry.blob === headBlob) {
-      return entry.lastmod
+  let iso: string | undefined = state.shallowOverrides[relativePath]
+  if (!iso) {
+    const entry = state.staticMap[relativePath]
+    const headBlob = state.headBlobs[relativePath]
+    if (entry) {
+      if (!entry.blob || !headBlob || entry.blob === headBlob) {
+        iso = entry.lastmod
+      } else {
+        iso = state.headCommitIso || entry.lastmod
+      }
+    } else {
+      iso = state.headCommitIso || undefined
     }
-    return state.headCommitIso || entry.lastmod
   }
-  return state.headCommitIso || undefined
+  if (/^(en|zh|fr)\/feature-tracking\.md$/.test(relativePath)) {
+    const dataIso = state.shallowOverrides['feature-tracking.data.json']
+    if (dataIso && (!iso || Date.parse(dataIso) > Date.parse(iso))) {
+      iso = dataIso
+    }
+  }
+  return iso
 }
 
 export function resolveFallbackTimestamp(relativePath: string): number | undefined {

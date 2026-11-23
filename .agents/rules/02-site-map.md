@@ -23,8 +23,10 @@ E. `docs/public/screenshots/<feature>/` (Documentation Screenshots)
 - FORBIDDEN: Full-screen source captures, temporary crop files, duplicate variants, or screenshots that are not referenced by the documentation.
 
 F. `docs/[en|zh|fr]/feature-tracking.md` (Development Tracking & Roadmap)
+- DATA SOURCE: Single source of truth lives in `docs/feature-tracking.data.json`, loaded by `docs/feature-tracking.data.js` and rendered by `docs/.vitepress/theme/components/FeatureTrackingBoard.vue` (`<FeatureTrackingBoard locale="..." />`). Sync/drift script: `.agents/scripts/sync_feature_tracking.mjs` (`npm run ft:check` / `npm run ft:sync`); upstream template: `.agents/templates/upstream-ROADMAP.json`.
 - ALLOWED: Summary stat cards, lifecycle distribution donut chart (single donut chart only), In-Progress R&D cards (with progress bars and vertical single-column checklists), Released production feature cards (with compact `160px × 104px` thumbnails and vertical single-column checklists), and Planned Roadmap grid.
-- FORBIDDEN: Hardcoded version number lock-ins in general labels/titles (use version-agnostic `Blender VFX Branch` / `Blender VFX 定制分支`); secondary bar charts or stacked horizontal bars; multi-column wrapped milestone pills.
+- FORBIDDEN: Hardcoded version number lock-ins in general labels/titles (use version-agnostic `Blender VFX Branch` / `Blender VFX 定制分支`); secondary bar charts or stacked horizontal bars; multi-column wrapped milestone pills; duplicating raw card HTML across `en`/`zh`/`fr` `.md` files.
+- DONUT MATH: Computed automatically in `docs/feature-tracking.data.js` (`r="44"`, `C = 276.46`). Keep `en`, `zh`, and `fr` `.md` wrappers symmetrical.
 
 G. Top Navbar & Dynamic Brand Architecture (`docs/.vitepress/config.mts` & `docs/.vitepress/theme/index.ts`)
 - Top-level ecosystem navigation consists of primary dropdowns: **`Industrial CG Platform`**, **`Plugins` (`插件` / `Plugins`)**, and **`Pipeline Cases` (`流程案例` / `Cas de Pipeline`)**, with each product's technical manual nested inside its respective dropdown (no separate top-level `Technical Docs` menu).
@@ -35,3 +37,7 @@ H. SEO, AI Discovery & Root Routing (`docs/index.md`, `docs/public/`, `docs/.vit
 - `docs/index.md` serves as the `<noscript>`/metadata fallback for `/` while `docs/public/_redirects` handles the Cloudflare Pages 301 redirect (`/ -> /en/`).
 - `docs/public/robots.txt`, `llms.txt`, `llms-full.txt`, and `_headers` govern crawler access, LLM indexing, and edge headers (`/sitemap.xml` MIME type and `/robots.txt` `Cache-Control`).
 - `docs/.vitepress/seo.ts` centralizes OG/Twitter meta, JSON-LD, clean canonical URLs, and shallow-clone `sitemap.xml` `lastmod` resolution via `docs/.vitepress/git-lastmod.json` (`{ lastmod, blob }` entries maintained by `npm run update:lastmod`).
+
+I. `docs/[en|zh|fr]/[blender-to-nuke-workflow|blender-vfx-pipeline]/` (Top-Level Pipeline Cases / Pillar Pages)
+- ALLOWED: Top-level directory per pillar with a single `index.md` (mirroring `auto-light-shuffle/`), `faq: true` frontmatter for `FAQPage` JSON-LD, dedicated path-prefix sidebar in `docs/.vitepress/config.mts`, and entry under the `Pipeline Cases` (`流程案例` / `Cas de Pipeline`) top nav dropdown.
+- FORBIDDEN: Nesting new pillar/workflow case pages under `industrial-cg-platform/guide/` or omitting `zh`/`fr` mirrors and `llms.txt` / `llms-full.txt` updates.

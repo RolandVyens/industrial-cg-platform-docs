@@ -32,6 +32,10 @@ const contentFiles = walkFiles(docsRoot, ['.md', '.txt']).filter((full) => {
   const rel = path.relative(docsRoot, full).replace(/\\/g, '/')
   return rel.endsWith('.md') || rel === 'public/llms.txt' || rel === 'public/llms-full.txt'
 })
+const trackingJsonPath = path.join(docsRoot, 'feature-tracking.data.json')
+if (fs.existsSync(trackingJsonPath)) {
+  contentFiles.push(trackingJsonPath)
+}
 
 const gpl2Allowlist = new Set([
   'en/industrial-cg-platform/about/index.md',
@@ -64,6 +68,42 @@ for (const full of contentFiles) {
     if (parsed.data?.faq === true || rel.endsWith('/guide/faq.md')) {
       faqPages.push(rel)
     }
+  }
+}
+
+if (fs.existsSync(trackingJsonPath)) {
+  try {
+    const trackingData = JSON.parse(fs.readFileSync(trackingJsonPath, 'utf8'))
+    const features = Array.isArray(trackingData?.features) ? trackingData.features : []
+    const validStatuses = new Set(['in_progress', 'released', 'planned'])
+    const seenIds = new Set()
+    for (const f of features) {
+      if (!f?.id || seenIds.has(f.id)) {
+        errors.push(`[TRACKING] Duplicate or missing feature id in docs/feature-tracking.data.json: ${f?.id}`)
+      } else {
+        seenIds.add(f.id)
+      }
+      if (!validStatuses.has(f?.status)) {
+        errors.push(`[TRACKING] Feature "${f?.id}" has invalid status: ${f?.status}`)
+      }
+      if (f?.thumb) {
+        const thumbPath = path.join(docsRoot, 'public', f.thumb.replace(/^\/+/, ''))
+        if (!fs.existsSync(thumbPath)) {
+          errors.push(`[TRACKING] Feature "${f?.id}" missing thumbnail asset: ${f.thumb}`)
+        }
+      }
+      for (const loc of ['en', 'zh', 'fr']) {
+        const i18n = f?.i18n?.[loc]
+        if (!i18n?.titleHtml || !i18n?.badge || !i18n?.descHtml) {
+          errors.push(`[TRACKING] Feature "${f?.id}" missing required ${loc} copy (titleHtml/badge/descHtml)`)
+        }
+        if (f?.status === 'in_progress' && !i18n?.progressLabel) {
+          errors.push(`[TRACKING] In-progress feature "${f?.id}" missing ${loc}.progressLabel`)
+        }
+      }
+    }
+  } catch (err) {
+    errors.push(`[TRACKING] Failed to parse docs/feature-tracking.data.json: ${err.message}`)
   }
 }
 

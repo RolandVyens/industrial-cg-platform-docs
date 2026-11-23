@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { useRoute, useRouter } from 'vitepress'
 import { computed, defineComponent, h, onBeforeUnmount, onMounted, Transition } from 'vue'
+import FeatureTrackingBoard from './components/FeatureTrackingBoard.vue'
 import './custom.css'
 
 const DynamicBrandLayout = defineComponent({
@@ -80,5 +81,8 @@ const DynamicBrandLayout = defineComponent({
 
 export default {
   extends: DefaultTheme,
-  Layout: DynamicBrandLayout
+  Layout: DynamicBrandLayout,
+  enhanceApp({ app }: { app: { component: (name: string, comp: unknown) => void } }) {
+    app.component('FeatureTrackingBoard', FeatureTrackingBoard)
+  },
 }

@@ -1,0 +1,1099 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repo": "RolandVyens/industrial-cg-platform",
+    "branch": "main",
+    "roadmapPath": "ROADMAP.json"
+  },
+  "features": [
+    {
+      "id": "atmosphere-volume",
+      "status": "in_progress",
+      "progress": 50,
+      "module": "World Shader · Cycles Volume",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Real-Time World Light Fog (<code>Atmosphere Volume</code>)",
+          "badge": "In Progress · Active R&D",
+          "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and independent sample controls without the heavy cost of traditional full-scene volumetric path tracing.",
+          "progressLabel": "Development Progress (Core Node & Look Ready, Optimizing Toward Real-Time Performance)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "<code>Atmosphere Volume</code> World Node &amp; Dedicated <code>Atmosphere</code> Pass"
+            },
+            {
+              "done": true,
+              "html": "Artist Controls (Density / Scatter &amp; Attenuation Color / Anisotropy / Samples)"
+            },
+            {
+              "done": true,
+              "html": "Point, Spot &amp; Area Light Volumetric Beam Support"
+            },
+            {
+              "done": false,
+              "html": "Performance Optimization Toward Near-Real-Time Viewport &amp; Render Speed"
+            },
+            {
+              "done": false,
+              "html": "Multi-Light &amp; Area Light Noise Reduction &amp; Convergence Polish"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "实时世界灯光雾 (<code>Atmosphere Volume</code>)",
+          "badge": "研发验证中 · In Progress",
+          "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与独立采样预算控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
+          "progressLabel": "当前研发进度（核心节点与画面效果已就绪，正在攻坚实时级性能优化）",
+          "milestones": [
+            {
+              "done": true,
+              "html": "<code>Atmosphere Volume</code> 世界节点与独立 <code>Atmosphere</code> 渲染通道"
+            },
+            {
+              "done": true,
+              "html": "美术参数面板（浓度 / 散射与衰减色彩 / 各向异性 / 独立采样）"
+            },
+            {
+              "done": true,
+              "html": "点光源、聚光灯与面光源体积光束支持"
+            },
+            {
+              "done": false,
+              "html": "面向近实时视口交互与高速渲染的性能优化攻坚中"
+            },
+            {
+              "done": false,
+              "html": "大规模多灯光与面光源下的降噪与收敛打磨中"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Brouillard lumineux mondial en temps réel (<code>Atmosphere Volume</code>)",
+          "badge": "En cours · R&D Active",
+          "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage indépendant, sans le coût lourd du path tracing volumétrique traditionnel.",
+          "progressLabel": "Progression (Nœud & rendu prêts, optimisation vers des performances temps réel en cours)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Nœud mondial <code>Atmosphere Volume</code> &amp; passe dédiée <code>Atmosphere</code>"
+            },
+            {
+              "done": true,
+              "html": "Contrôles artistiques (Densité / Diffusion &amp; Atténuation / Anisotropie / Échantillons)"
+            },
+            {
+              "done": true,
+              "html": "Support des faisceaux pour lumières ponctuelles, spots et zones"
+            },
+            {
+              "done": false,
+              "html": "Optimisation des performances vers une vitesse viewport &amp; rendu quasi temps réel"
+            },
+            {
+              "done": false,
+              "html": "Réduction du bruit pour scènes multi-lumières &amp; lumières de zone"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "linux-platform-support",
+      "status": "in_progress",
+      "progress": 90,
+      "module": "bQt · Platform · Build Pipeline",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": {
+        "tagPattern": "-linux-(alpha|beta|rc)\\.",
+        "includePrerelease": true
+      },
+      "releaseTag": "industrial-cg-platform-5.2.4-linux-beta.2",
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.2.4-linux-beta.2",
+          "external": true,
+          "primary": true,
+          "trackReleaseLink": true,
+          "label": {
+            "en": "Linux Beta 2 Pre-release →",
+            "zh": "Linux Beta 2 预发布页 →",
+            "fr": "Pré-version Linux Bêta 2 →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/releases/",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "Release Notes",
+            "zh": "版本发布记录",
+            "fr": "Notes de version"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Linux Platform Support",
+          "badge": "Beta 2 · Pre-release",
+          "descHtml": "Extending the Industrial CG Platform build pipeline, Cycles GPU/Deep EXR runtime, and bQt ViewLayer Manager window integration to Linux x86-64 studio environments (built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+, X11/XWayland). Public Linux Beta 2 pre-release is now available with the mainline EXR Overscan multilayer pass fix.",
+          "progressLabel": "Development Progress (Public Linux Beta 2 Available; Native Linux GPU/OptiX & Desktop Acceptance Pending)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Rocky Linux 8.10 (EL8 / glibc 2.28+) Build, Packaging &amp; 658 ELF Dependency Audit"
+            },
+            {
+              "done": true,
+              "html": "Linux/X11 bQt (<code>Qt 6.9.3</code>) ViewLayer Manager, 23 CPU Feature Tests &amp; 27 Unit Tests Passed on Rocky 8.10"
+            },
+            {
+              "done": true,
+              "html": "Public Linux Beta 2 Pre-release (<code>.tar.xz</code> + <code>SHA256SUMS</code>; includes EXR Overscan multilayer pass fix)"
+            },
+            {
+              "done": false,
+              "html": "Native Linux GPU/OptiX Rendering, HIP/ROCm &amp; Multi-GPU Runtime Validation"
+            },
+            {
+              "done": false,
+              "html": "Native Linux Desktop, Full DPI/Wayland &amp; Production Scene Performance Qualification"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "Linux 生产环境支持",
+          "badge": "Beta 2 · 公开测试中",
+          "descHtml": "将 Industrial CG Platform 编译打包管线、Cycles GPU/Deep EXR 运行时与 bQt 视图层管理器窗口运行环境扩展至 Linux x86-64 工作室生产系统（基于 Rocky Linux 8.10 / EL8 基线，glibc 2.28+，X11/XWayland）。公开 Linux Beta 2 预发布版现已上线，并合入 EXR Overscan 多层通道保留修复。",
+          "progressLabel": "当前研发进度（公开 Linux Beta 2 已上线；原生 Linux GPU/OptiX 与桌面验收待完成）",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Rocky Linux 8.10（EL8 / glibc 2.28+）构建打包与 658 个 ELF 依赖审计通过"
+            },
+            {
+              "done": true,
+              "html": "Linux/X11 bQt（<code>Qt 6.9.3</code>）ViewLayer 管理器及 23 项 CPU 功能测试、27 项单元测试通过"
+            },
+            {
+              "done": true,
+              "html": "发布公开 Linux Beta 2 预发布包（<code>.tar.xz</code> + <code>SHA256SUMS</code>；含 EXR Overscan 多层修复）"
+            },
+            {
+              "done": false,
+              "html": "原生 Linux 实体机 GPU/OptiX 渲染、HIP/ROCm 与多卡运行时验证"
+            },
+            {
+              "done": false,
+              "html": "原生 Linux 桌面环境、完整 DPI/Wayland 与生产场景性能验收"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Prise en charge de la plateforme Linux",
+          "badge": "Bêta 2 · Pré-version",
+          "descHtml": "Extension du pipeline de compilation Industrial CG Platform, du runtime Cycles GPU/Deep EXR et du gestionnaire de ViewLayer bQt aux environnements Linux x86-64 (compilé sur Rocky Linux 8.10 / base EL8, glibc 2.28+, X11/XWayland). La pré-version publique Linux Bêta 2 est désormais disponible avec le correctif EXR Overscan multicouche.",
+          "progressLabel": "Progression (Bêta 2 Linux publique disponible ; validation GPU/OptiX et bureau Linux natif en attente)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Compilation Rocky Linux 8.10 (EL8 / glibc 2.28+), empaquetage et audit de 658 binaires ELF"
+            },
+            {
+              "done": true,
+              "html": "ViewLayer Manager bQt Linux/X11 (<code>Qt 6.9.3</code>), 23 tests fonctionnels CPU et 27 tests unitaires validés"
+            },
+            {
+              "done": true,
+              "html": "Pré-version publique Linux Bêta 2 (<code>.tar.xz</code> + <code>SHA256SUMS</code> ; inclut le correctif EXR Overscan multicouche)"
+            },
+            {
+              "done": false,
+              "html": "Validation GPU/OptiX Linux natif, HIP/ROCm et configurations multi-GPU"
+            },
+            {
+              "done": false,
+              "html": "Qualification bureau Linux natif, DPI/Wayland complet et performances sur scènes de production"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "world-volume-deep-support",
+      "status": "in_progress",
+      "progress": 1,
+      "module": "Cycles Deep EXR · World Volume",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "World Volume Deep Support",
+          "badge": "Initiated · Kickoff",
+          "descHtml": "Extending native Cycles Deep EXR capture to World Volume shaders, closing the current World Volume limitation so full-scene atmospheric fog and environment volumes output per-sample deep data for lossless Nuke deep compositing.",
+          "progressLabel": "Development Progress (Just Initiated, Preparing Architecture & Implementation)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Project Kickoff &amp; Technical Scope Definition"
+            },
+            {
+              "done": false,
+              "html": "World Volume Deep Interval Sampling &amp; Transmittance Architecture"
+            },
+            {
+              "done": false,
+              "html": "CPU / OptiX Implementation &amp; Nuke DeepMerge Accuracy Verification"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "世界体积 Deep EXR 支持 (<code>World Volume Deep Support</code>)",
+          "badge": "已立项 · 准备开发",
+          "descHtml": "将 Cycles 原生 Deep EXR 深度采集扩展至世界环境体积（World Volume），补齐当前 Deep EXR 暂不支持世界体积的边界，让大场景全局雾效与大气层也能输出完整的逐采样深度数据用于 Nuke 深度合成。",
+          "progressLabel": "当前研发进度（刚立项，准备启动架构设计与开发）",
+          "milestones": [
+            {
+              "done": true,
+              "html": "需求立项与技术范围界定"
+            },
+            {
+              "done": false,
+              "html": "World Volume 深度区间采样与透射率积分架构设计"
+            },
+            {
+              "done": false,
+              "html": "CPU / OptiX 后端实现与 Nuke DeepMerge 精度验收"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Support Deep EXR pour World Volume (<code>World Volume Deep Support</code>)",
+          "badge": "Initialisé · Lancement",
+          "descHtml": "Extension de la capture Deep EXR native de Cycles aux shaders World Volume afin de lever la limitation actuelle et de permettre le compositing profond sans perte du brouillard global et des atmosphères dans Nuke.",
+          "progressLabel": "Progression (Projet tout juste initialisé, préparation de l'architecture et du développement)",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Lancement du projet et définition du périmètre technique"
+            },
+            {
+              "done": false,
+              "html": "Architecture d'échantillonnage par intervalles et d'intégration de transmittance World Volume"
+            },
+            {
+              "done": false,
+              "html": "Implémentation CPU / OptiX et validation de précision sous Nuke DeepMerge"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "native-cycles-deep-exr",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles · Compositor · OpenEXR",
+      "thumb": "/features/deep-exr.webp",
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/deep-exr",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/api/pass-system",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "Pass System API",
+            "zh": "Pass 系统 API",
+            "fr": "API Système de passes"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Native Cycles Deep EXR Output",
+          "thumbAlt": "Native Cycles Deep EXR Output",
+          "badge": "Released",
+          "descHtml": "Writes per-sample <code>Z</code>, <code>ZBack</code>, and <code>RGBA</code> depth data directly from Cycles scene output or Compositor <code>File Output</code> nodes for lossless deep compositing in Nuke.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Native per-sample <code>Z</code> / <code>ZBack</code> / <code>RGBA</code> deep channel output"
+            },
+            {
+              "done": true,
+              "html": "<code>RLE</code> and <code>ZIPS</code> OpenEXR deep compression support"
+            },
+            {
+              "done": true,
+              "html": "Configurable merge tolerances and <code>Deep Tile Budget</code> memory capping"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "Cycles 原生 Deep EXR 深度输出",
+          "thumbAlt": "Cycles 原生 Deep EXR 深度输出",
+          "badge": "已发布",
+          "descHtml": "支持从场景输出或合成器 <code>File Output</code> 节点直接写出逐采样 <code>Z</code>、<code>ZBack</code> 与 <code>RGBA</code> 深度数据，为 Nuke 等下游合成软件提供无损深度合并能力。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "原生输出逐采样 <code>Z</code> / <code>ZBack</code> / <code>RGBA</code> 深度通道"
+            },
+            {
+              "done": true,
+              "html": "支持 <code>RLE</code> 与 <code>ZIPS</code> 深度压缩格式"
+            },
+            {
+              "done": true,
+              "html": "提供合并容差控制与 <code>Deep Tile Budget</code> 显存上限保护"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Sortie Deep EXR native pour Cycles",
+          "thumbAlt": "Sortie Deep EXR native pour Cycles",
+          "badge": "Publié",
+          "descHtml": "Écrit les données de profondeur par échantillon (<code>Z</code>, <code>ZBack</code>, <code>RGBA</code>) directement depuis Cycles ou le compositeur pour le compositing Deep sans perte dans Nuke.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Sortie native des canaux Deep <code>Z</code> / <code>ZBack</code> / <code>RGBA</code> par échantillon"
+            },
+            {
+              "done": true,
+              "html": "Prise en charge de la compression OpenEXR <code>RLE</code> et <code>ZIPS</code>"
+            },
+            {
+              "done": true,
+              "html": "Tolérances de fusion et plafond mémoire <code>Deep Tile Budget</code>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "deep-exr-v2",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles · OpenEXR",
+      "thumb": "/blog/nuke-deep-compositing.webp",
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": "industrial-cg-platform-5.2.4",
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/deep-exr",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/blog/posts/2026-10-17-deep-exr-architecture",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "Engineering Devlog",
+            "zh": "工程研发日志",
+            "fr": "Devlog d'ingénierie"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Deep EXR Architecture Upgrade (v2)",
+          "thumbAlt": "Deep EXR Architecture Upgrade (v2)",
+          "badge": "Released · 5.2.4 LTS",
+          "descHtml": "Upgrades the Cycles Deep EXR pipeline for improved rendering and compositing performance, cleaner volume-slice Alpha behavior, and configurable <code>Simple</code> / <code>Physical</code> color modes under <strong>Render Properties → Performance → Deep</strong>.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Core Deep Rendering Pipeline Rebuilt &amp; Volume-Slice Alpha Improved"
+            },
+            {
+              "done": true,
+              "html": "<code>Simple Mode</code> (Default) &amp; <code>Physical Mode</code> Native Color Capture"
+            },
+            {
+              "done": true,
+              "html": "Shipped in Industrial CG Platform 5.2.4 LTS"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "Deep EXR 深度渲染架构升级 (v2)",
+          "thumbAlt": "Deep EXR 深度渲染架构升级 (v2)",
+          "badge": "已发布 · 5.2.4 LTS",
+          "descHtml": "全面升级 Cycles 的 Deep EXR 深度输出管线，显著提升 Deep 渲染与合成性能，改善体积切片 Alpha 表现，并在<strong>渲染属性 → Performance → Deep</strong> 下新增可切换的 <code>Simple</code> 与 <code>Physical</code> 模式。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "核心深度渲染管线重写与体积切片 Alpha 表现优化"
+            },
+            {
+              "done": true,
+              "html": "新增 <code>Simple Mode</code>（默认）与 <code>Physical Mode</code> 原生深度色彩捕获"
+            },
+            {
+              "done": true,
+              "html": "随 Industrial CG Platform 5.2.4 LTS 正式发布"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Mise à niveau de l'architecture Deep EXR (v2)",
+          "thumbAlt": "Mise à niveau de l'architecture Deep EXR (v2)",
+          "badge": "Publié · 5.2.4 LTS",
+          "descHtml": "Met à niveau le pipeline Deep EXR de Cycles pour de meilleures performances de rendu et de compositing, un comportement Alpha plus propre dans les tranches volumétriques et des modes <code>Simple</code> / <code>Physical</code> configurables sous <strong>Propriétés de rendu → Performance → Deep</strong>.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Refonte du pipeline Deep principal &amp; amélioration Alpha volumétrique"
+            },
+            {
+              "done": true,
+              "html": "<code>Simple Mode</code> (par défaut) &amp; capture native <code>Physical Mode</code>"
+            },
+            {
+              "done": true,
+              "html": "Publié dans Industrial CG Platform 5.2.4 LTS"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "native-exr-overscan",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Camera · OpenEXR BBox",
+      "thumb": "/features/overscan.webp",
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/exr-overscan",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/api/rna-properties",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "RNA Properties API",
+            "zh": "RNA 属性 API",
+            "fr": "API Propriétés RNA"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Native EXR Overscan",
+          "thumbAlt": "Native EXR Overscan",
+          "badge": "Released",
+          "descHtml": "Renders extra margin pixels outside the camera frustum and writes decoupled OpenEXR Data Window and Display Window metadata for downstream lens distortion and stabilization.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Configurable overscan margins by percentage or pixel width"
+            },
+            {
+              "done": true,
+              "html": "Preserves original camera perspective and framing without shift"
+            },
+            {
+              "done": true,
+              "html": "Writes standard OpenEXR <code>dataWindow</code> and <code>displayWindow</code> metadata"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "原生 EXR Overscan",
+          "thumbAlt": "原生 EXR Overscan",
+          "badge": "已发布",
+          "descHtml": "在相机画幅框外渲染额外边缘像素，并在 OpenEXR 中独立写入 Data Window 与 Display Window 元数据，供下游镜头反畸变与防抖使用。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "支持按百分比或像素宽度扩展渲染画幅边缘"
+            },
+            {
+              "done": true,
+              "html": "保持原始相机透视与构图零偏移"
+            },
+            {
+              "done": true,
+              "html": "原生写入标准 OpenEXR <code>dataWindow</code> / <code>displayWindow</code>"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Overscan EXR natif",
+          "thumbAlt": "Overscan EXR natif",
+          "badge": "Publié",
+          "descHtml": "Rend des pixels supplémentaires hors du cadre de la caméra et écrit des métadonnées OpenEXR Data Window et Display Window distinctes pour Nuke.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Marges d'overscan configurables en pourcentage ou en pixels"
+            },
+            {
+              "done": true,
+              "html": "Préserve la perspective et le cadrage d'origine sans décalage"
+            },
+            {
+              "done": true,
+              "html": "Écriture native des métadonnées <code>dataWindow</code> et <code>displayWindow</code>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lightgroup-lobe-passes",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Kernel · ViewLayer Passes",
+      "thumb": "/features/lightgroups.webp",
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/lightgroup-lobe-passes",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/api/cycles-kernel",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "Cycles Kernel API",
+            "zh": "Cycles 内核 API",
+            "fr": "API Noyau Cycles"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Lightgroup Lobe Passes",
+          "thumbAlt": "Lightgroup Lobe Passes",
+          "badge": "Released",
+          "descHtml": "Splits each Cycles Lightgroup into <code>Diffuse</code>, <code>Glossy</code>, <code>Transmission</code>, and <code>Volume</code> direct and indirect passes for granular Nuke relighting.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Per-lightgroup <code>Diffuse</code> / <code>Glossy</code> / <code>Transmission</code> / <code>Volume</code> split"
+            },
+            {
+              "done": true,
+              "html": "Independent <code>Direct</code> and <code>Indirect</code> illumination separation"
+            },
+            {
+              "done": true,
+              "html": "Preserves <code>Combined_&lt;lg&gt; ≈ Σ(Direct + Indirect)</code> energy balance"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "材质通道灯光 AOV (Lightgroup Lobe Passes)",
+          "thumbAlt": "材质通道灯光 AOV",
+          "badge": "已发布",
+          "descHtml": "将每个 Cycles 灯光组拆分为漫反射、光泽、透射与体积的直接光/间接光独立通道，满足后期精细重打光需求。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "逐灯光组拆分 <code>Diffuse</code> / <code>Glossy</code> / <code>Transmission</code> / <code>Volume</code>"
+            },
+            {
+              "done": true,
+              "html": "独立分离直接光 (<code>Direct</code>) 与间接光 (<code>Indirect</code>) 贡献"
+            },
+            {
+              "done": true,
+              "html": "严格满足 <code>Combined_&lt;lg&gt; ≈ Σ(Direct + Indirect)</code> 能量守恒"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Passes de lobe par Lightgroup",
+          "thumbAlt": "Passes de lobe par Lightgroup",
+          "badge": "Publié",
+          "descHtml": "Sépare chaque groupe de lumières Cycles en passes directes et indirectes (<code>Diffuse</code>, <code>Glossy</code>, <code>Transmission</code>, <code>Volume</code>) pour le ré-éclairage dans Nuke.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Séparation par groupe <code>Diffuse</code> / <code>Glossy</code> / <code>Transmission</code> / <code>Volume</code>"
+            },
+            {
+              "done": true,
+              "html": "Contributions d'éclairage <code>Direct</code> et <code>Indirect</code> indépendantes"
+            },
+            {
+              "done": true,
+              "html": "Équilibre énergétique <code>Combined_&lt;lg&gt; ≈ Σ(Direct + Indirect)</code> garanti"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "artistic-shadow-color",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Lights · World Shader",
+      "thumb": "/features/shadow-color.webp",
+      "thumbPosition": "15% center",
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/shadow-color",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/api/rna-properties",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "RNA Properties API",
+            "zh": "RNA 属性 API",
+            "fr": "API Propriétés RNA"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Artistic Shadow Color",
+          "thumbAlt": "Artistic Shadow Color",
+          "badge": "Released",
+          "descHtml": "Per-light and per-world shadow tinting controls in Cycles that color occluded shadow regions without altering unoccluded illumination.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Per-light shadow tinting control (<code>Light.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "World environment shadow tinting (<code>World.cycles.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "Affects occluded shadows only without tinting lit surfaces"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "美术级阴影颜色控制 (Shadow Color)",
+          "thumbAlt": "美术级阴影颜色控制",
+          "badge": "已发布",
+          "descHtml": "提供逐灯光与逐世界环境的阴影色彩调节能力，在不影响非遮挡区域正常照明的前提下单独为阴影着色。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "支持逐灯光独立阴影着色 (<code>Light.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "支持世界环境光阴影着色 (<code>World.cycles.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "仅作用于遮挡阴影区域，不污染正常受光面色彩"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Couleur d'ombre artistique (Shadow Color)",
+          "thumbAlt": "Couleur d'ombre artistique",
+          "badge": "Publié",
+          "descHtml": "Contrôle de la teinte des ombres par lumière et par monde dans Cycles sans altérer le reste de l'éclairage direct ou indirect.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Contrôle de la couleur d'ombre par lumière (<code>Light.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "Teinte d'ombre de l'environnement mondial (<code>World.cycles.shadow_color</code>)"
+            },
+            {
+              "done": true,
+              "html": "Agit uniquement sur les zones d'ombre sans colorer les surfaces éclairées"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "qt-viewlayer-manager",
+      "status": "released",
+      "progress": 100,
+      "module": "bQt · PySide6 · Pipeline UI",
+      "thumb": "/features/viewlayer.webp",
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [
+        {
+          "href": "/{locale}/industrial-cg-platform/features/viewlayer-manager",
+          "external": false,
+          "primary": true,
+          "label": {
+            "en": "Feature Manual →",
+            "zh": "阅读功能手册 →",
+            "fr": "Manuel de la fonctionnalité →"
+          }
+        },
+        {
+          "href": "/{locale}/industrial-cg-platform/api/bqt-usage",
+          "external": false,
+          "primary": false,
+          "label": {
+            "en": "bQt Guide",
+            "zh": "bQt 使用指南",
+            "fr": "Guide bQt"
+          }
+        }
+      ],
+      "i18n": {
+        "en": {
+          "titleHtml": "Qt ViewLayer Manager",
+          "thumbAlt": "Qt ViewLayer Manager",
+          "badge": "Released",
+          "descHtml": "Dedicated top-level Qt window for managing multi-ViewLayer shots with JSON pass presets, batch operations, and live scene write-back.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "JSON pass preset import/export and batch multi-ViewLayer apply"
+            },
+            {
+              "done": true,
+              "html": "Engine-adaptive Cycles and EEVEE pass panel visibility"
+            },
+            {
+              "done": true,
+              "html": "Standalone Qt window with instant live write-back to Blender"
+            }
+          ]
+        },
+        "zh": {
+          "titleHtml": "Qt 视图层管理器 (ViewLayer Manager)",
+          "thumbAlt": "Qt 视图层管理器",
+          "badge": "已发布",
+          "descHtml": "基于 Qt 构建的独立顶级视图层管理窗口，专为多视图层复杂镜头的通道预设管理与批量操作设计。",
+          "milestones": [
+            {
+              "done": true,
+              "html": "支持 JSON 通道预设导入导出与多视图层批量套用"
+            },
+            {
+              "done": true,
+              "html": "Cycles / EEVEE 渲染引擎通道面板自适应切换"
+            },
+            {
+              "done": true,
+              "html": "独立顶级窗口交互，修改结果实时同步写回 Blender 场景"
+            }
+          ]
+        },
+        "fr": {
+          "titleHtml": "Gestionnaire de ViewLayer Qt",
+          "thumbAlt": "Gestionnaire de ViewLayer Qt",
+          "badge": "Publié",
+          "descHtml": "Fenêtre Qt dédiée à la gestion des couches de vue : préréglages JSON, application par lots et synchronisation instantanée avec Blender.",
+          "milestones": [
+            {
+              "done": true,
+              "html": "Import/export de préréglages JSON et application par lots"
+            },
+            {
+              "done": true,
+              "html": "Visibilité adaptative des panneaux de passes Cycles / EEVEE"
+            },
+            {
+              "done": true,
+              "html": "Fenêtre Qt autonome avec synchronisation directe dans la scène Blender"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "no-direct-lighting",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Lighting",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "No Direct Lighting",
+          "badge": "Planned",
+          "descHtml": "Object-level lighting flags that exclude direct illumination and restrict contributions strictly to indirect bounce lighting for targeted shot-level fill control.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "无直接照明物体 (<code>No Direct Lighting</code>)",
+          "badge": "规划中",
+          "descHtml": "允许物体关闭直接照明响应、仅参与间接反弹照明（Indirect Light），实现更精准的镜头级补光与反弹控制。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Objets sans éclairage direct (<code>No Direct Lighting</code>)",
+          "badge": "Prévu",
+          "descHtml": "Propriétés par objet excluant l'éclairage direct pour limiter la contribution uniquement aux rebonds de lumière indirecte par plan.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "collection-material-override",
+      "status": "planned",
+      "progress": 0,
+      "module": "ViewLayer · Overrides",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Collection Material Override",
+          "badge": "Planned",
+          "descHtml": "Granular per-collection and per-object material override workflows beyond global ViewLayer overrides for complex holdout and utility pass setups.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "集合材质覆盖 (<code>Collection Material Override</code>)",
+          "badge": "规划中",
+          "descHtml": "突破传统全局 ViewLayer 材质覆盖限制，提供面向集合（Collection）与单物体级别的细粒度材质覆盖工作流。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Remplacement de matériaux par collection (<code>Collection Material Override</code>)",
+          "badge": "Prévu",
+          "descHtml": "Flux de travail granulaires de Material Override au niveau des collections et des objets individuels pour les passes utilitaires complexes.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "arbitrary-lpe",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Pass · LPE",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Arbitrary Light Path Expressions (LPE)",
+          "badge": "Planned",
+          "descHtml": "Custom LPE syntax support extending beyond fixed Lightgroup lobe splits for specialized studio AOV extraction.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "任意光通路表达式 (LPE) 语法支持",
+          "badge": "规划中",
+          "descHtml": "在现有固定材质通道灯光 AOV 基础上，扩展完整的任意光通路表达式（Light Path Expression）自定义通道提取能力。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Expressions de chemin lumineux arbitraires (LPE)",
+          "badge": "Prévu",
+          "descHtml": "Prise en charge d'une syntaxe LPE personnalisée au-delà des passes de lobes de groupes de lumières prédéfinies.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "collection-visibility-upgrade",
+      "status": "planned",
+      "progress": 0,
+      "module": "ViewLayer · Collections",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Collection Visibility Control Upgrade",
+          "badge": "Planned",
+          "descHtml": "Designed for render layering: alongside Holdout, replaces Indirect Only with Camera Invisible and adds independent Indirect Off and Shadow Off collection toggles per ViewLayer.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "集合可见性控制升级 (<code>Collection Visibility Control Upgrade</code>)",
+          "badge": "规划中",
+          "descHtml": "专为分层渲染设计：在保留现有 Holdout 的基础上，使用相机不可见（<code>Camera Invisible</code>）替代原 <code>Indirect Only</code>，并新增关闭间接光（<code>Indirect Off</code>）与关闭阴影（<code>Shadow Off</code>）独立集合控制。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Amélioration du contrôle de visibilité des collections (<code>Collection Visibility Control Upgrade</code>)",
+          "badge": "Prévu",
+          "descHtml": "Conçu pour le rendu par couches : aux côtés de Holdout, remplace Indirect Only par l'invisibilité caméra (<code>Camera Invisible</code>) et ajoute des contrôles indépendants <code>Indirect Off</code> et <code>Shadow Off</code> par collection.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "high-perf-data-layer",
+      "status": "planned",
+      "progress": 0,
+      "module": "Core · Pipeline API",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "High Performance Data Manipulation Layer / Script Engine",
+          "badge": "Planned",
+          "descHtml": "High-performance scene data access layer and scripting engine tailored for heavy VFX scenes, removing bottlenecks in bulk object, pass, and attribute manipulation.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "高性能数据操作层 / 脚本引擎 (<code>High Performance Data Manipulation Layer / Script Engine</code>)",
+          "badge": "规划中",
+          "descHtml": "面向超大规模影视资产与管线自动化的高性能场景数据读写层与脚本执行引擎，大幅降低海量物体、通道与属性批处理的性能瓶颈。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Couche de manipulation de données haute performance / Moteur de script (<code>High Performance Data Manipulation Layer / Script Engine</code>)",
+          "badge": "Prévu",
+          "descHtml": "Couche d'accès aux données de scène haute performance et moteur de script dédiés aux scènes VFX lourdes pour accélérer les opérations massives sur objets, passes et attributs.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "rendering-trace-set",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Raytracing",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Rendering Trace Set",
+          "badge": "Planned",
+          "descHtml": "Production-grade trace set controls allowing artists and TDs to include or exclude specific object collections per ray type (reflection, refraction, shadow, and indirect rays).",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "渲染光线追踪集合 (<code>Rendering Trace Set</code>)",
+          "badge": "规划中",
+          "descHtml": "引入影视级渲染器标准的 Trace Set 机制，支持按集合精细控制反射、折射、阴影与间接光等光线追踪的包含与排除范围。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Jeux de tracé de rayons (<code>Rendering Trace Set</code>)",
+          "badge": "Prévu",
+          "descHtml": "Mécanisme de Trace Sets de niveau studio permettant d'inclure ou d'exclure finement des collections d'objets par type de rayon (réflexion, réfraction, ombre et rebonds indirects).",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "light-motion-blur",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Lighting · Motion Blur",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Light Motion Blur",
+          "badge": "Planned",
+          "descHtml": "Addresses stock Cycles' limitation where lights remain stationary in world coordinates during a frame—preventing incorrect motion blur when lights move independently or travel together with the camera.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "灯光 Motion Blur (<code>Light Motion Blur</code>)",
+          "badge": "规划中",
+          "descHtml": "解决官方 Cycles 运动模糊未计算灯光在世界坐标中位移的问题（当前帧渲染期间灯光保持静止，导致随相机或载具同步移动的灯光产生错误拖影），在快门区间内支持灯光世界空间运动插值。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Flou de mouvement des lumières (<code>Light Motion Blur</code>)",
+          "badge": "Prévu",
+          "descHtml": "Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — évitant un flou de mouvement erroné lorsque les lumières se déplacent ou suivent la caméra.",
+          "milestones": []
+        }
+      }
+    }
+  ]
+}

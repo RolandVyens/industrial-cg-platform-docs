@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "notes": "Lightweight factual source of truth for RolandVyens/industrial-cg-platform. Place at repo root as ROADMAP.json.",
+  "features": [
+    {
+      "id": "atmosphere-volume",
+      "status": "in_progress",
+      "progress": 50,
+      "module": "World Shader · Cycles Volume",
+      "releaseTag": null,
+      "title": "实时世界灯光雾 (Atmosphere Volume)",
+      "summary": "对标 Arnold atmosphere_volume 的实时世界灯光雾节点与独立 Atmosphere 渲染通道，以近实时速度实现全场景灯光体积光束与空气感。",
+      "progressNote": "核心节点与画面效果已就绪，正在攻坚实时级性能优化",
+      "milestones": [
+        { "done": true, "text": "Atmosphere Volume 世界节点与独立 Atmosphere 渲染通道" },
+        { "done": true, "text": "美术参数面板（浓度 / 散射与衰减色彩 / 各向异性 / 独立采样）" },
+        { "done": true, "text": "点光源、聚光灯与面光源体积光束支持" },
+        { "done": false, "text": "面向近实时视口交互与高速渲染的性能优化攻坚中" },
+        { "done": false, "text": "大规模多灯光与面光源下的降噪与收敛打磨中" }
+      ]
+    },
+    {
+      "id": "linux-platform-support",
+      "status": "in_progress",
+      "progress": 90,
+      "module": "bQt · Platform · Build Pipeline",
+      "releaseTag": "industrial-cg-platform-5.2.4-linux-beta.2",
+      "title": "Linux 生产环境支持",
+      "summary": "将编译打包管线、Cycles GPU/Deep EXR 运行时与 bQt ViewLayer 管理器扩展至 Linux x86-64（Rocky Linux 8.10 / EL8 基线，glibc 2.28+，X11/XWayland）。",
+      "progressNote": "公开 Linux Beta 2 已上线（含 EXR Overscan 多层修复）；原生 Linux 实体机 OptiX 与桌面验收待完成",
+      "milestones": [
+        { "done": true, "text": "Rocky Linux 8.10（EL8 / glibc 2.28+）构建打包与 658 个 ELF 依赖审计通过" },
+        { "done": true, "text": "Linux/X11 bQt（Qt 6.9.3）ViewLayer 管理器及 23 项 CPU 功能测试、27 项单元测试通过" },
+        { "done": true, "text": "发布公开 Linux Beta 预发布包（.tar.xz + SHA256SUMS；CPU/OptiX/动态 HIP）" },
+        { "done": false, "text": "原生 Linux 实体机 GPU/OptiX 渲染、HIP/ROCm 与多卡运行时验证" },
+        { "done": false, "text": "原生 Linux 桌面环境、完整 DPI/Wayland 与生产场景性能验收" }
+      ]
+    },
+    {
+      "id": "world-volume-deep-support",
+      "status": "in_progress",
+      "progress": 1,
+      "module": "Cycles Deep EXR · World Volume",
+      "releaseTag": null,
+      "title": "世界体积 Deep EXR 支持 (World Volume Deep Support)",
+      "summary": "将 Cycles 原生 Deep EXR 深度采集扩展至 World Volume，补齐全局环境雾效与大气层的逐采样深度输出。",
+      "progressNote": "刚立项，准备启动架构设计与开发",
+      "milestones": [
+        { "done": true, "text": "需求立项与技术范围界定" },
+        { "done": false, "text": "World Volume 深度区间采样与透射率积分架构设计" },
+        { "done": false, "text": "CPU / OptiX 后端实现与 Nuke DeepMerge 精度验收" }
+      ]
+    },
+    {
+      "id": "native-cycles-deep-exr",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles · Compositor · OpenEXR",
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "title": "Cycles 原生 Deep EXR 深度输出",
+      "summary": "从场景输出或合成器 File Output 直接写出逐采样 Z、ZBack 与 RGBA 深度数据，用于 Nuke 深度合成。",
+      "progressNote": "已随稳定版发布",
+      "milestones": [
+        { "done": true, "text": "原生输出逐采样 Z / ZBack / RGBA 深度通道" },
+        { "done": true, "text": "支持 RLE 与 ZIPS 深度压缩格式" },
+        { "done": true, "text": "提供合并容差控制与 Deep Tile Budget 显存上限保护" }
+      ]
+    },
+    {
+      "id": "deep-exr-v2",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles · OpenEXR",
+      "releaseTag": "industrial-cg-platform-5.2.4",
+      "title": "Deep EXR 深度渲染架构升级 (v2)",
+      "summary": "全面升级 Deep EXR 渲染与合成性能、体积切片 Alpha 表现，新增可切换的 Simple 与 Physical 模式。",
+      "progressNote": "已随 5.2.4 LTS 发布",
+      "milestones": [
+        { "done": true, "text": "核心深度渲染管线重写与体积切片 Alpha 表现优化" },
+        { "done": true, "text": "新增 Simple Mode（默认）与 Physical Mode 原生深度色彩捕获" },
+        { "done": true, "text": "随 Industrial CG Platform 5.2.4 LTS 正式发布" }
+      ]
+    },
+    {
+      "id": "native-exr-overscan",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Camera · OpenEXR BBox",
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "title": "原生 EXR Overscan",
+      "summary": "按百分比或像素扩展画幅边缘，在 OpenEXR 中独立写入 dataWindow 与 displayWindow。",
+      "progressNote": "已随稳定版发布",
+      "milestones": [
+        { "done": true, "text": "支持按百分比或像素宽度扩展渲染画幅边缘" },
+        { "done": true, "text": "保持原始相机透视与构图零偏移" },
+        { "done": true, "text": "原生写入标准 OpenEXR dataWindow / displayWindow" }
+      ]
+    },
+    {
+      "id": "lightgroup-lobe-passes",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Kernel · ViewLayer Passes",
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "title": "材质通道灯光 AOV (Lightgroup Lobe Passes)",
+      "summary": "将每个 Cycles 灯光组拆分为 Diffuse / Glossy / Transmission / Volume 的 Direct 与 Indirect 通道。",
+      "progressNote": "已随稳定版发布",
+      "milestones": [
+        { "done": true, "text": "逐灯光组拆分 Diffuse / Glossy / Transmission / Volume" },
+        { "done": true, "text": "独立分离 Direct 与 Indirect 贡献" },
+        { "done": true, "text": "满足 Combined_<lg> ≈ Σ(Direct + Indirect) 能量守恒" }
+      ]
+    },
+    {
+      "id": "artistic-shadow-color",
+      "status": "released",
+      "progress": 100,
+      "module": "Cycles Lights · World Shader",
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "title": "美术级阴影颜色控制 (Shadow Color)",
+      "summary": "逐灯光与逐世界环境阴影着色，只作用于遮挡阴影区而不污染受光面。",
+      "progressNote": "已随稳定版发布",
+      "milestones": [
+        { "done": true, "text": "支持逐灯光独立阴影着色 (Light.shadow_color)" },
+        { "done": true, "text": "支持世界环境光阴影着色 (World.cycles.shadow_color)" },
+        { "done": true, "text": "仅作用于遮挡阴影区域，不污染正常受光面色彩" }
+      ]
+    },
+    {
+      "id": "qt-viewlayer-manager",
+      "status": "released",
+      "progress": 100,
+      "module": "bQt · PySide6 · Pipeline UI",
+      "releaseTag": "industrial-cg-platform-5.2.0",
+      "title": "Qt 视图层管理器 (ViewLayer Manager)",
+      "summary": "基于 Qt 的独立视图层管理窗口，支持 JSON 通道预设导入导出与多视图层批量操作。",
+      "progressNote": "已随稳定版发布",
+      "milestones": [
+        { "done": true, "text": "支持 JSON 通道预设导入导出与多视图层批量套用" },
+        { "done": true, "text": "Cycles / EEVEE 渲染引擎通道面板自适应切换" },
+        { "done": true, "text": "独立顶级窗口交互，修改结果实时同步写回 Blender 场景" }
+      ]
+    },
+    {
+      "id": "no-direct-lighting",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Lighting",
+      "releaseTag": null,
+      "title": "无直接照明物体 (No Direct Lighting)",
+      "summary": "允许物体关闭直接照明响应、仅参与间接反弹照明（Indirect Light），实现更精准的镜头级补光与反弹控制。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "collection-material-override",
+      "status": "planned",
+      "progress": 0,
+      "module": "ViewLayer · Overrides",
+      "releaseTag": null,
+      "title": "集合材质覆盖 (Collection Material Override)",
+      "summary": "突破传统全局 ViewLayer 材质覆盖限制，提供面向集合与单物体级别的细粒度材质覆盖工作流。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "arbitrary-lpe",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Pass · LPE",
+      "releaseTag": null,
+      "title": "任意光通路表达式 (LPE) 语法支持",
+      "summary": "在现有固定材质通道灯光 AOV 基础上，扩展完整的任意光通路表达式（Light Path Expression）自定义通道提取能力。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "collection-visibility-upgrade",
+      "status": "planned",
+      "progress": 0,
+      "module": "ViewLayer · Collections",
+      "releaseTag": null,
+      "title": "集合可见性控制升级 (Collection Visibility Control Upgrade)",
+      "summary": "专为分层渲染设计：在保留现有 Holdout 的基础上，使用相机不可见替代原 Indirect Only，并新增 Indirect Off 与 Shadow Off 独立集合控制。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "high-perf-data-layer",
+      "status": "planned",
+      "progress": 0,
+      "module": "Core · Pipeline API",
+      "releaseTag": null,
+      "title": "高性能数据操作层 / 脚本引擎 (High Performance Data Manipulation Layer / Script Engine)",
+      "summary": "面向超大规模影视资产与管线自动化的高性能场景数据读写层与脚本执行引擎，大幅降低海量物体、通道与属性批处理的性能瓶颈。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "rendering-trace-set",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Raytracing",
+      "releaseTag": null,
+      "title": "渲染光线追踪集合 (Rendering Trace Set)",
+      "summary": "引入影视级渲染器标准的 Trace Set 机制，支持按集合精细控制反射、折射、阴影与间接光等光线追踪的包含与排除范围。",
+      "progressNote": "",
+      "milestones": []
+    },
+    {
+      "id": "light-motion-blur",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Lighting · Motion Blur",
+      "releaseTag": null,
+      "title": "灯光 Motion Blur (Light Motion Blur)",
+      "summary": "解决官方 Cycles 运动模糊未计算灯光在世界坐标中位移的问题，在快门区间内支持灯光世界空间运动插值。",
+      "progressNote": "",
+      "milestones": []
+    }
+  ]
+}
