@@ -40,11 +40,11 @@
     "blob": "0291a1c1d53af6f13cc4e58614a91e893fc0a999"
   },
   "en/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "97718f0396356ffc02570adb53754154136d7bb0"
   },
   "en/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "ca3d89c7201d8f5bf1973a1b4bdc01a5eb558f77"
   },
   "en/donate.md": {
@@ -52,11 +52,11 @@
     "blob": "243180297921654f80b4e822769625e94b0ddf81"
   },
   "en/feature-tracking.md": {
-    "lastmod": "2026-11-23T10:24:03.000Z",
+    "lastmod": "2026-11-23T14:50:54.000Z",
     "blob": "aae8775a124b4e033b35c5914ff8aaadc0d79e48"
   },
   "en/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "02382c99ad5cbc78470da34ad7549f1b55779cff"
   },
   "en/industrial-aov-connector/index.md": {
@@ -132,23 +132,23 @@
     "blob": "2d93cffe6ee547a3be8569e7d498baf8ce0099f4"
   },
   "en/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "b9892fafd9b053c9fc8d7bee1b1a54721b1dd45e"
   },
   "en/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "a10a24fc3a882d465d8d221b4d74c853e9f785e3"
   },
   "en/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "05c72b9f4195495613a0974cbf2e58adc08b1524"
   },
   "en/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "07ebac1160112658003447d2d784163a5bbec980"
   },
   "en/industrial-cg-platform/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "31d95b50c7171992e7ae25caff610ef98412d616"
   },
   "en/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
@@ -184,7 +184,7 @@
     "blob": "b36a7d3318e3da4cc838ec178cd827c1c5744d1b"
   },
   "en/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "ffcfcff60c3285c1f27042b122dc4a46331dc3e7"
   },
   "fr/aio-ocio/index.md": {
@@ -208,11 +208,11 @@
     "blob": "f0a3b36da6bb48c54b790abfdbdb029172a4224b"
   },
   "fr/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "8a79920a57a53c6b3fc0f9dffe67dee8127ae96a"
   },
   "fr/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "bddabf6741002ad98a0a1af25a7dc936e404b885"
   },
   "fr/donate.md": {
@@ -220,11 +220,11 @@
     "blob": "9274924829a46942afb6272b1b3a3e5581087afc"
   },
   "fr/feature-tracking.md": {
-    "lastmod": "2026-11-23T10:24:03.000Z",
+    "lastmod": "2026-11-23T14:50:54.000Z",
     "blob": "5aa952d935f4b169a3a80c4d95ca7355eb2316e6"
   },
   "fr/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "0edab9e58f9258e552eb639fd88d0a4dfb3c70e1"
   },
   "fr/industrial-aov-connector/index.md": {
@@ -300,23 +300,23 @@
     "blob": "c9b0716081e80233d4f21dba358f877dda1cc251"
   },
   "fr/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "6c3a5a56c9e9916e34d398576ef7689a3575109c"
   },
   "fr/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "3dc32fe51ff189ca6d77b5f341c53102e88f9654"
   },
   "fr/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "c39d7611b134f7eb60cf0fbcc24d4c5e6b47766f"
   },
   "fr/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "ddc20470faeb100ef09623731532c480f739b2d5"
   },
   "fr/industrial-cg-platform/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "58ce71b828f3fca2f05d8cc8a9f177b2177601a2"
   },
   "fr/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
@@ -352,11 +352,11 @@
     "blob": "662dcf6d55e05da2b9373c465a14efa807788d62"
   },
   "fr/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "c8777d25599a4b0422f5d5e5724a4d86ed421f22"
   },
   "index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "c59907917f33d94e4cb7f0581c8ff625cb44148b"
   },
   "zh/aio-ocio/index.md": {
@@ -380,11 +380,11 @@
     "blob": "3e8f361b08d8aa7952b505837170f532b66c6e1d"
   },
   "zh/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "918a8a1858fbe63520a3adb12a9fa9a93386f02c"
   },
   "zh/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "61d33d7f3a5c0dab43e5f6b19a58ec2c156f6abe"
   },
   "zh/donate.md": {
@@ -392,11 +392,11 @@
     "blob": "dc93562aced942d1bfe1db83e4923594ae2b15a9"
   },
   "zh/feature-tracking.md": {
-    "lastmod": "2026-11-23T10:24:03.000Z",
+    "lastmod": "2026-11-23T14:50:54.000Z",
     "blob": "697ce85d872c5e3000a07f8aa1a63680c9b0428f"
   },
   "zh/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "e468fc884736e9f5740322faa0daf942e7b1e569"
   },
   "zh/industrial-aov-connector/index.md": {
@@ -472,23 +472,23 @@
     "blob": "b855c0aa075ffed3e6765b9f7730f8c061a9ef86"
   },
   "zh/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "c04c7e1f5c702f7ad740f94f94a04a83093d9d1b"
   },
   "zh/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "31fc6fb0a8dda8323404164dc19fda136b18ed4d"
   },
   "zh/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "0b217586ac5be2da275656675d320db7ba893acf"
   },
   "zh/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "e6dd97b21d51916559cfb8b688cdfb18b4712489"
   },
   "zh/industrial-cg-platform/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "bcae2a94215f6e9169d42770c3f635052df425df"
   },
   "zh/industrial-cg-platform/releases/5.2.0-2026-05-19.md": {
@@ -524,7 +524,7 @@
     "blob": "d70637f4db17368cd49a0be6130241db0d72fe75"
   },
   "zh/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:08.000Z",
+    "lastmod": "2026-11-23T11:51:14.000Z",
     "blob": "9335f190f674181301a1ca244e219a1587e6a921"
   }
 }

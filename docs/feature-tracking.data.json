@@ -16,14 +16,14 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "46f41d86d846a083",
+      "syncedHash": "e001a9746201e120",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Real-Time World Light Fog (<code>Atmosphere Volume</code>)",
-          "badge": "In Progress · Active R&D",
+          "badge": "In Progress · Algorithm Validation",
           "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and independent sample controls without the heavy cost of traditional full-scene volumetric path tracing.",
-          "progressLabel": "Development Progress (Core Node & Look Ready, Optimizing Toward Real-Time Performance)",
+          "progressLabel": "Development Progress (Node, Pass & Basic Lights Verified; Validating Algorithm Quality & Performance in Isolated Tests)",
           "milestones": [
             {
               "done": true,
@@ -39,19 +39,19 @@
             },
             {
               "done": false,
-              "html": "Performance Optimization Toward Near-Real-Time Viewport &amp; Render Speed"
+              "html": "Near-Real-Time Viewport &amp; High-Speed Render Performance Validation"
             },
             {
               "done": false,
-              "html": "Multi-Light &amp; Area Light Noise Reduction &amp; Convergence Polish"
+              "html": "Large Multi-Light &amp; Area Light Denoising &amp; Convergence Qualification"
             }
           ]
         },
         "zh": {
           "titleHtml": "实时世界灯光雾 (<code>Atmosphere Volume</code>)",
-          "badge": "研发验证中 · In Progress",
+          "badge": "算法验证中 · In Progress",
           "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与独立采样预算控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
-          "progressLabel": "当前研发进度（核心节点与画面效果已就绪，正在攻坚实时级性能优化）",
+          "progressLabel": "当前研发进度（节点、独立通道与基础灯型已有验证；当前在隔离测试中验证算法画质与性能，实时交互与生产验收待完成）",
           "milestones": [
             {
               "done": true,
@@ -67,19 +67,19 @@
             },
             {
               "done": false,
-              "html": "面向近实时视口交互与高速渲染的性能优化攻坚中"
+              "html": "完成近实时视口交互与高速渲染的性能验证"
             },
             {
               "done": false,
-              "html": "大规模多灯光与面光源下的降噪与收敛打磨中"
+              "html": "完成大规模多灯光与面光源场景的降噪与收敛验收"
             }
           ]
         },
         "fr": {
           "titleHtml": "Brouillard lumineux mondial en temps réel (<code>Atmosphere Volume</code>)",
-          "badge": "En cours · R&D Active",
+          "badge": "En cours · Validation d'algorithme",
           "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage indépendant, sans le coût lourd du path tracing volumétrique traditionnel.",
-          "progressLabel": "Progression (Nœud & rendu prêts, optimisation vers des performances temps réel en cours)",
+          "progressLabel": "Progression (Nœud, passe dédiée et lumières de base vérifiés ; validation qualité et performances de l'algorithme en tests isolés)",
           "milestones": [
             {
               "done": true,
@@ -95,11 +95,11 @@
             },
             {
               "done": false,
-              "html": "Optimisation des performances vers une vitesse viewport &amp; rendu quasi temps réel"
+              "html": "Validation des performances viewport quasi temps réel &amp; rendu rapide"
             },
             {
               "done": false,
-              "html": "Réduction du bruit pour scènes multi-lumières &amp; lumières de zone"
+              "html": "Validation du débruitage et de la convergence sur scènes multi-lumières et lumières de zone"
             }
           ]
         }
@@ -231,72 +231,84 @@
     {
       "id": "world-volume-deep-support",
       "status": "in_progress",
-      "progress": 1,
+      "progress": 95,
       "module": "Cycles Deep EXR · World Volume",
       "thumb": null,
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "63eaefb671e50c86",
+      "syncedHash": "f6704e87cbbbdb7b",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "World Volume Deep Support",
-          "badge": "Initiated · Kickoff",
-          "descHtml": "Extending native Cycles Deep EXR capture to World Volume shaders, closing the current World Volume limitation so full-scene atmospheric fog and environment volumes output per-sample deep data for lossless Nuke deep compositing.",
-          "progressLabel": "Development Progress (Just Initiated, Preparing Architecture & Implementation)",
+          "badge": "Merged Locally · Awaiting 5.3.0",
+          "descHtml": "Extends native Cycles Deep EXR capture to World Volume shaders, completing per-sample deep output for full-scene atmospheric fog and environment volumes in Nuke deep compositing. Merged into local 5.3.0 mainline with local CPU, OptiX, and Nuke DeepMerge acceptance completed—awaiting the public 5.3.0 release.",
+          "progressLabel": "Development Progress (Merged into Local 5.3.0 Mainline; CPU, OptiX & Nuke Acceptance Passed, Awaiting Public 5.3.0 Release)",
           "milestones": [
             {
               "done": true,
               "html": "Project Kickoff &amp; Technical Scope Definition"
             },
             {
-              "done": false,
-              "html": "World Volume Deep Interval Sampling &amp; Transmittance Architecture"
+              "done": true,
+              "html": "World Volume Deep Interval Capture &amp; Transmittance Handling Design"
+            },
+            {
+              "done": true,
+              "html": "CPU / OptiX Backend Acceptance &amp; Nuke DeepMerge Insert Verification"
             },
             {
               "done": false,
-              "html": "CPU / OptiX Implementation &amp; Nuke DeepMerge Accuracy Verification"
+              "html": "Public Release in Industrial CG Platform 5.3.0"
             }
           ]
         },
         "zh": {
           "titleHtml": "世界体积 Deep EXR 支持 (<code>World Volume Deep Support</code>)",
-          "badge": "已立项 · 准备开发",
-          "descHtml": "将 Cycles 原生 Deep EXR 深度采集扩展至世界环境体积（World Volume），补齐当前 Deep EXR 暂不支持世界体积的边界，让大场景全局雾效与大气层也能输出完整的逐采样深度数据用于 Nuke 深度合成。",
-          "progressLabel": "当前研发进度（刚立项，准备启动架构设计与开发）",
+          "badge": "已合入本地 5.3.0 · 待公开发布",
+          "descHtml": "将 Cycles 原生 Deep EXR 深度采集扩展至世界环境体积（World Volume），补齐全局环境雾效与大气层的逐采样深度输出用于 Nuke 深度合成。现已合入本地 5.3.0 主线，并完成 CPU、OptiX 与 Nuke DeepMerge 本地验收，等待随 5.3.0 公开发布。",
+          "progressLabel": "当前研发进度（已合入本地 5.3.0 主线，CPU / OptiX 与 Nuke 本地验收完成，待 5.3.0 公开发布）",
           "milestones": [
             {
               "done": true,
               "html": "需求立项与技术范围界定"
             },
             {
-              "done": false,
-              "html": "World Volume 深度区间采样与透射率积分架构设计"
+              "done": true,
+              "html": "完成 World Volume 深度区间采集与透射率处理设计"
+            },
+            {
+              "done": true,
+              "html": "完成 CPU / OptiX 后端验收及 Nuke DeepMerge 插片验证"
             },
             {
               "done": false,
-              "html": "CPU / OptiX 后端实现与 Nuke DeepMerge 精度验收"
+              "html": "随 Industrial CG Platform 5.3.0 公开发布"
             }
           ]
         },
         "fr": {
           "titleHtml": "Support Deep EXR pour World Volume (<code>World Volume Deep Support</code>)",
-          "badge": "Initialisé · Lancement",
-          "descHtml": "Extension de la capture Deep EXR native de Cycles aux shaders World Volume afin de lever la limitation actuelle et de permettre le compositing profond sans perte du brouillard global et des atmosphères dans Nuke.",
-          "progressLabel": "Progression (Projet tout juste initialisé, préparation de l'architecture et du développement)",
+          "badge": "Fusionné en local (5.3.0) · En attente de publication",
+          "descHtml": "Étend la capture Deep EXR native de Cycles aux shaders World Volume afin d'assurer la sortie de profondeur par échantillon du brouillard global et des atmosphères pour le compositing profond dans Nuke. Fusionné dans la branche locale 5.3.0 avec validation locale CPU, OptiX et Nuke DeepMerge terminée, en attente de la publication publique 5.3.0.",
+          "progressLabel": "Progression (Fusionné dans la branche locale 5.3.0 ; validation locale CPU, OptiX et Nuke terminée, en attente de la sortie publique 5.3.0)",
           "milestones": [
             {
               "done": true,
               "html": "Lancement du projet et définition du périmètre technique"
             },
             {
-              "done": false,
-              "html": "Architecture d'échantillonnage par intervalles et d'intégration de transmittance World Volume"
+              "done": true,
+              "html": "Conception de la capture d'intervalles Deep et du traitement de la transmittance World Volume"
+            },
+            {
+              "done": true,
+              "html": "Validation des backends CPU / OptiX et vérification d'insertion Nuke DeepMerge"
             },
             {
               "done": false,
-              "html": "Implémentation CPU / OptiX et validation de précision sous Nuke DeepMerge"
+              "html": "Publication publique dans Industrial CG Platform 5.3.0"
             }
           ]
         }
