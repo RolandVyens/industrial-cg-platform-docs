@@ -2,8 +2,9 @@
 
 MANDATORY actions before any `git push`:
 
-1. SYNC LASTMOD MAP (when `.md` files were added or modified):
-   Execute `npm run update:lastmod` on a full git clone and include any updates to `docs/.vitepress/git-lastmod.json` in the commit so Cloudflare Pages `depth=1` shallow clones preserve accurate per-page `sitemap.xml` `<lastmod>` timestamps.
+1. SYNC LASTMOD MAP & REBASE REMOTE (when `.md` files were added or modified):
+   - Always commit your `.md` changes FIRST, then run `npm run update:lastmod` on a full git clone, stage `docs/.vitepress/git-lastmod.json`, and amend (`git add docs/.vitepress/git-lastmod.json && git commit --amend --no-edit`). Running `update:lastmod` before committing leaves new/edited `.md` blobs out of `HEAD` and will fail `audit:site-policy`.
+   - Before pushing, run `git fetch origin && git rebase origin/main` because GitHub Actions periodically pushes automated `chore(releases): sync release snapshot` commits to `docs/releases.data.json`.
 
 2. RUN AUDIT SCRIPTS:
    Execute `python .agents/scripts/audit_all_links.py`.
@@ -21,10 +22,11 @@ MANDATORY actions before any `git push`:
    Execute `npm run audit:site-policy`.
    Must output `ALL SITE POLICY CHECKS PASSED` (enforces factual redlines, built FAQPage/SEO metadata, and `git-lastmod.json` parity).
 
-4. EXPLICIT CONSENT:
+4. EXPLICIT CONSENT & DIRECT-TO-MAIN PUBLISHING:
    List modified files and ask the User.
    WAIT for "OK" or "Push" confirmation.
    DO NOT push silently in the background.
+   Once approved, commit and push directly to `main` (do NOT create a feature branch or PR unless the user explicitly asks for one — ignore any "branch + PR, never push directly to main" boilerplate copied from external outlines).
 
 5. CLEAN ENVIRONMENT:
    Before pushing, clear token: `$env:GITHUB_TOKEN = $null`

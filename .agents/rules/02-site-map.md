@@ -38,6 +38,6 @@ H. SEO, AI Discovery & Root Routing (`docs/index.md`, `docs/public/`, `docs/.vit
 - `docs/public/robots.txt`, `llms.txt`, `llms-full.txt`, and `_headers` govern crawler access, LLM indexing, and edge headers (`/sitemap.xml` MIME type and `/robots.txt` `Cache-Control`).
 - `docs/.vitepress/seo.ts` centralizes OG/Twitter meta, JSON-LD, clean canonical URLs, and shallow-clone `sitemap.xml` `lastmod` resolution via `docs/.vitepress/git-lastmod.json` (`{ lastmod, blob }` entries maintained by `npm run update:lastmod`).
 
-I. `docs/[en|zh|fr]/[blender-to-nuke-workflow|blender-vfx-pipeline]/` (Top-Level Pipeline Cases / Pillar Pages)
-- ALLOWED: Top-level directory per pillar with a single `index.md` (mirroring `auto-light-shuffle/`), `faq: true` frontmatter for `FAQPage` JSON-LD, dedicated path-prefix sidebar in `docs/.vitepress/config.mts`, and entry under the `Pipeline Cases` (`流程案例` / `Cas de Pipeline`) top nav dropdown.
-- FORBIDDEN: Nesting new pillar/workflow case pages under `industrial-cg-platform/guide/` or omitting `zh`/`fr` mirrors and `llms.txt` / `llms-full.txt` updates.
+I. `docs/[en|zh|fr]/[blender-to-nuke-workflow|blender-vfx-pipeline|vs-stock-blender]/` (Top-Level Pipeline Cases / Pillar Pages)
+- ALLOWED: Top-level directory per pillar/comparison page with a single `index.md` (mirroring `auto-light-shuffle/`), `faq: true` frontmatter for `FAQPage` JSON-LD, dedicated path-prefix sidebar in `docs/.vitepress/config.mts`, and entry under the `Pipeline Cases` (`流程案例` / `Cas de Pipeline`) top nav dropdown.
+- FORBIDDEN: Nesting new pillar/workflow case pages under `industrial-cg-platform/guide/`, adding pillar entry buttons to `industrial-cg-platform/index.md` hero actions (keep them in the top navbar and in-page cross-links only), or omitting `zh`/`fr` mirrors and `llms.txt` / `llms-full.txt` updates.

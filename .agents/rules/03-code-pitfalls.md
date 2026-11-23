@@ -28,3 +28,6 @@ MANDATORY syntax rules for VitePress, Vue, and Markdown:
 7. FRONTMATTER `description` & CLEAN URL TRAILING SLASHES:
    - Never add `meta[name="description"]` inside `frontmatter.head`; always use top-level `description:` so VitePress and `docs/.vitepress/seo.ts` stay aligned.
    - Because `cleanUrls: true` is enabled, non-index `.md` pages resolve WITHOUT trailing slashes; never hardcode trailing slashes on non-index internal links or canonicals.
+
+8. LOCAL PREVIEW SERVER RESTART AFTER NEW ROUTES:
+   - `npm run docs:preview` caches route manifests from when it started. After running `npm run docs:build` with newly added pages or changed chunks, kill and restart the preview server or new routes may return 404 locally.
