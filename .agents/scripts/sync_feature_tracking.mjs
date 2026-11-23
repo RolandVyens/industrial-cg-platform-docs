@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -17,6 +18,7 @@ function parseArgs(argv) {
     markSynced: false,
     upstreamFile: null,
     noRemote: false,
+    remoteOnly: false,
   }
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
@@ -25,7 +27,8 @@ function parseArgs(argv) {
     else if (a === '--json') args.json = true
     else if (a === '--exit-code') args.exitCode = true
     else if (a === '--mark-synced') args.markSynced = true
-    else if (a === '--no-remote') args.noRemote = true
+    else if (a === '--no-remote' || a === '--local-only') args.noRemote = true
+    else if (a === '--remote-only') args.remoteOnly = true
     else if (a === '--upstream-file' && argv[i + 1]) {
       args.upstreamFile = argv[++i]
     }
@@ -78,24 +81,115 @@ function findMatchingRelease(releases, track) {
   return candidates[0] || null
 }
 
+function findLocalWorktreeOnBranch(localRepoDir, branch) {
+  try {
+    const out = execFileSync('git', ['-C', localRepoDir, 'worktree', 'list', '--porcelain'], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    })
+    let currentPath = null
+    let currentBranch = null
+    const targetRef = `refs/heads/${branch}`
+    for (const line of [...out.split(/\r?\n/), '']) {
+      if (line.trim() === '') {
+        if (currentPath && currentBranch === targetRef) {
+          return currentPath
+        }
+        currentPath = null
+        currentBranch = null
+        continue
+      }
+      if (line.startsWith('worktree ')) {
+        currentPath = line.slice('worktree '.length).trim()
+      } else if (line.startsWith('branch ')) {
+        currentBranch = line.slice('branch '.length).trim()
+      }
+    }
+  } catch {
+    return null
+  }
+  return null
+}
+
+function tryLoadLocalRoadmap(upstreamCfg) {
+  const roadmapRel = upstreamCfg?.roadmapPath || 'ROADMAP.json'
+  const branch = upstreamCfg?.branch || 'industrial-cg-platform'
+  const localRepoRel = upstreamCfg?.localRepoRelative || '../blender'
+  const localRepoDir = path.resolve(repoRoot, localRepoRel)
+
+  if (!fs.existsSync(localRepoDir)) {
+    return null
+  }
+
+  // 1. Prefer an active worktree checked out on the target upstream branch (e.g. industrial-cg-platform)
+  const branchWorktree = findLocalWorktreeOnBranch(localRepoDir, branch)
+  if (branchWorktree) {
+    const candidate = path.join(branchWorktree, roadmapRel)
+    if (fs.existsSync(candidate)) {
+      return {
+        source: candidate,
+        origin: 'local_worktree',
+        status: 'ok',
+        data: JSON.parse(fs.readFileSync(candidate, 'utf8')),
+      }
+    }
+  }
+
+  // 2. Check the main local repo working directory directly (supports uncommitted edits)
+  const directCandidate = path.join(localRepoDir, roadmapRel)
+  if (fs.existsSync(directCandidate)) {
+    return {
+      source: directCandidate,
+      origin: 'local_repo_file',
+      status: 'ok',
+      data: JSON.parse(fs.readFileSync(directCandidate, 'utf8')),
+    }
+  }
+
+  // 3. Check committed ROADMAP.json on local branch refs/heads/<branch> even if checked out elsewhere
+  try {
+    const content = execFileSync('git', ['-C', localRepoDir, 'show', `refs/heads/${branch}:${roadmapRel}`], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    })
+    return {
+      source: `${localRepoDir} (${branch}:${roadmapRel})`,
+      origin: 'local_git_ref',
+      status: 'ok',
+      data: JSON.parse(content),
+    }
+  } catch {
+    // Not committed on local branch yet
+  }
+
+  return null
+}
+
 async function loadUpstreamRoadmap(upstreamCfg, args) {
-  if (args.upstreamFile) {
-    const resolved = path.resolve(repoRoot, args.upstreamFile)
+  const explicitFile = args.upstreamFile || process.env.ICGP_ROADMAP_PATH
+  if (explicitFile) {
+    const resolved = path.resolve(repoRoot, explicitFile)
     if (!fs.existsSync(resolved)) {
-      return { source: resolved, status: 'missing_local', data: null }
+      return { source: resolved, origin: 'explicit_file', status: 'missing_local', data: null }
     }
     return {
       source: resolved,
+      origin: 'explicit_file',
       status: 'ok',
       data: JSON.parse(fs.readFileSync(resolved, 'utf8')),
     }
   }
 
-  if (args.noRemote || !upstreamCfg?.repo || !upstreamCfg?.roadmapPath) {
-    return { source: 'disabled', status: 'skipped', data: null }
+  if (!args.remoteOnly) {
+    const localHit = tryLoadLocalRoadmap(upstreamCfg)
+    if (localHit) return localHit
   }
 
-  const branch = upstreamCfg.branch || 'main'
+  if (args.noRemote || !upstreamCfg?.repo || !upstreamCfg?.roadmapPath) {
+    return { source: 'local_repo_not_found', origin: 'local_only', status: 'not_found_local', data: null }
+  }
+
+  const branch = upstreamCfg.branch || 'industrial-cg-platform'
   const url = `https://raw.githubusercontent.com/${upstreamCfg.repo}/${branch}/${upstreamCfg.roadmapPath}`
   try {
     const res = await fetch(url, {
@@ -103,15 +197,15 @@ async function loadUpstreamRoadmap(upstreamCfg, args) {
       signal: AbortSignal.timeout(10000),
     })
     if (res.status === 404) {
-      return { source: url, status: 'not_found_404', data: null }
+      return { source: url, origin: 'github_raw', status: 'not_found_404', data: null }
     }
     if (!res.ok) {
-      return { source: url, status: `http_${res.status}`, data: null }
+      return { source: url, origin: 'github_raw', status: `http_${res.status}`, data: null }
     }
     const data = await res.json()
-    return { source: url, status: 'ok', data }
+    return { source: url, origin: 'github_raw', status: 'ok', data }
   } catch (err) {
-    return { source: url, status: `network_error:${err.message}`, data: null }
+    return { source: url, origin: 'github_raw', status: `network_error:${err.message}`, data: null }
   }
 }
 
@@ -293,6 +387,7 @@ async function main() {
 
   const report = {
     upstream: {
+      origin: upstreamRes.origin || 'unknown',
       source: upstreamRes.source,
       status: upstreamRes.status,
       featureCount: upstreamFeatures.length,
@@ -310,7 +405,7 @@ async function main() {
     console.log(JSON.stringify(report, null, 2))
   } else {
     console.log(`Feature Tracking Check (${args.apply ? 'APPLY' : 'CHECK'})`)
-    console.log(`- Upstream ROADMAP: ${upstreamRes.status} (${upstreamRes.source})`)
+    console.log(`- Upstream ROADMAP [${upstreamRes.origin || 'unknown'}]: ${upstreamRes.status} (${upstreamRes.source})`)
     console.log(`- Release drifts (vs docs/releases.data.json): ${releaseDrifts.length}`)
     for (const d of releaseDrifts) {
       console.log(`  * ${d.id}: ${d.currentTag || '(none)'} -> ${d.latestTag} (${d.publishedAt})`)

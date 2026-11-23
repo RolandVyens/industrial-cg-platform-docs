@@ -2,8 +2,9 @@
   "schemaVersion": 1,
   "upstream": {
     "repo": "RolandVyens/industrial-cg-platform",
-    "branch": "main",
-    "roadmapPath": "ROADMAP.json"
+    "branch": "industrial-cg-platform",
+    "roadmapPath": "ROADMAP.json",
+    "localRepoRelative": "../blender"
   },
   "features": [
     {
