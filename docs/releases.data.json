@@ -4,14 +4,14 @@
     "name": "Industrial CG Platform 5.3.0",
     "published_at": "2026-11-23T15:27:05Z",
     "prerelease": false,
-    "body": "# Industrial CG Platform 5.3.0\n\n## 中文\n\n- 更新至官方 Blender 5.3.0。\n- EXR Overscan 支持同一场景的多个视图层，保留先完成的渲染通道。跨场景的 Overscan 会在输出前报告不支持。\n- Cycles Deep EXR 支持 Blender 原生 World Volume。有限雾段保留深度范围，无界雾的剩余贡献存入远端样本，便于在合成里插入前后景。\n- Deep EXR 会省略编码后 RGBA 全零的样本，降低文件体积。Alpha 为零但仍有颜色贡献的样本会保留。\n- 修复手动另存 Deep EXR 时参数不匹配导致当前帧无法重试的问题。恢复原参数后可直接保存同一帧。\n- 修复合成器 File Output 的 Deep EXR 回退路径忽略用户设定的零深度容差，以及 OptiX 在体积与表面相接时可能无法写出 Deep 的问题。\n\n## English\n\n- Updated to official Blender 5.3.0.\n- EXR Overscan preserves completed render passes across multiple view layers in one scene. Overscan across multiple scenes is reported before output.\n- Cycles Deep EXR now supports Blender’s native World Volume. Finite fog retains its depth intervals, and the remaining contribution from unbounded fog is stored in a far-depth sample for compositing.\n- Deep EXR omits samples whose encoded RGBA channels are all zero. Samples with a color contribution and zero alpha are retained.\n- Fixed manual Deep EXR Save As so a settings mismatch can be corrected and retried on the same rendered frame.\n- Fixed the compositor File Output fallback to respect an explicit zero depth tolerance. Fixed OptiX Deep output failures caused by depth rounding where volumes meet other volumes or surfaces.\n",
+    "body": "# Industrial CG Platform 5.3.0\n\n## 中文\n\n- 更新至官方 Blender 5.3.0。\n- Cycles Deep EXR 支持 Blender 原生 World Volume。有限雾段保留深度范围，无界雾的剩余贡献存入远端样本，便于在合成里插入前后景。\n- Deep EXR 会省略编码后 RGBA 全零的样本，降低文件体积。Alpha 为零但仍有颜色贡献的样本会保留。\n- 修复手动另存 Deep EXR 时参数不匹配导致当前帧无法重试的问题。恢复原参数后可直接保存同一帧。\n- 修复合成器 File Output 的 Deep EXR 回退路径忽略用户设定的零深度容差，以及 OptiX 在体积与表面相接时可能无法写出 Deep 的问题。\n\n## English\n\n- Updated to official Blender 5.3.0.\n- Cycles Deep EXR now supports Blender’s native World Volume. Finite fog retains its depth intervals, and the remaining contribution from unbounded fog is stored in a far-depth sample for compositing.\n- Deep EXR omits samples whose encoded RGBA channels are all zero. Samples with a color contribution and zero alpha are retained.\n- Fixed manual Deep EXR Save As so a settings mismatch can be corrected and retried on the same rendered frame.\n- Fixed the compositor File Output fallback to respect an explicit zero depth tolerance. Fixed OptiX Deep output failures caused by depth rounding where volumes meet other volumes or surfaces.\n",
     "html_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/tag/industrial-cg-platform-5.3.0",
     "assets": [
       {
         "id": 783447448,
         "name": "industrial-cg-platform-5.3.0.zip",
         "size": 753564994,
-        "download_count": 0,
+        "download_count": 5,
         "browser_download_url": "https://github.com/RolandVyens/industrial-cg-platform/releases/download/industrial-cg-platform-5.3.0/industrial-cg-platform-5.3.0.zip"
       }
     ]
