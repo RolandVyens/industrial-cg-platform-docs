@@ -24,12 +24,6 @@ hero:
       text: Référence API
       link: /fr/industrial-cg-platform/api/
     - theme: alt
-      text: Workflow Blender vers Nuke
-      link: /fr/blender-to-nuke-workflow/
-    - theme: alt
-      text: Pipeline VFX Blender
-      link: /fr/blender-vfx-pipeline/
-    - theme: alt
       text: Suivi du développement
       link: /fr/feature-tracking
 

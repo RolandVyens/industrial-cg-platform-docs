@@ -7,7 +7,7 @@ faq: true
 
 # Blender 到 Nuke 影视合成工作流：原生 Deep EXR、Overscan 与材质通道灯光 AOV
 
-官方 Blender 默认只提供平面 EXR 输出，进到 Foundry Nuke 合成时常常要面对三大痛点：物体穿插全靠手画或反复重渲遮罩、做镜头畸变时画面边缘拉黑边、想在后期单独调一盏灯的高光或漫反射却只能退回三维重渲。**Industrial CG Platform 5.2.4 LTS** 直接在 Blender 5.2 渲染内核里原生补齐了这些生产能力——内置 **原生 Deep EXR**、**EXR Overscan**、**材质通道灯光 AOV** 与 **ViewLayer 批量管理器**（Windows x64 稳定版；另有面向 Linux 的公开 Beta 1 预发布版供测试）。
+原版 Blender 默认只提供平面 EXR 输出，进到 Foundry Nuke 合成时常常要面对三大痛点：物体穿插全靠手画或反复重渲遮罩、做镜头畸变时画面边缘拉黑边、想在后期单独调一盏灯的高光或漫反射却只能退回三维重渲。**Industrial CG Platform 5.2.4 LTS** 直接在原版 Blender 渲染内核里原生补齐了这些生产能力——内置 **原生 Deep EXR**、**EXR Overscan**、**材质通道灯光 AOV** 与 **ViewLayer 批量管理器**（Windows x64 稳定版；另有面向 Linux 的公开 Beta 1 预发布版供测试）。
 
 本指南结合真实影视多 ViewLayer 镜头，串联 Industrial CG Platform 与配套开源工具——自动分层导出插件（[Industrial AOV Connector](/zh/industrial-aov-connector/)）、Nuke 灯光一键连线脚本（[Auto Light Shuffle](/zh/auto-light-shuffle/)）和跨软件统一色彩配置（[AIO-OCIO](/zh/aio-ocio/)），带你走通从 Cycles 渲染到 Nuke 最终合成的完整流程。
 
@@ -167,7 +167,7 @@ DeepRead -> DeepSample（逐像素查看 Z / ZBack / Alpha 分布）
 
 ### 官方 Blender 能原生完成这套 Deep EXR 与 Overscan 到 Nuke 的流程吗？
 
-不能原生完成。官方 Blender 5.2 没有 Cycles 原生 Deep EXR、标准 EXR Overscan，也没有按灯光拆分的 Direct/Indirect 细分通道。你可以在官方 Blender 上单独安装 [Industrial AOV Connector](/zh/industrial-aov-connector/)、[Industrial Light AOV Splitter](/zh/industrial-light-aov-splitter/)、[Auto Light Shuffle](/zh/auto-light-shuffle/) 和 [AIO-OCIO](/zh/aio-ocio/)，但原生 Deep EXR 和真实 EXR Overscan 需要使用 [Industrial CG Platform](/zh/industrial-cg-platform/)。
+不能原生完成。原版 Blender 没有 Cycles 原生 Deep EXR、标准 EXR Overscan，也没有按灯光拆分的 Direct/Indirect 细分通道。你可以在原版 Blender 上单独安装 [Industrial AOV Connector](/zh/industrial-aov-connector/)、[Industrial Light AOV Splitter](/zh/industrial-light-aov-splitter/)、[Auto Light Shuffle](/zh/auto-light-shuffle/) 和 [AIO-OCIO](/zh/aio-ocio/)，但原生 Deep EXR 和真实 EXR Overscan 需要使用 [Industrial CG Platform](/zh/industrial-cg-platform/)。
 
 ### 已经用了 Industrial CG Platform，还需要装自动分层导出插件吗？
 

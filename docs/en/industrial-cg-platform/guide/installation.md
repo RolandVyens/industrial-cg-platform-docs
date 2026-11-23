@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform 5.2.4 LTS, including SHA256 verification, OptiX GPU setup, and coexistence with stock Blender 5.2."
+description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform 5.2.4 LTS, including SHA256 verification, OptiX GPU setup, and coexistence with stock Blender."
 ---
 # Installation
 

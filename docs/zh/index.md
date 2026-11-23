@@ -43,7 +43,7 @@ hero:
       text: 浏览管线工具
       link: /zh/industrial-pipeline-tools
 
-description: "免费下载 Industrial CG Platform (5.2.4 LTS, Windows x64)：面向 Nuke、Maya 与 Houdini 管线的 Blender 5.2 VFX 定制分支，原生集成 Cycles Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 管理器。"
+description: "免费下载 Industrial CG Platform (5.2.4 LTS, Windows x64)：面向 Nuke、Maya 与 Houdini 管线、基于原版 Blender 的 VFX 定制分支，原生集成 Cycles Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 管理器。"
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

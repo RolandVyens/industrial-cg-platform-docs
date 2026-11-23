@@ -7,7 +7,7 @@ faq: true
 
 # Blender to Nuke Workflow: Native Deep EXR, Camera Overscan & Per-Light Relighting
 
-Stock Blender stops at flat EXR output—leaving compositors stuck with manual holdout re-renders, cropped black edges after lens distortion, and merged lighting layers that cannot be relit cleanly in 2D. **Industrial CG Platform 5.2.4 LTS** builds the missing studio render outputs directly into Blender 5.2: **native Deep EXR compositing**, **camera overscan rendering (EXR Overscan)**, **per-light direct/indirect passes**, and a **multi-layer pass manager** (Windows x64 stable; public Linux Beta 1 pre-release available for testing).
+Stock Blender stops at flat EXR output—leaving compositors stuck with manual holdout re-renders, cropped black edges after lens distortion, and merged lighting layers that cannot be relit cleanly in 2D. **Industrial CG Platform 5.2.4 LTS** builds the missing studio render outputs directly into stock Blender: **native Deep EXR compositing**, **camera overscan rendering (EXR Overscan)**, **per-light direct/indirect passes**, and a **multi-layer pass manager** (Windows x64 stable; public Linux Beta 1 pre-release available for testing).
 
 Using a real multi-layer VFX shot, this guide walks through the full pipeline from Cycles to Foundry Nuke—combining Industrial CG Platform with our open-source companion tools: automated EXR export ([Industrial AOV Connector](/en/industrial-aov-connector/)), one-click Nuke light rebuilding ([Auto Light Shuffle](/en/auto-light-shuffle/)), and shared cross-software color management ([AIO-OCIO](/en/aio-ocio/)).
 
@@ -167,7 +167,7 @@ DeepRead -> DeepSample (inspect per-pixel Z / ZBack / Alpha samples)
 
 ### Can stock Blender do a full Deep EXR and Overscan workflow for Nuke?
 
-Not natively. Stock Blender 5.2 does not include native Cycles Deep EXR output, standard OpenEXR overscan rendering, or per-light direct/indirect passes. You can still use our standalone tools ([Industrial AOV Connector](/en/industrial-aov-connector/), [Industrial Light AOV Splitter](/en/industrial-light-aov-splitter/), [Auto Light Shuffle](/en/auto-light-shuffle/), and [AIO-OCIO](/en/aio-ocio/)) with stock Blender, but native Deep EXR and true camera overscan require [Industrial CG Platform](/en/industrial-cg-platform/).
+Not natively. Stock Blender does not include native Cycles Deep EXR output, standard OpenEXR overscan rendering, or per-light direct/indirect passes. You can still use our standalone tools ([Industrial AOV Connector](/en/industrial-aov-connector/), [Industrial Light AOV Splitter](/en/industrial-light-aov-splitter/), [Auto Light Shuffle](/en/auto-light-shuffle/), and [AIO-OCIO](/en/aio-ocio/)) with stock Blender, but native Deep EXR and true camera overscan require [Industrial CG Platform](/en/industrial-cg-platform/).
 
 ### Do I need Industrial AOV Connector if I already use Industrial CG Platform?
 

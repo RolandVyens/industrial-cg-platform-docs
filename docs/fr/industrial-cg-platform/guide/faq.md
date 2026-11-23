@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender 5.2 et fichiers .blend, backends OptiX/CPU, gestionnaire ViewLayer, statut Linux Bêta 1 et compilation."
+description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender officiel et fichiers .blend, backends OptiX/CPU, gestionnaire ViewLayer, statut Linux Bêta 1 et compilation."
 ---
 # FAQ
 
@@ -10,9 +10,9 @@ description: "Foire aux questions sur Industrial CG Platform : compatibilité Bl
 
 Non. Industrial CG Platform est un fork de Blender maintenu par la communauté. Il n'est en aucun cas affilié ou approuvé par la Fondation Blender. Il est publié sous la licence Blender License (GNU GPL v3 ou ultérieure / GPL-3.0-or-later), conformément à Blender.
 
-### Les fichiers `.blend` sont-ils compatibles avec Blender standard ?
+### Les fichiers `.blend` sont-ils compatibles avec Blender officiel ?
 
-Oui. Les fichiers créés dans Industrial CG Platform peuvent être ouverts directement dans Blender 5.2 standard. Les fonctionnalités personnalisées (Deep EXR, passes par lobe, etc.) ne seront tout simplement pas disponibles — les données spécifiques sont préservées dans le fichier mais ignorées par la version officielle.
+Oui. Les fichiers créés dans Industrial CG Platform peuvent être ouverts directement dans Blender officiel. Les fonctionnalités personnalisées (Deep EXR, passes par lobe, etc.) ne seront tout simplement pas disponibles — les données spécifiques sont préservées dans le fichier mais ignorées par la version officielle. Pour une comparaison complète fonctionnalité par fonctionnalité, consultez [Industrial CG Platform vs Blender officiel](/fr/vs-stock-blender/).
 
 ### À quelle fréquence fusionnez-vous les modifications amont (upstream) de Blender ?
 
@@ -20,7 +20,7 @@ Notre branche de staging `vfx-rendering-branch` intègre régulièrement les mod
 
 ### Puis-je utiliser mes add-ons Blender existants ?
 
-La grande majorité des add-ons Blender compatibles avec la version 5.2 officielle fonctionneront également sur Industrial CG Platform. Cependant, les add-ons obsolètes dépendant d'API dépréciées (telles que `bgl` ou des structures internes de `bpy_types` supprimées) peuvent journaliser des erreurs au démarrage — ce comportement est identique à celui de Blender 5.2 standard.
+La grande majorité des add-ons Blender compatibles avec Blender officiel fonctionneront également sur Industrial CG Platform. Cependant, les add-ons obsolètes dépendant d'API dépréciées (telles que `bgl` ou des structures internes de `bpy_types` supprimées) peuvent journaliser des erreurs au démarrage — ce comportement est identique à celui de Blender officiel.
 
 ## Rendu
 

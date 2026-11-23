@@ -504,6 +504,7 @@ function resolveDefaultCover(relativePath: string): string {
   if (relativePath.includes('/aio-ocio/')) return '/features/ocio.webp'
   if (relativePath.includes('/blender-to-nuke-workflow/')) return '/blog/nuke-deep-compositing.webp'
   if (relativePath.includes('/blender-vfx-pipeline/')) return '/splash.webp'
+  if (relativePath.includes('/vs-stock-blender/')) return '/splash.webp'
   if (/\/feature-tracking\.md$/.test(relativePath)) return '/features/platform.webp'
   return '/logo.webp'
 }

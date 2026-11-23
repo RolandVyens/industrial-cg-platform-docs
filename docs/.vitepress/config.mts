@@ -172,10 +172,11 @@ export default defineConfig({
           },
           {
             text: 'Pipeline Cases',
-            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline|vs-stock-blender)',
             items: [
               { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
-              { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+              { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' },
+              { text: 'vs Stock Blender', link: '/en/vs-stock-blender/' }
             ]
           },
           { text: 'Blog', link: '/blog/' },
@@ -279,7 +280,8 @@ export default defineConfig({
               text: 'Pipeline Cases',
               items: [
                 { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
-                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' },
+                { text: 'vs Stock Blender', link: '/en/vs-stock-blender/' }
               ]
             },
             {
@@ -300,7 +302,8 @@ export default defineConfig({
               text: 'Pipeline Cases',
               items: [
                 { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
-                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' },
+                { text: 'vs Stock Blender', link: '/en/vs-stock-blender/' }
               ]
             },
             {
@@ -313,6 +316,32 @@ export default defineConfig({
                 { text: 'EXR Overscan', link: '/en/industrial-cg-platform/features/exr-overscan' },
                 { text: 'Lightgroup Lobe Passes', link: '/en/industrial-cg-platform/features/lightgroup-lobe-passes' },
                 { text: 'ViewLayer Manager', link: '/en/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Release Notes', link: '/en/industrial-cg-platform/releases/' }
+              ]
+            }
+          ],
+          '/en/vs-stock-blender/': [
+            {
+              text: 'Pipeline Cases',
+              items: [
+                { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' },
+                { text: 'vs Stock Blender', link: '/en/vs-stock-blender/' }
+              ]
+            },
+            {
+              text: 'Related Manuals',
+              items: [
+                { text: 'Getting Started', link: '/en/industrial-cg-platform/guide/getting-started' },
+                { text: 'Installation', link: '/en/industrial-cg-platform/guide/installation' },
+                { text: 'Deep EXR Output', link: '/en/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/en/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Lightgroup Lobe Passes', link: '/en/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: 'Shadow Color', link: '/en/industrial-cg-platform/features/shadow-color' },
+                { text: 'ViewLayer Manager', link: '/en/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'bQt Usage Guide', link: '/en/industrial-cg-platform/api/bqt-usage' },
+                { text: 'Cycles Kernel Extensions', link: '/en/industrial-cg-platform/api/cycles-kernel' },
+                { text: 'Development Tracking', link: '/en/feature-tracking' },
                 { text: 'Release Notes', link: '/en/industrial-cg-platform/releases/' }
               ]
             }
@@ -372,10 +401,11 @@ export default defineConfig({
           },
           {
             text: '流程案例',
-            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline|vs-stock-blender)',
             items: [
               { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
-              { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
+              { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' },
+              { text: '对比原版 Blender', link: '/zh/vs-stock-blender/' }
             ]
           },
           { text: '博客', link: '/blog/' },
@@ -479,7 +509,8 @@ export default defineConfig({
               text: '流程案例',
               items: [
                 { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
-                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
+                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' },
+                { text: '对比原版 Blender', link: '/zh/vs-stock-blender/' }
               ]
             },
             {
@@ -500,7 +531,8 @@ export default defineConfig({
               text: '流程案例',
               items: [
                 { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
-                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' }
+                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' },
+                { text: '对比原版 Blender', link: '/zh/vs-stock-blender/' }
               ]
             },
             {
@@ -513,6 +545,32 @@ export default defineConfig({
                 { text: 'EXR Overscan', link: '/zh/industrial-cg-platform/features/exr-overscan' },
                 { text: '材质通道灯光 AOV', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
                 { text: 'ViewLayer 管理器', link: '/zh/industrial-cg-platform/features/viewlayer-manager' },
+                { text: '版本发布记录', link: '/zh/industrial-cg-platform/releases/' }
+              ]
+            }
+          ],
+          '/zh/vs-stock-blender/': [
+            {
+              text: '流程案例',
+              items: [
+                { text: 'Blender 到 Nuke 工作流', link: '/zh/blender-to-nuke-workflow/' },
+                { text: 'Blender VFX 管线', link: '/zh/blender-vfx-pipeline/' },
+                { text: '对比原版 Blender', link: '/zh/vs-stock-blender/' }
+              ]
+            },
+            {
+              text: '关联文档',
+              items: [
+                { text: '快速开始', link: '/zh/industrial-cg-platform/guide/getting-started' },
+                { text: '安装指南', link: '/zh/industrial-cg-platform/guide/installation' },
+                { text: 'Deep EXR', link: '/zh/industrial-cg-platform/features/deep-exr' },
+                { text: 'EXR Overscan', link: '/zh/industrial-cg-platform/features/exr-overscan' },
+                { text: '材质通道灯光 AOV', link: '/zh/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: '阴影颜色', link: '/zh/industrial-cg-platform/features/shadow-color' },
+                { text: 'ViewLayer 管理器', link: '/zh/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'bQt 使用指南', link: '/zh/industrial-cg-platform/api/bqt-usage' },
+                { text: 'Cycles 内核扩展', link: '/zh/industrial-cg-platform/api/cycles-kernel' },
+                { text: '开发追踪', link: '/zh/feature-tracking' },
                 { text: '版本发布记录', link: '/zh/industrial-cg-platform/releases/' }
               ]
             }
@@ -578,10 +636,11 @@ export default defineConfig({
           },
           {
             text: 'Cas de Pipeline',
-            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+            activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline|vs-stock-blender)',
             items: [
               { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
-              { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
+              { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' },
+              { text: 'vs Blender officiel', link: '/fr/vs-stock-blender/' }
             ]
           },
           { text: 'Blog', link: '/blog/' },
@@ -685,7 +744,8 @@ export default defineConfig({
               text: 'Cas de Pipeline',
               items: [
                 { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
-                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
+                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' },
+                { text: 'vs Blender officiel', link: '/fr/vs-stock-blender/' }
               ]
             },
             {
@@ -706,7 +766,8 @@ export default defineConfig({
               text: 'Cas de Pipeline',
               items: [
                 { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
-                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' }
+                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' },
+                { text: 'vs Blender officiel', link: '/fr/vs-stock-blender/' }
               ]
             },
             {
@@ -719,6 +780,32 @@ export default defineConfig({
                 { text: 'Overscan EXR', link: '/fr/industrial-cg-platform/features/exr-overscan' },
                 { text: 'Passes par lobe de lightgroup', link: '/fr/industrial-cg-platform/features/lightgroup-lobe-passes' },
                 { text: 'Gestionnaire de ViewLayer', link: '/fr/industrial-cg-platform/features/viewlayer-manager' },
+                { text: 'Notes de Version', link: '/fr/industrial-cg-platform/releases/' }
+              ]
+            }
+          ],
+          '/fr/vs-stock-blender/': [
+            {
+              text: 'Cas de Pipeline',
+              items: [
+                { text: 'Workflow Blender vers Nuke', link: '/fr/blender-to-nuke-workflow/' },
+                { text: 'Pipeline VFX Blender', link: '/fr/blender-vfx-pipeline/' },
+                { text: 'vs Blender officiel', link: '/fr/vs-stock-blender/' }
+              ]
+            },
+            {
+              text: 'Manuels associés',
+              items: [
+                { text: 'Premiers pas', link: '/fr/industrial-cg-platform/guide/getting-started' },
+                { text: 'Installation', link: '/fr/industrial-cg-platform/guide/installation' },
+                { text: 'Deep EXR', link: '/fr/industrial-cg-platform/features/deep-exr' },
+                { text: 'Overscan EXR', link: '/fr/industrial-cg-platform/features/exr-overscan' },
+                { text: 'Passes par lobe de lightgroup', link: '/fr/industrial-cg-platform/features/lightgroup-lobe-passes' },
+                { text: "Couleur d'ombre", link: '/fr/industrial-cg-platform/features/shadow-color' },
+                { text: 'Gestionnaire de ViewLayer', link: '/fr/industrial-cg-platform/features/viewlayer-manager' },
+                { text: "Guide d'utilisation bQt", link: '/fr/industrial-cg-platform/api/bqt-usage' },
+                { text: 'Extensions du noyau Cycles', link: '/fr/industrial-cg-platform/api/cycles-kernel' },
+                { text: 'Suivi du développement', link: '/fr/feature-tracking' },
                 { text: 'Notes de Version', link: '/fr/industrial-cg-platform/releases/' }
               ]
             }
@@ -797,10 +884,11 @@ export default defineConfig({
       },
       {
         text: 'Pipeline Cases',
-        activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline)',
+        activeMatch: '(en|zh|fr)/(blender-to-nuke-workflow|blender-vfx-pipeline|vs-stock-blender)',
         items: [
           { text: 'Blender to Nuke Workflow', link: '/en/blender-to-nuke-workflow/' },
-          { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' }
+          { text: 'Blender VFX Pipeline', link: '/en/blender-vfx-pipeline/' },
+          { text: 'vs Stock Blender', link: '/en/vs-stock-blender/' }
         ]
       },
       { text: 'Blog', link: '/blog/' },

@@ -1,6 +1,6 @@
 ---
 title: "常见问题 (FAQ)"
-description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blender 5.2 兼容性、.blend 文件互通、OptiX/CPU 渲染后端、ViewLayer 管理器、Linux Beta 1 进度及源码编译。"
+description: "Industrial CG Platform 常见问题解答：涵盖与原版 Blender 兼容性、.blend 文件互通、OptiX/CPU 渲染后端、ViewLayer 管理器、Linux Beta 1 进度及源码编译。"
 ---
 # 常见问题 (FAQ)
 
@@ -10,9 +10,9 @@ description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blende
 
 不是。Industrial CG Platform 是一个由社区发起并维护的 Blender 生产级分支（Fork），与 Blender 基金会（Blender Foundation）无直接关联或背书关系。它遵循与 Blender 一致的 Blender License（GNU GPL v3 或更高版本 / GPL-3.0-or-later）开源许可证发布。
 
-### 在此平台创建的 `.blend` 文件与官方 Stock Blender 兼容吗？
+### 在此平台创建的 `.blend` 文件与原版 Blender 兼容吗？
 
-兼容。在 Industrial CG Platform 中创建和保存的文件可以直接在官方 Stock Blender 5.2 中无缝打开。自定义扩展功能（例如 Deep EXR、灯光组分量通道等）在官方版本中仅仅是不可用 — 这些自定义数据会被官方版本完整保留，只是被安全地忽略。
+兼容。在 Industrial CG Platform 中创建和保存的文件可以直接在原版 Blender 中无缝打开。自定义扩展功能（例如 Deep EXR、灯光组分量通道等）在原版中仅仅是不可用 — 这些自定义数据会被原版完整保留，只是被安全地忽略。完整的功能对照与差异边界请参阅 [Industrial CG Platform 对比原版 Blender](/zh/vs-stock-blender/)。
 
 ### 平台多久合并一次上游 Blender 的更新？
 
@@ -20,7 +20,7 @@ description: "Industrial CG Platform 常见问题解答：涵盖与官方 Blende
 
 ### 我可以使用我现有的 Blender 插件吗？
 
-绝大多数兼容官方 Blender 5.2 的第三方插件都可以在 Industrial CG Platform 中正常运行。然而，深度依赖已弃用底层 API（例如 `bgl` 模块、以及部分已经被废除的 `bpy_types` 内部结构）的陈旧插件可能会在启动时抛出报错——这与官方 Stock Blender 5.2 的行为完全一致。
+绝大多数兼容原版 Blender 的第三方插件都可以在 Industrial CG Platform 中正常运行。然而，深度依赖已弃用底层 API（例如 `bgl` 模块、以及部分已经被废除的 `bpy_types` 内部结构）的陈旧插件可能会在启动时抛出报错——这与原版 Blender 的行为完全一致。
 
 ## 渲染系统
 

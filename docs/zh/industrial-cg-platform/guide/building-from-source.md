@@ -15,7 +15,7 @@ description: "在 Windows 上按最新 Release 构建流程编译 Industrial CG 
 | **CMake** | 3.24+ | Visual Studio 自带或独立安装均可 |
 | **Ninja** | 1.11+ | 推荐且已验证的默认构建工具 |
 | **Git** | 2.30+ | 需启用 Git LFS |
-| **OptiX SDK + NVIDIA 编译工具链** | 遵循 Blender 5.2 官方构建要求 | 仅在启用 Cycles OptiX GPU 渲染时需要（用于编译 OptiX PTX 内核） |
+| **OptiX SDK + NVIDIA 编译工具链** | 遵循原版 Blender 官方构建要求 | 仅在启用 Cycles OptiX GPU 渲染时需要（用于编译 OptiX PTX 内核） |
 | **Python** | 3.13 | 由 Blender 预编译依赖自动提供，无需手动配置 |
 
 ## 克隆仓库与获取依赖

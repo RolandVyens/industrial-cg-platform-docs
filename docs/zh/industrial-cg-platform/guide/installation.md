@@ -1,6 +1,6 @@
 ---
 title: "安装"
-description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles OptiX GPU 配置以及与官方 Blender 5.2 共存方式。"
+description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles OptiX GPU 配置以及与原版 Blender 共存方式。"
 ---
 # 安装
 

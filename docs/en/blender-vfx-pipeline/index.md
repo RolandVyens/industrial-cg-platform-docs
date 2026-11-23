@@ -9,7 +9,7 @@ faq: true
 
 Adopting Blender in a real VFX studio rarely fails at modeling or viewport lookdev—it breaks down at **render data handoff**. Without native Deep EXR compositing, standard overscan padding, per-light direct/indirect passes, and matching cross-software color transforms, shots get stuck in manual holdout mattes and full-frame re-renders between Blender and Nuke.
 
-**Industrial CG Platform 5.2.4 LTS** builds these missing production capabilities directly into Blender 5.2's Cycles renderer and runtime (Windows x64 stable; public Linux Beta 1 pre-release available for testing), paired with open-source companion tools that connect cleanly to **Foundry Nuke**, **Autodesk Maya**, and **SideFX Houdini**.
+**Industrial CG Platform 5.2.4 LTS** builds these missing production capabilities directly into stock Blender's Cycles renderer and runtime (Windows x64 stable; public Linux Beta 1 pre-release available for testing), paired with open-source companion tools that connect cleanly to **Foundry Nuke**, **Autodesk Maya**, and **SideFX Houdini**.
 
 ## 1. What a Production Blender VFX Pipeline Actually Requires
 
@@ -17,7 +17,7 @@ A studio shot pipeline moves through six connected stages: **Plates & Camera Tra
 
 Where **Industrial CG Platform** fits—and what it does not try to replace:
 
-- **Versus stock Blender 5.2**: Stock Blender provides strong modeling, animation, and Cycles path-tracing foundations, but lacks native Deep EXR output, standard camera overscan rendering, per-light direct/indirect passes, and a multi-layer batch pass manager. Industrial CG Platform adds these directly at the renderer level while keeping full `.blend` compatibility.
+- **Versus stock Blender**: Stock Blender provides strong modeling, animation, and Cycles path-tracing foundations, but lacks native Deep EXR output, standard camera overscan rendering, per-light direct/indirect passes, and a multi-layer batch pass manager. Industrial CG Platform adds these directly at the renderer level while keeping full `.blend` compatibility.
 - **Versus shot, version, and asset managers (such as Blender_Plumber, Kitsu, or ShotGrid)**: Pipeline trackers manage tasks, file versions, and plate ingestion. Industrial CG Platform focuses on **rendering, pass organization, EXR data handoff, and color consistency**—complementing existing studio trackers rather than replacing them.
 
 ## 2. Platform Architecture: What Each Module Solves
@@ -62,12 +62,12 @@ You can pilot **Industrial CG Platform 5.2.4 LTS** on a single real shot without
    - **GPU**: NVIDIA RTX GPU with OptiX (recommended); CPU rendering is always available.
    - **Memory & Storage**: 16 GB RAM minimum (32 GB+ recommended for multi-layer Deep EXR), ~1 GB extracted disk space.
 2. **Deploy side-by-side with stock Blender**: Extract the portable ZIP to any writable folder (e.g., `D:\Tools\IndustrialCGPlatform\`). The window title clearly displays `Blender 5.2.4 LTS Industrial CG Platform`, and the default OptiX shader cache is isolated automatically so existing installs stay untouched.
-3. **Validate `.blend` interoperability**: Open an existing Blender 5.2 production file, turn on Deep EXR, Overscan, and per-light passes on a test shot, save, and verify the file still opens cleanly in stock Blender 5.2 (extra properties are preserved and safely ignored).
+3. **Validate `.blend` interoperability**: Open an existing stock Blender production file, turn on Deep EXR, Overscan, and per-light passes on a test shot, save, and verify the file still opens cleanly in stock Blender (extra properties are preserved and safely ignored).
 4. **Test the full Nuke round-trip**: Verify overscan framing in Nuke `Read`, 3D depth merging via `DeepRead` → `DeepMerge`, and one-click light reconstruction via Auto Light Shuffle.
 
 <figure class="doc-screenshot doc-screenshot--wide">
 <a href="/splash.webp" target="_blank" rel="noopener"><img src="/splash.webp" alt="Industrial CG Platform custom Blender VFX branch splash screen" loading="lazy"></a>
-<figcaption>Industrial CG Platform ships as a portable side-by-side distribution with clear branch branding and full .blend compatibility with stock Blender 5.2.</figcaption>
+<figcaption>Industrial CG Platform ships as a portable side-by-side distribution with clear branch branding and full .blend compatibility with stock Blender.</figcaption>
 </figure>
 
 ## 5. One Shot from Plates to Final Composite (High-Level Walkthrough)
@@ -85,15 +85,15 @@ For concrete panel settings, Nuke node chains, naming rules, and troubleshooting
 
 ## 6. How Industrial CG Platform Differs from Stock Blender
 
-Industrial CG Platform stays close to upstream Blender 5.2 LTS so studios keep their existing add-ons, Python tools, and `.blend` assets working without friction. Rather than changing Blender's workflow or file format, it adds renderer-level capabilities that Python add-ons alone cannot provide—native Deep EXR, standard camera overscan rendering, per-light direct/indirect passes, per-light shadow tinting, and built-in standalone UI support (bQt / `PySide6`).
+Industrial CG Platform stays close to upstream stock Blender so studios keep their existing add-ons, Python tools, and `.blend` assets working without friction. Rather than changing Blender's workflow or file format, it adds renderer-level capabilities that Python add-ons alone cannot provide—native Deep EXR, standard camera overscan rendering, per-light direct/indirect passes, per-light shadow tinting, and built-in standalone UI support (bQt / `PySide6`).
 
-See [Getting Started](/en/industrial-cg-platform/guide/getting-started) for compatibility notes, [API Reference](/en/industrial-cg-platform/api/) for developer APIs, and [Development Tracking](/en/feature-tracking) for active R&D (including Atmosphere Volume and Linux qualification).
+For a full side-by-side feature table, fork rationale, compatibility boundaries, and when to stay on stock Blender, see **[Industrial CG Platform vs Stock Blender](/en/vs-stock-blender/)**. See also [Getting Started](/en/industrial-cg-platform/guide/getting-started) for compatibility notes, [API Reference](/en/industrial-cg-platform/api/) for developer APIs, and [Development Tracking](/en/feature-tracking) for active R&D (including Atmosphere Volume and Linux qualification).
 
 ## 7. FAQ
 
-### Can a studio test Industrial CG Platform alongside stock Blender 5.2?
+### Can a studio test Industrial CG Platform alongside stock Blender?
 
-Yes. Industrial CG Platform distributes as a portable Windows x64 ZIP package with an isolated default OptiX cache path and full `.blend` compatibility with stock Blender 5.2. Set `BLENDER_USER_RESOURCES` before launch if you also want completely separate user preferences during evaluation.
+Yes. Industrial CG Platform distributes as a portable Windows x64 ZIP package with an isolated default OptiX cache path and full `.blend` compatibility with stock Blender. Set `BLENDER_USER_RESOURCES` before launch if you also want completely separate user preferences during evaluation.
 
 ### What license is Industrial CG Platform released under?
 
