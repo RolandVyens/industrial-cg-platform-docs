@@ -16,14 +16,14 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "e001a9746201e120",
+      "syncedHash": "5443727fc49119ab",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Real-Time World Light Fog (<code>Atmosphere Volume</code>)",
           "badge": "In Progress · Algorithm Validation",
           "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and independent sample controls without the heavy cost of traditional full-scene volumetric path tracing.",
-          "progressLabel": "Development Progress (Node, Pass & Basic Lights Verified; Validating Algorithm Quality & Performance in Isolated Tests)",
+          "progressLabel": "Development Progress (Node, Pass & Basic Lights Verified; Preparing Camera-Sampled Per-Light Comparison in Isolated Branch, Real-Time & Production Acceptance Pending)",
           "milestones": [
             {
               "done": true,
@@ -51,7 +51,7 @@
           "titleHtml": "实时世界灯光雾 (<code>Atmosphere Volume</code>)",
           "badge": "算法验证中 · In Progress",
           "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与独立采样预算控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
-          "progressLabel": "当前研发进度（节点、独立通道与基础灯型已有验证；当前在隔离测试中验证算法画质与性能，实时交互与生产验收待完成）",
+          "progressLabel": "当前研发进度（节点、独立通道与基础灯型已有验证；正在隔离分支准备跟随相机采样的逐灯方案对照，实时交互与生产验收待完成）",
           "milestones": [
             {
               "done": true,
@@ -79,7 +79,7 @@
           "titleHtml": "Brouillard lumineux mondial en temps réel (<code>Atmosphere Volume</code>)",
           "badge": "En cours · Validation d'algorithme",
           "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage indépendant, sans le coût lourd du path tracing volumétrique traditionnel.",
-          "progressLabel": "Progression (Nœud, passe dédiée et lumières de base vérifiés ; validation qualité et performances de l'algorithme en tests isolés)",
+          "progressLabel": "Progression (Nœud, passe dédiée et lumières de base vérifiés ; comparaison par lumière synchronisée sur l'échantillonnage caméra en cours dans une branche isolée, validation temps réel et production en attente)",
           "milestones": [
             {
               "done": true,
@@ -1125,6 +1125,38 @@
           "titleHtml": "Flou de mouvement des lumières (<code>Light Motion Blur</code>)",
           "badge": "Prévu",
           "descHtml": "Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — évitant un flou de mouvement erroné lorsque les lumières se déplacent ou suivent la caméra.",
+          "milestones": []
+        }
+      }
+    },
+    {
+      "id": "per-shader-object-extra-samples",
+      "status": "planned",
+      "progress": 0,
+      "module": "Cycles Sampling · Shader & Object",
+      "thumb": null,
+      "thumbPosition": null,
+      "releaseTrack": null,
+      "releaseTag": null,
+      "syncedHash": null,
+      "links": [],
+      "i18n": {
+        "en": {
+          "titleHtml": "Per-Shader &amp; Per-Object Extra Samples",
+          "badge": "Planned",
+          "descHtml": "Allows artists and TDs to allocate additional sampling budgets specifically to noisy shaders or hero objects—eliminating glossy, transmission, and SSS noise locally without inflating global scene sample counts.",
+          "milestones": []
+        },
+        "zh": {
+          "titleHtml": "材质与物体独立额外采样 (<code>Shader &amp; Object Extra Samples</code>)",
+          "badge": "规划中",
+          "descHtml": "支持按单个 Shader 或 Object 分配额外采样预算，针对高噪点材质（如粗糙高光、折射、次表面散射）或主体资产局部补采，无需拉高全场景全局采样数即可消除局部噪点。",
+          "milestones": []
+        },
+        "fr": {
+          "titleHtml": "Échantillons supplémentaires par Shader et Objet (<code>Shader &amp; Object Extra Samples</code>)",
+          "badge": "Prévu",
+          "descHtml": "Permet d'allouer un budget d'échantillons supplémentaire ciblé par shader ou par objet afin d'éliminer localement le bruit (réflexions rugueuses, transmission, SSS, actifs principaux) sans augmenter l'échantillonnage global de la scène.",
           "milestones": []
         }
       }
