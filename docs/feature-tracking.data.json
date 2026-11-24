@@ -10,13 +10,13 @@
     {
       "id": "atmosphere-volume",
       "status": "in_progress",
-      "progress": 50,
+      "progress": 60,
       "module": "World Shader · Cycles Volume",
       "thumb": null,
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "ed4e2971a5a2ec0f",
+      "syncedHash": "1caf9cb202e02b0f",
       "links": [],
       "i18n": {
         "en": {
