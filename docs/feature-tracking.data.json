@@ -16,14 +16,14 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "1caf9cb202e02b0f",
+      "syncedHash": "5794fd1ba53b8a49",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Real-Time World Light Fog (<code>Atmosphere Volume</code>)",
-          "badge": "In Progress · Prototype Validated",
-          "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and independent sample controls without the heavy cost of traditional full-scene volumetric path tracing.",
-          "progressLabel": "Development Progress (4K 1,000-Light 128/512 spp OptiX Prototype Quality Accepted, Matching Arnold AA 8 Beam Stability; Next: Per-Light Sampling, Default Budget, Viewport Performance & Production Delivery)",
+          "badge": "In Progress · Branch Integration",
+          "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and per-light sampling controls without the heavy cost of traditional full-scene volumetric path tracing.",
+          "progressLabel": "Development Progress (4K 1,000-Light 128/512 spp OptiX Prototype Thin-Beam Quality Accepted; Per-Light Sampling Wired to Camera Sampling with General GPU Optimizations & 3 Correctness Fixes Committed on 5.2 Feature Branch; Runtime Validation, Default Budget, Viewport Performance & 5.3 Merge Pending)",
           "milestones": [
             {
               "done": true,
@@ -31,7 +31,7 @@
             },
             {
               "done": true,
-              "html": "Artist Controls (Density / Scatter &amp; Attenuation Color / Anisotropy / Samples)"
+              "html": "Artist Controls (Density / Scatter &amp; Attenuation Color / Anisotropy)"
             },
             {
               "done": true,
@@ -40,6 +40,10 @@
             {
               "done": true,
               "html": "Original 4K 1,000-Light Scene Passed 128/512 spp OptiX Prototype Quality Acceptance (Thin-Beam Stability Matching Arnold AA 8 Reference)"
+            },
+            {
+              "done": true,
+              "html": "Wired Per-Light Sampling to Camera Sampling &amp; Committed 3 Review Fixes on 5.2 Feature Branch"
             },
             {
               "done": false,
@@ -53,9 +57,9 @@
         },
         "zh": {
           "titleHtml": "实时世界灯光雾 (<code>Atmosphere Volume</code>)",
-          "badge": "原型画质已验收 · In Progress",
-          "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与独立采样预算控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
-          "progressLabel": "当前研发进度（原始 4K 千灯场景的 128/512 spp OptiX 原型画质已通过验收，细光束稳定性达到 Arnold AA 8 对照水平；下一步接通逐灯采样设置，验证默认预算、视口性能与生产交付）",
+          "badge": "特性分支集成中 · In Progress",
+          "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与逐灯采样控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
+          "progressLabel": "当前研发进度（原始 4K 千灯场景的 128/512 spp OptiX 原型已通过细光束画质验收；逐灯采样设置已接入相机采样，通用 GPU 优化与三项正确性修复已提交至 5.2 特性分支；待验证修复版运行表现、定版默认预算、验证视口性能并完成 5.3 合入）",
           "milestones": [
             {
               "done": true,
@@ -63,7 +67,7 @@
             },
             {
               "done": true,
-              "html": "美术参数面板（浓度 / 散射与衰减色彩 / 各向异性 / 独立采样）"
+              "html": "美术参数面板（浓度 / 散射与衰减色彩 / 各向异性）"
             },
             {
               "done": true,
@@ -72,6 +76,10 @@
             {
               "done": true,
               "html": "原始 4K 千灯场景通过 128/512 spp OptiX 原型画质验收，细光束稳定性达到 Arnold AA 8 对照水平"
+            },
+            {
+              "done": true,
+              "html": "在 5.2 特性分支接通逐灯采样设置与相机采样，并提交三项自审修复"
             },
             {
               "done": false,
@@ -85,9 +93,9 @@
         },
         "fr": {
           "titleHtml": "Brouillard lumineux mondial en temps réel (<code>Atmosphere Volume</code>)",
-          "badge": "En cours · Prototype validé",
-          "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage indépendant, sans le coût lourd du path tracing volumétrique traditionnel.",
-          "progressLabel": "Progression (Qualité du prototype OptiX 128/512 spp validée sur scène 4K à 1 000 lumières, stabilité des faisceaux fins au niveau de référence Arnold AA 8 ; suite : échantillonnage par lumière, budget par défaut, performances viewport et livraison production)",
+          "badge": "En cours · Intégration branche",
+          "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage par lumière, sans le coût lourd du path tracing volumétrique traditionnel.",
+          "progressLabel": "Progression (Qualité des faisceaux fins du prototype OptiX 128/512 spp validée sur scène 4K à 1 000 lumières ; échantillonnage par lumière relié à l'échantillonnage caméra avec optimisations GPU générales et 3 correctifs soumis sur la branche 5.2 ; validation d'exécution, budget par défaut, performances viewport et fusion 5.3 en attente)",
           "milestones": [
             {
               "done": true,
@@ -95,7 +103,7 @@
             },
             {
               "done": true,
-              "html": "Contrôles artistiques (Densité / Diffusion &amp; Atténuation / Anisotropie / Échantillons)"
+              "html": "Contrôles artistiques (Densité / Diffusion &amp; Atténuation / Anisotropie)"
             },
             {
               "done": true,
@@ -104,6 +112,10 @@
             {
               "done": true,
               "html": "Validation qualité du prototype OptiX 128/512 spp sur scène 4K à 1 000 lumières (stabilité des faisceaux fins au niveau de référence Arnold AA 8)"
+            },
+            {
+              "done": true,
+              "html": "Connexion de l'échantillonnage par lumière à l'échantillonnage caméra et soumission de 3 correctifs d'auto-revue sur la branche 5.2"
             },
             {
               "done": false,
