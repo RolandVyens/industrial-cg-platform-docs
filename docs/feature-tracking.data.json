@@ -10,20 +10,20 @@
     {
       "id": "atmosphere-volume",
       "status": "in_progress",
-      "progress": 60,
+      "progress": 70,
       "module": "World Shader · Cycles Volume",
       "thumb": null,
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "5794fd1ba53b8a49",
+      "syncedHash": "4bf98983752e408b",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Real-Time World Light Fog (<code>Atmosphere Volume</code>)",
-          "badge": "In Progress · Branch Integration",
+          "badge": "In Progress · Deep Accepted",
           "descHtml": "An Arnold-style <code>Atmosphere Volume</code> World shader node and dedicated <code>Atmosphere</code> render pass delivering volumetric light beams (God Rays) and atmospheric depth at <strong>near-real-time speed</strong>—offering intuitive density, scatter tint, attenuation color, directionality, and per-light sampling controls without the heavy cost of traditional full-scene volumetric path tracing.",
-          "progressLabel": "Development Progress (4K 1,000-Light 128/512 spp OptiX Prototype Thin-Beam Quality Accepted; Per-Light Sampling Wired to Camera Sampling with General GPU Optimizations & 3 Correctness Fixes Committed on 5.2 Feature Branch; Runtime Validation, Default Budget, Viewport Performance & 5.3 Merge Pending)",
+          "progressLabel": "Development Progress (Atmosphere Deep Passed Windows CPU/OptiX & Nuke Flatten/Insert Acceptance on Both 5.2.5 and 5.3.1 Pre-Acceptance Candidates, with 4K 1,000-Light Deep Same-Frame Parity Verified; Production Merge, Viewport & Public Release Pending)",
           "milestones": [
             {
               "done": true,
@@ -46,6 +46,10 @@
               "html": "Wired Per-Light Sampling to Camera Sampling &amp; Committed 3 Review Fixes on 5.2 Feature Branch"
             },
             {
+              "done": true,
+              "html": "Atmosphere Deep Passed Windows CPU / OptiX &amp; Nuke Flatten / Insert Verification on Both Release Candidates"
+            },
+            {
               "done": false,
               "html": "Near-Real-Time Viewport &amp; High-Speed Render Performance Validation"
             },
@@ -57,9 +61,9 @@
         },
         "zh": {
           "titleHtml": "实时世界灯光雾 (<code>Atmosphere Volume</code>)",
-          "badge": "特性分支集成中 · In Progress",
+          "badge": "Deep 验收通过 · In Progress",
           "descHtml": "对标 Arnold <code>atmosphere_volume</code> 的实时世界灯光雾（<code>Atmosphere Volume</code>）节点与独立 <code>Atmosphere</code> 渲染通道：以<strong>近乎实时的交互与渲染速度</strong>实现全场景灯光体积雾与光束（丁达尔光 / God Rays），提供直观的浓度、散射染色、吸收衰减、散射方向性与逐灯采样控制，无需承担传统全场景体积路径追踪的高昂耗时即可获得干净可控的空气感与光束效果。",
-          "progressLabel": "当前研发进度（原始 4K 千灯场景的 128/512 spp OptiX 原型已通过细光束画质验收；逐灯采样设置已接入相机采样，通用 GPU 优化与三项正确性修复已提交至 5.2 特性分支；待验证修复版运行表现、定版默认预算、验证视口性能并完成 5.3 合入）",
+          "progressLabel": "当前研发进度（Atmosphere Deep 已在 5.2.5 候选与基于 5.3.0 的 5.3.1 预验候选上通过 Windows CPU / OptiX 及 Nuke 展平与插片验收，原始千灯 4K 通过 Deep 同帧对照；生产合入、视口与正式发布仍待完成）",
           "milestones": [
             {
               "done": true,
@@ -82,6 +86,10 @@
               "html": "在 5.2 特性分支接通逐灯采样设置与相机采样，并提交三项自审修复"
             },
             {
+              "done": true,
+              "html": "两条版本候选的 Atmosphere Deep 通过 Windows CPU / OptiX 与 Nuke 展平和插片验证"
+            },
+            {
               "done": false,
               "html": "完成近实时视口交互与高速渲染的性能验证"
             },
@@ -93,9 +101,9 @@
         },
         "fr": {
           "titleHtml": "Brouillard lumineux mondial en temps réel (<code>Atmosphere Volume</code>)",
-          "badge": "En cours · Intégration branche",
+          "badge": "En cours · Deep validé",
           "descHtml": "Nœud de shader mondial <code>Atmosphere Volume</code> (inspiré d'Arnold) et passe de rendu dédiée <code>Atmosphere</code> générant des faisceaux lumineux volumétriques (God Rays) et une profondeur atmosphérique à <strong>une vitesse quasi temps réel</strong> — avec des contrôles intuitifs de densité, de teinte de diffusion, d'atténuation, de directionnalité et d'échantillonnage par lumière, sans le coût lourd du path tracing volumétrique traditionnel.",
-          "progressLabel": "Progression (Qualité des faisceaux fins du prototype OptiX 128/512 spp validée sur scène 4K à 1 000 lumières ; échantillonnage par lumière relié à l'échantillonnage caméra avec optimisations GPU générales et 3 correctifs soumis sur la branche 5.2 ; validation d'exécution, budget par défaut, performances viewport et fusion 5.3 en attente)",
+          "progressLabel": "Progression (Atmosphere Deep validé sur Windows CPU / OptiX et dans Nuke en aplatissement et insertion sur les candidats 5.2.5 et 5.3.1, avec parité Deep sur même image vérifiée sur la scène 4K à 1 000 lumières ; fusion production, viewport et sortie publique en attente)",
           "milestones": [
             {
               "done": true,
@@ -116,6 +124,10 @@
             {
               "done": true,
               "html": "Connexion de l'échantillonnage par lumière à l'échantillonnage caméra et soumission de 3 correctifs d'auto-revue sur la branche 5.2"
+            },
+            {
+              "done": true,
+              "html": "Validation Windows CPU / OptiX et Nuke (aplatissement et insertion) d'Atmosphere Deep sur les deux candidats de version"
             },
             {
               "done": false,
