@@ -1159,32 +1159,35 @@
     },
     {
       "id": "light-motion-blur",
-      "status": "planned",
-      "progress": 0,
+      "status": "in_progress",
+      "progress": 2,
       "module": "Cycles Lighting · Motion Blur",
       "thumb": null,
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "ecae50c0df3c813e",
+      "syncedHash": "a13582a19ac7c39d",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Light Motion Blur",
-          "badge": "Planned",
-          "descHtml": "Addresses stock Cycles' limitation where lights remain stationary in world coordinates during a frame—preventing incorrect motion blur when lights move independently or travel together with the camera.",
+          "badge": "In Progress · Kickoff",
+          "descHtml": "Addresses stock Cycles' limitation where lights remain stationary in world coordinates during a frame—enabling world-space light motion interpolation across the shutter interval so moving or camera-attached lights produce accurate motion blur.",
+          "progressLabel": "Development Progress (Initial Reference Investigation Completed & Native Light Motion Controls Exposed in Source; No Extra Workaround Switch Introduced — Core Motion/Size Interpolation, Light Tree & Shutter Implementation Pending)",
           "milestones": []
         },
         "zh": {
           "titleHtml": "灯光 Motion Blur (<code>Light Motion Blur</code>)",
-          "badge": "规划中",
-          "descHtml": "解决官方 Cycles 运动模糊未计算灯光在世界坐标中位移的问题（当前帧渲染期间灯光保持静止，导致随相机或载具同步移动的灯光产生错误拖影），在快门区间内支持灯光世界空间运动插值。",
+          "badge": "已立项启动 · In Progress",
+          "descHtml": "解决原版 Cycles 运动模糊未计算灯光在世界坐标中位移的问题（当前帧渲染期间灯光保持静止，导致随相机或载具同步移动的灯光产生错误拖影），在快门区间内支持灯光世界空间运动插值。",
+          "progressLabel": "当前研发进度（已完成 QCycles 增量调研与灯光原生控件源码开放；不引入额外修正开关，运动与尺寸插值、Light Tree 及快门核心尚待实现与验收）",
           "milestones": []
         },
         "fr": {
           "titleHtml": "Flou de mouvement des lumières (<code>Light Motion Blur</code>)",
-          "badge": "Prévu",
-          "descHtml": "Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — évitant un flou de mouvement erroné lorsque les lumières se déplacent ou suivent la caméra.",
+          "badge": "En cours · Démarrage",
+          "descHtml": "Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — prenant en charge l'interpolation du mouvement des lumières dans l'espace monde sur l'intervalle d'obturation pour éviter tout flou erroné lorsque les lumières se déplacent ou suivent la caméra.",
+          "progressLabel": "Progression (Étude incrémentale QCycles terminée et contrôles natifs de mouvement des lumières ouverts dans le code source ; aucun commutateur de contournement ajouté — interpolation mouvement/taille, Light Tree et cœur d'obturation restant à implémenter et valider)",
           "milestones": []
         }
       }
