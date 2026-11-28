@@ -79,7 +79,7 @@ Lors de l'importation dans les logiciels de compositing, le fichier s'alignera n
 - **Pas de rendu en temps réel dans la vue (Viewport)** — Il n'y a pas de rendu en temps réel dans la vue caméra en dehors des limites du cadre. L'overscan de la vue se limite à la ligne guide de cadre de sécurité extérieure.
 - **Région de rendu exclusive** — L'activation de la région de rendu (Render Region) désactive le rendu d'overscan ainsi que les lignes guides de la vue.
 - **Cycles uniquement** — Les moteurs de rendu non-Cycles ne prennent pas en charge cette fonctionnalité.
-- **Contraintes de nœud compositeur** — Lors de l'utilisation du nœud compositeur `File Output`, le groupe de nœuds doit contenir un nœud de sortie actif tel que `Group Output` pour déclencher la propagation des métadonnées d'overscan.
+- **Une seule scène par rendu Overscan** — L'overscan prend en charge plusieurs View Layers au sein d'une même scène, mais un graphe de compositeur qui déclenche le rendu d'une autre scène avec Overscan activé renvoie une erreur avant le début du rendu.
 
 ## Voir aussi
 

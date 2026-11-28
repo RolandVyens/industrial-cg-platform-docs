@@ -91,10 +91,10 @@ Le chemin normal de collision de lampe (`PRIMITIVE_LAMP` impact direct) écrit d
 // L'émission d'impact direct pour une lumière finie écrit dans la famille de lobes existante
 ```
 
-## Brouillard d'Environnement (Environment Fog - En développement)
+## Brouillard lumineux mondial (Atmosphere Volume - En développement)
 
 ::: warning
-Les extensions de noyau pour le brouillard d'environnement (Environment Fog) sont actuellement en cours de développement et ne sont pas encore intégrées. Cette section sera complétée lors de la publication de la fonctionnalité.
+Les extensions de noyau pour le brouillard lumineux mondial (`Atmosphere Volume`) sont actuellement en cours de développement actif et ne sont pas encore publiées. Cette section sera complétée lors de la sortie de la fonctionnalité.
 :::
 
 ## Fichiers Sources

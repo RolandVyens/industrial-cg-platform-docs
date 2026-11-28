@@ -1,13 +1,13 @@
 ---
 title: "Blender to Nuke Workflow: Native Deep EXR, Camera Overscan & Per-Light Relighting"
-description: "End-to-end Blender to Nuke compositing guide with Industrial CG Platform 5.2.4 LTS: native Deep EXR compositing, camera overscan rendering, per-light diffuse/glossy passes, multi-layer pass management, and open-source companion tools."
+description: "End-to-end Blender to Nuke compositing guide with Industrial CG Platform: native Deep EXR compositing, camera overscan rendering, per-light diffuse/glossy passes, multi-layer pass management, and open-source companion tools."
 cover: "/blog/nuke-deep-compositing.webp"
 faq: true
 ---
 
 # Blender to Nuke Workflow: Native Deep EXR, Camera Overscan & Per-Light Relighting
 
-Stock Blender stops at flat EXR output—leaving compositors stuck with manual holdout re-renders, cropped black edges after lens distortion, and merged lighting layers that cannot be relit cleanly in 2D. **Industrial CG Platform 5.2.4 LTS** builds the missing studio render outputs directly into stock Blender: **native Deep EXR compositing**, **camera overscan rendering (EXR Overscan)**, **per-light direct/indirect passes**, and a **multi-layer pass manager** (Windows x64 stable; public Linux Beta 1 pre-release available for testing).
+Stock Blender stops at flat EXR output—leaving compositors stuck with manual holdout re-renders, cropped black edges after lens distortion, and merged lighting layers that cannot be relit cleanly in 2D. **Industrial CG Platform** builds the missing studio render outputs directly into stock Blender: **native Deep EXR compositing**, **camera overscan rendering (EXR Overscan)**, **per-light direct/indirect passes**, and a **multi-layer pass manager** (Windows x64 stable; public Linux Beta pre-release available for testing).
 
 Using a real multi-layer VFX shot, this guide walks through the full pipeline from Cycles to Foundry Nuke—combining Industrial CG Platform with our open-source companion tools: automated EXR export ([Industrial AOV Connector](/en/industrial-aov-connector/)), one-click Nuke light rebuilding ([Auto Light Shuffle](/en/auto-light-shuffle/)), and shared cross-software color management ([AIO-OCIO](/en/aio-ocio/)).
 
@@ -22,8 +22,8 @@ Using a real multi-layer VFX shot, this guide walks through the full pipeline fr
 | **Color & Final Delivery** | [AIO-OCIO](/en/aio-ocio/manual/general-softwares) in Nuke | Identical AgX / Filmic / ACES view transforms and clean final output cropped to the delivery frame |
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Production Blender 5.2.4 compositor node tree routing multiple ViewLayers through denoising into separate Beauty, Deep, Cryptomatte, and geometry data File Output nodes" loading="lazy"></a>
-<figcaption>Real production compositor tree in Industrial CG Platform 5.2.4 LTS: multiple render layers routed via Industrial AOV Connector into parallel Beauty, Deep EXR, Cryptomatte, and geometry data outputs.</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Production Industrial CG Platform compositor node tree routing multiple ViewLayers through denoising into separate Beauty, Deep, Cryptomatte, and geometry data File Output nodes" loading="lazy"></a>
+<figcaption>Real production compositor tree in Industrial CG Platform: multiple render layers routed via Industrial AOV Connector into parallel Beauty, Deep EXR, Cryptomatte, and geometry data outputs.</figcaption>
 </figure>
 
 ## 2. What You Need
@@ -32,7 +32,7 @@ Install only the pieces your shot actually needs:
 
 | Component | What It Solves | Platform / Requirement |
 | --- | --- | --- |
-| **[Industrial CG Platform 5.2.4 LTS](/en/industrial-cg-platform/releases/)** | Native Deep EXR compositing, camera overscan rendering (EXR Overscan), per-light direct/indirect passes, per-light shadow tinting, and the multi-layer pass manager | Windows 10/11 x64 stable ZIP (public Linux Beta 1 pre-release on Rocky Linux 8.10 available for testing) |
+| **[Industrial CG Platform](/en/industrial-cg-platform/releases/)** | Native Deep EXR compositing, camera overscan rendering (EXR Overscan), per-light direct/indirect passes, per-light shadow tinting, and the multi-layer pass manager | Windows 10/11 x64 stable ZIP (public Linux Beta pre-release on Rocky Linux 8.10 available for testing) |
 | **Foundry Nuke** | Downstream deep compositing (`DeepRead` / `DeepMerge` / `DeepToImage`), multi-pass relighting, lens distortion, and final delivery | Windows / Linux / macOS |
 | **[Automated EXR Export (Industrial AOV Connector)](/en/industrial-aov-connector/)** (5.3.0) | Auto-builds multi-layer output trees, wires denoising, formats Nuke-ready depth/position/normal passes, disables redundant default renders, or provides a Fake Deep fallback | Blender 4.x / 5.x add-on (works on both Industrial CG Platform and stock Blender) |
 | **[Stock-Blender Light Splitter (Industrial Light AOV Splitter)](/en/industrial-light-aov-splitter/)** | Splits lightgroups into diffuse, specular, transmission, and volume passes when rendering on **stock Blender** without native per-light passes | Blender add-on |
@@ -44,17 +44,17 @@ Install only the pieces your shot actually needs:
 Lock down your render layers and color configuration before turning on Deep or AOV outputs to avoid rework downstream:
 
 1. **Organize render layers with batch presets**: Open the **[Multi-Layer Pass Manager (ViewLayer Manager)](/en/industrial-cg-platform/features/viewlayer-manager)** next to Blender's top-right ViewLayer selector. Split major elements (environment, props, hero character, and a dedicated anti-aliased geometry data layer) and apply pass/lightgroup presets across multiple layers at once.
-2. **Share one color config in both apps**: Point Blender and Nuke to the same **AIO-OCIO** `config.ocio` via the `OCIO` environment variable (or Blender's `5.2/colormanagement/` folder) so linear EXRs and AgX/ACES viewing transforms match without color shifts. See [Blender Color Management Setup](/en/aio-ocio/manual/blender-setup) and [General Software Setup](/en/aio-ocio/manual/general-softwares).
+2. **Share one color config in both apps**: Point Blender and Nuke to the same **AIO-OCIO** `config.ocio` via the `OCIO` environment variable (or Blender's `<major.minor>/colormanagement/` folder) so linear EXRs and AgX/ACES viewing transforms match without color shifts. See [Blender Color Management Setup](/en/aio-ocio/manual/blender-setup) and [General Software Setup](/en/aio-ocio/manual/general-softwares).
 3. **Skip duplicate default renders**: When using **Industrial AOV Connector 5.3.0**, keep **Automatically Disable Default Render Output** checked in Preferences so building or updating the export tree turns off Blender's default `Save Output` automatically.
 
 ## 4. Step 2 — Render Native Deep EXR
 
-Native Deep EXR writes multiple 3D depth samples and transparency values (`Z`, `ZBack`, `RGBA`) per pixel directly from Cycles, letting Nuke merge overlapping characters, fur, and smoke in 3D space without manual holdout mattes.
+Native Deep EXR writes multiple 3D depth samples and transparency values (`Z`, `ZBack`, `RGBA`) per pixel directly from Cycles—covering surfaces, object volumes, and native World Volume shaders—letting Nuke merge overlapping characters, fur, smoke, and atmospheric fog in 3D space without manual holdout mattes.
 
 1. **Choose how to write Deep EXR**:
    - **Quick single-layer output**: In **Output Properties > Output**, set **File Format** to `Deep EXR` (`RGBA`, `16-bit` half-float or `32-bit` full-float, lossless `ZIPS` compression).
    - **Multi-layer compositor output (recommended for production)**: Add a `File Output` node (or let Industrial AOV Connector build it), set **Node Format** to `Image` → `Deep EXR`, and connect each ViewLayer's `Image` socket.
-2. **Pick a Deep color mode (5.2.4 LTS)**: Under **Render Properties > Performance > Deep**, keep the default **Lightweight Simple Mode (`Simple Mode`)** enabled to distribute undenoised Beauty color across depth samples with lower memory and file size. Uncheck it to switch to **Physical Mode** only when complex nested volumes require raw radiance recorded directly at every depth slice.
+2. **Pick a Deep color mode**: Under **Render Properties > Performance > Deep**, keep the default **Lightweight Simple Mode (`Simple Mode`)** enabled to distribute undenoised Beauty color across depth samples with lower memory and file size. Uncheck it to switch to **Physical Mode** only when complex nested volumes require raw radiance recorded directly at every depth slice.
 3. **Set a VRAM ceiling**: Under **Render Properties > Performance > Memory**, adjust the **Deep VRAM Budget (`Deep Tile Budget`)** (default `1024 MB`, or `0` for unlimited). On high-resolution shots, Cycles automatically shrinks tile size to stay within GPU memory without reducing depth precision.
 
 For full parameter tables and screenshots, see the [Deep EXR Feature Manual](/en/industrial-cg-platform/features/deep-exr) and [Blender Deep EXR in Nuke](/blog/posts/2026-07-22-deep-exr-compositing).
@@ -68,8 +68,8 @@ When Nuke applies lens undistortion/redistortion, camera shake, or 2D stabilizat
 3. Open **Output Properties > Overscan** (directly below **Format**) and enter percentage or pixel margins (for example, `15%` to cover lens distortion padding).
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Blender 5.2.4 camera viewport showing the inner delivery frame and outer 15 percent dashed camera overscan safety margin" loading="lazy"></a>
-<figcaption>Real shot camera viewport in Industrial CG Platform 5.2.4 LTS: the inner frame marks the final delivery crop while the outer dashed border shows the 15% overscan render margin.</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Industrial CG Platform camera viewport showing the inner delivery frame and outer 15 percent dashed camera overscan safety margin" loading="lazy"></a>
+<figcaption>Real shot camera viewport in Industrial CG Platform: the inner frame marks the final delivery crop while the outer dashed border shows the 15% overscan render margin.</figcaption>
 </figure>
 
 In Nuke, `Read` and `DeepRead` automatically pick up the delivery frame and outer bounding box, giving `LensDistortion`, `Transform`, and `Blur` real rendered pixels outside the crop. See the [EXR Overscan Manual](/en/industrial-cg-platform/features/exr-overscan).
@@ -88,7 +88,7 @@ Industrial 3D provides two separate solutions depending on whether your team run
 
 | Dimension | Native Per-Light Passes (Lightgroup Lobe Passes) | [Stock-Blender Light Splitter (Industrial Light AOV Splitter)](/en/industrial-light-aov-splitter/) |
 | --- | --- | --- |
-| **Blender Build Required** | Industrial CG Platform 5.2.x (Cycles kernel native) | Stock Blender (Python add-on) |
+| **Blender Build Required** | Industrial CG Platform (Cycles kernel native) | Stock Blender (Python add-on) |
 | **Split Granularity** | Separate **Direct + Indirect** diffuse, glossy, transmission, and volume passes per lightgroup | Diffuse, specular, transmission, and volume passes per lightgroup |
 | **Scene Setup Rules** | Uses Cycles' standard Lightgroup panel with no collection naming restrictions | Lights must live in `lgt_*` collections using alphanumeric names only (no underscores) |
 | **Nuke Auto-Rebuild** | Recognized at top priority by [Auto Light Shuffle](/en/auto-light-shuffle/) | Recognized automatically by [Auto Light Shuffle](/en/auto-light-shuffle/) |
@@ -161,7 +161,7 @@ DeepRead -> DeepSample (inspect per-pixel Z / ZBack / Alpha samples)
 - **Soft edges or volume fringing in `DeepMerge`**: Inspect pixel samples with Nuke's `DeepSample` node. If nearby samples are collapsing too aggressively, lower **Depth Merge Tolerance (`Deep Merge Tolerance`)** and **Alpha Merge Tolerance (`Alpha Merge Tolerance`)** (default `0.010`) in Blender's Deep EXR output settings. For strict physical radiance inside overlapping semi-transparent volumes, uncheck **Simple Mode** under **Render Properties > Performance > Deep** to use **Physical Mode**.
 - **GPU out-of-memory on high-res Deep renders**: Lower **Deep VRAM Budget (`Deep Tile Budget`)** under **Render Properties > Performance > Memory** (default `1024 MB`). Cycles automatically shrinks effective tile size to stay within VRAM without losing Deep sample precision.
 - **Overscan panel is greyed out**: Confirm **Render Engine** is `Cycles` and **Render Region** is unchecked in **Output Properties > Format**.
-- **Known current limitations**: **World environment volumes (World Volume)** are currently unsupported in Deep EXR output, and full **custom Deep metadata pass-through** is planned future work rather than part of the 5.2.4 release.
+- **Known current limitations**: Full **custom Deep metadata pass-through** is planned future work rather than part of the current baseline.
 
 ## 10. FAQ
 
@@ -183,4 +183,4 @@ Start with the default **Simple Mode**: it uses less memory, writes smaller file
 
 ### Does this workflow run on Linux?
 
-The current stable release (**Industrial CG Platform 5.2.4 LTS**, GPL-3.0-or-later) targets **Windows 10/11 x64**. A public **Linux Beta 1 pre-release** (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10) is available for testing and feedback, while full native Linux GPU/OptiX and desktop qualification is still in progress. See [Development Tracking](/en/feature-tracking) and [Releases](/en/industrial-cg-platform/releases/).
+Current stable releases (**Industrial CG Platform**, GPL-3.0-or-later) target **Windows 10/11 x64**. A public **Linux Beta pre-release** (built on Rocky Linux 8.10) is available for testing and feedback, while full native Linux GPU/OptiX and desktop qualification is still in progress. See [Development Tracking](/en/feature-tracking) and [Releases](/en/industrial-cg-platform/releases/).

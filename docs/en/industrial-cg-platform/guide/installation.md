@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform 5.2.4 LTS, including SHA256 verification, OptiX GPU setup, and coexistence with stock Blender."
+description: "System requirements and Windows x64 ZIP installation guide for Industrial CG Platform, including SHA256 verification, OptiX GPU setup, and coexistence with stock Blender."
 ---
 # Installation
 
@@ -17,7 +17,7 @@ description: "System requirements and Windows x64 ZIP installation guide for Ind
 ## Download
 
 1. Go to the [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) page.
-2. Download the latest `industrial-cg-platform-X.X.X.zip` file (e.g., `industrial-cg-platform-5.2.4.zip`).
+2. Download the latest `industrial-cg-platform-X.X.X.zip` file.
 3. Verify the download integrity by checking the SHA256 hash listed in the release notes.
 
 ## Install
@@ -41,7 +41,7 @@ Run the following from a command prompt to verify:
 Expected output:
 
 ```
-Blender 5.2.4 LTS Industrial CG Platform
+Blender <version> Industrial CG Platform
 ```
 
 ## GPU Setup
@@ -55,7 +55,7 @@ For Cycles GPU rendering with NVIDIA:
 
 ## Coexistence with Stock Blender
 
-Industrial CG Platform uses the same Blender config directory (`%APPDATA%\Blender Foundation\Blender\5.2\`). If you want to keep completely separate user preferences:
+Industrial CG Platform uses the same Blender config directory (`%APPDATA%\Blender Foundation\Blender\<major.minor>\`). If you want to keep completely separate user preferences:
 
 - Use the `--factory-startup` flag for a clean session.
 - Or set `BLENDER_USER_RESOURCES` to a custom path before launching.

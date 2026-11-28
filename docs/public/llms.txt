@@ -1,16 +1,16 @@
 # Industrial CG Platform
 
-> Industrial CG Platform is a production-oriented VFX fork of stock Blender (current release 5.2.4 LTS, Windows x64) with native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
+> Industrial CG Platform is a production-oriented VFX fork of stock Blender (Windows x64 stable releases) with native Cycles Deep EXR (including World Volume Deep Support), EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager, alongside open-source pipeline tools for Nuke, Maya, and Houdini.
 
-- Current release: 5.2.4 LTS (Windows x64 ZIP)
-- Linux support: Public Linux Beta 1 pre-release available (Rocky Linux 8.10 / EL8 baseline, glibc 2.28+; pre-release for testing, not yet a stable release)
+- Stable releases: Windows x64 portable ZIP (see Releases for current stable and LTS builds)
+- Linux support: Public Linux Beta pre-release available (Rocky Linux 8.10 / EL8 baseline, glibc 2.28+; pre-release for testing, not yet a stable release)
 - Primary audiences: VFX studios, technical directors (TDs), lighting artists, and compositors
 
 ## Core Documentation
 
 - [Blender to Nuke Workflow](https://cgweave.com/en/blender-to-nuke-workflow/): End-to-end production guide from Cycles Deep EXR, EXR Overscan, Lightgroup Lobe Passes, and AOV Connector to Nuke DeepMerge and Auto Light Shuffle.
 - [Blender VFX Pipeline](https://cgweave.com/en/blender-vfx-pipeline/): Studio VFX pipeline architecture, role-based evaluation, side-by-side pilot checklist, and stock Blender boundaries.
-- [Industrial CG Platform vs Stock Blender](https://cgweave.com/en/vs-stock-blender/): Side-by-side comparison with stock Blender covering Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, integrated Qt 6.9.3 (bQt) runtime, fork rationale, compatibility boundaries, and when to stay on stock Blender.
+- [Industrial CG Platform vs Stock Blender](https://cgweave.com/en/vs-stock-blender/): Side-by-side comparison with stock Blender covering Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, integrated Qt 6 (bQt) runtime, fork rationale, compatibility boundaries, and when to stay on stock Blender.
 - [Platform Home](https://cgweave.com/en/industrial-cg-platform/): Overview of the stock-Blender-based VFX branch and core feature set.
 - [Getting Started](https://cgweave.com/en/industrial-cg-platform/guide/getting-started): Introduction, target workflows, compatibility with stock Blender, and quick links.
 - [Installation](https://cgweave.com/en/industrial-cg-platform/guide/installation): Windows 10/11 x64 requirements, ZIP setup, and Cycles OptiX configuration.
@@ -20,7 +20,7 @@
 
 ## Core Platform Features
 
-- [Deep EXR](https://cgweave.com/en/industrial-cg-platform/features/deep-exr): Native Cycles Deep EXR output (Simple and Physical modes, surface and volume deep samples) for lossless deep compositing in Nuke.
+- [Deep EXR](https://cgweave.com/en/industrial-cg-platform/features/deep-exr): Native Cycles Deep EXR output (Simple and Physical modes, surface, object volume, and World Volume deep samples) for lossless deep compositing in Nuke.
 - [EXR Overscan](https://cgweave.com/en/industrial-cg-platform/features/exr-overscan): Cycles overscan rendering preserving `displayWindow` and expanding `dataWindow` in OpenEXR metadata.
 - [Lightgroup Lobe Passes](https://cgweave.com/en/industrial-cg-platform/features/lightgroup-lobe-passes): Per-lightgroup direct and indirect diffuse, glossy, transmission, and volume passes in Cycles.
 - [Shadow Color](https://cgweave.com/en/industrial-cg-platform/features/shadow-color): Per-light and per-world artistic shadow tinting in Cycles.
@@ -44,7 +44,10 @@
 ## Engineering Blog
 
 - [Ecosystem Devlog](https://cgweave.com/blog/): Technical architecture notes and engineering updates.
-- [Deep EXR Architecture Upgrade](https://cgweave.com/blog/posts/2026-10-17-deep-exr-architecture): Architectural overhaul for continuous volume integration and Simple/Physical modes shipped in 5.2.4 LTS.
+- [Deep EXR for Unbounded World Volumes](https://cgweave.com/blog/posts/2026-11-27-world-volume-deep-exr): Native Deep EXR support for Blender's unbounded World Volume shaders with verified Nuke DeepMerge insertion.
+- [Atmosphere Volume Engineering Update](https://cgweave.com/blog/posts/2026-11-26-atmosphere-volume-devlog): 1,000-light 4K thin beams, ~10–12 updates/s interactive viewport speed, and Nuke Deep EXR acceptance.
+- [Eliminating a 104× Deep EXR Slowdown](https://cgweave.com/blog/posts/2026-11-25-deep-exr-fast-architecture): Near-Flat Simple Mode, 1.11×–1.13× Physical Mode, bounded VRAM budgets, and deterministic cancel/failure recovery.
+- [Deep EXR Architecture Upgrade](https://cgweave.com/blog/posts/2026-10-17-deep-exr-architecture): Architectural overhaul for continuous volume integration and Simple/Physical modes.
 - [Blender Deep EXR in Nuke](https://cgweave.com/blog/posts/2026-07-22-deep-exr-compositing): Eliminating 2D holdout re-renders in Nuke deep compositing workflows.
 - [Lightgroup Lobe Passes in Nuke](https://cgweave.com/blog/posts/2026-07-22-lightgroup-lobe-passes): Separating direct and indirect diffuse, glossy, transmission, and volume passes per lightgroup.
 - [Code Quality Month](https://cgweave.com/blog/posts/2026-06-29-code-quality-month): W0-W6 refactoring and Deep EXR memory reduction log.

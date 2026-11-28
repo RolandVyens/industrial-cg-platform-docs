@@ -14,7 +14,6 @@ head:
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 64-bit",
         "description": "A Blender-based VFX platform with native Deep EXR, EXR overscan, lightgroup lobe passes and production ViewLayer tools.",
-        "softwareVersion": "5.2.4",
         "url": "https://cgweave.com/en/industrial-cg-platform/",
         "downloadUrl": "https://cgweave.com/en/industrial-cg-platform/releases/",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
@@ -42,7 +41,7 @@ hero:
     - theme: alt
       text: Pipeline Tools
       link: /en/industrial-pipeline-tools
-description: "Download Industrial CG Platform (5.2.4 LTS, Windows x64), a VFX fork of stock Blender with native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and ViewLayer Manager for Nuke, Maya, and Houdini pipelines."
+description: "Download Industrial CG Platform (Windows x64), a VFX fork of stock Blender with native Cycles Deep EXR, EXR Overscan, lightgroup lobe passes, and ViewLayer Manager for Nuke, Maya, and Houdini pipelines."
 ---
 <div class="custom-features-grid">
   <a href="/en/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

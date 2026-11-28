@@ -32,7 +32,7 @@ By unifying color transformations across major Digital Content Creation (DCC) to
 
 ### Blender Integration
 1.  Download the latest config files from the repository.
-2.  Navigate to your Blender installation's color management directory (e.g., `5.2/colormanagement/`).
+2.  Navigate to your Blender installation's color management directory (e.g., `<major.minor>/colormanagement/`).
 3.  Replace the default `config.ocio` and data folders, or set your environment variable:
     ```bash
     OCIO=/path/to/AIO-OCIO/config.ocio

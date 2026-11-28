@@ -1,11 +1,11 @@
 ---
 title: "Building from Source"
-description: "Build Industrial CG Platform 5.2.4 LTS from source on Windows following the current Release workflow: Visual Studio 2022, CMake, Ninja, OptiX SDK, full install-target build, and post-install verification."
+description: "Build Industrial CG Platform from source on Windows following the current Release workflow: Visual Studio 2022, CMake, Ninja, OptiX SDK, full install-target build, and post-install verification."
 ---
 
 # Building from Source
 
-This guide follows the current **Industrial CG Platform 5.2.4 LTS** Windows x64 Release build workflow (Ninja + `VsDevCmd` building the complete `install` dependency graph).
+This guide follows the current **Industrial CG Platform** Windows x64 Release build workflow (Ninja + `VsDevCmd` building the complete `install` dependency graph).
 
 ## Prerequisites
 
@@ -79,20 +79,20 @@ Verify the installed runtime before packaging or testing shots:
 Expected first line from `--version`:
 
 ```text
-Blender 5.2.4 LTS Industrial CG Platform
+Blender <version> Industrial CG Platform
 ```
 
 Also confirm three release integrity checks:
 
 1. **Clean build info**: When built from a clean release branch, `build branch` should not show a `(modified)` suffix.
-2. **OptiX kernels present**: When OptiX is enabled, verify non-empty OptiX kernel files exist under `install_release\5.2\scripts\addons_core\cycles\lib\`.
-3. **No LFS pointer stubs**: Confirm bundled `.blend` assets under `install_release\5.2\datafiles\` are real binary assets, not LFS pointer text.
+2. **OptiX kernels present**: When OptiX is enabled, verify non-empty OptiX kernel files exist under `install_release\<major.minor>\scripts\addons_core\cycles\lib\`.
+3. **No LFS pointer stubs**: Confirm bundled `.blend` assets under `install_release\<major.minor>\datafiles\` are real binary assets, not LFS pointer text.
 
 ## Known Notes & Platform Status
 
 - **Why Ninja + `VsDevCmd`**: On some Windows workstations, the Visual Studio generator / MSBuild can stall during compiler detection due to `Tracker.exe`. Ninja + `VsDevCmd -arch=x64 -host_arch=x64` is the validated Release build path. If invoking MSBuild directly, pass `/p:TrackFileAccess=false`.
 - **Avoiding `LNK1318` link errors**: Keep `-DWITH_WINDOWS_RELEASE_PDB=OFF` if Release linking hits `LNK1318` PDB errors.
-- **Linux builds**: The current stable release targets Windows x64. Linux builds are currently in public **Linux Beta 1** (built on a Rocky Linux 8.10 / EL8 baseline); follow progress on [Development Tracking](/en/feature-tracking) and [Releases](/en/industrial-cg-platform/releases/).
+- **Linux builds**: Current stable releases target Windows x64. Linux builds are currently in public **Linux Beta** (built on a Rocky Linux 8.10 / EL8 baseline); follow progress on [Development Tracking](/en/feature-tracking) and [Releases](/en/industrial-cg-platform/releases/).
 
 ## See Also
 

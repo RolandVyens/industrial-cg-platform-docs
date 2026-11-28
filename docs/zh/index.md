@@ -14,7 +14,6 @@ head:
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 64-bit",
         "description": "基于 Blender 的 VFX 平台，内置原生 Deep EXR、EXR Overscan、灯光组直接/间接通道及影视级 ViewLayer 管理工具。",
-        "softwareVersion": "5.2.4",
         "url": "https://cgweave.com/zh/industrial-cg-platform/",
         "downloadUrl": "https://cgweave.com/zh/industrial-cg-platform/releases/",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
@@ -43,7 +42,7 @@ hero:
       text: 浏览管线工具
       link: /zh/industrial-pipeline-tools
 
-description: "免费下载 Industrial CG Platform (5.2.4 LTS, Windows x64)：面向 Nuke、Maya 与 Houdini 管线、基于原版 Blender 的 VFX 定制分支，原生集成 Cycles Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 管理器。"
+description: "免费下载 Industrial CG Platform (Windows x64)：面向 Nuke、Maya 与 Houdini 管线、基于原版 Blender 的 VFX 定制分支，原生集成 Cycles Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 管理器。"
 ---
 <div class="custom-features-grid">
   <a href="/zh/industrial-cg-platform/" class="feature-bg-card" style="background-image: url('/features/platform.webp')">

@@ -14,14 +14,7 @@ Industrial CG Platform 的存在就是为了推动 Blender 向这个方向走得
 
 ## 开发路线图 (Roadmap)
 
-计划中的 VFX 和面向生产的开发方向包括：
-
-- 仅影响间接光（indirect-light-only）的物体属性，用于更精准的打光控制
-- 集合（Collection）和物体级别的材质覆盖（Material Override）工作流
-- 类似于 `aiFog` 的世界环境雾行为，专注于直接光用例
-- 更深入的基于镜头渲染和合成工作流的文档
-
-如需查看正在研发的特性、已发布里程碑及长期规划的实时状态，请参阅[开发追踪 (Development Tracking)](/zh/feature-tracking)页面。
+最新的开发路线图（包括已发布里程碑、正在研发特性及长期规划）统一维护在 [开发追踪 (Development Tracking)](/zh/feature-tracking) 页面。
 
 ## 支持与赞助 (Sponsor)
 

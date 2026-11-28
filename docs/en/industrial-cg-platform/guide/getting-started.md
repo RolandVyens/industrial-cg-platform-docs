@@ -39,8 +39,8 @@ Industrial CG Platform is intended for:
 
 - **Full compatibility** — `.blend` files created in Industrial CG Platform are compatible with stock Blender. Custom features simply won't be available when opened in stock Blender.
 - **Same executable names** — The executable is still called `blender.exe` and uses the same config directory structure.
-- **Branch suffix** — The window title shows `Blender 5.2.4 LTS Industrial CG Platform` to distinguish it from stock Blender.
-- **Windows x64 stable + Linux Beta 1** — Current stable releases are Windows x64 ZIP packages. A public Linux Beta 1 pre-release (Rocky Linux 8.10 / EL8 baseline) is available for testing and feedback.
+- **Branch suffix** — The window title shows `Blender <version> Industrial CG Platform` to distinguish it from stock Blender.
+- **Windows x64 stable + Linux Beta** — Current stable releases are Windows x64 ZIP packages. A public Linux Beta pre-release (Rocky Linux 8.10 / EL8 baseline) is available for testing and feedback.
 
 For the full side-by-side feature table, fork rationale, and when to stay on stock Blender, see **[Industrial CG Platform vs Stock Blender](/en/vs-stock-blender/)**.
 

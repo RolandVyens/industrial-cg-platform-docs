@@ -1,6 +1,6 @@
 ---
 title: "常见问题 (FAQ)"
-description: "Industrial CG Platform 常见问题解答：涵盖与原版 Blender 兼容性、.blend 文件互通、OptiX/CPU 渲染后端、ViewLayer 管理器、Linux Beta 1 进度及源码编译。"
+description: "Industrial CG Platform 常见问题解答：涵盖与原版 Blender 兼容性、.blend 文件互通、OptiX/CPU 渲染后端、ViewLayer 管理器、Linux Beta 进度及源码编译。"
 ---
 # 常见问题 (FAQ)
 
@@ -45,7 +45,7 @@ ViewLayer 管理器使用 Qt（通过 BQt）构建其高级 UI 界面。由于 B
 
 ### 我能在 Linux 上使用它吗？
 
-当前稳定版（**5.2.4 LTS**）仅提供 Windows x64 ZIP 压缩包。Linux 方面现已发布基于 Rocky Linux 8.10 / EL8 基线的公开 **Linux Beta 1 预发布版**（`industrial-cg-platform-5.2.4-linux-beta.1`）供测试与反馈，完整的原生 Linux GPU/OptiX 与桌面验收仍在进行中，最新进度请参阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
+当前稳定版仅提供 Windows x64 ZIP 压缩包。Linux 方面现已发布基于 Rocky Linux 8.10 / EL8 基线的公开 **Linux Beta 预发布版** 供测试与反馈，完整的原生 Linux GPU/OptiX 与桌面验收仍在进行中，最新进度与安装包请参阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
 
 ### 启动时提示的 `failed to get blender hwnd` 日志代表什么？
 

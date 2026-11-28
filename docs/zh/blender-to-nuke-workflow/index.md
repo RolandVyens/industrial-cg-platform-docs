@@ -1,13 +1,13 @@
 ---
 title: "Blender 到 Nuke 影视合成工作流：原生 Deep EXR、Overscan 与材质通道灯光 AOV"
-description: "基于 Industrial CG Platform 5.2.4 LTS 的 Blender 到 Nuke 端到端实操指南：原生 Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 批量管理，配合配套开源插件完成从 Cycles 渲染到 Nuke 合成的完整交接。"
+description: "基于 Industrial CG Platform 的 Blender 到 Nuke 端到端实操指南：原生 Deep EXR、EXR Overscan、材质通道灯光 AOV 与 ViewLayer 批量管理，配合配套开源插件完成从 Cycles 渲染到 Nuke 合成的完整交接。"
 cover: "/blog/nuke-deep-compositing.webp"
 faq: true
 ---
 
 # Blender 到 Nuke 影视合成工作流：原生 Deep EXR、Overscan 与材质通道灯光 AOV
 
-原版 Blender 默认只提供平面 EXR 输出，进到 Foundry Nuke 合成时常常要面对三大痛点：物体穿插全靠手画或反复重渲遮罩、做镜头畸变时画面边缘拉黑边、想在后期单独调一盏灯的高光或漫反射却只能退回三维重渲。**Industrial CG Platform 5.2.4 LTS** 直接在原版 Blender 渲染内核里原生补齐了这些生产能力——内置 **原生 Deep EXR**、**EXR Overscan**、**材质通道灯光 AOV** 与 **ViewLayer 批量管理器**（Windows x64 稳定版；另有面向 Linux 的公开 Beta 1 预发布版供测试）。
+原版 Blender 默认只提供平面 EXR 输出，进到 Foundry Nuke 合成时常常要面对三大痛点：物体穿插全靠手画或反复重渲遮罩、做镜头畸变时画面边缘拉黑边、想在后期单独调一盏灯的高光或漫反射却只能退回三维重渲。**Industrial CG Platform** 直接在原版 Blender 渲染内核里原生补齐了这些生产能力——内置 **原生 Deep EXR**、**EXR Overscan**、**材质通道灯光 AOV** 与 **ViewLayer 批量管理器**（Windows x64 稳定版；另有面向 Linux 的公开 Beta 预发布版供测试）。
 
 本指南结合真实影视多 ViewLayer 镜头，串联 Industrial CG Platform 与配套开源工具——自动分层导出插件（[Industrial AOV Connector](/zh/industrial-aov-connector/)）、Nuke 灯光一键连线脚本（[Auto Light Shuffle](/zh/auto-light-shuffle/)）和跨软件统一色彩配置（[AIO-OCIO](/zh/aio-ocio/)），带你走通从 Cycles 渲染到 Nuke 最终合成的完整流程。
 
@@ -22,8 +22,8 @@ faq: true
 | **色彩管理与交付** | Nuke 端 [AIO-OCIO](/zh/aio-ocio/manual/general-softwares) | 保持 AgX / Filmic / ACES 观感完全一致，按最终成片裁切框输出交付 |
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Industrial CG Platform 5.2.4 真实镜头合成器节点树，多个 ViewLayer 经降噪后分别输出至 Beauty、Deep EXR、Cryptomatte 与几何数据输出节点" loading="lazy"></a>
-<figcaption>Industrial CG Platform 5.2.4 LTS 真实生产镜头合成器节点树：通过自动分层导出插件（Industrial AOV Connector），把多 ViewLayer 分别路由到 Beauty、Deep EXR、Cryptomatte 与几何数据输出节点。</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Industrial CG Platform 真实镜头合成器节点树，多个 ViewLayer 经降噪后分别输出至 Beauty、Deep EXR、Cryptomatte 与几何数据输出节点" loading="lazy"></a>
+<figcaption>Industrial CG Platform 真实生产镜头合成器节点树：通过自动分层导出插件（Industrial AOV Connector），把多 ViewLayer 分别路由到 Beauty、Deep EXR、Cryptomatte 与几何数据输出节点。</figcaption>
 </figure>
 
 ## 2. 前置工具与选用清单
@@ -32,7 +32,7 @@ faq: true
 
 | 组件 | 解决什么问题 | 平台 / 运行要求 |
 | --- | --- | --- |
-| **[Industrial CG Platform 5.2.4 LTS](/zh/industrial-cg-platform/releases/)** | 提供原生 Deep EXR、EXR Overscan、按灯光拆分的 Direct/Indirect 细分通道、Shadow Color 与 ViewLayer 批量管理器 | Windows 10/11 x64 稳定版绿色包（另有基于 Rocky Linux 8.10 的 Linux Beta 1 预发布版供测试） |
+| **[Industrial CG Platform](/zh/industrial-cg-platform/releases/)** | 提供原生 Deep EXR、EXR Overscan、按灯光拆分的 Direct/Indirect 细分通道、Shadow Color 与 ViewLayer 批量管理器 | Windows 10/11 x64 稳定版绿色包（另有基于 Rocky Linux 8.10 的 Linux Beta 预发布版供测试） |
 | **Foundry Nuke** | 下游 Deep 合成（`DeepRead` / `DeepMerge` / `DeepToImage`）、多通道重打光、镜头畸变还原与成片输出 | Windows / Linux / macOS |
 | **[自动分层导出插件（Industrial AOV Connector）](/zh/industrial-aov-connector/)** (5.3.0) | 自动搭建多 ViewLayer 输出节点树、接入降噪、按 Nuke 规范格式化 Z/Position/Normal 数据、自动关闭多余默认输出，或在官方版上提供 Fake Deep 方案 | Blender 4.x / 5.x 插件（本平台与官方 Blender 均可用） |
 | **[官方版灯光拆分插件（Industrial Light AOV Splitter）](/zh/industrial-light-aov-splitter/)** | 仅在**官方 Blender**（没有内核级灯光细分通道）时使用，把指定灯光集合拆分成漫反射/高光/透射/体积 AOV | Blender 插件 |
@@ -44,17 +44,17 @@ faq: true
 在开启 Deep EXR 或拆分 AOV 之前，先把分层结构和色彩标准定死，能省掉后面大半返工：
 
 1. **用批量管理器理清 ViewLayer**：点击 Blender 右上角 ViewLayer 下拉框旁边的入口，打开 **[ViewLayer 批量管理器](/zh/industrial-cg-platform/features/viewlayer-manager)**。按合成需求拆开主要元素（例如背景场景、道具、主体角色，以及专门用于抗锯齿几何数据的图层），选中多个 ViewLayer 后一键套用通道与灯光组预设。
-2. **双端统一色彩配置**：通过 `OCIO` 环境变量（或替换 Blender 的 `5.2/colormanagement/` 目录），让 Blender 和 Nuke 加载同一份 **AIO-OCIO** 配置文件，确保线性 EXR 与 AgX/ACES 显示观感完全一致。详见 [Blender 色彩管理配置](/zh/aio-ocio/manual/blender-setup) 与 [通用软件配置](/zh/aio-ocio/manual/general-softwares)。
+2. **双端统一色彩配置**：通过 `OCIO` 环境变量（或替换 Blender 的 `<主版本.次版本>/colormanagement/` 目录），让 Blender 和 Nuke 加载同一份 **AIO-OCIO** 配置文件，确保线性 EXR 与 AgX/ACES 显示观感完全一致。详见 [Blender 色彩管理配置](/zh/aio-ocio/manual/blender-setup) 与 [通用软件配置](/zh/aio-ocio/manual/general-softwares)。
 3. **关掉多余的默认渲染输出**：如果使用了 **Industrial AOV Connector 5.3.0**，保持偏好设置里的**自动禁用默认渲染输出**开启；每次生成或更新输出树时，插件会自动关掉 Blender 默认的 `Save Output`，避免多写一份占空间的无用成图。
 
 ## 4. Step 2 — 渲染原生 Deep EXR
 
-原生 Deep EXR 由 Cycles 直接在每个像素里记录多层三维深度与透明度（`Z` / `ZBack` / `RGBA`）。送进 Nuke 后，毛发、烟雾和前后穿插的角色可以直接按真实空间位置合并，再也不用因为资产微调反复重渲遮罩。
+原生 Deep EXR 由 Cycles 直接在每个像素里记录多层三维深度与透明度（`Z` / `ZBack` / `RGBA`），完整覆盖表面、物体体积与原生 World Volume 世界体积。送进 Nuke 后，毛发、烟雾、世界环境雾和前后穿插的角色可以直接按真实空间位置合并，再也不用因为资产微调反复重渲遮罩。
 
 1. **选择输出方式**：
    - **单层快速输出**：在 **输出属性 > 输出** 中将 **文件格式** 设为 `Deep EXR`（色彩选 `RGBA`，色深选 `16-bit` 半浮点或 `32-bit` 全浮点，压缩选无损 `ZIPS`）。
    - **多 ViewLayer 合成器输出（生产推荐）**：添加 `File Output` 节点（或让自动分层导出插件直接建好），在 **节点格式** 里选择 `Image` → `Deep EXR`，接上对应 ViewLayer 的 `Image` 接口即可。
-2. **选择 Deep 色彩模式（5.2.4 LTS）**：在 **渲染属性 > 性能 > Deep** 中，默认开启 **Simple Mode（轻量模式）**，它会把未降噪的 Beauty 颜色按权重分配给深度采样，省显存、文件小、速度快；只有遇到复杂半透明体积嵌套、需要记录每层原始辐射度时，再取消勾选切到 **Physical Mode（物理精确模式）**。
+2. **选择 Deep 色彩模式**：在 **渲染属性 > 性能 > Deep** 中，默认开启 **Simple Mode（轻量模式）**，它会把未降噪的 Beauty 颜色按权重分配给深度采样，省显存、文件小、速度快；只有遇到复杂半透明体积嵌套、需要记录每层原始辐射度时，再取消勾选切到 **Physical Mode（物理精确模式）**。
 3. **控制显存上限**：在 **渲染属性 > 性能 > 内存** 里调整 **Deep Tile Budget（显存上限）**（默认 `1024 MB`，填 `0` 为不限）。高分辨率镜头显存紧张时，它会自动缩小分块尺寸保住显存，不会牺牲 Deep 精度。
 
 完整参数与界面说明可查阅 [Deep EXR 功能手册](/zh/industrial-cg-platform/features/deep-exr) 及博客 [Blender Deep EXR in Nuke](/blog/posts/2026-07-22-deep-exr-compositing)。
@@ -68,8 +68,8 @@ faq: true
 3. 在 **输出属性 > Overscan**（紧挨在格式面板下方）中填入百分比或像素余量（例如 `15%`，为镜头畸变留足安全边）。
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Blender 5.2.4 相机视口展示内框最终交付画幅与外框 15% 虚线 Overscan 安全边" loading="lazy"></a>
-<figcaption>Industrial CG Platform 5.2.4 LTS 真实镜头相机视口：内框为最终成片交付范围，外侧虚线框为向外多渲染 15% 的 Overscan 安全边。</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Industrial CG Platform 相机视口展示内框最终交付画幅与外框 15% 虚线 Overscan 安全边" loading="lazy"></a>
+<figcaption>Industrial CG Platform 真实镜头相机视口：内框为最终成片交付范围，外侧虚线框为向外多渲染 15% 的 Overscan 安全边。</figcaption>
 </figure>
 
 文件进到 Nuke 后，`Read` 和 `DeepRead` 会自动识别交付画幅与外扩 bbox，下游的镜头畸变（`LensDistortion`）、位移（`Transform`）和模糊（`Blur`）节点都能直接吃到真实渲染像素。详见 [EXR Overscan 功能手册](/zh/industrial-cg-platform/features/exr-overscan)。
@@ -88,7 +88,7 @@ faq: true
 
 | 对比维度 | 平台原生灯光组细分通道 | [官方版灯光拆分插件（Industrial Light AOV Splitter）](/zh/industrial-light-aov-splitter/) |
 | --- | --- | --- |
-| **适用软件版本** | Industrial CG Platform 5.2.x（Cycles 内核原生支持） | 官方 Blender（Python 插件方案） |
+| **适用软件版本** | Industrial CG Platform（Cycles 内核原生支持） | 官方 Blender（Python 插件方案） |
 | **拆分精细度** | 每组灯光分别输出 **Direct + Indirect** 四项细分（漫反射 / 高光 / 透射 / 体积） | 每组灯光输出四项细分（漫反射 / 高光 / 透射 / 体积） |
 | **场景整理要求** | 直接沿用 Cycles 标准灯光组面板，不限制集合命名 | 灯光需放入 `lgt_*` 前缀集合，且灯光名称只能用字母和数字（不能带下划线） |
 | **Nuke 端自动重建** | 由 [Auto Light Shuffle](/zh/auto-light-shuffle/) 原生最高优先级识别 | 由 [Auto Light Shuffle](/zh/auto-light-shuffle/) 自动兼容识别 |
@@ -161,7 +161,7 @@ DeepRead -> DeepSample（逐像素查看 Z / ZBack / Alpha 分布）
 - **`DeepMerge` 边缘发虚或体积穿插异常**：先用 Nuke 的 `DeepSample` 节点查看单个像素里的采样分布。如果相近深度的采样被合并得太狠，在 Blender 的 Deep EXR 输出设置里调低 **Deep Merge Tolerance（深度合并容差）** 与 **Alpha Merge Tolerance（透明度合并容差）**（默认 `0.010`）。如果半透明烟雾穿插需要更严格的物理精度，在 **渲染属性 > 性能 > Deep** 中取消勾选 **Simple Mode**，改用 **Physical Mode**。
 - **高分辨率 Deep 渲染爆显存**：在 **渲染属性 > 性能 > 内存** 中调低 **Deep Tile Budget**（默认 `1024 MB`），Cycles 会自动缩小有效分块保住显存，不影响 Deep 精度。
 - **Overscan 面板呈灰色点不了**：检查 **渲染引擎** 是否为 `Cycles`，并取消勾选 **输出属性 > 格式** 中的 **渲染区域（Render Region）**。
-- **当前已知限制**：Deep EXR 目前**暂不支持 World Volume（世界环境体积）**；完整的自定义 Deep metadata 透传属于后续开发计划，尚未包含在当前 5.2.4 版本中。
+- **当前已知限制**：完整的自定义 Deep metadata 透传属于后续开发计划，尚未包含在当前基线中。
 
 ## 10. 常见问题 (FAQ)
 
@@ -183,4 +183,4 @@ DeepRead -> DeepSample（逐像素查看 Z / ZBack / Alpha 分布）
 
 ### 这套流程支持 Linux 吗？
 
-当前稳定版（**Industrial CG Platform 5.2.4 LTS**，遵循 GPL-3.0-or-later 开源协议）面向 **Windows 10/11 x64**。Linux 方面，现已发布基于 Rocky Linux 8.10 基线的公开 **Linux Beta 1 预发布版**（`industrial-cg-platform-5.2.4-linux-beta.1`）供下载测试与反馈，完整的原生 Linux GPU/OptiX 与桌面验收仍在进行中。最新进展请参阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
+当前稳定版（**Industrial CG Platform**，遵循 GPL-3.0-or-later 开源协议）面向 **Windows 10/11 x64**。Linux 方面，现已发布基于 Rocky Linux 8.10 基线的公开 **Linux Beta 预发布版** 供下载测试与反馈，完整的原生 Linux GPU/OptiX 与桌面验收仍在进行中。最新进展请参阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。

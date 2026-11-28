@@ -1,6 +1,6 @@
 ---
 title: "安装"
-description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles OptiX GPU 配置以及与原版 Blender 共存方式。"
+description: "Industrial CG Platform 系统要求与 Windows x64 ZIP 安装指南，涵盖 SHA256 校验、Cycles OptiX GPU 配置以及与原版 Blender 共存方式。"
 ---
 # 安装
 
@@ -17,7 +17,7 @@ description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP �
 ## 下载
 
 1. 前往 [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases) 页面。
-2. 下载最新的 `industrial-cg-platform-X.X.X.zip` 压缩包（例如 `industrial-cg-platform-5.2.4.zip`）。
+2. 下载最新的 `industrial-cg-platform-X.X.X.zip` 压缩包。
 3. 通过检查发布说明中列出的 SHA256 哈希值验证下载文件的完整性。
 
 ## 解压与安装
@@ -41,7 +41,7 @@ description: "Industrial CG Platform 5.2.4 LTS 系统要求与 Windows x64 ZIP �
 预期输出：
 
 ```
-Blender 5.2.4 LTS Industrial CG Platform
+Blender <版本号> Industrial CG Platform
 ```
 
 ## GPU 渲染设置
@@ -55,7 +55,7 @@ Blender 5.2.4 LTS Industrial CG Platform
 
 ## 与官方 Stock Blender 共存
 
-Industrial CG Platform 默认使用与官方相同的配置目录（`%APPDATA%\Blender Foundation\Blender\5.2\`）。如果您希望在本地保持完全独立的配置和用户偏好：
+Industrial CG Platform 默认使用与官方相同的配置目录（`%APPDATA%\Blender Foundation\Blender\<主版本.次版本>\`）。如果您希望在本地保持完全独立的配置和用户偏好：
 
 - 在启动快捷方式后附加 `--factory-startup` 参数，以进行全新的干净会话。
 - 或者在运行前，将环境变量 `BLENDER_USER_RESOURCES` 设置为一个自定义的专用文件夹路径。

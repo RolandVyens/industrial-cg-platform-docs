@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender officiel et fichiers .blend, backends OptiX/CPU, gestionnaire ViewLayer, statut Linux Bêta 1 et compilation."
+description: "Foire aux questions sur Industrial CG Platform : compatibilité Blender officiel et fichiers .blend, backends OptiX/CPU, gestionnaire ViewLayer, statut Linux Bêta et compilation."
 ---
 # FAQ
 
@@ -45,7 +45,7 @@ Le gestionnaire de ViewLayer utilise Qt (via le runtime BQt) pour son interface 
 
 ### Puis-je l'utiliser sur Linux ?
 
-La version stable actuelle (**5.2.4 LTS**) vise uniquement Windows x64 (archive ZIP). Une **préversion publique Linux Beta 1** (`industrial-cg-platform-5.2.4-linux-beta.1`, compilée sur base Rocky Linux 8.10 / EL8) est disponible pour tests et retours, tandis que la qualification complète GPU/OptiX et bureau Linux reste en cours. Voir [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).
+Les versions stables actuelles visent uniquement Windows x64 (archive ZIP). Une **préversion publique Linux Bêta** (compilée sur base Rocky Linux 8.10 / EL8) est disponible pour tests et retours, tandis que la qualification complète GPU/OptiX et bureau Linux reste en cours. Voir [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).
 
 ### Que signifie le message `failed to get blender hwnd` dans les logs ?
 

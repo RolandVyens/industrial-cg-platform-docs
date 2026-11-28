@@ -17,7 +17,7 @@ Industrial CG Platform ajoute une prise en charge native de la sortie Deep EXR �
 
 - **Fusion profonde sans perte** — Combinez plusieurs calques de rendu CG dans Nuke à l'aide de `DeepMerge` sans artefacts de bord ni masques de découpe manuels (holdout mattes).
 - **Profondeur par échantillon** — Chaque pixel contient des informations de profondeur complètes, permettant aux compositeurs en aval de découper, rééchantillonner et réeclairer à des plages de profondeur arbitraires.
-- **Prise en charge du volume** — Les données de rendu de volume sont incluses dans la sortie profonde, avec un comportement Alpha amélioré sur les tranches volumétriques et de meilleures performances de compositing Deep (mise à niveau 5.2.4 LTS).
+- **Prise en charge des volumes et du World Volume** — Les volumes d'objets ainsi que les shaders World Volume natifs de Blender sont pris en charge en sortie Deep EXR, avec un comportement Alpha amélioré sur les tranches volumétriques et de meilleures performances de compositing Deep. Le brouillard fini conserve ses intervalles de profondeur tandis que la contribution restante du brouillard non borné est enregistrée dans un échantillon lointain pour une insertion sans perte dans Nuke.
 - **Sortie directe et compositeur** — Fonctionne à la fois comme sortie de rendu de scène directe et via le nœud de sortie de fichier du compositeur Blender.
 
 ## Choisir un mode de sortie
@@ -119,7 +119,6 @@ Pour de meilleurs résultats, rendez chaque élément CG majeur (personnages, d�
 
 ## Limites connues
 
-- **World Volume** — Le World Volume n'est actuellement pas pris en charge en sortie Deep EXR.
 - **Reconstruction des métadonnées** — La reconstruction complète des métadonnées profondes est un travail futur et ne fait pas partie de la version de référence actuelle.
 - **Utilisation de la mémoire** — La sortie profonde stocke beaucoup plus de données que l'EXR plat. Utilisez le paramètre Deep Tile Budget pour contrôler ce compromis.
 

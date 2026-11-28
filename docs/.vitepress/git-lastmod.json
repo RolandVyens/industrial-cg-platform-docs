@@ -27,9 +27,13 @@
     "lastmod": "2026-11-26T08:46:32.000Z",
     "blob": "b68ce8c2a3b6f52d236b6a1fe9dca53ff819db6d"
   },
+  "blog/posts/2026-11-27-world-volume-deep-exr.md": {
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "1da551b8408a5628bdf212009e121477b2c7d51d"
+  },
   "en/aio-ocio/index.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "44ae9034d3401b5b696f723debd4a22beeb2dfa1"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "99286029eea5694a5c58aeefe36635f8442ed1fe"
   },
   "en/aio-ocio/manual/blender-setup.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
@@ -48,24 +52,24 @@
     "blob": "0291a1c1d53af6f13cc4e58614a91e893fc0a999"
   },
   "en/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "97718f0396356ffc02570adb53754154136d7bb0"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "169dbe01c66ed5a173cdc766a5b0e908e2ca34aa"
   },
   "en/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "ca3d89c7201d8f5bf1973a1b4bdc01a5eb558f77"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "178986794c50ee1ce0c11c32585dcedc0bb979f2"
   },
   "en/donate.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
     "blob": "243180297921654f80b4e822769625e94b0ddf81"
   },
   "en/feature-tracking.md": {
-    "lastmod": "2026-11-26T08:52:47.000Z",
+    "lastmod": "2026-11-28T07:47:16.000Z",
     "blob": "aae8775a124b4e033b35c5914ff8aaadc0d79e48"
   },
   "en/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "02382c99ad5cbc78470da34ad7549f1b55779cff"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "66265c1571d79e4a71fac5972134cff90062fa87"
   },
   "en/industrial-aov-connector/index.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -92,24 +96,24 @@
     "blob": "c5604b53e5a493b805840cdb1fb626f57b96f513"
   },
   "en/industrial-cg-platform/about/index.md": {
-    "lastmod": "2026-11-08T17:00:20.000Z",
-    "blob": "53f06986d9b12d9e5816c4b5d5022a1328f1b7f5"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "709c3b6523978e431a6befbf6302cd84e8c3b3a1"
   },
   "en/industrial-cg-platform/api/bqt-usage.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
     "blob": "16cf1f96393c471bc2bd450c232e6b5533e305c9"
   },
   "en/industrial-cg-platform/api/cycles-kernel.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "e0809bb450b37018670d77a5b4b8f74a0c2282cc"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "b61295ab4cbae2d5ba35188714fef22302d945c2"
   },
   "en/industrial-cg-platform/api/index.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
     "blob": "06870bf0f1d6ced3c4c2c2927a7864a99e60908d"
   },
   "en/industrial-cg-platform/api/pass-system.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "cd8bcc1da0b0ac8ef2bc53905e5dfb1fa3b7c17d"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "f544db5b74e3eeb5937af52212033de23f69215c"
   },
   "en/industrial-cg-platform/api/python-operators.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
@@ -120,12 +124,12 @@
     "blob": "f9ca4b46e000aa849827944d34f2825be7d4ff12"
   },
   "en/industrial-cg-platform/features/deep-exr.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "26f6c2f03c650645792fc63c8a4c3d04b1038924"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "9e4de447f8e758f740ab8fc3e72b208d74b43a75"
   },
   "en/industrial-cg-platform/features/exr-overscan.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "42da76193980b82741dda94c1bb275c279504212"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "4b438177b0ce248c59ff08a64609df2b4888246b"
   },
   "en/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -136,24 +140,24 @@
     "blob": "b68b15705c0ff80e165578634d0e19a3aa1ac96a"
   },
   "en/industrial-cg-platform/features/viewlayer-manager.md": {
-    "lastmod": "2026-11-19T15:53:46.000Z",
-    "blob": "2d93cffe6ee547a3be8569e7d498baf8ce0099f4"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "3f93ff687766b79a717ca9ff324fa91c65600b76"
   },
   "en/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "b9892fafd9b053c9fc8d7bee1b1a54721b1dd45e"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "d085c7c5931636bc3f41c1474e70a0ebe7d8e3e5"
   },
   "en/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "a10a24fc3a882d465d8d221b4d74c853e9f785e3"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "be64c5e2662ae9a40248c8c91d52a142df3fe3af"
   },
   "en/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "05c72b9f4195495613a0974cbf2e58adc08b1524"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "9e327672de2694becb5148c2f0ce03ab6f4b6f6c"
   },
   "en/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "07ebac1160112658003447d2d784163a5bbec980"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "b0d71d0a48b6e413a5afca819227164730ad8c5b"
   },
   "en/industrial-cg-platform/index.md": {
     "lastmod": "2026-11-23T11:51:14.000Z",
@@ -192,12 +196,12 @@
     "blob": "b36a7d3318e3da4cc838ec178cd827c1c5744d1b"
   },
   "en/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "ffcfcff60c3285c1f27042b122dc4a46331dc3e7"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "0aeb0010c848ee9f77272d2e6311b7e83d0faa7c"
   },
   "fr/aio-ocio/index.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "dbf2bed5dc74c16d05f38bbe545bca3631e2b035"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "3f1f142dad19e2d112992361c232a580f4411a6a"
   },
   "fr/aio-ocio/manual/blender-setup.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -216,24 +220,24 @@
     "blob": "f0a3b36da6bb48c54b790abfdbdb029172a4224b"
   },
   "fr/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "8a79920a57a53c6b3fc0f9dffe67dee8127ae96a"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "9cbbcdb335d5305df5c2138db7fab92a4dc617c8"
   },
   "fr/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "bddabf6741002ad98a0a1af25a7dc936e404b885"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "664342681d3781f44ed919addad160c27615424a"
   },
   "fr/donate.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
     "blob": "9274924829a46942afb6272b1b3a3e5581087afc"
   },
   "fr/feature-tracking.md": {
-    "lastmod": "2026-11-26T08:52:47.000Z",
+    "lastmod": "2026-11-28T07:47:16.000Z",
     "blob": "5aa952d935f4b169a3a80c4d95ca7355eb2316e6"
   },
   "fr/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "0edab9e58f9258e552eb639fd88d0a4dfb3c70e1"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "1bbdcba207dc6869d0f6e6b426c86bbb16d1cf19"
   },
   "fr/industrial-aov-connector/index.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -260,24 +264,24 @@
     "blob": "9ab102171cc62e306cee18ea1e53c55922b7168b"
   },
   "fr/industrial-cg-platform/about/index.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "6feaccf5e509745187551577107d1b8fc1cd4133"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "3a6fbb16e62aee38fcf78909333e38eeadca97eb"
   },
   "fr/industrial-cg-platform/api/bqt-usage.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
     "blob": "667eba5515e64d39ae6d124571f6281503f98f84"
   },
   "fr/industrial-cg-platform/api/cycles-kernel.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "354224c39ffdc2643e31656f1a74e624851b71a9"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "e6f75140e3f38e4a9b02c0d94f3f090d76ac09a1"
   },
   "fr/industrial-cg-platform/api/index.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
     "blob": "740d50055c3a7acbc64d35ba09fad1f14ef063fd"
   },
   "fr/industrial-cg-platform/api/pass-system.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "2f1aa937b32d4e5b471f158719895a45f06864e6"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "eaf48f1501f4528a82bd0adf907122143dd378f6"
   },
   "fr/industrial-cg-platform/api/python-operators.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
@@ -288,12 +292,12 @@
     "blob": "08f887c3c06715ed243c69e1f850fcdaf8c5ee92"
   },
   "fr/industrial-cg-platform/features/deep-exr.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "7b9564b1882086f126463ea57298e68bb0911598"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "fa83819f4132d586dfdc0db4f0f1a9220958b7a0"
   },
   "fr/industrial-cg-platform/features/exr-overscan.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "3e90c7c7c6269eb4187d8755842273616362b86f"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "ba3678a88950b8778c1e89f08f089d2158124023"
   },
   "fr/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -304,24 +308,24 @@
     "blob": "40ca02caf61ec9152df65db37d2ad39fb594559d"
   },
   "fr/industrial-cg-platform/features/viewlayer-manager.md": {
-    "lastmod": "2026-11-19T15:53:46.000Z",
-    "blob": "c9b0716081e80233d4f21dba358f877dda1cc251"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "7d99c3ad7474f78f53085bfa953420ed762fdcb9"
   },
   "fr/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "6c3a5a56c9e9916e34d398576ef7689a3575109c"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "4f3b194346d02e73954b8501b9127b8871c74c71"
   },
   "fr/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "3dc32fe51ff189ca6d77b5f341c53102e88f9654"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "f3af994d82032045d2f967af5c26a25a36d33a52"
   },
   "fr/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "c39d7611b134f7eb60cf0fbcc24d4c5e6b47766f"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "61486ecc56d3abdb2f3e80d67a9df7261e739bba"
   },
   "fr/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "ddc20470faeb100ef09623731532c480f739b2d5"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "692d549c38d1df9df083e26ee2627a2b30eeb0fd"
   },
   "fr/industrial-cg-platform/index.md": {
     "lastmod": "2026-11-23T11:51:14.000Z",
@@ -360,16 +364,16 @@
     "blob": "662dcf6d55e05da2b9373c465a14efa807788d62"
   },
   "fr/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "c8777d25599a4b0422f5d5e5724a4d86ed421f22"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "0336610dd21c2a213636993daf60136aacf4d8a0"
   },
   "index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "c59907917f33d94e4cb7f0581c8ff625cb44148b"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "fd620db92e5a7d362b69224f5d3515e9de0ad36b"
   },
   "zh/aio-ocio/index.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "12f73333b61e892554a815fbce4b29e28372bfbb"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "16a7394c4e0c18f052e8dc960d53aedc9cfc2e41"
   },
   "zh/aio-ocio/manual/blender-setup.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
@@ -388,24 +392,24 @@
     "blob": "3e8f361b08d8aa7952b505837170f532b66c6e1d"
   },
   "zh/blender-to-nuke-workflow/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "918a8a1858fbe63520a3adb12a9fa9a93386f02c"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "6ff086a32882eb3532c19290b358271e66184563"
   },
   "zh/blender-vfx-pipeline/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "61d33d7f3a5c0dab43e5f6b19a58ec2c156f6abe"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "4ecfc5113205947d211fe8b6fa9e8b3ed32d8e3e"
   },
   "zh/donate.md": {
     "lastmod": "2026-11-08T17:00:20.000Z",
     "blob": "dc93562aced942d1bfe1db83e4923594ae2b15a9"
   },
   "zh/feature-tracking.md": {
-    "lastmod": "2026-11-26T08:52:47.000Z",
+    "lastmod": "2026-11-28T07:47:16.000Z",
     "blob": "697ce85d872c5e3000a07f8aa1a63680c9b0428f"
   },
   "zh/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "e468fc884736e9f5740322faa0daf942e7b1e569"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "6bca88f12f29b94accccbae9990f5419182f57a1"
   },
   "zh/industrial-aov-connector/index.md": {
     "lastmod": "2026-11-18T11:40:10.000Z",
@@ -432,24 +436,24 @@
     "blob": "2e4da654d2ef1740678c7cb9dba39ef9e77b00d3"
   },
   "zh/industrial-cg-platform/about/index.md": {
-    "lastmod": "2026-11-08T17:00:20.000Z",
-    "blob": "5df81bbf32e3d786a7d0f020329904f39029e36f"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "ddb83f416c71efacc27c8cfef15d418ccbdc1d4e"
   },
   "zh/industrial-cg-platform/api/bqt-usage.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
     "blob": "79c33746d07b561682fb69ae31c31817c0656f60"
   },
   "zh/industrial-cg-platform/api/cycles-kernel.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "985816002bbda94ffb30c6d867a9e28e3bda3c62"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "3577c24c48bc52bb8c99508d196cb94af014ce5f"
   },
   "zh/industrial-cg-platform/api/index.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
     "blob": "602e1a7e7c1c4a3b4c4aa7f5d7b0ec330ffbcca6"
   },
   "zh/industrial-cg-platform/api/pass-system.md": {
-    "lastmod": "2026-07-23T07:48:29.000Z",
-    "blob": "b10518c09d5525c70a00222ddebfc09d94dd54e7"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "3d6c99f9a3c3da503242acd770f07b856f88a9d3"
   },
   "zh/industrial-cg-platform/api/python-operators.md": {
     "lastmod": "2026-07-23T07:48:29.000Z",
@@ -460,12 +464,12 @@
     "blob": "6afea873b821fe1f24cea69d5a308ad6194d451e"
   },
   "zh/industrial-cg-platform/features/deep-exr.md": {
-    "lastmod": "2026-11-18T11:40:10.000Z",
-    "blob": "bdab99c4dd5fd02e412f61a0293e224e45f6eb9d"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "cafe8d841bcb55521f26236ebfb4d689964c74fc"
   },
   "zh/industrial-cg-platform/features/exr-overscan.md": {
-    "lastmod": "2026-11-19T15:53:46.000Z",
-    "blob": "45090af42d48e6ed24e73b1bfc7c770ebdb57ef9"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "2c34bd34b0fb68c848bfe1946866abff1aaafd12"
   },
   "zh/industrial-cg-platform/features/lightgroup-lobe-passes.md": {
     "lastmod": "2026-11-19T15:53:46.000Z",
@@ -476,24 +480,24 @@
     "blob": "7a29e044820cd599bde0e856acf7dc82f30d1fe1"
   },
   "zh/industrial-cg-platform/features/viewlayer-manager.md": {
-    "lastmod": "2026-11-19T15:53:46.000Z",
-    "blob": "b855c0aa075ffed3e6765b9f7730f8c061a9ef86"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "c54ef834b6a5dd003b02281a0c27a002307fe7b5"
   },
   "zh/industrial-cg-platform/guide/building-from-source.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "c04c7e1f5c702f7ad740f94f94a04a83093d9d1b"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "94cd314924e2c7f88c39666d369b3a00b9f4f188"
   },
   "zh/industrial-cg-platform/guide/faq.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "31fc6fb0a8dda8323404164dc19fda136b18ed4d"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "d1e56adcb72f0da5efab7d36e915c9644820fb5a"
   },
   "zh/industrial-cg-platform/guide/getting-started.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "0b217586ac5be2da275656675d320db7ba893acf"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "c127ac6b6d249d5e569c912e52d3ab3ad7c74fa6"
   },
   "zh/industrial-cg-platform/guide/installation.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "e6dd97b21d51916559cfb8b688cdfb18b4712489"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "05b4577548dcdcd1242f2fb90166b7ac3aa0886c"
   },
   "zh/industrial-cg-platform/index.md": {
     "lastmod": "2026-11-23T11:51:14.000Z",
@@ -532,7 +536,7 @@
     "blob": "d70637f4db17368cd49a0be6130241db0d72fe75"
   },
   "zh/vs-stock-blender/index.md": {
-    "lastmod": "2026-11-23T11:51:14.000Z",
-    "blob": "9335f190f674181301a1ca244e219a1587e6a921"
+    "lastmod": "2026-11-28T07:47:16.000Z",
+    "blob": "61e87fb67e2e52cee0f63c698385420b7e9527c9"
   }
 }

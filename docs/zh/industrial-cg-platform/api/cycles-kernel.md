@@ -91,10 +91,10 @@ film_write_lightgroup_split_pass()  // 写入特定的灯光组分量通道
 // 属性灯光前向命中发射写入现有的分量族中
 ```
 
-## 环境雾 (Environment Fog - 开发中)
+## 实时世界灯光雾 (Atmosphere Volume - 开发中)
 
 ::: warning
-环境雾（Environment Fog）内核扩展目前处于开发阶段，尚未正式发布。此特征发布后，本节内容将会予以填充。
+实时世界灯光雾（`Atmosphere Volume`）内核扩展目前处于活跃开发阶段，尚未正式发布。此特性发布后，本节内容将会予以填充。
 :::
 
 ## 源文件

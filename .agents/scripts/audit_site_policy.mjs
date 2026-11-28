@@ -56,7 +56,7 @@ for (const full of contentFiles) {
       errors.push(`[CUDA] docs/${rel}:${lineNo} mentions CUDA (platform supports NVIDIA RTX OptiX + CPU only)`)
     }
     if (/Rocky Linux 9|\bRocky 9\b/i.test(line)) {
-      errors.push(`[LINUX] docs/${rel}:${lineNo} mentions stale "Rocky Linux 9" (Linux Beta 1 uses Rocky Linux 8.10 / EL8 baseline)`)
+      errors.push(`[LINUX] docs/${rel}:${lineNo} mentions stale "Rocky Linux 9" (Linux Beta uses Rocky Linux 8.10 / EL8 baseline)`)
     }
     if (!gpl2Allowlist.has(rel) && /GPL-2\.0|\bGPL\s*v2\b/i.test(line)) {
       errors.push(`[LICENSE] docs/${rel}:${lineNo} mentions GPL-2.0 (platform license is GPL-3.0-or-later)`)

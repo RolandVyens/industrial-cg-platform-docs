@@ -32,7 +32,7 @@ description: "AIO-OCIO 是一个统一的、多合一的 OpenColorIO (OCIO) 色�
 
 ### 在 Blender 中配置
 1.  从开源仓库下载最新的色彩配置文件。
-2.  前往您的 Blender 安装目录下的色彩管理文件夹（例如 `5.2/colormanagement/`）。
+2.  前往您的 Blender 安装目录下的色彩管理文件夹（例如 `<主版本.次版本>/colormanagement/`）。
 3.  替换默认的 `config.ocio` 文件及数据文件夹，或者直接设置系统环境变量：
     ```bash
     OCIO=/path/to/AIO-OCIO/config.ocio

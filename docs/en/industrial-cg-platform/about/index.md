@@ -14,14 +14,7 @@ Industrial CG Platform exists to push Blender further in that direction while st
 
 ## Roadmap
 
-Planned VFX and production-focused directions include:
-
-- indirect-light-only objects for more targeted lighting control
-- collection and object-level material override workflows
-- world environment fog behavior similar to `aiFog`, focused on direct-light use cases
-- deeper documentation for shot-based rendering and compositing workflows
-
-For a live overview of in-progress R&D, released milestones, and planned features, see the [Development Tracking](/en/feature-tracking) page.
+The live roadmap—covering shipped milestones, active R&D, and planned directions—is maintained on the [Development Tracking](/en/feature-tracking) page.
 
 ## Support / Sponsor
 

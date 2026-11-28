@@ -15,14 +15,14 @@ This page documents how Industrial CG Platform extends Blender's render pass and
 | `PASS_DEEP_COMBINED` | `Deep Combined` | Per-sample RGBA with depth for deep compositing |
 | `PASS_DEEP_POSITION` | `Deep Position` | Per-sample world-space position data |
 
-### Fog Pass (Pending)
+### Atmosphere Pass (In Progress)
 
 | Pass Type | Internal Name | Description |
 | --- | --- | --- |
-| `PASS_FOG` | `Fog` | Environment fog contribution pass |
+| `PASS_ATMOSPHERE` | `Atmosphere` | Dedicated `Atmosphere Volume` world light fog contribution pass |
 
 ::: warning
-The Fog pass is part of the Environment Fog feature which is not yet shipped.
+The `Atmosphere` pass is part of the `Atmosphere Volume` feature which is currently in development and not yet shipped.
 :::
 
 ## Lightgroup Lobe Pass Registration

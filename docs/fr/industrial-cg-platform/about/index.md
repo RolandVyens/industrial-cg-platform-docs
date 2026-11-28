@@ -14,14 +14,7 @@ Industrial CG Platform existe pour pousser Blender plus loin dans cette directio
 
 ## Feuille de route (Roadmap)
 
-Les orientations prévues axées sur les VFX et la production comprennent :
-
-- Objets n'affectant que la lumière indirecte (indirect-light-only) pour un contrôle d'éclairage plus ciblé
-- Flux de travail de remplacement de matériaux (Material Override) au niveau de la collection et de l'objet
-- Comportement du brouillard de l'environnement mondial similaire à `aiFog`, axé sur les cas d'utilisation de la lumière directe
-- Documentation plus approfondie sur le rendu par plan et les flux de travail de compositing
-
-Pour un aperçu en direct de la R&D en cours, des jalons publiés et des fonctionnalités prévues, consultez la page [Suivi du développement](/fr/feature-tracking).
+La feuille de route à jour — couvrant les jalons publiés, la R&D en cours et les fonctionnalités prévues — est maintenue sur la page [Suivi du développement](/fr/feature-tracking).
 
 ## Soutien et Parrainage
 

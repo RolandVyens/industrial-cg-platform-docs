@@ -17,7 +17,7 @@ Industrial CG Platform 为 Blender Cycles 添加了原生 Deep EXR 输出支持�
 
 - **无损深度合并** — 在 Nuke 中使用 `DeepMerge` 合并多个 CG 渲染图层，避免边缘产生伪影，也无需手动绘制遮罩（holdout mattes）。
 - **逐采样深度** — 每个像素携带完整的深度信息，允许下游合成人员在任意深度范围内对画面进行切片、重新采样和重打光。
-- **体积支持** — 体积渲染数据包含在深度输出中；5.2.4 LTS 架构升级进一步改善了体积切片（volume-slice）的 Alpha 表现与 Deep 渲染/合成性能。
+- **体积与 World Volume 支持** — 同时支持物体体积与 Blender 原生 World Volume 的 Deep EXR 输出，并优化了体积切片（volume-slice）的 Alpha 表现与 Deep 渲染/合成性能。有限世界雾保留完整深度区间，无界雾的剩余贡献存入远端深度样本，便于在 Nuke 中无损插片。
 - **合成器集成** — 同时支持直接场景渲染输出和 Blender 合成器节点输出。
 
 ## 选择输出方式
@@ -119,7 +119,6 @@ Deep Tile Budget 是内存限制，不是 Deep 质量参数。它不会直接降
 
 ## 已知限制
 
-- **World Volume** — 当前暂不支持世界体积（World Volume）的 Deep EXR 输出。
 - **元数据重建** — 完整的深度元数据重建属于未来规划，不包含在当前基线中。
 - **内存占用** — 深度输出存储的数据量远多于平面 EXR。请使用 Deep Tile Budget 参数来控制平衡。
 

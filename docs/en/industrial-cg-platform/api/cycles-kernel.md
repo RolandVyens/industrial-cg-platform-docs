@@ -91,10 +91,10 @@ The ordinary lamp-hit path (`PRIMITIVE_LAMP` forward hit) now writes into lightg
 // Finite light forward-hit emission writes into existing lobe family
 ```
 
-## Environment Fog (Pending)
+## Atmosphere Volume (In Progress)
 
 ::: warning
-Environment Fog kernel extensions are currently in development and not yet shipped. This section will be populated when the feature is released.
+`Atmosphere Volume` (real-time world light fog) kernel extensions are currently in active development and not yet shipped in a public release. This section will be populated when the feature is released.
 :::
 
 ## Source Files

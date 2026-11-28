@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "Configuration requise et guide d'installation ZIP Windows x64 pour Industrial CG Platform 5.2.4 LTS, incluant la vérification SHA256, la configuration GPU OptiX et la coexistence avec Blender officiel."
+description: "Configuration requise et guide d'installation ZIP Windows x64 pour Industrial CG Platform, incluant la vérification SHA256, la configuration GPU OptiX et la coexistence avec Blender officiel."
 ---
 # Installation
 
@@ -17,7 +17,7 @@ description: "Configuration requise et guide d'installation ZIP Windows x64 pour
 ## Téléchargement
 
 1. Rendez-vous sur la page des [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases).
-2. Téléchargez le fichier compressé `industrial-cg-platform-X.X.X.zip` le plus récent (ex. : `industrial-cg-platform-5.2.4.zip`).
+2. Téléchargez le fichier compressé `industrial-cg-platform-X.X.X.zip` le plus récent.
 3. Vérifiez l'intégrité du téléchargement à l'aide de la clé de hachage SHA256 indiquée dans les notes de version.
 
 ## Installation
@@ -41,7 +41,7 @@ Exécutez la commande suivante dans une invite de commande ou PowerShell dans le
 Sortie attendue :
 
 ```
-Blender 5.2.4 LTS Industrial CG Platform
+Blender <version> Industrial CG Platform
 ```
 
 ## Configuration GPU
@@ -55,7 +55,7 @@ Pour activer le rendu matériel Cycles GPU avec NVIDIA :
 
 ## Coexistence avec Blender standard
 
-Industrial CG Platform utilise par défaut le même dossier de configuration utilisateur que Blender standard (`%APPDATA%\Blender Foundation\Blender\5.2\`). Si vous préférez conserver des préférences utilisateur complètement distinctes :
+Industrial CG Platform utilise par défaut le même dossier de configuration utilisateur que Blender standard (`%APPDATA%\Blender Foundation\Blender\<major.minor>\`). Si vous préférez conserver des préférences utilisateur complètement distinctes :
 
 - Ajoutez l'argument `--factory-startup` au raccourci de lancement pour démarrer sur une session d'usine propre.
 - Ou définissez la variable d'environnement `BLENDER_USER_RESOURCES` sur un chemin personnalisé dédié avant le lancement.

@@ -32,7 +32,7 @@ En unifiant les transformations de couleurs sur les principaux outils de créati
 
 ### Intégration dans Blender
 1.  Téléchargez les derniers fichiers depuis le dépôt.
-2.  Allez dans le répertoire de gestion des couleurs de votre installation Blender (par exemple, `5.2/colormanagement/`).
+2.  Allez dans le répertoire de gestion des couleurs de votre installation Blender (par exemple, `<major.minor>/colormanagement/`).
 3.  Remplacez le fichier `config.ocio` par défaut et ses dossiers associés, ou définissez votre variable d'environnement :
     ```bash
     OCIO=/path/to/AIO-OCIO/config.ocio

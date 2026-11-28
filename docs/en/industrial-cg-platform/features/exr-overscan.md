@@ -24,7 +24,7 @@ Overscan settings are located in the **Output Properties** tab, under the **Over
 
 1. Set your **Render Engine** to `Cycles`.
 2. Disable **Render Region** under the Format panel (Overscan is gated off when Render Region is active).
-3. Set your active file format to `OpenEXR`, `OpenEXR Multilayer`, or `Deep OpenEXR`.
+3. Set your active file format to `OpenEXR`, `OpenEXR Multilayer`, or `Deep EXR`.
 4. Configure your overscan margins in the **Overscan** panel.
 
 <figure class="doc-screenshot doc-screenshot--wide">
@@ -79,7 +79,7 @@ When imported into compositors, the file will automatically align to the project
 - **No Viewport Render Preview** — There is no true live overscanned rendered image viewport preview outside the camera frame. The viewport behavior is limited to displaying an outward safety-frame guide overlay.
 - **Render Region Mutex** — Overscan output and viewport guides are disabled when Render Region is active.
 - **Cycles Only** — Non-Cycles renderers do not support overscan.
-- **Compositor Node Constraints** — When rendering through a compositor `File Output` node, the node group must contain a live `Group Output` node to trigger overscan window metadata propagation.
+- **Single Scene per Overscan Render** — Overscan supports multiple View Layers within a single Scene, but compositing graphs that schedule another Scene with Overscan enabled will report a render error before rendering starts.
 
 ## See Also
 

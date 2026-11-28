@@ -1,13 +1,13 @@
 ---
 title: "Workflow Blender vers Nuke : Deep EXR natif, rendu hors-champ et rééclairage par lumière"
-description: "Guide complet Blender vers Nuke avec Industrial CG Platform 5.2.4 LTS : Deep EXR natif, rendu hors-champ (EXR Overscan), passes d'éclairage détaillées par lumière, gestionnaire de couches de rendu et outils open-source compagnons."
+description: "Guide complet Blender vers Nuke avec Industrial CG Platform : Deep EXR natif, rendu hors-champ (EXR Overscan), passes d'éclairage détaillées par lumière, gestionnaire de couches de rendu et outils open-source compagnons."
 cover: "/blog/nuke-deep-compositing.webp"
 faq: true
 ---
 
 # Workflow Blender vers Nuke : Deep EXR natif, rendu hors-champ et rééclairage par lumière
 
-Blender officiel s'arrête aux fichiers EXR plats, obligeant les compositeurs à multiplier les rendus de masques manuels, à subir des bordures noires après distorsion d'objectif et à retourner en 3D pour ajuster une seule lumière. **Industrial CG Platform 5.2.4 LTS** intègre directement ces capacités de production dans Blender officiel : **sortie Deep EXR native**, **rendu hors-champ (EXR Overscan)**, **passes d'éclairage détaillées par lumière** et **gestionnaire de couches de rendu** (version stable Windows x64 ; préversion publique Linux Beta 1 disponible pour test).
+Blender officiel s'arrête aux fichiers EXR plats, obligeant les compositeurs à multiplier les rendus de masques manuels, à subir des bordures noires après distorsion d'objectif et à retourner en 3D pour ajuster une seule lumière. **Industrial CG Platform** intègre directement ces capacités de production dans Blender officiel : **sortie Deep EXR native**, **rendu hors-champ (EXR Overscan)**, **passes d'éclairage détaillées par lumière** et **gestionnaire de couches de rendu** (version stable Windows x64 ; préversion publique Linux Bêta disponible pour test).
 
 À partir d'un véritable plan VFX multicouche, ce guide détaille la chaîne complète de Cycles vers Foundry Nuke en combinant Industrial CG Platform avec nos outils open-source compagnons : export EXR automatisé ([Industrial AOV Connector](/fr/industrial-aov-connector/)), reconstruction lumineuse en un clic dans Nuke ([Auto Light Shuffle](/fr/auto-light-shuffle/)) et configuration couleur partagée ([AIO-OCIO](/fr/aio-ocio/)).
 
@@ -22,8 +22,8 @@ Blender officiel s'arrête aux fichiers EXR plats, obligeant les compositeurs à
 | **Couleur et livraison finale** | [AIO-OCIO](/fr/aio-ocio/manual/general-softwares) dans Nuke | Transformations AgX / Filmic / ACES strictement identiques et rendu final recadré au format de livraison |
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Arbre de nœuds du compositeur Blender 5.2.4 acheminant plusieurs couches de rendu vers des sorties Beauty, Deep, Cryptomatte et données géométriques" loading="lazy"></a>
-<figcaption>Arbre de compositeur issu d'un plan réel dans Industrial CG Platform 5.2.4 LTS : plusieurs couches de rendu acheminées via Industrial AOV Connector vers des sorties séparées Beauty, Deep EXR, Cryptomatte et données géométriques.</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/compositor-aov-deep-tree.webp" alt="Arbre de nœuds du compositeur Industrial CG Platform acheminant plusieurs couches de rendu vers des sorties Beauty, Deep, Cryptomatte et données géométriques" loading="lazy"></a>
+<figcaption>Arbre de compositeur issu d'un plan réel dans Industrial CG Platform : plusieurs couches de rendu acheminées via Industrial AOV Connector vers des sorties séparées Beauty, Deep EXR, Cryptomatte et données géométriques.</figcaption>
 </figure>
 
 ## 2. Ce dont vous avez besoin
@@ -32,7 +32,7 @@ Installez uniquement les briques utiles à votre plan :
 
 | Composant | Ce qu'il résout | Plateforme / Prérequis |
 | --- | --- | --- |
-| **[Industrial CG Platform 5.2.4 LTS](/fr/industrial-cg-platform/releases/)** | Sortie Deep EXR native, rendu hors-champ (EXR Overscan), passes directes/indirectes par lumière, teinte d'ombre par lumière et gestionnaire de couches de rendu | Archive ZIP stable Windows 10/11 x64 (préversion publique Linux Beta 1 sur Rocky Linux 8.10 disponible pour test) |
+| **[Industrial CG Platform](/fr/industrial-cg-platform/releases/)** | Sortie Deep EXR native, rendu hors-champ (EXR Overscan), passes directes/indirectes par lumière, teinte d'ombre par lumière et gestionnaire de couches de rendu | Archive ZIP stable Windows 10/11 x64 (préversion publique Linux Bêta sur Rocky Linux 8.10 disponible pour test) |
 | **Foundry Nuke** | Compositing profond (`DeepRead` / `DeepMerge` / `DeepToImage`), rééclairage multipasse, distorsion d'objectif et livraison finale | Windows / Linux / macOS |
 | **[Export EXR automatisé (Industrial AOV Connector)](/fr/industrial-aov-connector/)** (5.3.0) | Construit automatiquement les arbres d'export multicouches, câble le débruitage, formate les passes Z/Position/Normale pour Nuke, désactive le rendu par défaut inutile ou propose un mode Fake Deep | Extension Blender 4.x / 5.x (compatible plateforme et Blender officiel) |
 | **[Séparateur de lumières Blender officiel (Industrial Light AOV Splitter)](/fr/industrial-light-aov-splitter/)** | Sépare les groupes de lumières en passes diffus, spéculaire, transmission et volume sous **Blender officiel** dépourvu des passes natives | Extension Blender |
@@ -44,17 +44,17 @@ Installez uniquement les briques utiles à votre plan :
 Verrouillez vos couches de rendu et votre configuration couleur avant d'activer le Deep ou les AOV afin d'éviter toute reprise en aval :
 
 1. **Organiser les couches par préréglages** : ouvrez le **[Gestionnaire de couches (ViewLayer Manager)](/fr/industrial-cg-platform/features/viewlayer-manager)** à côté du sélecteur ViewLayer en haut à droite de Blender. Séparez les éléments clés (décor, accessoires, personnage principal et couche anticrénelée de données géométriques), puis appliquez des préréglages de passes et de lumières sur plusieurs couches à la fois.
-2. **Partager une seule configuration couleur** : faites pointer Blender et Nuke vers le même `config.ocio` **AIO-OCIO** via la variable d'environnement `OCIO` (ou le dossier `5.2/colormanagement/` de Blender) pour aligner parfaitement les EXR linéaires et les vues AgX/ACES. Voir [Configuration couleur Blender](/fr/aio-ocio/manual/blender-setup) et [Configuration multi-logiciels](/fr/aio-ocio/manual/general-softwares).
+2. **Partager une seule configuration couleur** : faites pointer Blender et Nuke vers le même `config.ocio` **AIO-OCIO** via la variable d'environnement `OCIO` (ou le dossier `<major.minor>/colormanagement/` de Blender) pour aligner parfaitement les EXR linéaires et les vues AgX/ACES. Voir [Configuration couleur Blender](/fr/aio-ocio/manual/blender-setup) et [Configuration multi-logiciels](/fr/aio-ocio/manual/general-softwares).
 3. **Éviter les rendus par défaut en double** : avec **Industrial AOV Connector 5.3.0**, laissez cochée l'option **Automatically Disable Default Render Output** dans les préférences afin que la sortie de rendu par défaut de Blender (`Save Output`) soit désactivée automatiquement lors de la génération de l'arbre.
 
 ## 4. Étape 2 — Rendre un Deep EXR natif
 
-Le Deep EXR natif enregistre plusieurs échantillons de profondeur 3D et de transparence (`Z`, `ZBack`, `RGBA`) par pixel directement depuis Cycles, permettant à Nuke de fusionner personnages, fourrure et fumée dans l'espace 3D sans masques manuels.
+Le Deep EXR natif enregistre plusieurs échantillons de profondeur 3D et de transparence (`Z`, `ZBack`, `RGBA`) par pixel directement depuis Cycles — couvrant les surfaces, les volumes d'objets et les shaders World Volume natifs — permettant à Nuke de fusionner personnages, fourrure, fumée et brouillard atmosphérique dans l'espace 3D sans masques manuels.
 
 1. **Choisir la sortie Deep EXR** :
    - **Sortie rapide monocouche** : dans **Output Properties > Output**, réglez **File Format** sur `Deep EXR` (`RGBA`, `16-bit` demi-flottant ou `32-bit` flottant complet, compression sans perte `ZIPS`).
    - **Sortie multicouche par compositeur (recommandé en production)** : ajoutez un nœud `File Output` (ou laissez Industrial AOV Connector le générer), choisissez **Node Format** → `Image` → `Deep EXR` et connectez la sortie `Image` de chaque couche.
-2. **Choisir le mode couleur Deep (5.2.4 LTS)** : dans **Render Properties > Performance > Deep**, laissez activé le **Mode léger (`Simple Mode`)** par défaut pour répartir la couleur Beauty non débruitée sur les échantillons profonds avec un poids mémoire et disque réduit. Décochez-le pour passer en **Mode physique (`Physical Mode`)** uniquement lorsque des volumes semi-transparents complexes exigent la radiance brute à chaque tranche de profondeur.
+2. **Choisir le mode couleur Deep** : dans **Render Properties > Performance > Deep**, laissez activé le **Mode léger (`Simple Mode`)** par défaut pour répartir la couleur Beauty non débruitée sur les échantillons profonds avec un poids mémoire et disque réduit. Décochez-le pour passer en **Mode physique (`Physical Mode`)** uniquement lorsque des volumes semi-transparents complexes exigent la radiance brute à chaque tranche de profondeur.
 3. **Plafonner la mémoire vidéo** : dans **Render Properties > Performance > Memory**, ajustez la **Limite VRAM Deep (`Deep Tile Budget`)** (par défaut `1024 Mo`, ou `0` pour illimité). Sur les plans haute résolution, Cycles réduit automatiquement la taille des tuiles pour respecter la VRAM sans diminuer la précision de profondeur.
 
 Consultez le [Manuel Deep EXR](/fr/industrial-cg-platform/features/deep-exr) et l'article [Blender Deep EXR in Nuke](/blog/posts/2026-07-22-deep-exr-compositing) pour tous les paramètres.
@@ -68,8 +68,8 @@ Lorsque Nuke applique une distorsion d'objectif, un tremblement caméra ou une s
 3. Ouvrez **Output Properties > Overscan** (juste sous **Format**) et saisissez une marge en pourcentage ou en pixels (par exemple `15%` pour absorber la distorsion d'objectif).
 
 <figure class="doc-screenshot doc-screenshot--wide">
-<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Vue caméra Blender 5.2.4 montrant le cadre de livraison intérieur et la marge hors-champ pointillée de 15 pour cent" loading="lazy"></a>
-<figcaption>Vue caméra d'un plan réel dans Industrial CG Platform 5.2.4 LTS : le cadre intérieur repère le format final et le cadre pointillé extérieur montre la marge hors-champ de 15 %.</figcaption>
+<a href="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" target="_blank" rel="noopener"><img src="/screenshots/blender-to-nuke-workflow/viewport-overscan-guide.webp" alt="Vue caméra Industrial CG Platform montrant le cadre de livraison intérieur et la marge hors-champ pointillée de 15 pour cent" loading="lazy"></a>
+<figcaption>Vue caméra d'un plan réel dans Industrial CG Platform : le cadre intérieur repère le format final et le cadre pointillé extérieur montre la marge hors-champ de 15 %.</figcaption>
 </figure>
 
 Dans Nuke, `Read` et `DeepRead` reconnaissent automatiquement le cadre final et la marge étendue, fournissant de vrais pixels rendus aux nœuds `LensDistortion`, `Transform` et `Blur`. Voir le [Manuel EXR Overscan](/fr/industrial-cg-platform/features/exr-overscan).
@@ -88,7 +88,7 @@ Industrial 3D propose deux solutions distinctes selon que votre équipe utilise 
 
 | Critère | Passes natives par lumière (Lightgroup Lobe Passes) | [Séparateur Blender officiel (Industrial Light AOV Splitter)](/fr/industrial-light-aov-splitter/) |
 | --- | --- | --- |
-| **Version de Blender requise** | Industrial CG Platform 5.2.x (natif dans Cycles) | Blender officiel (extension Python) |
+| **Version de Blender requise** | Industrial CG Platform (natif dans Cycles) | Blender officiel (extension Python) |
 | **Niveau de détail** | Passes **Direct + Indirect** séparées (diffus, spéculaire, transmission, volume) par groupe de lumière | Passes diffus, spéculaire, transmission et volume par groupe de lumière |
 | **Contraintes de scène** | Utilise le panneau Lightgroup standard de Cycles sans règle de nommage de collection | Les lumières doivent être dans des collections `lgt_*` avec des noms alphanumériques uniquement (sans underscore) |
 | **Reconstruction Nuke** | Reconnues en priorité par [Auto Light Shuffle](/fr/auto-light-shuffle/) | Reconnues automatiquement par [Auto Light Shuffle](/fr/auto-light-shuffle/) |
@@ -161,7 +161,7 @@ DeepRead -> DeepSample (inspecter Z / ZBack / Alpha par pixel)
 - **Bords mous ou franges dans les volumes avec `DeepMerge`** : inspectez les échantillons avec `DeepSample` dans Nuke. Si des échantillons proches fusionnent trop fort, réduisez la **Tolérance de fusion de profondeur (`Deep Merge Tolerance`)** et la **Tolérance alpha (`Alpha Merge Tolerance`)** (par défaut `0.010`) dans les réglages Deep EXR de Blender. Pour une radiance physique stricte dans des volumes semi-transparents imbriqués, décochez **Simple Mode** dans **Render Properties > Performance > Deep** pour passer en **Physical Mode**.
 - **Saturation mémoire GPU en rendu Deep haute résolution** : abaissez la **Limite VRAM Deep (`Deep Tile Budget`)** dans **Render Properties > Performance > Memory** (par défaut `1024 Mo`). Cycles réduit automatiquement la taille des tuiles pour respecter la VRAM sans perte de précision.
 - **Panneau Overscan grisé** : vérifiez que **Render Engine** est sur `Cycles` et décochez **Render Region** dans **Output Properties > Format**.
-- **Limitations actuelles connues** : les **volumes d'environnement global (World Volume)** ne sont pas encore pris en charge en sortie Deep EXR, et la **conservation complète des métadonnées Deep personnalisées** relève d'évolutions futures hors base 5.2.4.
+- **Limitations actuelles connues** : la **conservation complète des métadonnées Deep personnalisées** relève d'évolutions futures hors base actuelle.
 
 ## 10. Questions fréquentes (FAQ)
 
@@ -183,4 +183,4 @@ Commencez avec le **Simple Mode** activé par défaut : il consomme moins de mé
 
 ### Ce workflow fonctionne-t-il sous Linux ?
 
-La version stable actuelle (**Industrial CG Platform 5.2.4 LTS**, GPL-3.0-or-later) vise **Windows 10/11 x64**. Une **préversion publique Linux Beta 1** (`industrial-cg-platform-5.2.4-linux-beta.1`, compilée sur Rocky Linux 8.10) est disponible pour les tests et retours, tandis que la qualification complète GPU/OptiX et bureau Linux reste en cours. Voir [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).
+Les versions stables actuelles (**Industrial CG Platform**, GPL-3.0-or-later) visent **Windows 10/11 x64**. Une **préversion publique Linux Bêta** (compilée sur Rocky Linux 8.10) est disponible pour les tests et retours, tandis que la qualification complète GPU/OptiX et bureau Linux reste en cours. Voir [Suivi du développement](/fr/feature-tracking) et [Versions](/fr/industrial-cg-platform/releases/).

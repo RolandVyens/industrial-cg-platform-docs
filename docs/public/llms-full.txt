@@ -1,12 +1,12 @@
 # Industrial CG Platform — Full Reference for LLMs
 
-> Industrial CG Platform is a production-oriented VFX fork of stock Blender (current release 5.2.4 LTS, Windows x64) maintained by Roland Vyens / CGWeave. It brings native Cycles Deep EXR, EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager directly into Blender, paired with open-source pipeline add-ons and color configs for Foundry Nuke, Autodesk Maya, and SideFX Houdini.
+> Industrial CG Platform is a production-oriented VFX fork of stock Blender (Windows x64 stable releases) maintained by Roland Vyens / CGWeave. It brings native Cycles Deep EXR (including World Volume Deep Support), EXR Overscan, per-lightgroup lobe passes, Shadow Color, and a Qt-based ViewLayer Manager directly into Blender, paired with open-source pipeline add-ons and color configs for Foundry Nuke, Autodesk Maya, and SideFX Houdini.
 
 ## Platform Facts & Scope
 
-- Base: stock Blender (current stable release: 5.2.4 LTS)
+- Base: stock Blender (see Releases for current stable and LTS builds)
 - Supported OS: Windows 10/11 x64 (stable ZIP distribution)
-- Linux status: Public Linux Beta 1 pre-release (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+) is available for testing and feedback; full native Linux GPU/OptiX and desktop qualification is still in progress (not yet a stable release)
+- Linux status: Public Linux Beta pre-release (built on Rocky Linux 8.10 / EL8 baseline, glibc 2.28+) is available for testing and feedback; full native Linux GPU/OptiX and desktop qualification is still in progress (not yet a stable release)
 - File compatibility: `.blend` files created in Industrial CG Platform open in stock Blender (custom data is preserved and ignored in stock builds)
 - Source repository: https://github.com/RolandVyens/industrial-cg-platform
 - Releases & Windows x64 ZIP downloads: https://github.com/RolandVyens/industrial-cg-platform/releases
@@ -15,19 +15,19 @@
 ## Core Platform Documentation
 
 ### Blender to Nuke Workflow — https://cgweave.com/en/blender-to-nuke-workflow/
-Complete end-to-end Blender Cycles to Foundry Nuke compositing workflow using Industrial CG Platform 5.2.4 LTS, ViewLayer Manager, native Deep EXR (Simple and Physical modes), EXR Overscan, Lightgroup Lobe Passes vs. Industrial Light AOV Splitter, Industrial AOV Connector, Auto Light Shuffle, and AIO-OCIO. Covers Nuke `DeepRead`/`DeepRecolor`/`DeepMerge`/`DeepToImage` chains, handoff naming conventions, troubleshooting, and FAQ.
+Complete end-to-end Blender Cycles to Foundry Nuke compositing workflow using Industrial CG Platform, ViewLayer Manager, native Deep EXR (Simple and Physical modes, including World Volume support), EXR Overscan, Lightgroup Lobe Passes vs. Industrial Light AOV Splitter, Industrial AOV Connector, Auto Light Shuffle, and AIO-OCIO. Covers Nuke `DeepRead`/`DeepRecolor`/`DeepMerge`/`DeepToImage` chains, handoff naming conventions, troubleshooting, and FAQ.
 
 ### Blender VFX Pipeline — https://cgweave.com/en/blender-vfx-pipeline/
 Studio-level Blender VFX pipeline architecture mapping Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, ViewLayer Manager, AOV Connector, Light AOV Splitter, Auto Light Shuffle, and AIO-OCIO across six shot stages. Differentiates Industrial CG Platform from stock Blender and shot trackers (such as Blender_Plumber) and provides a side-by-side pilot evaluation checklist.
 
 ### Industrial CG Platform vs Stock Blender — https://cgweave.com/en/vs-stock-blender/
-Direct comparison of Industrial CG Platform 5.2.4 LTS against stock Blender: feature-by-feature table (native Deep EXR, EXR Overscan, Lightgroup Lobe Passes, Shadow Color with known limitation, ViewLayer Manager, and integrated Qt 6.9.3 / bQt runtime), why these additions require a fork at the Cycles kernel and runtime level, `.blend` compatibility, side-by-side installation and hardware/OS boundaries (Windows x64 NVIDIA RTX OptiX + CPU; Linux Beta 1 pre-release on Rocky Linux 8.10; 16 GB min / 32 GB recommended; GPL-3.0-or-later), when to stay on stock Blender, and FAQ.
+Direct comparison of Industrial CG Platform against stock Blender: feature-by-feature table (native Deep EXR with World Volume support, EXR Overscan, Lightgroup Lobe Passes, Shadow Color with known limitation, ViewLayer Manager, and integrated Qt 6 / bQt runtime), why these additions require a fork at the Cycles kernel and runtime level, `.blend` compatibility, side-by-side installation and hardware/OS boundaries (Windows x64 NVIDIA RTX OptiX + CPU; public Linux Beta pre-release on Rocky Linux 8.10; 16 GB min / 32 GB recommended; GPL-3.0-or-later), when to stay on stock Blender, and FAQ.
 
 ### Platform Home — https://cgweave.com/en/industrial-cg-platform/
-Central entry point for the Industrial CG Platform Blender VFX branch. Summarizes the five core engine/UI additions—Deep EXR Output, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager—and links directly to downloads, guides, API reference, and development tracking.
+Central entry point for the Industrial CG Platform Blender VFX branch. Summarizes the core engine/UI additions—Deep EXR Output, EXR Overscan, Lightgroup Lobe Passes, Shadow Color, and ViewLayer Manager—and links directly to downloads, guides, API reference, and development tracking.
 
 ### Getting Started — https://cgweave.com/en/industrial-cg-platform/guide/getting-started
-Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender. Documents `.blend` compatibility, the `Blender 5.2.4 LTS Industrial CG Platform` version identifier, and the Windows x64 stable + public Linux Beta 1 pre-release status.
+Explains what Industrial CG Platform is, who it serves (VFX studios, lighting artists, compositors, TDs, and pipeline developers), and how it coexists with stock Blender. Documents `.blend` compatibility, the `Blender <version> Industrial CG Platform` version identifier, and the Windows x64 stable + public Linux Beta pre-release status.
 
 ### Installation — https://cgweave.com/en/industrial-cg-platform/guide/installation
 Lists hardware and OS prerequisites (Windows 10/11 x64, NVIDIA RTX OptiX GPU recommended, 16 GB RAM minimum / 32 GB recommended, ~1 GB disk space) and step-by-step ZIP installation. Covers SHA256 verification, CLI verification (`blender.exe --version`), GPU backend selection, and isolated OptiX shader cache paths.
@@ -36,15 +36,15 @@ Lists hardware and OS prerequisites (Windows 10/11 x64, NVIDIA RTX OptiX GPU rec
 Documents the Windows Release source build workflow using Visual Studio 2022, CMake 3.24+, Ninja 1.11+, Git with LFS, OptiX SDK, and `make update` for precompiled `lib/windows_x64` dependencies. Covers the full `ninja install` dependency graph (so Cycles OptiX kernels and embedded splash/buildinfo are built), Git LFS asset checks, and post-install verification.
 
 ### FAQ — https://cgweave.com/en/industrial-cg-platform/guide/faq
-Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and Linux Beta 1 (Rocky Linux 8.10 / EL8 baseline) status.
+Answers common questions about upstream Blender relationship, `.blend` interoperability, `vfx-rendering-branch` upstream intake cadence, third-party add-on compatibility, CPU/OptiX support, ViewLayer Manager windowing and BQt `failed to get blender hwnd` logs, and public Linux Beta (Rocky Linux 8.10 / EL8 baseline) status.
 
 ### Development Tracking — https://cgweave.com/en/feature-tracking
-Tracks shipped production features, active R&D candidates (Linux Beta 1 / EL8 platform support, Atmosphere Volume, and World Volume Deep Support), and planned roadmap directions (including Collection Visibility Control Upgrade, High Performance Data Manipulation Layer / Script Engine, Rendering Trace Set, Light Motion Blur, and Per-Shader & Per-Object Extra Samples). Provides milestone checklists and status cards across the platform lifecycle.
+Tracks shipped production features (including Native Cycles Deep EXR, Deep EXR Architecture Upgrade v2, World Volume Deep Support, EXR Overscan, Lightgroup Lobe Passes, Artistic Shadow Color, and Qt ViewLayer Manager), active R&D candidates (Atmosphere Volume, Linux Platform Support / EL8 Beta, and Light Motion Blur), and planned roadmap directions (No Direct Lighting, Collection Material Override, Arbitrary LPE, Collection Visibility Control Upgrade, High Performance Data Manipulation Layer / Script Engine, Rendering Trace Set, and Per-Shader & Per-Object Extra Samples). Provides milestone checklists and status cards across the platform lifecycle.
 
 ## Core Platform Features
 
 ### Deep EXR — https://cgweave.com/en/industrial-cg-platform/features/deep-exr
-Adds native Deep EXR output to Blender Cycles so pixels store per-sample depth alongside color and alpha for lossless deep compositing (`DeepMerge`, deep holdouts, and volumetric inserts) in Foundry Nuke. Upgraded in 5.2.4 LTS with Simple and Physical modes under `Render Properties -> Performance -> Deep -> Simple Mode` for both surface and volume deep samples, usable via direct Scene Output or compositor File Output nodes.
+Adds native Deep EXR output to Blender Cycles so pixels store per-sample depth alongside color and alpha for lossless deep compositing (`DeepMerge`, deep holdouts, and volumetric inserts) in Foundry Nuke. Supports Simple and Physical modes under `Render Properties -> Performance -> Deep -> Simple Mode` for surface, object volume, and native World Volume deep samples, usable via direct Scene Output or compositor File Output nodes.
 
 ### EXR Overscan — https://cgweave.com/en/industrial-cg-platform/features/exr-overscan
 Enables Cycles to render extra margin pixels beyond the delivery frame without altering camera focal length or framing. Writes the standard delivery frame into OpenEXR `displayWindow` metadata and the expanded overscan bounds into `dataWindow` metadata for Nuke lens undistortion, camera shake, and matchmoving workflows; gated off automatically when Render Region is active.
@@ -81,12 +81,21 @@ Unified OpenColorIO 2.0+ configuration built on PixelManager OCIO to keep AgX, F
 Documents the C++ Cycles kernel extensions, RNA properties (`scene.cycles.overscan_*`, deep, shadow color, light pass AOVs), Python operators, shared bQt runtime (`PySide6` 6.11.0), and pass/AOV system internals.
 
 ### Releases & Downloads — https://cgweave.com/en/industrial-cg-platform/releases/
-Aggregates GitHub release notes and Windows x64 ZIP download links, including Industrial CG Platform 5.2.4 LTS, 5.2.2 Stable, and historical 5.2.0 builds with SHA256 verification metadata.
+Aggregates GitHub release notes and download links for Windows x64 stable/LTS ZIP packages and public Linux Beta pre-release archives with SHA256 verification metadata.
 
 ## Engineering Blog
 
+### Deep EXR for Unbounded World Volumes — https://cgweave.com/blog/posts/2026-11-27-world-volume-deep-exr
+Details how native Deep EXR support was extended to Blender's unbounded World Volume shaders using Beer-Lambert intervals, a reserved far-depth slot, and verified Nuke DeepMerge insertion.
+
+### Atmosphere Volume Engineering Update — https://cgweave.com/blog/posts/2026-11-26-atmosphere-volume-devlog
+Engineering progress update on the Arnold-style Atmosphere Volume node (90% complete): 4K 1,000-light thin beams, ~10–12 updates/s interactive viewport speed, and Nuke Deep EXR acceptance.
+
+### Eliminating a 104× Deep EXR Slowdown — https://cgweave.com/blog/posts/2026-11-25-deep-exr-fast-architecture
+Explains how early Deep EXR slowdowns were eliminated via near-Flat Simple Mode, fast Physical Mode, bounded VRAM tile budgets, and deterministic cancel/failure recovery.
+
 ### Deep EXR Architecture Upgrade — https://cgweave.com/blog/posts/2026-10-17-deep-exr-architecture
-Explains why 2D beauty parity is insufficient for physical depth compositing, how continuous volume integration required an architectural overhaul, and how Simple/Physical modes shipped in 5.2.4 LTS.
+Explains why 2D beauty parity is insufficient for physical depth compositing, how continuous volume integration required an architectural overhaul, and how Simple/Physical modes work.
 
 ### Blender Deep EXR in Nuke — https://cgweave.com/blog/posts/2026-07-22-deep-exr-compositing
 Covers multi-layer CG recombination in Nuke using `DeepMerge` and true spatial occlusion to avoid cascading re-renders from holdout changes.

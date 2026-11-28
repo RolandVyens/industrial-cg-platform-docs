@@ -39,8 +39,8 @@ Industrial CG Platform 专为以下人群设计：
 
 - **完全兼容** — 在 Industrial CG Platform 中创建的 `.blend` 文件可以在原版 Blender 中打开。自定义功能在原版中不可用，但数据会被保留。
 - **相同的可执行文件名** — 可执行文件仍然是 `blender.exe`，使用相同的配置目录结构。
-- **分支后缀** — 窗口标题显示 `Blender 5.2.4 LTS Industrial CG Platform` 以区分原版。
-- **Windows x64 稳定版 + Linux Beta 1** — 当前稳定版提供 Windows x64 绿色 ZIP 包；Linux 方面已发布基于 Rocky Linux 8.10 / EL8 基线的公开 Beta 1 预发布版供测试与反馈。
+- **分支后缀** — 窗口标题显示 `Blender <版本号> Industrial CG Platform` 以区分原版。
+- **Windows x64 稳定版 + Linux Beta** — 当前稳定版提供 Windows x64 绿色 ZIP 包；Linux 方面已发布基于 Rocky Linux 8.10 / EL8 基线的公开 Linux Beta 预发布版供测试与反馈。
 
 如需完整的功能对照表、分支原因以及何时建议继续使用原版 Blender，请参阅 **[Industrial CG Platform 对比原版 Blender](/zh/vs-stock-blender/)**。
 

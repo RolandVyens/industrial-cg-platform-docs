@@ -15,14 +15,14 @@ description: "本页记录了 Industrial CG Platform 如何扩展 Blender 的渲
 | `PASS_DEEP_COMBINED` | `Deep Combined` | 用于 deep 合成的逐采样 RGBA 与深度数据 |
 | `PASS_DEEP_POSITION` | `Deep Position` | 逐采样世界空间位置数据 |
 
-### 雾通道（Environment Fog - 开发中）
+### Atmosphere 通道（Atmosphere Volume - 开发中）
 
 | 通道类型 | 内部名称 | 描述 |
 | --- | --- | --- |
-| `PASS_FOG` | `Fog` | 环境雾贡献通道 |
+| `PASS_ATMOSPHERE` | `Atmosphere` | 实时世界灯光雾（`Atmosphere Volume`）独立渲染通道 |
 
 ::: warning
-雾通道是环境雾（Environment Fog）特征的一部分，该特征目前尚未正式发布。
+`Atmosphere` 通道属于正在研发中的 `Atmosphere Volume` 特性，该特性目前尚未正式发布。
 :::
 
 ## 灯光组分量通道注册

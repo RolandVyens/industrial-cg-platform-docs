@@ -39,8 +39,8 @@ Industrial CG Platform est destiné aux :
 
 - **Compatibilité totale** — Les fichiers `.blend` créés dans Industrial CG Platform sont compatibles avec Blender officiel. Les fonctionnalités personnalisées ne seront tout simplement pas disponibles lorsqu'elles sont ouvertes dans Blender officiel.
 - **Mêmes noms d'exécutables** — L'exécutable s'appelle toujours `blender.exe` et utilise la même structure de répertoire de configuration.
-- **Suffixe de branche** — Le titre de la fenêtre affiche `Blender 5.2.4 LTS Industrial CG Platform` pour le distinguer de Blender standard.
-- **Windows x64 stable + Linux Beta 1** — Les versions stables actuelles sont distribuées en archives ZIP Windows x64. Une préversion publique Linux Beta 1 (base Rocky Linux 8.10 / EL8) est disponible pour tests et retours.
+- **Suffixe de branche** — Le titre de la fenêtre affiche `Blender <version> Industrial CG Platform` pour le distinguer de Blender standard.
+- **Windows x64 stable + Linux Bêta** — Les versions stables actuelles sont distribuées en archives ZIP Windows x64. Une préversion publique Linux Bêta (base Rocky Linux 8.10 / EL8) est disponible pour tests et retours.
 
 Pour le tableau comparatif complet, les raisons du fork et les cas où rester sur Blender officiel, consultez **[Industrial CG Platform vs Blender officiel](/fr/vs-stock-blender/)**.
 

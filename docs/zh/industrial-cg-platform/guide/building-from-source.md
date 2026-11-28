@@ -1,11 +1,11 @@
 ---
 title: "从源码构建"
-description: "在 Windows 上按最新 Release 构建流程编译 Industrial CG Platform 5.2.4 LTS：Visual Studio 2022、CMake、Ninja、OptiX SDK、完整 install 目标构建与安装后完整性校验。"
+description: "在 Windows 上按最新 Release 构建流程编译 Industrial CG Platform：Visual Studio 2022、CMake、Ninja、OptiX SDK、完整 install 目标构建与安装后完整性校验。"
 ---
 
 # 从源码构建
 
-本指南对应 **Industrial CG Platform 5.2.4 LTS** 当前使用的 Windows x64 Release 构建流程（Ninja + `VsDevCmd` 完整 `install` 构建链路）。
+本指南对应 **Industrial CG Platform** 当前使用的 Windows x64 Release 构建流程（Ninja + `VsDevCmd` 完整 `install` 构建链路）。
 
 ## 前置依赖
 
@@ -79,20 +79,20 @@ make update
 预期 `--version` 首行输出为：
 
 ```text
-Blender 5.2.4 LTS Industrial CG Platform
+Blender <版本号> Industrial CG Platform
 ```
 
 同时确认以下三项：
 
 1. **构建信息干净**：从干净的 Release 分支构建时，`build branch` 不应出现 `(modified)` 标记。
-2. **OptiX 内核齐全**：启用 OptiX 时，检查 `install_release\5.2\scripts\addons_core\cycles\lib\` 中已生成非空的 OptiX 内核文件。
-3. **内置资源无 LFS 指针残留**：确认 `install_release\5.2\datafiles\` 下的 `.blend` 资源均为真实二进制文件（非 LFS 指针文本）。
+2. **OptiX 内核齐全**：启用 OptiX 时，检查 `install_release\<主版本.次版本>\scripts\addons_core\cycles\lib\` 中已生成非空的 OptiX 内核文件。
+3. **内置资源无 LFS 指针残留**：确认 `install_release\<主版本.次版本>\datafiles\` 下的 `.blend` 资源均为真实二进制文件（非 LFS 指针文本）。
 
 ## 常见问题与平台说明
 
 - **为什么推荐 Ninja + `VsDevCmd`**：在部分 Windows 工作站上，Visual Studio 生成器 / MSBuild 可能因 `Tracker.exe` 在编译器探测阶段卡死；Ninja + `VsDevCmd -arch=x64 -host_arch=x64` 是当前正式 Release 的验证路径。若必须直接调用 MSBuild，可附加 `/p:TrackFileAccess=false`。
 - **避免 `LNK1318` 链接报错**：Release 链接阶段如遇到 `LNK1318` PDB 错误，保持 `-DWITH_WINDOWS_RELEASE_PDB=OFF` 即可避免。
-- **Linux 构建说明**：当前稳定版面向 Windows x64；Linux 版本目前处于公开 **Linux Beta 1** 阶段（基于 Rocky Linux 8.10 / EL8 基线构建），最新进展可查阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
+- **Linux 构建说明**：当前稳定版面向 Windows x64；Linux 版本目前处于公开 **Linux Beta** 预发布阶段（基于 Rocky Linux 8.10 / EL8 基线构建），最新进展可查阅 [开发追踪](/zh/feature-tracking) 与 [版本发布](/zh/industrial-cg-platform/releases/)。
 
 ## 参考链接
 

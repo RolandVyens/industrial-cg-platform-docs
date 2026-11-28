@@ -1166,28 +1166,28 @@
       "thumbPosition": null,
       "releaseTrack": null,
       "releaseTag": null,
-      "syncedHash": "a13582a19ac7c39d",
+      "syncedHash": "02fee759a7f6efd7",
       "links": [],
       "i18n": {
         "en": {
           "titleHtml": "Light Motion Blur",
-          "badge": "In Progress · Kickoff",
+          "badge": "In Progress · Phase 1 Design",
           "descHtml": "Addresses stock Cycles' limitation where lights remain stationary in world coordinates during a frame—enabling world-space light motion interpolation across the shutter interval so moving or camera-attached lights produce accurate motion blur.",
-          "progressLabel": "Development Progress (Initial Reference Investigation Completed & Native Light Motion Controls Exposed in Source; No Extra Workaround Switch Introduced — Core Motion/Size Interpolation, Light Tree & Shutter Implementation Pending)",
+          "progressLabel": "Development Progress (Phase-1 Light Motion Core & Manual Light-Tree-Off Path Defined, with Light Tree / Constant Handling Deferred; Zero-Scale Decomposition & Numerical Model Finalized; Only Native Light UI Source Changes So Far — Motion Core Not Yet Implemented, Built, or Rendered)",
           "milestones": []
         },
         "zh": {
           "titleHtml": "灯光 Motion Blur (<code>Light Motion Blur</code>)",
-          "badge": "已立项启动 · In Progress",
+          "badge": "首阶段设计定型 · In Progress",
           "descHtml": "解决原版 Cycles 运动模糊未计算灯光在世界坐标中位移的问题（当前帧渲染期间灯光保持静止，导致随相机或载具同步移动的灯光产生错误拖影），在快门区间内支持灯光世界空间运动插值。",
-          "progressLabel": "当前研发进度（已完成 QCycles 增量调研与灯光原生控件源码开放；不引入额外修正开关，运动与尺寸插值、Light Tree 及快门核心尚待实现与验收）",
+          "progressLabel": "当前研发进度（已确定首阶段灯光运动核心与手动关闭 Light Tree 路径，Light Tree 与 Constant 处理后延；零缩放分解算法及数值模型已闭合；当前仅完成原生灯光 UI 源码修改，运动核心尚未实现、构建或渲染）",
           "milestones": []
         },
         "fr": {
           "titleHtml": "Flou de mouvement des lumières (<code>Light Motion Blur</code>)",
-          "badge": "En cours · Démarrage",
+          "badge": "En cours · Conception phase 1",
           "descHtml": "Corrige la limitation de Cycles standard où les lumières restent fixes en coordonnées monde durant l'obturation — prenant en charge l'interpolation du mouvement des lumières dans l'espace monde sur l'intervalle d'obturation pour éviter tout flou erroné lorsque les lumières se déplacent ou suivent la caméra.",
-          "progressLabel": "Progression (Étude incrémentale QCycles terminée et contrôles natifs de mouvement des lumières ouverts dans le code source ; aucun commutateur de contournement ajouté — interpolation mouvement/taille, Light Tree et cœur d'obturation restant à implémenter et valider)",
+          "progressLabel": "Progression (Périmètre phase 1 défini pour le cœur de mouvement des lumières et le mode sans Light Tree, avec Light Tree / Constant reportés ; algorithme de décomposition à échelle nulle et modèle numérique finalisés ; seules les modifications sources de l'interface native des lumières sont présentes — cœur non encore implémenté, compilé ni rendu)",
           "milestones": []
         }
       }

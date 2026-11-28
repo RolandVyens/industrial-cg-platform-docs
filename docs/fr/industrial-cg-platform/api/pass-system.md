@@ -15,14 +15,14 @@ Cette page documente comment Industrial CG Platform étend le système de passes
 | `PASS_DEEP_COMBINED` | `Deep Combined` | RGBA par échantillon avec profondeur pour la composition deep |
 | `PASS_DEEP_POSITION` | `Deep Position` | Données de position en espace monde par échantillon |
 
-### Passe de Brouillard (Environment Fog - En développement)
+### Passe Atmosphere (Atmosphere Volume - En développement)
 
 | Type de Passe | Nom Interne | Description |
 | --- | --- | --- |
-| `PASS_FOG` | `Fog` | Passe de contribution du brouillard d'environnement |
+| `PASS_ATMOSPHERE` | `Atmosphere` | Passe dédiée à la contribution du brouillard lumineux mondial (`Atmosphere Volume`) |
 
 ::: warning
-La passe de brouillard fait partie de la fonctionnalité Brouillard d'Environnement (Environment Fog) qui n'est pas encore finalisée.
+La passe `Atmosphere` fait partie de la fonctionnalité `Atmosphere Volume`, actuellement en développement et pas encore publiée.
 :::
 
 ## Enregistrement des Passes par Lobe de Lightgroup

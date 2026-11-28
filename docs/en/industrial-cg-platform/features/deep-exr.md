@@ -17,7 +17,7 @@ Industrial CG Platform adds native Deep EXR output support to Blender Cycles, ma
 
 - **Lossless deep merge** — Combine multiple CG render layers in Nuke using `DeepMerge` without edge artifacts or manual holdout mattes.
 - **Per-sample depth** — Each pixel carries full depth information, allowing downstream compositors to slice, resample, and relight at arbitrary depth ranges.
-- **Volume support** — Volume rendering data is included in the deep output with improved volume-slice Alpha behavior and deep compositing performance (5.2.4 LTS architecture upgrade).
+- **Volume & World Volume support** — Both object volumes and native Blender World Volume shaders are supported in Deep EXR output, with improved volume-slice Alpha behavior and deep compositing performance. Finite world fog preserves depth intervals while remaining unbounded fog is recorded in a far-depth sample for lossless Nuke insertion.
 - **Direct scene output and compositor** — Works both as direct render output and through the Blender compositor.
 
 ## Choose an Output Path
@@ -119,7 +119,6 @@ For best results, render each major CG element (characters, environments, effect
 
 ## Known Limitations
 
-- **World Volume** — World Volume is currently unsupported in Deep EXR output.
 - **Metadata reconstruction** — Full deep metadata reconstruction is future work, not part of the current baseline.
 - **Memory usage** — Deep output stores significantly more data than flat EXR. Use the Deep Tile Budget parameter to control the tradeoff.
 

@@ -79,7 +79,7 @@ EXR Overscan（溢画幅）是 Industrial CG Platform 中的一项渲染功能�
 - **无实时视口渲染** — 3D 视图相机框之外的区域没有实时的渲染像素输出，视口溢画幅仅显示代表溢画幅边界的安全框线。
 - **与渲染区域互斥** — 启用 Render Region（渲染区域）会自动停用溢画幅输出和视口引导线。
 - **仅支持 Cycles** — 非 Cycles 渲染引擎不支持此功能。
-- **合成器节点限制** — 在合成器中通过 `File Output` 节点输出时，节点组中必须包含一个处于激活状态的 `Group Output` 节点，以触发溢画幅窗口元数据的正常传递。
+- **单场景限制** — 同一 Scene 内支持多个 ViewLayer 的 Overscan 渲染，但如果在合成器中跨 Scene 调度另一个开启了 Overscan 的 Scene，会在渲染开始前报错。
 
 ## 另请参阅
 

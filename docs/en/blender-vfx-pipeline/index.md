@@ -1,6 +1,6 @@
 ---
 title: "Blender VFX Pipeline for Studios: Native Deep EXR, Overscan & Production Render Handoff"
-description: "Studio Blender VFX pipeline architecture and evaluation guide using Industrial CG Platform 5.2.4 LTS: native Deep EXR compositing, camera overscan rendering, per-light diffuse/glossy passes, multi-layer pass management, and cross-software color alignment."
+description: "Studio Blender VFX pipeline architecture and evaluation guide using Industrial CG Platform: native Deep EXR compositing, camera overscan rendering, per-light diffuse/glossy passes, multi-layer pass management, and cross-software color alignment."
 cover: "/splash.webp"
 faq: true
 ---
@@ -9,7 +9,7 @@ faq: true
 
 Adopting Blender in a real VFX studio rarely fails at modeling or viewport lookdev—it breaks down at **render data handoff**. Without native Deep EXR compositing, standard overscan padding, per-light direct/indirect passes, and matching cross-software color transforms, shots get stuck in manual holdout mattes and full-frame re-renders between Blender and Nuke.
 
-**Industrial CG Platform 5.2.4 LTS** builds these missing production capabilities directly into stock Blender's Cycles renderer and runtime (Windows x64 stable; public Linux Beta 1 pre-release available for testing), paired with open-source companion tools that connect cleanly to **Foundry Nuke**, **Autodesk Maya**, and **SideFX Houdini**.
+**Industrial CG Platform** builds these missing production capabilities directly into stock Blender's Cycles renderer and runtime (Windows x64 stable; public Linux Beta pre-release available for testing), paired with open-source companion tools that connect cleanly to **Foundry Nuke**, **Autodesk Maya**, and **SideFX Houdini**.
 
 ## 1. What a Production Blender VFX Pipeline Actually Requires
 
@@ -23,7 +23,7 @@ Where **Industrial CG Platform** fits—and what it does not try to replace:
 ## 2. Platform Architecture: What Each Module Solves
 
 ```text
-[Plates & Color]   -> [Blender Layout / Lighting] -> [Cycles 5.2.4 LTS Render] -> [Nuke Comp & Delivery]
+[Plates & Color]   -> [Blender Layout / Lighting] -> [Cycles Render]          -> [Nuke Comp & Delivery]
   Shared Color Config  Multi-Layer Pass Manager       Native Deep EXR              DeepRead / DeepMerge
   (AIO-OCIO)           Per-Light Shadow Tinting       Camera Overscan (EXR)        One-Click Light Rebuild
                        Per-Light Passes               Automated EXR Export         Matching Color Views
@@ -33,7 +33,7 @@ Where **Industrial CG Platform** fits—and what it does not try to replace:
 | --- | --- | --- | --- |
 | **Scene & Layer Control** | [Multi-Layer Pass Manager (ViewLayer Manager)](/en/industrial-cg-platform/features/viewlayer-manager) | Standalone window to organize ViewLayers, render passes, custom AOVs, and lightgroups with one-click batch presets | Blender (built-in) |
 | **Artistic Lighting** | [Per-Light Shadow Tinting (Shadow Color)](/en/industrial-cg-platform/features/shadow-color) + [Per-Light Passes](/en/industrial-cg-platform/features/lightgroup-lobe-passes) | Tint individual light or world shadows freely, and split each lightgroup into direct/indirect diffuse, glossy, transmission, and volume passes | Blender Cycles |
-| **Deep & Overscan EXR** | [Native Deep EXR](/en/industrial-cg-platform/features/deep-exr) + [Camera Overscan (EXR Overscan)](/en/industrial-cg-platform/features/exr-overscan) | Multi-sample 3D depth EXRs (lightweight Simple & Physical modes) plus extra outer pixel margins for lens distortion without altering the delivery crop | Blender Cycles → Nuke |
+| **Deep & Overscan EXR** | [Native Deep EXR](/en/industrial-cg-platform/features/deep-exr) + [Camera Overscan (EXR Overscan)](/en/industrial-cg-platform/features/exr-overscan) | Multi-sample 3D depth EXRs (Simple & Physical modes, including object volumes and World Volume) plus extra outer pixel margins for lens distortion without altering the delivery crop | Blender Cycles → Nuke |
 | **Automated EXR Export** | [Automated EXR Export (Industrial AOV Connector)](/en/industrial-aov-connector/) (5.3.0) | Auto-builds multi-layer output trees separating Beauty, Deep, Cryptomatte, and geometry data, wires denoising, and disables redundant default renders | Blender → Nuke |
 | **Stock-Blender Light Split** | [Stock-Blender Light Splitter (Industrial Light AOV Splitter)](/en/industrial-light-aov-splitter/) | Lets teams still rendering on stock Blender split lightgroups into diffuse, specular, transmission, and volume passes | Blender → Nuke |
 | **Nuke Light Rebuild** | [One-Click Nuke Light Rebuild (Auto Light Shuffle)](/en/auto-light-shuffle/) | Rebuilds Blender lightgroup EXRs in Nuke into a balanced relighting node tree with labelled backdrops and preserved alpha | Foundry Nuke |
@@ -55,13 +55,13 @@ Where **Industrial CG Platform** fits—and what it does not try to replace:
 
 ## 4. Studio Evaluation & Pilot Checklist
 
-You can pilot **Industrial CG Platform 5.2.4 LTS** on a single real shot without touching your existing Blender setup:
+You can pilot **Industrial CG Platform** on a single real shot without touching your existing Blender setup:
 
 1. **Verify workstation baseline** (see [Installation](/en/industrial-cg-platform/guide/installation)):
-   - **OS**: Windows 10/11 x64 portable ZIP for the current stable 5.2.4 LTS release. (A public **Linux Beta 1 pre-release** built on Rocky Linux 8.10 is available for testing and feedback, not yet qualified as stable.)
+   - **OS**: Windows 10/11 x64 portable ZIP for stable releases. (A public **Linux Beta pre-release** built on Rocky Linux 8.10 is available for testing and feedback, not yet qualified as stable.)
    - **GPU**: NVIDIA RTX GPU with OptiX (recommended); CPU rendering is always available.
    - **Memory & Storage**: 16 GB RAM minimum (32 GB+ recommended for multi-layer Deep EXR), ~1 GB extracted disk space.
-2. **Deploy side-by-side with stock Blender**: Extract the portable ZIP to any writable folder (e.g., `D:\Tools\IndustrialCGPlatform\`). The window title clearly displays `Blender 5.2.4 LTS Industrial CG Platform`, and the default OptiX shader cache is isolated automatically so existing installs stay untouched.
+2. **Deploy side-by-side with stock Blender**: Extract the portable ZIP to any writable folder (e.g., `D:\Tools\IndustrialCGPlatform\`). The window title clearly displays `Blender <version> Industrial CG Platform`, and the default OptiX shader cache is isolated automatically so existing installs stay untouched.
 3. **Validate `.blend` interoperability**: Open an existing stock Blender production file, turn on Deep EXR, Overscan, and per-light passes on a test shot, save, and verify the file still opens cleanly in stock Blender (extra properties are preserved and safely ignored).
 4. **Test the full Nuke round-trip**: Verify overscan framing in Nuke `Read`, 3D depth merging via `DeepRead` → `DeepMerge`, and one-click light reconstruction via Auto Light Shuffle.
 
@@ -87,7 +87,7 @@ For concrete panel settings, Nuke node chains, naming rules, and troubleshooting
 
 Industrial CG Platform stays close to upstream stock Blender so studios keep their existing add-ons, Python tools, and `.blend` assets working without friction. Rather than changing Blender's workflow or file format, it adds renderer-level capabilities that Python add-ons alone cannot provide—native Deep EXR, standard camera overscan rendering, per-light direct/indirect passes, per-light shadow tinting, and built-in standalone UI support (bQt / `PySide6`).
 
-For a full side-by-side feature table, fork rationale, compatibility boundaries, and when to stay on stock Blender, see **[Industrial CG Platform vs Stock Blender](/en/vs-stock-blender/)**. See also [Getting Started](/en/industrial-cg-platform/guide/getting-started) for compatibility notes, [API Reference](/en/industrial-cg-platform/api/) for developer APIs, and [Development Tracking](/en/feature-tracking) for active R&D (including Atmosphere Volume and Linux qualification).
+For a full side-by-side feature table, fork rationale, compatibility boundaries, and when to stay on stock Blender, see **[Industrial CG Platform vs Stock Blender](/en/vs-stock-blender/)**. See also [Getting Started](/en/industrial-cg-platform/guide/getting-started) for compatibility notes, [API Reference](/en/industrial-cg-platform/api/) for developer APIs, and [Development Tracking](/en/feature-tracking) for active R&D (including Atmosphere Volume, Linux qualification, and Light Motion Blur).
 
 ## 7. FAQ
 
@@ -101,7 +101,7 @@ Industrial CG Platform is released free of charge under the **Blender License (G
 
 ### Is Linux supported for studio render farms?
 
-The current stable release (**5.2.4 LTS**) is Windows x64 only. A public **Linux Beta 1 pre-release** (`industrial-cg-platform-5.2.4-linux-beta.1`, built on Rocky Linux 8.10 / EL8 baseline with glibc 2.28+) is now available for studio testing and feedback, while native Linux GPU/OptiX, desktop, and production performance qualification remain in progress. Track milestones on [Development Tracking](/en/feature-tracking).
+Current stable releases target Windows x64 only. A public **Linux Beta pre-release** (built on Rocky Linux 8.10 / EL8 baseline with glibc 2.28+) is available for studio testing and feedback, while native Linux GPU/OptiX, desktop, and production performance qualification remain in progress. Track milestones on [Development Tracking](/en/feature-tracking).
 
 ### Does Industrial CG Platform replace shot trackers or asset managers like Blender_Plumber?
 
@@ -109,4 +109,4 @@ No. Shot trackers and asset managers handle versions, plates, and task tracking,
 
 ### Where do we download the latest release and verify checksums?
 
-Download official Windows x64 stable ZIP packages (and the Linux Beta 1 pre-release archive) with SHA256 verification hashes from the [Releases](/en/industrial-cg-platform/releases/) page or [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases), and follow the [Installation Guide](/en/industrial-cg-platform/guide/installation).
+Download official Windows x64 stable ZIP packages (and the public Linux Beta pre-release archive) with SHA256 verification hashes from the [Releases](/en/industrial-cg-platform/releases/) page or [GitHub Releases](https://github.com/RolandVyens/industrial-cg-platform/releases), and follow the [Installation Guide](/en/industrial-cg-platform/guide/installation).
